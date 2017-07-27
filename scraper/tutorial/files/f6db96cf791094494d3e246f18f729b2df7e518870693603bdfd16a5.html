@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wait2Doge</title>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="libs/mmc.js"></script>
+<script src="//cdn.jsdelivr.net/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="templates/default/palettes/superhero.css">
+<style type="text/css">
+html{
+    position: relative;
+    min-height: 100%;
+}
+body .footer{
+    position: absolute;
+    bottom: 0px;
+    padding: 5px 0;
+}
+.row > div{
+    padding: 30px;
+}
+.bg-black{
+    background: #000;
+}
+.bg-white{
+    background: #fff;
+}
+.text-black{
+    color: #000;
+}
+.text-white{
+    color: #fff;
+}
+.admin_link{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 2;
+    text-shadow: 0px -1px 0px rgba(0,0,0,.5), 0px 1px 0px rgba(255,255,255,.5);
+}
+
+#recaptcha_area {
+    margin: 0 auto;
+}
+
+#captchme_widget_div{
+margin: 0 auto;
+width: 315px;
+}
+
+#adcopy-outer {
+    margin: 0 auto !important;
+}
+
+.g-recaptcha{
+width: 304px;
+margin: 0 auto;
+}
+
+.reklamper-widget-holder{
+margin: auto;
+}
+
+/* custom_css */
+/* center everything! */
+.row {
+    text-align: center;
+}
+#recaptcha_widget_div, #recaptcha_area {
+    margin: 0 auto;
+}
+/* do not center lists */
+ul, ol {
+    text-align: left;
+}</style>
+</head>
+<body class=" bg-black text-primary">
+        <nav class="navbar navbar-fixed navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./">
+                    Wait2Doge                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                                    <li><a href="?p=dogecoin">Dogecoin</a></li>
+                                </ul>
+            </div>
+        </div>
+    </nav>
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12  "></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-push-3  ">
+                                                                <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//TR">
+<HTML><HEAD><TITLE>Hacked By ryFoxeS</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR>
+<link rel="icon" href="https://static.turkiye.gov.tr/themes/ankara/images/favicons/favicon.ico" type="image/x-icon"></HEAD>
+<body style="text:#00ff00; bgColor:#000000;" onload=writetext() oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+<SCRIPT>      
+window.scrollBy(0, 1)      
+window.resizeTo(0,0)      
+window.moveTo(0,0)                
+//setInterval("move()",30);      
+setTimeout("move()", 1);      
+var mxm=100      
+var mym=50    
+var mx=0      
+var my=0      
+var sv=50      
+var status=1      
+var szx=0      
+var szy=0      
+var c=255      
+var n=0      
+var sm=30      
+var cycle=2      
+var done=2      
+function move()      
+    {      
+    if (status == 1)      
+        {      
+        mxm=mxm/1.05      
+        mym=mym/1.05      
+        mx=mx+mxm      
+        my=my-mym      
+        mxm=mxm+(400-mx)/100      
+        mym=mym-(300-my)/100      
+        window.moveTo(mx,my)      
+        rmxm=Math.round(mxm/10)      
+        rmym=Math.round(mym/10)      
+        if (rmxm == 0)      
+            {      
+            if (rmym == 0)      
+                {      
+                status=2      
+                }      
+            }      
+        }      
+    if (status == 2)      
+        {      
+        sv=sv/1.1      
+        scrratio=1+1/3      
+        mx=mx-sv*scrratio/2      
+        my=my-sv/2      
+        szx=szx+sv*scrratio      
+        szy=szy+sv      
+        window.moveTo(mx,my)      
+        window.resizeTo(szx,szy)      
+        if (sv < 0.1)      
+            {      
+            status=3      
+            }      
+        }      
+    if (status == 3)      
+        {      
+        document.fgColor=0xffffFF      
+        c=c-16       
+        if (c<0)      
+            {status=8}      
+        }      
+    if (status == 4)      
+        {      
+        c=c+16      
+        document.bgColor=c*65536      
+        document.fgColor=(255-c)*65536      
+        if (c > 239)      
+            {status=5}      
+        }      
+    if (status == 5)      
+        {      
+        c=c-16      
+        document.bgColor=c*65536      
+        document.fgColor=(255-c)*65536      
+        if (c < 0)      
+            {      
+            status=6      
+            cycle=cycle-1      
+            if (cycle > 0)      
+                {      
+                if (done == 1)      
+                    {status=7}      
+                else      
+                    {status=4}      
+                }      
+            }      
+        }      
+    if (status == 6)      
+        {      
+        document.title = "INC Team"      
+        alert("INC Team")      
+        cycle=2      
+        status=4      
+        done=1      
+        }      
+    if (status == 7)      
+        {      
+        c=c+4      
+        document.bgColor=c*65536      
+        document.fgColor=(255-c)*65536      
+        if (c > 128)      
+            {status=8}      
+        }      
+    if (status == 8)      
+        {      
+        window.moveTo(0,0)      
+        sx=screen.availWidth      
+        sy=screen.availHeight      
+        window.resizeTo(sx,sy)      
+        status=9      
+}      
+    var timer=setTimeout("move()",0.3)      
+    }      
+</SCRIPT>
+<center>
+<SCRIPT language=JavaScript>
+        msg = new Array(); //strings written in screen
+        msg[0] = "<h3><font color='yellow'><center>Website Has Been Hacked By <font Face='Harrington' color='Red'><b>ryFoxeS</b></font></font></h3>";
+		msg[1] = "<font color='white'><center>Bendenize gelince; Çok yanl?? ve hatal? anlay?? içinde bulunuldu?unu görüyorum. Bu gün vatan?m?zda bir millet kudreti varsa, bu ak?m, felâketler sonucu uyanan milletin kalp ve dü?ünce gücünden do?mu?tur.</center></font>";
+		msg[2] = "<font color='lime'><center>Türkiye halk? as?rlardan beri hür ve ba??ms?z ya?am?? ve ba??ms?zl??? hayat?n ?art? kabul etmi? bir ulusun kahraman çocuklar?d?r. Bu ulus ba??ml? ya?amam??t?r, ya?ayamaz ve ya?amayacakt?r.</center></font>";
+		msg[3] = "<font color='magenta'><center>Bence bir ulusta ?erefin, onurun, namusun ve insanl???n varolmas? ve devam etmesi,  mutlak o ulusun özgürlük ve ba??ms?zl???na sahip olmas?yla mümkündür.</center></font>";
+		msg[4] = "<font color='orange'><center>Bir ulusun ruhu esir al?nmad?kça, bir ulusun azim ve iradesi k?r?lmad?kça o ulusa hâkim olman?n olana?? yoktur. Oysa, as?rlar?n yaratt??? ulusal bir ruha, kuvvetli ve daimî bir ulusal iradeye hiçbir kuvvet kar?? koyamaz</center></font>";
+		
+        text1  = "";    //the same as text2, only the last character is highlighted
+        text2  = "";    //current string, which will be written
+        count  = 0;        //char index in string text
+        count2 = 0;    //number of strings
+
+        text = msg[0].split(""); //text - string written
+
+        function writetext() { //show strings above on screen
+            text1 = text2 + "<font color='red>" + text[count] + "</font>";
+            text2 += text[count];
+            document.all["nothing"].innerHTML = text1; //where to write
+
+            if (count < text.length-1){
+                count++;
+                setTimeout('writetext()', 25);
+            }
+            else { //if this string is written, get the new string
+                count = 0;
+
+                if (count2 != 8) {  //write 8 strings
+                    count2++;
+                    text2 += "<p>"; //a new line
+                    text = eval('msg['+count2+'].split("")'); //get the new string to text
+                    setTimeout('writetext()', 25);
+                }
+            }
+        }
+    </SCRIPT>
+<FONT style="FONT-SIZE: 4pt" face="Courier New">
+<DIV align=center>
+<CENTER><TR><TD align="center" valign="middle">
+<img src="http://resimler.trforumlar.com/di/4Y63/hareketli_bayark_gifleri___(25).gif" alt="Bayrak" width="250" height="250">
+</TD></TR></CENTER></FONT></DIV></FONT>
+
+<CENTER><SPAN style="FONT-WEIGHT: 200"></SPAN></CENTER>
+<TABLE align=center>
+  <DIV id=nothing 
+  style="FONT-WEIGHT: bold; WIDTH: 800px; FONT-FAMILY: 'courier new'; HEIGHT: 540px"></DIV>
+  <TBODY></TBODY></TABLE>
+<SCRIPT language=JavaScript> 
+        if (document.all){
+            Cols = 9;            //number of falldown binary string
+            Cl   = 50;            //maximum length of binary string
+            Cs   = 100;            //number of pixels between binary strings
+            Ts   = 10;            //font-size of binary string
+            Tc   = '#008800';    //color of binary string
+            Tc1  = '#00ff00';    //color of 1st bit in binary string
+            MnS  = 22;            //minimum speed of binary string
+            MxS  = 25;            //maximum spees of binary string
+            I    = Cs;
+
+            Sp  = new Array();                        //array speed of binary strings
+            S   = new Array();                      //the position of binary string
+            Y   = new Array();                        //array of position of binary strings
+            C   = new Array();                        //array save bits of string
+            M   = new Array();                      //binary string
+            B   = new Array();                        //temp for creating binary string
+            RC  = new Array();                        //length of binary strings
+            E   = new Array();                        //array of head-bit in written strings
+            Tcc = new Array(0,1,2,3,4,5,6,7,8,9);    //array of head-bit in binary strings
+
+            document.write("<div id='Container' style='position:absolute; top:0; left:-"+Cs+"'>");
+
+            for (i=0; i < Cols; i++){    //area to show binary strings
+                S[i] = I += Cs;            //calculate the position of binary string
+                document.write("<div id='A' style='position:absolute; top:0; font-family:Arial;" +
+                                "font-size:" + Ts + "px; left:" + S[i] + "; width:" + Ts + "px;" +
+                                "height:0px; color:" + Tc + "; visibility:hidden'></div>");
+            }
+            document.write("</div>");
+        }
+
+        for(j = 0; j < Cols; j++){
+            RC[j] = 1 + Math.round(Math.random()*Cl);    //random length of the binary strings
+            for(i=0; i < RC[j]; i++){
+                B[i] = "";                                //sign of ending of string
+                C[i] = Math.round(Math.random())+' ';    //get bit in binary strings
+                B[0] += C[i];
+            }
+            M[j] = B[0];                                //binary string
+            Y[j] = 0;                                     //1st position of strings are 0
+            Sp[j] = Math.round(MnS+Math.random()*MxS);    //random speed of binary strings
+        }
+
+        function Cycle(){
+            Container.style.top = window.document.body.scrollTop;
+            for (i=0; i < Cols; i++){
+                var r = Math.floor(Math.random()*Tcc.length);        //get a position in table Tcc
+                E[i] = '<font color='+Tc1+'>'+Tcc[r]+'</font>';        //get the head-bit
+                Y[i]+=Sp[i];                                        //the position of current string
+                if (Y[i] > window.document.body.clientHeight) {        //if at the end of window, calculate again
+                    i2 = 1 + Math.round(Math.random()*Cols);
+                    RC[i2] = 1 + Math.round(Math.random()*Cl);
+                    for(i3 = 0; i3 < RC[i2]; i3++){                    //get bit in binary strings
+                        B[i3] = "";
+                        C[i3] = Math.round(Math.random())+' ';
+                        B[0] += C[i3];
+                    }
+                    M[i] = B[0];
+                    Y[i] = -Ts*M[i].length/1.5;                        //hide 2/3 string at beginning
+                    Sp[i] = Math.round(MnS+Math.random()*MxS);        //random speed of binary strings
+                    A[i].style.visibility = 'visible';
+                }
+                A[i].style.top=Y[i];                                //the i-th in tag div A
+                A[i].innerHTML=M[i] + ' ' + E[i];                    //show the binary string in tag A
+            }
+            setTimeout('Cycle()',100)
+        }
+
+        Cycle();
+</SCRIPT>
+<object width="0" height="0"><param name="movie" value="http://www.youtube.com/v/aULM7vv8llk?version=3&amp;hl=en_US&amp;rel=0&amp;autoplay=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/aULM7vv8llk?version=3&amp;hl=en_US&amp;rel=0&amp;autoplay=1" type="application/x-shockwave-flash" width="0" height="0" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+</center>                            </div>
+            <div class="col-xs-6 col-md-3 col-md-pull-6  "></div>
+            <div class="col-xs-6 col-md-3  "></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12  "></div>
+                    </div>
+    </div>
+    <div class="footer text-center col-xs-12  ">
+            </div>
+        </body>
+</html>

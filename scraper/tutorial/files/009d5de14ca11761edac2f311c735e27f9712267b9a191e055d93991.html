@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<!-- Mirrored from www.ducatithailand.com/index.do by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 01:29:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8" />
+	<meta name="content-language" content="th" />
+	
+	<meta name="robots" content="NOODP" />	
+	<title>Ducati Cambodia</title>
+	<meta name="description" content="All information about our different models of bikes, the racing in MotoGP and Superbike, and dealers. Visit Ducati official website."/>
+        <meta name="keywords" content="ducati cambodia, official site, information, motorcycles, company, bikes, motorbikesm, racing team, accessories, clothing, dealer locator,news"/>
+	<meta name="author" content="Ducati Motor Holding - www.ducati.com" />
+	<!-- Modifica per il tracciamento della campagna pinnedSite -->
+
+	<link rel="shortcut icon" type="images/x-icon" href="fe-web/favicon.ico" />
+	<link rel="favicon" href="../images.ducati.com/fe-web/img/favicon-ducati.png" />
+	<link rel="stylesheet" href="css/web-style.css">
+	<link rel="stylesheet" href="css/respontive.css">
+	<link rel="stylesheet" href="css/form-style.css">
+	<link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="jscript/iCheckMaster/skins/all.css">
+	<link rel="stylesheet" href="cms-web/css/shadowbox.css">		
+	<link rel="stylesheet" href="css/dhtmlxcombo.css">
+	<link rel="stylesheet" href="css/header-style.css">
+	<link rel="stylesheet" href="css/menu-style.css">
+	<link rel="stylesheet" href="css/footer-style.css">
+	<link rel="stylesheet" href="css/jquery/jquery-ui.custom.css">
+	<link rel="stylesheet" href="css/popup/popup.css">
+	<link rel="stylesheet" href="css/popup/style.css">
+	<link rel="alternate" type="application/rss+xml" title="Ducati" href="pub/plugin/syndication/syndication3aba.do?feed=global_ducati.TH_th&amp;lang=th&amp;country=TH&amp;type=rss_2.0"/> 
+	<!----------------------------Bootstrap Link----------------------------------------->
+	<!-- Latest compiled and minified CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<style>
+		/* custom inclusion of right, left and below tabs */
+		.content > .tab-pane,
+		.pill-content > .pill-pane {
+			display: none;
+		}
+
+		.content > .active,
+		.pill-content > .active {
+			display: block;
+		}
+
+		.tabs-below > .nav-tabs {
+			border-top: 1px solid #ddd;
+		}
+
+		.tabs-below > .nav-tabs > .active > a,
+		.tabs-below > .nav-tabs > .active > a:hover,
+		.tabs-below > .nav-tabs > .active > a:focus {
+		  border-color: transparent #ddd #ddd #ddd;
+		}
+	</style>
+	<!----------------------------Bootstrap Link----------------------------------------->
+	<!-- JavaScript libraries -->	
+	<script src="cms-web/js/shadowbox/shadowbox.js"></script>	
+	<script src="jscript/prototype.js"></script>
+	<script src="cms-web/js/swfobject/swfobject.js"></script>
+	<script src="cms-web/js/md5.js"></script>
+	<script src="jscript/initShadowbox.js"></script>
+	<script src="jscript/effects.js"></script>
+	<script src="jscript/builder.js"></script>
+	<script src="jscript/ducatiControls.js"></script>
+	<script src="jscript/slider.js"></script>
+	<script src="jscript/protoslide.js"></script>
+	<script src="jscript/utility.js"></script>
+	<script src="jscript/loginUtil.js"></script>
+	<script src="cms-web/js/utility.js"></script>
+	<script src="jscript/jquery/jquery.js"></script>
+	<script src="jscript/jquery/ui/jquery-ui.custom.js"></script>
+	<script src="jscript/jquery/jquery.menu.js"></script>
+	<script src="jscript/jquery/jquery.footer.js"></script>
+	<script src="cms-web/plugin/social/js/logger.js"></script>
+	<script src="cms-web/plugin/social/js/facebook.js"></script>
+	<script src="jscript/iCheckMaster/jquery.icheck.js"></script>
+	<script src="jscript/jquery/validation/jquery.validate.js"></script>
+	<script src="jscript/jquery/jquery.popupUtility.js"></script>
+	
+	<script src="jscript/cookie_manager.js"></script>	
+	<!-- Facebook login -->
+	<script async src="connect.facebook.net/en_US/all.js"></script>
+		
+	<!-- DHTMLX Combo -->
+	<script>
+		window.dhx_globalImgPath = "http://images.ducati.com/fe-web/img/dhtmlxcombo/";
+	</script>
+	<script src="jscript/dhtmlxcombo/dhtmlxcommon.js"></script>
+	<script src="jscript/dhtmlxcombo/dhtmlxcombo.js"></script>
+	<script src="jscript/dhtmlxcombo/ext/dhtmlxcombo_whp.js"></script>
+	<script type="text/javascript">
+		/*-- Inserisco il no conflict per utilizzare jquery  e prototype contemporaneamente --*/
+		// $jq è fondamentale per il plugin-social e quindi login with FB
+		var $jq = jQuery.noConflict();
+		
+		jQuery(document).ready(function(){			
+			var options = {lang : 'th'};
+			jQuery(document).footer(options);
+			// Estendiamo alcuni messaggi forniti da jquery.validate con i nostri
+			jQuery.extend(jQuery.validator.messages, {
+				required:"Mandatory field",
+				minlength:jQuery('<div />').html("Please enter at least &#123;0&#125; characters.").text(),
+				email:"The e-mail address entered is incorrect"
+			 });
+				var icheckClass;
+						icheckClass = 'icheckbox_ducati';
+			jQuery('#boxNewsletter .checkbox').iCheck({
+					checkboxClass: icheckClass,
+				radioClass: 'iradio_ducati',
+				increaseArea: '-10%' // optional
+			});
+				
+				jQuery('#boxNewsletter .checkbox').on('ifChecked', function(event){   
+					   jQuery("#errorPrivacyId").hide();
+					   jQuery(this).parent('div.' + icheckClass).removeClass("error");
+		});
+			
+		});
+	</script>
+	<script type="text/javascript">
+	 
+	  if (screen.width <= 600) {
+	    window.location = "http://ducati.com.kh/m";
+	  }
+	  
+	</script>
+	<meta property="og:title" content="Diavel Titanium"/>
+	<meta property="og:description" content="Exclusiveness, technology, craftsmanship. In a limited edition."/>
+	<meta property="og:image" content="http://www.ducatithailand.com//cms-web/fs//img/MainPage-Diavel_v6_1600x900.jpg/MainPage-Diavel_v6_1600x900_1600x900.jpg"/>
+	
+	<!-- link canonical homepage -->
+	<link rel="stylesheet" href="images.ducati.com/fe-web/css/circleplayer/circle.player.css"/>
+	<link rel="stylesheet" href="images.ducati.com/fe-web/css/mediagallery.css"/>
+	<link rel="stylesheet" href="images.ducati.com/fe-web/css/mediagallery-racing.css"/>
+	
+	
+	<style type="text/css">
+	.videoPopup.ui-dialog .ui-dialog-titlebar a.ui-dialog-titlebar-close::before {
+		content: "Close";
+	}
+
+	#boxWaiting, #boxWaitingOverflow{
+		position: fixed!important;
+	}
+	div.galleryContainer{
+		z-index: 1001;
+	}
+	</style>
+	
+	<script type="text/javascript">jwplayer.key="RymUNd/6J/N18exRxZ+TKXHlFEbYyVK2NtXwdA7Cxpg=";</script>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/fullPage/jquery.slimscroll.min.js"></script>
+	<!--do it next time<link rel="stylesheet" type="text/css" href="images.ducati.com/fe-web/css/fullPage/jquery.fullPage.css" />-->
+	<link rel="stylesheet" href="fe-web/css/iswiper/idangerous.swiper.css"/>
+	<link rel="stylesheet" href="fe-web/css/new_mediaGallery.css"/>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/modernizr.custom.60144.js"></script>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/fullPage/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/doT.js"></script>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/jquery.galleryMinisite.js"></script>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/jquery.imageLoader.js"></script>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/circleplayer/jquery.transform2d.js"></script>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/circleplayer/jquery.grab.js"></script>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/circleplayer/jquery.jplayer.js"></script>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/circleplayer/mod.csstransforms.min.js"></script>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/circleplayer/circle.player.js"></script>
+	
+	<script type="text/javascript" src="fe-web/jscript/screenfull.min.js"></script>
+	<script type="text/javascript" src="fe-web/jscript/jquery/iswiper/idangerous.swiper-2.6.1.min.js"></script>
+	<script type="text/javascript" src="fe-web/jscript/jquery/iswiper/idangerous.swiper.hashnav.js"></script>
+	<script type="text/javascript" src="fe-web/jscript/jquery/jquery.mediaGalleryManager.js"></script>
+	
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/idle_timer.js"></script>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/mobile/jquery.spinner.js"></script>
+	
+	<script id="multimediaRowTemplate" type="text/x-dot-template">
+		{{~it :value:index}}
+			<div class="row" data-sel="{{=value.cssSelector}}">
+				<label>{{=value.label}}</label>
+				<a href="javascript:void(0);" class="fr sx disabled"></a>
+				<div class="sliderMultimedia_wrapper">
+					<div class="sliderMultimedia_content">
+					</div>
+				</div>
+				<a href="javascript:void(0);" class="fr dx"></a>
+			</div>
+		{{~}}
+	</script>
+	
+	<script id="multimediaBoxTemplate" type="text/x-dot-template">
+	{{~it :value:index}}
+		<div class="box" data-type="{{=value.type}}" data-source="{{=value.source}}"  data-id="{{=value.wallItemId}}"  data-document1="{{=value.document1}}"  data-document2="{{=value.document2}}" data-title="{{=value.title}}" >
+		{{? value.type != WALLITEMTYPES['DOCUMENT']}}
+			<a href="javascript:void(0);">
+				<img src="{{=getVideoThumb(value)}}" alt="" title="">
+				<h3>{{=value.title}}</h3>
+			</a>
+		{{?}}
+		</div>	
+	{{~}}
+	</script>
+	
+	<script id="multimediaPopupTemplate" type="text/x-dot-template">
+		<div id="videoPopup_{{= it.id}}"  class="df ducatiPopup" style="display: none;" >
+			<div style="height: 544px; width: 934px;overflow: hidden; text-align: center;">
+				<div id="popupVideoContainer_{{= it.id}}" class="containerVideo">
+					<div id="player-video_{{= it.id}}" style="height: 544px; width: 934px;"></div>
+				</div>
+			</div>
+		</div> 
+	</script>
+	
+	<script id="multimediaPlayerTemplate" type="text/x-dot-template">
+	<div id="cp_container_{{= it.id}}" class="cp-container">
+		<div class="cp-buffer-holder"> <!-- .cp-gt50 only needed when buffer is > than 50% -->
+			<div class="cp-buffer-1"></div>
+			<div class="cp-buffer-2"></div>
+		</div>
+		<div class="cp-progress-holder"> <!-- .cp-gt50 only needed when progress is > than 50% -->
+			<div class="cp-progress-1"></div>
+			<div class="cp-progress-2"></div>
+		</div>
+		<div class="cp-circle-control"></div>
+		<ul class="cp-controls">
+			<li><a class="cp-play" tabindex="1">play</a></li>
+			<li><a class="cp-pause" style="display:none;" tabindex="1">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
+		</ul>
+	</div>
+	<p>{{=it.title}}</p>
+	</script>
+	
+	<!--<script type="text/javascript">
+	var wallFilters = [{"cssSelector":".Diavel1203Photo","enableall":false,"id":134,"inevidence":false,"initialvisibleelements":8,"label":"Gallery","runQuery":true,"showFilterBar":true,"sortByDateDescending":true,"wallView":"Vertical"},{"cssSelector":".Diavel1203Video","enableall":false,"id":135,"inevidence":false,"initialvisibleelements":8,"label":"Video","runQuery":true,"showFilterBar":true,"sortByDateDescending":true,"wallView":"Vertical"}];
+	var walldto = {"name":null,"runQuery":true,"wallFilterWallItemsMap":{".Diavel1203Photo":[{"city":null,"date":"03 nov","description":null,"document1":null,"document2":null,"first2BigType":null,"link":"media_gallery/diavel_titanium/1024427/index.do","nickname":null,"openInNewWindow":false,"originalDate":1414969200000,"profileImagePath":null,"province":null,"showDate":true,"source":"1024427","thumb":"cms-web/fs//entities/wallitem/Diavel-Titanium_Small-01_240x135.jpg/Diavel-Titanium_Small-01_240x135_[145x80].png","title":"Diavel Titanium","top":true,"type":"MEDIAGALLERY","videoPreviewPath":null,"videoUrl":null,"wallItemId":2188},{"city":null,"date":"03 nov","description":null,"document1":null,"document2":null,"first2BigType":null,"link":"/media_gallery/diavel/839103/index.do","nickname":null,"openInNewWindow":false,"originalDate":1414969200000,"profileImagePath":null,"province":null,"showDate":true,"source":"839103","thumb":"/cms-web/fs//entities/wallitem/Diavel-Carbon_White_01_Small_240x135.jpg/Diavel-Carbon_White_01_Small_240x135_[145x80].png","title":"Ducati Diavel","top":false,"type":"MEDIAGALLERY","videoPreviewPath":null,"videoUrl":null,"wallItemId":2189},{"city":null,"date":"03 nov","description":null,"document1":null,"document2":null,"first2BigType":null,"link":"/media_gallery/diavel_carbon/834799/index.do","nickname":null,"openInNewWindow":false,"originalDate":1414969200000,"profileImagePath":null,"province":null,"showDate":true,"source":"834799","thumb":"/cms-web/fs//entities/wallitem/Diavel-Carbon_Red_03_Small_240x135.jpg/Diavel-Carbon_Red_03_Small_240x135_[145x80].png","title":"Diavel Carbon","top":false,"type":"MEDIAGALLERY","videoPreviewPath":null,"videoUrl":null,"wallItemId":2193}],".Diavel1203Video":[{"city":null,"date":"14 mag","description":null,"document1":null,"document2":null,"first2BigType":null,"link":null,"nickname":null,"openInNewWindow":false,"originalDate":1431554400000,"profileImagePath":null,"province":null,"showDate":false,"source":"https://www.youtube.com/watch?v=9RUDWOQUlrE","thumb":"/cms-web/fs//entities/wallitem/Diavel-Titanium_Small-02_240x135.jpg/Diavel-Titanium_Small-02_240x135_[145x80].png","title":"Diavel Titanium: exclusivity, technology, craftsmanship. A limited edition.","top":false,"type":"YOUTUBE","videoPreviewPath":null,"videoUrl":null,"wallItemId":2569},{"city":null,"date":"13 ott","description":null,"document1":null,"document2":null,"first2BigType":null,"link":null,"nickname":null,"openInNewWindow":false,"originalDate":1413151200000,"profileImagePath":null,"province":null,"showDate":false,"source":"https://www.youtube.com/watch?v=75b4NNgizPQ&index=11&list=PL0B9390A845BC1F33","thumb":"/cms-web/fs//entities/wallitem/diavelT_1.png/diavelT_1_[145x80].png","title":"Ducati Diavel. Don't call me a cruiser","top":false,"type":"YOUTUBE","videoPreviewPath":null,"videoUrl":null,"wallItemId":2108}]}};
+
+	var slideName = ["home" ,"titanium","carbon","details","astatementofpersonality","designandpowerthroughandthrough","uniquedesignboldform","seekingtheperfectionofstyle","technologyincolor","100ducatidna","theheartofdiavelpureducatipower","extrememaneuverability","controlandsafety","performanceondemand","pureridingpleasure","smoothermoreusablepower","acommandingposition","comfortredesigned","alwaysreadytogo"]
+
+	jQuery(window).load(function() {
+		// 	Trick per evitare le animazioni onload
+		jQuery('.disableAnimations').removeClass('disableAnimations');
+	});
+
+	var slideNumber;
+
+	jQuery(document).ready(function() {
+	// 	Come prima cosa duplico il menu fisso
+		jQuery('.footerMenu').html(jQuery('.callToAction').html());
+		jQuery('.footerLinks').html(jQuery('.linkBar').html());
+		
+		jQuery('body').spinner({
+			spinParams:{
+				lines: 13, // The number of lines to draw
+				length: 0, // The length of each line
+				width: 6, // The line thickness
+				radius: 36, // The radius of the inner circle
+				corners: 1, // Corner roundness (0..1)
+				rotate: 26, // The rotation offset
+				trail: 33,  // Afterglow percentage
+				direction: 1, // 1: clockwise, -1: counterclockwise
+				speed: 0.6, // Rounds per second
+			},
+			bkgOpacity: 0.9,
+			bkgTop: 0,
+			backgroundColor: 'none',
+			boxTop:jQuery('.headerCnt').height(),
+			boxLeft: 0,
+			zIndex: 1000,
+			boxAutoCenter:true
+		});
+		
+		showLoader();
+		//Aggancio ad ogni sezione il caricamento a posteriori dell'immagine di background.
+		jQuery('.section .content[data-img-url]').imageLoader();
+		
+		if(walldto != null &&  wallFilters != null){
+			jQuery(".button.multimedia").galleryMinisite({
+				walldto : walldto,
+				wallFilters: wallFilters,
+				mgOptions: {
+					galleryBaseUrl: 'http://www.ducatithailand.com/*/fotogallery.do?idMediagallery=',
+					host:'http://www.ducatithailand.com',
+					homePage:'/index.do',
+					messages: {
+						download: 'Download',
+						share: 'Share',
+						close: 'Close',
+						sharingTitle: 'Share',
+						sharingSubtitle: '',
+						sharingText: '',
+						sharingBack: 'back'
+					}
+				}
+			});
+		}
+
+		
+			jQuery(".button.multimedia").galleryMinisite('initPlayVideo');
+		
+		
+		
+		slideNumber = jQuery('#fullpage > div').length;
+		
+		jQuery('#fullpage').fullpage({
+			slidesColor: ['#000', '#000', '#000', '#000', '#000'],
+			anchors: slideName,
+			menu: '#menu',
+			easing: 'easeInOutCubic',
+			scrollingSpeed:800,
+			scrollOverflow:true,
+			afterRender: function(){
+				jQuery('li.combTeeth:eq(0)').addClass("current")
+				
+				//Trick per gestire posizionamenti assoluti esterni al componente
+				var actionBar = jQuery('.actionBar').detach();
+				jQuery('body').append(actionBar);
+				var call = jQuery('.callToAction').detach();
+				jQuery('body').append(call);
+				var link = jQuery('.linkBar').detach();
+				jQuery('body').append(link);
+				var comb = jQuery('.sliderComb').detach();
+				jQuery('body').append(comb);
+				
+				if(jQuery('#main .content[data-img-url]').hasClass('loaded')){
+					hideLoader();
+				} else {
+					jQuery('#main .content[data-img-url]').on('imgLoaded', function(){
+						hideLoader();
+					});
+				}
+			},
+			onLeave: function(index,direction){
+				if(index == 2 && direction == "up"){
+					jQuery('.actionBar').hide();
+				}
+				
+				if(direction == "up" && index == slideNumber){
+					jQuery('.callToAction, .linkBar').show();
+					jQuery('.footerMenu, .footerLinks').css('visibility', 'hidden');
+					
+					var pettine = jQuery('.sliderComb').detach();
+					jQuery('body').append(pettine);
+					jQuery('.sliderComb').css("position","fixed");
+				}
+			},
+			afterLoad: function( anchorLink, index){
+				if(index != 1){
+					jQuery('.actionBar').slideDown(300);
+				}
+				
+				jQuery('li.combTeeth').removeClass("current");
+				jQuery('li.combTeeth a[href="#'+anchorLink+'"]').parents("li").addClass("current");
+				jQuery('li.combTeeth a[href="#'+anchorLink+'"]').parents("li").toggleClass("active");
+				setTimeout(function(){
+					jQuery('li.combTeeth a[href="#'+anchorLink+'"]').fadeOut('800',function(){
+						jQuery(this).css('display','').parents("li").toggleClass("active");
+					});
+				},2250); // Aumento del 50% richiesto da PoiDomani, da 1500 a 2250
+				//La freccia in su e' visibile solo quando non sono sulla prima slide
+				if(index != 1){
+					jQuery('.sliderComb .fr.top').removeClass('disabled');
+				}else{
+					jQuery('.sliderComb .fr.top').addClass('disabled');
+				}
+				//La freccia in giu' ed il menu sono visibili solo quando non sono sull'ultima slide
+				if(index >= slideNumber && slideNumber > 0){
+					jQuery('.sliderComb .fr.down').addClass('disabled');
+					jQuery('.footerMenu, .footerLinks').css('visibility', 'visible');
+					jQuery('.callToAction, .linkBar').hide();
+					
+					var pettine = jQuery('.sliderComb').detach();
+					jQuery('.section:last .content').append(pettine).css("position","relative");
+					jQuery('.sliderComb').css("position","absolute");
+				}else{
+					jQuery('.sliderComb .fr.down').removeClass('disabled');
+				}
+				//Nascondo il miniheader
+				if(index == 1){
+					jQuery('.actionBar').hide();
+					//Tolgo l'overlay.
+					if(jQuery('#boxWaiting').is(':visible')){
+						hideLoader();
+					}
+				}
+				
+				var $destSlide = jQuery('.section:eq(' + (index - 1) + ') .content');
+				//Se la slide corrispondente all'indice di destinazione e' gia' stata caricata procedo 
+				if(!$destSlide.hasClass('loaded') && $destSlide.data('img-url') != ''){
+					//Altrimenti mostro il loader, che verra' rimosso solo sull'imgLoaded
+					showLoader();
+					$destSlide.on('imgLoaded', function(){
+						hideLoader();
+					});
+				}
+			}
+		});
+		
+		onResize();
+		
+		jQuery(window).resize(function(){
+			onResize();
+		});
+		
+		jQuery('.sliderComb .fr.top').click(function(){
+			jQuery.fn.fullpage.moveSectionUp();
+		});
+		jQuery('.sliderComb .fr.down').click(function(){
+			jQuery.fn.fullpage.moveSectionDown();
+		});
+		//Click sulle lineette.
+		jQuery('div.sliderComb ul li.combTeeth').each(function(){
+			var destination = jQuery(this).find('a.label').attr('href');
+			jQuery(this).click(function(){
+				document.location.href = destination;
+			});
+		});
+
+		//Buttons for slides navigation
+		jQuery('.no-touch .callToAction .button.expandable, .no-touch .footerMenu .button.expandable').hover(function(){
+			var $btn = jQuery(this);
+			var $el = $btn.find('.subMenu');
+			
+			var height = 0;
+			$el.find('.subMenu_element').each(function(i, obj){
+				height += jQuery(obj).outerHeight();
+			});
+			
+			$el.stop().animate({
+				height: height + "px"
+			}, 400, 'easeOutBack');
+		}, function(){
+			var $btn = jQuery(this);
+			var $el = $btn.find('.subMenu');
+			
+			$el.stop().animate({
+				height: "0"
+			}, 250);
+		});
+		
+		//NewsBox manager0
+		var $thumb = jQuery('.newsBox .thumb');
+		var $body = jQuery('.newsBox .body');
+		$body.find('.btn-close').click(function(){
+			$body.fadeOut(300, function(){
+				$thumb.fadeIn(300);
+			});
+		});
+		$thumb.click(function(){
+			jQuery(this).fadeOut(150, function(){
+				$body.fadeIn(150);
+			});
+		});
+		
+		var appearingTime = 0;
+		if(appearingTime > 0){
+			$body.show();
+			setTimeout(function() {
+				$body.fadeOut(300, function(){
+					$thumb.fadeIn(300);
+				});
+			}, appearingTime);
+		} else {
+			$thumb.show();
+		}
+		
+		
+		
+		Modernizr.addTest('ipad', function () {
+			 return !!navigator.userAgent.match(/iPad/i);
+		 });
+	});
+
+	var onResize = function(){
+		var $height = jQuery(window).height();
+		
+		var marginTop = 71;
+		
+		//Gestisco dinamicamente la height di tutti i content
+		jQuery('.content').height($height - marginTop);
+		
+		var marginTopMain = 126;
+		jQuery('#main .content').height($height - marginTopMain);
+		
+		//Gestisco dinamicamente la posizione del paging del fullpage.
+		var $sliderComb = jQuery('.sliderComb');
+		var right = ((jQuery(window).width() - 960)/2) + 'px';
+		var top = (jQuery(window).height()/2 - $sliderComb.outerHeight()/2) + 'px';
+		$sliderComb.css('right', right);
+		$sliderComb.css('top', top);
+	};
+
+	function getVideoThumb(value){
+		return jQuery(".button.multimedia").galleryMinisite('getYoutubeThumb',value);
+	}
+
+	function showLoader(){
+		jQuery('body').spinner('show');
+		if(!!jQuery.fn.fullpage['setAllowScrolling']){
+			jQuery.fn.fullpage.setAllowScrolling(false);
+			jQuery.fn.fullpage.setKeyboardScrolling(false);
+		}
+	}
+	function hideLoader(){
+		jQuery('body').spinner('hide');
+		if(!!jQuery.fn.fullpage['setAllowScrolling']){
+			jQuery.fn.fullpage.setAllowScrolling(true);
+			jQuery.fn.fullpage.setKeyboardScrolling(true);
+		}
+	}
+	</script>-->
+	
+	<style type="text/css" media="screen">
+		object { outline:none; }
+	</style>
+	
+	<script async type="text/javascript" src="pub/dwr/engine.js"></script>
+	<script async type="text/javascript" src="pub/dwr/util.js"></script>
+	<script async type="text/javascript" src="pub/dwr/interface/DucatiRemote.js"></script>
+	
+	<script type="text/javascript">/*<![CDATA[*/
+	
+	function goRegister() {
+		var queryString = window.location.href.split('?')[1];
+		var urlback = window.location.pathname;
+		if (queryString != '' && queryString != undefined) {
+			urlback += '?' + queryString;
+		}
+		window.open('/register.do?urlBack='+encodeURIComponent(urlback), '_self');
+	}         
+
+	function resetUsernameField(element){
+		
+		if($('err_req_email_head')){
+			$('err_req_email_head').hide();
+			$('fieldUsernameHead').removeClassName('error');
+
+		}
+		
+		if($('err_req_email_head') && ($('err_req_usr_pwd_head') == null || $('err_req_usr_pwd_head') == "")){
+			$('errorsFields').show();
+			$('err_req_email_head').hide();
+			$('fieldUsernameHead').removeClassName('error');
+		}
+		
+		if(($('err_req_email_head') == null || $('err_req_email_head') == "") && ($('err_req_usr_pwd_head') == null || $('err_req_usr_pwd_head') == "")){
+			$('errorsFields').hide();
+		}
+	}
+		
+	function resetPasswordField(element){
+
+		if($('err_req_usr_pwd_head')){
+			$('err_req_usr_pwd_head').hide();
+			$('passwordTesto').removeClassName('error');
+		}
+		
+		if($('err_req_usr_pwd_head') &&($('err_req_email_head') == null || $('err_req_email_head') == "")){
+			$('errorsFields').show();
+			$('err_req_usr_pwd_head').hide();
+			$('passwordTesto').removeClassName('error');
+		}
+
+		if(($('err_req_email_head') == null || $('err_req_email_head') == "") && ($('err_req_usr_pwd_head') == null || $('err_req_usr_pwd_head') == "")){
+			$('errorsFields').hide();
+			$('err_req_usr_pwd_head').hide();
+			$('err_req_email_head').hide();
+		}
+	}	
+/*]]>*/
+</script>
+	
+	<script type="text/javascript">
+	/** In questa Jsp sono stati accorpati tutti gli script di cui fa uso la
+	 *  MediaGallery in modo da avere un punto comune con la nuova sezione Racing.
+	 *  La creazione dell'oggetto viene demandata alla pagina mediagallery.jsp presente nel body(folder);
+	 */
+
+	var mediagallery = null;
+
+	function showPopupLoginForDownload(path, reservedDownload) {
+
+		if (reservedDownload == "true" && path != "") {
+			
+			// Se l'utente e' loggato
+			DucatiRemote.isThereALoggedUser( 
+				function(data) {
+					// Se Siebel e' down
+					if (data == '2') {
+						setTimeout("showPopUp(\"Warning\", 'notAvailablePage', '500px', '100px', null)", 1000);
+					} else if (data == '0') {
+						// Altrimenti se c'e' un utente loggato
+						document.location.href = path;
+					} else {
+						
+						//document.getElementById('box-didascalia-close').click();
+						// Altrimenti mostro il popup di login
+						$('sezioneTopFrecciaHead').setStyle({display:'none'});
+						$('sezioneBottomHead').setStyle({display:'none'});
+						$('sezioneTopHead').setStyle({display:'block'});
+						$('sezioneBottomHeadFreccia').setStyle({display:'block'});
+
+						
+							
+							
+								popupDivLoginHeader.moveTo({top:'310px', left:'-114px'});
+							
+						
+						
+						if (navigator.appName != "Netscape") {
+							$('buttonInviaHead').onclick = function() {
+								performHeadLogin(path);
+							}.bind(this);	
+							$('fieldPasswordHead').onkeyup = function() {
+								eseguiInvioLogin(event ,path);
+							};
+							$('passwordTesto').onkeyup = function() {
+								eseguiInvioLogin(event ,path);
+							};
+							
+						} else {
+							$('buttonInviaHead').writeAttribute('onclick','performHeadLogin(\'' + path +'\')');
+							$('fieldPasswordHead').writeAttribute('onkeyup','eseguiInvioLogin(event, \'' + path +'\')');
+							$('passwordTesto').writeAttribute('onkeyup','eseguiInvioLogin(event, \'' + path +'\')');
+						}
+						
+						$('loginTitoloHeadDownload').show();
+						$('loginTitoloHead').hide();
+						$('loginTitoloHeadConfiguratoreSave').hide();
+						$('loginTitoloHeadConfiguratoreLoad').hide();
+						
+						new Effect.Appear('popupDivLoginHeader', {duration:0.3});
+					}	
+				}
+			);				
+		} else if(reservedDownload == "false" && path != "") {
+			document.location.href = path;
+		}
+	}
+
+	function selectMediagalleryItem(index){
+		mediagallery.selectItemAt(index);
+	}
+	function getMediagalleryIndex(){
+		return mediagallery.currentIndex();
+	}
+	function stopOverlayIdle(){
+		mediagallery.stopOverlayIdle();
+	}
+
+	function showEmbeddedVideo(videoTag){    
+		var el =  document.getElementById('mgVdeoPlayerEmbedded');
+		el.innerHTML = videoTag;
+		var container = document.getElementById('mgVideoPlayerContainer');
+		container.style.display = "block";
+		var elHeight = el.offsetHeight;
+		el.style.marginTop = Math.round(420/2 - elHeight/2)+"px";
+	  }
+		
+	function hideEmbeddedVideo() {
+		   var container = document.getElementById('mgVideoPlayerContainer');
+		   container.style.display = "none";
+		   var el =  document.getElementById('mgVdeoPlayerEmbedded');
+		 el.innerHTML = "";
+	 }
+
+
+	function getMediagalleryJson(){
+		var json = mediagallery.getJsonData();
+		return json;
+	}
+
+
+	</script>
+	
+	<link rel='alternate' media='only screen and (max-width: 640px)' href='http://localhost/m.ducati/index.php' >
+	<link rel="stylesheet" href="images.ducati.com/fe-web/css/home2-style.css">
+	<link rel="stylesheet" href="images.ducati.com/fe-web/css/ie9PinnedSite-style.css">
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jwplayer.js"></script>
+	<script src="images.ducati.com/fe-web/jscript/configurator/jquery.preloadImages.js"></script>
+	<script src="images.ducati.com/fe-web/jscript/jquery/jquery.highlighter.js"></script>
+	<script src="images.ducati.com/fe-web/jscript/jquery/jquery.home-page.js"></script>
+	
+	<script type="text/javascript" src="fe-web/jscript/jquery/jquery.bike-model.js"></script>
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/history/jquery.history.js"></script>
+	<!--<script type="text/javascript" src="images.ducati.com/fe-web/jscript/highslide-colourGallery.js"></script>-->
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/jquery.easing.js"></script>	
+	<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jwplayer_5_9.js"></script>
+	<script type="text/javascript" src="cms-web/js/highslide/highslide-full.js"></script>
+	<!--<link rel="stylesheet" href="images.ducati.com/fe-web/css/bike-model-2.css"/>-->
+	<link rel="stylesheet" href="images.ducati.com/fe-web/css/widget/news-ticker.css"/>
+	<link rel="stylesheet" href="images.ducati.com/fe-web/css/highslide-colourGallery.css"/>
+	<link rel="stylesheet" href="cms-web/js/highslide/highslide.css"/>
+	<link rel="stylesheet" href="images.ducati.com/fe-web/css/uiCss/jquery-ui.custom.min.css"/>
+	<meta name="og_image" property="og:image" content="/cms-web/upl/img/bikes/2014/Model_page_main_image/Diavel/Diavel/Model-Page_2014_Diavel-Dark_01_960x420.jpg"/>
+	
+	<script id="focus-text-tmpl" type="text/x-dot-template">
+	<h2 class="title mLeft">{{=it.title}}</h2>
+	<div class="text mLeft">
+		<p>{{=it.description}}</p>
+		{{? it.links }}
+       		<p>{{=it.links}}</p>
+		{{?}}
+	</div>
+	</script>
+	<script id="focus-image-tmpl" type="text/x-dot-template">
+	<h2 class="title mLeft">{{=it.title}}</h2>
+	<img src="{{=it.image}}" width="634" height="357" />
+	<div class="text mLeft">
+		<p>{{=it.description}}</p>
+        {{? it.links }}
+       		<p>{{=it.links}}</p>
+		{{?}}
+	</div>
+	</script>
+	<script id="focus-video-tmpl" type="text/x-dot-template">
+	<h2 class="title mLeft">{{=it.title}}</h2>
+	<div class="video">
+		<div id="videoPlayer_{{=it.id}}" style="width: 634px; height: 357px;"></div>
+	</div>
+	<div class="text mLeft">
+		<p>{{=it.description}}</p>
+        {{? it.links }}
+       		<p>{{=it.links}}</p>
+		{{?}}
+	</div>
+	</script>
+	<script type="text/javascript">
+
+jQuery(document).ready(function(e){
+	jQuery(document).bikeModel({
+		lang : 'th', 
+		idBikeModel: 192,
+		isTouchDevice : false,
+		isTablet :  false,
+		isIPhone: false,
+		trackingPageEnabled : true
+	});
+	
+	if ($('newsTickerTags')) {
+		new ProtoSlide({
+			box: $('newsTickerTags'),
+			items: $$('#newsTickerTags div.nt-box'),
+			mask: $('news-ticker-mask'),
+			interval: 5,/*second*/
+			size: 472,
+			initSize: 472,
+			mode: 'horizontal',
+			walkLimit: 1,
+			autoPlay: true,
+			addButtons: {
+				previous: $('arrowSxId'),
+				next: $('arrowDxId')
+			}
+		});
+	}
+	
+});
+
+function $type(obj){
+	if (obj == undefined) return false;
+	if (obj.$family) return (obj.$family.name == 'number' && !isFinite(obj)) ? false : obj.$family.name;
+	if (obj.nodeName){
+		switch (obj.nodeType){
+			case 1: return 'element';
+			case 3: return (/\S/).test(obj.nodeValue) ? 'textnode' : 'whitespace';
+		}
+	} else if (typeof obj.length == 'number'){
+		if (obj.callee) return 'arguments';
+		else if (obj.item) return 'collection';
+	}
+	return typeof obj;
+};
+
+function $clear(timer){
+	clearTimeout(timer);
+	clearInterval(timer);
+	return null;
+};
+</script>
+<!--<style type="text/css">
+		
+			
+			.smallHl1{background: url("cms-web/fs/Home/Royalty-Program.jpg/Royalty-Program_240x135.jpg") no-repeat 0 0 transparent;}
+		
+			
+			.smallHl2{background: url("cms-web/fs/Variants/350/350361.jpg/350361_240x135.jpg") no-repeat 0 0 transparent;}
+		
+			
+			.smallHl3{background: url("cms-web/fs/Variants/315/315987.jpg/315987_240x135.jpg") no-repeat 0 0 transparent;}
+		
+</style>
+<style type="text/css">
+	/* Image highlight come background */
+	#big-hl-image-container{background-image: url('cms-web/fs/Home/821-red.png/821-red_1600x500.png');}
+</style>-->
+<script type="text/javascript">
+	
+	function $type(obj){
+		if (obj == undefined) return false;
+		if (obj.$family) return (obj.$family.name == 'number' && !isFinite(obj)) ? false : obj.$family.name;
+		if (obj.nodeName){
+			switch (obj.nodeType){
+				case 1: return 'element';
+				case 3: return (/\S/).test(obj.nodeValue) ? 'textnode' : 'whitespace';
+			}
+		} else if (typeof obj.length == 'number'){
+			if (obj.callee) return 'arguments';
+			else if (obj.item) return 'collection';
+		}
+		return typeof obj;
+	};
+
+	function $clear(timer){
+		clearTimeout(timer);
+		clearInterval(timer);
+		return null;
+	};
+	
+	jQuery.preload(['cms-web/fs//Home/821-red.png/821-red_1600x500.png']);
+	
+	jQuery(document).ready(function(){
+		
+		jQuery(document).homepage({homePageType: 'COVER', leftColor: '#000', videoPath : '', videoType : ''});
+		
+		if ($('newsTickerTags')) {
+			new ProtoSlide({
+				box: $('newsTickerTags'),
+				items: $$('#newsTickerTags div.nt-box'),
+				mask: $('news-ticker-mask'),
+				interval: 5,/*second*/
+				size: 472,
+				initSize: 472,
+				mode: 'horizontal',
+				walkLimit: 1,
+				autoPlay: true,
+				addButtons: {
+					previous: $('arrowSxId'),
+					next: $('arrowDxId')
+				}
+			});
+		}
+	});	
+</script>
+
+<link rel="stylesheet" href="css/wall-highlighter-style.css"/>
+<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/jquery.cover-highlighter.js"></script>
+
+<!--------------------------Diavel---------------------------------->
+<link rel="stylesheet" type="text/css" href="images.ducati.com/fe-web/jscript/jquery/animo/animate+animo.css" />
+<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/animo/animo.js"></script>
+<script type="text/javascript" src="images.ducati.com/fe-web/jscript/jquery/jquery.diavelSlide.js"></script>
+<script type="text/javascript" src="images.ducati.com/fe-web/jscript/fastclick.js"></script>
+
+
+<!----------------------Style Monster------------------------------->
+<script type="text/javascript" src="fe-web/jscript/jquery/iswiper/idangerous.swiper-2.4.min.js"></script>
+
+<link rel="stylesheet" href="js/monster/jquery.css"/>
+<link rel="stylesheet" href="js/monster/jquery_002.css"/>
+<script type="text/javascript" src="js/monster/ec.js"></script>
+<script type="text/javascript" src="js/monster/analytics.js"></script>
+<script type="text/javascript" src="js/monster/conversion_async.js"></script>
+
+<script type="text/javascript">
+		var slideNumber = 2;
+		var activeCallback = true;
+		
+		function resetSlide($slide){
+			$slide.css('left', '').css('right', '');
+			$slide.animate({
+				bottom: '-55px'
+			}, 250)
+			$slide.removeClass('third');
+		}
+		
+		function thirdLevelSlide(index){
+			//Azzero le slide di secondo livello
+			var $slide = jQuery('.swiper-slide[data-index="' + (index - 1) + '"]');
+			if($slide.length > 0){
+				resetSlide($slide);
+			}
+			
+			$slide = jQuery('.swiper-slide[data-index="' + (index) + '"]');
+			if($slide.length > 0){
+				resetSlide($slide);
+			}
+			
+			$slide = jQuery('.swiper-slide[data-index="' + (index + 1) + '"]');
+			if($slide.length > 0){
+				resetSlide($slide);
+			}
+			
+			//Altero tutte le slide dalla 3a posizione in poi
+			for(var i = index - 2; i >= 0; i--){
+				jQuery('.swiper-slide[data-index="' + i + '"]').addClass('third').animate({
+					bottom: '0',
+					left: '125px'
+				}, 250);
+			}
+			for(var i = index + 2; i <= slideNumber; i++){
+				jQuery('.swiper-slide[data-index="' + (index + 2) + '"]').addClass('third').animate({
+					bottom: '0',
+					right: '125px'
+				}, 250);
+			}
+		}
+		
+		function slideManager(swiper){
+			//Gestione cambio titolo
+			var title = jQuery(swiper.activeSlide()).find('.img-container').data('title');
+			var href = jQuery(swiper.activeSlide()).data('href');
+			jQuery('.navigation .title').html('<a href="' + href + '">' + title + '</a>');
+			
+			manageArrowStatus(swiper);
+		}
+		
+		function manageArrowStatus(swiper){
+			var $rightArrow = jQuery('.navigation .arrow.right');
+			var $leftArrow = jQuery('.navigation .arrow.left');
+			
+			//Gestione disabilitazione/abilitazione frecce
+			if(!!$rightArrow && !!$leftArrow){
+				if(swiper.activeIndex >= slideNumber){
+					$rightArrow.addClass('disabled');
+				} else {
+					$rightArrow.removeClass('disabled');
+				}
+				
+				if(swiper.activeIndex <= 0){
+					$leftArrow.addClass('disabled');
+				} else {
+					$leftArrow.removeClass('disabled');
+				}
+			}
+		}
+		
+		function callbackManager(swiper){
+			if (activeCallback) {
+				activeCallback = false;
+				jQuery(":animated").promise().done(function() {
+					activeCallback = true;
+					thirdLevelSlide(swiper.activeIndex);
+					slideManager(swiper);
+				});
+			}
+		}
+		
+		jQuery(window).load(function(){
+			var mySwiper = new Swiper('.swiper-container',{
+				initialSlide:1,
+				centeredSlides: true,
+				slidesPerView: 3,
+				slidesPerViewFit: true,
+				watchActiveIndex: true,
+				keyboardControl: true,
+	// 			loopAdditionalSlides: 2,
+	// 			loop:true,
+				onSwiperCreated: function(swiper) {
+					var title = jQuery('.swiper-slide.swiper-slide-active .img-container').data('title');
+					var href = jQuery('.swiper-slide.swiper-slide-active').data('href');
+					jQuery('.navigation .title').html('<a href="' + href + '">' + jQuery('.swiper-slide.swiper-slide-active .img-container').data('title') + '</a>');
+					thirdLevelSlide(swiper.activeIndex);
+					manageArrowStatus(swiper);
+				},
+				onSlideReset: function(swiper) {
+					callbackManager(swiper);
+				},
+				onSlideChangeStart: function(swiper) {
+					callbackManager(swiper);
+				}
+			});
+			
+			jQuery('.navigation .arrow.left').on('click', function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				if(!jQuery(this).hasClass('disabled')){
+					mySwiper.swipePrev();
+				}
+				
+				return true;
+			});
+			
+			jQuery('.navigation .arrow.right').on('click', function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				if(!jQuery(this).hasClass('disabled')){
+					mySwiper.swipeNext();
+				}
+				
+				return true;
+			});
+			
+			jQuery('.swiper-container .swiper-slide').click(function(e){
+				if(mySwiper.activeIndex == jQuery(this).data('index')){
+					document.location.href = jQuery(this).data('href');
+				} else {
+					var newIndex = parseInt(jQuery(this).data('index'),10);
+					mySwiper.swipeTo(newIndex,false);
+				}
+			});
+		});
+	</script>
+
+<!-----------------------Style Multistrada------------------------------------------->
+
+
+<!----------------------------Streetfighter------------------------------------------>
+<link rel="stylesheet" href="images.ducati.com/fe-web/css/tooltip-style.css"/>
+<link rel="stylesheet" href="images.ducati.com/fe-web/css/tripleNewsTicker.css"/>
+<link rel="stylesheet" href="images.ducati.com/fe-web/css/bike-style.css"/>
+<script type="text/javascript" src="fe-web/jscript/faceTagUtility.js"></script>
+
+<!---------------------------------Racing Page--------------------------------------->
+<script type="text/javascript" src="fe-web/jscript/jquery/jquery.isotope.js"></script>
+<script type="text/javascript" src="fe-web/jscript/jquery/jcarousel/jquery.jcarousel.js"></script>
+<script type="text/javascript" src="fe-web/jscript/protoslideEssentials.js"></script>
+<script type="text/javascript" src="fe-web/jscript/jquery/jquery.sharpizer.js"></script>
+<script type="text/javascript" src="fe-web/jscript/jquery/jquery.sharing.js"></script>
+<script type="text/javascript" src="fe-web/jscript/jquery/jquery.wall.js"></script>
+<script type="text/javascript" src="fe-web/jscript/jquery/mobile/jquery.quickVideo.js"></script>
+<script type="text/javascript" src="fe-web/jscript/jquery/mobile/spin.min.js"></script>
+<link rel="stylesheet" href="fe-web/css/ticker.css"/>
+<link rel="stylesheet" href="fe-web/jscript/jquery/jcarousel/skins/sponsorBar/skin.css"/>
+<link rel="stylesheet" href="fe-web/css/box-raceresult-style.css"/>
+<script src="cms-web/js/twitterlib/ify.js"></script>
+<script type="text/javascript" src="cms-web/js/jquery.timeago/jquery.timeago.js"></script>
+<script type="text/javascript" src="fe-web/jscript/jquery/jquery.twitter-aggregator.js"></script>
+
+<script type="text/javascript" src="fe-web/jscript/faceTagUtility.js"></script>
+
+<link rel="stylesheet" href="fe-web/css/tooltip-style.css"/>
+<script type="text/javascript">
+
+	function $type(obj){
+		if (obj == undefined) return false;
+		if (obj.$family) return (obj.$family.name == 'number' && !isFinite(obj)) ? false : obj.$family.name;
+		if (obj.nodeName){
+			switch (obj.nodeType){
+				case 1: return 'element';
+				case 3: return (/\S/).test(obj.nodeValue) ? 'textnode' : 'whitespace';
+			}
+		} else if (typeof obj.length == 'number'){
+			if (obj.callee) return 'arguments';
+			else if (obj.item) return 'collection';
+		}
+		return typeof obj;
+	};
+
+	function $clear(timer){
+		clearTimeout(timer);
+		clearInterval(timer);
+		return null;
+	};
+
+	var galleryDriver = null;
+	
+	Event.observe(window, 'load', function(){
+		if ($('tagsContainer')){		
+			galleryDriver=new ProtoSlide({
+				box: $('tagsContainer'),
+				items: $$('#tagsContainer div.tag'),
+				mask: $('fotogalleryMask'),
+				interval: 3000,
+				size: 634,
+				partialWalk: false,
+				walkLimit: 1,
+				mode: 'horizontal',
+				stopOnLastItem: false,
+				stopOnFirstItem: false,
+				addButtons: {
+					previous: $('arrowSX'),
+					next: $('arrowDX')
+				},
+				handles: $$('#handles4 span')
+			});
+		}
+	});
+
+	function resetSquareImage(element){
+		$$('#handles4 a.classOn').each(
+				function(item){
+					if (element.id != item.id){
+						item.removeClassName('classOn');
+						item.addClassName('classOff');
+						var htmlImg = item.down();					
+						htmlImg.src = 'images.ducati.com/fe-web/img/square_off.png';
+					}
+					
+			});		
+	}
+	
+	function changeImageInGallery(index, mode){
+		var changeImage = false;
+		if (index == null){
+			if ('next' == mode)			
+				index = galleryDriver.getNextIndex();
+			else 
+				index = galleryDriver.getPreviousIndex();
+			changeImage = true;
+		}
+		
+		$$('#handles4 span.classOn').each(
+				function(item){					
+					item.removeClassName('classOn');
+					item.addClassName('classOff');
+					var htmlA = item.down();					
+					htmlA.removeClassName('classOn');
+					htmlA.addClassName('classOff');
+					var htmlImage = htmlA.down();
+					if (changeImage ==true){
+						htmlImage.src = 'images.ducati.com/fe-web/img/square_off.png';
+					}					 
+					htmlA.onmouseover=function(){
+						MM_swapImage(htmlImage.id,'','images.ducati.com/fe-web/img/square_on.png',1); 
+						resetSquareImage(htmlA);
+						};					
+					htmlA.onmouseout=function(){
+						MM_swapImage(htmlImage.id,'','images.ducati.com/fe-web/img/square_off.png',1);
+						};					
+			});	
+		
+		var htmlImage = $('square_image_'+index);
+		if (htmlImage){
+			htmlImage.src = 'images.ducati.com/fe-web/img/square_on.png';
+			var htmlA = htmlImage.up();
+			htmlA.removeClassName('classOff');
+			htmlA.addClassName('classOn');
+			
+			var htmlSpan = htmlA.up();
+			htmlSpan.removeClassName('classOff');
+			htmlSpan.addClassName('classOn');
+		}
+		
+		return false;
+	}
+
+	function activeImageInGalley(event){
+		var btmSquare = $('btm-tool-square');
+		
+		if (btmSquare){
+			xyBtm = btmSquare.cumulativeOffset();
+			var wBtm = btmSquare.getWidth();
+			var hBtm = btmSquare.getHeight()-2;
+
+			var xPointer = Event.pointerX(event);
+			var yPointer = Event.pointerY(event);				
+					
+			if ( (xPointer < xyBtm.left || xPointer > (xyBtm.left + wBtm) )
+					|| ( yPointer < xyBtm.top  ||  yPointer > (xyBtm.top + hBtm ))  ) {			
+		
+				/**
+				 Puntatore fuori dal div che contiene i btm Square
+				 Quindi attivo lo square correntemente selezionato 
+				*/			
+				$$('#handles4 span.classOn').each(
+						function(span){
+							var htmlA = span.down();
+							htmlA.removeClassName('classOff');
+							htmlA.addClassName('classOn');
+							var htmlImage = htmlA.down();
+							htmlImage.src = 'images.ducati.com/fe-web/img/square_on.png';
+						});
+			}
+			
+		}
+	}
+</script>
+
+<style>
+	.fotogalleryMask {
+		position: relative;
+		width: 634px;
+		height: 330px;
+		overflow: hidden;
+	}
+	.fotogalleryMaskNews {
+		height:70px;
+		margin-left:30px;
+		overflow:hidden;
+		position:relative;
+		width:900px;
+	}
+	/*
+	#tagsContainer .tag {
+		z-index: 100;
+	}
+	*/
+	.apparelGalleryMask {
+		position: relative;
+		width: 634px;
+		height: 330px;
+		overflow: hidden;
+	}
+
+	.tag {
+		margin: 0px; 
+		padding: 0px; 
+		position: relative; 		
+		height: 330px; 
+		float: left;
+	}
+	 
+	.tagImage {
+		margin: 0px; 
+		padding: 0px; 
+		position: relative; 		
+		height: 330px; 
+		float: left;
+	}
+</style>
+<script>
+	jQuery('body').addClass('lt-ie8');
+</script>
+
+<!------------------------Style Configurator.php------------------------------------>
+
+<link rel="stylesheet" href="images.ducati.com/fe-web/css/sliderGallery.css"/>
+
+<!----------------------------Style Pre-owned--------------------------------------->
+
+<script type="text/javascript">
+	
+	/* Inserisco il no conflict per utilizzare jquery  e prototype contemporaneamente  */
+	jQuery.noConflict();
+
+	// Array di wallItem Type che vengono gestiti internamente dal plugin highlighter
+	var pluginHighlighterTypes = new Array(HighlightContentType.VIDEO, HighlightContentType.MEDIAGALLERY, HighlightContentType.YOUTUBE, HighlightContentType.SLIDERGALLERY);
+	
+	/**
+	* Funzione che aggiorna il contenuto o pagina in funzione del tipo
+	*	options = {}
+	*   options.filter = filtro Attivo
+	*   options.contentId = contenuto da visualizzare
+	* 
+	* @param options contiene eventuali parametri ricavati dalla query string presente dopo il # 
+	*/
+	function updatePage(options){	
+		var settings={};
+		var highlighterObj = {type: '', source : null};
+		var isMobile= false;
+		
+		// Caso in cui la esistono dei parametri dopo lo #
+		if (options){
+			if(options.filter){
+				//Modifico le configurazioni del wall
+				settings.filter=options.filter;
+				settings.resetShareDialog=options.resetShareDialog;
+			}
+			
+			var wallItem = jQuery('#wallItemContainer').wall('getWallItemById', options.contentId);
+			
+			if (wallItem){
+				if(!isMobile){
+					// if (wallItem.type == HighlightContentType.VIDEO || wallItem.type == HighlightContentType.MEDIAGALLERY || wallItem.type == HighlightContentType. ){
+					if (jQuery.inArray(wallItem.type, pluginHighlighterTypes) >= 0) {
+						highlighterObj.type = wallItem.type;
+						highlighterObj.source = wallItem.source;
+						// Image di preview del video 
+						options.image = wallItem.videoPreviewPath;
+						
+						// Aggiorno il mediaHighlighterContainer
+						jQuery('#mediaHighlighterContent').highlighter('show', highlighterObj.type, highlighterObj.source, options);
+					}else{
+						if(true!=options.changeFilterAction){
+							/*
+							Quando è di tipo news agiugno l'urlBack mentre se è di tipo standard 
+							allora devo controllare anche il valore dell'openInaNewWindows
+							*/
+							if (wallItem.type == 'NEWS'){
+							//Devo aprire il link solo se il click e partito dall WallItem o quando viene caricata la pagina con un &contentId=XX
+							//il parametro changeFilterAction mio dice che non sono in questa condizione ma semplicemente ho agito sui wallFilter
+								var urlBack=encodeURIComponent('/2012/racing/index.do#filter='+options.filter);
+								document.location.href=wallItem.link+'?urlBack='+urlBack;	
+							}else{
+								if(wallItem.openInNewWindow){
+									window.open(wallItem.link,'_blank');	
+								}else{
+									document.location.href=wallItem.link;	
+								}
+							}
+						}
+					}
+				} else if(isMobile) {
+					// if (wallItem.type == HighlightContentType.VIDEO || wallItem.type == HighlightContentType.MEDIAGALLERY ){
+					if (jQuery.inArray(wallItem.type, pluginHighlighterTypes) >= 0) {
+						//Devo aprire il link solo se il click e partito dall WallItem o quando viene caricata la pagina con un &contentId=XX
+						//il parametro changeFilterAction mio dice che non sono in questa condizione ma semplicemente ho agito sui wallFilter
+						if(true!=options.changeFilterAction){
+							//Se il dispositivo è mobile i VIDEO e le MEDIAGALLERY vengono trattati come elementi standard
+							if(wallItem.type == "VIDEO"){
+								//NOOP gestisto nel jquery.wall.js con quick video
+							}else if(wallItem.type == "YOUTUBE"){
+								window.open('http://www.youtube.com/v/' + getYoutubeId(wallItem.source),'_blank');
+							}else{
+								window.open(wallItem.link,'_blank');
+							}
+						}
+						
+					}else{
+						if(true!=options.changeFilterAction){
+							/*
+							Quando è di tipo news agiugno l'urlBack mentre se è di tipo standard 
+							allora devo controllare anche il valore dell'openInaNewWindows
+							*/
+							if (wallItem.type == 'NEWS'){
+								var urlBack=encodeURIComponent('/2012/racing/index.do#filter='+options.filter);
+								document.location.href=wallItem.link+'?urlBack='+urlBack;	
+							} else{
+								if(wallItem.openInNewWindow){
+									window.open(wallItem.link,'_blank');	
+								}else{
+									document.location.href=wallItem.link;	
+								}
+							}
+						}
+					}
+					//visualizzo sempre l'Highlighter di default nel caso Mobile
+					options['showDefaultContent'] = true;
+					jQuery('#mediaHighlighterContent').highlighter('show', null, null, options);
+				}
+			} else {
+				jQuery('#mediaHighlighterContent').highlighter('show', null, null, options);
+			}
+			
+		} else {
+			// Aggiorno il mediaHighlighterContainer con il contenuto di default
+			jQuery('#mediaHighlighterContent').highlighter('show', null, null, options);
+		}
+		
+		//Se settings e vuoto viene caricata la pagina senza parametri, altrimenti viene settato anche il filtro 
+		jQuery('#wallItemContainer').wall('configure',settings);
+	}
+
+	//Funzione che richiama la updateHref di sharpizer che aggiorna l'url e poi scatena la funzione updatePage definita in pagina
+	function updateHref(options){
+		jQuery(document).sharpizer('updateHref',options);
+	}
+	
+	function getYoutubeId(url){
+		if(url.match(/youtube\.com\/watch\?v=([^\&\?\/]+)/) != null){
+			var idVid =  url.match(/youtube\.com\/watch\?v=([^\&\?\/]+)/)[1];
+		} else if(url.match(/youtube\.com\/v\/([^\&\?\/]+)/) != null){
+			var idVid = url.match(/youtube\.com\/v\/([^\&\?\/]+)/)[1];
+		} else if(url.match(/youtube\.com\/embed\/([^\&\?\/]+)/) != null){
+			var idVid = url.match(/youtube\.com\/embed\/([^\&\?\/]+)/)[1];
+		} else if(url.match(/youtu\.be\/([^\&\?\/]+)/) != null){
+			var idVid =  url.match(/youtu\.be\/([^\&\?\/]+)/)[1];
+		} else {
+			return '';
+		}
+		return idVid;
+	}
+	
+</script>
+<style type="text/css">
+		#wallItemContainer .share .shareElement.faceBook:hover{background-image: url("fe-web/img/racing/share/facebook_on.png");}
+		#wallItemContainer .share .shareElement.twitter:hover{background-image: url("fe-web/img/racing/share/twitter_on.png");}
+		#option-filter .share .shareElement.email:hover{background-image: url("fe-web/img/racing/share/mail_on.png");}
+	</style>
+<script type="text/javascript">
+
+	// Istanza di DHTMLXCombo
+	var mySelect;
+
+	jQuery(document).ready(function() {
+		
+		if (jQuery('#25985').length > 0) {
+		
+			var select = '<select id="mySelect" onchange="showTable()">';
+			var tables = '';
+			
+			jQuery('#25985 > div').each(function() {
+				var option = jQuery(this).attr('class');
+				select += '<option value="' + option + '">' + option + '</option>';
+				
+				var tableId = getTableId(option);
+				var table = '<table id="' + tableId + '" class="tabella">';
+				
+				jQuery(this).find('div').each(function() {
+					var tableRow = jQuery(this).html();
+					
+					table += '<tr><td>' + tableRow + '</td></tr>';
+				});
+				
+				table += '</table>';
+				
+				tables += table;
+			});
+			
+			select += '</select>';		
+			
+			var html = '<div style="width: 200px; float: left;">' + select + '</div>';
+			html += '<div id="tables" style="width: 200px; float: left; margin-left: 20px;">' + tables + '</div>';
+			
+			jQuery('#25985').after(html);
+			
+			mySelect = new dhtmlXComboFromSelect("mySelect", "100%");
+			mySelect.readonly(true);	
+			
+			jQuery('#25985').remove();
+		}		
+	});
+	
+	function showTable() {
+		
+		jQuery('#tables > table').each(function() {
+			jQuery(this).hide();
+		});
+		
+		var selectedValue = mySelect.getSelectedValue();
+		var tableId = getTableId(selectedValue);
+		jQuery('#' + tableId).show();
+	}
+	
+	function getTableId(option) {
+		var tableId = option.replace(" ", "_") + 'Id';
+		return tableId;
+	}
+		
+</script>
+
+<!-------------------------Style Race------------------------------->
+<script type="text/javascript">
+
+Partner = {};
+
+Partner.displayToolTip = function(el, idTooltip, mode){
+
+	var e = $(el);
+	var tt = $(idTooltip);
+
+	if (e && tt) {
+		try {
+	
+			if (idTooltip.startsWith('tipDescr') && 'block' ==mode){
+			
+				var pTop = e.getStyle('padding-top');
+				pTop = pTop.substring(0, pTop.indexOf('px'));
+				var pLeft = e.getStyle('padding-left');
+				pLeft = pLeft.substring(0, pLeft.indexOf('px'));
+				
+				Element.clonePosition(tt, e, {
+					setLeft: true,
+					setTop: true,
+					setWidth: false,
+					setHeight: false,
+					offsetLeft: e.getWidth(),
+					offsetTop:  e.getHeight()
+				});
+			} 
+		} catch(ex){
+			Partner.displayToolTip(el, idTooltip, mode);
+		} finally {
+			if ('block' == mode && tt.getStyle('display') == 'none'){
+				tt.setStyle({marginLeft :  '-'+e.getWidth()/2 +'px', marginTop : '-'+e.getHeight()/3+'px'});
+				$(idTooltip).show();
+			} else if ('hide' == mode){
+				$(idTooltip).hide();	
+			}
+		}
+	}
+	return false;
+};
+
+function showHideRollOver(divId, showHide) {
+	if (showHide == 'show') {
+		$(divId).removeClassName('tableOff');
+		$(divId).addClassName('tableOn');
+	} else {
+		$(divId).removeClassName('tableOn');
+		$(divId).addClassName('tableOff');
+	}
+}
+</script>
+
+
+<script type="text/javascript" src="cms-web/js/formatDate.js"></script>
+<script type="text/javascript" src="fe-web/jscript/jquery/jquery.googlemap.base.js"></script>
+
+<script type="text/javascript">
+
+function slideTo(container,slider,elementsNumber,position,elementsHeight){
+	var pos=position>0?(position-1):position;
+	slider.setValue((pos)/elementsNumber);
+	container.scrollTop=(elementsHeight*pos);
+}
+
+function scrollVertical(value, element, slider) {
+	element.scrollTop = Math.round(value/slider.maximum*(element.scrollHeight-element.offsetHeight));
+}
+
+
+	var sliderCircuit=null;
+
+	Event.observe(window,"load", function() {
+		if ($('googleMap')){
+			
+				
+				var zoomLevel = 2;
+				
+				
+				jQuery('#googleMap').googlemap({
+					mapId: 'googleMap',
+					mapOptions:{
+						center: new google.maps.LatLng(2.760534, 101.737518),
+				        zoom: zoomLevel,
+				        minZoom: 2,
+						mapTypeId: google.maps.MapTypeId.ROADMAP,
+						zoomControl: true,
+						mapTypeId:  google.maps.MapTypeId.HYBRID
+					},
+					autocenter: false,
+					tooltip: {
+						enable: false
+					}
+				});
+				var items = new Array();
+				items.push({lat:2.760534, lng:101.737518});
+				jQuery('#googleMap').googlemap('addMarkers',items,false,'../../../../images.ducati.com/fe-web/img/gmap_marker.png',20,20);
+				
+			
+		}
+
+
+
+		sliderCircuit = new Control.Slider('circuit_protoslideScrollBar', 'circuit_protoslideScroller', {
+			axis: 'vertical',
+			onSlide: function(v) { scrollVertical(v, $('fotogalleryMaskCircuit'), sliderCircuit);  },
+			onChange: function(v) { scrollVertical(v, $('fotogalleryMaskCircuit'), sliderCircuit); }
+		});
+
+		slideTo($('fotogalleryMaskCircuit'),sliderCircuit,13,11,29);
+		
+	});
+
+	function displayScroll(idScroll){
+		var ids=$(idScroll);
+		if(ids){
+			if(ids.style.display=='block'){
+				ids.style.display='none';	
+			}else{
+				ids.style.display='block';
+			}	
+		}
+	}
+	
+</script>
+
+<style>
+.fotogalleryMaskCircuit {
+		position: relative;
+		width: 240px;
+		height: 240px;
+		overflow: hidden;
+	}
+	
+	#tagsContainerCircuit .tag {
+		z-index: 100;
+	}
+</style>
+
+<script language="javascript" type="text/javascript" src="fe-web/jscript/shiftzoom.js"></script> 
+<script>	
+		
+			var apparelImages=	
+			{
+				
+	
+			'354':'/apparel/specials/art__books_and_dvd/ducati_1098_1198__the_superbike_redefined_/354/index.do'
+			
+				,
+			
+			
+	
+			'234':'/apparel/specials/art__books_and_dvd/ducati_the_story_dvd/234/index.do'
+			
+				,
+			
+			
+	
+			'421':'/apparel/specials/toys/mini_desmosedici_gp11_valentino_rossi/421/index.do'
+			
+				,
+			
+			
+	
+			'1004':'/apparel/specials/toys/ducati_by_chicco/air_trike_ducati/1004/index.do'
+			
+				,
+			
+			
+	
+			'199':'/apparel/specials/art__books_and_dvd/art_prints/199/index.do'
+			
+				,
+			
+			
+	
+			'188':'/apparel/specials/toys/ducati_by_chicco/ducati_racetrack/188/index.do'
+			
+				,
+			
+			
+	
+			'1002':'/apparel/specials/toys/ducati_by_chicco/ducati_multiplay_race_track/1002/index.do'
+			
+				,
+			
+			
+	
+			'1003':'/apparel/specials/toys/ducati_by_chicco/ducati_custom_bike/1003/index.do'
+			
+				,
+			
+			
+	
+			'378':'/apparel/specials/toys/ducati_turbo_touch/378/index.do'
+			
+			
+			}
+			;
+				
+		</script>	
+		<script type="text/javascript">
+var family = null;
+var category = null;
+var collection = null;
+var galleryApparel = null;
+var idEventFamily = null;
+var idEventCategory = null;
+var idEventCollection = null;
+var catalog=null;
+
+ApparelUtil = {};
+
+	
+Event.observe(window, 'load', 
+	function(){
+		if ($('tagsContainer')){
+			galleryApparel = new ProtoSlide({
+							box: $('tagsContainer'),
+							items: $$('#tagsContainer div.tag'),
+							interval: 3000,
+							size: 634,
+							mode: 'horizontal',
+							addButtons: {
+								previous: $('arrowSX'),
+								next: $('arrowDX')
+							},
+							handles: $$('#handles4 span')
+						});
+
+		}
+			
+		if ($('tagsContainerFamily')){			
+			galleryApparel = new ProtoSlide({
+							box: $('tagsContainerFamily'),
+							items: $$('#tagsContainerFamily div.tagImage'),
+							interval: 3000,
+							size: 634,
+							mode: 'horizontal',
+							addButtons: {
+								previous: $('arrowSX'),
+								next: $('arrowDX')
+							}
+							//handles: $$('#handles4 span')
+						});
+		}
+		if ($('tagsContainerSup2')){			
+			galleryApparel = new ProtoSlide({
+							box: $('tagsContainerSup2'),
+							items: $$('#tagsContainerSup2 div.tagImage'),
+							interval: 3000,
+							size: 330,
+							initSize: 152,
+							mode: 'horizontal',
+							addButtons: {
+								previous: $('arrowSX'),
+								next: $('arrowDX')
+							}
+							//handles: $$('#handles4 span')
+						});
+			$('tagsContainerSup2').setStyle(
+					{width: ( (330 *  $$('#tagsContainerSup2 div.tagImage').length)
+								+ (2 * 330))+ 'px'});
+		}	
+				
+		if ($('tagsContainerNews')){
+			new ProtoSlide({
+				box: $('tagsContainerNews'),
+				items: $$('#tagsContainerNews div.tag'),
+				interval: 3000,
+				size: 620,
+				mode: 'horizontal',
+				walkLimit: 1,
+				addButtons: {
+					previous: $('arrowNewsSX'),
+					next: $('arrowNewsDX')
+				}
+				//handles: $$('#handles4 span')
+			});
+		}
+		        
+		if ($('goApparelDetail')){
+			Event.observe('goApparelDetail', 'click', function(){ApparelUtil.goApparelDetail('th');});
+		}		
+	});
+
+function $type(obj){
+		if (obj == undefined) return false;
+		if (obj.$family) return (obj.$family.name == 'number' && !isFinite(obj)) ? false : obj.$family.name;
+		if (obj.nodeName){
+			switch (obj.nodeType){
+				case 1: return 'element';
+				case 3: return (/\S/).test(obj.nodeValue) ? 'textnode' : 'whitespace';
+			}
+		} else if (typeof obj.length == 'number'){
+			if (obj.callee) return 'arguments';
+			else if (obj.item) return 'collection';
+		}
+		return typeof obj;
+	};
+
+function $clear(timer){
+		clearTimeout(timer);
+		clearInterval(timer);
+		return null;
+	};
+	
+	
+function stopZoom() {
+	var index = galleryApparel.getCurrentIndex();
+
+	var zi = $('imgZoom' + index + '_img').remove();
+	zi.id = 'imgZoom' + index;
+	$('imgZoom').insert(zi);
+
+	$('imgZoom' + index + '_wrap').remove();
+	$('imgZoom' + index + '_isrc').remove();
+	$('imgZoom' + index + '_xyco').remove();
+	$('imgZoom' + index + '_ctrl').remove();
+	$('imgZoom' + index + '_info').remove();
+	$('imgZoom' + index + '_over').remove();
+
+	$('imgZoom').setStyle({display: 'none'});
+	$('zoom_wrap').setStyle({zIndex: '-1'});
+	$('imgZoom' + index).setStyle({display: 'none'});
+	$('closeBtn').setStyle({display: 'none'});
+};
+
+function startZoom() {
+	var index = galleryApparel.getCurrentIndex();
+
+	$('imgZoom').setStyle({display: 'block'});
+	$('zoom_wrap').setStyle({zIndex: '10'});
+	$('imgZoom' + index).setStyle({display: 'block'});
+
+	shiftzoom.defaultCurpath = '../cms-web/js/crop/cursors/index.html';
+	shiftzoom.defaultInfoblock = 'help';
+	shiftzoom.defaultNozoom = true;
+	shiftzoom._catchWheel = function(e) {return false}; // disabilito il wheel del mouse
+	shiftzoom.add(document.getElementById('imgZoom' + index), {
+		overview: false,
+		zoom: 100,
+		buttons: false
+	});
+
+	$('closeBtn').setStyle({display: 'block'});
+};
+
+function resetSquareImage(element){
+	
+	$$('#handles4 a.classOn').each(
+			function(item){						
+				if (element.id != item.id){					
+					item.removeClassName('classOn');
+					item.addClassName('classOff');
+					var htmlImg = item.down();					
+					htmlImg.src = '../../images.ducati.com/fe-web/img/square_off.png';
+				} 
+		});
+}
+
+
+function changeImageInGallery(index, mode){
+	var changeImage = false;
+	if (index == null){		
+		if ('next' == mode)			
+			index = galleryApparel.getNextIndex();
+		else 
+			index = galleryApparel.getPreviousIndex();		
+		changeImage = true;		
+	}
+	
+	$$('#handles4 span.classOn').each(
+			function(item){					
+				item.removeClassName('classOn');
+				item.addClassName('classOff');
+				var htmlA = item.down();					
+				htmlA.removeClassName('classOn');
+				htmlA.addClassName('classOff');
+				var htmlImage = htmlA.down();
+				if (changeImage == true){
+					htmlImage.src = '../../images.ducati.com/fe-web/img/square_off.png';
+				}
+				 
+				htmlA.onmouseover=function(){
+					MM_swapImage(htmlImage.id,'','../../images.ducati.com/fe-web/img/square_on.png',1); 
+					resetSquareImage(htmlA);
+					};
+					
+				htmlA.onmouseout=function(){
+					MM_swapImage(htmlImage.id,'','../../images.ducati.com/fe-web/img/square_off.png',1);
+					};					
+		});	
+	
+	var htmlImage = $('square_image_'+index);
+	if (htmlImage){
+		htmlImage.src = '../../images.ducati.com/fe-web/img/square_on.png';
+		var htmlA = htmlImage.up();
+		htmlA.removeClassName('classOff');
+		htmlA.addClassName('classOn');
+		
+		var htmlSpan = htmlA.up();
+		htmlSpan.removeClassName('classOff');
+		htmlSpan.addClassName('classOn');
+	}
+	
+	return false;
+}
+
+function activeImageInGalley(event){
+
+	var btmSquare = $('btm-tool-square');
+
+	if (btmSquare){
+		xyBtm = btmSquare.cumulativeOffset();
+		var wBtm = btmSquare.getWidth();
+		var hBtm = btmSquare.getHeight()-2;
+
+		var xPointer = Event.pointerX(event);
+		var yPointer = Event.pointerY(event);				
+				
+		if ( (xPointer < xyBtm.left || xPointer > (xyBtm.left + wBtm) )
+				|| ( yPointer < xyBtm.top  ||  yPointer > (xyBtm.top + hBtm ))  ) {			
+	
+			/**
+			 Puntatore fuori dal div che contiene i btm Square
+			 Quindi attivo lo square correntemente selezionato 
+			*/			
+			$$('#handles4 span.classOn').each(
+					function(span){
+						var htmlA = span.down();
+						htmlA.removeClassName('classOff');
+						htmlA.addClassName('classOn');
+						var htmlImage = htmlA.down();
+						htmlImage.src = '../../images.ducati.com/fe-web/img/square_on.png';
+					});
+		}
+		
+	}
+}
+
+ApparelUtil.clearFamilyOptions= function(){
+	var i=0;
+	while(true){
+		var v=family.getOptionByIndex(i);
+		if(v){
+			family.deleteOption(v.value);
+		}else{
+			break;
+		}
+	}
+};
+
+ApparelUtil.clearCollectionOptions= function(){
+	
+	var i=0;
+	while(true){
+		var v=collection.getOptionByIndex(i);
+		if(v){
+			collection.deleteOption(v.value);
+		}else{
+			break;
+		}
+	}
+};
+
+ApparelUtil.clearCategoryOptions= function(){
+	var i=0;
+	while(true){
+		var v=category.getOptionByIndex(i);
+		if(v){
+			category.deleteOption(v.value);
+		}else{
+			break;
+		}
+	}
+};
+
+
+ApparelUtil.goApparelDetail = function(lang){
+	if (galleryApparel != null){
+		var index = galleryApparel.getCurrentIndex();
+		var spanEl = $('tagApparel_'+index).down();
+		document.location.href= apparelImages[spanEl.id];
+	}	
+}
+
+
+
+
+function deleteDefaultText(){
+	if($('apparelSerchForm').keyword.value=='Search'){
+		$('apparelSerchForm').keyword.value='';
+	}
+}
+
+
+
+
+
+ApparelUtil.changeOrder = function(primaryOrder,primaryOrderValue){
+	$('apparelSerchForm').primaryOrder.value=primaryOrder;
+	$('apparelSerchForm').primaryOrderValue.value=primaryOrderValue;
+	deleteDefaultText();
+	$('apparelSerchForm').submit();
+	
+}
+
+
+ApparelUtil.changePage = function(pageNumber){
+	
+	$('apparelSerchForm').pageNumber.value=pageNumber;
+	deleteDefaultText();
+	$('apparelSerchForm').submit();
+}
+
+
+
+
+
+ApparelUtil.familyUpdate = function(){
+	var idFamily = family.getSelectedValue();
+	var idCategory = category.getSelectedValue();
+	var idCollection = collection.getSelectedValue();
+	
+	ApparelUtil.clearCategoryOptions();
+
+	
+	DucatiRemote.getAppCategoryByIdFamilyAndIdCategory(idFamily,idCollection,
+		function(categories){				
+			for(var i=0; i<categories.length; i++){
+				category.addOption([[categories[i].key,categories[i].value]]);
+			}
+
+			var previousSelectedIndex =category.getIndexByValue(idCategory);
+			var indexSel=previousSelectedIndex>0?previousSelectedIndex:0;
+			category.selectOption(indexSel,false,false);
+			
+		});
+	
+	Appare

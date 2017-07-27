@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta name="description" content="Wagic: Open source card game inspired by CTCG games such as Magic the Gathering. Fight with your magic against an AI on your PSP! Also one of the most trusted references in PSP programming." />
+<meta name="keywords" content="magic the gathering psp, Magic the Gathering, PSP, homebrew, playstation portable" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Wagic, Half-Byte Loader, PSP / PS Vita Programming, and Homebrews &middot; Wololo.net</title>
+	
+	<link rel="alternate" type="application/rss+xml" title="Wololo.net &raquo; Feed" href="http://wololo.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Wololo.net &raquo; Comments Feed" href="http://wololo.net/comments/feed/" />
+<link rel='stylesheet' id='digg-digg-css'  href='http://wololo.net/wagic/wp-content/plugins/digg-digg/css/diggdigg-style.css?ver=5.3.6' type='text/css' media='screen' />
+<script type='text/javascript' src='http://wololo.net/wagic/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://wololo.net/wagic/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://wololo.net/wagic/wp-content/themes/tarski/app/js/tarski.js?ver=3.1.2'></script>
+<script type='text/javascript' src='http://wololo.net/wagic/wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<meta name="wp_theme" content="Tarski 3.1.2">
+<meta name="description" content="Wagic, Half-Byte Loader, PSP / PS Vita Programming, and Homebrews">
+<meta name="robots" content="all">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<link rel="stylesheet" href="http://wololo.net/wagic/wp-content/themes/tarski/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="http://wololo.net/wagic/wp-content/themes/tarski/library/css/print.css" type="text/css" media="print">
+<link rel="stylesheet" href="http://wololo.net/wagic/wp-content/themes/tarski/styles/classic.css" type="text/css" media="all">
+
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://wololo.net/wagic/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://wololo.net/wagic/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+<link rel='shortlink' href='http://wp.me/u727' />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15990907-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-7101223807014632");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-7101223807014632", "Blog_header");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>  
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>  
+</head><body id="" class="centre classic"><div id="wrapper">
+
+<div id="header">
+
+	<div id="header-image"><img alt="Header image" src="http://wololo.net/wagic/wp-content/uploads/2009/10/cropped-logo.jpg"></div>
+
+<div id="title">
+	<h1 id="blog-title">Wololo.net</h1>
+	<p id="tagline">Wagic, Half-Byte Loader, PSP / PS Vita Programming, and Homebrews</p></div>
+<div id="navigation" class="clearfix">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7101223807014632";
+/* 728x15, created 7/2/10 */
+google_ad_slot = "3782179532";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<ul id="menu-navigation-bar" class="primary xoxo"><li id="menu-item-3560" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-3560"><a href="/">Home</a></li>
+<li id="menu-item-3553" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3553"><a href="http://wololo.net/cfw4dummies/">PSP Custom Firmware</a></li>
+<li id="menu-item-4605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4605"><a href="http://wololo.net/vita-cfw4dummies/">Vita CFW</a></li>
+<li id="menu-item-3554" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3554"><a href="http://wololo.net/hbl/">Half-Byte Loader</a></li>
+<li id="menu-item-3969" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3969"><a href="http://wololo.net/vhbl/">VHBL</a></li>
+<li id="menu-item-3555" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3555"><a href="http://wololo.net/download/">Wagic</a></li>
+<li id="menu-item-3559" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3559"><a href="/talk">/Talk Forums</a></li>
+<li id="menu-item-3558" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3558"><a href="/downloads/">Downloads</a></li>
+<li id="menu-item-3557" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3557"><a href="http://wololo.net/contact/">Contact</a></li>
+</ul><div class="secondary">
+    <p><a class="feed" href="http://wololo.net/feed/">Subscribe to feed</a>
+    <br/><br />
+    <div style="font-size:.8em;"><a href="https://twitter.com/#!/frwololo"><img src="https://dev.twitter.com/sites/default/files/images_documentation/bird_blue_16.png" style="border-style: none" />&nbsp;Apparently we're on twitter too</a></div>
+    </p>
+</div></div><script type="text/javascript">
+    jQuery(document).ready(function() {
+        var container = jQuery('#navigation > ul'),
+            navbar;
+        
+        if (container.length > 0) {
+            navbar = new Tarski.Navbar(container);
+        }
+    });
+</script><center>
+<script type='text/javascript'>
+GA_googleFillSlot("Blog_header");
+</script>
+</center>
+
+</div>
+
+
+
+<div id="content" class="clearfix">
+<div class="primary posts">
+        
+                
+            
+        <div class="post-14711 post type-post status-publish format-standard hentry category-psvita category-security category-vhbl entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14711">
+                    <a href="http://wololo.net/2013/08/22/my-vhbl-exploit-grab-it-while-its-still-hot/" rel="bookmark" title="Permanent link to My VHBL exploit: grab it while it&#8217;s still hot!">
+                        My VHBL exploit: grab it while it&#8217;s still hot!                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/22/my-vhbl-exploit-grab-it-while-its-still-hot/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 22, 2013</span> in <span class="categories"><a href="http://wololo.net/category/psvita/" title="View all posts in PS Vita" rel="category tag">PS Vita</a>, <a href="http://wololo.net/category/security/" title="View all posts in security" rel="category tag">security</a>, <a href="http://wololo.net/category/vhbl/" title="View all posts in VHBL" rel="category tag">VHBL</a></span> by <span class="vcard author"><a href="http://wololo.net/author/acid_snake/" title="Articles by Acid_Snake" class="url fn"><font color="green"><b>Acid_Snake</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/22/my-vhbl-exploit-grab-it-while-its-still-hot/#comments">122 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p><em><img class="alignleft" alt="" src="http://wololo.net/wp-content/uploads/2012/03/ICON0.png" width="144" height="80" />(<strong>Note from Wololo</strong>: The author of this article is <strong>Acid_Snake</strong>, not me. &#8220;me&#8221;, &#8220;my&#8221;, or &#8220;I&#8221; in this article refers to him, not me; and opinions expressed in this article are his, not mine <img src='http://wololo.net/wagic/wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley' />  ) </em><br />
+In the last several ours an italian site, whose admins found the same exploit I did, decided to release my exploit as if it was theirs, without my consent and without synchronizing with wololo.<br />
+This lead to the quick expansion of the game&#8217;s name through important news site that don&#8217;t really care if they are helping spread a harmful leak, all they want is followers, you know who you are, thanks a lot for making the scene a total mess.<br />
+ <a href="http://wololo.net/2013/08/22/my-vhbl-exploit-grab-it-while-its-still-hot/#more-14711" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+<br /><p><center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7101223807014632";
+/* 300x250, Inside Post created 10/26/09 */
+google_ad_slot = "9300688896";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center></p><br />			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14785 post type-post status-publish format-standard hentry category-ps4 entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14785">
+                    <a href="http://wololo.net/2013/08/21/sonys-gamescomference-ps4-release-date-announced-for-eu-us/" rel="bookmark" title="Permanent link to Sony&#8217;s Gamescomference: PS4 Release Date Announced for EU &amp; US.">
+                        Sony&#8217;s Gamescomference: PS4 Release Date Announced for EU &amp; US.                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/21/sonys-gamescomference-ps4-release-date-announced-for-eu-us/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 21, 2013</span> in <span class="categories"><a href="http://wololo.net/category/ps4/" title="View all posts in PS4" rel="category tag">PS4</a></span> by <span class="vcard author"><a href="http://wololo.net/author/minimur12/" title="Articles by Minimur12" class="url fn"><font color="green"><b>Minimur12</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/21/sonys-gamescomference-ps4-release-date-announced-for-eu-us/#comments">17 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p>Sony&#8217;s Gamescom conference is now over, and I was impressed but unimpressed with the little amount of AAA announced.</p>
+<p>Much was said, but  the most amazing was the release date for PS4. <a href="http://wololo.net/2013/08/21/sonys-gamescomference-ps4-release-date-announced-for-eu-us/#more-14785" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14782 post type-post status-publish format-standard hentry category-gaming category-hardware category-psvita entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14782">
+                    <a href="http://wololo.net/2013/08/21/psvita-gamescom-price-cut-borderlands-2-and-more/" rel="bookmark" title="Permanent link to PsVita @ Gamescom: Price cut, Borderlands 2 and more">
+                        PsVita @ Gamescom: Price cut, Borderlands 2 and more                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/21/psvita-gamescom-price-cut-borderlands-2-and-more/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 21, 2013</span> in <span class="categories"><a href="http://wololo.net/category/gaming/" title="View all posts in Gaming" rel="category tag">Gaming</a>, <a href="http://wololo.net/category/hardware/" title="View all posts in hardware" rel="category tag">hardware</a>, <a href="http://wololo.net/category/psvita/" title="View all posts in PS Vita" rel="category tag">PS Vita</a></span> by <span class="vcard author"><a href="http://wololo.net/author/jd8531/" title="Articles by Jd8531" class="url fn"><font color="green"><b>Jd8531</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/21/psvita-gamescom-price-cut-borderlands-2-and-more/#comments">56 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p><img class="alignleft" alt="" src="http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2012/12/11/1355226902320/Minecraft-screen-shot-009.jpg" width="193" height="116" />Sony&#8217;s Gamescom 2013 conference just wrapped up and it brought some vital announcements for the PlayStation Vita to keep it going strong. <a href="http://wololo.net/2013/08/21/psvita-gamescom-price-cut-borderlands-2-and-more/#more-14782" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14769 post type-post status-publish format-standard hentry category-gaming category-psvita entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14769">
+                    <a href="http://wololo.net/2013/08/20/killzone-mercenary-public-beta-live/" rel="bookmark" title="Permanent link to Killzone: Mercenary Public Beta Live">
+                        Killzone: Mercenary Public Beta Live                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/20/killzone-mercenary-public-beta-live/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 20, 2013</span> in <span class="categories"><a href="http://wololo.net/category/gaming/" title="View all posts in Gaming" rel="category tag">Gaming</a>, <a href="http://wololo.net/category/psvita/" title="View all posts in PS Vita" rel="category tag">PS Vita</a></span> by <span class="vcard author"><a href="http://wololo.net/author/jd8531/" title="Articles by Jd8531" class="url fn"><font color="green"><b>Jd8531</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/20/killzone-mercenary-public-beta-live/#comments">48 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p><img class="alignleft" alt="" src="http://www.gamebrit.com/wp-content/uploads/Killzone-Mercenary-Beta_screen1.jpg" width="307" height="174" />Get an early taste of the first &#8220;real&#8221;, console quality FPS for the Vita right now. <a href="http://wololo.net/2013/08/20/killzone-mercenary-public-beta-live/#more-14769" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14732 post type-post status-publish format-standard hentry category-gaming category-ps4 entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14732">
+                    <a href="http://wololo.net/2013/08/20/wololo-is-5-year-old-and-to-celebrate-one-of-you-gets-to-win-a-ps4/" rel="bookmark" title="Permanent link to Wololo is 5 year old, and to celebrate, one of you gets to win a PS4!">
+                        Wololo is 5 year old, and to celebrate, one of you gets to win a PS4!                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/20/wololo-is-5-year-old-and-to-celebrate-one-of-you-gets-to-win-a-ps4/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 20, 2013</span> in <span class="categories"><a href="http://wololo.net/category/gaming/" title="View all posts in Gaming" rel="category tag">Gaming</a>, <a href="http://wololo.net/category/ps4/" title="View all posts in PS4" rel="category tag">PS4</a></span> by <span class="vcard author"><a href="http://wololo.net/author/admin/" title="Articles by wololo" class="url fn"><font color="green"><b>wololo</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/20/wololo-is-5-year-old-and-to-celebrate-one-of-you-gets-to-win-a-ps4/#comments">80 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p><img class="alignleft" alt="" src="http://wololo.net/wagic/wp-content/uploads/2013/08/PSP_Balloons.jpg" width="120" height="91" />Woohoo, the cat&#8217;s out of the bag! I&#8217;ve been restraining myself from even mentioning this one to our mods or some of my closest friends here in the community, because I feel it&#8217;s so big it had to be kept a surprise.</p>
+<p> <a href="http://wololo.net/2013/08/20/wololo-is-5-year-old-and-to-celebrate-one-of-you-gets-to-win-a-ps4/#more-14732" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14715 post type-post status-publish format-standard hentry category-gaming category-psvita category-ps3 category-ps4 category-xbox entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14715">
+                    <a href="http://wololo.net/2013/08/20/minimur-wth-happened-this-week-cod-ghosts-on-vita-nickelodeon-on-ps4-and-gta-online/" rel="bookmark" title="Permanent link to Minimur, WTH Happened This Week? CoD: Ghosts On Vita, Nickelodeon on PS4, And GTA Online!">
+                        Minimur, WTH Happened This Week? CoD: Ghosts On Vita, Nickelodeon on PS4, And GTA Online!                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/20/minimur-wth-happened-this-week-cod-ghosts-on-vita-nickelodeon-on-ps4-and-gta-online/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 20, 2013</span> in <span class="categories"><a href="http://wololo.net/category/gaming/" title="View all posts in Gaming" rel="category tag">Gaming</a>, <a href="http://wololo.net/category/psvita/" title="View all posts in PS Vita" rel="category tag">PS Vita</a>, <a href="http://wololo.net/category/ps3/" title="View all posts in PS3" rel="category tag">PS3</a>, <a href="http://wololo.net/category/ps4/" title="View all posts in PS4" rel="category tag">PS4</a>, <a href="http://wololo.net/category/xbox/" title="View all posts in Xbox" rel="category tag">Xbox</a></span> by <span class="vcard author"><a href="http://wololo.net/author/minimur12/" title="Articles by Minimur12" class="url fn"><font color="green"><b>Minimur12</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/20/minimur-wth-happened-this-week-cod-ghosts-on-vita-nickelodeon-on-ps4-and-gta-online/#comments">12 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p>This week I&#8217;ve favorited plenty of different articles to sum up for the Wololo readers, it ranges from new Vita games, GTA Online, and digital foundry takes on the PS3 vs PS Vita. <a href="http://wololo.net/2013/08/20/minimur-wth-happened-this-week-cod-ghosts-on-vita-nickelodeon-on-ps4-and-gta-online/#more-14715" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14667 post type-post status-publish format-standard hentry category-ps4 entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14667">
+                    <a href="http://wololo.net/2013/08/19/ps4-rumored-release-date/" rel="bookmark" title="Permanent link to PS4 rumored release date.">
+                        PS4 rumored release date.                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/19/ps4-rumored-release-date/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 19, 2013</span> in <span class="categories"><a href="http://wololo.net/category/ps4/" title="View all posts in PS4" rel="category tag">PS4</a></span> by <span class="vcard author"><a href="http://wololo.net/author/acid_snake/" title="Articles by Acid_Snake" class="url fn"><font color="green"><b>Acid_Snake</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/19/ps4-rumored-release-date/#comments">20 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p><img class="alignleft size-full wp-image-14758" alt="ps4" src="http://wololo.net/wagic/wp-content/uploads/2013/08/ps4.jpg" width="150" height="100" />As the PS4 launch date is coming sooner and sooner, rumors start to arise.<br />
+The latest one that sparked much more debates is a possible north american release date for the PS4.<br />
+ <a href="http://wololo.net/2013/08/19/ps4-rumored-release-date/#more-14667" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14748 post type-post status-publish format-standard hentry category-psvita category-wtf entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14748">
+                    <a href="http://wololo.net/2013/08/19/unverifiable-rumor-about-a-ps-vita-redesign-tricks-the-internet/" rel="bookmark" title="Permanent link to Unverifiable rumor about a PS Vita redesign tricks the internet">
+                        Unverifiable rumor about a PS Vita redesign tricks the internet                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/19/unverifiable-rumor-about-a-ps-vita-redesign-tricks-the-internet/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 19, 2013</span> in <span class="categories"><a href="http://wololo.net/category/psvita/" title="View all posts in PS Vita" rel="category tag">PS Vita</a>, <a href="http://wololo.net/category/wtf/" title="View all posts in WTF?" rel="category tag">WTF?</a></span> by <span class="vcard author"><a href="http://wololo.net/author/admin/" title="Articles by wololo" class="url fn"><font color="green"><b>wololo</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/19/unverifiable-rumor-about-a-ps-vita-redesign-tricks-the-internet/#comments">39 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p><img class="alignleft" alt="" src="http://i.imgur.com/F5Ojpbx.jpg" width="140" height="81" />We all love rumors about our favorite gadgets. Yesterday an unverified rumor from website The MagicBox stated that Sony has been working on a &#8220;Version 2&#8243; (a.k.a. PCH 2000) of the Vita, with a bigger screen, more RAM, and a design closer to that of the PS4. This triggered many reactions, even on the most serious gaming websites.</p>
+<p> <a href="http://wololo.net/2013/08/19/unverifiable-rumor-about-a-ps-vita-redesign-tricks-the-internet/#more-14748" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14730 post type-post status-publish format-standard hentry category-gaming category-vhbl category-wagic entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14730">
+                    <a href="http://wololo.net/2013/08/18/wololos-5-year-anniversary-winners-of-this-weeks-psn-codes-and-more-to-come/" rel="bookmark" title="Permanent link to Wololo&#8217;s 5 year anniversary: winners of this Week&#8217;s PSN codes, and more to come!">
+                        Wololo&#8217;s 5 year anniversary: winners of this Week&#8217;s PSN codes, and more to come!                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/18/wololos-5-year-anniversary-winners-of-this-weeks-psn-codes-and-more-to-come/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 18, 2013</span> in <span class="categories"><a href="http://wololo.net/category/gaming/" title="View all posts in Gaming" rel="category tag">Gaming</a>, <a href="http://wololo.net/category/vhbl/" title="View all posts in VHBL" rel="category tag">VHBL</a>, <a href="http://wololo.net/category/wagic/" title="View all posts in Wagic" rel="category tag">Wagic</a></span> by <span class="vcard author"><a href="http://wololo.net/author/admin/" title="Articles by wololo" class="url fn"><font color="green"><b>wololo</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/18/wololos-5-year-anniversary-winners-of-this-weeks-psn-codes-and-more-to-come/#comments">36 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p><img class="alignleft" alt="" src="http://wololo.net/wagic/wp-content/uploads/2013/08/PSP_Balloons.jpg" width="120" height="91" />Hey everyone, as I&#8217;ve stated before, this month is our site&#8217;s 5 year anniversary. I&#8217;m still having a hard time believing we got that far, and the euphoria leads me to doing some crazy stuff. We&#8217;ve given away $120 worth of PSN codes this month so far, and the best has yet to come.</p>
+<p> <a href="http://wololo.net/2013/08/18/wololos-5-year-anniversary-winners-of-this-weeks-psn-codes-and-more-to-come/#more-14730" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14720 post type-post status-publish format-standard hentry category-release tag-exploit tag-fmcb tag-free-mcboot tag-playstation-2 tag-ps2 tag-release tag-security tag-sony tag-v1-90 entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14720">
+                    <a href="http://wololo.net/2013/08/18/free-mcboot-v1-90-released-extra-compatibility-and-new-features/" rel="bookmark" title="Permanent link to Free McBoot v1.90 released &#8211; extra compatibility and new features.">
+                        Free McBoot v1.90 released &#8211; extra compatibility and new features.                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/18/free-mcboot-v1-90-released-extra-compatibility-and-new-features/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 18, 2013</span> in <span class="categories"><a href="http://wololo.net/category/release/" title="View all posts in release" rel="category tag">release</a></span> by <span class="vcard author"><a href="http://wololo.net/author/tonakai/" title="Articles by Tonakai" class="url fn"><font color="green"><b>Tonakai</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/18/free-mcboot-v1-90-released-extra-compatibility-and-new-features/#comments">35 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p><img class="alignleft" alt="" src="http://i.imgur.com/O16U1pv.jpg" width="203" height="152" /> For those of you still interested in the PlayStation 2, and use the Softmod known as FMCB (Free McBoot) this will come of great interest to you as FMCB has received a huge overhaul from developer SP193.</p>
+<p>For those of you who do not know, FMCB is a softmod for the PS2 that allows one to run homebrew applications (including but not limited to various loaders, ftp clients and emulators) and play backups of their games through either a disc based medium* or through a HDDLoader. It&#8217;s best asset however comes from the fact that it&#8217;s installed on the memory card so once installed it&#8217;s available on most PS2 consoles &#8211; in essence, you&#8217;ve hacked &#8220;every&#8221; PS2 console you&#8217;ve come into contact with. Furthermore, if your friend wants to have it you can place it on their card using your own.</p>
+<p> <a href="http://wololo.net/2013/08/18/free-mcboot-v1-90-released-extra-compatibility-and-new-features/#more-14720" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+            <p class="tagdata"><strong>Tags:</strong> <a href="http://wololo.net/tag/exploit/" rel="tag">exploit</a>, <a href="http://wololo.net/tag/fmcb/" rel="tag">FMCB</a>, <a href="http://wololo.net/tag/free-mcboot/" rel="tag">Free McBoot</a>, <a href="http://wololo.net/tag/playstation-2/" rel="tag">PlayStation 2</a>, <a href="http://wololo.net/tag/ps2/" rel="tag">PS2</a>, <a href="http://wololo.net/tag/release/" rel="tag">release</a>, <a href="http://wololo.net/tag/security/" rel="tag">security</a>, <a href="http://wololo.net/tag/sony/" rel="tag">Sony</a>, <a href="http://wololo.net/tag/v1-90/" rel="tag">v1.90</a></p>
+        </div>
+        <div class="post-14705 post type-post status-publish format-standard hentry category-gaming entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14705">
+                    <a href="http://wololo.net/2013/08/18/battlefield-3-sims-3-dead-space-3-and-many-more-for-only-5/" rel="bookmark" title="Permanent link to Battlefield 3, Sims 3, Dead Space 3 and many more&#8230; for only 5$!">
+                        Battlefield 3, Sims 3, Dead Space 3 and many more&#8230; for only 5$!                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/18/battlefield-3-sims-3-dead-space-3-and-many-more-for-only-5/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 18, 2013</span> in <span class="categories"><a href="http://wololo.net/category/gaming/" title="View all posts in Gaming" rel="category tag">Gaming</a></span> by <span class="vcard author"><a href="http://wololo.net/author/m-rr/" title="Articles by m.rr" class="url fn"><font color="green"><b>m.rr</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/18/battlefield-3-sims-3-dead-space-3-and-many-more-for-only-5/#comments">20 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p>Yes, you read the title right. This is this week&#8217;s Humble Bundle! Awesome isn&#8217;t it? Thanks to EA Sports, we can have these games for the very low price of just 5$.</p>
+<p> <a href="http://wololo.net/2013/08/18/battlefield-3-sims-3-dead-space-3-and-many-more-for-only-5/#more-14705" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14617 post type-post status-publish format-standard hentry category-wtf category-xbox entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14617">
+                    <a href="http://wololo.net/2013/08/16/what-do-you-really-get-for-499-on-the-xbox-one/" rel="bookmark" title="Permanent link to What Do You REALLY Get For $499 On The Xbox One?">
+                        What Do You REALLY Get For $499 On The Xbox One?                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/16/what-do-you-really-get-for-499-on-the-xbox-one/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 16, 2013</span> in <span class="categories"><a href="http://wololo.net/category/wtf/" title="View all posts in WTF?" rel="category tag">WTF?</a>, <a href="http://wololo.net/category/xbox/" title="View all posts in Xbox" rel="category tag">Xbox</a></span> by <span class="vcard author"><a href="http://wololo.net/author/minimur12/" title="Articles by Minimur12" class="url fn"><font color="green"><b>Minimur12</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/16/what-do-you-really-get-for-499-on-the-xbox-one/#comments">64 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p><a href="http://s9.postimg.org/t4632ep3j/screenshot_537.png"><img alt="" src="http://s9.postimg.org/rz7fjad8v/screenshot_535.png" width="243" height="181" /></a> So what do you actually get with the Xbox One when you don&#8217;t have a Gold subscription? Not a lot it may seem&#8230;.</p>
+<p> <a href="http://wololo.net/2013/08/16/what-do-you-really-get-for-499-on-the-xbox-one/#more-14617" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14687 post type-post status-publish format-standard hentry category-xbox entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14687">
+                    <a href="http://wololo.net/2013/08/15/yet-another-180-kinect-no-longer-required-for-xbox-one-to-function/" rel="bookmark" title="Permanent link to Yet Another 180, Kinect No Longer Required For Xbox One To Function">
+                        Yet Another 180, Kinect No Longer Required For Xbox One To Function                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/15/yet-another-180-kinect-no-longer-required-for-xbox-one-to-function/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 15, 2013</span> in <span class="categories"><a href="http://wololo.net/category/xbox/" title="View all posts in Xbox" rel="category tag">Xbox</a></span> by <span class="vcard author"><a href="http://wololo.net/author/minimur12/" title="Articles by Minimur12" class="url fn"><font color="green"><b>Minimur12</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/15/yet-another-180-kinect-no-longer-required-for-xbox-one-to-function/#comments">34 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p><img class="alignleft" alt="" src="http://s9.postimg.org/sdmjo41hr/screenshot_556.png" /><br />
+Just like how they&#8217;ve reversed their policies on DRM, Headset, and Self Publishing, they have now decided to reverse the rule about how kinect is needed constantly.</p>
+<p> <a href="http://wololo.net/2013/08/15/yet-another-180-kinect-no-longer-required-for-xbox-one-to-function/#more-14687" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14674 post type-post status-publish format-standard hentry category-gaming entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14674">
+                    <a href="http://wololo.net/2013/08/14/wololos-5-year-anniversary-winners-for-last-week-announced-and-more-presents-for-you/" rel="bookmark" title="Permanent link to Wololo&#8217;s 5 year anniversary: winners for last week announced, and more presents for you!">
+                        Wololo&#8217;s 5 year anniversary: winners for last week announced, and more presents for you!                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/14/wololos-5-year-anniversary-winners-for-last-week-announced-and-more-presents-for-you/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 14, 2013</span> in <span class="categories"><a href="http://wololo.net/category/gaming/" title="View all posts in Gaming" rel="category tag">Gaming</a></span> by <span class="vcard author"><a href="http://wololo.net/author/admin/" title="Articles by wololo" class="url fn"><font color="green"><b>wololo</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/14/wololos-5-year-anniversary-winners-for-last-week-announced-and-more-presents-for-you/#comments">674 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p><img class="alignleft" alt="" src="http://wololo.net/wagic/wp-content/uploads/2013/08/PSP_Balloons.jpg" width="120" height="91" />Hey everyone, as <a href="http://wololo.net/2013/08/05/wololo-net-turns-5-years-old-and-i-have-presents-for-you/">you already know</a>, this month is Wololo.net&#8217;s 5 year anniversary. In 5 years we&#8217;ve gone from a developer&#8217;s blog to the biggest PSP/Vita community out there, and that&#8217;s mostly thanks to you guys. So to celebrate I have presents for you.</p>
+<p> <a href="http://wololo.net/2013/08/14/wololos-5-year-anniversary-winners-for-last-week-announced-and-more-presents-for-you/#more-14674" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+        <div class="post-14610 post type-post status-publish format-standard hentry category-gaming category-psvita category-wtf entry">
+            
+            <div class="meta">
+                <h2 class="title entry-title" id="post-14610">
+                    <a href="http://wololo.net/2013/08/14/vita-the-annoying-bugs-sony-doesnt-seem-to-care-about/" rel="bookmark" title="Permanent link to Vita: the annoying bugs Sony doesn&#8217;t seem to care about">
+                        Vita: the annoying bugs Sony doesn&#8217;t seem to care about                    </a>
+					&nbsp;<g:plusone size="small" href="http://wololo.net/2013/08/14/vita-the-annoying-bugs-sony-doesnt-seem-to-care-about/"></g:plusone>
+                </h2>
+                
+                <p class="metadata"><span class="date updated">August 14, 2013</span> in <span class="categories"><a href="http://wololo.net/category/gaming/" title="View all posts in Gaming" rel="category tag">Gaming</a>, <a href="http://wololo.net/category/psvita/" title="View all posts in PS Vita" rel="category tag">PS Vita</a>, <a href="http://wololo.net/category/wtf/" title="View all posts in WTF?" rel="category tag">WTF?</a></span> by <span class="vcard author"><a href="http://wololo.net/author/hackinformer/" title="Articles by hackinformer" class="url fn"><font color="green"><b>hackinformer</b></font></a></span> | <a class="comments-link" href="http://wololo.net/2013/08/14/vita-the-annoying-bugs-sony-doesnt-seem-to-care-about/#comments">94 comments</a></p>            </div>
+            
+            <div class="content entry-content clearfix">
+                                <p>The new firmware for the PSvita is a great new update and a step in the right direction with game save uploads with PS+, but I&#8217;m not here to talk about the new options. It seems that there’s a problem that Sony is not addressing with the PSvita and the Playstation store.</p>
+<p> <a href="http://wololo.net/2013/08/14/vita-the-annoying-bugs-sony-doesnt-seem-to-care-about/#more-14610" class="more-link">Read the rest of this entry &raquo;</a></p>
+
+			
+				
+            </div>
+            
+                    </div>
+
+<p class="pagination"><a href="http://wololo.net/page/2/" >&laquo; Older entries</a></p>        
+            
+        
+    </div>
+
+<div id="sidebar" class="secondary">
+
+    		<div id="recent-posts-2" class="widget widget_recent_entries">		<h3>Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://wololo.net/2013/08/22/my-vhbl-exploit-grab-it-while-its-still-hot/" title="My VHBL exploit: grab it while it&#8217;s still hot!">My VHBL exploit: grab it while it&#8217;s still hot!</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/21/sonys-gamescomference-ps4-release-date-announced-for-eu-us/" title="Sony&#8217;s Gamescomference: PS4 Release Date Announced for EU &amp; US.">Sony&#8217;s Gamescomference: PS4 Release Date Announced for EU &amp; US.</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/21/psvita-gamescom-price-cut-borderlands-2-and-more/" title="PsVita @ Gamescom: Price cut, Borderlands 2 and more">PsVita @ Gamescom: Price cut, Borderlands 2 and more</a>
+						</li>
+				</ul>
+		</div><div id="text-198073514" class="widget widget_text"><h3>More stuff</h3>			<div class="textwidget"><div class="content">
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7101223807014632";
+/* 160x600, Home, created 9/30/09 */
+google_ad_slot = "1808945551";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br />
+<a href="http://www.hackedarcadegames.com">Pre Hacks</a><br /></div>
+</div>
+		</div><div id="phpbb-recent-topics" class="widget widget_phpbb_recent_topics"><h3>/Talk</h3><ul class="prt_ul" ><li class="prt_li" ><a  href='http://wololo.net/talk/viewtopic.php?p=288832#p288832'>Re: Were you able to get the exploit?</a><br />
+<small><i>22/Aug/13 - 1:16 pm</i></small>
+</li><li class="prt_li" ><a  href='http://wololo.net/talk/viewtopic.php?p=288831#p288831'>Re: How to add your homebrew to /Downloads</a><br />
+<small><i>22/Aug/13 - 1:01 pm</i></small>
+</li><li class="prt_li" ><a  href='http://wololo.net/talk/viewtopic.php?p=288829#p288829'>time to Unbox again&quot;,</a><br />
+<small><i>22/Aug/13 - 12:45 pm</i></small>
+</li><li class="prt_li" ><a  href='http://wololo.net/talk/viewtopic.php?p=288826#p288826'>Re: Problem transfer game (MINIS) in VITA not update FW: 2.1</a><br />
+<small><i>22/Aug/13 - 12:34 pm</i></small>
+</li><li class="prt_li" ><a  href='http://wololo.net/talk/viewtopic.php?p=288824#p288824'>Re: [POLL] 6.60 TN-V4</a><br />
+<small><i>22/Aug/13 - 12:07 pm</i></small>
+</li></ul></div><div id="text-198073519" class="widget widget_text"><h3>Popular Downloads</h3>			<div class="textwidget"><div class="content">
+
+<center>
+<iframe src="http://www.wololo.net/downloads/index.php/download/topwidget" style="width:200px;height:780px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></center></div>
+</div>
+		</div><div id="text-198073517" class="widget widget_text"><h3>Amazon</h3>			<div class="textwidget"><div class="content">
+
+<b>Do you shop at Amazon?</b>
+If you like my work and are an Amazon shopper, please consider using the links below. It won&#8217;t cost you anything more, and I will get a small percentage of the sales.
+
+Thanks for your support!
+<br />
+<a target="_blank" href="http://www.amazon.com/?_encoding=UTF8&#038;tag=wagic-20&#038;linkCode=ur2&#038;camp=1789&#038;creative=390957">Amazon.com</a>
+
+<center>
+<iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=wagic-20&#038;o=1&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B003O6EATE" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+<br />
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_b5b8b909-fba8-427a-aab4-b496d81159ee"  WIDTH="160px" HEIGHT="400px"> <PARAM NAME="movie" VALUE="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&#038;MarketPlace=US&#038;ID=V20070822%2FUS%2Fwagic-20%2F8009%2Fb5b8b909-fba8-427a-aab4-b496d81159ee&#038;Operation=GetDisplayTemplate"><PARAM NAME="quality" VALUE="high"><PARAM NAME="bgcolor" VALUE="#FFFFFF"><PARAM NAME="allowscriptaccess" VALUE="always"><embed src="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&#038;MarketPlace=US&#038;ID=V20070822%2FUS%2Fwagic-20%2F8009%2Fb5b8b909-fba8-427a-aab4-b496d81159ee&#038;Operation=GetDisplayTemplate" id="Player_b5b8b909-fba8-427a-aab4-b496d81159ee" quality="high" bgcolor="#ffffff" name="Player_b5b8b909-fba8-427a-aab4-b496d81159ee" allowscriptaccess="always"  type="application/x-shockwave-flash" align="middle" height="400px" width="160px"></embed></OBJECT> <NOSCRIPT><A HREF="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&#038;MarketPlace=US&#038;ID=V20070822%2FUS%2Fwagic-20%2F8009%2Fb5b8b909-fba8-427a-aab4-b496d81159ee&#038;Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT>
+</center></div>
+</div>
+		</div><div id="rss-3" class="widget widget_rss"><h3><a class='rsswidget' href='http://makesmarttv.net/feed/' title='Syndicate this content'><img style='border:0' width='14' height='14' src='http://wololo.net/wagic/wp-includes/images/rss.png' alt='RSS' /></a> <a class='rsswidget' href='http://makesmarttv.net/' title='How to make your TV a Smart TV. Reviews and Tutorials'>Latest entries on our Smart TV dedicated sister site</a></h3><ul><li><a class='rsswidget' href='http://makesmarttv.net/if-you-think-chromecast-is-cheap-and-revolutionary-youve-not-been-paying-attention-for-the-past-12-months/' title='When Google revealed Chromecast, in a brilliantly orchestrated marketing announce, the “usual suspects” of technology blogs were all extremely enthusiastic. Head over to mainstream blogs’ technical reviews if you need to be convinced. If you read what these guys have to write, the Chromecast is a tiny revolution at an insanely low cost. They goContinue Reading…'>If you think Chromecast is cheap and revolutionary, you’ve not been paying attention for the past 12 months</a></li><li><a class='rsswidget' href='http://makesmarttv.net/review-cloudnetgo-cr9-quad-core-android-mini-pc/' title='The cloudnetgo cr9 is a Mini Android PC on a stick. For those who join us for the first time, these are super tiny PCs that you plug to your TV’s HDMI port in order to transform your dumb TV into a smart TV. As these sticks run Android, you basically get access to allContinue Reading…'>Review: Cloudnetgo CR9, Quad Core Android Mini PC</a></li><li><a class='rsswidget' href='http://makesmarttv.net/how-to-watch-netflix-in-europe-on-ipad-or-any-other-device/' title='Netflix is by far the most successful streaming website in the US, and for a good reason: they have lots of content, a very reasonable monthly fee, and their service works on pretty much every electronic device in my home except my Roomba. The only “issue” with Netflix is that it’s only available in theContinue Reading…'>How to watch Netflix in Europe, on iPad or any other device</a></li><li><a class='rsswidget' href='http://makesmarttv.net/review-mk702-ii-air-mouse/' title='For those who don’t know Rikomagic yet, they are the company behind the MK802 series, mini computers running android that allow you to turn any TV into a smart TV. They also sell accessories for computers, and when I bought their MK802 IV, (my review here), they also suggested the MK702 II remote controller/ airContinue Reading…'>Review: MK702 II Air Mouse</a></li><li><a class='rsswidget' href='http://makesmarttv.net/follow-us-on-twitter-for-a-chance-to-win-a-mk802iv-quad-core-mini-pc/' title='We’ve been around for quite a while now thanks to you guys who visit this site regularly, and it’s time for us to give back. We’re having a simple contest to let one of you win Rikomagic’s latest Quad core Mini PC, the MK802 IV. The MK802 IV is an extremely advanced mini PC withContinue Reading…'>Follow us on Twitter for a chance to win a MK802IV (Quad Core Mini PC)</a></li></ul></div><div id="categories-186039291" class="widget widget_categories"><h3>Categories</h3>		<ul>
+	<li class="cat-item cat-item-28"><a href="http://wololo.net/category/3ds/" title="View all posts filed under 3DS">3DS</a>
+</li>
+	<li class="cat-item cat-item-52"><a href="http://wololo.net/category/android-2/" title="View all posts filed under Android">Android</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://wololo.net/category/c/" title="View all posts filed under c++">c++</a>
+</li>
+	<li class="cat-item cat-item-30"><a href="http://wololo.net/category/cfw-pro/" title="View all posts filed under CFW Pro">CFW Pro</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="http://wololo.net/category/gaming/" title="View all posts filed under Gaming">Gaming</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="http://wololo.net/category/hardware/" title="View all posts filed under hardware">hardware</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="http://wololo.net/category/hbl/" title="View all posts filed under HBL">HBL</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="http://wololo.net/category/hen-6-35/" title="View all posts filed under Hen 6.35">Hen 6.35</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://wololo.net/category/homebrew/" title="View all posts filed under Homebrew">Homebrew</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="http://wololo.net/category/linux/" title="View all posts filed under Linux">Linux</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://wololo.net/category/magic/" title="View all posts filed under magic">magic</a>
+</li>
+	<li class="cat-item cat-item-99"><a href="http://wololo.net/category/nintendo/" title="View all posts filed under Nintendo">Nintendo</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://wololo.net/category/pandora/" title="View all posts filed under pandora">pandora</a>
+</li>
+	<li class="cat-item cat-item-26"><a href="http://wololo.net/category/playstation-phone/" title="View all posts filed under Playstation Phone">Playstation Phone</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="http://wololo.net/category/psvita/" title="View all posts filed under PS Vita">PS Vita</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="http://wololo.net/category/ps3/" title="View all posts filed under PS3">PS3</a>
+</li>
+	<li class="cat-item cat-item-98"><a href="http://wololo.net/category/ps4/" title="View all posts filed under PS4">PS4</a>
+</li>
+	<li class="cat-item cat-item-42"><a href="http://wololo.net/category/psp-2/" title="View all posts filed under PSP">PSP</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://wololo.net/category/psp-dev/" title="View all posts filed under psp dev">psp dev</a>
+</li>
+	<li class="cat-item cat-item-29"><a href="http://wololo.net/category/psp-genesis/" title="View all posts filed under PSP Genesis">PSP Genesis</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://wololo.net/category/release/" title="View all posts filed under release">release</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="http://wololo.net/category/security/" title="View all posts filed under security">security</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="http://wololo.net/category/tn-hen/" title="View all posts filed under TN Hen">TN Hen</a>
+</li>
+	<li class="cat-item cat-item-32"><a href="http://wololo.net/category/top-10/" title="View all posts filed under Top 10">Top 10</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://wololo.net/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="http://wololo.net/category/vhbl/" title="View all posts filed under VHBL">VHBL</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://wololo.net/category/wagic/" title="View all posts filed under Wagic">Wagic</a>
+</li>
+	<li class="cat-item cat-item-114"><a href="http://wololo.net/category/wii/" title="View all posts filed under Wii">Wii</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="http://wololo.net/category/wtf/" title="View all posts filed under WTF?">WTF?</a>
+</li>
+	<li class="cat-item cat-item-110"><a href="http://wololo.net/category/xbox/" title="View all posts filed under Xbox">Xbox</a>
+</li>
+		</ul>
+</div><div id="archives-2" class="widget widget_archive"><h3>Archives</h3>		<select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'> <option value="">Select Month</option> 	<option value='http://wololo.net/2013/08/'> August 2013 </option>
+	<option value='http://wololo.net/2013/07/'> July 2013 </option>
+	<option value='http://wololo.net/2013/06/'> June 2013 </option>
+	<option value='http://wololo.net/2013/05/'> May 2013 </option>
+	<option value='http://wololo.net/2013/04/'> April 2013 </option>
+	<option value='http://wololo.net/2013/03/'> March 2013 </option>
+	<option value='http://wololo.net/2013/02/'> February 2013 </option>
+	<option value='http://wololo.net/2013/01/'> January 2013 </option>
+	<option value='http://wololo.net/2012/12/'> December 2012 </option>
+	<option value='http://wololo.net/2012/11/'> November 2012 </option>
+	<option value='http://wololo.net/2012/10/'> October 2012 </option>
+	<option value='http://wololo.net/2012/09/'> September 2012 </option>
+	<option value='http://wololo.net/2012/08/'> August 2012 </option>
+	<option value='http://wololo.net/2012/07/'> July 2012 </option>
+	<option value='http://wololo.net/2012/06/'> June 2012 </option>
+	<option value='http://wololo.net/2012/05/'> May 2012 </option>
+	<option value='http://wololo.net/2012/04/'> April 2012 </option>
+	<option value='http://wololo.net/2012/03/'> March 2012 </option>
+	<option value='http://wololo.net/2012/02/'> February 2012 </option>
+	<option value='http://wololo.net/2012/01/'> January 2012 </option>
+	<option value='http://wololo.net/2011/12/'> December 2011 </option>
+	<option value='http://wololo.net/2011/11/'> November 2011 </option>
+	<option value='http://wololo.net/2011/10/'> October 2011 </option>
+	<option value='http://wololo.net/2011/09/'> September 2011 </option>
+	<option value='http://wololo.net/2011/08/'> August 2011 </option>
+	<option value='http://wololo.net/2011/07/'> July 2011 </option>
+	<option value='http://wololo.net/2011/06/'> June 2011 </option>
+	<option value='http://wololo.net/2011/05/'> May 2011 </option>
+	<option value='http://wololo.net/2011/04/'> April 2011 </option>
+	<option value='http://wololo.net/2011/03/'> March 2011 </option>
+	<option value='http://wololo.net/2011/02/'> February 2011 </option>
+	<option value='http://wololo.net/2011/01/'> January 2011 </option>
+	<option value='http://wololo.net/2010/12/'> December 2010 </option>
+	<option value='http://wololo.net/2010/11/'> November 2010 </option>
+	<option value='http://wololo.net/2010/10/'> October 2010 </option>
+	<option value='http://wololo.net/2010/09/'> September 2010 </option>
+	<option value='http://wololo.net/2010/08/'> August 2010 </option>
+	<option value='http://wololo.net/2010/07/'> July 2010 </option>
+	<option value='http://wololo.net/2010/06/'> June 2010 </option>
+	<option value='http://wololo.net/2010/05/'> May 2010 </option>
+	<option value='http://wololo.net/2010/04/'> April 2010 </option>
+	<option value='http://wololo.net/2010/03/'> March 2010 </option>
+	<option value='http://wololo.net/2010/02/'> February 2010 </option>
+	<option value='http://wololo.net/2010/01/'> January 2010 </option>
+	<option value='http://wololo.net/2009/12/'> December 2009 </option>
+	<option value='http://wololo.net/2009/11/'> November 2009 </option>
+	<option value='http://wololo.net/2009/10/'> October 2009 </option>
+	<option value='http://wololo.net/2009/09/'> September 2009 </option>
+	<option value='http://wololo.net/2009/08/'> August 2009 </option>
+	<option value='http://wololo.net/2009/07/'> July 2009 </option>
+	<option value='http://wololo.net/2009/06/'> June 2009 </option>
+	<option value='http://wololo.net/2009/05/'> May 2009 </option>
+	<option value='http://wololo.net/2009/04/'> April 2009 </option>
+	<option value='http://wololo.net/2009/03/'> March 2009 </option>
+	<option value='http://wololo.net/2009/02/'> February 2009 </option>
+	<option value='http://wololo.net/2009/01/'> January 2009 </option>
+	<option value='http://wololo.net/2008/12/'> December 2008 </option>
+	<option value='http://wololo.net/2008/11/'> November 2008 </option>
+	<option value='http://wololo.net/2008/10/'> October 2008 </option>
+	<option value='http://wololo.net/2008/09/'> September 2008 </option>
+	<option value='http://wololo.net/2008/08/'> August 2008 </option>
+ </select>
+</div>		<div id="recent-posts-3" class="widget widget_recent_entries">		<h3>More posts</h3>		<ul>
+					<li>
+				<a href="http://wololo.net/2013/08/22/my-vhbl-exploit-grab-it-while-its-still-hot/" title="My VHBL exploit: grab it while it&#8217;s still hot!">My VHBL exploit: grab it while it&#8217;s still hot!</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/21/sonys-gamescomference-ps4-release-date-announced-for-eu-us/" title="Sony&#8217;s Gamescomference: PS4 Release Date Announced for EU &amp; US.">Sony&#8217;s Gamescomference: PS4 Release Date Announced for EU &amp; US.</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/21/psvita-gamescom-price-cut-borderlands-2-and-more/" title="PsVita @ Gamescom: Price cut, Borderlands 2 and more">PsVita @ Gamescom: Price cut, Borderlands 2 and more</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/20/killzone-mercenary-public-beta-live/" title="Killzone: Mercenary Public Beta Live">Killzone: Mercenary Public Beta Live</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/20/wololo-is-5-year-old-and-to-celebrate-one-of-you-gets-to-win-a-ps4/" title="Wololo is 5 year old, and to celebrate, one of you gets to win a PS4!">Wololo is 5 year old, and to celebrate, one of you gets to win a PS4!</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/20/minimur-wth-happened-this-week-cod-ghosts-on-vita-nickelodeon-on-ps4-and-gta-online/" title="Minimur, WTH Happened This Week? CoD: Ghosts On Vita, Nickelodeon on PS4, And GTA Online!">Minimur, WTH Happened This Week? CoD: Ghosts On Vita, Nickelodeon on PS4, And GTA Online!</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/19/ps4-rumored-release-date/" title="PS4 rumored release date.">PS4 rumored release date.</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/19/unverifiable-rumor-about-a-ps-vita-redesign-tricks-the-internet/" title="Unverifiable rumor about a PS Vita redesign tricks the internet">Unverifiable rumor about a PS Vita redesign tricks the internet</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/18/wololos-5-year-anniversary-winners-of-this-weeks-psn-codes-and-more-to-come/" title="Wololo&#8217;s 5 year anniversary: winners of this Week&#8217;s PSN codes, and more to come!">Wololo&#8217;s 5 year anniversary: winners of this Week&#8217;s PSN codes, and more to come!</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/18/free-mcboot-v1-90-released-extra-compatibility-and-new-features/" title="Free McBoot v1.90 released &#8211; extra compatibility and new features.">Free McBoot v1.90 released &#8211; extra compatibility and new features.</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/18/battlefield-3-sims-3-dead-space-3-and-many-more-for-only-5/" title="Battlefield 3, Sims 3, Dead Space 3 and many more&#8230; for only 5$!">Battlefield 3, Sims 3, Dead Space 3 and many more&#8230; for only 5$!</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/16/what-do-you-really-get-for-499-on-the-xbox-one/" title="What Do You REALLY Get For $499 On The Xbox One?">What Do You REALLY Get For $499 On The Xbox One?</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/15/yet-another-180-kinect-no-longer-required-for-xbox-one-to-function/" title="Yet Another 180, Kinect No Longer Required For Xbox One To Function">Yet Another 180, Kinect No Longer Required For Xbox One To Function</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/14/wololos-5-year-anniversary-winners-for-last-week-announced-and-more-presents-for-you/" title="Wololo&#8217;s 5 year anniversary: winners for last week announced, and more presents for you!">Wololo&#8217;s 5 year anniversary: winners for last week announced, and more presents for you!</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/14/vita-the-annoying-bugs-sony-doesnt-seem-to-care-about/" title="Vita: the annoying bugs Sony doesn&#8217;t seem to care about">Vita: the annoying bugs Sony doesn&#8217;t seem to care about</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/13/my-vhbl-release-faq/" title="My VHBL Release: FAQ">My VHBL Release: FAQ</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/13/minimur-wth-happened-this-week-left-4-dead-3-xbox-one-un-boxing-and-twd-400-days-comp-winner/" title="Minimur, WTH Happened This Week? Left 4 Dead 3, Xbox One Un-boxing and TWD: 400 Days Comp Winner!">Minimur, WTH Happened This Week? Left 4 Dead 3, Xbox One Un-boxing and TWD: 400 Days Comp Winner!</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/12/video-the-z-showcases-vhbl-on-vita-firmware-2-60/" title="[Video] The Z showcases VHBL on Vita Firmware 2.60">[Video] The Z showcases VHBL on Vita Firmware 2.60</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/12/release-date-for-tn-v4kexploit-ofw-2-60-disables-increased-memory-support/" title="Release Date for TN-V4/kexploit &amp; OFW 2.60 Disables Increased Memory Support">Release Date for TN-V4/kexploit &amp; OFW 2.60 Disables Increased Memory Support</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/11/announcement-i-will-release-a-new-usermode-exploit-soon/" title="Announcement: I will release a new usermode exploit soon">Announcement: I will release a new usermode exploit soon</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/08/psvita-tn-v-update-coming-possibly-new-kernel-exploit-release-soon/" title="PSVita TN-V Update Coming, Possibly New Kernel Exploit Release Soon">PSVita TN-V Update Coming, Possibly New Kernel Exploit Release Soon</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/07/ps-vita-day-1-hello-world-on-firmware-2-60/" title="PS Vita: Day 1 Hello World on firmware 2.60">PS Vita: Day 1 Hello World on firmware 2.60</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/06/psvita-mandatory-ofw-2-60-now-live/" title="PSVITA Mandatory OFW 2.60 Now Live">PSVITA Mandatory OFW 2.60 Now Live</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/05/wololo-net-turns-5-years-old-and-i-have-presents-for-you/" title="Wololo.net turns 5 years old, and I have presents for you">Wololo.net turns 5 years old, and I have presents for you</a>
+						</li>
+					<li>
+				<a href="http://wololo.net/2013/08/05/minimur-wth-happened-this-last-week-infamous-ss-tech-demo-xbox-one-dev-kit-twd-400-days-giveaway/" title="Minimur, WTH Happened This &amp; Last Week? inFamous: SS Tech Demo, Xbox One Dev Kit &amp; TWD: 400 Days Giveaway!">Minimur, WTH Happened This &amp; Last Week? inFamous: SS Tech Demo, Xbox One Dev Kit &amp; TWD: 400 Days Giveaway!</a>
+						</li>
+				</ul>
+		</div>        
+</div>
+</div> <!-- /main content -->
+
+
+
+<div id="footer" class="clearfix">
+    
+    <div class="secondary">
+        
+        <div id="text-198073521" class="widget widget_text">			<div class="textwidget"></div>
+		</div>        
+    </div> <!-- /secondary -->
+    
+    <div class="primary">
+        
+                
+    </div> <!-- /primary -->
+    
+    <div id="theme-info" class="clearfix">
+        
+        <div class="secondary">
+    <p><a class="feed" href="http://wololo.net/feed/">Subscribe to feed</a>
+    <br/><br />
+    <div style="font-size:.8em;"><a href="https://twitter.com/#!/frwololo"><img src="https://dev.twitter.com/sites/default/files/images_documentation/bird_blue_16.png" style="border-style: none" />&nbsp;Apparently we're on twitter too</a></div>
+    </p>
+</div><div class="primary content">
+    <p>Powered by <a href="http://wordpress.org/">WordPress</a> and <a href="http://tarskitheme.com/">Tarski</a></p>
+</div>
+   
+    </div> <!-- /theme-info -->
+        <div align="right" style="margin-bottom:5px;" >Design tweaks and performance tips thanks to <a href="http://groovybear.net">Groovybear</a></div> 
+</div> <!-- /footer -->
+
+</div><!--stats_footer_test--><script src="http://stats.wordpress.com/e-201334.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({blog:'7176879',v:'ext',post:'0'});
+var load_cmc = function(){linktracker_init(7176879,0,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script>
+
+<script type="text/javascript">
+  var vglnk = { api_url: '//api.viglink.com/api',
+                key: '2fe22b1b275483decaa0b5531ad04e6b' };
+
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = ('https:' == document.location.protoco

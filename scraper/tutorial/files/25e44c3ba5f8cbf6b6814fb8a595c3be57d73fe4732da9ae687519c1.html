@@ -1,0 +1,936 @@
+
+<!-----------------------------------------------------------------------
+//
+// Microsoft Windows Media Internet Services
+// Copyright (C) Microsoft Corporation. All rights reserved.
+//
+//---------------------------------------------------------------------->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	?????????
+</title>
+    <OBJECT CLASSID="CLSID:6BF52A52-394A-11D3-B153-00C04F79FAA6" id=player width=1 height=1 VIEWASTEXT>
+		<Param name="uiMode" value="invisible">
+    </OBJECT>
+<link href="App_Themes/Vista/Vista.css" type="text/css" rel="stylesheet" /></head>
+<body id="bdySearch" scroll="no" onload="recreate_search();">
+    <div id="divBdy" onclick="return false;" style="width:100%; height:100%; position:absolute; z-index:-100;"></div>
+    <script src="scripts/common.js" type="text/javascript"></script>
+    <script type="text/javascript">
+// global variables
+// Initialize variables with text from resource files. Replace single quotes (')
+// with (\\'), since some locales contain single quote(') in the text which will
+// break the script.
+var maxresults = 500;
+var strSearchHeaderAlbumDefault = '???????????? 1 ????????????';
+var strSearchHeaderFoundAlbumsDefault = '%1 ???"%2" ??????????????????';
+var strSearchHeaderFoundArtistsDefault = '%1 ???"%2" ????????????????????';
+var strSearchHeaderFoundTracksDefault = '%1 ???"%2" ?????? (????) ?????????';
+var strSearchHeaderSearchingAlbumDefault = '"%s" ?????????????????...';
+var strSearchHeaderSearchingArtistDefault = '"%s" ???????????????????...';
+var strSearchHeaderSearchingTracksDefault = '"%s" ?????? (????) ????????...';
+var strSearchHeaderTrackDefault = '??? (????) ?????? 1 ????????????';
+var l_UnknownAlbum = '???????';
+var l_AlbumTitle = '?????????: ';
+var l_Artist = '??????: ';
+var l_UnknownArtist = '?????????';
+var l_UnknownArtist_tooltip = '??????: ?????????';
+var l_TrackTitle = '? (????) ?????: ';
+var l_UnknownTrack = '???? (????)';
+var l_FileName = '?????: ';
+var l_Songs = ' ??';
+var l_Albums = ' ????';
+var l_Genre = '????: ';
+var l_Year = '?: ';
+var l_Clear = '???';
+// Initialize variables containing class names for the list hover/select styles.
+var ComboLeftHover = "ComboLeftHover";
+var ComboRightHover = "ComboRightHover";
+var ListHoverLeft = "ListHoverLeft";
+var ListHoverRight = "ListHoverRight";
+var ComboLeftSelected = "ComboLeftSelected";
+var ComboRightSelected = "ComboRightSelected";
+var ListSelectedLeft = "ListSelectedLeft";
+var ListSelectedRight = "ListSelectedRight";
+var ComboLeftNoFocus = "ComboLeftNoFocus";
+var ComboRightNoFocus = "ComboRightNoFocus";
+var ListSelectedNoFocusLeft = "ListSelectedNoFocusLeft";
+var ListSelectedNoFocusRight = "ListSelectedNoFocusRight";
+var ListSelectedHoverLeft = "ListSelectedHoverLeft";
+var ListSelectedHoverRight = "ListSelectedHoverRight";
+// Initialize variables for the tracking codes
+var tracking_SearchResultArtist = "CD214";
+var tracking_SearchResultArtistAlbum = "CD215";
+var tracking_SearchResultAlbum = "CD217";
+var tracking_SearchResultArtistTrack = "CD240";
+var tracking_SearchResultTracks = "CD234";
+// Initialize variables for the button text and short cut keys
+var btn_Search = "??";
+var btn_Next = "??";
+var HotKeySearch = "(S)";
+var HotKeyNext = "(N)";
+// SHOW_TRACK_TAB will be set to true in track by track mode and single track with MDQ mode
+var SHOW_TRACK_TAB = false;
+if ("False" == "False")
+    SHOW_TRACK_TAB = false;
+else
+    SHOW_TRACK_TAB = true;
+var ALBUM = 1;
+var ARTIST = 2;
+var TRACK = 3;
+
+    </script>
+    <script src="scripts/Search.js" type="text/javascript"></script>
+    <script type="text/javascript" src="scripts/listview.js"></script>
+    <form name="form1" method="post" action="Search.aspx?locale=411&amp;geoid=7a&amp;version=11.0.6001.7010&amp;userlocale=411&amp;cd=2+96+52D4+8113&amp;wmid=25BCA7FF-EA7F-4C28-A929-0AE29B8B7D1D" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIOTU0NzExODJkZI9kh6uuIzFroxAkE4coFXD9dofV" />
+
+
+                <script type="text/javascript">
+                function on_mouseover(ctlid)
+                {
+                   ctlid.className = "FooterPageHover";
+                }
+
+                function on_mouseout(ctlid)
+                {
+                   if (ctlid.hastabfocus == "true" || ctlid.hasmousefocus == "true")
+                        return;
+                   ctlid.className = "FooterPage";
+                }
+
+                function pager_mouseout()
+                {
+                    var ctlid = event.srcElement;
+                    ctlid.hasmousefocus = "false";
+                    on_mouseout(ctlid);
+                }
+
+                function pager_mousein()
+                {
+                    var ctlid = event.srcElement;
+                    ctlid.hasmousefocus = "true";
+                    on_mouseover(ctlid);
+                }
+
+                function pager_tabout()
+                {
+                    var ctlid = event.srcElement;
+                    ctlid.hastabfocus = "false";
+                    on_mouseout(ctlid);
+                }
+
+                function pager_tabin()
+                {   var ctlid = event.srcElement;
+                    ctlid.hastabfocus = "true";
+                    on_mouseover(ctlid);
+                }
+
+                function prev_on_mouseover(ctlid)
+                {
+                   ctlid.className = "FooterPageHover";
+                }
+
+                function prev_on_mouseout(ctlid)
+                {
+                   if (ctlid.hastabfocus == "true" || ctlid.hasmousefocus == "true")
+                        return;
+                   ctlid.className = "FooterPage";
+                   ctlid.innerText = "<"; 
+                }
+
+                function prev_pager_mouseout()
+                {
+                    var ctlid = event.srcElement;
+                    ctlid.hasmousefocus = "false";
+                    prev_on_mouseout(ctlid);
+                }
+
+                function prev_pager_mousein()
+                {
+                    var ctlid = event.srcElement;
+                    ctlid.hasmousefocus = "true";
+                    prev_on_mouseover(ctlid);
+                }
+
+                function prev_pager_tabout()
+                {
+                    var ctlid = event.srcElement;
+                    ctlid.hastabfocus = "false";
+                    prev_on_mouseout(ctlid);
+                }
+
+                function prev_pager_tabin()
+                {
+                    var ctlid = event.srcElement;
+                    ctlid.hastabfocus = "true";
+                    prev_on_mouseover(ctlid);
+                }
+
+                function next_on_mouseover(ctlid)
+                {
+                   ctlid.className = "FooterPageHover";
+                }
+
+                function next_on_mouseout(ctlid)
+                {
+                    if (ctlid.hastabfocus == "true" || ctlid.hasmousefocus == "true")
+                        return;
+                    ctlid.innerText = ">";
+                    ctlid.className = "FooterPage";
+                }
+                
+                function next_pager_mouseout()
+                {
+                    var ctlid = event.srcElement;
+                    ctlid.hasmousefocus = "false";
+                    next_on_mouseout(ctlid);
+                }
+
+                function next_pager_mousein()
+                {
+                    var ctlid = event.srcElement;
+                    ctlid.hasmousefocus = "true";
+                    next_on_mouseover(ctlid);
+                }
+
+                function next_pager_tabout()
+                {
+                    var ctlid = event.srcElement;
+                    ctlid.hastabfocus = "false";
+                    next_on_mouseout(ctlid);
+                }
+
+                function next_pager_tabin()
+                {
+                    var ctlid = event.srcElement;
+                    ctlid.hastabfocus = "true";
+                    next_on_mouseover(ctlid);
+                }
+                </script>
+                
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B468D421" />
+        <table height="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="blue" width="100%" dir="ltr" Style="9pt">
+	<tr>
+		<td valign="top" class="bodyMainPadding">
+                    <table cellpadding="0" cellspacing="0" border="0" bordercolor="red" height="100%"
+                        width="100%">
+                        <tr>
+                            <td colspan="3" height="1%">
+                                <!-- Page Header -->
+                                <div class="HeaderDiv" style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:12pt">
+                                    <span id="lblHeader" class="HeaderText">???????????? 1 ????????????</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td style="padding-left: 11px" width="50%">
+                                <table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+                                    <tr valign="top" height="1%">
+                                        <td colspan="2" class="captionDiv">
+                                            <table style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">
+                                                <tr>
+                                                    <td >
+                                                        <span id="lblExisting" class="DarkText">?????</span>
+                                                    </td>
+                                                    <td>
+                                                        
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr valign="top" height="1%">
+                                        <td>
+                                            <a href="javascript:void(0);" id="aExistingImage" tabindex="13" title="CD ???" onclick="javascript:return buyClick('http://shopformusic.microsoft.com/buymusic/buymusic.aspx?', 'CD230', '');">
+                                                <img src="images/UnknownAlbumSmall.gif" id="imgExisting" onerror="LoadDefImg75(this);" Style="border:0px;float:left;margin-right:8px;" />
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="table-layout: fixed;" style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">
+                                                <tr>
+                                                    <td style="text-overflow: ellipsis; overflow: hidden;">
+                                                        <nobr><span id="lblAlbumTitle" title="?????????: ?????" class="DarkText">&#24859;&#12434;&#12367;&#12425;&#12360;</span> 
+                                                        <BR /><span id="lblArtist" title="??????: Superfly" class="DarkText">Superfly</span> 
+                                                        <BR /><span id="lblDetail" class="DarkText">2 ??????</span> 
+                                                        <div>
+                                                            <a href="javascript:btnEdit_onclick();" id="aEdit" tabindex="7" title="??" accesskey="(E)" Style="9pt">
+                                                            ??</a>
+                                                            <img src="images/separator.gif" id="imgSeparator" style="margin-left: 5px; margin-right: 5px; margin-bottom: 3px" />
+                                                            <a href="javascript:void(0);" id="aExistingBuy" tabindex="14" title="CD ???" onclick="javascript:return buyClick('http://shopformusic.microsoft.com/buymusic/buymusic.aspx?', 'CD231', '');">
+                                                            ??</a>
+                                                        </div>
+                                                        <BR /></nobr>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr height="1%">
+                                        <td colspan="2" style='padding-right:18px'>
+                                            <!--Track list toggle for showing or hiding the tracks from the original
+                                                MDQ, this is present only in album mode-->
+                                            <table id="tblTrackListToggle" width="100%">
+			<tr>
+				<td width="1%">
+                                                        <nobr><span class="blueText" style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">? (????) ???</span> 
+                                                 </nobr>
+                                                    </td>
+				<td width="100%">
+                                                        <table cellpadding="0" cellspacing="0" border="0" height="1px" width="100%">
+                                                            <tr height="1px">
+                                                                <td class="DividerColor" style="height:1px">
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+				<td><a id="imgListView" tabindex="15" onmouseover="listview_onmouseover(this);"
+                                                            onmouseout="listview_onmouseout(this);" onmousedown="listview_onclick(this, 'divExistingTrackList');"
+                                                            onmouseup="listview_onmouseover(this);" onkeypress="listview_onkeydown(this, 'divExistingTrackList');return false;"
+                                                            onkeyup="listview_onkeyup(this);" title="? (????) ???">
+                                                        <img src="images/ListViewExpandRest.gif" collapse="true" /></a>
+                                                    </td>
+			</tr>
+		</table>
+		
+                                        </td>
+                                    </tr>
+                                    <tr style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">
+                                        <td colspan="2" style="padding-right: 22px">
+                                            <!--Div containing the track filenames from the MDQ. These 
+                                                are rendered from server side and only in album mode-->
+                                            <div id="divExistingTrackList" style="overflow-x: hidden; overflow-y: auto;
+                                                height: 100%; width: 100%; padding-right: 3px; display: none" class="subtletext"><span style='padding-bottom:5px'>&#24859;&#12434;&#12367;&#12425;&#12360;&#65288;&#26144;&#30011;&#12300;&#12473;&#12510;&#12464;&#12521;&#12540;&#12288;&#12362;&#12414;&#12360;&#12398;&#26410;&#26469;&#12434;&#36939;&#12409;&#12301;&#20027;&#38988;&#27468;&#65289;</span><br><span style='padding-bottom:5px'>&#65321;&#12288;&#65325;&#65369;&#12288;&#65325;&#65349;&#12288;&#65325;&#65353;&#65358;&#65349;&#12288;&#65325;&#65353;&#65358;&#65349;&#65288;&#26144;&#30011;&#12300;&#12473;&#12510;&#12464;&#12521;&#12540;&#12288;&#12362;&#12414;&#12360;&#12398;&#26410;&#26469;&#12434;&#36939;&#12409;&#12301;&#12452;&#12513;&#12540;&#12472;&#12477;&#12531;&#12464;&#65289;</span><br></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="1px" class="DividerColor">
+                                <img src="images/ts.gif" /></td>
+                            <td style='padding-left:22px;' width="50%">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+                                    <tr>
+                                        <td height="1%">
+                                            <table cellpadding="0" cellspacing="0" border="0" bordercolor="purple" width="100%"
+                                                 style='font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt'>
+                                                <tr>
+                                                    <td>
+                                                        <span id="lblSearch" class="DarkText">??</span>
+                                                    </td>
+                                                </tr>
+                                           </table>
+                                        </td>
+                                   </tr>
+                                   <tr>
+                                        <td>
+                                           <table cellpadding="0" cellspacing="0" border="0" bordercolor="purple" width="100%"
+                                                height="100%" style='font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt'>
+                                                <tr><td colspan="2" height="1%">
+                                                <table cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed;" width="100%">
+                                                <tr>
+                                                    <td  height="1%">
+                                                        <!-- Search textbox-->
+                                                        <input name="txtSearch" type="text" id="txtSearch" onkeyup="txtSearch_onkeyup(this);" value="????? Superfly" maxlength="200" class="ItalicSubtleText" tabindex="1" title="??" onblur="txtSearch_onblur(this);" style="width: 100%;border-right: 0px;font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt" onfocus="txtSearch_onfocus(this);" defaulttext="?????????????????????" /></td>
+                                                    <td width="28px">
+                                                        <!--Text input containing the search image as a background, this is used 
+                                                            for creating the effect of a single textbox containing a search image,
+                                                            It must be disabled so that data cannot be typed into it. Any changes 
+                                                            made here must be verified in Bidi languages-->
+                                                        <a id="tdSrchImg" onmouseover="document.all['searchImage'].hasmousefocus='true';search_onmouseover(document.all['searchImage']);" onmouseout="document.all['searchImage'].hasmousefocus='false';search_onmouseout(document.all['searchImage']);"
+                                                        onmousedown="search_onclick(document.all['searchImage']);" onmouseup="search_onmouseup(document.all['searchImage']);"
+                                                        onkeypress="search_onkeypress(document.all['searchImage']);"
+                                                        onkeyup="search_onkeyup(document.all['searchImage']);"
+                                                        onfocusin="document.all['searchImage'].hastabfocus='true';search_onmouseover(document.all['searchImage']);"
+                                                        onfocusout="document.all['searchImage'].hastabfocus='false';search_onmouseout(document.all['searchImage']);">
+                                                        <input type="text" id="searchImage" name="searchImage" hastabfocus="false" hasmousefocus="false" class="searchMagnify"
+                                                            disabled="true" style="border-left: 0px;font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt" /></a>
+                                                    </td>
+                                                </tr>
+                                                </table>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" height="1%" style="overflow:visible; ">
+                                                        <!-- Section containing the Artist, album and track tabs for 
+                                                            displaying the artist album and tracks result section 
+                                                            respectively -->
+                                                        <div id="divTabs" style="display: none; width:100%" >
+                                                            <table cellpadding="0" cellspacing="0" border="0" width="100%" >
+                                                                <tr style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">
+                                                                    <td >
+                                                                    <nobr>
+                                                                    <a id="aArtist" onmouseout="Tab_mouseout();" class="link" onmouseover="Tab_mouseover();" tabindex="3" onfocusout="Tab_tabout();" onkeypress="artist_onkeypress();" hastabfocus="false" onclick="artist_clicked();" onfocusin="Tab_tabover();" defaulttext="?????? (...)" hasmousefocus="false">
+                                                                ?????? (...)</a>
+                                                                </nobr>
+                                                                </td>
+                                                                <td>
+                                                                <nobr>
+                                                                &nbsp;
+                                                            <a id="aAlbums" onmouseout="Tab_mouseout();" class="link" onmouseover="Tab_mouseover();" tabindex="3" onfocusout="Tab_tabout();" onkeypress="album_onkeypress();" hastabfocus="false" onclick="Albums_clicked();" onfocusin="Tab_tabover();" defaulttext="???? (...)" hasmousefocus="false">
+                                                                ???? (...)</a>
+                                                                &nbsp;
+                                                                </nobr>
+                                                                </td>
+                                                                <td>
+                                                                <nobr>
+                                                            <a id="aTracks" onmouseout="Tab_mouseout();" class="link" onmouseover="Tab_mouseover();" tabindex="3" onfocusout="Tab_tabout();" onkeypress="track_onkeypress();" style="display:none" hastabfocus="false" onclick="Tracks_clicked();" onfocusin="Tab_tabover();" defaulttext="? (????) (...)" hasmousefocus="false">
+                                                                ? (????) (...)</a>
+                                                                </nobr>
+                                                                </td>
+                                                                <td width="100%"></td>
+                                                                </tr>
+                                                             </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" valign="top">
+                                                        <!-- div containing the artist album and track panes containing the search
+                                                            results. Only one of these panes are exposed at a time. there is a vertical 
+                                                            scroll and border for this div -->
+                                                        <div id="divBody" style="overflow-x: hidden; overflow-y: auto; height: 100%; width: 100%;
+                                                            padding:3px; display: none; border-style:solid; border-width:1px;" class="BorderColor">
+                                                            <div id="divAlbumPane">
+                                                            <div id="divAlbums" style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">
+                                                                <!-- Album Best match section-->
+                                                                <table id="tblAlbumBestMatch" style="display: none;" cellpadding="0" cellspacing="0"
+                                                                    border="0" width="100%">
+                                                                    <tr>
+                                                                        <td colspan="4">
+                                                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                                                <tr>
+                                                                                    <td width="1%" style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">
+                                                                                        <nobr><span id="Label2" class="BlueText">?????</span>
+                                                                         </nobr>
+                                                                                    </td>
+                                                                                    <td width="100%" style="padding-left: 10px;">
+                                                                                        <table cellpadding="0" cellspacing="0" border="0" height="1px" width="100%">
+                                                                                            <tr height="1px">
+                                                                                                <td class="DividerColor" style="height:1px">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr height="5px">
+                                                                        <td height="5px">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="4">
+                                                                            <table style="table-layout: fixed" cellpadding="0" cellspacing="0"
+                                                                                border="0" width="100%">
+                                                                                <tr onmouseover="list_onmouseover(this);" onclick="list_onmouseclick(this);" onmouseout="list_onmouseout(this);"
+                                                                                    style="cursor: default; height: 69px;" shortrow="false" datatype="ALBUM">
+                                                                                    <td width="3px">
+                                                                                        <span style="display: none" id="spnAlbumBestMatchAlbumId"></span><span style="display: none"
+                                                                                            id="spnAlbumBestMatchVolume"></span>
+                                                                                    </td>
+                                                                                    <td width="63px" valign="middle" align="center">
+                                                                                        <img id="imgAlbumBestMatch" src="images/unknownalbumsmall.gif" style="margin-left: 3px;margin-right: 3px;" onerror="LoadDefImg57(this);" /></td>
+                                                                                    <td valign="middle" style='font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt;text-overflow:ellipsis;overflow:hidden;'>
+                                                                                        <a tabindex="6" onfocusin="list_onmouseover(this);" onfocusout="list_onmouseout(this);" onkeypress="return list_onkeypress(this);">
+                                                                                        <nobr><span id="spnAlbumBestMatchTitle" onmouseover="showTooltipAlbum(this);" class="darktext"></span>
+                                                                                        <br />
+                                                                                        <span id="spnAlbumBestMatchArtist" onmouseover="showTooltipArtist(this);" class="darktext"></span>
+                                                                                        <br />
+                                                                                        <div onmouseover="showTooltipAlbumInfo(this);"> 
+                                                                                        <!--Note the ordering of the following spans if changed must be reflected
+                                                                                            in showTooltipAlbumInfo function-->   
+                                                                                        <span id="spnAlbumBestMatchNumTracks" class="darktext"></span>
+                                                                                        <span id="spnAlbumBestMatchGenre" class="subtletext"></span>
+                                                                                        <span id="spnAlbumBestMatchRelDate" class="subtletext"></span>
+                                                                                        </div>
+                                                                                        </nobr>
+                                                                                        <a href="javascript:void(0);" tabindex="6" id="a1" title="??..." onclick="event.cancelBubble=true;ShowAlbumDetails(this);">
+                                                                                            ??...</a>
+                                                                                        <span id="spnAlbumBestMatchBuy"></span></a>
+                                                                                    </td>
+                                                                                    <td width="3px">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr height="5px">
+                                                                        <td height="5px">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="trAlbumOtherMatches">
+                                                                        <td colspan="4">
+                                                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                                                <tr>
+                                                                                    <td width="1%" style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">
+                                                                                        <nobr><span id="Label3" class="BlueText">??????</span>
+                                                                                        </nobr>
+                                                                                    </td>
+                                                                                    <td width="100%" style="padding-left: 10px;">
+                                                                                        <table cellpadding="0" cellspacing="0" border="0" height="1px" width="100%">
+                                                                                            <tr height="1px">
+                                                                                                <td class="DividerColor" style="height:1px">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr height="5px">
+                                                                        <td height="5px">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <!-- End best match section -->
+                                                                <!--Album other match section, note the number of columns and column widths are 
+                                                                    important. Any changes must be reflected in list_onmouseover, list_onmouseclick,
+                                                                    list_onmouseout functions-->
+                                                                <table id="tblAlbums" style="display: none;table-layout:fixed;" datasrc="#xmlAlbumResultsSinglePage"
+                                                                    cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                                    <tr onmouseover="list_onmouseover(this);" onclick="list_onmouseclick(this);" onmouseout="list_onmouseout(this);"
+                                                                        style="cursor: default; height: 69px;" shortrow="false" datatype="ALBUM">
+                                                                        <td width="3px">
+                                                                            <!-- spans containing the album id and volume information. The position of these
+                                                                                spans are important. Any changes made should be updated in recreate_AlbumSearch)(
+                                                                                function. -->
+                                                                            <span style="display: none" datafld="albumid" id="spnAlbumId"></span><span style="display: none"
+                                                                                datafld="volume" id="spnAlbumVolume"></span>
+                                                                        </td>
+                                                                        <td width="63px" align="center" valign="middle">
+                                                                            <!--This column contains the album cover art, width of this column is fixed
+                                                                                and is set to 63px = 57px for the album art width and 3px of padding on either 
+                                                                                side. This is required for uniform horizontal alignment of the cover art-->
+                                                                            <img datafld="art" src="images/unknownalbumsmall.gif" id="imgArt" style="margin-left: 3px;margin-right: 3px;" onerror="LoadDefImg57(this);" /></td>
+                                                                        <td  valign="middle" style='font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt;text-overflow: ellipsis; overflow: hidden;'>
+                                                                            <a tabindex="6" onkeypress="return list_onkeypress(this);" onfocusin="list_onmouseover(this);" onfocusout="list_onmouseout(this);">
+                                                                            <nobr>
+                                                                            <span id="spnTitle" onmouseover="showTooltipAlbum(this);" datafld="title" class="darktext" ></span>
+                                                                            <br />
+                                                                            <span id="spnArtist" onmouseover="showTooltipArtist(this);" datafld="artist" class="darktext"></span>
+                                                                            <br />
+                                                                            <div onmouseover="showTooltipAlbumInfo(this);">      
+                                                                            <!--Note the ordering of the following spans if changed must be reflected
+                                                                                in showTooltipAlbumInfo function-->                                                         
+                                                                            <span id="spnNumTracks" datafld="numTracks" class="darktext" ></span>
+                                                                            <span id="spnGenre" datafld="genre" class="subtletext" dataformatas="HTML"></span>
+                                                                            <span id="spnYear" datafld="relDate" class="subtletext" dataformatas="HTML"></span>
+                                                                            </div>
+                                                                            </nobr>   
+                                                                            <a href="javascript:void(0);" tabindex="6" id="aMoreAlbum" title="??..." onclick="event.cancelBubble=true;ShowAlbumDetails(this);">
+                                                                                ??...</a>
+                                                                            <span id="spnBuyLink" datafld="buyLink" dataformatas="HTML"></span>  </a>
+                                                                         </td>
+                                                                        <td width="3px">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr height="5px">
+                                                                        <td height="5px">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                            <div id="divStatus" style="display: none;text-align: center; padding-top:5px;">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td><img src="images/loading.gif"  /></td>
+                                                                        <td valign="middle" class="DarkText" style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">?????...</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                            <!-- Search error message -->
+                                                            <div id="divSearchErrorAlbum" style="display:none">
+                                                               
+<!-- Search error message which is displayed when an error occurs on the search page-->
+<table cellpadding="2" cellspacing="0" border="0" height="1%">
+    <tr style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">
+        <td>
+            <img src="images/info.gif" style="vertical-align:middle" />
+        </td>
+        <td>
+            <span id="searchErrorAlbum_lblHeader" class="DarkText">????????????????????????????????????</span>
+        </td>
+    </tr>
+</table>
+                                                    
+                                                            </div>
+                                                            <!-- did'nt get expected results -->
+                                                            <div id="divHelpAlbum" class="DarkText" style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">
+                                                                <br />
+                                                                    
+<!-- User control used in the Search results pane which provides links to revise search or edit manually-->
+<table cellpadding="2" cellspacing="0" border="0" style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">
+    <tr>
+        <td colspan="2" class="darktext">
+            ???????????????
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/revisesearch.gif" /></td>
+        <td>
+            <a href="javascript:void(0);" onclick="revise_search();" tabindex="7">
+                ???????????????????????</a>
+        </td>
+    </tr>
+    <tr id="searchHelpAlbum_trManualEdit">
+			<td>
+            <img src="images/edit.gif" /></td>
+			<td>
+            <a href="javascript:btnEdit_onclick();" tabindex="7">
+                ????????????</a>
+        </td>
+		</tr>
+		
+</table>
+                                                    
+                                                                <br />
+                                                            </div>
+                                                            <!-- Pagers -->
+                                                            <div id="divAlbumPages" style="display: none">
+                                                                
+<!-----------------------------------------------------------------------
+//
+// Microsoft Windows Media Internet Services
+// Copyright (C) Microsoft Corporation. All rights reserved.
+//
+//---------------------------------------------------------------------->
+
+<script type="text/javascript">
+    var albumPager_currentPage = 1;
+    var albumPager_currentPageSet = 1;
+    
+    function albumPager_redraw(pageNum, pageSetNum, pagesToHide)
+    {
+        albumPager_currentPageSet = pageSetNum;
+        albumPager_currentPage = pageNum;
+        
+        var obj = document.all["albumPager_pager"];
+        var cells = obj.getElementsByTagName("A");
+        
+        // draw the right numbers on the pager and display all page number by default
+        var numPages = cells.length - 2;
+        var startCount = numPages*(pageSetNum -1) + 1;
+        var pageObj = null;
+        for (var i = 1; i <= numPages; i++)
+        {
+            cells(i).innerText = startCount;
+            cells(i).style.display = "block";
+            if (Number(cells(i).innerText) == pageNum)
+            {
+                pageObj = cells(i);
+            }
+            startCount += 1;
+        }
+        // hide page numbers
+        if (pagesToHide > 0)
+        {
+            for (var i = (cells.length - pagesToHide -1); i < (cells.length-1); i++)
+                cells(i).style.display = "none";
+            if (cells(cells.length - pagesToHide -2).innerText == pageObj.innerText)
+                cells(cells.length-1).style.display = "none";
+            else
+                cells(cells.length-1).style.display = "block";
+        }
+        else
+        {
+            for (var i = 0; i < cells.length; i++)
+                cells(i).style.display = "block";
+            
+            if (pagesToHide == -1 && cells(cells.length-2).innerText == pageObj.innerText)
+                cells(cells.length-1).style.display = "none";
+            else
+                cells(cells.length-1).style.display = "block";
+        }
+        
+        //Show prev arrow only if current page selected is not the first page
+        if (pageObj.innerText == "1")
+            cells(0).style.display = "none";
+        else
+            cells(0).style.display = "block";
+       
+        // set the class of the page number square
+        if (pageObj != albumPager_currentPage)
+        {
+            pageObj.className = "FooterPageSelected";
+
+            // remove the mouseout event
+            pageObj.onmouseout = "";
+            pageObj.onmouseover = "";
+            pageObj.onfocusin = "";
+            pageObj.onfocusout = "";
+            pageObj.hasmousefocus = "false";
+            pageObj.hastabfocus = "false";
+
+            // re-add the mouseout event for the previous page
+            albumPager_currentPage.onmouseout = pager_mouseout;
+            albumPager_currentPage.onmouseover = pager_mousein;
+            albumPager_currentPage.onfocusout = pager_tabout;
+            albumPager_currentPage.onfocusin = pager_tabin;
+            albumPager_currentPage.className = "FooterPage";
+
+            // store obj in a variable
+            albumPager_currentPage = pageObj;
+        }
+    }
+    
+    function albumPager_onkeypress(obj)
+    {
+        if (event.keyCode == 32)
+            obj.click();
+        return false;
+    }
+    
+    function albumPager_page_click(IsFirstPage)
+    {
+        var obj;
+        if (IsFirstPage != true)
+        {
+            obj = event.srcElement;
+            // get the page number
+            pageNum = Number(obj.innerText);
+        }
+        else if (IsFirstPage == true)
+        {
+            // get the cell containing the first page number for this set
+            obj = albumPager_divPager.getElementsByTagName("A")(1);
+            pageNum = 1;
+            albumPager_currentPageSet = 1;
+            albumPager_currentPage = 1;
+            var tds = obj.parentNode.parentNode.getElementsByTagName("A");
+            var numPages = tds.length - 2;
+            // set the right page numbers and display all cells by default
+            for (var i = 1; i <= numPages; i++)
+            {
+                tds(i).innerText = i;
+                tds(i).style.display = "block";
+                tds(i).onmouseout = pager_mouseout;
+                tds(i).onmouseover = pager_mousein;
+                tds(i).onfocusout = pager_tabout;
+                tds(i).onfocusin = pager_tabin;
+                tds(i).className = "FooterPage";
+            }
+        }
+        // call the page click function defined in the page
+        var pagesToHide = albumPageClicked(pageNum);
+        
+        var spans = obj.parentNode.parentNode.getElementsByTagName("A");
+        if (pagesToHide > 0)
+        {
+            for (var i = (spans.length - pagesToHide -1); i < (spans.length-1); i++)
+                spans(i).style.display = "none";
+            if (spans(spans.length - pagesToHide -2).innerText == obj.innerText)
+                spans(spans.length-1).style.display = "none";
+            else
+                spans(spans.length-1).style.display = "block";
+        }
+        else
+        {
+            for (var i = 0; i < spans.length; i++)
+                spans(i).style.display = "block";
+            
+            if (pagesToHide == -1 && spans(spans.length-2).innerText == obj.innerText)
+                spans(spans.length-1).style.display = "none";
+            else
+                spans(spans.length-1).style.display = "block";
+        }
+        
+        //Show prev arrow only if current page selected is not the first page
+        if (obj.innerText == "1")
+            spans(0).style.display = "none";
+        else
+            spans(0).style.display = "block";
+
+        // set the class of the page number square
+        if (obj != albumPager_currentPage)
+        {
+            obj.className = "FooterPageSelected";
+
+            // remove the mouseout event
+            obj.onmouseout = "";
+            obj.onmouseover = "";
+            obj.onfocusin = "";
+            obj.onfocusout = "";
+            obj.hasmousefocus = "false";
+            obj.hastabfocus = "false";
+
+            // re-add the mouseout event for the previous page
+            albumPager_currentPage.onmouseout = pager_mouseout;
+            albumPager_currentPage.onmouseover = pager_mousein;
+            albumPager_currentPage.onfocusout = pager_tabout;
+            albumPager_currentPage.onfocusin = pager_tabin;
+            albumPager_currentPage.className = "FooterPage";
+
+            // store obj in a variable
+            albumPager_currentPage = obj;
+        }
+    }
+    
+    // This function is used to get the next set of pages
+    function albumPager_next_click(obj)
+    {
+        obj = findParentElement(obj, "TR");
+        var spans = obj.getElementsByTagName("A");
+
+        var numPages = spans.length - 2;
+        var startCount = Number(spans(1).innerText);
+
+        for (var i = 1; i <= numPages; i++)
+        {
+            spans(i).innerText = startCount+numPages+i-1;
+        }
+
+        // update page set
+        albumPager_currentPageSet += 1;
+
+        // call the next page set function defined inthe page
+        albumNextClicked(spans(1));
+    }
+    
+    // This function is used to get the previous set of pages
+    function albumPager_prev_click(obj)
+    {
+        obj = findParentElement(obj, "TR");
+        var spans = obj.getElementsByTagName("A");
+
+        var numPages = spans.length - 2;
+        var startCount = Number(spans(1).innerText);
+
+        for (var i = 1; i <= numPages; i++)
+        {
+            spans(i).innerText = startCount-numPages+i-1;
+        }
+
+        // update page set
+        albumPager_currentPageSet -= 1;
+
+        // call the next page set function defined inthe page
+        albumPrevClicked(spans(numPages));
+    }
+    
+    // This functions is used by the page iterator on top of the search 
+    // result pane for getting the next page
+    function albumPager_nextpage_click()
+    {
+        // find the currently selected page
+        var cells = document.all["albumPager_divPager"].getElementsByTagName("A");
+        
+        var numPages = cells.length - 2;
+        for (var i = 1; i <= numPages; i++)
+        {
+            if (cells(i).className == "FooterPageSelected")
+            {
+                if (i == numPages)
+                    albumPager_next_click(cells(i));
+                else if (cells(i+1) != null)
+                    cells(i+1).click();
+                break;
+            }
+        }
+    }
+    
+    // This functions is used by the page iterator on top of the search 
+    // result pane for getting the previous page
+    function albumPager_prevpage_click()
+    {
+        var cells = document.all["albumPager_divPager"].getElementsByTagName("A");
+        
+        var numPages = cells.length - 2;
+
+        for (var i = 1; i <= numPages; i++)
+        {
+            if (cells(i).className == "FooterPageSelected")
+            {
+                if (i == 1)
+                    albumPager_prev_click(cells(i));
+                else if (cells(i-1) != null)
+                    cells(i-1).click();
+                break;
+            }
+        }
+    }
+    
+</script>
+<table id="albumPager_divPager" cellpadding="0" cellspacing="4" border="0">
+			<tr id="albumPager_pager" align="center" style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">
+				<td><a onmouseout="prev_pager_mouseout();" class="FooterPage" onmouseover="prev_pager_mousein();" onfocusout="prev_pager_tabout();" onkeypress="return albumPager_onkeypress(this);" tabindex="8" hastabfocus="false" onclick="albumPager_prevpage_click();" onfocusin="prev_pager_tabin();" hasmousefocus="false">&lt;</a></td>
+				<td><a onmouseout="pager_mouseout();" class="FooterPage" onmouseover="pager_mousein();" onclick="albumPager_page_click(false);" onfocusout="pager_tabout();" onkeypress="return albumPager_onkeypress(this);" tabindex="8" hastabfocus="false" onfocusin="pager_tabin();" hasmousefocus="false">1</a></td>
+				<td><a onmouseout="pager_mouseout();" class="FooterPage" onmouseover="pager_mousein();" onclick="albumPager_page_click(false);" onfocusout="pager_tabout();" onkeypress="return albumPager_onkeypress(this);" tabindex="8" hastabfocus="false" onfocusin="pager_tabin();" hasmousefocus="false">2</a></td>
+				<td><a onmouseout="pager_mouseout();" class="FooterPage" onmouseover="pager_mousein();" onclick="albumPager_page_click(false);" onfocusout="pager_tabout();" onkeypress="return albumPager_onkeypress(this);" tabindex="8" hastabfocus="false" onfocusin="pager_tabin();" hasmousefocus="false">3</a></td>
+				<td><a onmouseout="pager_mouseout();" class="FooterPage" onmouseover="pager_mousein();" onclick="albumPager_page_click(false);" onfocusout="pager_tabout();" onkeypress="return albumPager_onkeypress(this);" tabindex="8" hastabfocus="false" onfocusin="pager_tabin();" hasmousefocus="false">4</a></td>
+				<td><a onmouseout="pager_mouseout();" class="FooterPage" onmouseover="pager_mousein();" onclick="albumPager_page_click(false);" onfocusout="pager_tabout();" onkeypress="return albumPager_onkeypress(this);" tabindex="8" hastabfocus="false" onfocusin="pager_tabin();" hasmousefocus="false">5</a></td>
+				<td><a onmouseout="next_pager_mouseout();" class="FooterPage" onmouseover="next_pager_mousein();" onfocusout="next_pager_tabout();" onkeypress="return albumPager_onkeypress(this);" tabindex="8" hastabfocus="false" onclick="albumPager_nextpage_click();" onfocusin="next_pager_tabin();" hasmousefocus="false">&gt;</a></td>
+			</tr>
+		</table>
+		
+
+                                                            </div>
+                                                            </div>
+                                                            <!-- Tracks section -->
+                                                            <div id="divTracksPane">
+                                                            <div id="divTracks" style="display: none">
+                                                                <!--Track Best match-->
+                                                                <table id="tblTrackBestMatch" style="table-layout:fixed"  cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                                    <tr>
+                                                                        <td colspan="4">
+                                                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                                                <tr>
+                                                                                    <td width="1%" style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt">
+                                                                                        <nobr><span id="Label4" class="BlueText">?????</span>
+                                                                         </nobr>
+                                                                                    </td>
+                                                                                    <td width="100%" style="padding-left: 10px;">
+                                                                                        <table cellpadding="0" cellspacing="0" border="0" height="1px" width="100%">
+                                                                                            <tr height="1px">
+                                                                                                <td class="DividerColor" style="height:1px">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr height="5px">
+                                                                        <td height="5px">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="4">
+                                                                            <table style="table-layout: fixed" cellpadding="0" cellspacing="0"
+                                                                                border="0" width="100%">
+                                                                    <tr onmouseover="list_onmouseover(this);" onclick="list_onmouseclick(this);" onmouseout="list_onmouseout(this);"
+                                                                        style="cursor: default; height: 69px;" shortrow="false" datatype="TRACK">
+                                                                        <td width="3px">
+                                                                            <span style="display: none" id="spnTrackBestMatchAlbumId"></span><span style="display: none"
+                                                                                id="spnTrackBestMatchVolume"></span>
+                                                                        </td>
+                                                                        <td width="63px" align="center" valign="middle">
+                                                                            <img id="imgTrackBestMatch" src="images/unknownalbumsmall.gif" style="margin-left: 3px;margin-right: 3px;" onerror="LoadDefImg57(this);"/></td>
+                                                                        <td valign="middle" style='font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt;text-overflow:ellipsis;overflow:hidden;'>
+                                                                            <a tabindex="6" onkeypress="return list_onkeypress(this);" onfocusin="list_onmouseover(this);" onfocusout="list_onmouseout(this);">
+                                                                            <nobr><span id="spnTrackBestMatchTrackNum" class="darktext" style="font-family:MS UI Gothic, Segoe UI, Tahoma, Arial;font-size:9pt"></span>&nbsp;<span id="spnTrackBestMatchTitle"
+                                                                                class="darktext" onmouseover="showTooltipTrack(this);"></span>
+                                                                            <br />
+                                                                            <span id="spnTrackBestMatchAlbumTitle" onmouseover="showTooltipAlbum(this);" class="darktext" ></span>
+                                                                            <br />
+                                                                            <div onmouseover="showTooltipTrackInfo(this);">
+                                                                            <!-- Note the order of the following spans is important. showTooltipTrackInfo function must be 
+                                                                                modified if any changes are made here-->
+                                                                            <span id="spnTrackBestMatchArtist" class="darktext"></span>
+                                                                            <span id="spnTrackBestMatchGenre" class="subtleText"></span>
+                                                                            <span id="spnTrackBestMatchYear" class="subtletext"></span>
+                                                                            </div>
+                                                                            </nobr>
+                                                                            <a href="javascript:void(0);" tabindex="6" id="a2" title="??..." onclick="event.cancelBubble=true;ShowAlbumDetailsForTrack(this);">
+                                                                                ??...</a>
+                                                                            <span id="spnTrackBestMatchBuy"></span></a>
+                                                                        </td>
+                                                                        <td width="3px">
+                                                                        </td>
+                                                                    </tr>
+                                                                    </table>
+                                                                   

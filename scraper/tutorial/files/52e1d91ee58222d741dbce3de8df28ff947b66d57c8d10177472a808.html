@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
+<head>
+<title>Hacked By Stallk3r Cyberim Digital Security Team</title>
+<meta name="description" content="Hacked By Stallk3r Cyberim Digital Security Team Hacked By Stallk3r Cyberim Digital Security Team" />
+<meta name="robots" content="noodp" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="SPIP 2.1.12 [18732]" />
+<link rel="alternate" type="application/rss+xml" title="Syndiquer tout le site" href="http://eptb-saone-doubs.fr/spip.php?page=backend" />
+<link rel="stylesheet" href="prive/spip_style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="squelettes-dist/spip_formulaires.css" type="text/css" media="projection, screen, tv" />
+
+<link rel="stylesheet" href="squelettes-dist/habillage.css" type="text/css" media="projection, screen, tv" />
+<link rel="stylesheet" href="squelettes-dist/impression.css" type="text/css" media="print" />
+
+<link rel="stylesheet" type="text/css" href="RSC/skin/mes_styles.css" media="projection, screen, tv" />
+<link rel="stylesheet" href="/RSC/skin/impression.css" type="text/css" media="print" />
+<meta property="og:image" content="http://www.eptb-saone-doubs.fr/RSC/img/accueil1.jpg"/> 
+
+<script src="prive/javascript/jquery.js" type="text/javascript"></script>
+
+<script src="prive/javascript/jquery.form.js" type="text/javascript"></script>
+
+<script src="prive/javascript/ajaxCallback.js" type="text/javascript"></script>
+
+<script src="prive/javascript/jquery.cookie.js" type="text/javascript"></script>
+<!-- insert_head --><!--[if lt IE 7]>
+	<script src='extensions/msie_compat/javascript/jquery.ifixpng.js'></script>
+	<script type='text/javascript'>//<![CDATA[
+		jQuery.ifixpng('rien.gif');		
+		function fixie() {
+			jQuery('img').ifixpng();
+		}
+		$(document).ready(function() { fixie(); });
+		onAjaxLoad(fixie);	
+	//]]></script>
+<![endif]-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24441170-2']);
+  _gaq.push(['_setDomainName', 'eptb-saone-doubs.fr']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><script type="text/javascript">
+var $menu_active=null;
+$(document).ready(function(event){
+	var $legendDisplay=false;
+	$(".segment1 #menu1,.segment2 #menu2,.segment3 #menu3,.segment4 #menu4,.segment5 #menu5,.segment6 #menu6").addClass("active");
+	$(".segment1 #menu1,.segment2 #menu2,.segment3 #menu3,.segment4 #menu4,.segment5 #menu5,.segment6 #menu6").siblings("ul.sub_rub").slideDown(0); 
+	$menu_active=$("a.lvl1.active").attr("id");
+	
+	$("a.lvl1").click(function(event){
+		event.preventDefault();
+		if(($menu_active!=$(this).attr("id"))){
+			$(this).siblings('ul.sub_rub').each(function(i){
+				$('a.lvl1').removeClass("active");
+
+				$('ul.sub_rub').slideUp(300);
+				$(this).slideDown(300);
+			});
+			$(this).toggleClass("active");
+			$menu_active=$(this).attr("id");
+		}else{
+			$(this).siblings('ul.sub_rub').slideUp(300);
+			$(this).toggleClass("active");
+			$menu_active=null;
+		}
+	});
+
+	$("#tools #picto-partage").hover(function(){
+		$("div#share:hidden").slideDown(300);
+		return false; // si jamais le bouton est un lien
+	});
+	$("#tools .close").click(function(){
+		$("div#share:visible").slideUp(300);
+		return false; // si jamais le bouton est un lien
+	});
+
+	$('area').mouseover(function(e){
+			var title = $(this).attr('alt');
+			var mousex = e.pageX - (parseInt($('p.legende').css("width")))/2; //Get X coordinates
+			var mousey = e.pageY -parseInt($('p.legende').css("height"))-5; //Get Y coordinates
+			if($(".legende").length)
+				$(".legende")
+					.html("<span>"+title+"</span>")
+			else{
+				$('<p class="legende"></p>')
+					.html("<span>"+title+"</span>")
+					.appendTo('body')
+					.css({ top: mousey, left: mousex })
+					.fadeIn(2000); 
+			}
+  }).mousemove(function(e) {
+			  var mousex = e.pageX - (parseInt($('p.legende').css("width")))/2; //Get X coordinates
+			  var mousey = e.pageY -parseInt($('p.legende').css("height"))-5; //Get Y coordinates
+			$('.legende').css({ top: mousey, left: mousex });
+
+		  $('.legende').mouseover(function(e){
+					var mousex = e.pageX - (parseInt($('p.legende').css("width")))/2; //Get X coordinates
+					var mousey = e.pageY -parseInt($('p.legende').css("height"))-5; //Get Y coordinates
+					$(".legende")
+							.css({ top: mousey, left: mousex });
+		  }).mousemove(function(e){
+					var mousex = e.pageX - (parseInt($('p.legende').css("width")))/2; //Get X coordinates
+					var mousey = e.pageY -parseInt($('p.legende').css("height"))-5; //Get Y coordinates
+					$(".legende")
+							.css({ top: mousey, left: mousex });
+		  });
+  });
+  $("img[usemap='ap']").mouseout(function() {
+			 $('.legende').remove();
+  });
+  $("area").mouseout(function() {
+			 $('.legende').remove();
+  });
+
+});	
+</script><script type="text/javascript">
+
+function slideSwitch() {
+    var $active = $('#diapos IMG.active');
+	 if ( $active.length == 0 ) $active = $('#diapos IMG:last');
+
+    var $next =  $active.next().length ? $active.next()
+        : $('#diapos IMG:first');
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1300, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 3000 );
+});
+</script><script type="text/javascript">
+
+
+$(function() {
+    //setInterval( "slideActus()", 12000 );
+	 
+
+});
+
+$(document).ready(function(event){
+	 var $lock=false;
+	 $('.actus LI').not(':last').css("opacity",0);
+	 $('.actus LI:last').addClass("active");
+	 var $active = $('.actus LI.active');
+	 if($active.prev().length) $(".blocactus .prev").addClass("active");
+	 if($active.next().length) $(".blocactus .next").addClass("active");
+	
+	$(".blocactus .next").click(function(event){
+		event.preventDefault();
+		if(!$lock){
+			$lock=true;
+			var $active = $('.actus LI.active');
+			if ( $active.length == 0 ) $active = $('.actus LI.last');
+			$next =  $active.next();
+			if($next.length){
+				if($next.is(':last-child'))
+				{
+					 $(this).removeClass("active");
+				}else
+					 $(this).addClass("active");
+			
+				$active.addClass('last-active');
+				$active.css({opacity:0.5}).animate({left: -450}, 300);
+				 
+				$next.css({left: 450,opacity:1})
+					  .addClass('active')
+					  .animate({left: 0}, 300, function() {
+							$active.removeClass('active last-active');
+							$lock=false;
+					  });
+				$(".blocactus .prev").addClass("active");
+			}else $lock=false;
+		}
+	});
+
+		
+		$(".blocactus .prev").click(function(event){
+			event.preventDefault();
+			if(!$lock){
+				$lock=true;
+				 var $active = $('.actus LI.active');
+				 if ( $active.length == 0 ) $active = $('.actus LI.first');
+				$prev =  $active.prev();
+				if($prev.length){
+					$(".blocactus .next").addClass("active");
+					if($prev.is(':first-child'))
+					{
+						 $(this).removeClass("active");
+					}
+					else
+						 $(this).addClass("active");
+					$active.addClass('last-active');
+					$active.css({opacity:0.5}).animate({left: 550}, 300);
+					
+					$prev.css({left: -550,opacity:1})
+						.addClass('active')
+						.animate({left: 0}, 300, function() {
+							$active.removeClass('active last-active');
+							$lock=false;
+						});
+				}else $lock=false;
+			}
+		});
+});
+
+
+</script><!-- --></head>
+
+<body class="page_sommaire">
+<div id="page">
+
+	
+	<div id="entete">
+<a rel="start home" href="http://www.eptb-saone-doubs.fr/" title="Accueil" class="accueil"><img class='spip_logos' alt="" src="local/cache-vignettes/L186xH68/siteon0-dc90f.gif" width='186' height='68' style='height:68px;width:186px;' /> <strong id="nom_site_spip">Hacked By Stallk3r Cyberim Digital Security Team</strong></a>
+</div>
+	
+	
+    <div class="hfeed" id="conteneur">
+    <div class="hentry" id="contenu">
+    
+        
+        <div id="hierarchie"><a href="http://www.eptb-saone-doubs.fr/">Accueil</a></div>
+
+
+        <div class="cartouche">
+            <div class="surlignable">
+				<h1 class="entry-title">Hacked By Stallk3r Cyberizm Digital Security Army <span class="soustitre"><h1>Hacked By Stallk3r Cyberizm Digital Security Army</span></h1>
+            </div>
+        </div>
+
+        <div class="surlignable">
+				<div class="texte entry-content"><head><title>Cyberizm Was Here ;)) </title>
+<body style="background-color: white;">
+<div align="center">
+<center><img src="http://i.hizliresim.com/NWl5Dk.png">
+<br>
+<p><font style="color: rgb(0, 0, 0); text-shadow: rgb(0, 0, 0) 0px 1px 7px;" color="black" face="Share Tech Mono" size="5">Hacked By <font color="red" face="Share Tech Mono" size="5">Stallk3r</font>
+<br>
+<font color="black" face="Share Tech Mono" size="4"><font color="red">Stallk3r Says:[</font><font style="color: rgb(0, 0, 0); text-shadow: rgb(0, 0, 0) 0px 1px 7px;" face="Geo" size="4">En büyük acizlik,kendinden ba?kas? gibi görünmektir.</font><font color="red">]</font></font></font></p>
+<hr align="center" color="black" size="3" width="20%"><font style="color: rgb(0, 0, 0); text-shadow: rgb(0, 0, 0) 0px 1px 7px;" color="black" face="Share Tech Mono" size="4"><font color="white" face="Share Tech Mono" size="4"><br>
+<font style="color: rgb(0, 0, 0); text-shadow: rgb(0, 0, 0) 0px 1px 7px;" face="Geo" size="4">Thanks:Mr.F92 ~ Ayar ~ KingSkrupellos ~ Stallk3r</font>
+</p></strong>
+</center>
+<iframe allowfullscreen="" frameborder="0" height="0" src="https://www.youtube.com/embed/GhapPGAOM6Y?&amp;autoplay=1" width="0"></iframe>	&nbsp;</p>
+<link href="http://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet" type="text/css"></div>
+		  </div>
+
+	</div><!--#contenu-->
+	</div><!--#conteneur-->
+	
+	
+	<div id="navigation">
+		 
+		<!-- menu de navigation -->
+<div class="menu rubriques">
+	<ul>		
+		<li>
+			<a class="lvl1" id="menu1" title="Bassin versant de la Saône" href="Bassin-versant-de-la-Saone">&nbsp;<span>Bassin versant de la Saône</span></a>
+			<ul class="sub_rub">
+                <li>
+                    <a href="Un-vaste-bassin-hydrographique" class="art8">Un vaste bassin hydrographique</a>
+                </li>
+                <li>
+                    <a href="Un-territoire-diversifie" class="art9">Un territoire diversifié</a>
+                </li>
+                <li>
+                    <a href="Chiffres-cles" class="art12">Chiffres clés</a>
+                </li>
+			</ul>
+		</li>
+	</ul>
+	 
+	<ul>		
+		<li>
+			<a class="lvl1" id="menu2" title="EPTB Saône &amp; Doubs" href="EPTB-Saone-Doubs">&nbsp;<span>EPTB Saône &amp; Doubs</span></a>
+			<ul class="sub_rub">
+              
+                <li>
+                    <a href="Domaine-d-activite-et-competences" class="art13">Domaine d’activité et compétences</a>
+                </li>
+                
+                <li>
+                    <a href="Les-collectivites-adherentes" class="art18">Les collectivités adhérentes</a>
+                </li>
+                
+                <li>
+                    <a href="L-equipe" class="art14">L’équipe</a>
+                </li>
+                
+                <li>
+                    <a href="Les-partenaires" class="art19">Les partenaires</a>
+                </li>
+                
+			</ul>
+		</li>
+	</ul>
+	 
+	<ul>		
+		<li>
+			<a class="lvl1" id="menu3" title="Démarches territoriales" href="Demarches-territoriales">&nbsp;<span>Démarches territoriales</span></a>
+			<ul class="sub_rub">
+                <li>
+                    <a href="Presentation-demarches" class="art33">Les programmes engagés</a>
+                </li>
+                
+                <li>
+                    <a href="Contrat-riviere" class="art66">Les Contrats de rivière</a>
+                </li>
+                
+                <li>
+                    <a href="sage" class="art67">Les Schémas d’Aménagement et de Gestion des Eaux</a>
+                </li>
+                
+                <li>
+                    <a href="programme-doubs" class="art69">Les programmes spécifiques</a>
+                </li>
+		
+		<li>
+                    <a href="Observatoire-du-bassin-de-la-Saone" class="rub98">L'observatoire du bassin</a>
+                </li>
+			</ul>
+		</li>
+	</ul>
+	 
+	<ul>		
+		<li>
+			<a class="lvl1" id="menu4" title="Inondabilité" href="Inondabilite">&nbsp;<span>Inondabilité</span></a>
+			<ul class="sub_rub">
+                <li>
+                    <a href="Presentation-inondabilite" class="art61">PAPI</a>
+                </li>
+                <li>
+                    <a href="reduction-vulnerabilite" class="art76">Réduction de la vulnérabilité</a>
+                </li>
+                <li>
+                    <a href="pcs"  class="art77">Plans Communaux de Sauvegarde</a>
+                </li>
+                <li>
+                    <a href="Inondations"  class="art6">Observatoire de l'Hydrologie de Franche-Comté</a>
+                </li>
+			</ul>
+		</li>
+	</ul>
+	  
+	<ul>		
+		<li>
+			<a class="lvl1" id="menu5" title="Milieux naturels et piscicoles" href="Milieux-naturels-et-piscicoles">&nbsp;<span>Milieux naturels et piscicoles</span></a>
+			<ul class="sub_rub">
+                <li>
+                    <a href="Preservation-de-la-biodiversite" class="art21">Le réseau NATURA 2000</a>
+                </li>
+                <li><a href="zones-humides" class="art32">Les zones humides</a></li>
+                <li><a href="conservatoire-saone-doubs" class="art65">Le conservatoire des plaines alluviales</a></li>  
+			</ul>
+		</li>
+	</ul>
+	 
+	<ul>		
+		<li>
+		<a class="lvl1" id="menu6" title="Formation et sensibilisation" href="Formation-et-sensibilisation">&nbsp;<span>Formation et sensibilisation</span></a>
+			<ul class="sub_rub">
+                <li>
+                    <a href="formation-professionnelle" class="art62">La formation professionnelle</a>
+                </li>
+                <li>
+                    <a href="reso" class="art63">Le réseau de gestionnaires des milieux aquatiques</a>
+                </li>
+                <li>
+                    <a href="animation" class="art64">L’animation scolaire et grand public</a> 
+                </li>
+			</ul>
+	</li>
+	</ul>
+</div>
+    </div><!--#navigation-->
+   <div id="tools"><a><img src="/RSC/skin/picto-impression.gif" width="11" height="12"  onclick="window.print();" /></a><a><img src="/RSC/skin/picto-partage.gif" id="picto-partage" width="10" height="11" /></a>
+		<div id="share" style="background-color:#FFF;display:none;">
+			<h2>Partage et syndication</h2>
+			<a href="http://www.facebook.com/sharer.php?u=http://eptb-saone-doubs.fr/" rel="nofollow" class="fb"><span>Partager sur facebook</span></a>
+			<a href="https://twitter.com/share?url=http://eptb-saone-doubs.fr/" class="tw" rel="nofollow"><span>Partager sur twitter</span></a>	
+			<a href="spip.php?page=backend" class="rss" rel="nofollow"><span>flux RSS</span></a>
+			<div id='recommander'>
+	<a class='menu-titre' href="mailto:?subject=A lire sur EPTB Saône Doubs&body=http://eptb-saone-doubs.fr/">Recommander cet article par email</a>
+	<div class="ajax">
+		<div class="formulaire_spip formulaire_recommander" id="formulaire_recommander">
+
+
+
+ 
+<form method="post" action="/#"><div>
+	<div><input name='formulaire_action' type='hidden'
+		value='recommander' /><input name='formulaire_action_args' type='hidden'
+		value='FILikMsqixSiVXd99IBQib7jbqHnhokmPB8t7/8ltOWpWvyaqI6ij+k4ma8SJv9hfXkcJVz7jySWta5L9xFeuGIuFbJhzKG0GV96lAmgXBvlmig=' /></div><ul>
+		<li class="editer_recommander_from">
+			<label for='recommander_from'>Votre adresse email</label><input type='text' class='text forml' id='recommander_from' name='recommander_from' value='' />
+		</li>
+		<li class="editer_recommander_to">
+			<label for='recommander_to'>Destinataire :</label><input type='text' class='text forml formo' id='recommander_to' name='recommander_to' value='' />
+		</li>
+		<li class="editer_recommander_message">
+			<label for='recommander_message'>Texte de votre message :</label><textarea class='text forml' id='recommander_message' name='recommander_message' rows='5' cols='30'></textarea>
+		</li>
+	</ul>
+	<p class='boutons spip_bouton'><input type='submit' class='submit' name='recommander_email' value='Recommander' /></p>
+	</div></form>
+
+</div></div>
+</div>
+<script type="text/javascript">/* <![CDATA[ */
+	(function($){
+$(document).ready(function(){
+$("div#formulaire_recommander").hide().css("height","");
+$("#recommander>a.menu-titre, #recommander_bouton").click(function(){
+$("div#formulaire_recommander:visible").slideUp(300);
+$("div#formulaire_recommander:hidden").slideDown(300);
+return false})})}(jQuery));
+
+/* ]]> */</script><a class="close">X</a>	 
+		</div>
+	</div>	<div id="search"><div class="formulaire_spip formulaire_recherche" id="formulaire_recherche">
+<form action="http://eptb-saone-doubs.fr/spip.php?page=recherche" method="get"><div>
+	<input name="page" value="recherche" type="hidden" />
+	
+	<label for="recherche">Rechercher&nbsp;:</label>
+	<input type="text" class="text" size="10" name="recherche" id="recherche" accesskey="4" /><input type="submit" class="submit" value="&nbsp;&nbsp;" title="Rechercher" />
+</div></form>
+</div>
+</div>
+	<div id="diapos">
+		<img src="RSC/img/accueil1.jpg" width="332" height="567" class="active"/>
+		<img src="RSC/img/accueil2.jpg" width="332" height="567"/>
+		<img src="RSC/img/accueil3.jpg" width="332" height="567" />
+		<img src="RSC/img/accueil4.jpg" width="332" height="567" />
+	</div>	
+</div><!--#page-->
+
+<div id="lienspro">
+	<ul  class="rub rub">
+		
+		<li  class="rub8"><a href="Marches-publics">Marchés publics</a>
+		</li>
+		
+		<li  class="rub39"><a href="Offres-d-emplois-ou-de-stage">Offres d’emplois ou de stage</a>
+		</li>
+		
+		<li  class="rub40"><a href="extranet">extranet</a>
+		</li>
+		
+	</ul>
+</div>
+<div id="liensutiles">
+	<ul  class="rub rub">
+		
+		<li  class="rub42"><a href="Contacts">Contacts</a>
+		</li>
+		
+		<li  class="rub43"><a href="Ressources-et-liens">Ressources et liens</a>
+		</li>
+		
+		<li  class="rub44"><a href="Plan-du-site">Plan du site</a>
+		</li>
+		
+		<li  class="rub45"><a href="Mentions-legales">Mentions légales</a>
+		</li>
+		
+	</ul>
+</div><div id="pied">
+	<a href="http://www.spip.net/" title="Site r&eacute;alis&eacute; avec SPIP"><img src="squelettes-dist/spip.png" alt="SPIP" width="48" height="16" /></a> | 
+	<a href="squelettes-dist/sommaire.html" title="voir le squelette de cette page" rel="nofollow">squelette</a> | <a href="http://eptb-saone-doubs.fr/spip.php?page=login&amp;url=.%2F" rel="nofollow" class='login_modal'>Se connecter</a> | 
+	<a rel="contents" href="http://eptb-saone-doubs.fr/spip.php?page=plan">Plan du site</a> | 
+	<a href="http://eptb-saone-doubs.fr/spip.php?page=backend" rel="alternate" title="Syndiquer tout le site"><img src="squelettes-dist/feed.png" alt="Suivre la vie du site" width="16" height="16" />&nbsp;RSS&nbsp;2.0</a>
+</div>
+<!-- SPIP-CRON --><div style="background-image: url('http://www.eptb-saone-doubs.fr/spip.php?action=cron');"></div><div id="masque"></div>
+<div id="extra1"></div>
+<div id="extra2"></div>
+<div id="extra3"></div>
+</body>
+</html>
+

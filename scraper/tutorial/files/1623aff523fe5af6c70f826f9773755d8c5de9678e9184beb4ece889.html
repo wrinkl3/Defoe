@@ -1,0 +1,124 @@
+<!-- NOT CACHED  sessionid: 5ec07cebb6d741ac4633e7db4912c565 --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Chocolicious Cakes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Content-Language" content="en-GB" />
+    <meta http-equiv="imagetoolbar" content="false" />
+    <meta name="description" content="Chocolicious Cakes" />
+    <meta name="keywords" content="Chocolicious Cakes" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta name="ROBOTS" content="ALL" />
+    <meta name="Rating" content="General" />
+    <meta name="author" content="Kombi Media http://www.kombimedia.co.uk"/>
+    <meta name="revisit-after" content="2 Days" />
+    <meta name="doc-class" content="Living Document" />
+    <link rel="stylesheet" href="/themes/chocoliciouscakes/style.css" type="text/css" charset="utf-8" />
+	<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="/themes/chocoliciouscakes/iestyle.css" />
+	<![endif]-->
+	<script type="text/javascript" src="/includes/jquery.js"></script>
+	<script type="text/javascript" src="/themes/chocoliciouscakes/jquery-ui-1.8.5.custom.min.js"></script>
+	<link rel="stylesheet" href="/includes/slimbox2.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="/includes/slimbox2.js"></script>   
+	<script type="text/javascript" src="/includes/cloudzoommin.js"></script>
+	<script type="text/javascript" src="/themes/chocoliciouscakes/slideshow.js"></script>	
+	
+
+<script type="text/javascript">
+
+		Shadowbox.init({
+			skipSetup: true,
+			players:["img","html","iframe","flv"]
+		});
+        
+       $(document).ready(function() {     
+       
+       		// Work out days to hide
+       		var date = new Date();
+       		var mindate = 3;
+       		if ( date.getDay() == 4 ) {
+       			var mindate = 5;
+       		} 
+       		if ( date.getDay() == 5 ) {
+       			var mindate = 5;
+       		} 
+       		if ( date.getDay() == 6 ) {
+       			var mindate = 5;
+       		} 
+       		if ( date.getDay() == 0 ) {
+       			var mindate = 4;
+       		}
+       		
+       		
+       
+	       	$.datepicker.setDefaults($.datepicker.regional['']);     
+            $("#datepicker").datepicker($.extend({},
+                {
+                	beforeShowDay: nonWorkingDates,
+                    minDate: mindate,
+                    maxDate: "+1M",
+                    dateFormat: 'dd/mm/yy'
+                }));
+        });   
+	        
+    function nonWorkingDates(date){
+        var day = date.getDay(), Sunday = 0, Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6;
+        var closedDates = [[25, 12, 2012],[26, 12, 2012]];
+        var closedDays = [[Sunday]];
+        for (var i = 0; i < closedDays.length; i++) {
+            if (day == closedDays[i][0]) {
+                return [false];
+            }
+
+        }
+
+        for (i = 0; i < closedDates.length; i++) {
+            if (date.getMonth() == closedDates[i][0] - 1 &&
+            date.getDate() == closedDates[i][1] &&
+            date.getFullYear() == closedDates[i][2]) {
+                return [false];
+            }
+        }
+
+        return [true];
+    }
+
+	</script>    
+    	
+	
+</head>
+<body id="page_">
+<div id="page">
+<div id="container">
+		
+	<div id="headertext"><a href="/"><img src="/themes/chocoliciouscakes/logo.png" alt="Chocolicious Cakes"/></a></div>
+	<div id="navigation"><ul id="mainnav" class="sf-menu"><li id="nav_0" ><a href="/index.php?pid=home" title="Home">Home</a></li></ul></div>
+		
+	<div id="content2">
+		<h1></h1>
+		
+	</div>
+	
+
+<div id="footer">
+<!-- pagetype: 1 --><p style="width: 100%;">Order by 9am Mon-Thurs for next day delivery<br>
+Trinity Farmhouse, 21 Orwell Road, Barrington, Cambridgeshire, CB22 7SE Tel: 01223 874129 / 07834 723223<br>
+Registered food business with South Cambridgeshire District Council.</p>
+<p> &nbsp;&nbsp;<a href="http://www.kombimedia.co.uk">Web Design</a> by Kombi Media</p>
+</div>
+</div>
+</div>
+    
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+         try {
+            var pageTracker = _gat._getTracker("UA-26977215-1");
+            pageTracker._trackPageview();
+            } catch(err) {}</script>
+    
+</body>
+</html>

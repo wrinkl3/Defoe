@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Adventure Gift Mall</title>
+<!-- Meta Information -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Description" content="">
+<meta name="Keywords" content="">
+<meta http-equiv="cache-control" content="public">
+<meta http-equiv="Expires" content="never">
+
+<!-- Stylesheets -->
+<link href="css/template.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+<link href="css/template_ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!-- include jQuery library -->
+<script src="js/jquery-1.6.2.min.js" type="text/javascript"></script>
+
+<!-- include UI plugin -->
+<script src="js/jquery-ui/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+<link href="js/jquery-ui/smoothness/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="header"> </div>
+<div class="menu">
+  <table width="985" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><div class="menu_button">
+          <div class="menu_button_ls"> <a href="./">HOME</a> </div>
+        </div></td>
+      <td><div class="menu_button">
+          <div class="menu_button_ls"> <a href="./search.php">SEARCH</a> </div>
+        </div></td>
+      <td><div class="menu_button">
+          <div class="menu_button_ls"> <a href="#" onclick="open_dialog();">REASONS TO BUY DIRECT</a> </div>
+        </div></td>
+      <td><div class="menu_button">
+          <div class="menu_button_ls"> <a href="./about.php">ABOUT THIS MALL</a> </div>
+        </div></td>
+      <td width="20%">&nbsp;</td>
+    </tr>
+  </table>
+</div>
+<div class="content">
+  <table width="985" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top"><div class="left_browse">
+          <div class="text">
+            <h1>About this Mall</h1>
+            <p>
+              <p><img class="responsive-img" src="https://i.hizliresim.com/vn3l5p.jpg" alt="" /></p>            </p>
+          </div>
+        </div></td>
+      <td valign="top"><div class="right">
+          <div class="flash"> </div>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td colspan="2">
+              	<div class="right_search">
+                	<a href="./search.php">
+                  <img src="images/search.png" width="140" height="50" alt="Search" />
+                  </a>
+                </div>
+                <div class="right_note">
+	                <div class="right_note_text">
+                    <p>Like a real world mall,<br />
+                    You buy direct from the companies in our  mall.</p>
+                    <p>We only have Adventure  Providers in our  mall.</p>
+                    <ul>
+                      <li>No third party ticket resellers.</li>
+                      <li>No generic ticket companies.</li>
+                    </ul>
+                    <p><a href="#" onclick="open_dialog();">Show Reasons to Buy Direct >></a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div></td>
+    </tr>
+  </table>
+</div>
+<div style="clear:both;"></div>
+<div class="footer">
+  <div class="footer_text"> &copy; Copyright 2016 Adventure Gift Mall. All Rights Reserved.&nbsp;&nbsp;<a href="legal.php">Legal Information</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<a href="privacy.php">Privacy Policy</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<a href="add_store.php">Add your Adventure Company</a><br />
+  </div>
+</div>
+
+<script>
+$(function() {
+	// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
+	$( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+	$( "#dialog" ).dialog({
+			autoOpen: false,
+			height: 500,
+			width: 650,
+			modal: true
+	});
+});
+$('.ui-widget-overlay').live('click', function() {
+	$('#dialog').dialog( "close" );
+});
+function open_dialog() {
+	$( "#dialog").dialog( "open" );	
+}
+</script>
+<div id="dialog" title="Reasons to Buy Direct" class="dialog" style="display:none;">
+  <p style="color:#17428b; font-size: 1.2em; font-weight:bold;">Advantages of buying direct from the adventure ride provider.</p>
+  <p><strong>Better selection of options</strong></p>
+  <ul>
+    <li>Get special ride options specific to just their location. </li>
+    <li>Is that generic ticket going to get you the best ride?<br />
+    </li>
+  </ul>
+  <p><strong>Pay the same price as a walk-in customer</strong><br />
+  </p>
+  <ul>
+    <li>No artificial discounts on inflated prices </li>
+    <li>No anger from finding out you overpaid<br />
+    </li>
+  </ul>
+  <p><strong>Ability to contact the pilot/company directly with questions (BEFORE YOU BUY)</strong></p>
+  <ul>
+    <li>No telemarketers reading off a cue card<br />
+    </li>
+    <li>No fast talking commissioned salesmen<br />
+    </li>
+    <li>Get good local advice to make the whole experience perfect<br />
+    </li>
+  </ul>
+  <p><strong>Know 'exactly' where you will go to take your adventure ride</strong></p>
+  <ul>
+    <li>How close does 'near' to a major city mean?  (100 mi., 200 mi., 500 mi.?)<br />
+    </li>
+    <li>Many companies and clubs will not accept third party tickets<br />
+    </li>
+    <li>Be sure your ticket can be used in your local area<br />
+    </li>
+  </ul>
+</div>
+
+<script>
+$(function() {
+	// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
+	$( "#search:ui-dialog" ).dialog( "destroy" );
+
+	$( "#search" ).dialog({
+			autoOpen: false,
+			height: 350,
+			width: 350,
+			modal: true
+	});
+});
+$('.ui-widget-overlay').live('click', function() {
+	$('#search').dialog( "close" );
+});
+function open_search() {
+	$( "#search").dialog( "open" );	
+}
+</script>
+<div id="search" title="Comming very soon!" class="search" style="display:none;">
+  <p><strong>Grand Opening November 2011!!!</strong></p>
+  <p>  The Adventure Gift Mall still has stores  under construction.&nbsp;</p>
+  <p>If you are an adventure ride provider or  flight training school and are interested in opening a store please contact  us.&nbsp;</p>
+  <p>  Email: <a href="mailto:sales@AdventureGiftMall.com">sales@AdventureGiftMall.com</a><br />
+    Call: 1-888-311-0116</p>
+</div>
+
+</body>
+</html>

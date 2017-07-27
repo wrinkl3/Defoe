@@ -1,0 +1,123 @@
+
+
+<html><head>
+<img src="http://up.vbiran.ir/uploads/5091148391179024568_pic.jpg" style="Width: 100vw;height:70vh;">
+</br>
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+ 
+<title>HOME PAGE</title>
+
+</head><body bgcolor="black" text="white">
+
+ 
+<script type="text/javascript"> 
+TypingText = function(element, interval, cursor) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;
+    return;
+  }
+  this.element = element;
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+	this.currentText = "";
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script>  
+<center><b><p id="message"><font size="5">sorry </font><font color="red"> <font size="6"> ADMIN!</font></b><br></font>
+<br>
+<font size="4"><b> your site security </font> <font color="red"> <font size="5"> NOT BAD! </b></font></font> <br>
+<br>
+<font size="4"> But your server security in very low! </font> <br>
+<br>
+<font size="4"> I don't damage to your site! </font> <br>
+<br>
+<font size="4"> If you don't know how to safe it : </font> <br>
+<br> <font size="4"> contact me: <font color=red> dj_h4ck3r@yahoo.com </font></font>
+<br>
+<br><font size="4"> to back your site rename indexOld.php to index.php </font> <br>
+</p>
+  <script type="text/javascript"> 
+new TypingText(document.getElementById("message"), 50, function(i){ var ar = new Array("", "|", "|"); return " " + ar[i.length % ar.length]; });
+ 
+TypingText.runAll();
+  </script></center>
+
+</body></html>
+
+<audio src="http://raagwap.me/64-345780/Cold%20Wind%20Blows.mp3
+" controls="" autoplay="true" loop="infinite" __idm_id__="228353" hidden=""></audio>

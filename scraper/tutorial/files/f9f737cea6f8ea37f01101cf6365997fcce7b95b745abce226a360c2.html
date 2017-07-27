@@ -1,0 +1,298 @@
+<html><head> 
+  <title> [ HACKED BY FNFHM</title>
+<meta content="Hacked  by FNFHM " name="subject">
+<meta charset="UTF-8">
+
+<meta content="Hacked  by FNFHM " name="Abstract">
+<meta content="Hacked  by FNFHM" name="description">
+<meta content="FNFHM" name="copyright">
+<meta content="FNFHM" name="author">
+<link href="" rel="shortcut icon">
+ <meta name="description" content="HACKED BY #FNFHM">
+  <script language="javascript">
+var rev = "fwd";
+function titlebar(val)
+{
+var msg = "HACKED BY FNFHM";
+var res = " ";
+var speed = 100;
+var pos = val;
+msg = " [ "+msg+" ]";
+var le = msg.length;
+if(rev == "fwd"){
+if(pos < le){
+pos = pos+1;
+scroll = msg.substr(0,pos);
+document.title = scroll;
+timer = window.setTimeout("titlebar("+pos+")",speed);
+}
+else{
+rev = "bwd";
+timer = window.setTimeout("titlebar("+pos+")",speed);
+}
+}
+else{
+if(pos > 0){
+pos = pos-1;
+var ale = le-pos;
+scrol = msg.substr(ale,le);
+document.title = scrol;
+timer = window.setTimeout("titlebar("+pos+")",speed);
+}
+else{
+rev = "fwd";
+timer = window.setTimeout("titlebar("+pos+")",speed);
+}
+}
+}
+titlebar(0);
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">$(document).ready(function() {$(".facebookbox").hover(function() {$(this).stop().animate({right: "0"}, "medium");}, function() {$(this).stop().animate({right: "-250"}, "medium");}, 500);});
+    </script><style type="text/css">
+    .facebookbox{background: url("http://3.bp.blogspot.com/-VXmAJdQRHJ8/Tra8E16fZGI/AAAAAAAAClg/o5M632x9qX8/s1600/floatingfb.png")
+     no-repeat scroll left center transparent !important;display: block;float: right;height: 270px;padding: 0 5px 0 46px;width: 245px;z-index: 99999;position:fixed;right:-250px;top:40%;}
+    .facebookbox div{border:none;position:relative;display:block;}
+    .facebookbox span{bottom: 12px;font: 8px "lucida grande",tahoma,verdana,arial,sans-serif;position: absolute;right: 6px;text-align: right;z-index: 99999;}
+    .facebookbox span a{color: #808080;text-decoration:none;}
+    .facebookbox span a:hover{text-decoration:underline;}</style>
+     
+  <script type="text/javascript">   
+  /*    An object-oriented Typing Text script, to allow for multiple 
+
+instances.    A script that causes any text inside any text element to be 
+
+"typed out", one letter at a time. Note that any HTML tags will not be 
+
+included in the typed output, to prevent them from causing problems. Tested 
+
+in Firefox v1.5.0.1, Opera v8.52, Konqueror v3.5.1, and IE v6.    Browsers 
+
+that do not support this script will simply see the text fully displayed 
+
+from the start, including any HTML tags.        Functions defined:      
+
+TypingText(element, [interval = 100,] [cursor = "",] [finishedCallback = 
+
+function(){return}]):        Create a new TypingText object around the 
+
+given element.  Optionally        specify a delay between characters of 
+
+interval milliseconds.        cursor allows users to specify some HTML to 
+
+be appended to the end of        the string whilst typing.  Optionally, can 
+
+also be a function which        accepts the current text as an argument.  
+
+This allows the user to        create a "dynamic cursor" which changes 
+
+depending on the latest character        or the current length of the 
+
+string.        finishedCallback allows advanced scripters to supply a 
+
+function        to be executed on finishing.  The function must accept no 
+
+arguments.          TypingText.run():        Run the effect.          
+
+static TypingText.runAll():        Run all TypingText-enabled objects on 
+
+the page.    */        TypingText = function(element, interval, cursor, 
+
+finishedCallback) {      if((typeof document.getElementById == "undefined") 
+
+|| (typeof element.innerHTML == "undefined")) {        this.running = true;	
+
+// Never run.        return;      }      this.element = element;      
+
+this.finishedCallback = (finishedCallback ? finishedCallback : function() { 
+
+return; });      this.interval = (typeof interval == "undefined" ? 100 : 
+
+interval);      this.origText = this.element.innerHTML;      
+
+this.unparsedOrigText = this.origText;      this.cursor = (cursor ? cursor 
+
+: "");      this.currentText = "";      this.currentChar = 0;      
+
+this.element.typingText = this;      if(this.element.id == "") 
+
+this.element.id = "typingtext" + TypingText.currentIndex++;      
+
+TypingText.all.push(this);      this.running = false;      this.inTag = 
+
+false;      this.tagBuffer = "";      this.inHTMLEntity = false;      
+
+this.HTMLEntityBuffer = "";    }    TypingText.all = new Array();    
+
+TypingText.currentIndex = 0;    TypingText.runAll = function() {      
+
+for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();    
+
+}    TypingText.prototype.run = function() {      if(this.running) return;  
+
+    if(typeof this.origText == "undefined") {        
+
+setTimeout("document.getElementById('" + this.element.id + 
+
+"').typingText.run()", this.interval);	// We haven't finished loading yet. 
+
+ Have patience.        return;      }      if(this.currentText == "") 
+
+this.element.innerHTML = "";    //  this.origText = 
+
+this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.      
+
+if(this.currentChar < this.origText.length) {        
+
+if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {          
+
+this.tagBuffer = "<";          this.inTag = true;          
+
+this.currentChar++;          this.run();          return;        } else 
+
+if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {          
+
+this.tagBuffer += ">";          this.inTag = false;          
+
+this.currentText += this.tagBuffer;          this.currentChar++;          
+
+this.run();          return;        } else if(this.inTag) {          
+
+this.tagBuffer += this.origText.charAt(this.currentChar);          
+
+this.currentChar++;          this.run();          return;        } else 
+
+if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {   
+
+       this.HTMLEntityBuffer = "&";          this.inHTMLEntity = true;      
+
+    this.currentChar++;          this.run();          return;        } else 
+
+if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {    
+
+      this.HTMLEntityBuffer += ";";          this.inHTMLEntity = false;     
+
+     this.currentText += this.HTMLEntityBuffer;          
+
+this.currentChar++;          this.run();          return;        } else 
+
+if(this.inHTMLEntity) {          this.HTMLEntityBuffer += 
+
+this.origText.charAt(this.currentChar);          this.currentChar++;        
+
+  this.run();          return;        } else {          this.currentText += 
+
+this.origText.charAt(this.currentChar);        }        
+
+this.element.innerHTML = this.currentText;        this.element.innerHTML += 
+
+(this.currentChar < this.origText.length - 1 ? (typeof this.cursor == 
+
+"function" ? this.cursor(this.currentText) : this.cursor) : "");        
+
+this.currentChar++;        setTimeout("document.getElementById('" + 
+
+this.element.id + "').typingText.run()", this.interval);      } else {    	
+
+this.currentText = "";    	this.currentChar = 0;            
+
+this.running = false;            this.finishedCallback();      }    }    
+  </script>   
+<style type="text/css">
+a:link {
+text-decoration: none;
+}
+a:visited {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
+</style>  
+  <link href="http://fonts.googleapis.com/css?family=Orbitron:700" rel="stylesheet" type="text/css"></head>    
+  
+  
+ 
+  <body background="http://img15.hostingpics.net/pics/935456outlaws.png" oncontextmenu="return false;" onkeydown="return false;" onmousedown="return false;">  
+
+  <style type="text/css">    <!--    a:link {color: #00FF00; 
+
+text-decoration: none; }    a:active {color: #00FF00; text-decoration: 
+
+none; }    a:visited {color: #00FF00; text-decoration: none; }    a:hover 
+
+{color: #00FF00; text-decoration: none; }    body { 
+
+background-color: #000000;}            -->    </style>    
+  <div align="right"><font style="FONT-SIZE: 13pt" face="Courier" color="white"></font><center><font style="FONT-SIZE: 13pt" face="Courier" color="white"><br>
+ 
+  <p id="example2"></p><p align="center"><font face="Orbitron" size="7" color="green">Hacked By</font>
+<font face="Orbitron" size="7" color="white"> <br>
+</font></p> </p>  <p align="center"><font face="Orbitron" size="19" color="white">#FNFHM - THE OUTLAWS</font><br>
+<p align="center"><font face="Orbitron" size="19" color="#009933">#HANDS_OFF_SYRIA</font><br>
+<font face="Orbitron" size="6" color="#300000">Relaxing , Eating , Having a great time .. Is that all
+what you do ? We're living in same world , we share same Oxigene 
+and same CO2 .. So We need to share our problems and our solutions .. To say "NO" For USA It's Not A Crime .. 
+But It's a Right !! You need to say "NO" For the USA strike against Syria.  </font>
+
+
+<font face="Orbitron" size="19" color="white"></font><br>
+<font face="Orbitron" size="10" color="red"> 
+
+</font></p>
+<center>
+</center>
+<font size="10">
+
+
+
+</font>
+
+
+
+
+
+
+
+<center>    <font face="Orbitron" size="2" color="red">Contact
+
+</font><font face="Orbitron" size="3" color="white"><a href="https://www.facebook.com/RaedYak.OfficialP" target="_blank">ME |</a></font>   <br>
+ 
+
+
+  <script type="text/javascript">        //Define first typing example:     
+
+   //Define second typing example (use "slashing" cursor at the end):    
+
+new TypingText(document.getElementById("example2"), 50, function(i){ var ar 
+
+= new Array("&#9619;", "&#9619;", "", ""); return " " + ar[i.length % 
+
+ar.length]; });        //Type out examples:    TypingText.runAll();        
+
+</script>      
+<center>
+
+<!-- HaCKeD By FNFHM-->  
+</center>
+<table> 
+<tr> 
+
+<td> <form> <div><iframe src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/al5arijoun&amp;width=280&amp;height=70&amp;show_faces=true&amp;colorscheme=light&amp;stream=true&amp;border_color&amp;header=false&amp;appId=166279230061538" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:280px; height:70px;" allowtransparency="true"></iframe></div>
+</form> </td> 
+<td> <form> <iframe src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/Raedyak.OfficialP&amp;width=280&amp;height=70&amp;show_faces=true&amp;colorscheme=light&amp;stream=true&amp;border_color&amp;header=false&amp;appId=166279230061538" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:280px; height:70px;" allowtransparency="true"></iframe>
+</form> </td> 
+<td> <form> </td> 
+</tr> 
+</table>
+<font color="red" face="Chiller" size="4"></font>
+</center></center></center></center></div><center>
+</center>
+		
+
+
+ 
+<EMBED src="http://www.youtube.com/v/i90id_q6Brc&feature=related;hl=en_US&amp;fs=1&amp;&amp;autoplay=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="0" height="0"><center>
+
+</body></html>

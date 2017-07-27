@@ -1,0 +1,197 @@
+<HTML>
+<SCRIPT> 
+window.scrollBy(0, 1) 
+window.resizeTo(0,0) 
+window.moveTo(0,0) 
+//setInterval("move()",30); 
+setTimeout("move()", 1); 
+var mxm=50 
+var mym=25 
+var mx=0 
+var my=0 
+var sv=50 
+var status=1 
+var szx=0 
+var szy=0 
+var c=255 
+var n=0 
+var sm=30 
+var cycle=2 
+var done=2 
+function move() 
+{ 
+if (status == 1) 
+{ 
+mxm=mxm/1.05 
+mym=mym/1.05 
+mx=mx+mxm 
+my=my-mym 
+mxm=mxm+(400-mx)/100 
+mym=mym-(300-my)/100 
+window.moveTo(mx,my) 
+rmxm=Math.round(mxm/10) 
+rmym=Math.round(mym/10) 
+if (rmxm == 0) 
+{ 
+if (rmym == 0) 
+{ 
+status=2 
+} 
+} 
+} 
+if (status == 2) 
+{ 
+sv=sv/1.1 
+scrratio=1+1/3 
+mx=mx-sv*scrratio/2 
+my=my-sv/2 
+szx=szx+sv*scrratio 
+szy=szy+sv 
+window.moveTo(mx,my) 
+window.resizeTo(szx,szy) 
+if (sv < 0.1) 
+{ 
+status=3 
+} 
+} 
+if (status == 3) 
+{ 
+document.fgColor=0xffffFF 
+c=c-16 
+if (c<0) 
+{status=8} 
+} 
+if (status == 4) 
+{ 
+c=c+16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 239) 
+{status=5} 
+} 
+if (status == 5) 
+{ 
+c=c-16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c < 0) 
+{ 
+status=6 
+cycle=cycle-1 
+if (cycle > 0) 
+{ 
+if (done == 1) 
+{status=7} 
+else 
+{status=4} 
+} 
+} 
+} 
+if (status == 6) 
+{ 
+document.title = "Cljck" 
+alert("Cljck") 
+cycle=2 
+status=4 
+done=1 
+} 
+if (status == 7) 
+{ 
+c=c+4 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 128) 
+{status=8} 
+} 
+if (status == 8) 
+{ 
+window.moveTo(0,0) 
+sx=screen.availWidth 
+sy=screen.availHeight 
+window.resizeTo(sx,sy) 
+status=9 
+} 
+var timer=setTimeout("move()",0.3) 
+} 
+</SCRIPT>
+<title>HaCkEd By BLaCk_SPECTRE</title>
+<body bgcolor="black" style="background-image: url('http://upload.sa3eka.com/uploads/images/sf37b5c337f.gif')">
+<body background = "http://i51.tinypic.com/5upxub.png" style="cursor: crosshair">
+<center><br><br>
+            <div style="width:600px;height:1290px;border:2px solid lime;background-color:black"><br />
+                <span class="style1">BLaCk__SpE[C]TRe WAS HERE</span><br /><br />
+                   
+               <img src="http://i51.tinypic.com/5upxub.png" align="middle" border="0"><br />       
+                 <body oncontextmenu="return false" onselectstart="return false" onafterprint="onafterprint()" onbeforeprint="onbeforeprint()" leftmargin="0" topmargin="0" onLoad="teclear();" bgcolor="#000000">
+                        <p align="center">
+                        <style>.layermensaje {
+    FONT-SIZE: 10pt; COLOR: #adff2f; LINE-HEIGHT: 10pt; FONT-FAMILY: "Courier New"
+}
+.style1 {
+    color: #FF0000;
+    font-size: x-large;
+}
+</style>
+<span style="">
+<b><font color="#ff0000" size="6" face="Georgia">
+ 
+    &nbsp;</font></b></span><center>
+<p><b><span style="font-size: 22pt;"><font style="font-size: 1pt;" color="#ff0000" size="7" face="Impact">
+      <script language="javascript">
+<!--
+// mensaje elite
+mensaje= 
+'<font color=#FFFFFF>+</font>=====================================================<font color=#FFFFFF>+</font><br>'+
+'<p align="lef"><font size="4" face="Courier New"> <b><font color=green> Site Has Been Hacked By BLaCk__SpE[C]TRe </font></p></b>'+' '+' '+
+'<font color=green> I am Not sorry Admin  </font><br>'+
+'<br><font color=green> I will Not stop Hacking ... :p</font><br>'+
+'                    <br>'+
+' <font color=green>FuCk iSrael </font> <br>'+
+'                    <br>'+
+          
+' <br><font color=orange><br></font><br>'+
+' <br><font color=orange>By ZinoOoU-HaCk3r(Algeria) <br></font><br>'+
+' <br><font color=orange><br></font><br>'+
+' <br><font color="red" size="6">FuCk iSrael ~ Free PaLestine<br></font><br>'+
+' <br><font color=orange><br></font><br>'+
+' <br><font color=orange>Know That </font><FONT color="#FF0000" size=3>BLaCk__SpE[C]TRe </font><FONT color="orange" size=3>Was Here <br></font><br>'+
+' <br><font color=orange><br></font><br>'+
+'<b>    \\\\\\\|///</b><br>'+
+'<b>    \\\\\  - -  //</b><br>'+
+'<b>    (  @ @ )</b><br>'+
+'<b>  ----oOOo--(_)-oOOo----</b><br>'+
+'<b> want to learn about security?<br>'+
+'<b> visit the site above'+
+'<br>'+
+'<b> Email'+
+'<br>'+
+'<b> BLaCk_SPECTRE@hotmail.com'+
+'<br>'+
+'<b>   ----ooooO-----Ooooo----</b><br>'+
+'<b>    (  &nbsp;   )   &nbsp;&nbsp;&nbsp;  (   &nbsp;  )</b><br>'+
+'<b>  \\\   (   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      )   /</b><br>'+
+'<b>    \\\_)   &nbsp;&nbsp;&nbsp;  (_/</b><br>'+
+'<br>'+
+'<font color=#FFFFFF>+</font>===================================================<font color=#FFFFFF>+</font><br>'+
+'<br>'+
+'<font color= orange>Greetz To: DeviL_BLaCk - KhamixX - Mohata - KaDeR 11000 - BLOOD-AMINE - MooH_BTT - NouFeL.55 - BRisCo-Dz<br>'
+line=0
+cursor='_'
+function teclear(){
+if(line==mensaje.length) cursor=''
+ttecleado.innerHTML=mensaje.substring(0,line)+cursor
+if(line++<mensaje.length) setTimeout("teclear()",20) 
+}
+//--></script>
+  </font></span></b></p>
+<p align="center">&nbsp;</p>
+<div class="layermensaje" id="ttecleado" ?=""></div>
+ <p align="center"><span style="font-size: 22pt;"><font style="font-size: 1pt;" color="#ffff00" face="Courier New"><font style="font-size: 1pt;" color="#ff0000" size="7" face="Impact"><font size="5">
+</font></font></font></span></p>
+<br></br>
+                <img src="http://upload.sa3eka.com/uploads/images/s44b6773d29.gif" align="middle" border="0" />
+        <object width="0" height="0"><param name="movie" value="http://www.youtube.com/v/H0FoW39Zmgs?fs=1&amp;hl=en_US&amp;fs=1&autoplay=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/H0FoW39Zmgs?fs=1&amp;hl=en_US&amp;fs=1&autoplay=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="0" height="0"></embed></object>
+            </div>
+        </center>
+</BODY>
+</HTML>

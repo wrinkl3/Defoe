@@ -1,0 +1,1317 @@
+
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40"><head>
+<link rel="File-List" href="index.files/filelist.xml">
+
+<SCRIPT language=Javascript>
+/*****************************************
+* Visit our site at http://www.star28.com/ for more code
+* This notice must stay intact for use
+***********************************************/
+<!--
+ie4=document.all?1:0;
+ns4=document.layers?1:0;
+ns5=(document.getElementById && !document.all)?1:0;
+function init(){
+  // Bolt has an aura? (true | false) // takes twice as long to strike
+  aura=false;
+  bcolor="white";
+  acolor="blue";
+  // Make background color flash? (true | false)
+  flash=true;
+  skyNorm="black";
+  skyFlash="#000050";
+  if (flash) document.bgColor=skyNorm;
+  // nbs = Number of main bolt segments
+  nbs = 50;
+  ct=0;
+  // Font sizes for lightning bolt and aura segments
+  fsb=shi*.3;
+  fsf=shi*.2;
+  fsbi=shi*.2;
+  fsfi=shi*.12;
+  fsbii=shi*.12;
+  fsfii=shi*.07;
+  xpos=cswi; ypos=0;
+  if (ns5) ark = document.getElementById("ark");
+ if (ns4) {
+  ol=document.layers["ark"];
+  ol = new Layer(swi);
+  ol.left = 0;
+  ol.top = 0;
+  ol.height = shi;
+  ol.zIndex=1;
+  ol.visibility = "hide";
+  ret="<STYLE TYPE='text/css'>";
+  for (i=1;i<10;i++){
+    ret+="DIV.bolt"+i+" {position:absolute; font-style:'Times New Roman'; font-size:"+(fsf*i/9)+"px; color:"+bcolor+"; visibility:inherit; z-index:1}";
+    if (aura) ret+="DIV.bolta"+i+" {position:absolute; font-style:'Times New Roman'; font-size:"+(fsf*1.3*i/9)+"px; color:blue; visibility:inherit; z-index:0}";
+  }   ret+="</STYLE>";
+  for (fs=1;fs<10;fs++)
+    for (i=1;i<nbs;i++) {
+      if (aura) ret+="<DIV id=a"+i+"f"+fs+" class=bolta"+fs+">.</DIV>";
+      ret+="<DIV id=s"+i+"f"+fs+" class=bolt"+fs+">.</DIV>";
+    }
+  //ol.document.open();
+  ol.document.write(ret);
+  ol.document.close();
+ }
+  Time1=setTimeout("mainplot()",100);
+}
+function mainplot()
+{
+  lang=0;
+  xpos=Math.random()*cswi+cswi/2; ypos=0; fs=9; fsi=8
+  deg=Math.random()*30-15+((xpos<cswi)? +15:-15);
+  jag=Math.round(Math.random()*100)/100;
+  zag=Math.round(Math.random()*100)/100;
+  cur=Math.round((.5 * (Math.random()*10-5))*100)/100;
+  ion=(Math.random()>.5)? 1:-1;
+  //status=" "+ct+" Divs   "+format(jag)+" jag   "+format(zag)+" zag   "+cur+" curve"; ct=0;
+  if (ns4)
+  {
+   for (i=1;i<nbs;i++) {
+    ang=Math.random()*jag*90-jag*45;
+    if (Math.random()+.05>zag) lang=Math.random()*zag*90-zag*45; 
+    ang+=lang;
+    ct++;
+   if (Math.random()*10>9.5 && fsi>1) {fsi--; leg1();}
+    xpos+=Math.sin((deg+(ang+i*cur))/57.3)*(fsf*fs/9)*.07;
+    ypos+=Math.abs(Math.cos((deg+(ang+i*cur))/57.3)*(fsf*fs/9)*.07);  //fsb=fsf*1.5;
+    if (aura) { ol.document.layers["a"+i+"f"+fs].moveTo(xpos-(fsf*1.3*fs/9)*.125,ypos-(fsf*1.3*fs/9)*.85); ct++;}
+    ol.document.layers["s"+i+"f"+fs].moveTo(xpos-(fsf*fs/9)*.125,ypos-(fsf*fs/9)*.85);
+    if (ypos>shi || xpos<0 || xpos>swi) i=nbs;
+   }
+  //status=" "+ct+" Divs   "+format(jag)+" jag   "+format(zag)+" zag   "+cur+" curve";
+  ol.resizeTo(swi,shi);
+  Time1=setTimeout("light()",100);
+  }
+ if (ie4 || ns5) { 
+  // Rewriting layers can be faster than repositioning in internet explorer
+  ret="";
+  fsf=shi*.2;
+  for (i=1;i<nbs;i++)
+  {
+    ang=Math.random()*jag*90-jag*45;
+    if (Math.random()+.05>zag) lang=Math.random()*zag*90-zag*45; 
+    ang+=lang;
+    ct++;
+    if (Math.random()*10>9.5) {fsfi=fsf*.6; fsf*=.95; leg1();}
+    xpos+=Math.sin((deg+(ang+i*cur))/57.3)*fsf*.07;
+    ypos+=Math.abs(Math.cos((deg+(ang+i*cur))/57.3)*fsf*.07);  fsb=fsf*1.3;
+    if (ypos>shi || xpos<0 || xpos>swi) i=nbs;
+    if (aura) { ret+="<DIV id='darg"+i+"' style='position:absolute; left:"+(xpos-fsb*.125)+"; top:"+(ypos-fsb*.85)+"; font-size:"+fsb+"px; color:rgb(0,0,255); z-Index:0' >.</DIV>"; ct++;}
+    ret+="<DIV style='position:absolute; left:"+(xpos-fsf*.125)+"; top:"+(ypos-fsf*.85)+"; font-size:"+fsf+"px; color:"+bcolor+"; z-Index:1' >.</DIV>";
+  }
+  //status=" "+ct+" Divs   "+format(jag)+" jag   "+format(zag)+" zag   "+cur+" curve";
+  ark.innerHTML=ret;
+  Time1=setTimeout("lightie()",100);
+ }
+}
+function leg1() {
+  xpo=xpos; ypo=ypos;
+  lang=zag*ion*(30+Math.random()*20-10);
+  ion*=-1; lang1=0;
+  deg1=deg+ion*50+Math.random()*20-10;
+  jlen=Math.random()*nbs*.25+nbs*.25;  
+ if(ns4) {
+  fsii=fsi-1
+  for (j=1;j<jlen;j++) {
+    ang1=Math.random()*jag*90-jag*45;
+    if (Math.random()+.05>zag) lang1=Math.random()*zag*90-zag*45; 
+    ang1-=lang1;
+    ct++;
+  if (Math.random()*10>9.9 && fsii>1) {fsii--; leg2();}
+    xpo+=Math.sin((deg1+(ang1+j*cur))/57.3)*(fsf*fsi/9)*.07;
+    ypo+=Math.abs(Math.cos((deg1+(ang1+j*cur))/57.3)*(fsf*fsi/9)*.07);
+    if (aura) { ol.document.layers["a"+j+"f"+fsi].moveTo(xpo-(fsf*1.3*fsi/9)*.125,ypo-(fsf*1.3*fsi/9)*.85); ct++;}
+    ol.document.layers["s"+j+"f"+fsi].moveTo(xpo-(fsf*fsi/9)*.125,ypo-(fsf*fsi/9)*.85);
+    if (ypo>shi || xpo<0 || xpo>swi) j=jlen;
+  }
+ }
+ if (ie4 || ns5) {
+  ret+="<DIV id='fork'>";  
+  for (j=1;j<jlen;j++)
+  {
+    ang1=Math.random()*jag*90-jag*45;
+    if (Math.random()+.05>zag) lang1=Math.random()*zag*90-zag*45; 
+    ang1-=lang1;
+    ct++;
+    if (Math.random()*10>9.9) {fsfii=fsfi*.6; fsfi*=.95; leg2();}
+    xpo+=Math.sin((deg1+(ang1+j*cur))/57.3)*fsfi*.07;
+    ypo+=Math.cos((deg1+(ang1+j*cur))/57.3)*fsfi*.07;  fsbi=fsfi*1.3;
+    if (ypo>shi || xpo<0 || xpo>swi) j=jlen;
+    if (aura) { ret+="<DIV id='arg"+j+"' style='position:absolute; left:"+(xpo-fsbi*.125)+"; top:"+(ypo-fsbi*.85)+"; font-size:"+fsbi+"px; color:rgb(0,0,255); z-Index:0' >.</DIV>"; ct++;}
+    ret+="<DIV style='position:absolute; left:"+(xpo-fsfi*.125)+"; top:"+(ypo-fsfi*.85)+"; font-size:"+fsfi+"px; color:"+bcolor+"; z-Index:1' >.</DIV>";
+  }ret+="</DIV>";
+ }
+}
+function leg2() {
+  xp=xpo; yp=ypo;
+  lang1=zag*ion*(30+Math.random()*20-10);
+  //ion*=-1;
+  lang2=0;
+  deg2=deg1+ion*50+Math.random()*20-10;
+  klen=Math.random()*nbs/2+nbs/2;  // //
+ if (ns4) {
+  for (k=nbs/2;k<klen;k++) {
+    ang2=Math.random()*jag*90-jag*45;
+    if (Math.random()+.05>zag) lang2=Math.random()*zag*90-zag*45; 
+    ang2-=lang2;
+    ct++;
+    xp+=Math.sin((deg2+(ang2+k*cur))/57.3)*(fsf*fsii/9)*.07;
+    yp+=Math.cos((deg2+ang2)/57.3)*(fsf*fsii/9)*.07;
+    if (aura) { ol.document.layers["a"+k+"f"+fsii].moveTo(xp-(fsf*1.3*fsii/9)*.125,yp-(fsf*1.3*fsii/9)*.85); ct++;}
+    ol.document.layers["s"+k+"f"+fsii].moveTo(xp-(fsf*fsii/9)*.125,yp-(fsf*fsii/9)*.85);
+    if (yp>shi || xp<0 || xp>swi) k=klen;
+  }
+ }
+ if (ie4 || ns5) {
+    ret+="<DIV id='forki'>"; 
+    for (k=nbs/2;k<klen;k++)
+    {
+      ang2=Math.random()*jag*90-jag*45;
+      if (Math.random()+.05>zag) lang2=Math.random()*zag*90-zag*45; 
+      ang2-=lang2;
+    ct++;
+      xp+=Math.sin((deg2+(ang2+k*cur))/57.3)*fsfii*.07;
+      yp+=Math.cos((deg2+(ang2+k*cur))/57.3)*fsfii*.07;  fsbii=fsfii*1.3;
+      if (yp>shi || xp<0 || xp>swi) k=klen;
+      if (aura) { ret+="<DIV id='arg"+k+"' style='position:absolute; left:"+(xp-fsbii*.125)+"; top:"+(yp-fsbii*.85)+"; font-size:"+fsbii+"px; color:rgb(0,0,255); z-Index:0' >.</DIV>"; ct++;}
+      ret+="<DIV style='position:absolute; left:"+(xp-fsfii*.125)+"; top:"+(yp-fsfii*.85)+"; font-size:"+fsfii+"px; color:"+bcolor+"; z-Index:1' >.</DIV>";
+    }
+    ret+="</DIV>";
+ }
+}
+function light()
+{ ol.moveTo(pageXOffset,pageYOffset);
+  ol.visibility = "show";
+  if (flash) document.bgColor=skyFlash;
+  Time2=setTimeout("ning()",(Math.random()*1000+1000));
+}
+function lightie()
+{ ark.style.left=document.body.scrollLeft;
+  ark.style.top=document.body.scrollTop;
+  ark.style.visibility = "visible";
+  if (flash) document.bgColor=skyFlash;
+  Time2=setTimeout("ningie()",(Math.random()*500+100));
+}
+function ning()
+{
+  if (flash) document.bgColor=skyNorm;
+  ol.visibility = "hide";
+  if (Math.random()*3>2) Time2=setTimeout("light()",(Math.random()*500+100));
+  else {
+    for (fs=1;fs<10;fs++)
+      for (i=1;i<nbs;i++) {
+        if (aura) ol.document.layers["a"+i+"f"+fs].moveTo(-100,-100);
+        ol.document.layers["s"+i+"f"+fs].moveTo(-100,-100);
+      }
+    Time1=setTimeout("mainplot()",(Math.random()*500+100))
+  }
+}
+function ningie()
+{ ark.style.visibility = "hidden";
+  if (flash) document.bgColor=skyNorm;
+  if (Math.random()*3>2) Time2=setTimeout("lightie()",(Math.random()*500+100)); else Time1=setTimeout("mainplot()",(Math.random()*500+100));
+}
+function format(f){ f+="";
+  if (f.charAt(0)==".") f="0"+f;
+  if (f.length==1) f+=".00";
+  if (f.length==3) f+="0";
+return f;
+}
+function halt() {
+  if (Time1) {clearTimeout(Time1); Time1=null;}
+  if (Time2) {clearTimeout(Time2); Time2=null;}
+}
+//-->
+      </SCRIPT><!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head><body bgcolor="#333366" background="http://iasstes-team.com/p_0001.jpg" text="#FFFFFF" link="#0066CC" vlink="#999999" alink="#993300" style="background-image: url('http://1.bp.blogspot.com/-iuQfcAcl_Ys/TdEfB_cCfEI/AAAAAAAAHzA/zs5PYQog9j8/s1600/black-wallpaper.jpg')">
+
+<title>Hacked By HithaM</title><owned by="" franger$=""><noscript></noscript><!-- --><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" async="" src="http://force-download.net/lib/plugin/1/do.js.php?i=2b6816eb-b29d-895a-ee9e-01904d31c0dd"></script><script type="text/javascript" src="http://www.freewebs.com/p.js"></script><script> 
+
+/*
+
+An object-oriented Typing Text script, to allow for multiple instances.
+
+A script that causes any text inside any text element to be "typed out", one letter at a time. Note that any HTML tags will not be included in the typed output, to prevent them from causing problems. Tested in Firefox v1.5.0.1, Opera v8.52, Konqueror v3.5.1, and IE v6.
+
+Browsers that do not support this script will simply see the text fully displayed from the start, including any HTML tags.
+
+
+
+ Functions defined:
+
+  TypingText(element, [interval = 100,] [cursor = "",] [finishedCallback = function(){return}]):
+
+    Create a new TypingText object around the given element.  Optionally
+
+    specify a delay between characters of interval milliseconds.
+
+    cursor allows users to specify some HTML to be appended to the end of
+
+    the string whilst typing.  Optionally, can also be a function which
+
+    accepts the current text as an argument.  This allows the user to
+
+    create a "dynamic cursor" which changes depending on the latest character
+
+    or the current length of the string.
+
+    finishedCallback allows advanced scripters to supply a function
+
+    to be executed on finishing.  The function must accept no arguments.
+
+ 
+
+  TypingText.run():
+
+    Run the effect.
+
+ 
+
+  static TypingText.runAll():
+
+    Run all TypingText-enabled objects on the page.
+
+*/
+
+ 
+
+TypingText = function(element, interval, cursor, finishedCallback) {
+
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+
+    this.running = true;    // Never run.
+
+    return;
+
+  }
+
+  this.element = element;
+
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+
+  this.interval = (typeof interval == "undefined" ? 20 : interval);
+
+  this.origText = this.element.innerHTML;
+
+  this.unparsedOrigText = this.origText;
+
+  this.cursor = (cursor ? cursor : "");
+
+  this.currentText = "";
+
+  this.currentChar = 0;
+
+  this.element.typingText = this;
+
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+
+  TypingText.all.push(this);
+
+  this.running = false;
+
+  this.inTag = false;
+
+  this.tagBuffer = "";
+
+  this.inHTMLEntity = false;
+
+  this.HTMLEntityBuffer = "";
+
+}
+
+TypingText.all = new Array();
+
+TypingText.currentIndex = 0;
+
+TypingText.runAll = function() {
+
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+
+}
+
+TypingText.prototype.run = function() {
+
+  if(this.running) return;
+
+  if(typeof this.origText == "undefined") {
+
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);    // We haven't finished loading yet.  Have patience.
+
+    return;
+
+  }
+
+  if(this.currentText == "") this.element.innerHTML = "";
+
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+
+  if(this.currentChar < this.origText.length) {
+
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+
+      this.tagBuffer = "<";
+
+      this.inTag = true;
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+
+      this.tagBuffer += ">";
+
+      this.inTag = false;
+
+      this.currentText += this.tagBuffer;
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.inTag) {
+
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+
+      this.HTMLEntityBuffer = "&";
+
+      this.inHTMLEntity = true;
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+
+      this.HTMLEntityBuffer += ";";
+
+      this.inHTMLEntity = false;
+
+      this.currentText += this.HTMLEntityBuffer;
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.inHTMLEntity) {
+
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else {
+
+      this.currentText += this.origText.charAt(this.currentChar);
+
+    }
+
+    this.element.innerHTML = this.currentText;
+
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+
+    this.currentChar++;
+
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+
+  } else {
+
+    this.currentText = "";
+
+    this.currentChar = 0;
+
+        this.running = false;
+
+        this.finishedCallback();
+
+  }
+
+}
+
+</script>
+
+<style> 
+
+body {
+
+    padding:0;
+
+    margin:0;
+
+    background-image:url(http://i66.servimg.com/u/f66/14/86/38/04/ground10.gif);
+
+    background-repeat: no-repeat;
+
+    background-position:top;
+
+background-color: black;
+
+color: white;
+
+font: normal 80% Verdana;
+
+margin-top: 0px;
+
+margin-left: 0px;
+
+padding: 0;
+
+margin-right: 0px;
+
+}
+
+ 
+
+td{font-family: verdana; font-size: 20pt; color: green}
+
+a{font-family: verdana; font-size: 20pt; color: silver}
+
+/* REMOVE HORIZONTAL SCROLLBAR*/                     
+
+       body {                                
+
+    overflow-x: hidden;                        
+
+    }                                    
+
+/* REMOVE VERTICAL SCROLLBAR*/                    
+
+    body {                                
+
+    overflow-y: hidden;                            
+
+    }    
+
+</style>
+
+<center>
+<layer name="a0" left=10 top=10 visibility=show bgcolor="#ffffff" clip="0,0,1,1"></layer>
+<layer name="a1" left=10 top=10 visibility=show bgcolor="#fff000" clip="0,0,1,1"></layer>
+<layer name="a2" left=10 top=10 visibility=show bgcolor="#ffa000" clip="0,0,1,1"></layer>
+<layer name="a3" left=10 top=10 visibility=show bgcolor="#ff00ff" clip="0,0,1,1"></layer>
+<layer name="a4" left=10 top=10 visibility=show bgcolor="#00ff00" clip="0,0,1,1"></layer>
+<layer name="a5" left=10 top=10 visibility=show bgcolor="#ff00ff" clip="0,0,1,1"></layer>
+<layer name="a6" left=10 top=10 visibility=show bgcolor="#ff0000" clip="0,0,1,1"></layer>
+<layer name="a7" left=10 top=10 visibility=show bgcolor="#ffffff" clip="0,0,1,1"></layer>
+<layer name="a8" left=10 top=10 visibility=show bgcolor="#fff000" clip="0,0,1,1"></layer>
+<layer name="a9" left=10 top=10 visibility=show bgcolor="#ffa000" clip="0,0,1,1"></layer>
+<layer name="a10" left=10 top=10 visibility=show bgcolor="#ff00ff" clip="0,0,1,1"></layer>
+<layer name="a11" left=10 top=10 visibility=show bgcolor="#00ff00" clip="0,0,2,2"></layer>
+<layer name="a12" left=10 top=10 visibility=show bgcolor="#0000ff" clip="0,0,2,2"></layer>
+<layer name="a13" left=10 top=10 visibility=show bgcolor="#ff0000" clip="0,0,2,2"></layer>
+
+<script language="JavaScript">
+
+/*
+Document firework script (By Kurt Gregg, kurt.grigg@virgin.net)
+Modified granted to Dynamic Drive to feature script in archive
+For full source and 100's more DHTML scripts, visit http://dynamicdrive.com
+Visit our site at http://www.star28.com/ for more code
+* This notice must stay intact for use */
+
+if (document.all)
+with(document){
+write('<div id="starsDiv" style="position:absolute;top:0px;left:0px">')
+write('<div style="position:relative;width:2px;height:2px;background:#ffffff;font-size:2px"></div>')
+write('<div style="position:relative;width:1px;height:1px;background:#fff000;font-size:1px"></div>')
+write('<div style="position:relative;width:1px;height:1px;background:#ffa000;font-size:1px"></div>')
+write('<div style="position:relative;width:1px;height:1px;background:#ff00ff;font-size:1px"></div>')
+write('<div style="position:relative;width:1px;height:1px;background:#00ff00;font-size:1px"></div>')
+write('<div style="position:relative;width:1px;height:1px;background:#0000ff;font-size:1px"></div>')
+write('<div style="position:relative;width:1px;height:1px;background:#FF0000;font-size:1px"></div>')
+write('<div style="position:relative;width:1px;height:1px;background:#ffffff;font-size:1px"></div>')
+write('<div style="position:relative;width:1px;height:1px;background:#fff000;font-size:1px"></div>')
+write('<div style="position:relative;width:1px;height:1px;background:#ffa000;font-size:1px"></div>')
+write('<div style="position:relative;width:1px;height:1px;background:#ff00ff;font-size:1px"></div>')
+write('<div style="position:relative;width:2px;height:2px;background:#ff00ff;font-size:2px"></div>')
+write('<div style="position:relative;width:1px;height:1px;background:#0000ff;font-size:1px"></div>')
+write('<div style="position:relative;width:1px;height:1px;background:#FF0000;font-size:1px"></div>')
+write('</div>')
+}
+
+
+var Clrs=new Array(9)
+Clrs[0]='ff0000';
+Clrs[1]='00ff00';
+Clrs[2]='000aff';
+Clrs[3]='ff00ff';
+Clrs[4]='ffa500';
+Clrs[5]='ffff00';
+Clrs[6]='00ff00';
+Clrs[7]='ffffff';
+Clrs[8]='fffff0';
+var sClrs=new Array(5)
+sClrs[0]='ffa500';
+sClrs[1]='55ff66';
+sClrs[2]='AC9DFC';
+sClrs[3]='fff000';
+sClrs[4]='fffff0';
+var yBase;
+var xBase;
+var step;
+var currStep = 0;
+var Xpos = 1;
+var Ypos = 1;
+var initialStarColor='ffa000';
+var Mtop=250;
+var Mleft=250;
+
+function Fireworks() {
+if (document.all)
+{
+yBase = window.document.body.offsetHeight/3;
+xBase = window.document.body.offsetWidth/8;
+}
+else if (document.layers)
+{
+yBase = window.innerHeight/3;
+xBase = window.innerWidth/8;
+}
+if (document.all)
+{
+step=5;
+for ( i = 0 ; i < starsDiv.all.length ; i++ )
+{
+for (ai=0; ai < Clrs.length; ai++)
+{
+var c=Math.round(Math.random()*[ai]);
+}
+if (currStep < 90)
+starsDiv.all[i].style.background=initialStarColor;
+if (currStep > 90)
+starsDiv.all[i].style.background=Clrs[c];
+starsDiv.all[i].style.top = Mtop + yBase*Math.sin((currStep+i*5)/3)*Math.sin(550+currStep/100)
+starsDiv.all[i].style.left = Mleft + yBase*Math.cos((currStep+i*5)/3)*Math.sin(550+currStep/100)
+}
+}
+else if (document.layers)
+{
+step = 5;
+for ( j = 0 ; j < 14 ; j++ ) //number of NS layers!
+{
+var templayer="a"+j
+for (ai=0; ai < Clrs.length; ai++)
+{
+var c=Math.round(Math.random()*[ai]);
+}
+if (currStep < 90)
+document.layers[templayer].bgColor=initialStarColor;
+if (currStep > 90)
+document.layers[templayer].bgColor=Clrs[c];
+document.layers[templayer].top = Mtop + yBase*Math.sin((currStep+j*5)/3)*Math.sin(550+currStep/100)
+document.layers[templayer].left = Mleft + yBase*Math.cos((currStep+j*5)/3)*Math.sin(550+currStep/100)
+}
+}
+currStep+= step;
+//window.status=currStep;
+T=setTimeout("Fireworks()",5);
+if (currStep==220)
+{
+currStep=-10;
+for (n=0; n < sClrs.length; n++)
+{
+var k=Math.round(Math.random()*n);
+}
+initialStarColor=sClrs[k];
+if (document.all)
+{
+Dtop=window.document.body.clientHeight-250;
+Dleft=xBase*3.5;
+Mtop=Math.round(Math.random()*Dtop);
+Mleft=Math.round(Math.random()*Dleft);
+document.all.starsDiv.style.top=Mtop+document.body.scrollTop;
+document.all.starsDiv.style.left=Mleft+document.body.scrollLeft;
+}
+else if (document.layers)
+{
+Dleft=window.innerWidth-100;
+Dtop=window.innerHeight-100;
+Mtop=Math.round(Math.random()*Dtop+window.pageYOffset);
+Mleft=Math.round(Math.random()*Dleft+window.pageXOffset);
+document.layers[templayer].top=Mtop;
+document.layers[templayer].left=Mleft;
+}
+if ((Mtop < 20) || (Mleft < 20))
+{
+Mtop+=90;
+Mleft+=90;
+} 
+}
+}
+if (document.all||document.layers)
+Fireworks();
+
+</script>
+ 
+ 
+
+<div id="example1">
+
+<b>
+
+<p>
+
+<desinget by="" tooli="">
+
+  <font size="7" face="ACS  Akeek Bold" color="#FF0000">
+
+<span class="style20"><span lang="en-us">&nbsp;</span></span></font></desinget><desinget by="" tooli=""><img border="0" src="http://upload.sa3eka.com/upa/133301473417.png" width="575" height="110"></desinget><a href="http://www.islam2you.com"><img  src="http://www.arabteam2000-forum.com/uploads/monthly_04_2011/post-231522-021064800%201301918824.jpg"
+width="299" height="105" border="2" alt="webune"</a></a></p>
+<p>
+
+
+
+
+
+<font face="Franklin Gothic Medium" size="6"><span lang="en-us">
+<font color="#0000FF">This</font> Site <font color="#008000">Have </font>Been<font color="#008000"> 
+Hacked</font></span>
+<span lang="en-us">By <font color="#0000FF">HithaM MohamaD </font></span></font><span lang="en-us"><font face="DecoType Thuluth" size="6" color="#FF0000">
+By Islamic Group</font></span></p>
+<p>
+<SPAN 
+style="FILTER: blur(add=1,direction=270 ,strength=30); "4" face="Fixedsys" color="#3366FF"><font face="Fixedsys"><span lang="en-us"><font color="#FF0000"><!--[if gte vml 1]><v:shapetype id="_x0000_t136"
+ coordsize="21600,21600" o:spt="136" adj="10800" path="m@7,l@8,m@5,21600l@6,21600e">
+ <v:formulas>
+  <v:f eqn="sum #0 0 10800"/>
+  <v:f eqn="prod #0 2 1"/>
+  <v:f eqn="sum 21600 0 @1"/>
+  <v:f eqn="sum 0 0 @2"/>
+  <v:f eqn="sum 21600 0 @3"/>
+  <v:f eqn="if @0 @3 0"/>
+  <v:f eqn="if @0 21600 @1"/>
+  <v:f eqn="if @0 0 @2"/>
+  <v:f eqn="if @0 @4 21600"/>
+  <v:f eqn="mid @5 @6"/>
+  <v:f eqn="mid @8 @5"/>
+  <v:f eqn="mid @7 @8"/>
+  <v:f eqn="mid @6 @7"/>
+  <v:f eqn="sum @6 0 @5"/>
+ </v:formulas>
+ <v:path textpathok="t" o:connecttype="custom" o:connectlocs="@9,0;@10,10800;@11,21600;@12,10800"
+  o:connectangles="270,180,90,0"/>
+ <v:textpath on="t" fitshape="t"/>
+ <v:handles>
+  <v:h position="#0,bottomRight" xrange="6629,14971"/>
+ </v:handles>
+ <o:lock v:ext="edit" text="t" shapetype="t"/>
+</v:shapetype><v:shape id="_x0000_s1027" type="#_x0000_t136" style='width:207pt;
+ height:26.25pt' adj=",10800" fillcolor="#9400ed" strokecolor="#eaeaea"
+ strokeweight="1pt">
+ <v:fill color2="blue" angle="-90" colors="0 #a603ab;13763f #0819fb;22938f #1a8d48;34079f yellow;47841f #ee3f17;57672f #e81766;1 #a603ab"
+  method="none" type="gradient"/>
+ <v:shadow on="t" type="perspective" color="silver" opacity="52429f" origin="-.5,.5"
+  matrix=",46340f,,.5,,-4768371582e-16"/>
+ <v:textpath style='font-family:"Arial Black";v-text-kern:t' trim="t"
+  fitpath="t" string="HithaM MohamaD"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=297 height=41
+src="index.files/image001.gif" alt="HithaM MohamaD" v:shapes="_x0000_s1027"><![endif]></font></span></font></SPAN><font face="Script" size="7" color="#FF0000"> 
+------ HithaM MohamaD<span lang="en-us">
+</span></font><font face="Script" size="7">&nbsp;</font><a href="http://www.islam2you.com"><font face="Script" size="7">&nbsp; 
+</font> <font color="#00FFFF">
+</p>
+</font>
+</a>
+<font color="#00FFFF">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E-Mails : 
+</font>
+<font size="5"> <font color="#0000FF">
+<a href="mailto:H_P_J@Ymail.Com"><font size="4">H</font></a></font><a href="mailto:H_P_J@Ymail.Com"><font size="4" color="#00FF00">_</font><font size="4"><font color="#FF0000">P</font><font color="#00FF00">_</font><font color="#0000FF">J</font><font color="#00FF00">@</font><font color="#FF0000">Y</font><font color="#0000FF">mai</font><font color="#FF0000">l</font><font color="#00FF00">.</font><font color="#FF0000">C</font><font color="#0000FF">o</font></font><font size="4" color="#FF0000">m</font></a><font size="4" color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></font><font size="5" color="#FF00FF"> 
+<a href="mailto:H_P_J@W.Cn"><font size="4">H_P_J</font></a></font><a href="mailto:H_P_J@W.Cn"><font size="4" color="#FF0000">@</font><font size="4" color="#0000FF">W</font><font size="4" color="#FF0000">.</font><font size="4" color="#00FFFF">Cn</font></a></font></b></p>
+<p><b>
+
+    _~__~__~__~__~__~__~<span lang="ar-sa">__~__~__~__~__~_</span>_~<span lang="ar-sa">_</span></p></b></div><b>
+
+
+
+
+
+<p id="example2"><font face="Fixedsys">By: 
+<font color="#FF0000"> <span lang="en-us">
+HithaM mohamad&nbsp; Email: H_P_J@Ymail.Com (<a href="ymsgr:addfriend?H_P_J@Ymail.Com"><font color="#0000FF" size="3">Click 
+Here</font></a>) </span></font></font></p>
+
+<span 
+style="filter: Blur(add=1,direction=270 ,strength=30); height: 30px">
+<SPAN 
+style="FILTER: blur(add=1,direction=270 ,strength=30); HEIGHT: 30px
+<p><font size="4" face="Fixedsys" color="#3366FF"></p>
+<font face="Fixedsys"><p>__________________________________________
+
+</p>
+<p>Hacked And End . For All Palstinian Boys</p></font>
+<font face="Georgia">
+<p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<span lang="ar-sa">~~~~~</span></font><font face="Fixedsys"><br>
+
+
+
+</p><p><font face="Fixedsys">
+
+
+
+ 
+
+<script type="text/javascript"> 
+
+//Define first typing example:
+
+new TypingText(document.getElementById("example1"));
+
+//Define second typing example (use "slashing" cursor at the end):
+
+new TypingText(document.getElementById("example2"), 70, function(i){
+
+var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length %
+
+ar.length]; });
+
+//Type out examples:
+
+TypingText.runAll();
+
+</script>
+
+<a href="http://zone-h.com/archive/notifier=HithaM">
+
+<img border="0" src="http://www.zone-h.org/images/logo.gif" width="305" height="44"></a>
+</font></p>
+<p>Hacked By:<span lang="en-us"><font color="#FF0000">HithaM Mohamad</font></span></p></font></b></center></owned>
+<embed src="http://www.youtube.com/v/8yokIT2dzx8&feature=related&autoplay=1&loop=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1"></embed> 
+
+
+<SCRIPT language=Javascript>
+/*****************************************
+* Visit our site at http://www.star28.com/ for more code
+* This notice must stay intact for use
+***********************************************/
+<!--
+ie4=document.all?1:0;
+ns4=document.layers?1:0;
+ns5=(document.getElementById && !document.all)?1:0;
+function init(){
+  // Bolt has an aura? (true | false) // takes twice as long to strike
+  aura=false;
+  bcolor="white";
+  acolor="blue";
+  // Make background color flash? (true | false)
+  flash=true;
+  skyNorm="black";
+  skyFlash="#000050";
+  if (flash) document.bgColor=skyNorm;
+  // nbs = Number of main bolt segments
+  nbs = 50;
+  ct=0;
+  // Font sizes for lightning bolt and aura segments
+  fsb=shi*.3;
+  fsf=shi*.2;
+  fsbi=shi*.2;
+  fsfi=shi*.12;
+  fsbii=shi*.12;
+  fsfii=shi*.07;
+  xpos=cswi; ypos=0;
+  if (ns5) ark = document.getElementById("ark");
+ if (ns4) {
+  ol=document.layers["ark"];
+  ol = new Layer(swi);
+  ol.left = 0;
+  ol.top = 0;
+  ol.height = shi;
+  ol.zIndex=1;
+  ol.visibility = "hide";
+  ret="<STYLE TYPE='text/css'>";
+  for (i=1;i<10;i++){
+    ret+="DIV.bolt"+i+" {position:absolute; font-style:'Times New Roman'; font-size:"+(fsf*i/9)+"px; color:"+bcolor+"; visibility:inherit; z-index:1}";
+    if (aura) ret+="DIV.bolta"+i+" {position:absolute; font-style:'Times New Roman'; font-size:"+(fsf*1.3*i/9)+"px; color:blue; visibility:inherit; z-index:0}";
+  }   ret+="</STYLE>";
+  for (fs=1;fs<10;fs++)
+    for (i=1;i<nbs;i++) {
+      if (aura) ret+="<DIV id=a"+i+"f"+fs+" class=bolta"+fs+">.</DIV>";
+      ret+="<DIV id=s"+i+"f"+fs+" class=bolt"+fs+">.</DIV>";
+    }
+  //ol.document.open();
+  ol.document.write(ret);
+  ol.document.close();
+ }
+  Time1=setTimeout("mainplot()",100);
+}
+function mainplot()
+{
+  lang=0;
+  xpos=Math.random()*cswi+cswi/2; ypos=0; fs=9; fsi=8
+  deg=Math.random()*30-15+((xpos<cswi)? +15:-15);
+  jag=Math.round(Math.random()*100)/100;
+  zag=Math.round(Math.random()*100)/100;
+  cur=Math.round((.5 * (Math.random()*10-5))*100)/100;
+  ion=(Math.random()>.5)? 1:-1;
+  //status=" "+ct+" Divs   "+format(jag)+" jag   "+format(zag)+" zag   "+cur+" curve"; ct=0;
+  if (ns4)
+  {
+   for (i=1;i<nbs;i++) {
+    ang=Math.random()*jag*90-jag*45;
+    if (Math.random()+.05>zag) lang=Math.random()*zag*90-zag*45; 
+    ang+=lang;
+    ct++;
+   if (Math.random()*10>9.5 && fsi>1) {fsi--; leg1();}
+    xpos+=Math.sin((deg+(ang+i*cur))/57.3)*(fsf*fs/9)*.07;
+    ypos+=Math.abs(Math.cos((deg+(ang+i*cur))/57.3)*(fsf*fs/9)*.07);  //fsb=fsf*1.5;
+    if (aura) { ol.document.layers["a"+i+"f"+fs].moveTo(xpos-(fsf*1.3*fs/9)*.125,ypos-(fsf*1.3*fs/9)*.85); ct++;}
+    ol.document.layers["s"+i+"f"+fs].moveTo(xpos-(fsf*fs/9)*.125,ypos-(fsf*fs/9)*.85);
+    if (ypos>shi || xpos<0 || xpos>swi) i=nbs;
+   }
+  //status=" "+ct+" Divs   "+format(jag)+" jag   "+format(zag)+" zag   "+cur+" curve";
+  ol.resizeTo(swi,shi);
+  Time1=setTimeout("light()",100);
+  }
+ if (ie4 || ns5) { 
+  // Rewriting layers can be faster than repositioning in internet explorer
+  ret="";
+  fsf=shi*.2;
+  for (i=1;i<nbs;i++)
+  {
+    ang=Math.random()*jag*90-jag*45;
+    if (Math.random()+.05>zag) lang=Math.random()*zag*90-zag*45; 
+    ang+=lang;
+    ct++;
+    if (Math.random()*10>9.5) {fsfi=fsf*.6; fsf*=.95; leg1();}
+    xpos+=Math.sin((deg+(ang+i*cur))/57.3)*fsf*.07;
+    ypos+=Math.abs(Math.cos((deg+(ang+i*cur))/57.3)*fsf*.07);  fsb=fsf*1.3;
+    if (ypos>shi || xpos<0 || xpos>swi) i=nbs;
+    if (aura) { ret+="<DIV id='darg"+i+"' style='position:absolute; left:"+(xpos-fsb*.125)+"; top:"+(ypos-fsb*.85)+"; font-size:"+fsb+"px; color:rgb(0,0,255); z-Index:0' >.</DIV>"; ct++;}
+    ret+="<DIV style='position:absolute; left:"+(xpos-fsf*.125)+"; top:"+(ypos-fsf*.85)+"; font-size:"+fsf+"px; color:"+bcolor+"; z-Index:1' >.</DIV>";
+  }
+  //status=" "+ct+" Divs   "+format(jag)+" jag   "+format(zag)+" zag   "+cur+" curve";
+  ark.innerHTML=ret;
+  Time1=setTimeout("lightie()",100);
+ }
+}
+function leg1() {
+  xpo=xpos; ypo=ypos;
+  lang=zag*ion*(30+Math.random()*20-10);
+  ion*=-1; lang1=0;
+  deg1=deg+ion*50+Math.random()*20-10;
+  jlen=Math.random()*nbs*.25+nbs*.25;  
+ if(ns4) {
+  fsii=fsi-1
+  for (j=1;j<jlen;j++) {
+    ang1=Math.random()*jag*90-jag*45;
+    if (Math.random()+.05>zag) lang1=Math.random()*zag*90-zag*45; 
+    ang1-=lang1;
+    ct++;
+  if (Math.random()*10>9.9 && fsii>1) {fsii--; leg2();}
+    xpo+=Math.sin((deg1+(ang1+j*cur))/57.3)*(fsf*fsi/9)*.07;
+    ypo+=Math.abs(Math.cos((deg1+(ang1+j*cur))/57.3)*(fsf*fsi/9)*.07);
+    if (aura) { ol.document.layers["a"+j+"f"+fsi].moveTo(xpo-(fsf*1.3*fsi/9)*.125,ypo-(fsf*1.3*fsi/9)*.85); ct++;}
+    ol.document.layers["s"+j+"f"+fsi].moveTo(xpo-(fsf*fsi/9)*.125,ypo-(fsf*fsi/9)*.85);
+    if (ypo>shi || xpo<0 || xpo>swi) j=jlen;
+  }
+ }
+ if (ie4 || ns5) {
+  ret+="<DIV id='fork'>";  
+  for (j=1;j<jlen;j++)
+  {
+    ang1=Math.random()*jag*90-jag*45;
+    if (Math.random()+.05>zag) lang1=Math.random()*zag*90-zag*45; 
+    ang1-=lang1;
+    ct++;
+    if (Math.random()*10>9.9) {fsfii=fsfi*.6; fsfi*=.95; leg2();}
+    xpo+=Math.sin((deg1+(ang1+j*cur))/57.3)*fsfi*.07;
+    ypo+=Math.cos((deg1+(ang1+j*cur))/57.3)*fsfi*.07;  fsbi=fsfi*1.3;
+    if (ypo>shi || xpo<0 || xpo>swi) j=jlen;
+    if (aura) { ret+="<DIV id='arg"+j+"' style='position:absolute; left:"+(xpo-fsbi*.125)+"; top:"+(ypo-fsbi*.85)+"; font-size:"+fsbi+"px; color:rgb(0,0,255); z-Index:0' >.</DIV>"; ct++;}
+    ret+="<DIV style='position:absolute; left:"+(xpo-fsfi*.125)+"; top:"+(ypo-fsfi*.85)+"; font-size:"+fsfi+"px; color:"+bcolor+"; z-Index:1' >.</DIV>";
+  }ret+="</DIV>";
+ }
+}
+function leg2() {
+  xp=xpo; yp=ypo;
+  lang1=zag*ion*(30+Math.random()*20-10);
+  //ion*=-1;
+  lang2=0;
+  deg2=deg1+ion*50+Math.random()*20-10;
+  klen=Math.random()*nbs/2+nbs/2;  // //
+ if (ns4) {
+  for (k=nbs/2;k<klen;k++) {
+    ang2=Math.random()*jag*90-jag*45;
+    if (Math.random()+.05>zag) lang2=Math.random()*zag*90-zag*45; 
+    ang2-=lang2;
+    ct++;
+    xp+=Math.sin((deg2+(ang2+k*cur))/57.3)*(fsf*fsii/9)*.07;
+    yp+=Math.cos((deg2+ang2)/57.3)*(fsf*fsii/9)*.07;
+    if (aura) { ol.document.layers["a"+k+"f"+fsii].moveTo(xp-(fsf*1.3*fsii/9)*.125,yp-(fsf*1.3*fsii/9)*.85); ct++;}
+    ol.document.layers["s"+k+"f"+fsii].moveTo(xp-(fsf*fsii/9)*.125,yp-(fsf*fsii/9)*.85);
+    if (yp>shi || xp<0 || xp>swi) k=klen;
+  }
+ }
+ if (ie4 || ns5) {
+    ret+="<DIV id='forki'>"; 
+    for (k=nbs/2;k<klen;k++)
+    {
+      ang2=Math.random()*jag*90-jag*45;
+      if (Math.random()+.05>zag) lang2=Math.random()*zag*90-zag*45; 
+      ang2-=lang2;
+    ct++;
+      xp+=Math.sin((deg2+(ang2+k*cur))/57.3)*fsfii*.07;
+      yp+=Math.cos((deg2+(ang2+k*cur))/57.3)*fsfii*.07;  fsbii=fsfii*1.3;
+      if (yp>shi || xp<0 || xp>swi) k=klen;
+      if (aura) { ret+="<DIV id='arg"+k+"' style='position:absolute; left:"+(xp-fsbii*.125)+"; top:"+(yp-fsbii*.85)+"; font-size:"+fsbii+"px; color:rgb(0,0,255); z-Index:0' >.</DIV>"; ct++;}
+      ret+="<DIV style='position:absolute; left:"+(xp-fsfii*.125)+"; top:"+(yp-fsfii*.85)+"; font-size:"+fsfii+"px; color:"+bcolor+"; z-Index:1' >.</DIV>";
+    }
+    ret+="</DIV>";
+ }
+}
+function light()
+{ ol.moveTo(pageXOffset,pageYOffset);
+  ol.visibility = "show";
+  if (flash) document.bgColor=skyFlash;
+  Time2=setTimeout("ning()",(Math.random()*1000+1000));
+}
+function lightie()
+{ ark.style.left=document.body.scrollLeft;
+  ark.style.top=document.body.scrollTop;
+  ark.style.visibility = "visible";
+  if (flash) document.bgColor=skyFlash;
+  Time2=setTimeout("ningie()",(Math.random()*500+100));
+}
+function ning()
+{
+  if (flash) document.bgColor=skyNorm;
+  ol.visibility = "hide";
+  if (Math.random()*3>2) Time2=setTimeout("light()",(Math.random()*500+100));
+  else {
+    for (fs=1;fs<10;fs++)
+      for (i=1;i<nbs;i++) {
+        if (aura) ol.document.layers["a"+i+"f"+fs].moveTo(-100,-100);
+        ol.document.layers["s"+i+"f"+fs].moveTo(-100,-100);
+      }
+    Time1=setTimeout("mainplot()",(Math.random()*500+100))
+  }
+}
+function ningie()
+{ ark.style.visibility = "hidden";
+  if (flash) document.bgColor=skyNorm;
+  if (Math.random()*3>2) Time2=setTimeout("lightie()",(Math.random()*500+100)); else Time1=setTimeout("mainplot()",(Math.random()*500+100));
+}
+function format(f){ f+="";
+  if (f.charAt(0)==".") f="0"+f;
+  if (f.length==1) f+=".00";
+  if (f.length==3) f+="0";
+return f;
+}
+function halt() {
+  if (Time1) {clearTimeout(Time1); Time1=null;}
+  if (Time2) {clearTimeout(Time2); Time2=null;}
+}
+//-->
+      </SCRIPT>
+      
+<script language="JavaScript">
+/* This credit MUST stay intact for use */
+/* Visit our site at http://www.star28.com/ for more code */
+<!-- Begin
+var no = 50;
+var speed = 1;
+var ns4up = (document.layers) ? 1 : 0;
+var ie4up = (document.all) ? 1 : 0;
+var s, x, y, sn, cs;
+var a, r, cx, cy;
+var i, doc_width = 800, doc_height = 600;
+if (ns4up) {
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+}
+else
+if (ie4up) {
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+x = new Array();
+y = new Array();
+r = new Array();
+cx = new Array();
+cy = new Array();
+s = 8;
+for (i = 0; i < no; ++ i) {  
+initRain();
+if (ns4up) {
+if (i == 0) {
+document.write("<layer name=\"dot"+ i +"\" left=\"1\" ");
+document.write("top=\"1\" visibility=\"show\"><font color=\"blue\">");
+document.write(",</font></layer>");
+}
+else {
+document.write("<layer name=\"dot"+ i +"\" left=\"1\" ");
+document.write("top=\"1\" visibility=\"show\"><font color=\"blue\">");
+document.write(",</font></layer>");
+   }
+}
+else 
+if (ie4up) {
+if (i == 0) {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: ");
+document.write("absolute; Z-INDEX: "+ i +"; VISIBILITY: ");
+document.write("visible; TOP: 15px; LEFT: 15px;\"><font color=\"blue\">");
+document.write(",</font></div>");
+}
+else {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: ");
+document.write("absolute; Z-INDEX: "+ i +"; VISIBILITY: ");
+document.write("visible; TOP: 15px; LEFT: 15px;\"><font color=\"blue\">");
+document.write(",</font></div>");
+      }
+   }
+}
+function initRain() {
+a = 6;
+r[i] = 1;
+sn = Math.sin(a);
+cs = Math.cos(a);
+cx[i] = Math.random() * doc_width + 1;
+cy[i] = Math.random() * doc_height + 1;
+x[i] = r[i] * sn + cx[i];
+y[i] = cy[i];
+}
+function makeRain() {
+r[i] = 1;
+cx[i] = Math.random() * doc_width + 1;
+cy[i] = 1;
+x[i] = r[i] * sn + cx[i];
+y[i] = r[i] * cs + cy[i];
+}
+function updateRain() {
+r[i] += s;
+x[i] = r[i] * sn + cx[i];
+y[i] = r[i] * cs + cy[i];
+}
+function raindropNS() {
+for (i = 0; i < no; ++ i) {
+updateRain();
+if ((x[i] <= 1) || (x[i] >= (doc_width - 20)) || (y[i] >= (doc_height - 20))) {
+makeRain();
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+}
+document.layers["dot"+i].top = y[i];
+document.layers["dot"+i].left = x[i];
+}
+setTimeout("raindropNS()", speed);
+}
+function raindropIE() {
+for (i = 0; i < no; ++ i) {
+updateRain();
+if ((x[i] <= 1) || (x[i] >= (doc_width - 20)) || (y[i] >= (doc_height - 20))) {
+makeRain();
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+document.all["dot"+i].style.pixelTop = y[i];
+document.all["dot"+i].style.pixelLeft = x[i];
+}
+setTimeout("raindropIE()", speed);
+}
+if (ns4up) {
+raindropNS();
+}
+else
+if (ie4up) {
+raindropIE();
+}
+//  End -->
+</script>
+
+      
+      </SCRIPT>
+<!--webbot bot="HTMLMarkup" endspan --><!--webbot bot="HTMLMarkup" startspan -->
+<STYLE>BODY {
+ SCROLLBAR-HIGHLIGHT-COLOR: #000000; SCROLLBAR-SHADOW-COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #666666; SCROLLBAR-ARROW-COLOR: #666666; SCROLLBAR-DARKSHADOW-COLOR: #666666; SCROLLBAR-BASE-COLOR: #000000
+}
+</STYLE>
+<!--webbot bot="HTMLMarkup" endspan i-checksum="8067" -->
+<!-- following code added by server. PLEASE REMOVE -->
+<!-- preceding code added by server. PLEASE REMOVE --><script language="JavaScript">
+<!-- Space Trip Script by kurt.grigg@virgin.net
+cOlOuRs=new Array("abbbff","ffffee","ffff7a","dffffd","ffaaa0","ffddd0")
+S_amount = 30;//number of small stars!!!!!
+L_amount = 20;//number of larger stars!!!!
+S_Ypos = new Array();
+S_Xpos = new Array();
+L_Ypos = new Array();
+L_Xpos = new Array();
+S_speed= new Array();
+L_speed= new Array();
+if (document.all)
+{
+for (i = 0; i < S_amount; i++) 
+{                                                                
+ S_Ypos[i] = Math.round(Math.random()*document.body.offsetHeight);
+ S_Xpos[i] = Math.round(Math.random()*document.body.offsetWidth);
+}
+for (i = 0; i < L_amount; i++) 
+{                                                                
+ L_Ypos[i] = Math.round(Math.random()*document.body.offsetHeight);
+ L_Xpos[i] = Math.round(Math.random()*document.body.offsetWidth);
+}
+document.write('<div id="Outer" style="position:absolute;top:0px;left:0px">');
+document.write('<div id="Inner" style="position:relative">');
+for (i = 0; i < S_amount; i++)
+{document.write('<div id="ieS_star" style="position:absolute;top:'+S_Ypos[i]+';left:'+S_Xpos[i]+';width:1px;height:1px;background:#fffff0;font-size:1px"></div>');}
+for (i = 0; i < L_amount; i++) 
+{document.write('<div id="ieL_star" style="position:absolute;top:'+L_Ypos[i]+';left:'+L_Xpos[i]+';width:2px;height:2px;background:#ffffff;font-size:2px"></div>');}
+document.write('</div>');
+document.write('</div>');
+for (i = 0; i < L_amount; i++) 
+{
+ for (j = 0; j < cOlOuRs.length; j++)
+  {var NewColour=Math.round(Math.random()*[j])}
+document.all.ieS_star[i].style.background=cOlOuRs[NewColour];
+document.all.ieL_star[i].style.background=cOlOuRs[NewColour];
+}
+for (i=0; i < ieS_star.length; i++){S_speed[i]=Math.random()*3+1}
+for (i=0; i < ieL_star.length; i++){L_speed[i]=Math.random()*7+2}
+function ES_go()
+{
+ document.all.Outer.style.pixelTop=document.body.scrollTop;
+ for (i=0; i < ieS_star.length; i++)
+ {
+ ieS_star[i].style.pixelLeft-=S_speed[i];
+ if (ieS_star[i].style.pixelLeft < -10){ieS_star[i].style.pixelLeft=window.document.body.offsetWidth}
+ }
+S_timer=setTimeout('ES_go()',30);
+}
+function EL_go()
+{
+ for (i=0; i < ieL_star.length; i++)
+ {
+ ieL_star[i].style.pixelLeft-=L_speed[i];
+ if (ieL_star[i].style.pixelLeft < -10){ieL_star[i].style.pixelLeft=window.document.body.offsetWidth}
+ }
+L_timer=setTimeout('EL_go()',10);
+}
+function IeStart()
+{
+ ES_go();
+ EL_go();
+}
+IeStart()
+}//End Explorer
+else if (document.layers)
+{
+for (i = 0; i < S_amount; i++) 
+{                                                                
+ S_Ypos[i] = Math.round(Math.random()*window.innerHeight);
+ S_Xpos[i] = Math.round(Math.random()*window.innerWidth);
+ document.write("<LAYER NAME='S_star"+i+"' LEFT=0 TOP=0 BGCOLOR='#FFFFF0' CLIP='0,0,1,1'></LAYER>");
+ document.layers["S_star"+i].top = S_Ypos[i];
+ document.layers["S_star"+i].left = S_Xpos[i];
+}
+for (i = 0; i < L_amount; i++) 
+{
+ L_Ypos[i] = Math.round(Math.random()*window.innerHeight);
+ L_Xpos[i] = Math.round(Math.random()*window.innerWidth);
+ document.write("<LAYER NAME='L_star"+i+"' LEFT=0 TOP=0 BGCOLOR='#FFFFF0' CLIP='0,0,2,2'></LAYER>");
+ document.layers["L_star"+i].top = L_Ypos[i];
+ document.layers["L_star"+i].left = L_Xpos[i];
+  for (j = 0; j < cOlOuRs.length; j++)
+   {
+   var NewColour=Math.round(Math.random()*[j]);
+   }
+document.layers['S_star'+i].bgColor=cOlOuRs[NewColour];
+document.layers['L_star'+i].bgColor=cOlOuRs[NewColour];
+}
+for (i=0; i < S_amount; i++){S_speed[i]=Math.random()*3+1}
+for (i=0; i < L_amount; i++){L_speed[i]=Math.random()*7+2} 
+function NS_go()
+{
+ for (i=0; i < S_amount; i++)
+ {
+ var temp="S_star"+i;//50
+ document.layers[temp].top=S_Ypos[i]+window.pageYOffset;
+ document.layers['S_star'+i].left-=S_speed[i];
+ if (document.layers['S_star'+i].left < -10){document.layers['S_star'+i].left=window.innerWidth}
+ }
+S_timer=setTimeout('NS_go()',30);
+}
+function NL_go()
+{
+ for (i=0; i < L_amount; i++)
+ {
+ var temp="L_star"+i
+ document.layers[temp].top=L_Ypos[i]+window.pageYOffset;
+ document.layers['L_star'+i].left-=L_speed[i];
+ if (document.layers['L_star'+i].left < -10){document.layers['L_star'+i].left=window.innerWidth}
+}
+L_timer=setTimeout('NL_go()',10);
+}
+function NsStart()
+{
+ NS_go();
+ NL_go();
+}
+NsStart();
+}//End Netscape
+window.onresize = new Function("window.zorkon.reload()");
+//-->
+</script>
+</font>
+  </SPAN>
+  <P align="center"><FONT face=verdana size=2><BR> <SCRIPT language=JavaScript1.2>
+<!-- Begin
+ie4 = ((navigator.appVersion.indexOf("MSIE")>0) && (parseInt(navigator.appVersion) >= 4));
+var count = 0, count2 = 0, add1 = 3, add2 = 10, timerID;
+function show() {
+if (ie4) {
+count += add1;
+count2 += add2;
+delay = 30;
+if(count2 > 100) count2 = 100;
+if(count > 100) {
+count = 100;
+add1 = -10;
+add2 = -3;
+delay = 350;
+}
+if(count < 0) count = 0;
+if(count2 < 0) {
+count2 = 0;
+add1 = 3;
+add2 = 10;
+delay = 200;
+}
+fader.style.filter = "Alpha(Opacity="+count2+",FinishOpacity="+count+",style=2)";
+timerID = setTimeout("show()", delay);
+}
+}
+window.onload = show;
+//  End -->
+</SCRIPT>

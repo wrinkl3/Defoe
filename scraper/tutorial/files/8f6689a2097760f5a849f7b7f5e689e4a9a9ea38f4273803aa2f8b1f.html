@@ -1,0 +1,119 @@
+<div align=right><script src="http://www.clocklink.com/embed.js"></script><script type="text/javascript" language="JavaScript">obj=new Object;obj.clockfile="5004-white.swf";obj.TimeZone="GMT0200";obj.width=240;obj.height=20;obj.Place="";obj.DateFormat="yyyy / mm / dd DDD";obj.TimeFormat="HH:mm:ss TT";obj.wmode="transparent";showClock(obj);</script>
+<script language="JavaScript1.2">
+
+var clickmessage="El bot?n derecho del rat?n est? desactivado en las im?genes."
+
+function disableclick(e) {
+if (document.all) {
+if (event.button==2||event.button==3) {
+if (event.srcElement.tagName=="IMG"){
+alert(clickmessage);
+return false;
+}
+}
+}
+else if (document.layers) {
+if (e.which == 3) {
+alert(clickmessage);
+return false;
+}
+}
+else if (document.getElementById){
+if (e.which==3&&e.target.tagName=="IMG"){
+alert(clickmessage)
+return false
+}
+}
+}
+
+function associateimages(){
+for(i=0;i<document.images.length;i++)
+document.images[i].onmousedown=disableclick;
+}
+
+if (document.all)
+document.onmousedown=disableclick
+else if (document.getElementById)
+document.onmouseup=disableclick
+else if (document.layers)
+associateimages()
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9101956-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Admin Control Panel</title>
+<link href="../site_template4.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="785" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td width="785" valign="top" colspan="2">
+	<TABLE WIDTH=785 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+				<TD colspan="2" bgcolor="#000000" class="bodyfontred" align="right">
+		 <a href = "../index.php" CLASS="topmenu" target="blank">Portal</a>
+		&nbsp;	 
+	</TD>
+	</TR
+	<TR>
+		<TD bgcolor="#000000" class="bodyfontwhite"><center><img src='../images/banner.gif'/><p><strong>Rnn Cars Control Panel by <span style='color:red'>Rey</span> (Bellv?s-Lleida)</strong><p>gabriel@vodafone.es<center><p></TD>
+	</TABLE>
+
+	<table width="785" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" width="98%" bgcolor="#232B34" class="white" align="center">
+&nbsp;
+	 <a href = "admin.php" CLASS="creamlink11">Conexi?n</a> 		  
+		  </td>
+      </tr>
+    </table>
+	
+	</td>
+  </tr>
+  <tr>
+    <td bgcolor="#F6F6F6" height='1'></td>
+	</tr>
+	
+  <tr>
+    <td >
+	<table width="785" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="785" bgcolor="#232B34" class="bodyfontred">
+
+
+<center>
+<form action="admin_authentication.php" method="post" >
+<input type=hidden name=install value=''>
+www.rnncars.com<br><br><font color='#ffffff'><b>Hacked by belirsiz</b></font><br> <br>
+    <strong><span class="bodyfontwhite"><br>INTRODUCIR DATOS DE CONEXI?N</span></strong><br>
+    <br>
+    <table cellspacing = 0 cellpadding=2 class=adetable >
+      <tr> 
+        <td class="bodyfontwhite" align="right">Usuario :</td>
+        <td><input type="text" name="username1"></td>
+      </tr>
+      <tr> 
+        <td class="bodyfontwhite" align="right">Contrase?a :</td>
+        <td><input type="password" name="user_passwd"></td>
+      </tr>
+      <tr> 
+        <td colspan=2 align=right><input type="submit" name="submit" value="ENTRAR">
+          </td>
+      </tr>
+      <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+</form>
+</center>

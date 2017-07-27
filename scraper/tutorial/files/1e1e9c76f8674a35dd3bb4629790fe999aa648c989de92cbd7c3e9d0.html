@@ -1,0 +1,188 @@
+<html dir="rtl">
+
+<head>
+<meta http-equiv="Content-Language" content="ar-sa">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+<title>???????? ????? :$</title>
+</head>
+<div style="border-style: double; border-width: 3px">
+<p id='anima' style="position:absolute;font-size:20;background-color:white; right:152px; top:260px; width:666px; height:31px">
+</p>
+</div>
+<br>
+
+<script language="JavaScript">
+
+// Visit http://www.star28.com/ for more code
+
+<!-- Begin
+text = "?? ??? ?? ??????? ????? ????? ??????? ?? ???????? ???? ???? ????? ?? ?????? ??? ??? ????";
+word = text.split('~');
+i = -1;           //letter count
+j = 0;            //which word in array is to be spelled
+start = 0;      //variable to hold cycles of the blink
+scount = 0;  //variable to hold cycles of the mispell
+function checkIt() {
+with(document.all.anima) {
+if(innerText.charAt(innerText.length-1) == "_") {
+innerText = innerText.substring(0, innerText.length - 1);
+return true;
+}
+else {
+innerText = innerText + "_";
+return false;
+      }
+   }
+}
+function blinkfor(count, timing) {
+with(document.all.anima) {
+if(start < count) {
+if(checkIt()) {
+start++;
+}
+mistake = 'blinkfor('+count+','+timing+')';
+setTimeout('eval(mistake)', timing);
+}
+else {
+start = 0;
+i++;
+call_It();
+      }
+   }
+}
+function mispell(offset,correction) {
+with(document.all.anima) {
+if(scount < offset) {
+if(!checkIt()) {
+innerText = innerText.substring(0, innerText.length-2) + "_";
+scount++;
+}
+mistake = 'mispell(' + offset + ', "' + correction + '")';
+setTimeout("eval(mistake)", 150);
+}
+else {
+if(correction == '' && scount == offset ) {
+i = i - offset;
+scount++;
+}
+if(offset > 0) {
+if(checkIt()) {
+innerText += correction.charAt(correction.length - offset) + "_";
+offset--;
+}
+mistake = 'mispell(' + offset + ',"' + correction + '")';
+setTimeout("eval(mistake)", 150);
+}
+else {
+scount = 0;
+j++;
+innerText = innerText.substring(0, innerText.length - 1);
+call_It();
+         }
+      }
+   }
+}
+function spellit(string) {
+with(document.all.anima) {
+if(i <= string.length) {
+if(string.charAt(i) == '/') {
+NumErrs = string.charAt(i + 1);
+NewLets = string.substring(i + 2, i + NumErrs);
+mispell(NumErrs,NewLets);
+}
+else if(i <= string.length - 1) {
+i++;
+innerText = string.substring(0,i) + "_";
+mistake = 'spellit("' + string + '")';
+setTimeout("eval(mistake)", 150);
+}
+else {
+innerText = string.substring(0, i);
+j++;
+call_It();
+         }
+      }
+   }
+}
+function call_It() {
+with(document.all) {
+if(i == -1){
+blinkfor(4, 150);
+}
+else if(j <= word.length - 1) {
+spellit(anima.innerText + " " + word[j]);
+} 
+else {
+blinkfor(100,230);
+      }
+   }
+}
+if(document.all) {
+call_It();
+}
+//  End -->
+</script>
+
+<body bgcolor="#000000" background="http://www10.0zz0.com/2012/02/02/23/872563028.jpg" style="background-attachment: fixed"> 
+<font size="7" color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="http://img03.arabsh.com/uploads/image/2012/02/03/0c374d4963f0.gif" width="153" height="205"></font><font color="#FFFFFF">
+</font>
+<p><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="http://www10.0zz0.com/2012/02/02/23/496158551.jpg" width="56" height="204">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></p>
+<p align="center">&nbsp;</p>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div align="center">
+	<table border="1" width="19%" id="table1">
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<p align="center">
+			<font face="Bold Italic Art" size="6" color="#FF00FF">???????? 
+			????????..?????????<br>
+			</font><font color="#FF00FF" size="5"><br>
+			<br>
+			<font face="Led Italic Font">?? ??????????.. ?? ????? ??? </font>
+			</font><font size="5" color="#FF0000" face="Fixedsys">
+			??????????????????.</font><font color="#FF00FF" size="5" face="PT Bold Arch">
+			</font><font size="5" face="PT Bold Arch" color="#0000FF">?????? 
+			?????? ????????</font><font color="#0000FF" size="5" face="Led Italic Font"> 
+			*_&amp;</font><font color="#FF00FF" size="5"><br>
+			<br>
+			<font face="Simple Bold Jut Out">?????? ?? ???? ?????? ???????? ( 
+			?????? ??? ) ..??????</font><br>
+			<br>
+			<br>
+			</font><font face="Kufi Extended Outline" color="#FFFFFF" size="5">
+			??? ??????? ????? ??????? ??????? ???? ?????????.. ?????? ???? 
+			??????..</font><font color="#FF00FF" size="5"><br>
+			<br>
+			??? ???? ??? ????? ??? ?? ???? ???? ???? ????? ???????? ?????? <br>
+			<br>
+			<br>
+			??? ??? ( </font><font size="6" color="#FF0000" face="Impact">
+			7alawa511@gmail.com</font><font color="#FF00FF" size="5"> ) ..<br>
+			</font><font color="#FFFFFF" size="6" face="DecoType Thuluth">
+			<span style="background-color: #000000"><br>
+			</span></font><font color="#FFFFFF" size="6" face="Fixedsys">
+			<span style="background-color: #000000">???? ???? ?? ??? &lt; 
+			????????..<br>
+			<br>
+			?? ???? ???? ???? ????? ???? ????? ?????? ???? ???????..<br>
+			<br>
+			???? ???? ?????????.. ??????&lt; ????? ?????? ?? ????? ??????? ?? 
+			??????? ^_^<br>
+&nbsp;</span></font></p>
+			<p align="center"><font size="6" color="#FF00FF">&nbsp;<img border="0" src="http://img03.arabsh.com/uploads/image/2012/02/03/0c374d4963f5.gif" width="200" height="100">&nbsp;
+			</font></p>
+			<p align="center"><font size="6" color="#FF00FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</font></td>
+		</tr>
+	</table>
+</div>
+ <bgsound src="http://www.up.t-kjool.com/upfiles/BZZ27765.mp3" loop="1"></bgsound>
+</body>
+
+</html>

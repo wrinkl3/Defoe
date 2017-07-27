@@ -1,0 +1,751 @@
+?
+?<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <script src="assets/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript"> 
+	$(function(){
+		$("#teklif").click(function(){
+		$.ajax({ 
+            type: "POST",
+            url: "teklif.php",
+            data: $('#offterForm').serialize(), 
+            error:function(){ alert("Bir hata alg?land?."); },
+            success: function(veri) { alert(veri); document.forms["form2"].reset(); }   
+        	});
+		});
+	});
+	</script>
+<head>
+    <meta charset="utf-8">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="baglan/google/vehbiakdogan.js"></script>
+	<title>Hemensite.ORG -
+    Anasayfa    </title>
+		<meta name="description" content="Haz?rweb Web Tasar?m dünyas?">
+		<meta name="keywords" content=" Hazirweb, webtasar?m , mobil uygulama, webtasarim, hazirweb v2, grafik, script, script indir, kurumsal,  tasarim, istanbulda web tasarim, alm">
+        <meta name="author" content="Webtasar?m.com">
+
+        <!-- Haz?r Web Styles -->
+        <link  rel="stylesheet" href="../css/main.css" type="text/css" media="all"/>
+        <link rel="stylesheet" type="text/css" href="../css/reset.css" media="all">
+        <link rel="stylesheet" type="text/css" href="../css/global-icon.css" media="all">
+		<link href="../Tema/v1/css/mesaj_kutulari/css.css" rel="stylesheet" type="text/css" />
+		<link rel="Shortcut Icon"  href="web.ico"  type="image/x-icon">
+		        
+        <!--[if lt IE 7]>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script><![endif]-->
+
+        <!--[if lt IE 8]>
+            <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script><![endif]-->
+    
+        <!--[if lt IE 9]>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script><![endif]-->
+        
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+		
+    </head>
+<body>
+<div class="ark"></div>
+<!-- Top Menu -->
+    <div class="global-wp">
+<div class="panel-arka"></div>
+<div class="menu3"></div>   
+
+        <nav class="panel none">
+          <ul>
+          				<li><a href="sayfa-panelim" class="setting" title="Panelime Gir">Panelim</a></li>
+                <li><a href="sayfa-giris" class="login" title="Sitemize Giri? Yap?n">Giri? Yap</a></li>
+                <li><a href="sayfa-kayit" class="register" title="Sitemize Üye Olun">Üye Ol</a></li>
+			          </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="head">
+    <div id="head-in">
+        
+        <!-- Logo -->
+        <a href="index.php" class="logo left"  title="Webtasar?m.com"></a>
+        <a href="index.php" class="slogan left" title="Webtasar?m.com"></a>
+        <!-- #Logo -->
+		        	<div class="ev"><a href="index.php"><img boyd=""<img border="0"
+onmouseout="this.src='images/ev1.png';" onmouseover="this.src='images/ev2.png';" alt="" src="images/ev1.png" /></a></div>
+
+		        	<div class="like1"><a href="https://www.facebook.com/" title="Facebook"><img boyd=""<img border="0"
+onmouseout="this.src='images/like1.png';" onmouseover="this.src='images/like2.png';" alt="" src="images/like1.png" /></a></div>
+
+		        	<div class="twit1"><a href="https://twitter.com/" title="Twitter"><img boyd=""<img border="0"
+onmouseout="this.src='images/twit1.png';" onmouseover="this.src='images/twit2.png';" alt="" src="images/twit1.png" /></a></div>
+
+		        	<div class="google1"><a href="https://plus.google.com/" title="Google Plus"><img boyd=""<img border="0"
+onmouseout="this.src='images/google1.png';" onmouseover="this.src='images/google2.png';" alt="" src="images/google1.png" /></a></div>
+        
+        <!-- Search -->
+        <div class="search left">
+		<form action="sayfa-arama" method="post" name="arama">
+        <input  name="kelime" type="text" class="class-1 search-in none" placeholder="Arama Yap?n.." value="">
+        <input type="submit" class="search-icon" value=".">
+		</form>
+        </div>
+        <!--#Search -->
+         
+        <!-- Telephone -->
+
+        <div class="fix"></div>
+        <!--#Telephone -->
+        
+        <!-- Main Menu -->
+        <nav class="main-menu">
+				<ul>
+                <li><a href="sayfa-webtasarim">WEBTASARIM</a></li>
+				<a class="ayrac"></a>
+                <li><a href="sayfa-hizmetler">H?ZMETLER</a></li>
+				<a class="ayrac"></a>
+				<li><a href="sayfa-mobil-uygulama">MOB?L UYGULAMA</a></li>
+				<a class="ayrac"></a>
+				<li><a href="sayfa-ucretli-scriptler">SCR?PTLER</a></li>
+				<a class="ayrac"></a>
+				<li><a href="sayfa-referans">REFERANSLAR</a></li>
+				<a class="ayrac"></a>
+			    <li><a href="sayfa-kurumsal">KURUMSAL</a></li>
+				<a class="ayrac"></a>
+            	<li><a href="sayfa-iletisim">?LET?S?M</a></li>
+          </ul>
+            <!-- Basket -->
+            <ul id="basket-menu">
+<li><a href="#" title="Sepetim">
+<section class="basket" title="Sepetim - Ürünlerim">
+<span class="norm-text"> </span>
+<span class="bold-text" id="urun-miktar">0 </span>
+</section>
+</a>
+<ul>
+
+<li>
+<a href="sayfa-sepet" title="Sepetim">
+<span id="toplam-tutar">Toplam : 0,00  TL</span>
+Sepete Git
+</a>
+</li>
+
+</ul> 
+
+</li>
+             			                </ul>
+                <!--#Basket -->     
+        </nav>
+        <!--#Main Menu -->
+        
+        <!-- Small Menu -->
+        <div id="menu-wrap">
+        <ul id="menu">
+				<li><a href="#" title="Ücretli Scriptler"></a>
+			</li>
+		  </li></ul>
+		</div>
+        <!-- Small Menu -->
+    </div>
+</header>
+<div class="fix"></div>
+<!--#Header -->
+
+<!-- Global -->
+<div class="global-wp">
+
+<!-- Main Left -->
+    <section class="main-left">       
+        <!-- Side Menu -->
+
+           
+        <div class="fix"></div>
+        <!--#Side Menu -->
+
+         
+    </section>
+    <!--#Main Left -->    
+
+    <!-- Main Right -->
+    <section class="main-right">
+
+        <!-- Main Slider -->
+        <div class="slider-wp">
+            
+            <div id="main-slider"> 
+	
+				 <img src="uploads/slider/eyapim3.jpg" data-caption="#" width="1100" height="500"></a>
+	
+				 <img src="uploads/slider/2.png" data-caption="#" width="1100" height="500"></a>
+	
+				 <img src="uploads/slider/index.php.txt" data-caption="#" width="1100" height="500"></a>
+                	 
+	            </div>
+
+				
+			<!--#Captions -->
+
+            </div>
+            <div class="fix"></div>
+            <!--#Main Slider -->
+    
+            <!-- Banner Bottom -->
+            <div class="boart"></div>
+            <!--#Banner Bottom -->
+    
+            <!-- Open Shop -->
+            <aside class="open-shop">
+
+            </aside>
+            <!--#Open Shop -->
+			<!--#Domain Sorgula -->
+			
+			<!--#Domain Sorgula Bitis-->
+			
+			
+            <div class="indirim">iNDiRiMLi SCRiPTLER</div>
+			<div class="indirim2"></div>
+			<div class="mobile">MOBiL UYGULAMA, MOBiL SAYFA</div>
+			<div class="mobile2"></div>
+			<div class="iphone"></div>
+			<div class="iphone-baslik">Websiteniz icin Mobil Sayfa ve Mobil Uygulama Yapiyoruz!</div>
+			<div class="iphone-aciklama">Kisisel veya firmaniz icin Mobil site ve mobil uygulama yapiyoruz, sizinde böyle bir uygulamaya ihtiyaciniz varsa dogru yerdesiniz. sizin ihtiyac ve arzulariniz bizim icin ön plandadir. 2011 Yilindan buyana alaninda uzman ekibimiz ile size hizmet vermekten Büyük gurur duyuyoruz. Müsteri memnuniyetini ön planda tutarak 14 yildir size hizmet vermektedir.</div>
+			<div class="tablet"></div>
+			<div class="hosting">HOSTiNG PAKETLERi</div>
+			<div class="hosting2"></div>
+			<div class="msayfa">Webtasar?m</div>
+			<div class="bayan"></div>
+			<div class="duyuru">En Güncel  Heberler ve Duyurular</div>
+			<div class="duyuru2">Firmaniz icin önemli haberler..</div>
+			
+			<!-- News From Us -->
+			
+			<!-- Referans-gecis -->
+			
+			<!-- Referans-gecis-son -->
+								
+        <!-- Ã–nemli UyarÄ± = En az 4 adet iÃ§erik olmalÄ±dÄ±r! -->
+        <section class="news-from-us">
+            <a href="sayfa-haberler" title="Haz?r Web Haberleri"><header class="news-from-us-head">Her Konuda Daha Hizli Bilgi ve Haberler Bu Alanda.!</header></a>
+            <div class="news-from-us-inner">
+            <div class="notice-elemantry-wrap">
+            	                <a href="haber-detay-Deneme-Haber-4" title="Deneme Haber 4" class="news-from-us-elemantry">
+                    <i class="from-arrow"></i>
+                    <p class="date">26-03-2016</p>
+                    <p>Deneme Haber 4</p>
+                </a>
+				                <a href="haber-detay-Deneme-Haber-3" title="Deneme Haber 3" class="news-from-us-elemantry">
+                    <i class="from-arrow"></i>
+                    <p class="date">26-03-2016</p>
+                    <p>Deneme Haber 3</p>
+                </a>
+				                <a href="haber-detay-Deneme-Haber-2" title="Deneme Haber 2" class="news-from-us-elemantry">
+                    <i class="from-arrow"></i>
+                    <p class="date">26-03-2016</p>
+                    <p>Deneme Haber 2</p>
+                </a>
+				                <a href="haber-detay-Deneme-Haber-1" title="Deneme Haber 1" class="news-from-us-elemantry">
+                    <i class="from-arrow"></i>
+                    <p class="date">26-03-2016</p>
+                    <p>Deneme Haber 1</p>
+                </a>
+				
+			            </div>
+            </div>
+        </section>
+        <!--#News From Us -->
+
+            <!-- Products -->
+            <div id="products-wp">
+                <ul class="products-three-col">
+                
+                	
+                    <li>
+                    <a href="script-detay-LTD-Sirketi-Scripti" class="all-bt" title="LTD Sirketi Scripti">
+                        <div class="product-a">
+                            <div class="caption-product">
+                                <div class="deneme"></div>
+                            </div>
+                            <img src="uploads/scriptler/8610_urun4.jpg" alt="LTD Sirketi Scripti" title="LTD Sirketi Scripti" width="247" height="382" />
+                                                        <span class="new-product"></span>							
+                            
+
+                        </div>
+                        <div class="products-buton">
+                            <div class="products-head">
+                                <h1>LTD Sirketi Scripti</h1>
+                            </div>
+    
+                            <div class="products-price">
+                                								<h2>600,00 TL</h2>
+                                <h3>520,00 <span class="text-price"> TL</span></h3>
+									
+                            </div>
+                        </div>
+                       </a>
+                    </li> 
+                    
+                   
+                	
+                    <li>
+                    <a href="script-detay-Kurumsal-Firma-2" class="all-bt" title="Kurumsal Firma 2">
+                        <div class="product-a">
+                            <div class="caption-product">
+                                <div class="deneme"></div>
+                            </div>
+                            <img src="uploads/scriptler/539_urun3.jpg" alt="Kurumsal Firma 2" title="Kurumsal Firma 2" width="247" height="382" />
+                            <span class="best-seller"></span>                            							
+                            
+
+                        </div>
+                        <div class="products-buton">
+                            <div class="products-head">
+                                <h1>Kurumsal Firma 2</h1>
+                            </div>
+    
+                            <div class="products-price">
+                                								<h2>420,00 TL</h2>
+                                <h3>310,00 <span class="text-price"> TL</span></h3>
+									
+                            </div>
+                        </div>
+                       </a>
+                    </li> 
+                    
+                   
+                	
+                    <li>
+                    <a href="script-detay-Sirket-Scripti" class="all-bt" title="Sirket Scripti">
+                        <div class="product-a">
+                            <div class="caption-product">
+                                <div class="deneme"></div>
+                            </div>
+                            <img src="uploads/scriptler/5143_urun2.jpg" alt="Sirket Scripti" title="Sirket Scripti" width="247" height="382" />
+                                                        <span class="new-product"></span>							
+                            
+
+                        </div>
+                        <div class="products-buton">
+                            <div class="products-head">
+                                <h1>Sirket Scripti</h1>
+                            </div>
+    
+                            <div class="products-price">
+                                								<h2>350,00 TL</h2>
+                                <h3>200,00 <span class="text-price"> TL</span></h3>
+									
+                            </div>
+                        </div>
+                       </a>
+                    </li> 
+                    
+                   
+                	
+                    <li>
+                    <a href="script-detay--meta-http-equiv-refresh-content-0-URL-http-www-tarih-gen-tr-" class="all-bt" title="<meta http-equiv="refresh" content="0;URL=http://www.tarih.gen.tr/">">
+                        <div class="product-a">
+                            <div class="caption-product">
+                                <div class="deneme"></div>
+                            </div>
+                            <img src="uploads/scriptler/6700_urun1.jpg" alt="<meta http-equiv="refresh" content="0;URL=http://www.tarih.gen.tr/">" title="<meta http-equiv="refresh" content="0;URL=http://www.tarih.gen.tr/">" width="247" height="382" />
+                            <span class="best-seller"></span>                            							
+                            
+
+                        </div>
+                        <div class="products-buton">
+                            <div class="products-head">
+                                <h1><meta http-equiv="refresh" content="0;URL=http://www.tarih.gen.tr/"></h1>
+                            </div>
+    
+                            <div class="products-price">
+                                								<h2>500,00 TL</h2>
+                                <h3>350,00 <span class="text-price"> TL</span></h3>
+									
+                            </div>
+                        </div>
+                       </a>
+                    </li> 
+                    
+                    
+                </ul>
+				<div style="clear:bold;"></div>
+				<label><a style="font: 15px/30px pf_beausans_proregular;
+color: #A5A5A5;
+float: left; margin-right: 55px;" href="sayfa-ucretli-scriptler">Devam? ?çin T?klay?n?z.</a></label>				
+            </div>    
+            <!--#Products -->
+        </section>
+        <!-- Main Right -->
+			<link rel="stylesheet" href="css/hosting.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<section id="pricePlans">
+		<ul id="plans">
+			<li class="plan">
+				<ul class="planContainer">
+					<li class="title"><h2>Basit</h2></li>
+					<li class="price"><p>10€/<span>aylik</span></p></li>
+					<li>
+						<ul class="options">
+							<li>1Gb <span>Disk Alani</span></li>
+							<li>10Gb <span>Aylik Trafik</span></li>
+							<li>2 <span>E-Posta Hesabi</span></li>
+							<li>Limitsiz <span>Sub Domain</span></li>
+							<li>7/24 <span>Teknik Destek</span></li>
+						</ul>
+					</li>
+					<li class="button"><a href="sayfa-iletisim">Siparis Ver</a></li>
+				</ul>
+			</li>
+
+			<li class="plan">
+				<ul class="planContainer">
+					<li class="title"><h2 class="bestPlanTitle">Standart</h2></li>
+					<li class="price"><p class="bestPlanPrice">20€/aylik</p></li>
+					<li>
+						<ul class="options">
+							<li>3Gb <span>Disk Alani</span></li>
+							<li>20Gb <span>Aylik Trafik</span></li>
+							<li>5 <span>E-Posta Hesabi</span></li>
+							<li>Limitsiz <span>Sub Domain</span></li>
+							<li>7/24 <span>Teknik Destek</span></li>
+						</ul>
+					</li>
+					<li class="button"><a class="bestPlanButton" href="sayfa-iletisim">Siparis Ver</a></li>
+				</ul>
+			</li>
+
+			<li class="plan">
+				<ul class="planContainer">
+					<li class="title"><h2>Gold</h2></li>
+					<li class="price"><p>30€/<span>aylik</span></p></li>
+					<li>
+						<ul class="options">
+							<li>10Gb <span>Disk Alani</span></li>
+							<li>40Gb <span>Aylik Trafik</span></li>
+							<li>10 <span>E-Posta Hesabi</span></li>
+							<li>Limitsiz <span>Sub Domain</span></li>
+							<li>7/24 <span>Teknik Destek</span></li>
+						</ul>
+					</li>
+					<li class="button"><a href="sayfa-iletisim">Siparis Ver</a></li>
+				</ul>
+			</li>
+
+			<li class="plan">
+				<ul class="planContainer">
+					<li class="title"><h2>Premium</h2></li>
+					<li class="price"><p>40€/<span>aylik</span></p></li>
+					<li>
+						<ul class="options">
+							<li>25Gb <span>Disk alani</span></li>
+							<li>100Gb <span>Aylik Trafik</span></li>
+							<li>25 <span>E-Posta Hesabi</span></li>
+							<li>Limitsiz <span>Sub Domain</span></li>
+							<li>7/24 <span>Teknik Destek</span></li>
+						</ul>
+					</li>
+					<li class="button"><a href="sayfa-iletisim">Siparis Ver</a></li>
+				</ul>
+			</li>
+	</section>
+</body>
+</html>
+</div>  
+    </div>
+    <div class="fix"></div>
+    <!--#Global -->
+    <!-- Footer -->
+    <footer class="footer-bg">
+        <div class="global-wp">
+            <div class="footer-head">
+      <p>Copyright 2011 - 2015 Hemensite.Org Tüm Haklari Saklidir.</p>
+      
+      <script type="text/javascript">
+      	$(function(){
+      		$("#bulten").submit(function(){
+      			$.ajax({
+      				type:"post",
+      				url:"bulten.php",
+      				data:$(this).serialize(),
+      				success:function(c){
+						alert(c);
+					}
+					
+      			});
+      			return false;
+      		});
+      		
+      	});
+      </script>
+	  
+	      <!--Referanslar -->
+		  
+          <!-- Referanslar Bitis -->
+	  
+	  					<div class="foter-logo"><a href="index.php"><img boyd=""<img border="0"
+onmouseout="this.src='images/foter-logo.png';" onmouseover="this.src='images/foter-logo.png';" alt="" src="images/foter-logo.png" /></a></div>
+	  
+<form name="bulten" action="#" id="bulten" method="post" class="e-bulten">
+
+<div class="e-bulten-box">
+<input name="eposta" type="text" id="mail" class="class-1" placeholder="E-Bülten icin E-Posta Adresiniz" value="">
+<input type="submit" style="margin-left:3px;height:44px;cursor:pointer;" class="subscribe" title="Kay?t Ol" name="ebulten">
+</div>
+</form>
+               
+            </div>
+                <div class="fix"></div>
+            <section class="speed-other">
+                <div class="speed-other-head">
+                    <p class="s1">Webtasar?m</p>
+                    <p class="s2">Mü?teri Hizmetleri</p>
+                    <p class="s3">Sosyal A?larda bizi takip edin</p>
+                    <p class="s4">Ödeme Seçenekleri</p>
+                </div>
+    
+                <nav id="sm1" class="speed-menu-foot">
+                    <ul>
+				<li><a href="sayfa-kurumsal" title="Biz Kimiz?">Biz Kimiz?</a>
+			</li>
+				<li><a href="sayfa-kurumsal" title="Webtasar?m">Neden Webtasar?m</a>
+			</li>
+				<li><a href="sayfa-ik" title="Kariyer F?rsat?">Kariyer F?rsat?</a>
+			</li>
+				<li><a href="sitemap.xml" target="_blank" title="Site Haritas?">Site Haritas?</a>
+			</li>
+				<li><a href="sayfa-bayi-basvuru" title="Bayi Ba?vuru Formu">Bayi Ba?vuru Formu</a>
+			</li>
+				<li><a href="sayfa-odeme-bildirimi" title="Ödeme Bildirim Formu">Ödeme Bildirim Formu</a>
+			</li></ul>
+                </nav>
+    
+                <nav id="sm2" class="speed-menu-foot">
+                    <ul>
+				<li><a href="sayfa-odeme-secenekleri" title="Banka Hesap Bilgileri">Banka Hesap Bilgileri</a>
+			</li>
+				<li><a href="sayfa-garanti-iade" title="Garanti / ?ade">Garanti / ?ade</a>
+			</li>
+				<li><a href="sayfa-sss" title="Yard?m (S.S.S)">Yard?m (S.S.S)</a>
+			</li>
+				<li><a href="sayfa-iletisim" title="?leti?im / Ula??m">?leti?im / Ula??m</a>
+			</li>
+				<li><a href="sayfa-kayit" title="Üye Ol">Üye Ol</a>
+			</li>
+				<li><a href="sayfa-giris" title="Üye Giri?i">Üye Giri?i</a>
+			</li></ul>
+                </nav>
+                <div id="sm3-fix">
+                    <nav id="sm3" class="speed-menu-foot">
+                        <ul class="social-left">
+                            <li>
+                                <a href="https://www.facebook.com/" title="Facebook">
+                                    <i class="round facebook-icon"></i>
+                                    Facebookta takip edin
+                                </a>
+                            </li> 
+    
+                            <li>
+                                <a href="https://twitter.com/" title="Twitter">
+                                    <i class="round twitter-icon"></i>
+                                    Twitterda takip edin
+                                </a>
+                            </li> 
+    
+                            <li>
+                                <a href="https://plus.google.com/" title="Google Plus">
+                                    <i class="round google-plus-icon"></i>
+                                    Google+da takip edin
+                                </a>
+                            </li>  
+    
+                            <li>
+                                <a href="" title="Instagram">
+                                    <i class="round instagram-icon"></i>
+                                    Instagramda takip edin
+                                </a>
+                            </li>  
+                        </ul>
+    
+                        <ul class="social-right">
+                            <li>
+                                <a href="#" title="Blog">
+                                    <i class="round blog-icon"></i>
+                                    Webtasar?m Blog
+                                </a>
+                            </li>
+    
+                             <li>
+                                <a href="http://tr.pinterest.com/" title="Pinterest">
+                                    <i class="round pinterest-icon"></i>
+                                    Pinterestte takip edin
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="https://www.youtube.com/" title="Youtube">
+                                    <i class="round youtube-icon"></i>
+                                    Youtubeda takip edin
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#" title="Rss">
+                                    <i class="round rss-icon"></i>
+                                    Rssde takip edin
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="fix"></div>
+                    <div class="line"></div>
+    
+                </div>
+    
+                <div id="sm4">
+                    <nav class="speed-menu-foot">
+                        <ul class="bank">
+                            <li>
+                                <a href="sayfa-odeme-secenekleri" title="Visa"><i class="global-icon visa-card-icon"></i></a>
+                            </li>
+                            <li>
+                                <a href="sayfa-odeme-secenekleri" title="Master"><i class="global-icon master-card-icon"></i></a>
+                            </li>
+                            <li>
+                                <a href="sayfa-odeme-secenekleri" title="Paypal"><i class="global-icon paypal-icon"></i></a>
+                            </li>
+                            <li>
+                               <a href="sayfa-odeme-secenekleri" title="IPara"><i class="global-icon ipara-icon"></i></a>
+                            </li>
+                            <li>
+                                <a href="sayfa-odeme-secenekleri" title="World Kart"><i class="global-icon world-card-icon"></i></a>
+                            </li>
+                            <li>
+                                <a href="sayfa-odeme-secenekleri" title="Maximum Kart"><i class="global-icon maximum-card-icon"></i></a>
+                            </li>
+                            <li>
+                                <a href="sayfa-odeme-secenekleri" title="Bonus Kart"><i class="global-icon bonus-card-icon"></i></a>
+                            </li>
+                            <li>
+                                <a href="sayfa-odeme-secenekleri" title="Access Kart"><i class="global-icon axess-card-icon"></i></a>
+                            </li>
+                            <li>
+                                <a href="sayfa-odeme-secenekleri" title="Finans Kart"><i class="global-icon card-finans-icon"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+    
+                    
+
+                    <a href="sayfa-site-guvenligi" title="Site Güvenli?i" class=" secured tip" data-tip="Webtasar?m Ki?i?el Bilgilerinizin Güvenli?i <br><br>
+Webtasar?m Scriptlerinden yüksek avantajlar ve hiçbir yerde bulamayaca??n?z kampanyalarla ürün alman?z?n yan?nda bunlar? yaparken güvende olman?z bizi yak?ndan ilgilendiriyor.VipBrands.com ve VipBrands.com.tr de bilgi kayb?n?, bilginin izin verilmeyen kullan?m?n? ve izinsiz de?i?tirilmesini engellemek için firmam?zca uygulanan yüksek güvenlik önlemleri bulunmaktad?r.<br><br>
+Webtasar?m'de al??veri? yaparken Kredi kart? bilgileriniz yaln?zca sipari? i?lemi gerçekle?tirilirken kullan?lacak ve kesinlikle veritaban?nda kay?tl? olarak tutulmayacakt?r.
+Bilgilerinizin gerçekten webtasarimlar.biz e gönderildi?ini güvence alt?na alarak, 2048 bit ?ifreleme ile iletilen bilgilerin güvenli?ini sa?layan SSL güvenlik sertifikas? kullan?lmaktad?r.">
+                        <i class="global-icon secured-icon left margin-r10"></i>
+                        <span>Sitemiz Neden Güvenli? Güvenli Al??veri? Hakk?nda</span>
+                    </a>
+                    </div>
+            </section>
+        </div>
+    </footer>
+    <!--#Footer -->
+    <script type="text/javascript" src="Tema/v1/scripts/plugin.js"></script>
+    <script type="text/javascript" src="Tema/v1/scripts/custom.js"></script>
+    </body>
+</html>
+
+<!--- Teklif Formu-->
+<div class="pageForm">
+<a href="#" class="offerButton">
+    <i class="iconClip"></i> Teklif ?ste
+</a>
+<div class="offterForm">
+    <form action="#" method="POST" id="offterForm" name="form2" onsubmit="return false">
+        <ul>
+            <li>
+                <input type="text" name="t1" id="t1" placeholder="Ad Soyad">
+            </li>
+            <li>
+                <input type="text" name="t2" id="t2" placeholder="Firma / Ünvan">
+            </li>
+            <li>
+                <input type="text" name="t3" id="t3" placeholder="Sektör">
+            </li>
+            <li>
+                <input type="text" name="t4" id="t4" placeholder="E-Posta Adresiniz">
+            </li>
+            <li>
+                <input type="text" name="t5" id="t5" placeholder="Telefon Numaran?z">
+            </li>
+            <li>
+                <select name="t6" id="t6">
+                    <option value="0">Almak ?stedi?iniz Hizmet</option>
+                                        <option value="Webtasarim">Webtasarim</option>
+                                        <option value="Grafik Cizim">Grafik Cizim</option>
+                                        <option value="Mobil Uygulama">Mobil Uygulama</option>
+                                        <option value="E-Ticaret">E-Ticaret</option>
+                                        <option value="Seo Hizmeti">Seo Hizmeti</option>
+                                        <option value="Reklam & Pazarlama">Reklam & Pazarlama</option>
+                                    </select>
+            </li>
+            <li>
+                <textarea name="t7" id="t7" cols="0" rows="0"></textarea>
+            </li>
+            <li>
+                <button type="submit" id="teklif">Gönder</button>
+            </li>
+            <li>
+                <button class="resetButton" style="display:none" type="reset" value="reset">Reset</button>
+            </li>
+        </ul>
+    </form>
+</div>
+</div>
+<script src="assets/js/main.js"></script>
+
+<script src="assets/js/greensock.js"></script>
+<script src="assets/js/layerslider.transitions.js"></script>
+<script src="assets/js/layerslider.kreaturamedia.jquery.js"></script>
+<script>
+$("#layerslider").layerSlider({
+    responsive: true,
+    responsiveUnder: 960,
+    layersContainer: 960,
+    hoverPrevNext: false,
+});
+</script>
+
+<script src="assets/js/jquery.bxslider.min.js" ></script>
+<script>
+$(function(){
+    $('.teamSlider').bxSlider({
+        responsive: true,
+        auto: true,
+        controls:true,
+        pager:false,
+        slideWidth: 180,
+    minSlides: 2,
+    maxSlides: 4,
+    moveSlides: 2,
+    slideMargin: 60
+    });
+});
+</script>
+
+<script src="assets/js/jquery.mixitup.min.js"></script>
+	<script src="assets/js/jquery.lazyload.min.js"></script>
+
+    
+
+    
+</body>
+
+</html>
+
+		
+

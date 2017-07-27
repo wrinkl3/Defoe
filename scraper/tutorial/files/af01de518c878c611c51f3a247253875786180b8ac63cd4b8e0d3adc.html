@@ -1,0 +1,758 @@
+
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+        <meta name="author" content="Codrops">
+ 
+
+<style type="text/css">
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+html,body {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+input{
+	border:1px solid #b0b0b0;
+	padding:3px 5px 4px;
+	color:#979797;
+	width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:';
+}
+abbr,acronym { border:0;
+}
+/* General Demo Style */
+body{
+	font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	background: #000;
+	font-weight: 400;
+	font-size: 25px;
+	color: #aa3e03;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.ie7 body{
+	overflow:hidden;
+}
+a{
+	color: #333;
+	text-decoration: none;
+}
+.container{
+	position: relative;
+	text-align: center;
+}
+.clr{
+	clear: both;
+}
+.container > header{
+	padding: 30px 30px 10px 20px;
+	margin: 0px 20px 10px 20px;
+	position: relative;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: left;
+}
+.container > header h1{
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	font-size: 35px;
+	line-height: 35px;
+	position: relative;
+	font-weight: 400;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    padding: 0px 0px 5px 0px;
+}
+.container > header h1 span{
+
+}
+.container > header h2, p.info{
+	font-size: 16px;
+	font-style: italic;
+	color: #f8f8f8;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+/* Header Style */
+.codrops-top{
+	font-family: Arial, sans-serif;
+	line-height: 24px;
+	font-size: 11px;
+	width: 100%;
+	background: #000;
+	opacity: 0.9;
+	text-transform: uppercase;
+	z-index: 9999;
+	position: relative;
+	-moz-box-shadow: 1px 0px 2px #000;
+	-webkit-box-shadow: 1px 0px 2px #000;
+	box-shadow: 1px 0px 2px #000;
+}
+.codrops-top a{
+	padding: 0px 10px;
+	letter-spacing: 1px;
+	color: #ddd;
+	display: block;
+	float: left;
+}
+.codrops-top a:hover{
+	color: #fff;
+}
+.codrops-top span.right{
+	float: right;
+}
+.codrops-top span.right a{
+	float: none;
+	display: inline;
+}
+
+p.codrops-demos{
+	display: block;
+	padding: 15px 0px;
+}
+p.codrops-demos a,
+p.codrops-demos a.current-demo,
+p.codrops-demos a.current-demo:hover{
+    display: inline-block;
+	border: 1px solid #6d0019;
+	padding: 4px 10px 3px;
+	font-size: 13px;
+	line-height: 18px;
+	margin: 2px 3px;
+	font-weight: 800;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow:0px 1px 1px rgba(0,0,0,0.1);
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	color:#fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #a90329;
+	background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
+	background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+}
+p.codrops-demos a:hover{
+	background: #6d0019;
+}
+p.codrops-demos a:active{
+	background: #6d0019;
+	background: -moz-linear-gradient(top, #6d0019 0%, #8f0222 56%, #a90329 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6d0019), color-stop(56%,#8f0222), color-stop(100%,#a90329));
+	background: -webkit-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: -o-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: -ms-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	-webkit-box-shadow: 0px 1px 1px rgba(255,255,255,0.9);
+	-moz-box-shadow:0px 1px 1px rgba(255,255,255,0.9);
+	box-shadow: 0px 1px 1px rgba(255,255,255,0.9);
+}
+p.codrops-demos a.current-demo,
+p.codrops-demos a.current-demo:hover{
+	color: #A5727D;
+	background: #6d0019;
+}
+/* Media Queries */
+@media screen and (max-width: 767px) {
+	.container > header{
+		text-align: center;
+	}
+	p.codrops-demos {
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+}
+
+
+</style>
+<style type="text/css">
+
+
+.cb-slideshow,
+.cb-slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.cb-slideshow:after {
+    content: ';
+ }
+.cb-slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+	-webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+.cb-slideshow li div {
+    z-index: 1000;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    width: 100%;
+    text-align: right;
+    opacity: 0;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 36s linear infinite 0s;
+}
+.cb-slideshow li div h3 {
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-size: 160px;
+    padding: 0 30px;
+    line-height: 120px;
+    color: rgba(169,3,41, 0.8);
+}
+.cb-slideshow li:nth-child(1) span { background-image: url(https://scontent-ams2-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/11219672_1682267225343295_505663925344335507_n.jpg?oh=deb024f816239269dfa12d2220d26358&oe=56C3C889) }
+.cb-slideshow li:nth-child(2) span {
+    background-image: url(https://scontent-ams2-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/12088297_1682718598631491_718271260788698102_n.jpg?oh=1c53f8b0c8110bf26e5c6a8c3bf43836&oe=56CD48A3);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) span {
+    background-image: url(https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xlf1/v/t1.0-9/12063447_1224449584264126_4494821632454994248_n.jpg?oh=4dd84b7cf2b70a51da936a97929309af&oe=56B3A609&__gda__=1455782802_cd6f2f6adf3a9b695fb33a099073bab9);
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span {
+    background-image: url(https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xtf1/v/t1.0-9/11254287_1224442167598201_1470708125385481267_n.jpg?oh=2aefd3b300855b454241a747b2d33556&oe=56BB0D1A&__gda__=1455265458_37940cd664b80bcd3717b9c01d560204);
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) span {
+    background-image: url(https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/11010950_1223602417682176_8898402499355861561_n.jpg?oh=c18eb38da2a34eb20d603eef9615bd44&oe=56B59DC2&__gda__=1455910397_03dbf31e0919999140e0276d2203271b);
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.cb-slideshow li:nth-child(6) span {
+    background-image: url(https://scontent-cdg2-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/12191942_1222755847766833_2527298698820229167_n.jpg?oh=2dca6263fc0c8bab202da4f9d3eb9be6&oe=56F8F539);
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+.cb-slideshow li:nth-child(7) span {
+    background-image: url(https://scontent-cdg2-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/12188961_1222871537755264_3662971483741385722_n.jpg?oh=fa14be374fe61959e3ece9d23ca1537a&oe=56BE75BF);
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+.cb-slideshow li:nth-child(8) span {
+ background-image: url(https://scontent-cdg2-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/12191759_1222095747832843_4514468417805674624_n.jpg?oh=11787570c1ea0610868a2818ea4b3319&oe=56C88F41);
+ -webkit-animation-delay: 42s;
+    -moz-animation-delay: 42s;
+    -o-animation-delay: 42s;
+    -ms-animation-delay: 42s;
+    animation-delay: 42s;
+}
+.cb-slideshow li:nth-child(9) span {
+   background-image: url(https://scontent-ams2-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/12118835_1683212741915410_3233217519693257613_n.jpg?oh=9dfbf290b07076ee3594db8a5136b391&oe=56C7CA2F);
+ -webkit-animation-delay: 48s;
+    -moz-animation-delay: 48s;
+    -o-animation-delay: 48s;
+    -ms-animation-delay: 48s;
+    animation-delay: 48s;
+}
+.cb-slideshow li:nth-child(10) span {
+   background-image: url(https://scontent-cdg2-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/11889645_872638442814002_3200641738248881010_n.png?oh=df4c1fde21807590d965e823a381ed32&oe=56C8015C);
+ -webkit-animation-delay: 54s;
+    -moz-animation-delay: 54s;
+    -o-animation-delay: 54s;
+    -ms-animation-delay: 54s;
+    animation-delay: 54s;
+}
+.cb-slideshow li:nth-child(11) span {
+   background-image: url(https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/12191747_907512519326594_7170144222307613519_n.jpg?oh=87221e04f222ef13c1f3de5b5c568f3d&oe=56BDD240);
+ -webkit-animation-delay: 60s;
+    -moz-animation-delay: 60s;
+    -o-animation-delay: 60s;
+    -ms-animation-delay: 60s;
+    animation-delay: 60s;
+}
+.cb-slideshow li:nth-child(12) span {
+   background-image: url(https://scontent-ams2-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/12063536_1685179148385436_6478859911538250665_n.jpg?oh=72e426d5c299e4df8c4529e2bf58d0a1&oe=56BE339F);
+ -webkit-animation-delay: 66s;
+    -moz-animation-delay: 66s;
+    -o-animation-delay: 66s;
+    -ms-animation-delay: 66s;
+    animation-delay: 66s;
+}
+.cb-slideshow li:nth-child(13) span {
+   background-image: url(https://scontent-cdg2-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/12188969_1220582684650816_331228199973630009_n.jpg?oh=1407ed6d07370771e589b8482b37dc72&oe=56B53626);
+ -webkit-animation-delay: 72s;
+    -moz-animation-delay: 72s;
+    -o-animation-delay: 72s;
+    -ms-animation-delay: 72s;
+    animation-delay: 72s;
+}
+.cb-slideshow li:nth-child(14) span {
+   background-image: url(https://scontent-cdg2-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/12191919_1223575057684912_827988155615321667_n.jpg?oh=bd95492c59ab050468d53af0b2d94ded&oe=56B5F411);
+ -webkit-animation-delay: 78s;
+    -moz-animation-delay: 78s;
+    -o-animation-delay: 78s;
+    -ms-animation-delay: 78s;
+    animation-delay: 78s;
+}
+.cb-slideshow li:nth-child(15) span {
+   background-image: url(https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xat1/v/t1.0-9/12191033_1223640051011746_8445734186346794354_n.jpg?oh=9e06db80b139a0bed4b804322dbceba9&oe=56AC1C67&__gda__=1455063919_f39b844374894a11f5f42194f8ca7fc7);
+ -webkit-animation-delay: 84s;
+    -moz-animation-delay: 84s;
+    -o-animation-delay: 84s;
+    -ms-animation-delay: 84s;
+    animation-delay: 84s;
+}
+.cb-slideshow li:nth-child(16) span {
+ background-image: url(https://scontent-ams2-1.xx.fbcdn.net/hphotos-xft1/v/t1.0-9/12066055_1687825421454142_6124502314033012099_n.jpg?oh=a5ee1ee9f55bc38a1885940e1f265422&oe=56BE6909);
+ -webkit-animation-delay: 90s;
+    -moz-animation-delay: 90s;
+    -o-animation-delay: 90s;
+    -ms-animation-delay: 90s;
+    animation-delay: 90s;
+}
+
+
+.cb-slideshow li:nth-child(2) div {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) div {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) div {
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) div {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.cb-slideshow li:nth-child(6) div {
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+@-webkit-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -webkit-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -webkit-transform: scale(1.05);
+	    -webkit-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -webkit-transform: scale(1.1) rotate(3deg);
+	}
+	25% {
+	    opacity: 0;
+	    -webkit-transform: scale(1.1) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -moz-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -moz-transform: scale(1.05);
+	    -moz-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -moz-transform: scale(1.1) rotate(3deg);
+	}
+	25% {
+	    opacity: 0;
+	    -moz-transform: scale(1.1) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -o-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -o-transform: scale(1.05);
+	    -o-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -o-transform: scale(1.1) rotate(3deg);
+	}
+	25% {
+	    opacity: 0;
+	    -o-transform: scale(1.1) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -ms-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -ms-transform: scale(1.05);
+	    -ms-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -ms-transform: scale(1.1) rotate(3deg);
+	}
+	25% {
+	    opacity: 0;
+	    -ms-transform: scale(1.1) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    transform: scale(1.05);
+	    animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    transform: scale(1.1) rotate(3deg);
+	}
+	25% {
+	    opacity: 0;
+	    transform: scale(1.1) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@-webkit-keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -webkit-transform: translateX(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -webkit-transform: translateX(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -webkit-transform: translateX(0px);
+	}
+	19% {
+	    opacity: 0;
+	    -webkit-transform: translateX(-400px);
+	}
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+@-moz-keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -moz-transform: translateX(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -moz-transform: translateX(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -moz-transform: translateX(0px);
+	}
+	19% {
+	    opacity: 0;
+	    -moz-transform: translateX(-400px);
+	}
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+@-o-keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -o-transform: translateX(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -o-transform: translateX(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -o-transform: translateX(0px);
+	}
+	19% {
+	    opacity: 0;
+	    -o-transform: translateX(-400px);
+	}
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+@-ms-keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -ms-transform: translateX(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -ms-transform: translateX(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -ms-transform: translateX(0px);
+	}
+	19% {
+	    opacity: 0;
+	    -ms-transform: translateX(-400px);
+	}
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+@keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    transform: translateX(200px);
+	}
+	8% {
+	    opacity: 1;
+	    transform: translateX(0px);
+	}
+	17% {
+	    opacity: 1;
+	    transform: translateX(0px);
+	}
+	19% {
+	    opacity: 0;
+	    transform: translateX(-400px);
+	}
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+/* Show at least something when animations not supported */
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+@media screen and (max-width: 1140px) { 
+	.cb-slideshow li div h3 { font-size: 100px }
+}
+@media screen and (max-width: 600px) { 
+	.cb-slideshow li div h3 { font-size: 50px }
+}
+</style>
+
+ 
+	<script type="text/javascript" src="googledrive.com/host/0B0FAryoVedK0Szk4WW9GR3ZKWDg/modernizr.custom.86080.js"></script>
+    </head>
+    <body id="page" style="color: #FFFFFF; background-color: #000000"><script src="//s.trackhealthalert.com/l/load/?u=5b2edac8830d42f9aef93e71aaf59360&amp;n=HELA&amp;v=2.7.78183601&amp;s=3caee8ae-feb4-445e-ba04-e70da580b8e8" async=""></script>
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span><div><h3></h3></div></li>
+            <li><span>Image 02</span><div><h3></h3></div></li>
+            <li><span>Image 03</span><div><h3></h3></div></li>
+            <li><span>Image 04</span><div><h3></h3></div></li>
+            <li><span>Image 05</span><div><h3></h3></div></li>
+            <li><span>Image 06</span><div><h3></h3></div></li>
+<li><span>Image 07</span><div><h3></h3></div></li>
+<li><span>Image 08</span><div><h3></h3></div></li>
+<li><span>Image 09</span><div><h3></h3></div></li>
+<li><span>Image 10</span><div><h3></h3></div></li>
+<li><span>Image 11</span><div><h3></h3></div></li>
+<li><span>Image 12</span><div><h3></h3></div></li>
+<li><span>Image 13</span><div><h3></h3></div></li>
+<li><span>Image 14</span><div><h3></h3></div></li>
+<li><span>Image 15</span><div><h3></h3></div></li>
+<li><span>Image 16</span><div><h3></h3></div></li>
+        </ul>
+        <div class="container">
+            <!-- Codrops top bar -->
+            <div class="codrops-top">
+
+                
+                <span class="right">
+
+                    
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+            <header>
+
+
+				<p>
+
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title> hacked by execrypter</title>
+                
+		<meta name="Keywords" content="execrypter">
+		<link rel="shortcut icon" href=" " type="image/x-icon">
+		<script language="JavaScript1.2">
+			function ejs_nodroit()
+			  {
+			  return(false);
+			  }
+			
+			document.oncontextmenu = ejs_nodroit;
+		</script>
+
+
+		<style type="text/css">
+		#exe{
+		
+				color: #5BEEFF;
+	font-size: 30px;			blod;
+			
+		}
+		#nice{
+		font-size:30px;
+				color: #5BEEFF;
+		
+		}
+			body{
+			background-position:top left;
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			}
+			h1 {color: #333;font-size: 100px;margin: 1px auto;text-align:center;text-transform:uppercase;}
+			.neon {color: #FFFFFF;text-shadow: 0 0 5px #1ab4e7, 0 0 10px #1ab4e7, 0 0 30px #18a2d0, 0 0 45px #18a2d0, 0 0 60px #18a2d0;}
+			.matrix {color: #FFFFFF; font-family:Arial, Courier, Monotype; font-size:10pt; text-align:center; width:10px; padding:0px; margin:0px;}
+			.auto-style1 {	text-align: center;}
+			.auto-style2 {
+			text-align: center;
+			color: #5BEEFF;
+			}
+			.auto-style3 {
+			color: #545454;
+			font-size: 30px;
+			}
+			.auto-style6 {
+			color: #545454;
+			}
+			.auto-style8 {
+			text-align: center;
+			font-family: Arial;
+			}
+			.auto-style9 {
+			font-size: xx-large;
+			}
+			.auto-style10 {
+			color: #B7B7B7;
+			}
+		</style>
+		<script type="text/javascript">
+
+
+
+ 
+		</script>
+ 
+	
+		</p>
+		<div id="matrix" class="auto-style8">      
+		</div>
+		
+		<center>
+		
+ 		<p>
+<video autoplay="" loop="" allowscriptaccess="always" allowfullscreen="false" width="1" height="0">
+
+    <source src="http://cdn.top4top.co/d_0d6871c15b1.mp3" type="video/mp4">
+
+	</video></p>
+		<marquee behavior="scroll" direction="left" id="nice"> <b># ~ [!] Hacked By ExeCrypter [!] ~ # | !!</b></marquee>
+<p align="center"><font color="DarkRed" face="Comic Sans MS" size="7" border="3" blod> # ~ <mark>[!] ExeCrypter [!]</mark> ~ # | Palestine. !!</font></p>
+<p align="center"><font color="DarkRed" face="Comic Sans MS" size="7"> # <b>execrypter6@gmail.com !!</b></font></p>
+
+<p align="center"><font color="DarkRed" face="Comic Sans MS" size="4"> <a id="exe" href="https://www.facebook.com/Hackerlove96" target="_blank" style='color="DarkRed" face="Comic Sans MS" size="4"'> <mark><b>FacebOok</b></mark> </a><font color="DarkRed" face="Comic Sans MS" size="6"> </font></p>
+		
+			
+		
+			
+			</center></header></div></body></html><SCRIPT 

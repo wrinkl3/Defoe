@@ -1,0 +1,851 @@
+<html>
+<head>
+<title>Hacked by Moroccan Attacker</title>
+<link href='http://fonts.googleapis.com/css?family=Faster+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Chela+One' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body {
+	background-color: #000000;
+  background-image: url(http://dc14.arabsh.com/i/03290/bcmmn0k4axvw.gif);background-repeat: repeat;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+a:link {
+	color: #FF0000;	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+  color: #FF0000;}
+a:hover {
+  text-decoration: none;
+  color: #FF0000;
+}
+a:active {
+    text-decoration: none;
+    color: #00FF00;
+}
+.style1 {
+  background-image: url(http://i50.tinypic.com/154x5s1.gif);
+  color: #FF0000;
+  font-family: 'Chela One', Courier;
+  color: #E67E300;
+  font-weight: bold;
+  font-size: 36px;
+}
+.style2 {
+  font-family: 'Aldrich', Courier;
+  color: #00FF00;
+  font-weight: bold;
+  font-size: 28px;
+  background-image: url(http://i50.tinypic.com/154x5s1.gif);
+}
+.style3 {
+  font-family: 'Aldrich', Courier;
+  color: #00FF00;
+  font-size: 36px;
+  text-align: center;
+  background-image: url(http://i50.tinypic.com/154x5s1.gif);
+}
+.style4 {
+  font-family: 'Faster One', Courier;
+  color: #FF2C00;
+  font-size: 36px;
+  text-align: center;
+  background-image: url(http://i50.tinypic.com/154x5s1.gif);
+  }
+</style>
+<script>
+
+// JavaScript Document<script type='text/javascript'>
+
+
+
+            // <![CDATA[
+
+
+
+            var colour="red";
+
+
+
+            var sparkles=65;
+
+
+
+     
+
+
+
+            var x=ox=400;
+
+
+
+            var y=oy=300;
+
+
+
+            var swide=800;
+
+
+
+            var shigh=600;
+
+
+
+            var sleft=sdown=0;
+
+
+
+            var tiny=new Array();
+
+
+
+            var star=new Array();
+
+
+
+            var starv=new Array();
+
+
+
+            var starx=new Array();
+
+
+
+            var stary=new Array();
+
+
+
+            var tinyx=new Array();
+
+
+
+            var tinyy=new Array();
+
+
+
+            var tinyv=new Array();
+
+
+
+            window.onload=function() { if (document.getElementById) {
+
+
+
+              var i, rats, rlef, rdow;
+
+
+
+              for (var i=0; i<sparkles; i++) {
+
+
+
+                var rats=createDiv(3, 3);
+
+
+
+                rats.style.visibility="hidden";
+
+
+
+                document.body.appendChild(tiny[i]=rats);
+
+
+
+                starv[i]=0;
+
+
+
+                tinyv[i]=0;
+
+
+
+                var rats=createDiv(5, 5);
+
+
+
+                rats.style.backgroundColor="transparent";
+
+
+
+                rats.style.visibility="hidden";
+
+
+
+                var rlef=createDiv(1, 5);
+
+
+
+                var rdow=createDiv(5, 1);
+
+
+
+                rats.appendChild(rlef);
+
+
+
+                rats.appendChild(rdow);
+
+
+
+                rlef.style.top="2px";
+
+
+
+                rlef.style.left="0px";
+
+
+
+                rdow.style.top="0px";
+
+
+
+                rdow.style.left="2px";
+
+
+
+                document.body.appendChild(star[i]=rats);
+
+
+
+              }
+
+
+
+              set_width();
+
+
+
+              sparkle();
+
+
+
+            }}
+
+
+
+            function sparkle() {
+
+
+
+              var c;
+
+
+
+              if (x!=ox || y!=oy) {
+
+
+
+                ox=x;
+
+
+
+                oy=y;
+
+
+
+                for (c=0; c<sparkles; c++) if (!starv[c]) {
+
+
+
+                  star[c].style.left=(starx[c]=x)+"px";
+
+
+
+                  star[c].style.top=(stary[c]=y)+"px";
+
+
+
+                  star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+
+
+
+                  star[c].style.visibility="visible";
+
+
+
+                  starv[c]=50;
+
+
+
+                  break;
+
+
+
+                }
+
+
+
+              }
+
+
+
+              for (c=0; c<sparkles; c++) {
+
+
+
+                if (starv[c]) update_star(c);
+
+
+
+                if (tinyv[c]) update_tiny(c);
+
+
+
+              }
+
+
+
+              setTimeout("sparkle()", 40);
+
+
+
+            }
+
+
+
+            function update_star(i) {
+
+
+
+              if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+
+
+
+              if (starv[i]) {
+
+
+
+                stary[i]+=1+Math.random()*3;
+
+
+
+                if (stary[i]<shigh+sdown) {
+
+
+
+                  star[i].style.top=stary[i]+"px";
+
+
+
+                  starx[i]+=(i%5-2)/5;
+
+
+
+                  star[i].style.left=starx[i]+"px";
+
+
+
+                }
+
+
+
+                else {
+
+
+
+                  star[i].style.visibility="hidden";
+
+
+
+                  starv[i]=0;
+
+
+
+                  return;
+
+
+
+                }
+
+
+
+              }
+
+
+
+              else {
+
+
+
+                tinyv[i]=50;
+
+
+
+                tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+
+
+
+                tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+
+
+
+                tiny[i].style.width="2px";
+
+
+
+                tiny[i].style.height="2px";
+
+
+
+                star[i].style.visibility="hidden";
+
+
+
+                tiny[i].style.visibility="visible"
+
+
+
+              }
+
+
+
+            }
+
+
+
+            function update_tiny(i) {
+
+
+
+              if (--tinyv[i]==25) {
+
+
+
+                tiny[i].style.width="1px";
+
+
+
+                tiny[i].style.height="1px";
+
+
+
+              }
+
+
+
+              if (tinyv[i]) {
+
+
+
+                tinyy[i]+=1+Math.random()*3;
+
+
+
+                if (tinyy[i]<shigh+sdown) {
+
+
+
+                  tiny[i].style.top=tinyy[i]+"px";
+
+
+
+                  tinyx[i]+=(i%5-2)/5;
+
+
+
+                  tiny[i].style.left=tinyx[i]+"px";
+
+
+
+                }
+
+
+
+                else {
+
+
+
+                  tiny[i].style.visibility="hidden";
+
+
+
+                  tinyv[i]=0;
+
+
+
+                  return;
+
+
+
+                }
+
+
+
+              }
+
+
+
+              else tiny[i].style.visibility="hidden";
+
+
+
+            }
+
+
+
+            document.onmousemove=mouse;
+
+
+
+            function mouse(e) {
+
+
+
+              set_scroll();
+
+
+
+              y=(e)?e.pageY:event.y+sdown;
+
+
+
+              x=(e)?e.pageX:event.x+sleft;
+
+
+
+            }
+
+
+
+            function set_scroll() {
+
+
+
+              if (typeof(self.pageYOffset)=="number") {
+
+
+
+                sdown=self.pageYOffset;
+
+
+
+                sleft=self.pageXOffset;
+
+
+
+              }
+
+
+
+              else if (document.body.scrollTop || document.body.scrollLeft) {
+
+
+
+                sdown=document.body.scrollTop;
+
+
+
+                sleft=document.body.scrollLeft;
+
+
+
+              }
+
+
+
+              else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+
+
+
+                sleft=document.documentElement.scrollLeft;
+
+
+
+             sdown=document.documentElement.scrollTop;
+
+
+
+              }
+
+
+
+              else {
+
+
+
+                sdown=0;
+
+
+
+                sleft=0;
+
+
+
+              }
+
+
+
+            }
+
+
+
+            window.onresize=set_width;
+
+
+
+            function set_width() {
+
+
+
+              if (typeof(self.innerWidth)=="number") {
+
+
+
+                swide=self.innerWidth;
+
+
+
+                shigh=self.innerHeight;
+
+
+
+              }
+
+
+
+              else if (document.documentElement && document.documentElement.clientWidth) {
+
+
+
+                swide=document.documentElement.clientWidth;
+
+
+
+                shigh=document.documentElement.clientHeight;
+
+
+
+              }
+
+
+
+              else if (document.body.clientWidth) {
+
+
+
+                swide=document.body.clientWidth;
+
+
+
+                shigh=document.body.clientHeight;
+
+
+
+              }
+
+
+
+            }
+
+
+
+            function createDiv(height, width) {
+
+
+
+              var div=document.createElement("div");
+
+
+
+              div.style.position="absolute";
+
+
+
+              div.style.height=height+"px";
+
+
+
+              div.style.width=width+"px";
+
+
+
+              div.style.overflow="hidden";
+
+
+
+              div.style.backgroundColor=colour;
+
+
+
+              return (div);
+
+
+
+            }
+
+
+
+            // ]]>
+</script>
+<script type="text/javascript">
+
+
+
+//<![CDATA[
+
+
+
+
+
+
+
+
+var message = new Array() // leave this as is
+message[0] = "Hacked by Moroccan Attacker";
+var reps = 1
+var speed = 105
+var p=message.length;
+var T="";
+var C=0;
+
+
+
+var mC=0;
+
+
+
+var s=0;
+
+
+
+var sT=null;
+
+
+
+if(reps<1)reps=1;
+
+
+
+function doTheThing(){
+
+
+
+T=message[mC];
+
+
+
+A();}
+
+
+
+function A(){
+
+
+
+s++
+
+
+
+if(s>9){s=1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if(C<(11*reps)){
+
+
+
+sT=setTimeout("A()",speed);
+
+
+
+C++
+
+
+
+}else{
+
+
+
+C=0;
+
+
+
+s=0;
+
+
+
+mC++
+
+
+
+if(mC>p-1)mC=0;
+
+
+
+sT=null;
+
+
+
+doTheThing();}}
+
+
+
+doTheThing();
+
+
+
+//]]>
+</script>
+<meta content="Hacked by Moroccan Attacker" name="">
+<link rel="shortcut icon" href="http://im38.gulfup.com/d3M8o.jpeg">
+</head>
+<body>
+<div align="center"><img src="http://im37.gulfup.com/neqUF.jpg"  /></div>
+<div align="center">
+  <img src="http://www.animated-pictures.net/pictures/Globes/earth.gif"  />
+</div>
+<div align="center" class="style1">Moroccan Attacker</div>
+<p align="center" class="style4"> .....:Hacked By Moroccan Attacker:..... </p>
+<p align="center" class="style2">....:Hello Admin Where Is Ur Security:....</p>
+<p align="center" class="style2">....:Don't play with me because I can play better than you:...</p> 
+<p align="center" class="style2">....:Your system is not secure:.... </p>
+<p align="center" class="style2">....:Secure it:.... </p>
+<p align="center" class="style2">&nbsp;</p>
+<div align="center">
+
+</div>
+<p align="center" class="style2">We are Moroccan Warrior</p>
+<p align="center" class="style2">The Power Of Truth And Unity </p>
+<p align="center" class="style2"></p>
+<br>
+<br>
+  <div class="style3">
+  <marquee direction="left" scrollamount="8" scrolldelay="100" width="50%">Greatz:N!GHTMARE - Casper Moroccan - Mr.Sinou - Team Root All Muslim Hacker
+  </marquee>
+</div>
+
+<p align="center" class="style2">&nbsp;</p>
+<div align="center">
+<img src="http://www.123myip.co.uk/ip-address/?size=468x60" border="0" width="500" height="60" alt="IP" /></div>
+<div align="center">
+<img src="http://i39.tinypic.com/2zq5ut5.gif">
+<span style="color:#ff9900"> 
+<span> Contact Us : hhttps://www.facebook.com/mr.evo.14 </span>.
+<img src="http://i39.tinypic.com/2zq5ut5.gif"></div>
+</body>
+<center><iframe width="1" height="1" src="http://www.youtube.com/embed/pFS4zYWxzNA?rel=0&autoplay=1&loop=1&playlist=yNjJCbWc6YA" frameborder="0" allowfullscreen></iframe></center>
+</font>
+</html>

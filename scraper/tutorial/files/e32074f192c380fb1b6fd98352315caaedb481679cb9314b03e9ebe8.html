@@ -1,0 +1,490 @@
+<br />
+<b>Notice</b>:  Undefined index: itemsEnCesta in <b>/home2/c0nt3mp0/public_html/ngcsi.cl/sitio.php</b> on line <b>12</b><br />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>    ! Hacked By  0x0d4rkc0d3 ! - Contempora Servicios Inmobiliarios</title>
+
+<!--:::::::::::::META::::::::::::-->
+
+<link href="imagenes/nuevo/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+
+<meta name="description" content="Contempora" />
+	
+<meta name="keywords" content="" /> 
+
+<meta property="og:type" content="website" /> 
+
+<meta property="og:title" content="Contempora" /> 
+
+<meta property="og:image" content="" /> 
+
+<meta property="og:description" content="Contempora" /> 
+
+<meta property="og:url" content="http://www.contempora.cl" />
+
+<!--:::::::::::::META::::::::::::-->
+
+<!-- Fancybox-->
+
+
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+
+<!-- Add jQuery library -->
+
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
+<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+
+   
+	$('.fancybox3').fancybox({
+        	'autoDimensions'	: false,
+			'width'         		: 412,
+			'height'        		: 620,
+			'transitionIn'		: 'none',
+			'transitionOut'		: 'none',
+			'type' : 'iframe'
+        
+    }); 
+			/*
+			 *  Different effects
+			 */
+
+
+
+		});
+	</script>
+    
+    <script type="text/javascript">
+$(document).ready(function() {
+	
+		
+	$("a[rel=grupo0],a[rel=grupo1]").fancybox({
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'titlePosition' 	: 'over',
+		'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+					return '<span id="fancybox-title-over">Imagen ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+		}
+	});;
+	 
+	
+});
+</script>
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+		overflow:hidden;
+		background-color: #fff;
+			box-shadow: 0 0 50px #222;
+		}
+	</style>
+        
+<!--Fin Fancybox-->
+        
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+        
+<!--:::::::::::::BOTONERA:::::::::::-->
+
+<link rel="stylesheet" type="text/css" href="css/nav.css" />       
+
+<!--SCROLL-->
+    <style type="text/css" media="screen">
+      .scrollbar{width:250px;height:170px; }
+      @-moz-document url-prefix() {.scrollbar { width:250px;height:170px;}}
+      .scrollbar.noborder{border:none;z-index:1;}
+    </style>
+    <link href="css/scrollbar.css" type="text/css" rel="stylesheet" />
+<!--END SCROLL-->
+
+<!--AJAX POP CONSULTA-->
+
+<script>
+var numero_1;
+function envia(){ 
+
+if(numero_1==4){
+
+}else{
+	
+	numero_1 = 4;
+	$.ajax({
+	            type: "POST",
+	            url: "ok.php",
+	       		success: function(a) {
+
+	       			$('#consulta_agregar').html(a);
+
+	          	}
+			});
+}
+}
+</script>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+
+		
+		$('#consulta_onit').click(function(){
+
+			$.ajax({
+	            type: "POST",
+	            url: "carro2.php?cod=61",
+	       		success: function(a) {
+
+	       			$('#carro_llamada').html(a);
+
+	          	}
+			});
+		});
+		
+
+
+
+	});
+	</script>
+    
+    <script type="text/javascript">
+
+	$(document).ready(function() {
+
+
+		
+		$('#consulta_onitx').click(function(){
+
+			$.ajax({
+	            type: "POST",
+	            url: "carro2.php?cod=61",
+	       		success: function(a) {
+
+	       			$('#carro_llamada').html(a);
+
+	          	}
+			});
+		});
+		
+
+
+
+	});
+	</script>
+    
+    <script type="text/javascript">
+
+	$(document).ready(function() {
+
+
+		
+		$('#consulta_onitx2').click(function(){
+
+			$.ajax({
+	            type: "POST",
+	            url: "carro2.php?cod=61",
+	       		success: function(a) {
+
+	       			$('#carro_llamada').html(a);
+
+	          	}
+			});
+		});
+		
+
+
+
+	});
+	</script>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+
+		
+
+			$.ajax({
+	            type: "POST",
+	            				url: "carro2.php?codi=61",
+					       		success: function(a) {
+
+	       			$('#carro_llamada').html(a);
+
+	          	}
+			});
+		
+		
+
+
+	});
+</script>
+
+<!--AJAX POP CONSULTA-->
+
+
+<script src='/google_analytics_auto.js'></script></head>
+<body>
+
+    <div id="contenedor">
+    	<div id="header">
+        	<div id="logo"><a href="index.php"></a></div>
+            <div class="idioma">
+            	<div class="es"><a href="#es"></a></div>
+                <div class="es"><a href="ingles/index.php"></a></div>
+            </div>
+            <div id="botones">
+            	<div class="nav">
+                						<ul class="nav">
+                    	<li class="blanc"></li>
+                		<li><a class="tipo_btn" href="index.php"><span>Home</span></a></li>
+                        <li style="color:#FF0053">|</li>
+                        <li><a class="tipo_btn" href="#">Nuestra Empresa</a>
+                        	
+                           <ul style="left:47px;">
+                           		<li class="vineta"></li>
+                                <li><a class="tipo2" href="quienes-somos.php?cod=perfil-corporativo" alt="Imagenes" >Perfil Corporativo</a></li>
+                                <li class="puntos"></li>
+                                <li><a class="tipo2" href="equipo.php" alt="Imagenes" >Equipo</a></li>
+                                <li class="puntos"></li>
+                                <li><a class="tipo2" href="http://www.contempora.com.pe" target="_blank" alt="Oficina Perú" >Oficina Perú</a></li>
+                           </ul>
+                        </li>
+                        <li style="color:#FF0053">|</li>
+                        <li><a class="tipo_btn" href="#">Servicios</a>
+                        	<ul style="left:140px;">
+								<li class="vineta"></li>
+                                 <li><a class="tipo2" href="servicios.php?cod=intermediacion" alt="intermediacion" >Intermediación Inmobiliaria</a></li>
+                                 <li class="puntos"></li>
+                                 <li><a class="tipo2" href="servicios.php?cod=consultoria" alt="consultoria" >Consultoría</a></li>
+                                 <li class="puntos"></li>
+                                 <li><a class="tipo2" href="servicios.php?cod=representacion" alt="representacion" >Representación corporativa</a></li>
+                                 <li class="puntos"></li>
+                                 <li><a class="tipo2" href="servicios.php?cod=inversiones" alt="inversiones" >Inversiones Inmobiliarias</a></li>
+                                 <li class="puntos"></li>
+                                 <li><a class="tipo2" href="servicios.php?cod=desarrollo" alt="desarrollo" >Desarrollo y Administración de proyectos</a></li>
+                                 <li class="puntos"></li>
+                                 <li><a class="tipo2" href="servicios.php?cod=financiamiento" alt="financiamiento" >Financiamiento</a></li>
+                                 <li class="puntos"></li>
+                                 <li><a class="tipo2" href="servicios.php?cod=licitaciones" alt="licitaciones" >Licitaciones</a></li>
+                                
+                             </ul>
+                        </li>
+                        <li style="color:#FF0053">|</li>
+                        <li><a class="tipo_btn" href="clientes.php">Clientes</a></li>
+                        <li style="color:#FF0053">|</li>
+                        <li><a class="tipo_btn" href="contactos.php">Contacto</a></li>
+                        <li style="color:#FF0053">|</li>
+                        <li><a class="tipo_btn" href="#">Alianza</a>
+                        	
+                           <ul style="left:360px;">
+                           		<li class="vineta"></li>
+                                <li><a class="tipo2" href="http://www.ngbacre.com.ar" target="_blank">Argentina</a></li>
+                                <li class="puntos"></li>
+                                <li><a class="tipo2" href="http://www.newmarkgrubb.com.br/" target="_blank">Brasil</a></li>
+                                <li class="puntos"></li>
+                                <li><a class="tipo2" href="http://www.fonnegragerlein.com/" target="_blank">Colombia</a></li>
+                                <li class="puntos"></li>
+                                <li><a class="tipo2" href="http://www.contempora.com.pe/" target="_blank">Perú</a></li>
+                                <li class="puntos"></li>
+                                <li><a class="tipo2" href="http://www.ngkf.com/" target="_blank">NGKF</a></li>
+                           </ul>
+                        </li>
+                    </ul>                </div>
+            	
+            </div>
+            <div id="postheader"></div>
+
+
+        </div> <!--Header-->
+        <div id="head_blanco"></div>
+        <div id="sitio_cuerpo2">
+        	<div id="sitio_cont">
+            	<div class="sitio_img_titulo">
+                	<div class="flecha_map"></div>
+            		<div class="sitio_s">
+					Oficinas                    </div>
+                    <div class="flecha_map"></div>
+                    <div class="sitio_s">
+                    Arriendo                    </div>
+                    <div class="flecha_map"></div>
+                    <div class="sitio_s">
+                        ! Hacked By  0x0d4rkc0d3 !					
+                    </div>
+                </div>
+                <div class="clear"></div>
+                
+                <div class="sitio_img">
+                
+                	                    <div class="sitio_img1">
+                    
+                    
+                    
+                    <a rel="grupo1" href="upload/propiedad/99732IMG_5088.JPG"> <img src="upload/propiedad/99732IMG_5088.JPG" width="640" /></a></div>
+                    
+                                        
+                                        
+                    <div class="sitio_img2"><a rel="grupo1" href="upload/propiedad/78771IMG_5089.JPG"> <img src="upload/propiedad/78771IMG_5089.JPG" width="140" /></a></div>
+                    
+                                        
+                                        
+                    <div class="sitio_img3"><a rel="grupo1" href="upload/propiedad/90132IMG_5085.JPG"><img src="upload/propiedad/90132IMG_5085.JPG" width="145" /></a></div>
+                    
+                                        <div class="sitio_caja_agregar">
+                    	<div id="consulta_agregar">
+                        	
+                            
+							                            	<div id="agregar_texto"><a id="consulta_onitx" onclick="envia()">Agregar a consulta</a></div>
+                                <div id="agregar_mas"><a id="consulta_onitx2" onclick="envia()"></a></div>
+                                                        
+                            
+                        </div>	
+                        
+                        
+                        <div id="consulta_agregar2">
+                        	<div id="agregar_texto2"><a class="lbp_secondary boton1 cboxElement, fancybox3 fancybox.iframe" href="compartir.php?titulo=    ! Hacked By  0x0d4rkc0d3 !&texto=<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ! Hacked By&nbsp; 0x0d4rkc0d3 !<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; ! Security Killed !<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; ! We Are Security Bypasser !<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; ! 0x0d1rkc0d3@gmail.com !</strong>&cod=61">Compartir por Mail</div>
+                            <div id="agregar_mail"></div></a>
+                        </div>	
+                        
+                                                <div id="consulta_agregar3">
+                        	
+                        	<div id="agregar_texto2"><a href="upload/propiedad/pdf/97586FICHA ARRIENDO.pdf" target="_blank">Descargar PDF</div>
+                            <div id="agregar_pdf"></div></a>
+                            
+                        </div>
+                                                
+                    </div>
+                </div>
+                <div id="barra_titulo">
+                	<div class="barra_titulo_texto">    ! Hacked By  0x0d4rkc0d3 !</div>
+                </div>
+                <div class="clear"></div>
+                <div class="flecha_map2"></div>
+                <div class="sitio_caracteristicas">Información</div>
+                <div class="clear"></div>
+                
+                                
+                <div class="sitio_operacion"><span style="font-weight:bold">Código:</span> <br />
+                <span style="color:#d0113b;">
+					                    
+                    NGC0061                    </span>
+                    
+                </div>
+                
+                <div class="sitio_operacion"><span style="font-weight:bold">Tipo de operación:</span> <br />
+                <span style="color:#d0113b;">
+					Arriendo                    </span>
+                    
+                </div>
+                
+                <div class="clear"></div>
+                                    
+                <div class="sitio_comuna"><span style="font-weight:bold">Comuna:</span> <br />
+                <span style="color:#d0113b;">
+				    ! Hacked By  0x0d4rkc0d3 !                </span>
+                </div>
+                                    
+                <div class="sitio_ciudad"><span style="font-weight:bold">Ciudad:</span> <br />
+				<span style="color:#d0113b;">    ! Hacked By  0x0d4rkc0d3 !</span>
+                </div>
+                <div class="clear"></div>
+                <div class="sitio_superficie"><span style="font-weight:bold">Superficie:</span> <br />
+					<span style="color:#d0113b;">
+					    ! Hacked By  0x0d4rkc0d3 !                    </span>
+                </div>
+                
+                <div class="sitio_valor"><span style="font-weight:bold">Valor:</span> <br />
+                <span style="color:#d0113b;">
+				    ! Hacked By  0x0d4rkc0d3 !                </span>
+                </div>
+                
+                <div class="clear"></div>
+                <!--<div class="flecha_map2"></div>
+                <div class="sitio_caracteristicas">Descripción</div>-->
+                <br />
+                
+                                <div class="sitio_descripcion2"><span style="font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ! Hacked By&nbsp; 0x0d4rkc0d3 !<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; ! Security Killed !<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; ! We Are Security Bypasser !<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; ! 0x0d1rkc0d3@gmail.com !</span>                
+                
+                
+                      
+                    
+                </div>
+                <div class="clear"></div>
+            </div>
+             <div id="danos">
+            	<div class="danos1"><a>BUSQUEDA DE PROPIEDADES</a></div>
+                <div id="botonera_tipo">
+                	<ul>
+    <li class="sitio"><a href="categoria.php?cat=terrenos">Terrenos</a></li>
+    <li class="propiedades"><a href="categoria.php?cat=industrial">Industriales</a></li>
+    <li class="oficinas"><a href="categoria.php?cat=oficinas">Oficinas</a></li>
+    <li class="comerciales"><a href="categoria.php?cat=retail">Retail</a></li>
+   
+</ul>                </div>
+                <div class="danos1" style="margin-top:2px;"><a>DESTACADOS</a></div>
+                <div id="botonera_destacados">
+                	<ul>
+    <li class="sitio"><a href="propiedades_destacadas.php">Propiedades<br />Destacadas</a></li>
+    <li class="propiedades"><a href="estudios-de-mercado.php">Estudios de <br />Mercado</a></li>
+    <li class="oficinas"><a href="prensa.php">NGCSI <br />en la Prensa</a></li>
+    <li class="viviendasp"><a href="negocios-realizados.php">Negocios<br /> Realizados</a></li>
+   
+</ul>                </div>
+            </div>
+
+            <div id="carro_llamada" style="margin-left:10px;">
+        	</div>
+        </div> <!--cuerpo-->
+        <div class="clear"></div>
+        
+        <div id="footer">
+        	<div id="footer_text1"> 
+            	<div class="danos_footer"><a>CONTACTOS</a></div>
+                <div class="texto_footer">
+                (56-2) 2230 1000 <br />
+                <a href="mailto:contacto.csi@contempora.com">contacto.csi@contempora.com</a>
+                
+                </div>
+			</div>
+            <div id="footer_text2"> 
+            	<div class="danos_footer"><a>EMPRESAS ASOCIADAS</a></div>
+                <div class="texto_footer">
+                <a href="http://www.contempora.cl/" target="_blank">www.contempora.cl</a> <br />
+                <a href="http://www.ngkf.com" target="_blank">www.ngkf.com</a> <br />
+                <a href="http://www.contempora.com.pe" target="_blank">www.contempora.com.pe</a><br />
+                </div>
+			</div>
+            <div id="footer_text1xx"> 
+            	<div class="danos_footer"><a>DESTACADOS</a></div>
+                <div class="texto_footer">
+                <a href="propiedades_destacadas.php">PROPIEDADES DESTACADAS</a><br />
+                <a href="estudios-de-mercado.php">ESTUDIOS DE MERCADO</a><br />
+                <a href="prensa.php">NGCSI EN LA PRENSA</a>
+                <a href="negocios-realizados.php">NEGOCIOS REALIZADOS</a>
+                </div>
+            	
+			</div>
+            
+            <div id="footer_text4"> 
+            	NGCSI ©2015 - DERECHOS RESERVADOS 
+			</div>
+            <div class="clear"></div>
+            </div>
+    </div> <!--Contenedor-->
+  
+</body>
+</html>

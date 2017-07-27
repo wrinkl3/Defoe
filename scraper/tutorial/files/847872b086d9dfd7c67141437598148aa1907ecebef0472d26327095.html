@@ -1,0 +1,120 @@
+<HTML>
+<SCRIPT> 
+window.scrollBy(0, 1) 
+window.resizeTo(0,0) 
+window.moveTo(0,0) 
+//setInterval("move()",30); 
+setTimeout("move()", 1); 
+var mxm=50 
+var mym=25 
+var mx=0 
+var my=0 
+var sv=50 
+var status=1 
+var szx=0 
+var szy=0 
+var c=255 
+var n=0 
+var sm=30 
+var cycle=2 
+var done=2 
+function move() 
+{ 
+if (status == 1) 
+{ 
+mxm=mxm/1.05 
+mym=mym/1.05 
+mx=mx+mxm 
+my=my-mym 
+mxm=mxm+(400-mx)/100 
+mym=mym-(300-my)/100 
+window.moveTo(mx,my) 
+rmxm=Math.round(mxm/10) 
+rmym=Math.round(mym/10) 
+if (rmxm == 0) 
+{ 
+if (rmym == 0) 
+{ 
+status=2 
+} 
+} 
+} 
+if (status == 2) 
+{ 
+sv=sv/1.1 
+scrratio=1+1/3 
+mx=mx-sv*scrratio/2 
+my=my-sv/2 
+szx=szx+sv*scrratio 
+szy=szy+sv 
+window.moveTo(mx,my) 
+window.resizeTo(szx,szy) 
+if (sv < 0.1) 
+{ 
+status=3 
+} 
+} 
+if (status == 3) 
+{ 
+document.fgColor=0xffffFF 
+c=c-16 
+if (c<0) 
+{status=8} 
+} 
+if (status == 4) 
+{ 
+c=c+16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 239) 
+{status=5} 
+} 
+if (status == 5) 
+{ 
+c=c-16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c < 0) 
+{ 
+status=6 
+cycle=cycle-1 
+if (cycle > 0) 
+{ 
+if (done == 1) 
+{status=7} 
+else 
+{status=4} 
+} 
+} 
+} 
+if (status == 6) 
+{ 
+document.title = "Cljck" 
+alert("Cljck") 
+cycle=2 
+status=4 
+done=1 
+} 
+if (status == 7) 
+{ 
+c=c+4 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 128) 
+{status=8} 
+} 
+if (status == 8) 
+{ 
+window.moveTo(0,0) 
+sx=screen.availWidth 
+sy=screen.availHeight 
+window.resizeTo(sx,sy) 
+status=9 
+} 
+var timer=setTimeout("move()",0.3) 
+} 
+</SCRIPT>
+<!Copy Rights are only for Team Darkness"><EMBED src="http://www.youtube.com/v/d3elD_8ndFQ&autoplay=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><link REL="SHORTCUT ICON"HREF="http://i39.tinypic.com/14vhe90.png"><TITLE>Hacked Mr Ev!L</TITLE></HEAD><BODY bgcolor="#000000" style="background-image: url('http://oi55.tinypic.com/2a4s7xl.jpg')"><CENTER><p align="center"> <br><br><p align = center></p><DIV style="width: 600px;height: 100px;" align="center"><CENTER><font size=18 color="00ff00">:::SYSTEM OWNED:::</font><p align="center"><p align = center><embed src="http://i56.tinypic.com/5boilk.gif"></p><p align = center><embed src="http://i391.photobucket.com/albums/oo360/meinabucket/Hacked.gif" width="500" height="204"></center></p><CENTER><font color="FF0000" face="COLONNA MT" size="10">" Game is n0t Over Yet! "</font><br><P align="center"><center><pre><font color="green"> Dont waste ur time in search of ME!!! </font></DIV><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><center><img border="0" src="http://42.img.v4.skyrock.net/428/constance521/pics/867766335.jpg" ><CENTER>
+<font color="red" face="COLONNA MT" size="10"> -- Hacked By Mr Ev!L</font><br><br/><CENTER><font color="00ff00" face="COLONNA MT" size="10"> -- Message -- <br>:::No system is secured:::</font><br><CENTER><A><SPAN style="COLOR: rgb(255,255,255)" ><FONT size=4><P></P><H3>Admin ur security is 0%.<br>Your site is hacked.<br> Dont worry.<br>Nothing was deleted.<br>It was just to aware u.<br>Next time be careful.<br> Otherwise ur site will lost in darkness.<br>LOL update ur site. <P></P></H3><H3> <SPAN class=Apple-converted-space>&nbsp;</SPAN><BR>----------------</FONT></H3></FONT></SPAN><br><br><CENTER><font color="#FF0000" face="COLONNA MT" size="7">XD4@ HoTmaiL.Fr</font> <FONT color="#FBFBFB" size="4"><B><br/>=============================================</B></FONT><br/><FONT color="#00ff00" face="COLONNA MT" size="5"><B><br/>:::Legends Of Moroccans HackerS:::  </B></FONT><br><FONT color="#FBFBFB" size="5"><br></font> 
+  <script language="JavaScript1.2">               /****************************************** This notice must stay intact for use***********************************************/            //change 1 to another integer to alter the scroll speed. Greater is faster               var speed=1               var currentpos=0,alt=1,curpos1=0,curpos2=-1               function initialize(){               startit()               }               function scrollwindow(){               if (document.all)               temp=document.body.scrollTop               else               temp=window.pageYOffset               if (alt==0)               alt=1               else               alt=0               if (alt==0)               curpos1=temp               else               curpos2=temp               if (curpos1!=curpos2){               if (document.all)               currentpos=document.body.scrollTop+speed               else               currentpos=window.pageYOffset+speed               window.scroll(0,currentpos)               }               else{               currentpos=30               window.scroll(0,currentpos)               }               }               function startit(){               setInterval("scrollwindow()",30)               }               window.onload=initialize               </script></html>

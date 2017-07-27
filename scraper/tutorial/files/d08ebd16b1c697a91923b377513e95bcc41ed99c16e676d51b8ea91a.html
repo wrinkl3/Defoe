@@ -1,0 +1,140 @@
+?
+<HEAD>
+
+
+<script language="JavaScript">
+msg = new Array(); //strings written in screen
+msg[0] = "<h2><u><div align='center'><font color='ffffff'>..::Hacked by ProPagAndA  ::..</font></div></u></h2>";
+msg[1] = "<h2><u><div align='center'><font color='ffffff'> LEBANESE HACKER</font></div></u></h2>";
+msg[2] = "<div align='center'><font color='white'>.::We do not forgive ::.</font></div>";
+msg[3] = "<div align='center'> <br> Your website was been hacked by ProPagAndA <br>We do not forget , Expect us.. -ProPagAndA</div>";
+msg[4] = "<div align='center'>Your security is LOW</div>";
+msg[5] = "<div align='center'>--------------------------------------------------------------</div>";
+msg[6] = "<div align='center'>ProPagAndA<br></div>"
+
+ 
+text1 = ""; //the same as text2, only the last character is highlighted
+text2 = ""; //current string, which will be written
+count = 0; //char index in string text
+count2 = 0; //number of strings
+ 
+text = msg[0].split(""); //text - string written
+ 
+function writetext() { //show strings above on screen
+text1 = text2 + "<font color='00ff00'>" + text[count] + "</font>";
+text2 += text[count];
+document.all["nothing"].innerHTML = text1; //where to write
+ 
+if (count < text.length-1){
+count++;
+setTimeout('writetext()', 30);
+}
+else { //if this string is written, get the new string
+count = 0;
+ 
+if (count2 != 7) { //write 6 strings
+count2++;
+text2 += "<p>"; //a new line
+text = eval('msg['+count2+'].split("")'); //get the new string to text
+setTimeout('writetext()', 30);
+}
+}
+}
+</script>
+<link rel="Shortcut Icon" type="image/ico" href="http://dc724.4shared.com/img/TAQKf2uBce/s7/1451f5880a8/10009298_1396042557334369_1220.jpg" />
+<title>Hacked by ProPagAndA</title>
+
+</HEAD>
+ 
+
+<BODY text="#00ff00"  background="binary.gif"bgColor="#000000" onload="writetext() ">
+<center>
+<img src='http://dc622.4shared.com/img/hGQda_Vmce/s24/15511d2e5d0/koh?async&rand=0.9122738481620423' width="600" height="350">
+<center>
+<iframe src='http://www.4shared.com/web/embed/audio/file/EQtkpuKAba?type=MINI&widgetWidth=530&showArtwork=true&playlistHeight=0&widgetRid=275217133085' style='overflow:hidden;height:60px;width:530px;border: 0;margin:0;'></iframe>
+
+
+
+</object> 
+<table align="center">
+
+<div id="nothing" style="width:'800px'; height:'400px'; font-family:'courier new'; font-weight:'bold'"></div>
+</table>
+ 
+<script language="JavaScript"> 
+if (document.all){
+Cols = 9; //number of falldown binary string
+Cl = 50; //maximum length of binary string
+Cs = 100; //number of pixels between binary strings
+Ts = 10; //font-size of binary string
+Tc = '#008800'; //color of binary string
+Tc1 = '#00ff00'; //color of 1st bit in binary string
+MnS = 22; //minimum speed of binary string
+MxS = 25; //maximum spees of binary string
+I = Cs;
+ 
+Sp = new Array(); //array speed of binary strings
+S = new Array(); //the position of binary string
+Y = new Array(); //array of position of binary strings
+C = new Array(); //array save bits of string
+M = new Array(); //binary string
+B = new Array(); //temp for creating binary string
+RC = new Array(); //length of binary strings
+E = new Array(); //array of head-bit in written strings
+Tcc = new Array(0,1,2,3,4,5,6,7,8,9); //array of head-bit in binary strings
+ 
+document.write("<div id='Container' style='position:absolute; top:0; left+Cs+"'>");
+ 
+for (i=0; i < Cols; i++){ //area to show binary strings
+S[i] = I += Cs; //calculate the position of binary string
+document.write("<div id='A' style='position:absolute; top:0; font-family:Arial;" +
+"font-size:" + Ts + "px; left:" + S[i] + "; width:" + Ts + "px;" +
+"height:0px; color:" + Tc + "; visibility:hidden'></div>");
+}
+document.write("</div>");
+}
+ 
+for(j = 0; j < Cols; j++){
+RC[j] = 1 + Math.round(Math.random()*Cl); //random length of the binary strings
+for(i=0; i < RC[j]; i++){
+B[i] = ""; //sign of ending of string
+C[i] = Math.round(Math.random())+' '; //get bit in binary strings
+B[0] += C[i];
+}
+M[j] = B[0]; //binary string
+Y[j] = 0; //1st position of strings are 0
+Sp[j] = Math.round(MnS+Math.random()*MxS); //random speed of binary strings
+}
+ 
+function Cycle(){
+Container.style.top = window.document.body.scrollTop;
+for (i=0; i < Cols; i++){
+var r = Math.floor(Math.random()*Tcc.length); //get a position in table Tcc
+E[i] = '<font color='+Tc1+'>'+Tcc[r]+'</font>'; //get the head-bit
+Y[i]+=Sp[i]; //the position of current string
+if (Y[i] > window.document.body.clientHeight) { //if at the end of window, calculate again
+i2 = 1 + Math.round(Math.random()*Cols);
+RC[i2] = 1 + Math.round(Math.random()*Cl);
+for(i3 = 0; i3 < RC[i2]; i3++){ //get bit in binary strings
+B[i3] = "";
+C[i3] = Math.round(Math.random())+' ';
+B[0] += C[i3];
+}
+M[i] = B[0];
+Y[i] = -Ts*M[i].length/1.5; //hide 2/3 string at beginning
+Sp[i] = Math.round(MnS+Math.random()*MxS); //random speed of binary strings
+A[i].style.visibility = 'visible';
+}
+A[i].style.top=Y[i]; //the i-th in tag div A
+A[i].innerHTML=M[i] + ' ' + E[i]; //show the binary string in tag A
+}
+setTimeout('Cycle()',100)
+}
+ 
+Cycle();
+</script>
+</BODY>
+ 
+</BODY>
+</HTML> 
+

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+ 
+
+<title>ShowIt ShowIt V2.1.07 </title>
+<link rel="stylesheet" href="/testpage/galerie/showit/styles/chiquita.css" type="text/css">
+
+
+<!--[if gte IE 6]>
+<style type="text/css">
+html {overflow-x:hidden;}
+body {margin-right:28px;}
+</style>
+<![endif]-->
+
+</head>
+<body class="innen" style=" border:none;">
+	<table class="info" width="100%"  border="0" cellspacing="0" cellpadding="5">
+	  <tr>
+			<td align="center" valign="top">
+				<form name="Edit" method="post" action="../admin/admin.php" target="_blank">
+				<a target="BILDER" href="../showpic.php?kat=&amp;bild=&amp;sort="><img src="/testpage/galerie/showit/photos//thumbs/_t60.jpg" width="60" height="45" border="0" title='back' alt='back'></a><br>				
+				<input type="hidden" name="kat" value="">				
+				<input type="hidden" name="ACTION" value="delpic">				
+				<input type="hidden" name="RETURN" value="2">				
+				<input type="hidden" name="MODI" value="CHG">				
+				<input type="hidden" name="index0" value="">
+
+				<input type="image"  src= "../styles/buttons/steel/chg.gif" title='edit'  alt='edit' name="submit" value="submit" style=" border:none;">
+								
+				<a target="BILDER" href="../showpic.php?kat=&amp;bild=&amp;sort="><img src="../styles/buttons/steel/back.gif" alt='back' title='back' border=0 ></a>
+				</form>
+			</td>
+			<td valign="top" nowrap="nowrap">
+						<div align="right">	Bildname :<br>
+											Anzahl Klicks :<br>
+											Originalgr&ouml;&szlig;e :<br>
+											Upload-Datum :<br>
+											Dateigr&ouml;&szlig;e :</div>
+			</td>
+			<td valign="top" nowrap="nowrap">
+						 <div align="left"> <br>
+											0<br>
+											 x <br>
+											07 Nov 2007<br>
+											153 Bytes</div>
+			</td></tr>
+			<tr><td colspan="3"><hr></td></tr>
+	
+	  <tr valign="top">
+			<td colspan="3">
+				<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td><div class="info"><strong>Kommentare:</strong></div></td>
+						<td><div align="right"><a href="#schreiben" >[Kommentar schreiben]</a> </div></td>
+					</tr>
+				</table>   
+				
+
+				<a name="schreiben"></a>
+				<form name="Bildkommentar" method="post" action="picinfo.php" target="_self">
+					<div class='info'>Kommentar schreiben</div>Text: <a href="javascript:void(0);" onclick="window.open('../admin/helpdesk_deutsch.php?help=bbcode', 'helpwindow', 'toolbars=0, scrollbars=1, location=0, statusbars=0, menubars=0, resizable=1, width=450, height=300, left = 20, top = 20');">[BB-Code]</a><br>
+					<textarea name="TEXT" cols="35" rows="4"></textarea><br>
+					Name:<br>
+					<input name="NAME" type="text" maxlength="15">
+					<input type="hidden" name="BILD" value="/kunden/homepages/35/d67237671/htdocs/testpage/galerie/showit/photos//thumbs/_t60.jpg">
+					<input type="hidden" name="bild" value="">
+					<input type="hidden" name="kat" value="">
+					<input type="hidden" name="sort" value="">
+					<input type="submit" name="Submit" value="Kommentar abschicken">     	
+				</form>
+			</td>
+	  </tr>
+	</table>
+</body>
+</html>

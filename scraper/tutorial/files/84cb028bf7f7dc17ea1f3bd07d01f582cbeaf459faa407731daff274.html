@@ -1,0 +1,161 @@
+<html><head>
+<meta http-equiv=Content-Type content=text/html; charset=iso-8859-1>
+<title>&#1578;&#1605; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1605;&#1606; &#1602;&#1576;&#1604; &#1607;&#1603;&#1585;&#1608;&#1603; &#1575;&#1604;&#1605;&#1591;&#1610;&#1585;&#1610; </title>
+<meta name=description content=My Messenger : R63@HoTmAil.CoM>
+<meta name=keywords content=Hacked By >
+<script>
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == undefined) || (typeof element.innerHTML == undefined)) {
+    this.running = true;	// Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == undefined ? 50 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : );
+  this.currentText = ;
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == ) this.element.id = typingtext + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = ;
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = ;
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == undefined) {
+    setTimeout(document.getElementById(\' + this.element.id + \').typingText.run(), this.interval);	// We haven\'t finished loading yet.  Have patience.
+    return;
+  }
+  if(this.currentText == ) this.element.innerHTML = ;
+//  this.origText = this.origText.replace(/<([^<])*>/, );     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == < && !this.inTag) {
+      this.tagBuffer = <;
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == > && this.inTag) {
+      this.tagBuffer += >;
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == & && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = &;
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ; && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ;;
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == function ? this.cursor(this.currentText) : this.cursor) : );
+    this.currentChar++;
+    setTimeout(document.getElementById(\' + this.element.id + \').typingText.run(), this.interval);
+  } else {
+	this.currentText = ;
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script>
+<style>
+body {
+	padding:0;
+	margin:0;
+	background-repeat: repeat;
+	background-position:top;
+background-color: 000000;
+color: white;
+font: normal 80% Verdana;
+margin-top: 0px;
+margin-left: 0px;
+padding: 0;
+margin-right: 0px;
+}
+
+td{font-family: verdana; font-size: 9pt; color: #FF0000}
+a{font-family: verdana; font-size: 12pt; color: #FF0000}
+/* REMOVE HORIZONTAL SCROLLBAR*/ 					
+   	body {								
+	overflow-x: hidden;						
+	}									
+/* REMOVE VERTICAL SCROLLBAR*/					
+	body {								
+	overflow-y: hidden;							
+	}	
+</style>
+</head><body background=http://up4.m5zn.com/9bjndthcm6y53q1w0kvpz47xgs82rf/2010/1/4/06/g4dvafe40.gif style=background-attachment: fixed bgcolor=#000000 oncontextmenu=return false onselectstart=return false ondragstart=return false><center>
+<img src=http://www.mzaeen.net/upfiles/tap56725.jpg align=left width=375 height=556>
+<br>
+<div id=example1></div>
+<p id=example2>
+<br>
+<font size="5">HaCkeD By HaCkR0k</font></p>
+
+<p>
+<br>
+<font face=Lucida Sans size=4><b><font color=#FF0000>Owned By</font> 
+</b></font></p>
+<p>
+<b><font face="Lucida" size="4">&#1578;&#1605; &#1575;&#1604;&#1575;&#1582;&#1600;&#1578;&#1600;&#1585;&#1570;&#1570;&#1602; &lt;</font></b><font color=#ff2000 face=Lucida Sans size=2><br><br>
+</font><b><span lang="ar-sa"><font color=#FF0000 face=Lucida size=3>&#1607;&#1603;&#1585;&#1608;&#1603; 
+&#1575;&#1604;&#1605;&#1591;&#1610;&#1585;&#1610;</font></span></b><span lang="ar-sa"><b><font face="Lucida" size="3" color="#FF0000"> !!</font></b></span><b><font face=Lucida Sans color=#FF0000 size=3><br><br>
+&#1570;&#1604;&#1603;&#1604;&#1570;&#1605; &#1605;&#1593;&#1610; &#1604;&#1570;&#1610;&#1582;&#1590;&#1593; &#1604;&#1571;&#1610; &#1571;&#1606;&#1592;&#1605;&#1607;.. ...&#1571;&#1608; &#1602;&#1608;&#1570;&#1606;&#1610;&#1606;...&#1608;&#1604;&#1603;&#1606; &#1610;&#1582;&#1590;&#1593; &#1604;&#1604;&#1581;&#1570;&#1604;&#1607; (&#1570;&#1604;&#1605;&#1586;&#1570;&#1580;&#1610;&#1607;) &#1570;&#1604;&#1610; 
+&#1570;&#1603;&#1608;&#1606; &#1601;&#1610;&#1607;&#1570;</font></b></p>
+<p>
+<span lang="ar-sa"><b><font face="GE" size="3">&#1587;&#1610; &#1610;&#1608;</font></b></span><b><font color=#ff2000 face=Lucida Sans size=3><br>
+</font><font color=#808080 size=3><br>
+
+</font><font face="Lucida"><span lang="ar-sa"><font size=4>&#1607;&#1603;&#1585;&#1608;&#1603; &#1575;&#1604;&#1605;&#1591;&#1610;&#1585;&#1610;</font></span></font></b></p>
+<p>
+<b><font color=#808080 size=3 face=Lucida Sans> &nbsp;</font><a href="mailto:Gww@HoTmAiL.CoM"><font color="#FFFFFF">k</font><font color=#FFFFFF size=3>pr9</font><font color=#FF0000 face=Lucida size=5>@</font><font color=#FF0000 face=Lucida Sans size=3>HoTmAiL.Com</font></a></b></p>
+<center>
+<p>
+
+<p>
+<font size="5">BB:&nbsp; </font><u><font size="4" color="#FF0000">2970422b</font></u></p>
+<p>
+<b><font face=Lucida Sans size=3>GoodLuck again Admin !<br>&nbsp;</font></b></p>
+<p>
+<b><font face=Lucida Sans size=2>
+<font face=Lucida Sans size=3>
+<font face=Lucida Sans>|&nbsp; </font>:: FrOm 
+</font> 
+<font color=#FF0000 face=Lucida Sans size=3>Saudi Arabi<span lang=en-us>a
+
+</span></font><font face=Lucida Sans size=3>[</font><font color=#FF0000 face=Lucida Sans size=3>.</font><font face=Lucida Sans size=3><span lang=en-us>K<font color=#FF0000>s</font>A</span></font><font color=#FF0000 face=Lucida Sans size=3>.</font><font face=Lucida Sans size=3>]</font><font color=#000000 face=Lucida Sans size=3> 
+
+</font><font face=Lucida Sans size=3>::</font></font></b></p></body></html>

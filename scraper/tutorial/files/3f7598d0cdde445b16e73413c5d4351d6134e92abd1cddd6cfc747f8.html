@@ -1,0 +1,439 @@
+
+
+<body background="http://images1.fanpop.com/images/photos/1600000/The-Punisher-the-punisher-1641530-1280-1024.jpg" style="background-attachment: fixed; text-align:center"> 
+
+
+<html><head><title>-=[ owned by hmez ]=-</title> 
+<link href='http://www.moveed.com/data/thumbnails/17/algeriaC.gif' rel='shortcut icon'/> 
+</head> 
+<noscript></noscript><!-- --><script type="text/javascript" src="http://www.freewebs.com/p.js"></script><script> 
+/*
+An object-oriented Typing Text script, to allow for multiple instances.
+A script that causes any text inside any text element to be "typed out", one letter at a time. Note that any HTML tags will not be included in the typed output, to prevent them from causing problems. Tested in Firefox v1.5.0.1, Opera v8.52, Konqueror v3.5.1, and IE v6.
+Browsers that do not support this script will simply see the text fully displayed from the start, including any HTML tags.
+ 
+Functions defined:
+  TypingText(element, [interval = 100,] [cursor = "",] [finishedCallback = function(){return}]):
+    Create a new TypingText object around the given element.  Optionally
+    specify a delay between characters of interval milliseconds.
+    cursor allows users to specify some HTML to be appended to the end of
+    the string whilst typing.  Optionally, can also be a function which
+    accepts the current text as an argument.  This allows the user to
+    create a "dynamic cursor" which changes depending on the latest character
+    or the current length of the string.
+    finishedCallback allows advanced scripters to supply a function
+    to be executed on finishing.  The function must accept no arguments.
+ 
+  TypingText.run():
+    Run the effect.
+ 
+  static TypingText.runAll():
+    Run all TypingText-enabled objects on the page.
+*/
+ 
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;	// Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);	// We haven't finished loading yet.  Have patience.
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+	this.currentText = "";
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script> 
+ 
+<style> 
+body {
+	padding:0;
+	margin:0;
+	background-image:url();
+	background-repeat: repeat;
+	background-position:center;
+background-color: black;
+color: #00ff00;
+font: normal 80% Verdana;
+margin-top: 0px;
+margin-left: 0px;
+padding: 0;
+margin-right: 0px;
+}
+</style> 
+ 
+<body> 
+<!--FLOATING IMAGE--> 
+ 
+
+<img src="http://www.moveed.com/data/thumbnails/17/algeriaC.gif" alt="" style="border: 2px solid black; -
+ 
+< alt="" style="border: 2px solid black; -moz-border-radius-topleft: 8px; -moz-border-radius-topright: 8px; -moz-border-radius-bottomright: 8px; -moz-border-radius-bottomleft: 8px;"> 
+ 
+
+
+</a> 
+</div> 
+
+</body> 
+ 
+<head><noframes><body><!-- --><script type="text/javascript" src="http://staticthumbs.freewebs.com/i.js"></script><script type="text/javascript">if(typeof(urchinTracker)=='function'){_uacct="UA-230305-2";_udn="none";_uff=false;urchinTracker();}</script> <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script> <script type="text/javascript">_qacct="p-44naSaXtNJt26";quantserve();</script> </body></noframes><body bgcolor="#000000"><center> 
+<h1><center><font face="abadon" size="6<center><noscript></noscript><!-- --><script type="text/javascript" src="http://www.freewebs.com/p.js"></script><script> 
+farbbibliothek = new Array(); 
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00"); 
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00"); 
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"); 
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"); 
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF"); 
+farbbibliothek[6] = new Array("#0000FF","#FFFF00"); 
+farben = farbbibliothek[4];
+function farbschrift() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.all["a"+i].style.color=farben[i]; 
+} 
+farbverlauf(); 
+} 
+function string2array(text) 
+{ 
+Buchstabe = new Array(); 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+k=0; 
+while(k<=text.length) 
+{ 
+Buchstabe[k] = text.charAt(k); 
+k++; 
+} 
+} 
+function divserzeugen() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>"); 
+} 
+farbschrift(); 
+} 
+var a=1; 
+function farbverlauf() 
+{ 
+for(var i=0 ; i<farben.length; i++) 
+{ 
+farben[i-1]=farben[i]; 
+} 
+farben[farben.length-1]=farben[-1]; 
+ 
+setTimeout("farbschrift()",30); 
+} 
+// Zu Demonstrationszwecken***************** 
+var farbsatz=1; 
+function farbtauscher() 
+{ 
+farben = farbbibliothek[farbsatz]; 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+} 
+setInterval("farbtauscher()",5000); 
+text= "owned by hmez"; 
+//h 
+string2array(text);
+divserzeugen(); 
+//document.write(text); 
+      
+//
+function expand() {
+for(x = 0; x < 50; x++) {
+window.moveTo(screen.availWidth * -(x - 50) / 100, screen.availHeight * -(x - 50) / 100);
+window.resizeTo(screen.availWidth * x / 50, screen.availHeight * x / 50);
+}
+window.moveTo(0,0);
+window.resizeTo(screen.availWidth, screen.availHeight);
+}
+expand();
+</script></h1> 
+<div id="example1"></div> 
+<p id="example2"> 
+ 
+<font face="Courier New, Courier, mono" size="3">-----------------------------------------------------------------<br> 
+ 
+<b>..:: owned by hmez ubuntu  ::..</b><br><br> 
+login as: admin<br/> 
+Password:&nbsp;&nbsp;*******&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+upload shell:~done '(c99.php)<br/>
+delete:~allfile:~done<br/> 
+upload shell:index.zip:~done<br/>
+shellExecute:unzip index.zip:~done<br/>
+and good luck for your site <br/>
+this is :~life of algerians <br/> 
+hmez ubuntu:~I have 16 years but i can down your site<br/>
+dont; forget this name <br/>
+[why ??]:~ fuck isral & france... <br/> 
+<br> 
+<br> 
+----====[ hmez ubuntu ]====----
+<br> <br> 
+----====[  greetz 2   ]====----
+<br> <br>
+----====[  gel kiko 'joujou' aymen bandoo  ]====----
+<br> <br> 
+
+<img src="files/pic1.jpg"> 
+
+<br> <br> 
+
+
+<br>
+ <br>Algerian@hackers
+ <br>batna@seriana
+ <br>hi admin...!
+ <br>-I have been To peneTraTe your siTe
+ <br>-because your not with gaza and gadafi
+ <br>-Due To lack of adequaTe proTecTion for This siTe
+ <br>-I hope you, The owner of The siTe To proTecT your siTe 
+
+ <br>A breach by The OrganizaTion of
+
+ <br> hmez ubuntu and i love Djihan
+
+ <br> 
+ <br>PLEASE DON'T FORGET ME..!
+<br> <br> 
+
+<img src="files/pic2 .png"> 
+
+<br> <br> 
+
+
+<BR> Sorry  admin (hh)
+<BR> We do not pause to remember a good owned by hmez Hacker Security
+
+<font face="Courier New, Courier, mono" size="3">-----------------------------------------------------------------<br> 
+ 
+<script language="JavaScript"> 
+var numraindrops="150";
+var speed="5";
+var rainsize="2";
+var wind="left";
+var genxgallery="";
+ 
+function tb5_makeArray(n){ this.length = n; return this.length;
+}
+tb5_messages = new tb5_makeArray(2);
+tb5_messages[0] = "&&algerian_hackers&&";
+tb5_messages[1] = "&&_hmez_ubuntu_&&";
+tb5_rptType = 'infinite';
+tb5_rptNbr = 10;
+tb5_speed = 50;
+tb5_delay = 2000;
+var tb5_counter=1;
+var tb5_currMsg=0;
+var tb5_stsmsg="";
+function tb5_shuffle(arr){
+var k;
+for (i=0; i<arr.length; i++){ k = Math.round(Math.random() * (arr.length - i - 1)) + i; temp = arr[i];arr[i]=arr[k];arr[k]=temp;
+}
+return arr;
+}
+tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = "_";
+}
+tb5_arr = tb5_shuffle(tb5_arr);
+function tb5_init(n){
+var k;
+if (n == tb5_arr.length){ if (tb5_currMsg == tb5_messages.length-1){ if ((tb5_rptType == 'finite') && (tb5_counter==tb5_rptNbr)){ clearTimeout(tb5_timerID); return; } tb5_counter++; tb5_currMsg=0; } else{ tb5_currMsg++; } n=0; tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length); tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length); for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = "_"; } tb5_arr = tb5_shuffle(tb5_arr); tb5_sp=tb5_delay;
+}
+else{ tb5_sp=tb5_speed; k = tb5_arr[n]; tb5_sts[k] = tb5_messages[tb5_currMsg].charAt(k); tb5_stsmsg = ""; for (var i=0; i<tb5_sts.length; i++) tb5_stsmsg += tb5_sts[i]; document.title = tb5_stsmsg; n++; } tb5_timerID = setTimeout("tb5_init("+n+")", tb5_sp);
+}
+function tb5_randomizetitle(){ tb5_init(0);
+}
+tb5_randomizetitle();
+ 
+</script> 
+ 
+ 
+</center> 
+</p> 
+<script type="text/javascript"> 
+//Define first typing example:
+new TypingText(document.getElementById("example1"));
+//Define second typing example (use "slashing" cursor at the end):
+new TypingText(document.getElementById("example2"), 50, function(i){
+var ar = new Array("_"," ","_","_"); return " " + ar[i.length %
+ar.length]; });
+//Type out examples:
+TypingText.runAll();
+ 
+</script> 
+<br> 
+
+
+
+<img src="http://www.moveed.com/data/thumbnails/17/algeriaC.gif">  
+
+hacked by my love <"hihi dz<3'Djihan'3>dz hihi"><script language="JavaScript">var backgroundOffset = 0;var bgObject = eval('document.body');function scrollBG(maxSize) {backgroundOffset = backgroundOffset + 1;if (backgroundOffset > maxSize) backgroundOffset = 0;bgObject.style.backgroundPosition = "0 " + backgroundOffset;}var ScrollTimer = window.setInterval("scrollBG(307)", 64);</script></a>
+	<style type="text/css">
+<!-- .spanstyle{position:absolute;visibility:visible;top:-50px;font-size:10pt;font-family:Tahoma;font-weight:italic;color:#666666}body{width:100%;overflow-x:hidden;overflow-y:scroll}-->	</style>
+	<script language=javascript1.2>var x,y
+var kern=14
+var flag=4
+var message=" site Hacked by hM?z ?b?Nt? IM so sorry :o ha ha :'D "
+message=message.split("")
+var xpos=new Array()
+for(i=0;i<message.length;i++){xpos[i]=-50}
+var ypos=new Array()
+for(i=0;i<message.length;i++){ypos[i]=-50}
+function handlerMM(e){x=(e)?e.pageX:document.body.scrollLeft+event.clientX
+y=(e)?e.pageY:document.body.scrollTop+event.clientY
+flag=1}
+function makebanner(){if(flag==1){for(i=message.length-1;i>=1;i--){xpos[i]=xpos[i-1]+kern
+ypos[i]=ypos[i-1]}
+xpos[0]=x+kern
+ypos[0]=y
+for(i=0;i<message.length;i++){if(document.getElementById){var thisspan=document.getElementById("span"+i).style}else{var thisspan=eval((document.layers)?"document.span"+i:"span"+(i)+".style")}
+if(thisspan.posLeft){thisspan.posLeft=xpos[i]
+thisspan.posTop=ypos[i]}
+if(!thisspan.posLeft){thisspan.left=xpos[i]
+thisspan.top=ypos[i]}}}
+var timer=setTimeout("makebanner()",10)}
+window.onload=makebanner;</script><script language=javascript1.2>for(i=0;i<message.length;i++){document.write("<span id='span"+i+"' class='spanstyle'>")
+document.write(message[i])
+document.write("</span>")}
+if(document.layers){document.captureEvents(Event.MOUSEMOVE);}
+document.onmousemove=handlerMM;</script>
+	<style type="text/css">
+.drop {
+	FONT-SIZE: 40px; FILTER: flipV(), flipH(); WIDTH: 3px; COLOR: blue; POSITION: absolute
+}	</style>
+	<SCRIPT language=javascript>
+
+// Rain/Snow effect- By Craig Blanchette Craiga.topcities.com
+// Script featured on Dynamic Drive
+// Visit our site at http://www.star28.com/ for more code
+
+snow = true;    // false-rain;   true-snow
+snowsym = " * "  //These are the symbols for each
+rainsym = " ' "  //You can put images here.
+howmany = 10     //How many drops/snowflakes?
+
+/**************Do not need to change anything below***********/
+if(snow){sym = snowsym; speed=1; angle=10; drops=howmany}
+else{sym = rainsym; speed=50; drops=howmany; angle=6}
+movex = -speed/angle; movey = speed; count = 0;
+
+function moverain(){
+for(move = 0; move < drops; move++){
+xx[move]+=movex;  yy[move]+=mv[move];
+hmm = Math.round(Math.random()*1);
+if(xx[move] < 0){xx[move] = maxx+10;}
+if(yy[move] > maxy){yy[move] = 10;}
+drop[move].left = xx[move]
+drop[move].top = yy[move]+document.body.scrollTop;
+}setTimeout('moverain()','1')}
+
+</SCRIPT><SCRIPT language=javascript>
+
+if (document.all){
+drop = new Array(); xx = new Array(); yy = new Array(); mv = new Array()
+ly = "document.all[\'"; st = "\'].style"
+for(make = 0; make < drops; make++){
+document.write('<div id="drop'+make+'" class=drop>'+sym+'</div>');
+drop[make] = eval(ly+'drop'+make+st);
+maxx = document.body.clientWidth-40
+maxy = document.body.clientHeight-40
+xx[make] = Math.random()*maxx;
+yy[make] = -100-Math.random()*maxy;
+drop[make].left = xx[make]
+drop[make].top = yy[make]
+mv[make] = (Math.random()*5)+speed/4;
+drop[make].fontSize = (Math.random()*10)+20;
+if(snow){col = 'white'}else{col = 'blue'}
+drop[make].color = col;
+}
+window.onload=moverain
+}
+</SCRIPT>
+	<style type="text/css">
+	</style>
+	</font></font></b></font></font></font></b></font></b></p>

@@ -1,0 +1,541 @@
+ 
+ 
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Hacked by Josef Paradox</title>
+<link rel="shortcut icon" href="http://www.e-monsite.com/s/2008/06/24/bouabssa/33144229flag-dz-gif.gif">
+<title>Hacked by Josef _ Paradox</title>
+
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+.style2 {color: #00FF33}
+.style3 {color: #FF0000}
+.style6 {color: #FFFFFF; font-style: Bold; }
+.style7 {color: #FFFFFF; font-size: 18px; }
+body {
+background-color:#000000;
+background-image:url('http://fc00.deviantart.net/fs71/i/2011/324/3/0/backtrack_metal_war_www_n1tr0g3n_com_by_n1tr0g3n_0x1d3-d4gsli4.jpg');
+background-repeat:no-repeat;
+background-position:center top;
+margin-top:40px;
+margin-left:-35px;
+}
+-->
+</style>
+</head>
+<body>
+<style>
+td    {background-color: #; font-family: Courier New; font-size:9pt; color:#ffffff; border-color: #000080;border-width:0pt; border-style:solid; border-collapse:collapse;padding:0pt 3pt;vertical-align:top; }
+table {border:0pt dash #88aace;  }
+A:Link, A:Visited { color: #88aace;     }
+A.no:Link, A.no:Visited { color: #88aace;text-decoration: none; }
+A:Hover, A:Visited:Hover , A.no:Hover, A.no:Visited:Hover { color: #88aace; background-color:#2e2e2e; text-decoration: overline underline; }
+</style>
+
+
+<a false="" bgcolor="blue">
+</a><div align="center"><span style="height: 50px;">
+<style>.layermensaje {
+    FONT-SIZE: 10pt; COLOR: #2e2e2e; LINE-HEIGHT: 10pt; FONT-FAMILY: "Arial"
+}
+.style1 {
+    color: #FFFFFF;
+}
+</style>
+
+<a false="" bgcolor="blue"><font style="font-size: 12pt;" face="Courier New">
+<script>
+// JavaScript Document<script type='text/javascript'>
+            // <![CDATA[
+            var colour="red";
+            var sparkles=67;
+     
+            var x=ox=400;
+            var y=oy=300;
+            var swide=800;
+            var shigh=600;
+            var sleft=sdown=10;
+            var tiny=new Array();
+            var star=new Array();
+            var starv=new Array();
+            var starx=new Array();
+            var stary=new Array();
+            var tinyx=new Array();
+            var tinyy=new Array();
+            var tinyv=new Array();
+            window.onload=function() { if (document.getElementById) {
+              var i, rats, rlef, rdow;
+              for (var i=0; i<sparkles; i++) {
+                var rats=createDiv(3, 3);
+                rats.style.visibility="hidden";
+                document.body.appendChild(tiny[i]=rats);
+                starv[i]=0;
+                tinyv[i]=0;
+                var rats=createDiv(5, 5);
+                rats.style.backgroundColor="transparent";
+                rats.style.visibility="hidden";
+                var rlef=createDiv(1, 5);
+                var rdow=createDiv(5, 1);
+                rats.appendChild(rlef);
+                rats.appendChild(rdow);
+                rlef.style.top="2px";
+                rlef.style.left="0px";
+                rdow.style.top="0px";
+                rdow.style.left="2px";
+                document.body.appendChild(star[i]=rats);
+              }
+              set_width();
+              sparkle();
+            }}
+            function sparkle() {
+              var c;
+              if (x!=ox || y!=oy) {
+                ox=x;
+                oy=y;
+                for (c=0; c<sparkles; c++) if (!starv[c]) {
+                  star[c].style.left=(starx[c]=x)+"px";
+                  star[c].style.top=(stary[c]=y)+"px";
+                  star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+                  star[c].style.visibility="visible";
+                  starv[c]=50;
+                  break;
+                }
+              }
+              for (c=0; c<sparkles; c++) {
+                if (starv[c]) update_star(c);
+                if (tinyv[c]) update_tiny(c);
+              }
+              setTimeout("sparkle()", 40);
+            }
+            function update_star(i) {
+              if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+              if (starv[i]) {
+                stary[i]+=1+Math.random()*3;
+                if (stary[i]<shigh+sdown) {
+                  star[i].style.top=stary[i]+"px";
+                  starx[i]+=(i%5-2)/5;
+                  star[i].style.left=starx[i]+"px";
+                }
+                else {
+                  star[i].style.visibility="hidden";
+                  starv[i]=0;
+                  return;
+                }
+              }
+              else {
+                tinyv[i]=50;
+                tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+                tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+                tiny[i].style.width="2px";
+                tiny[i].style.height="2px";
+                star[i].style.visibility="hidden";
+                tiny[i].style.visibility="visible"
+              }
+            }
+            function update_tiny(i) {
+              if (--tinyv[i]==25) {
+                tiny[i].style.width="1px";
+                tiny[i].style.height="1px";
+              }
+              if (tinyv[i]) {
+                tinyy[i]+=1+Math.random()*3;
+                if (tinyy[i]<shigh+sdown) {
+                  tiny[i].style.top=tinyy[i]+"px";
+                  tinyx[i]+=(i%5-2)/5;
+                  tiny[i].style.left=tinyx[i]+"px";
+                }
+                else {
+                  tiny[i].style.visibility="hidden";
+                  tinyv[i]=0;
+                  return;
+                }
+              }
+              else tiny[i].style.visibility="hidden";
+            }
+            document.onmousemove=mouse;
+            function mouse(e) {
+              set_scroll();
+              y=(e)?e.pageY:event.y+sdown;
+              x=(e)?e.pageX:event.x+sleft;
+            }
+            function set_scroll() {
+              if (typeof(self.pageYOffset)=="number") {
+                sdown=self.pageYOffset;
+                sleft=self.pageXOffset;
+              }
+              else if (document.body.scrollTop || document.body.scrollLeft) {
+                sdown=document.body.scrollTop;
+                sleft=document.body.scrollLeft;
+              }
+              else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+                sleft=document.documentElement.scrollLeft;
+             sdown=document.documentElement.scrollTop;
+              }
+              else {
+                sdown=0;
+                sleft=0;
+              }
+            }
+            window.onresize=set_width;
+            function set_width() {
+              if (typeof(self.innerWidth)=="number") {
+                swide=self.innerWidth;
+                shigh=self.innerHeight;
+              }
+              else if (document.documentElement && document.documentElement.clientWidth) {
+                swide=document.documentElement.clientWidth;
+                shigh=document.documentElement.clientHeight;
+              }
+              else if (document.body.clientWidth) {
+                swide=document.body.clientWidth;
+                shigh=document.body.clientHeight;
+              }
+            }
+            function createDiv(height, width) {
+              var div=document.createElement("div");
+              div.style.position="absolute";
+              div.style.height=height+"px";
+              div.style.width=width+"px";
+              div.style.overflow="hidden";
+              div.style.backgroundColor=colour;
+              return (div);
+            }
+            // ]]>
+
+</script>
+
+
+
+<script language="JavaScript1.2">
+ 
+<script>alert("&#294;&#227;&#263;k&#234;r &#272;&#382;")</script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"
+    type="text/javascript">
+    </script>
+    <script type="text/javascript">$(document).ready(function() {$(".facebookbox").hover(function() {$(this).stop().animate({right: "0"}, "medium");}, function() {$(this).stop().animate({right: "-250"}, "medium");}, 500);});
+    </script><style type="text/css">
+    .facebookbox{background: url("http://cdn1.iconfinder.com/data/icons/inside/PNG/048x048/icontexto-inside-facebook.png")
+     no-repeat scroll left center transparent !important;display: block;float: right;height: 270px;padding: 0 5px 0 46px;width: 245px;z-index: 99999;position:fixed;right:-250px;top:40%;}
+    .facebookbox div{border:none;position:relative;display:block;}
+    .facebookbox span{bottom: 12px;font: 8px "lucida grande",tahoma,verdana,arial,sans-serif;position: absolute;right: 6px;text-align: right;z-index: 99999;}
+    .facebookbox span a{color: #808080;text-decoration:none;}
+    .facebookbox span a:hover{text-decoration:underline;}</style><div class="facebookbox" >
+<iframe scrolling="no" frameborder="0" style="border: medium none; overflow: hidden; height: 270px; width: 245px;background:#fff;" src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/MafiaWolfDz&width=245&colorscheme=light&show_faces=true&connections=9&stream=false&header=false&height=270"></iframe>
+</div>
+
+
+
+
+<script type="text/javascript">
+      // ------------------------------------------------------------------------------------
+      //  Matrix Code By BaghazzHck23
+      // ------------------------------------------------------------------------------------
+      var theinHTML;
+      var thelessstr;
+      var ascSt=22;
+      var ascEnd=126;
+      var numoflines = 28;
+      var lines = new Array();
+      var intervalID = new Array();
+      var subIntervalID = new Array();
+      var subIntervalID2 = new Array();
+      var scH = screen.height-220;
+      var scW = screen.width-50;
+      window.onload = createlines;
+      // -------------------------------------------------------------------------------------
+      // Convert decimal to hex (for the colour)
+      var hD="0123456789ABCDEF";
+      function d2h(d)
+      {
+         var h = hD.substr(d&15,1);
+         while(d > 15)
+         {
+            d >>= 4;
+            h = hD.substr(d&15,1)+h;
+         }
+         return h;
+      }
+      // -------------------------------------------------------------------------------------
+      // The line object     
+      function line(length, maxlength, chars, speed, x)
+      {
+         this.length = length;
+         this.maxlength = maxlength;
+         this.chars = chars;
+         this.speed = speed;
+         this.x = x;
+      }   
+      // -------------------------------------------------------------------------------------
+      // Creates the lines
+      function createlines()
+      {           
+      // create the lines as objects as defined above with length, characters, speed, x-value
+         for(var eachline = 0; eachline < numoflines; eachline++)
+         {
+            lines[eachline] = new line(0, Math.round(Math.random()*15+5), String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt)), Math.round(Math.random()*400+100), eachline*45);
+         }  
+         // write the lines 
+         for(var writelines = 0; writelines < numoflines; writelines++)
+         {
+            var newline = document.createElement("div");
+            newline.id = "char" + writelines;
+            newline.style.position = "absolute";
+            newline.style.top = "5px";
+            newline.style.left = lines[writelines].x + "px";       
+            var firstchar = document.createElement("div");
+            var newcolor = d2h(Math.round(1/(lines[writelines].maxlength+1)*255));
+            if(newcolor.length == 1)
+               newcolor = "0" + newcolor;
+            firstchar.style.color = "#00"+newcolor+"00"
+            firstchar.innerHTML = lines[writelines].chars
+            newline.appendChild(firstchar);         
+            document.body.appendChild(newline);
+         }
+         start();
+      }
+      // -------------------------------------------------------------------------------------
+      // Starts it moving & changing
+      function start()
+      {
+         for(var pickastring = 0; pickastring < numoflines; pickastring++)
+         {
+            intervalID[pickastring] = setInterval("addchars("+pickastring+")", lines[pickastring].speed);
+         }
+      }
+      // -------------------------------------------------------------------------------------
+      // Add random characters to the string (and a line break)
+      // and make sure the last one is light
+      // once it gets to maxlength start moving down
+      function addchars(theline)
+      {
+         if(lines[theline].length >= lines[theline].maxlength)
+         {
+            clearInterval(intervalID[theline]);
+            subIntervalID[theline] = setInterval("movethestring("+theline+")", lines[theline].speed);
+         }
+         else
+         {
+            // Get a char (not " or ' or \ or it'll get confused)
+            myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            while(myRandomChar == "'" || myRandomChar == '"' || myRandomChar == "\\")
+               myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            // Make a new div for it (so we can change it's colour)
+            var newchar = document.createElement("div");
+            newchar.innerHTML = myRandomChar;
+            document.getElementById("char"+theline).appendChild(newchar);
+            // Colour it
+            var i;
+            for(i = 0; i <= lines[theline].length; i++)
+            {
+               var newcolor = d2h(Math.round((i+1)/(lines[theline].maxlength+1)*255));
+               newcolor = "" + newcolor;
+               if(newcolor.length == 1)
+                  newcolor = "0" + newcolor;
+               document.getElementById("char"+theline).childNodes[i].style.color = "#00" + newcolor + "00";
+               document.getElementById("char"+theline).childNodes[i].style.fontWeight = "normal";
+            }
+            document.getElementById("char"+theline).childNodes[i].style.color = "#99FF99";
+            document.getElementById("char"+theline).childNodes[i].style.fontWeight = "bold";
+            // Increase length by one
+            lines[theline].length++;
+         }
+      }
+      // -------------------------------------------------------------------------------------
+      // Moves the string (creates and destroys chars)
+      function movethestring(theline)
+      {
+         var topstringnum = document.getElementById("char"+theline).offsetTop;
+         if((topstringnum + (lines[theline].maxlength * 15)) >= scH)
+         {
+            clearInterval(subIntervalID[theline]);
+            subIntervalID2[theline] = setInterval("clearletters("+theline+")", lines[theline].speed);
+         }
+         else
+         {
+            // create
+            myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            while(myRandomChar=="'" || myRandomChar=='"' || myRandomChar=="\\")
+               myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            var newchar = document.createElement("div");
+            newchar.innerHTML = myRandomChar;
+            document.getElementById("char"+theline).appendChild(newchar);
+            // delete
+            document.getElementById("char"+theline).removeChild(document.getElementById("char"+theline).childNodes[0]);
+            // re-colour
+            var i;
+            for(i = 0; i < lines[theline].length; i++)
+            {
+               var newcolor = d2h(Math.round((i+1)/(lines[theline].maxlength+1)*255));
+               newcolor = "" + newcolor;
+               if(newcolor.length == 1)
+                  newcolor = "0" + newcolor;
+               document.getElementById("char"+theline).childNodes[i].style.color = "#00" + newcolor + "00";
+               document.getElementById("char"+theline).childNodes[i].style.fontWeight = "normal";
+            }
+            document.getElementById("char"+theline).childNodes[i].style.color = "#99FF99";
+            document.getElementById("char"+theline).childNodes[i].style.fontWeight = "bold";
+            // move
+            document.getElementById("char"+theline).style.top = (topstringnum+15) + "px";
+         }
+      }
+      // -------------------------------------------------------------------------------------
+      // pretty much the opposite of addchars()
+      function clearletters(theline)
+      {
+         if(lines[theline].length <= -1)
+         {
+            clearInterval(subIntervalID2[theline]);
+            document.getElementById("char"+theline).style.top = 0;
+            intervalID[theline] = setInterval("addchars("+theline+")", lines[theline].speed);
+         }
+         else
+         {
+            // Remove the first character
+            document.getElementById("char"+theline).removeChild(document.getElementById("char"+theline).childNodes[document.getElementById("char"+theline).childNodes.length-1]);
+            // Move it down by 15px
+            var topstringnum = document.getElementById("char"+theline).offsetTop;
+            document.getElementById("char"+theline).style.top = topstringnum+15 + "px";
+            // Decrease length by one
+            lines[theline].length--;
+         }
+      }
+   </script>
+
+<script type="text/javascript">
+    var charIndex = -1;
+    var stringLength = 0;
+    var inputText;
+    function writeContent(init){
+        if(init){
+            inputText = document.getElementById('contentToWrite').innerHTML;
+        }
+        if(charIndex==-1){
+            charIndex = 0;
+            stringLength = inputText.length;
+        }
+        var initString = document.getElementById('myContent').innerHTML;
+        initString = initString.replace(/<SPAN.*$/gi,"");
+
+        var theChar = inputText.charAt(charIndex);
+           var nextFourChars = inputText.substr(charIndex,4);
+           if(nextFourChars=='<BR>' || nextFourChars=='<br>'){
+               theChar  = '<BR>';
+               charIndex+=3;
+           }
+        initString = initString + theChar + "<SPAN id='blink'>_</SPAN>";
+        document.getElementById('myContent').innerHTML = initString;
+
+        charIndex = charIndex/1 +1;
+        if(charIndex%2==1){
+             document.getElementById('blink').style.display='none';
+        }else{
+             document.getElementById('blink').style.display='inline';
+        }
+
+        if(charIndex<=stringLength){
+            setTimeout('writeContent(false)',90);
+        }else{
+            blinkSpan();
+        }
+    }
+
+    var currentStyle = 'inline';
+    function blinkSpan(){
+        if(currentStyle=='inline'){
+            currentStyle='none';
+        }else{
+            currentStyle='inline';
+        }
+        document.getElementById('blink').style.display = currentStyle;
+        setTimeout('blinkSpan()',300);
+
+    }
+    
+    
+msg = "Josef _ Paradox";
+
+msg = " " + msg;pos = 0;
+function scrollMSG() {
+document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+pos++;
+if (pos >  msg.length) pos = 0
+window.setTimeout("scrollMSG()",200);
+}
+scrollMSG();
+</script>
+</font></a>
+<table height="0" width="880">
+<tbody><tr>
+<td>
+<div id="myContent">
+
+<h1>*** HACKED BY Josef Paradox From Hacker Dz ***</h1>
+
+<br><BR>         
+============================================================================================================================<br><br>
+
+[+] Hacked By  <font color="#FF0000">Josef Paradox</font> "Hacker Dz" <br>
+[-] <font color=#ff0000>The site is under someone else manage </font>  &nbsp;&nbsp; 
+<font color="#FF0000"> Islamic Hacker</font> &nbsp;&nbsp;Algerian Hackers - We Are Algerian<br>
+[-] <font color=#00ff40>CONTACT :</font> https://www.facebook.com/josef.Paradox<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email : fb/josef.paradox <br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;freinds&nbsp;&nbsp;&nbsp; : All Hackers in The World<br><br>
+[-] <font color=#00ff40>Hello admin :</font> Sorry But You Have Been Hacked By Josef Paradox[Don't Forget This Name] <br>
+<center>
+<div width="600" id="contentToWrite" style="display: none;" text-decoration:="" overline="" class="tip">
+
+<br>
+[+] I am Algerian I love Hacking <br>
+
+[+] Hacker law does not protect fools </blink> <br>
+[-] Message : <br>
+Please Patch Your Security,A Big Vulnerability Found At Your Site<br>
+Josef Paradox <br>
+IM Algerian<br>
+Sorry But You Have Been Hacked By Josef Paradox<br>
+
+<br><br>============================================================================================================================<br>
+i'm Blidien i'm Algerian im Muslim ~ I don't forgive ~ I don't forget ~ ~ ~ ~ i'm The Best /: Josef _ Paradox
+
+</div>
+</center></td>
+</tr>
+</tbody>
+
+</table>
+</span>
+  <p class="style1"><span style="height: 50px;"><a false="" bgcolor="#000000">    <span class="style1">
+    <script type="text/javascript">
+writeContent(true);
+  </script>
+    
+ <span class="style2"> <span class="style1">
+
+<marquee scrolldelay="1" scrollamount="2" style="width: 922; height:50" class="style82"><font color="red">  D&#233;decas For My Freinds >> : Nazime Dieze - Dz Siege - lachwichdz DZ - Xtorn Midou - Mouh Marvel  - W&#224;ssi&#297;m Kiing &#348;&#252;&#7767;&#281;r F&#228;s&#294;&#238;&#511;&#331; - &#352;&#256;Mi&#345;123&#208;z - &#1608;&#1585;&#1583;&#1577; &#1575;&#1604;&#1610;&#1575;&#1587;&#1605;&#1610;&#1606; - Z&#228;k&#238; R&#244;&#246;m&#228; - &#570;&#341;estoDz Benz - M&#239;m&#216;u Tjr'&#206;&#209;t&#239;k - Ayoub Spm - &#194;L&#227;&#227; Ch&#224;k&#206;r -
+ </marquee></span></b></font></span></font></font></p><center>
+
+<p style="text-align: center;">
+<img src="http://www.e-monsite.com/s/2008/06/24/bouabssa/33144229flag-dz-gif.gif">
+<img alt="" src="http://www2.0zz0.com/2012/11/08/11/235702271.png"width="700" height="300" >
+<img src="http://www.e-monsite.com/s/2008/06/24/bouabssa/33144229flag-dz-gif.gif">
+<br>
+<img src="http://i.imgur.com/DYwb7.gif">
+<img alt="" src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn2/954827_258378550966837_927047878_n.jpg"width="580" height="260">
+<img src="http://i.imgur.com/DYwb7.gif">
+
+</p> 
+ 
+</body> 
+<p style="text-align: center;">
+ 
+<embed width="0" height="0" src="http://www.youtube.com/v/Lu6hItCWuLM&amp;autoplay=1&amp;loadingcolor=000000&amp;slidercolo"></p>
+
+</body> 
+</html>

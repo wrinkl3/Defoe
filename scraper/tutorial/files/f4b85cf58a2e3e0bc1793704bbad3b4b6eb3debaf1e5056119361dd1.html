@@ -1,0 +1,468 @@
+<body bgcolor="#000000">
+
+<p align="center"><CENTER>
+<H2><SPAN id=lightf_light></SPAN></H2></CENTER></FONT></A>
+<SCRIPT>
+lightf_lightcolor1=	"345818" // B&#252;y&#252;k harf kullan&#305;n
+lightf_lightcolor2=	"FFFFFF" // B&#252;y&#252;k harf kullan&#305;n
+lightf_message=		"HaCkEd By AbdullaH AL TAMiMi"
+lightf_speed=		50 // milisaniye
+
+color_mesk=new Array();
+color_mesk[10]="A";
+color_mesk[11]="B";
+color_mesk[12]="C";
+color_mesk[13]="D";
+color_mesk[14]="E";
+color_mesk[15]="F";
+color_A=10;
+color_B=11;
+color_C=12;
+color_D=13;
+color_E=14;
+color_F=15;
+color_let="ABCDEF";
+
+function color_mes(color_num)
+{
+  if(color_let.indexOf(color_num) != -1)
+  {
+    return eval("color_" + color_num)
+  }
+  else
+  {
+    if(color_num < 10)
+    {
+      return eval(color_num)
+    }
+    else
+    {
+     return color_mesk[color_num];
+    }
+  }
+}
+
+function color(color_begin,color_einde,color_stappen,color_stap)
+{
+  color_hh1=(color_mes(color_begin.charAt(0))*16)+color_mes(color_begin.charAt(1));
+  color_hh2=(color_mes(color_begin.charAt(2))*16)+color_mes(color_begin.charAt(3));
+  color_hh3=(color_mes(color_begin.charAt(4))*16)+color_mes(color_begin.charAt(5));
+  color_pp1=(color_mes(color_einde.charAt(0))*16)+color_mes(color_einde.charAt(1));
+  color_pp2=(color_mes(color_einde.charAt(2))*16)+color_mes(color_einde.charAt(3));
+  color_pp3=(color_mes(color_einde.charAt(4))*16)+color_mes(color_einde.charAt(5));
+  if(color_hh1 < color_pp1)
+  {
+   color_ff1=color_hh1+Math.floor((color_pp1-color_hh1)/color_stappen*color_stap);
+   color_ff1=eval("\'"+color_mes(Math.floor(color_ff1/16))+"\'")+eval("\'"+color_mes(color_ff1-(Math.floor(color_ff1/16)*16))+"\'");
+  }
+  else
+  {
+   color_ff1=color_hh1-Math.floor((color_hh1-color_pp1)/color_stappen*color_stap);
+   color_ff1=eval("\'"+color_mes(Math.floor(color_ff1/16))+"\'")+eval("\'"+color_mes(color_ff1-(Math.floor(color_ff1/16)*16))+"\'");
+  }
+  if(color_hh2 < color_pp2)
+  {
+   color_ff2=color_hh2+Math.floor((color_pp2-color_hh2)/color_stappen*color_stap);
+   color_ff2=eval("\'"+color_mes(Math.floor(color_ff2/16))+"\'")+eval("\'"+color_mes(color_ff2-(Math.floor(color_ff2/16)*16))+"\'");
+  }
+  else
+  {
+    color_ff2=color_hh2-Math.floor((color_hh2-color_pp2)/color_stappen*color_stap);
+    color_ff2=eval("\'"+color_mes(Math.floor(color_ff2/16))+"\'")+eval("\'"+color_mes(color_ff2-(Math.floor(color_ff2/16)*16))+"\'");
+  }
+  if(color_hh3 < color_pp3)
+  {
+    color_ff3=color_hh3+Math.floor((color_pp3-color_hh3)/color_stappen*color_stap);
+    color_ff3=eval("\'"+color_mes(Math.floor(color_ff3/16))+"\'")+eval("\'"+color_mes(color_ff3-(Math.floor(color_ff3/16)*16))+"\'");
+  }
+  else
+  {
+    color_ff3=color_hh3-Math.floor((color_hh3-color_pp3)/color_stappen*color_stap);
+    color_ff3=eval("\'"+color_mes(Math.floor(color_ff3/16))+"\'")+eval("\'"+color_mes(color_ff3-(Math.floor(color_ff3/16)*16))+"\'");
+  }
+  return color_ff1+color_ff2+color_ff3
+}
+
+lightf_num=0;
+lightf_num2=0;
+lightf_txt=new Array();
+lightf_txt[0]="";
+
+function lightf()
+{
+  for(lightf_i=0;lightf_i != Math.floor(lightf_message.length/2);lightf_i++)
+  {
+    lightf_txt[lightf_i]=color(lightf_lightcolor1,lightf_lightcolor2,Math.floor(lightf_message.length/2),lightf_i);
+  }
+  for(lightf_i=Math.floor(lightf_message.length/2);lightf_i != lightf_message.length;lightf_i++)
+  {
+    lightf_txt[lightf_i]=color(lightf_lightcolor2,lightf_lightcolor1,Math.floor(lightf_message.length/2),(lightf_i-Math.floor(lightf_message.length/2)));
+  }
+  lightf_lightf1();
+}
+
+function lightf_lightf1()
+{
+  lightf_txt[lightf_message.length+1]="";
+  lightf_num2=lightf_message.length-lightf_num;
+  for(lightf_i=0;lightf_i != lightf_message.length;lightf_i++)
+  {
+   if(lightf_i+lightf_num < lightf_message.length)
+   {
+     lightf_txt[lightf_message.length+1]=lightf_txt[lightf_message.length+1]+"<font color='#"+lightf_txt[(lightf_i+lightf_num)]+"'>"+lightf_message.charAt(lightf_i)+"</font>";
+   }
+   else
+   {
+     lightf_txt[lightf_message.length+1]=lightf_txt[lightf_message.length+1]+"<font color='#"+lightf_txt[lightf_i-lightf_num2]+"'>"+lightf_message.charAt(lightf_i)+"</font>";
+   }
+  }
+  if(lightf_num != lightf_message.length)
+  {
+    lightf_num++;
+  }
+  else
+  {
+    lightf_num=0;
+  }
+  lightf_light.innerHTML=lightf_txt[lightf_message.length+1];
+  setTimeout("lightf_lightf1()",lightf_speed)
+}
+
+lightf();
+</SCRIPT>
+<!--webbot bot="HTMLMarkup" endspan --><!--webbot bot="HTMLMarkup" startspan -->
+<STYLE>BODY {
+	SCROLLBAR-HIGHLIGHT-COLOR: #000000; SCROLLBAR-SHADOW-COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #666666; SCROLLBAR-ARROW-COLOR: #666666; SCROLLBAR-DARKSHADOW-COLOR: #666666; SCROLLBAR-BASE-COLOR: #000000
+}
+</STYLE>
+</p>
+
+
+<html dir="rtl">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Hacked By DMaR AL-TAMiMi &amp; TnB@HoTmAiL.CoM</title>
+<meta name="description" content="DMaR AL-TAMiMi &amp; TnB@HoTmAiL.CoM &amp; 00966509370967">
+<meta name="keywords" content="DMaR AL-TAMiMi &amp; TnB@HoTmAiL.CoM &amp; 00966509370967">
+</head><STYLE>
+BODY {
+scrollbar-3dlight-color: #000000; 
+scrollbar-arrow-color: #FFFFFF; 
+scrollbar-darkshadow-color: #345818;  
+scrollbar-face-color: #000000; 
+scrollbar-highlight-color: #345818; 
+scrollbar-shadow-color: #345818; 
+scrollbar-track-color: #000000}
+</STYLE>
+<STYLE>A:hover {
+	FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: comic sans ms
+}
+A.searchlinksmall:hover {
+	FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: comic sans ms
+}
+A.navbar:active {
+	FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: comic sans ms
+}
+A.navbar:visited {
+	FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: comic sans ms
+}
+A.navbar:link {
+	FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: comic sans ms
+}
+A.navbar:hover {
+	FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: comic sans ms
+}
+A.redlink:active {
+	FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: comic sans ms
+}
+A.redlink:visited {
+	FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: comic sans ms
+}
+A.redlink:link {
+	FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: comic sans ms
+}
+A.redlink:hover {
+	FONT-SIZE: 8pt; COLOR: #666666; FONT-FAMILY: comic sans ms
+}
+.nametext {
+	FONT-SIZE: 8pt; COLOR: #666666; FONT-FAMILY: comic sans ms
+}
+IMG {
+	FILTER: Alpha(Opacity=50)
+}
+.blacktext12 {
+	DISPLAY: none; VISIBILITY: hidden
+}
+UNKNOWN {
+	END: 
+}
+</STYLE>
+<STYLE>BODY {
+	CURSOR: url('http://taxrecoverystrategies.com/templates/beez/48.ani')
+}
+	.mplsession	{padding: 0 0 20px 0;}
+</STYLE>
+
+<BODY oncontextmenu="return false" onselectstart="return false" 
+ondragstart="return false" style="background-attachment: fixed">
+
+<body bgcolor="#000000">
+
+<div align="center">
+	&nbsp;<p>&nbsp;</p>
+	<table border="1" width="82%" cellspacing="0" style="border-style: solid; border-width: 0; " bordercolor="#FFFFFF" id="table1" cellpadding="0" height="472">
+		<tr>
+			<td width="371">
+			<p align="center">
+			<img border="0" src="http://www.x-44.net/uploads/images/domain-4ad73baefc.jpg" width="367" height="463"></td>
+			<td dir="ltr">
+			<div align="center">
+				<p align="center"><font face="Tahoma" size="2" color="#FFFFFF">
+				<br>
+				</font><font face="Tahoma" color="#345818">|</font><font face="Tahoma" color="#FFFFFF">
+				</font><b><font face="Tahoma" color="#FFFFFF">AbdullaH AL</font><font face="Tahoma" color="#345818">-</font></b><font face="Tahoma" color="#FFFFFF"><b>TAMiMi</b>
+				</font><font face="Tahoma" color="#345818">|</font><font face="Tahoma" color="#FFFFFF"><br>
+				<br>
+				EmaiL </font><font face="Tahoma" color="#345818">:
+				</font><font face="Tahoma" color="#FFFFFF">TnB</font><font face="Tahoma" color="#345818">@</font><font face="Tahoma" color="#FFFFFF">HoTmAiL</font><font face="Tahoma" color="#345818">.</font><font face="Tahoma" color="#FFFFFF">CoM</font></p>
+				<p align="center"><font face="Tahoma" color="#FFFFFF">PiN </font>
+				<font face="Tahoma" color="#345818">:</font><font face="Tahoma" color="#FFFFFF"> 
+				2878440E</font></p>
+				<p align="center"><font face="Tahoma" color="#FFFFFF">Call Me
+				</font><font face="Tahoma" color="#345818">:</font><font face="Tahoma" color="#FFFFFF"> 
+				00966509370967</font></p>
+				<table border="1" width="88%" id="table3" style="border-collapse: collapse" bordercolor="#345818">
+					<tr>
+						<td align="center">
+						<font color="#FFFFFF" face="Tahoma" size="2">
+						GreeTz To</font></td>
+					</tr>
+				</table>
+				<table border="1" width="88%" id="table2" style="border-collapse: collapse" bordercolor="#345818">
+					<tr>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">Sn!pEr.S!Te</font></td>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">PrX HaCkEr</font></td>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">Dr.S4udi</font></td>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">Dr.DaShEr</font></td>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">Dr - LuLa</font></td>
+					</tr>
+					<tr>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">w7dani 
+						hacker</font></td>
+						<td align="center">
+						<font size="2" face="Tahoma" color="#FFFFFF">Mr.NuKe</font></td>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">Mr.aBo.Z7Z7</font></td>
+						<td align="center">
+						<font face="Tahoma" size="2" color="#FFFFFF">Joseph</font></td>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">Sm HaCkEr</font></td>
+					</tr>
+					<tr>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">Police 
+						Hacker</font></td>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">KaSpEr511</font></td>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">Saudi 
+						Security</font></td>
+						<td align="center">
+						<font face="Tahoma" size="2" color="#FFFFFF">Dr.DmaR</font></td>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">Mr.Ali</font></td>
+					</tr>
+					<tr>
+						<td align="center">
+						<font face="Tahoma" size="2" color="#FFFFFF">HaNniBaL 
+						KsA</font></td>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">RaP KsA</font></td>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">Mr.NaiF</font></td>
+						<td align="center">
+						<font face="Tahoma" size="2" color="#FFFFFF">&nbsp;Mr.3shoo8</font></td>
+						<td align="center">
+						<font color="#FFFFFF" size="2" face="Tahoma">Krash 506</font></td>
+					</tr>
+				</table>
+				<table border="1" width="88%" id="table4" style="border-collapse: collapse" bordercolor="#345818">
+					<tr>
+						<td width="146" align="center"><font color="#FFFFFF">H</font><font color="#345818">a</font><font color="#FFFFFF">C</font><font color="#345818">k</font><font color="#FFFFFF">E</font><font color="#345818">r</font></td>
+						<td align="center" width="243">
+						<font size="2" face="Tahoma" color="#FFFFFF">And All My 
+						Friends</font></td>
+						<td align="center"><font color="#345818">K</font><font color="#FFFFFF">s</font><font color="#345818">A</font></td>
+					</tr>
+				</table>
+				<p>
+				<span>
+				<span class="SpellE"><span class="GramE">
+				<span style="color: #FFFFFF; font-family: Bodoni MT; background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0% 0%">
+				FroM</span></span></span><span class="GramE"><span style="color: rgb(255, 0, 0); font-family: Bodoni MT; background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0% 0%">
+				</span><font color="#345818">
+				<span style="font-family: Bodoni MT; background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0% 0%">
+				:</span></font></span><span style="color: rgb(255, 0, 0); font-family: Bodoni MT; background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0% 0%">&nbsp; 
+				&nbsp;</span><font color="#FFFFFF"><span style="font-family: Bodoni MT; background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0% 0%">Sa</span></font><span style="color: #FFFFFF; font-family: Bodoni MT; background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0% 0%">ud</span><font color="#FFFFFF"><span style="font-family: Bodoni MT; background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0% 0%">i</span></font><span style="color: rgb(255, 0, 0); font-family: Bodoni MT; background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0% 0%">&nbsp;
+				</span><font color="#345818">
+				<span style="font-family: Bodoni MT; background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0% 0%">
+				:</span></font><span style="color: rgb(255, 0, 0); font-family: Bodoni MT; background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0% 0%">
+				</span><font color="#FFFFFF">
+				<span style="font-family: Bodoni MT; background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0% 0%">
+				Arabi</span></font><span style="background-position: 0% 0%"><font color="#FFFFFF"><span style="font-family: Bodoni MT">a</span></font></span></span></div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>
+<p>&nbsp;</SCRIPT><!--webbot bot="HTMLMarkup" endspan --><body bgcolor="#000000"><!--webbot bot="HTMLMarkup" startspan -->
+
+<!--webbot bot="HTMLMarkup" endspan -->
+</p>
+
+</SCRIPT>
+<!--webbot bot="HTMLMarkup" endspan -->
+<body bgcolor="#000000">
+
+<!--webbot bot="HTMLMarkup" startspan -->
+
+<!--webbot bot="HTMLMarkup" endspan -->
+<!-- following code added by server. PLEASE REMOVE -->
+<!-- preceding code added by server. PLEASE REMOVE --><script language="JavaScript">
+<!-- Space Trip Script by kurt.grigg@virgin.net
+cOlOuRs=new Array("abbbff","ffffee","ffff7a","dffffd","ffaaa0","ffddd0")
+S_amount = 30;//number of small stars!!!!!
+L_amount = 20;//number of larger stars!!!!
+S_Ypos = new Array();
+S_Xpos = new Array();
+L_Ypos = new Array();
+L_Xpos = new Array();
+S_speed= new Array();
+L_speed= new Array();
+if (document.all)
+{
+for (i = 0; i < S_amount; i++) 
+{                                                                
+ S_Ypos[i] = Math.round(Math.random()*document.body.offsetHeight);
+ S_Xpos[i] = Math.round(Math.random()*document.body.offsetWidth);
+}
+for (i = 0; i < L_amount; i++) 
+{                                                                
+ L_Ypos[i] = Math.round(Math.random()*document.body.offsetHeight);
+ L_Xpos[i] = Math.round(Math.random()*document.body.offsetWidth);
+}
+document.write('<div id="Outer" style="position:absolute;top:0px;left:0px">');
+document.write('<div id="Inner" style="position:relative">');
+for (i = 0; i < S_amount; i++)
+{document.write('<div id="ieS_star" style="position:absolute;top:'+S_Ypos[i]+';left:'+S_Xpos[i]+';width:1px;height:1px;background:#fffff0;font-size:1px"></div>');}
+for (i = 0; i < L_amount; i++) 
+{document.write('<div id="ieL_star" style="position:absolute;top:'+L_Ypos[i]+';left:'+L_Xpos[i]+';width:2px;height:2px;background:#ffffff;font-size:2px"></div>');}
+document.write('</div>');
+document.write('</div>');
+for (i = 0; i < L_amount; i++) 
+{
+ for (j = 0; j < cOlOuRs.length; j++)
+  {var NewColour=Math.round(Math.random()*[j])}
+document.all.ieS_star[i].style.background=cOlOuRs[NewColour];
+document.all.ieL_star[i].style.background=cOlOuRs[NewColour];
+}
+for (i=0; i < ieS_star.length; i++){S_speed[i]=Math.random()*3+1}
+for (i=0; i < ieL_star.length; i++){L_speed[i]=Math.random()*7+2}
+function ES_go()
+{
+ document.all.Outer.style.pixelTop=document.body.scrollTop;
+ for (i=0; i < ieS_star.length; i++)
+ {
+ ieS_star[i].style.pixelLeft-=S_speed[i];
+ if (ieS_star[i].style.pixelLeft < -10){ieS_star[i].style.pixelLeft=window.document.body.offsetWidth}
+ }
+S_timer=setTimeout('ES_go()',30);
+}
+function EL_go()
+{
+ for (i=0; i < ieL_star.length; i++)
+ {
+ ieL_star[i].style.pixelLeft-=L_speed[i];
+ if (ieL_star[i].style.pixelLeft < -10){ieL_star[i].style.pixelLeft=window.document.body.offsetWidth}
+ }
+L_timer=setTimeout('EL_go()',10);
+}
+function IeStart()
+{
+ ES_go();
+ EL_go();
+}
+IeStart()
+}//End Explorer
+
+else if (document.layers)
+{
+for (i = 0; i < S_amount; i++) 
+{                                                                
+ S_Ypos[i] = Math.round(Math.random()*window.innerHeight);
+ S_Xpos[i] = Math.round(Math.random()*window.innerWidth);
+ document.write("<LAYER NAME='S_star"+i+"' LEFT=0 TOP=0 BGCOLOR='#FFFFF0' CLIP='0,0,1,1'></LAYER>");
+ document.layers["S_star"+i].top = S_Ypos[i];
+ document.layers["S_star"+i].left = S_Xpos[i];
+}
+for (i = 0; i < L_amount; i++) 
+{
+ L_Ypos[i] = Math.round(Math.random()*window.innerHeight);
+ L_Xpos[i] = Math.round(Math.random()*window.innerWidth);
+ document.write("<LAYER NAME='L_star"+i+"' LEFT=0 TOP=0 BGCOLOR='#FFFFF0' CLIP='0,0,2,2'></LAYER>");
+ document.layers["L_star"+i].top = L_Ypos[i];
+ document.layers["L_star"+i].left = L_Xpos[i];
+  for (j = 0; j < cOlOuRs.length; j++)
+   {
+   var NewColour=Math.round(Math.random()*[j]);
+   }
+document.layers['S_star'+i].bgColor=cOlOuRs[NewColour];
+document.layers['L_star'+i].bgColor=cOlOuRs[NewColour];
+}
+for (i=0; i < S_amount; i++){S_speed[i]=Math.random()*3+1}
+for (i=0; i < L_amount; i++){L_speed[i]=Math.random()*7+2} 
+function NS_go()
+{
+ for (i=0; i < S_amount; i++)
+ {
+ var temp="S_star"+i;//50
+ document.layers[temp].top=S_Ypos[i]+window.pageYOffset;
+ document.layers['S_star'+i].left-=S_speed[i];
+ if (document.layers['S_star'+i].left < -10){document.layers['S_star'+i].left=window.innerWidth}
+ }
+S_timer=setTimeout('NS_go()',30);
+}
+function NL_go()
+{
+ for (i=0; i < L_amount; i++)
+ {
+ var temp="L_star"+i
+ document.layers[temp].top=L_Ypos[i]+window.pageYOffset;
+ document.layers['L_star'+i].left-=L_speed[i];
+ if (document.layers['L_star'+i].left < -10){document.layers['L_star'+i].left=window.innerWidth}
+}
+L_timer=setTimeout('NL_go()',10);
+}
+function NsStart()
+{
+ NS_go();
+ NL_go();
+}
+NsStart();
+}//End Netscape
+window.onresize = new Function("window.zorkon.reload()");
+//-->
+</script>
+
+<p align="center">&nbsp;<embed src="http://www.up.t-kjool.com/upfiles/sZS40404.mp3" align="left" border="0" width="386" height="42" type="audio/x-pn-realaudio-plugin" console="Clip1" controls="ControlPanel" autostart="true">  

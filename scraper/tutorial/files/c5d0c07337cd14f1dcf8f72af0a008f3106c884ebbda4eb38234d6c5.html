@@ -1,0 +1,1135 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Hotel Loyalty and Rewards Club Program by Chatrium Hotels and Residences | HOME</title>
+<meta name="description" content="Hotel Loyalty Program, Rewards Club by Chatrium Hotels and Residences">
+<meta name="keywords" content="Loyalty program, Hotel Loyalty, Redeem, Points, CPP, CPP+ Rewards, Rewards Club, PointPlus, Chatrium Loyalty" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/slide.css"  />
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="javascript/Ply-master/ply.css">
+ 
+<script type="text/javascript" src="javascript/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="javascript/modernizr-latest.js"></script>
+<script type="text/javascript" src="javascript/Respond-master/src/respond.js"></script>
+<script type="text/javascript" src="javascript/jquery-easing.js"></script>
+<script type="text/javascript" src="javascript/slides.min.jquery.js"></script>
+<script src="javascript/jcarousellite-master/demo/script/jquery.mousewheel-3.1.12.js"></script>
+<script src="javascript/jcarousellite-master/jquery.jcarousellite.js"></script>
+
+<script src="javascript/Ply-master/Ply.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+	$('.checkimg').error(function() {
+	 	$(this).attr({"src" : "images/noimgbig.jpg"});
+	});
+	
+});
+
+	
+if (Modernizr.mq('(max-width: 380px)')) 
+{
+	$(function() {
+	    $(".carousel").jCarouselLite({
+	        btnNext: ".next",
+	        btnPrev: ".prev",
+	        scroll: 1,  
+	        visible: 1,
+	        speed: 500
+	    });
+	});
+} 
+else if (Modernizr.mq('(max-width: 680px)')) 
+{
+	$(function() {
+	    $(".carousel").jCarouselLite({
+	        btnNext: ".next",
+	        btnPrev: ".prev",
+	        scroll: 1,  
+	        visible: 1,
+	        speed: 500
+	    });
+	});
+} 
+else if (Modernizr.mq('(max-width: 840px)')) 
+{
+	$(function() {
+	    $(".carousel").jCarouselLite({
+	        btnNext: ".next",
+	        btnPrev: ".prev",
+	        scroll: 1,  
+	        visible: 2,
+	        speed: 500
+	    });
+	});
+} 
+else if (Modernizr.mq('(max-width: 1024px)')) 
+{
+	$(function() {
+	    $(".carousel").jCarouselLite({
+	        btnNext: ".next",
+	        btnPrev: ".prev",
+	        scroll: 1,  
+	        visible: 2,
+	        speed: 500
+	    });
+	});
+}
+else 
+{
+	$(function() {
+	    $(".carousel").jCarouselLite({
+	        btnNext: ".next",
+	        btnPrev: ".prev",
+	        scroll: 1,  
+	        visible: 3,
+	        speed: 500
+	    });
+	});
+}
+	
+$(function(){
+	// Set starting slide to 1
+	var startSlide = 1;
+	// Get slide number if it exists
+	if (window.location.hash) {
+		startSlide = window.location.hash.replace('#','');
+	}
+	// Initialize Slides
+	$('#slides').slides({
+		preload: true,
+		preloadImage: 'images/loading.gif',
+		generatePagination: true,
+		play: 3000,
+		pause: 2500,
+		hoverPause: true,
+		// Get the starting slide
+		start: startSlide,
+		animationComplete: function(current){
+			// Set the slide number as a hash
+			//window.location.hash = '#' + current;
+		}
+	});
+	
+});
+
+</script>
+</head>
+<body>	
+	<link rel="stylesheet" href="javascript/sidr-2.2.1/dist/stylesheets/jquery.sidr.dark.css">
+<script src="javascript/sidr-2.2.1/dist/jquery.sidr.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-64713243-1', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+<script>
+$(document).ready(function(){
+
+   $('.btnjoin').click(function(){
+	   
+	    if($('#username').val() == '')
+		{
+			alerts('#username');
+			$('#username').focus();
+		}
+	    else if($('#password').val() == '')
+		{
+			alerts('#password');
+			$('#password').focus();
+		}
+	    else
+	    {
+			$( "#formlogin" ).submit();
+	    }
+	    
+   });
+
+   $('.btnjoin').click(function(){
+	   
+	    if($('#username').val() == '')
+		{
+			alerts('#username');
+			$('#username').focus();
+		}
+	    else if($('#password').val() == '')
+		{
+			alerts('#password');
+			$('#password').focus();
+		}
+	    else
+	    {
+			$( "#formlogin" ).submit();
+	    }
+	    
+  });
+	
+   $('.issubmenu').click(function(){
+
+	   if($('#hidevalue').val() == 0)
+	   {
+		   $('.issubmenuslide').stop().slideUp( 700, "swing" );
+		   $('#hidevalue').val('1');
+		   $('.optional').attr('src','images/header/toggle.png');
+	   }else{
+
+		   $('.issubmenuslide').stop().slideDown( 700, "swing" );
+		   $('#hidevalue').val('0');
+		   $('.optional').attr('src','images/header/toggleu.png');
+	   }
+   });
+	   
+   $('#simple-menu').sidr({
+       timing: 'ease-in-out',
+       side: 'right',
+       speed: 500
+   });
+	     
+   $( window ).resize(function () {
+     $.sidr('close', 'sidr');
+   });
+   
+	$('.signin').hover(
+	  function(e) {
+	    $( '.droplogin' ).stop().slideToggle( 700, "swing" );
+	  }, function() {
+		$( '.droplogin' ).stop().slideToggle( 700, "swing" );
+	  }
+	);
+
+	$('.chatrium').hover(
+	  function(e) {
+	    $( '.dropChatrium' ).stop().slideToggle( 700, "swing" );
+	  }, function() {
+		$( '.dropChatrium' ).stop().slideToggle( 700, "swing" );
+	  }
+	);
+
+	$('.dropChatrium li').hover(
+	  function(e) {
+		  $(this).children("div:nth-child(1)").stop().slideToggle( 700, "swing" );
+	      $(this).children("div:nth-child(3)").stop().slideToggle( 700, "swing" );
+	      $(this).children("div:nth-child(4)").stop().delay( 300 ).fadeToggle( 500, "swing" );
+	  }, function() {
+		  $(this).children("div:nth-child(1)").stop().slideToggle( 700, "swing" );
+		  $(this).children("div:nth-child(3)").stop().slideToggle( 700, "swing" );
+		  $(this).children("div:nth-child(4)").stop().fadeToggle( 200, "swing" );
+	  }
+	);
+
+	$(".menu-button").toggle(
+	  function() {
+	    $( this ).css('background-image','url(images/close.gif)');
+	    $('.responmenutext').html('CLOSE');
+	  }, function() {
+	    $( this ).css('background-image','url(images/menu.gif)');
+	    $('.responmenutext').html('MENU');
+	  }
+	);
+	
+});
+
+function alerts(sValue){
+	$(sValue).css("border","1px solid red");	
+}
+
+function returnUserLogin(sValue){
+	
+	if (sValue == "success") {
+		
+		window.location.href="member.php";	
+	} else{
+		alert('Username or password don\'t match.');		
+	}
+	
+}
+
+</script>
+	<input type="hidden" name="hidevalue" id="hidevalue" value="1" />
+	<div id="sidr">
+      <ul>
+          <li><a href="./">HOME</a></li>
+          <li><a href="aboutus.php">ABOUT US</a></li>
+          <li><a href="register.php">JOIN US</a></li>
+          <li><a href="reward.php">REWARDS</a></li>
+          <li><a href="login.php?redeem">REDEEM</a></li>
+          <li><a href="special.php">SPECIAL PROMOTION</a></li>
+          <li><a href="contactus.php">CONTACT</a></li>
+          <li class="issubmenu"><a href="#">CHATRIUM HOTEL&nbsp;&nbsp;&nbsp;<img class="optional" border="0" src="images/header/toggle.png" align="absmiddle" /></a></li>
+           	  <ul class="issubmenuslide" style="display:none;" >
+                  <li><a href="http://www.chatrium.com/chatrium_hotel/default-en.html" target="_blank" style="color:#999; font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;Chatrium Hotel Riverside Bangkok</a></li>
+                  <li><a href="http://www.chatrium.com/chatrium_emporium/default-en.html" target="_blank" style="color:#999; font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;Emporium Suites by Chatrium</a></li>
+                  <li><a href="http://www.chatrium.com/chatrium_hotel_yangon/default-en.html" target="_blank" style="color:#999; font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;Chatrium Hotel Royal Lake Yangon</a></li>
+                  <li><a href="http://www.chatrium.com/chatrium_residence_sathon/default-en.html" target="_blank" style="color:#999; font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;Chatrium Residence Sathon Bangkok</a></li>
+                  <li><a href="http://www.chatrium.com/maitriahotel/default-en.html" target="_blank" style="color:#999; font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;Maitria Hotel Sukhumvit 18</a></li>
+              </ul>
+      </ul>
+    </div>
+    
+<header>
+	<div class="page-center">
+		
+		<a href="index.php" class="logo">
+			<img src="images/header/logo.png" alt="">
+		</a>
+
+		<nav class="mainmenu">
+			<ul >
+				<li><a href="./" >HOME</a></li>
+				<li><a href="aboutus.php">ABOUT US</a></li>
+				<li><a href="register.php">JOIN US</a></li>
+				<li><a href="reward.php">REWARDS</a></li>
+				<li><a href="login.php?redeem">REDEEM</a></li>
+				<li><a href="special.php">SPECIAL PROMOTION</a></li>
+				<li><a href="contactus.php">CONTACT</a></li>
+			</ul>
+			
+		</nav>
+		<nav class="responsivemenu">
+			<a id="simple-menu" class="menu-button" href="#sidr">Toggle menu</a>
+			<p class="responmenutext">MENU</p>
+		</nav>
+		<nav class="chatrium">
+		<ul>
+			<li class="signindrowdown">
+			
+				<img class="imgChatrium" src="images/header/chatrium.png" alt="">
+				<ul class="dropChatrium">
+					<li>
+						<div class="bgblack"></div>
+						<div class="images">
+							<img src="images/header/chatrium/1.jpg" alt="">
+						</div>
+						<div class="normalImg">
+							<p>Chatrium Hotel Riverside Bangkok</p>
+						</div>
+						<div class="afterImg">
+							<div class="boxout">
+								<div class="partnername">
+									<img src="images/logomenu/1.png"/>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div>
+								<p>visit website</p>
+								<p><a href="http://www.chatrium.com/chatrium_hotel/default-en.html" target="_blank">CLICK</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="bgblack"></div>
+						<div class="images">
+							<img src="images/header/chatrium/3.jpg" alt="">
+						</div>
+						<div class="normalImg">
+							<p>Chatrium Hotel Royal Lake Yangon</p>
+						</div>
+						<div class="afterImg">
+							<div class="boxout">
+								<div class="partnername">
+									<img src="images/logomenu/3.png"/>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div>
+								<p>visit website</p>
+								<p><a href="http://www.chatrium.com/chatrium_hotel_yangon/default-en.html" target="_blank">CLICK</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="bgblack"></div>
+						<div class="images">
+							<img src="images/header/chatrium/2.jpg" alt="">
+						</div>
+						<div class="normalImg">
+							<p>Emporium Suites by Chatrium</p>
+						</div>
+						<div class="afterImg">
+							<div class="boxout">
+								<div class="partnername">
+									<img src="images/logomenu/2.png"/>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div>
+								<p>visit website</p>
+								<p><a href="http://www.chatrium.com/chatrium_emporium/default-en.html" target="_blank">CLICK</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="bgblack"></div>
+						<div class="images">
+							<img src="images/header/chatrium/4.jpg" alt="">
+						</div>
+						<div class="normalImg">
+							<p>Chatrium Residence Sathon Bangkok</p>
+						</div>
+						<div class="afterImg">
+							<div class="boxout">
+								<div class="partnername">
+									<img src="images/logomenu/4.png"/>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div>
+								<p>visit website</p>
+								<p><a href="http://www.chatrium.com/chatrium_residence_sathon/default-en.html" target="_blank">CLICK</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="bgblack"></div>
+						<div class="images">
+							<img src="images/header/chatrium/5.jpg" alt="">
+						</div>
+						<div class="normalImg">
+							<p>Maitria Hotel Sukhumvit 18</p>
+						</div>
+						<div class="afterImg">
+							<div class="boxout">
+								<div class="partnername">
+									<img src="images/logomenu/5.png"/>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div>
+								<p>visit website</p>
+								<p><a href="http://www.chatrium.com/maitriahotel/default-en.html" target="_blank">CLICK</a></p>
+							</div>
+						</div>
+					</li>
+					<div class="clear"></div>
+				</ul>
+			</li>
+		</ul>
+		</nav>
+		
+		<div class="follow">
+			<a href="https://www.facebook.com/Chatrium/" target="_blank">
+				<img src="images/header/social/fb.png" class="img1" alt="">
+			</a>
+			<a href="https://twitter.com/Chatrium" target="_blank">
+				<img src="images/header/social/tw.png" class="img2" alt="">
+			</a>
+			<a href="https://www.instagram.com/chatrium/" target="_blank">
+				<img src="images/header/social/in.png" class="img3" alt="">
+			</a>
+			<p>FOLLOW US</p>
+		</div>
+		
+		
+		<nav class="signin">
+		<ul>
+			<li class="signindrowdown">
+			
+				<img class="imglogin" src="images/header/login.png" alt="">
+				<p class="plogin">SIGN IN</p>
+				<ul class="droplogin">
+					<li>
+						<div>
+							<h1>JOIN US</h1>
+							<p>Discover Chatrium Point Plus<span class="hidejoinue"> - our loyalty program. As a valued member, 
+							you can earn points whenever you stay or make bookings at our luxury properties in the 
+							legendary cities of Bangkok and Yangon</span>. Sign up now – FREE – and submit. 
+							Enjoy our warm hospitality, generous bonuses and great discounts.</p>
+						</div>
+						<div>
+							<a href="register.php" class="btnjoin">Join Us</a>
+							<div class="clear"></div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<h1>MEMBER LOGIN</h1>
+							<p>The Chatrium Point Plus is a loyalty program developed and managed</p>
+							<p>by Chatrium Hotels & Residences (CHR) headquartered in Bangkok,</p>
+							<p>Thailand. The purpose is to recognise and reward our most valued supporters.</p>
+						</div>
+						<div>
+							<h2>About Collecting Your Loyalty Points!</p>
+							<p>Points are counted from the date of membership application.</p>
+							<p>Each member of the Chatrium Point Plus can get points for direct bookings</p>
+							<p>through Chatrium website Points are based on net daily room rate,</p>
+							<p>Points will be credited and reflected in the system after departure date</p>
+							<p>within 2 working days.</p>
+						</div>						
+					</li>
+					<li>
+							<form action="process.login2.php" method="post" enctype="multipart/form-data" name="formlogin" id="formlogin" target="savetarget">  
+							<div>
+								<h1 class="hiedcontent">MEMBER LOGIN</h1>
+								<input type="hidden" name="action" id="action" value="chklogin" />
+								<input type="text" name="UserName" id="username" placeholder="Your Membership ID" />
+								<input type="password" name="PassWord" id="password" placeholder="Your Password" />	
+							</div>
+							<div>
+								<a href="javascript:void(0);" class="btnjoin">Login</a>
+								<div class="clear"></div>
+							</div>
+							<div>
+								<a href="forgot.php" class="btnLogin">forgot your password?</a>
+								<div class="clear"></div>
+							</div>
+							</form>
+							<iframe src="" id="savetarget" name="savetarget" style="border:0px;width:0px;height:0px;margin:0;padding:0;"></iframe>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		</nav>
+		<div class="clear"></div>
+		
+	</div>
+	
+	</header>		<div id="wrapper" class="home-page">
+		
+			<div class="bgparagon">
+				<div class="slidepanel">
+				
+					<div class="welcome">
+						<img src="images/slidehome/welcome.png" />
+						<p>Members of Chatrium Point Plus</p>
+						<p>To sign up for Chatrium Point Plus,</p>
+						<p>simply complete the online application form</p>
+						<p class="pbr">&nbsp;</p>
+						<div>
+							<a href="register.php" class="joinushome">Join us</a>
+							<div class="clear"></div>
+						</div>
+
+					</div>
+					<div class="slidinginmmd">
+					
+							<!-- SLIDE -->
+							<div id="slides">
+									<div class="slides_container">
+										
+										<div class="slide">
+											<img src="images/slidehome/1.png" width="1137" height="771"/>
+										</div>
+										<div class="slide">
+											<img src="images/slidehome/2.png" width="1137" height="771"/>
+										</div>
+										<div class="slide">
+											<img src="images/slidehome/3.png" width="1137" height="771"/>
+										</div>
+										<div class="slide">
+											<img src="images/slidehome/4.png" width="1137" height="771"/>
+										</div>
+										<div class="slide">
+											<img src="images/slidehome/5.png" width="1137" height="771"/>
+										</div>
+																		
+									</div>
+									
+							</div>
+							<!-- SLIDE -->
+							
+						
+					</div>
+					
+					<div class="clear"></div>
+				</div>
+			
+			</div>	
+			<div class="reward-panel">
+			
+				<div class="rewardWord">
+					<img src="images/reward/reward.png" />
+				</div>
+				
+				<div class="slideReward">
+					<div class="slidepanel">
+					
+						<img src="images/reward/prev.png" class="prev"/>	
+						
+						  <div class="custom-container default">
+					        <div class="carousel">
+					          	 
+					           
+					           
+					            <ul>
+					               <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">50&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/CPP-vouchers_26-35.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>300 Baht voucher for Laundry Shop at Emporium Suites by Chatrium</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=111&point=50" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+									  <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">150&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/green_leaf_spa_crst.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>300 Baht voucher for Green Leaf Spa, Chatrium Residence Sathon Bangkok</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=9&point=150" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+									  <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">300&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/studio_super_deluxe_es.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>1-night room upgrade to Studio Super Deluxe with Breakfast, Emporium Suites By Chatrium</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=11&point=300" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+									  <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">500&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/one_bedroom_deluxe_es.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>1-night room upgrade to One-Bedroom Deluxe with Breakfast, Emporium Suites by Chatrium</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=16&point=500" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+									  <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">1000&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/Airport-Emporium.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>1-way airport transfer, Emporium Suites by Chatrium</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=21&point=1000" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+									  <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">1500&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/food_and_beverage_emporia_restaurant_es.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>Voucher valued 3,000 Baht at Emporia Restaurant, Emporium Suites by Chatrium</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=27&point=1500" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+									  <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">2000&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/one_bed_room_suites_crst.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>1-night upgrade to one Bedroom Suite with 2 Breakfast at Chatrium Residence Sathon Bangkok</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=141&point=2000" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+									  <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">2200&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/CTM-3041-cityview.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>2-night stay at Grand Room - City View with Breakfast, Chatrium Hotel Riverside Bangkok</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=96&point=2200" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+									  <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">3000&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/two_bedroom_suites_crst.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>1-night stay at Two-Bedroom with Breakfast, Chatrium Residence Sathon Bangkok</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=37&point=3000" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+									  <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">4200&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/J01-CHRB.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>2-night stay at Grand Suite One-Bedroom - River View with Breakfast, Chatrium Hotel Riverside Bangkok</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=34&point=4200" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+									  <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">5000&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/CPP-vouchers_37-Green-leaf-spa-CRST.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>10,000 Baht voucher for Green Leaf Spa, Chatrium Residence Sathon Bangkok</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=47&point=5000" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+									  <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">10000&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/itemImage_241.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>2-night stay at Luxury Suite with Breakfast, Chatrium Hotel Royal Lake Yangon</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=72&point=10000" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+									  <li>
+										<div class="items">
+											<div class="imgs">
+												<div class="points">15000&nbsp;<img src="images/reward/point.png" /></div>
+												<img class="checkimg" src="imagesprd/fitness_1year_membership_es.jpg" width="327" height="200" />
+											</div>
+											<div class="description">
+												<p>1-year membership for 1 person at Fitness Center, Emporium Suites by Chatrium</p>
+											</div>
+											<div class="others">
+												<div class="left">
+												
+													<!--a href="javascript:void(0);">
+														<img src="images/reward/fb.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/tw.png" align="absmiddle" />
+													</a>
+													
+													<a href="javascript:void(0);">
+														<img src="images/reward/in.png" align="absmiddle" />
+													</a-->
+													
+												</div>
+												<div class="right">
+													<a href="login.php?redeem=149&point=15000" class="joinushome">Redeem</a>
+												</div>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</li>
+														            </ul>
+					       
+					       
+					       	
+					        </div>
+					        <div class="clear"></div>
+					    </div>
+					    
+					   <img src="images/reward/next.png" class="next"/>	
+					      <div class="clear"></div>
+					</div>
+					  <div class="clear"></div>
+				</div>
+				  <div class="clear"></div>
+			</div>	 	
+		  <div class="clear"></div>
+			<div class="point-panel">
+				<img src="images/pointsssss.jpg" />
+			</div>
+			
+			
+			
+			<style>
+ .texttelmobile{
+ 	color:black !important;
+ 	}
+</style>
+<footer>
+	<div id="footer">
+	
+		<div class="left">
+			<ul class="nav-footer1">
+				<li>
+					<a href="./">Home</a>
+				</li>
+				<li>
+					<a href="aboutus.php">About Us</a>
+				</li>
+				<li>
+					<a href="register.php">Join Us</a>
+				</li>
+				<li>
+					<a href="reward.php">Rewards</a>
+				</li>
+				<li>
+					<a href="login.php?redeem">Redeem</a>
+				</li>
+				<li>
+					<a href="special.php">Special Promotion</a>
+				</li>
+				<li>
+					<a href="contactus.php">Contact</a>
+				</li>
+			</ul>
+		</div>
+			
+		<div class="left">
+			<ul class="nav-footer2">
+				<li>
+					<a href="javascript:void(0);">Rewards</a>
+				</li>
+				<li>
+					<a href="reward.php">All Rewards</a>
+				</li>
+				<li>
+					<a href="reward.php?prope=1">Chatrium Hotel Riverside Bangkok</a>
+				</li>
+				<li>
+					<a href="reward.php?prope=3">Chatrium Hotel Royal Lake Yangon</a>
+				</li>
+				<li>
+					<a href="reward.php?prope=2">Emporium Suites by Chatrium</a>
+				</li>
+				<li>
+					<a href="reward.php?prope=4">Chatrium Residence Sathon Bangkok</a>
+				</li>
+				<li>
+					<a href="reward.php?prope=6">Maitria Hotel Sukhumvit 18</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="right">
+			<p>Contact Info</p>
+			<p>Chatrium Hotels & Residences?</p>
+			<p>28 Charoenkrung Road, Watprayakrai Bangkholame,</p>
+			<p>Bangkok 10120, Thailand  Tel: <a href="tel:+6623078888" class="texttelmobile">+66(0) 2307 8888</a></p>
+			<p>Fax: +66(0) 2307 8899 Email : <a href="mailto:plus@chatrium.com" class="texttelmobile">plus@chatrium.com</a></p>
+			<div class="clear"></div>
+			<p>Follow Us : 	<a href="https://www.facebook.com/Chatrium/" target="_blank">
+								<img src="images/ftfb.png"  />
+							</a>
+							
+							<a href="https://twitter.com/Chatrium" target="_blank">
+								<img src="images/fttw.png"  />
+							</a>
+							
+							<a href="https://www.instagram.com/chatrium/" target="_blank">
+								<img src="images/ftin.png"  />
+							</a>
+			</p>
+			<p class="copyright">&copy;&nbsp;&nbsp;2016&nbsp;&nbsp;Chatrium Hotels &amp; Residences.</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	
+	<div id="footer-bottom">
+	
+		<div class="left">
+			<a href="./">
+				<img src="images/logofooter.png" />
+			</a>
+		</div>
+		<div class="left" >
+			<a href="http://www.chatrium.com/chatrium_hotel/default-en.html" target="_blank">
+				<img src="images/footerlogo1.jpg" />
+			</a>
+			<a href="http://www.chatrium.com/chatrium_hotel_yangon/default-en.html" target="_blank">
+				<img src="images/footerlogo2.jpg" />
+			</a>
+			<a href="http://www.chatrium.com/chatrium_emporium/default-en.html" target="_blank">
+				<img src="images/footerlogo3.jpg" />
+			</a>
+			<a href="http://www.chatrium.com/chatrium_residence_sathon/default-en.html" target="_blank">
+				<img src="images/footerlogo4.jpg" />
+			</a>
+			<a href="http://www.chatrium.com/maitriahotel/default-en.html" target="_blank">
+				<img src="images/footerlogo5.jpg" />
+			</a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+</footer>		</div>
+	
+    
+</body>
+</html>

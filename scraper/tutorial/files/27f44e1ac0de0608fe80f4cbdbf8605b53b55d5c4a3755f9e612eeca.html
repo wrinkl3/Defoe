@@ -1,0 +1,198 @@
+?<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hacked By Golden-Hack</title>
+<style type="text/css">.by {
+	text-align:center;
+	color:#CCC;
+	margin-top: 50px;
+	text-shadow:  3px 2px 3px #FFF;
+}
+.shn  {
+	
+
+	text-align:center;
+	background: url(http://farsplus.ir/fakhi2.png);
+	height: 241px;
+	width: 500px;
+	font-size: 28px;
+	font:bold;
+}
+.hcs {
+	font:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+		margin-top: 22px;
+		color:#F00;
+		text-align:center;
+		font-size:26px;
+		font:bold;
+		text-shadow:  3px 2px 3px #FF0;
+}
+
+.wh {
+	font:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	margin-top: 22px;
+		color:#FF0;
+		text-align:center;
+		font-size:22px;
+		font:bold;
+		text-shadow:  3px 2px 1px #CCC;
+
+}</style>
+<script type="text/javascript">/*<![CDATA[*/ 
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+	this.currentText = "";
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+
+/*]]>*/</script> 
+</head><body onload="type_text()" style="background-repeat: repeat;" background="http://im12.gulfup.com/2012-07-13/1342142484571.gif">
+
+<div style="text-shadow: 3px 2px 3px rgb(255, 153, 0);" align="center">
+<font color="#ff0000" size="+3">
+<b>
+You Has Been Hacked
+</b>
+</font>
+
+</div>
+<div align="center">
+<p>&nbsp;</p>
+<p>
+<img src="http://im12.gulfup.com/2012-07-13/1342142484762.png" width="415" border="0" height="293"></p>
+<p>
+<font size="+4" color="#FF9900"><b>??? ???? ?????? ??????</b></font></p>
+<p>
+<font size="+4" color="#FF9900"><b>??????? ??? ????</b></font></p>
+<p><font color="#ff9900" 
+<font size="+4" color="#FF9900"><b>Team Hack-school</b></font></p>
+<p><font color="#ff9900"
+size="+4"><b>Golden-<span lang="en-us">Hack</span> </b></font></p>
+<p><font color="#ff9900" size="+4"><b>Your Fucking ses in loww......</b></font></p>
+<p><font color="#ffcc33" size="+2">Hacked you 
+  </font></p>
+</div>
+
+
+<div align="center">
+<p id="message" style="color: rgb(204, 204, 204); text-shadow: 2px 1px 1px rgb(153, 153, 153); font-size: 18px;">		
+Your Website Has been hacked !!!<br>
+Your Site Is Really UnSecure<br>
+This Is An Alarm For You...!<br>
+Improve Your site Security Or Fuck Up In Our Net WorlD :)) <br>
+assholes :-j  <br>
+If Can't Do It Contact Us: shnowhackers[At]Gmail[Dot]com
+
+</p>
+</div>
+<script type="text/javascript">/*<![CDATA[*/ 
+new TypingText(document.getElementById("message"), 90, function(i){ var ar = new Array("_", " ", "_", " ", "_", " ", "_", " "); return " " + ar[i.length % ar.length]; });
+ 
+//Type out examples:
+TypingText.runAll();
+  /*]]>*/</script>
+<div class="hcs">
+
+ ||Golden-Team & Hack || Hcak SerVer || Pc ||<span lang="en-us">W</span>indows 
+	||security||</div>
+
+<div class="wh">
+was here</div>
+
+<div class="hcs" style="text-shadow: 2px 1px 1px rgb(102, 255, 0);">
+  <p>Mr:mohmed</p>
+  <p><font color="green">
+    &nbsp;alm4sry@gamil.com 
+  </font></p>
+	<p><span lang="en-us"><font color="#008000">Mohmed_mo60@yahoo.com</font></span></p>
+</div>
+<div class="hcs" style="text-shadow: 2px 1px 1px rgb(102, 255, 0);">
+  <p>Mr:ahmed</p>
+  <p><font color="#008000">Wwe002006@yahoo.com</font><font color="green">
+    </font></p>
+	
+</div>
+<embed src="http://im12.gulfup.com/2012-07-13/1342142484434.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="obj1" quality="High" width="1" height="4">
+<script type="text/javascript" src=""></script>	</body></html>

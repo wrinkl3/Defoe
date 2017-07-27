@@ -1,0 +1,1194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="Dimofinf" />
+<meta name="resource-type" content="document">
+<meta name="page-type" content="Web hosting and development and design">
+<meta NAME="Copyright" CONTENT="All rights reserved to Dimofinf" />
+<meta NAME="audience" lang="en" CONTENT="all" />
+<meta name="keywords" content="web hosting,domain registration,web development,content management system,cms" />
+<meta name="robots" content="index,follow" />
+<meta name="revisit-after" content="1 day" />
+<meta name="rating" lang="en" content="Web hosting and Content Management System" />
+<meta name="description" content="Web hosting and websites development">
+<title>Dimofinf - Cloud Hosting | Dedicated Servers | CMS Development</title>
+<base href="https://www.dimofinf.net/" /><link rel="stylesheet" type="text/css" href="templates/dimint/style.css" />
+<script type="text/javascript" src="includes/jscript/jquery.js"></script>
+<script type="text/javascript" src="includes/jscript/jquery.tools.min.js"></script>
+<script type="text/javascript" src="includes/jscript/rotator.js"></script>
+<script type="text/javascript" src="includes/jscript/jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="includes/jscript/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="includes/jscript/jqueryui.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+<script type="text/javascript">
+	var LiveHelpSettings = {};
+	LiveHelpSettings.server = 'www.dimofinf.net/modules';
+	LiveHelpSettings.embedded = true;
+	LiveHelpSettings.department = 'Customer Service';
+	LiveHelpSettings.locale = 'en';
+	LiveHelpSettings.plugin = 'WHMCS';
+	
+ (function(d, $, undefined) {
+  $(window).ready(function() {
+var LiveHelp = d.createElement('script'); LiveHelp.type = 'text/javascript'; LiveHelp.async = true;
+LiveHelp.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + LiveHelpSettings.server + '/livehelp/scripts/jquery.livehelp.js';
+var s = d.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(LiveHelp, s);
+});
+})(document, jQuery);
+
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5580762-2', 'dimofinf.net');
+ga('send', 'pageview');
+
+
+function showresponse(id, response,lid) {
+$('#'+id).html(unescape(response));
+$('#'+lid).fadeOut();
+$('#'+id).fadeIn();
+}
+$(document).ready(function(){
+$('.btn').each(function(){
+var b = $(this);
+var tt = b.text() || b.val();
+if ($(':submit,:button',this)) {
+b = $('<a>').insertAfter(this). addClass(this.className).attr('id',this.id);
+$(this).remove();
+}
+b.text('').css({cursor:'pointer'}). prepend('<i></i>').append($('<span>').
+text(tt).append('<i></i><span></span>'));
+});
+
+$(".newss").jCarouselLite({
+vertical: true,
+hoverPause:true,
+visible: 1,
+auto:5000,
+speed:1000,
+btnNext: ".next",
+btnPrev: ".prev",
+mouseWheel: true
+});
+
+$(".services").mouseenter(function(){
+$(".services").animate({"marginTop": "+=10px"}, "fast");
+}).mouseleave(function() {
+$(".services").animate({"marginTop": "-=10px"}, "slow");
+});
+$(".carea").mouseenter(function(){
+$(".carea").animate({"marginTop": "+=10px"}, "fast");
+}).mouseleave(function() {
+$(".carea").animate({"marginTop": "-=10px"}, "slow");
+});
+$(".chelp").mouseenter(function(){
+$(".chelp").animate({"marginTop": "+=10px"}, "fast");
+}).mouseleave(function() {
+$(".chelp").animate({"marginTop": "-=10px"}, "slow");
+});
+$(".about").mouseenter(function(){
+$(".about").animate({"marginTop": "+=10px"}, "fast");
+}).mouseleave(function() {
+$(".about").animate({"marginTop": "-=10px"}, "slow");
+});
+$("#left").click(function(){
+$(".block").animate({"left": "-=50px"}, "slow");
+});
+function megaHoverOver(){
+$(this).find(".sub").stop().fadeTo('fast', 1).show();
+(function($) {
+jQuery.fn.calcSubWidth = function() {
+rowWidth = 0;
+$(this).find("ul").each(function() {
+rowWidth += $(this).width(); 
+});
+};
+})(jQuery); 
+if ( $(this).find(".row").length > 0 ) {
+var biggestRow = 0;
+$(this).find(".row").each(function() { 
+$(this).calcSubWidth();
+if(rowWidth > biggestRow) {
+biggestRow = rowWidth;
+}
+});
+$(this).find(".sub").css({'width' :biggestRow});
+$(this).find(".row:last").css({'margin':'0'});
+} else {
+$(this).calcSubWidth();
+$(this).find(".sub").css({'width' : rowWidth});
+}
+}
+function megaHoverOut(){
+$(this).find(".sub").stop().fadeTo('fast', 0, function() {
+$(this).hide(); 
+});
+}
+var config = {
+sensitivity: 2,
+interval: 0, 
+over: megaHoverOver,
+timeout: 0,
+out: megaHoverOut
+};
+$("ul#topnav li .sub").css({'opacity':'0'});
+$("ul#topnav li").hoverIntent(config);
+$('#slider').nivoSlider();
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel');
+var popURL = $(this).attr('href');
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1];
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img border="0" src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+$('#' + popID).css({ 
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn();
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove();
+});
+return false;
+});
+});
+$(function() {
+$( "#accordion" ).accordion({
+header: 'h4',
+heightStyle: "content",
+navigation: true,
+collapsible: true
+});
+});
+$(function() {
+$('#domainh,#domain,#sld,#sld0,#sld1,#sld2').keydown(function(e){
+if(e.keyCode==74 && e.shiftKey)
+return false;
+});
+});
+function chkidn(f,d)
+{
+if(d=="sldall"){
+d= $('#sld0').val() ? "sld0" : ($('#sld1').val() ? "sld1" : "sld2");
+}
+$.get("idn.php",{
+act: "itoa",
+domain: $('#'+d).val().replace('?','')
+}, 
+function(r)
+{ 
+$('#'+d).val(escape(r));
+$('#'+f).submit();
+} 
+);
+return false;
+}
+$(function() {
+$("a.radioorder").click(function() {
+var $column = $(this).attr('title');
+$('table').children().find("td").removeClass("light");
+$('table').children().find("td."+$column).addClass("light");
+$('table').children().find("td."+$column).find(":radio").attr("checked","checked");
+return false;
+});
+});
+</script>
+
+<style type="text/css">
+ul#topnav a.navbutton {
+margin-left:10px;
+}
+ul#topnav {
+padding-left: 15px;
+}
+ul#topnav,ul#topnav li,ul#topnav li .row,ul#topnav li .sub ul {
+float:left;
+}
+ul#topnav li .sub {
+left:0;
+float:left;
+}
+ul#topnav .sub ul li a {
+float: none;
+background: url('templates/dimint/images/navlist_arrow.png') no-repeat;
+background-position: left;
+padding: 0;
+padding-right :5px;
+padding-left:15px;
+}
+ul#topnav .sub ul li a:hover {
+background-position: left;
+}
+ul#topnav li:hover a, ul#topnav li a:hover {
+background:url(templates/dimint/images/left_navar.png) no-repeat;
+background-position: left;
+}
+ul#topnav a.navbutton-ar {
+background-image: url(templates/dimint/images/navbutton_ar.png);
+background-repeat: no-repeat;
+background-position: left;
+}
+.dropdown dt a {
+margin-left:3px;
+padding-left:10px;
+text-align:right;
+background:url(templates/dimint/images/arrow.png) no-repeat scroll left center; 
+}
+.dropdown dd ul {
+left:3px; 
+}
+.dropdown dd ul li a {
+text-align:right;
+}
+.tl{
+-moz-border-radius-topleft:6px;-webkit-border-top-left-radius:6px;border-left: 0px;
+}
+.tr{
+-moz-border-radius-topright:6px;-webkit-border-top-right-radius:6px;
+}
+ul#navmenu li {
+float:left;
+margin-right: 2px;
+background: url(templates/dimint/images/navmenu_dot.png) no-repeat right bottom;
+}
+table.frame table td.fieldarea{
+border-right: 0px;
+}
+.errorbox {
+background-image: url('templates/dimint/images/errorboxbg.png');
+background-repeat: no-repeat;
+background-position: top right;
+padding-left: 5px;
+padding-right: 45px;
+}
+.successbox {
+background-image: url('templates/dimint/images/successboxbg.png');
+background-repeat: no-repeat;
+background-position: top right;
+padding-left: 5px;
+padding-right: 45px;
+}
+.notebox {
+background-image: url('templates/dimint/images/noteboxbg.png');
+background-repeat: no-repeat;
+background-position: top right;
+padding-left: 5px;
+padding-right: 45px;
+}
+#accordion h4 {
+background:#F7F7F7 url('templates/dimint/images/ar_accordion_down.png') no-repeat scroll left center; ;
+padding-left:20px;
+}
+#accordion h4.ui-state-active {
+background: url('templates/dimint/images/ar_accordion_left.png') no-repeat scroll left center;
+padding-left:20px;
+}
+ul#menu li {
+background: url('templates/dimint/images/graydot.png') no-repeat scroll left center; ;
+padding-left:13px;
+}
+ul#menu li:hover {
+background-image: url('templates/dimint/images/graydot.png') no-repeat scroll left center; ;
+padding-left:13px;
+}
+ul#footer li,ul#footer li.last{
+background: url('templates/dimint/images/bluedot.png') no-repeat scroll left center; ;
+padding-left:13px;
+}
+ul#footer li:hover {
+background-image: url('templates/dimint/images/graydot.png') no-repeat scroll left center; ;
+padding-left:13px;
+}
+.footernav{
+border-left: 1px solid #E7E7E7;
+}
+.stickyicons {
+right: -2px;
+}
+
+
+#content_container{
+background-image: url('templates/dimint/images/left_logobge.gif');
+background-repeat: no-repeat;
+background-position:left 30px;
+}
+
+
+
+div.dimcircle2 {
+left:30px;
+}	
+div.dimcircle3 {
+left:-50px;
+}	
+div.dimcircle4 {
+left:55px;
+}	
+
+
+
+h3,h4,h5 {
+font-family: 'HacenExtenderX4Deeper',verdana,'Times New Roman','Traditional Arabic',arial,geneva,lucida,'lucida grande',helvetica,'sans-serif';
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+   var _mfq = _mfq || [];
+   (function() {
+       var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
+       mf.src = "//cdn.mouseflow.com/projects/3c5e99d4-b9ef-485e-af8c-1e11908e1ddd.js";
+       document.getElementsByTagName("head")[0].appendChild(mf);
+   })();
+</script>
+
+<div id="content_container">
+<div class="stickyicons">
+<div class="sticons_so"><a href="#?w=350" rel="popup_bs1" class="poplight"><img border="0" src="templates/dimint/images/left_specialoffers.png" alt="Special Offers" title="Special Offers"></a></div>	
+<div class="sticons"><!-- stardevelop.com Live Help International Copyright - All Rights Reserved //-->
+<!--  BEGIN stardevelop.com Live Help Messenger Code - Copyright - NOT PERMITTED TO MODIFY COPYRIGHT LINE / LINK //-->
+<a href="#" class="LiveHelpButton default"><img src="https://www.dimofinf.net/modules/livehelp/include/status.php" id="LiveHelpStatusDefault" name="LiveHelpStatusDefault" border="0" alt="Live Help" class="LiveHelpStatus"/></a>
+<!--  END stardevelop.com Live Help Messenger Code - Copyright - NOT PERMITTED TO MODIFY COPYRIGHT LINE / LINK //--></div>
+<div class="sticons"><div dir="ltr" title="Skype us" style="cursor:pointer;cursor:hand;" onclick="javascript:window.showModalDialog('http://www.dimofinf.net/skype.html', window)"><img border="0" oncontextmenu="return false;" alt="Skype us" src="templates/dimint/images/skypeus.png" name="Skype" /></div></div>	
+<div class="sticons"><a target="_blank" href="http://www.facebook.com/Dimofinf.Net"><img border="0" src="templates/dimint/images/dimfacebook.png" alt="Our Facebook page" title="Our Facebook page"></a></div>
+<div class="sticons"><a target="_blank" href="http://twitter.com/Dimofinf"><img border="0" src="templates/dimint/images/dimtwitter.png" alt="Follow Us On Twitter" title="Follow Us On Twitter"></a></div>
+<div class="sticons"><a target="_blank" href="http://www.youtube.com/user/DIMOFINF"><img border="0" src="templates/dimint/images/dimyoutube.png" alt="Our Youtube Channel" title="Our Youtube Channel"></a></div>
+<div class="sticons"><a target="_blank" href="http://blog.dimofinf.net"><img border="0" src="templates/dimint/images/dimblog.png" alt="Blog" title="Blog"></a></div>
+</div>
+<div id="popup_bs1" class="popup_block" style="display: none; height:auto;margin:auto">
+<div style="padding:15px 0px 15px 0px;">
+
+<div class="largfont"><sub><sub><img border="0" src="templates/dimint/images/soffers.png"></sub></sub>&nbsp;Special Offers</div>
+<ul id="menu">
+<li><a href="offers.php">Offers</a></li>
+<li><a href="specialoffers.php?action=dimpackage">Dimofinf CMS Package</a></li>
+<li><a href="dedicatedservers.php">D. Servers Special Offers</a></li>
+<li><a href="specialoffers.php?action=cmsreseller">Dimofinf CMS Reseller</a></li>
+
+</ul>
+</div>	
+</div>	
+<div id="top">
+<div id="welcome_box">
+<span style="float:left;padding-top:4px;"><img border="0" src="templates/dimint/images/navbit-home.png" alt=""> <a href="./">Home</a>&nbsp;<b>|</b><img border="0" src="templates/dimint/images/cart1.png" alt=""> <a href="cart.php?a=view&carttpl=ajaxcart">View the cart</a>&nbsp;<b>|</b>&nbsp;<img border="0" src="templates/dimint/images/login1.png" alt=""> <a href="clientarea.php">Login</a>&nbsp;<b>|</b>&nbsp;<a href="/?language=arabic"><sub><img border="0" src="templates/dimint/images/arabic2.gif" alt=""></sub> </a><sub><img border="0" src="templates/dimint/images/arabic.png" /></sub>
+
+</span>
+<a href="#" class="LiveHelpButton">
+<span style="float:right;padding-top:4px;padding-right:7px;"><img border="0" src="templates/dimint/images/24support.png" alt=""></span>
+</a>
+</div>
+</div>
+<table width="100%" class="logo">
+<tr>
+<td align="left" width="30%">
+<a href="./"><img border="0" src="templates/dimint/images/dimofinf_logo.png" alt="Dimofinf Inc."></a>
+</td>
+<td width="70%" style="padding-top:10px;">
+<div class="topnavshadow"><img border="0" src="templates/dimint/images/navulbg.png" alt=""></div>
+<ul id="topnav">
+<li class="services">
+<a href="#" class="navbutton navbutton-ar">Our services</a>
+<div class="sub">
+<div class="row">
+<ul>
+<li><h2><a style="color:#BC449D;" href="dedicatedservers.php">Dedicated servers</a></h2></li>
+<li><a href="overviewservers.php">Management Levels</a></li>
+<li><a href="dedicatedservers.php">All Servers</a></li>
+<li><a href='cart.php?gid=18&carttpl=ajaxcart' /> <label style="cursor: pointer;" for="gid18">Dual Core</label></a></li>
+<li><a href='cart.php?gid=19&carttpl=ajaxcart' /> <label style="cursor: pointer;" for="gid19">Quad Core</label></a></li>
+<li><a href='cart.php?gid=26&carttpl=ajaxcart' /> <label style="cursor: pointer;" for="gid26">Custom Built</label></a></li>
+<li><a href="knowledgebase.php?action=displayarticle&id=439&catid=81">Documentations</a></li>
+</ul>
+<ul>
+<li><h2><a style="color:#BC449D;" href="hostingplans.php">Shared Hosting</a></h2></li>
+<li><a href="hostingplans.php">Prices & Features</a></li>
+<li><a href="why-dimofinf-hosting.php">Why Dimoinf Hosting</a></li>
+<li><a href="cart.php?gid=17&carttpl=ajaxcart">Shared Servers</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=2">Documentations</a></li>
+</ul>
+<ul>
+<li><h2><a style="color:#BC449D;" href="backupservice.php">Backup Services</a></h2></li>
+<li><a href="backupservice.php">About The Services</a></li>
+<li><a href="dbsfeatures.php">DimofinfBS's Features</a></li>
+<li><a href="dbsfaq.php">Backup service FAQ</a></li>
+<li><a href="cart.php?gid=11&carttpl=slider">Backup plans</a></li>
+<li><a href="cart.php?gid=13&carttpl=slider">Backup servers</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=111">Documentations</a></li>
+</ul>
+</div>
+<div class="row">
+<ul>
+<li><h2><a style="color:#BC449D;" href="cmsservice.php">Dimofinf CMS</a></h2></li>
+<li><a href="cmsservice.php">About The Services</a></li>
+<li><a href="cart.php?gid=2&carttpl=ajaxcart">Purchase a license</a></li>
+<li><a href="cmsfeatures.php">Features</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=6">Documentations</a></li>
+<li><a href="cmsfaq.php">Dimofinf FAQ</a></li>
+<li><a href="downloads.php?action=displaycat&catid=3">Helping tools</a></li>
+<li><a href="downloads.php?action=displaycat&catid=4">Dimofinf blocks</a></li>
+<li><a href="downloads.php?action=displaycat&catid=5">Extra blocks</a></li>
+<li><a href="downloads.php?action=displaycat&catid=6">Flash blocks</a></li>
+<li><a href="downloads.php?action=displaycat&catid=2">Styles gallery</a></li>
+<li><a href="cmsdevelopment.php">Custom Development</a></li>
+<li><a href="http://forum.dimofinf.net">Clients' Forum</a></li>
+<li><a href="links.php">Dimofinf's Users Links</a></li>
+</ul>
+<ul>
+<li><h2><a style="color:#BC449D;" href="domains.php">Domains Registration</a></h2></li>
+<li><a href="domains.php">About The Services</a></li>
+<li><a href="domainchecker.php">Domain Checker</a></li>
+<li><a href="domainchecker.php?search=bulkregister">Bulk Domain Search</a></li>
+<li><a href="domainchecker.php?search=bulktransfer">Bulk Domain Transfer</a></li>
+<li><a href="cart.php?a=add&domain=register&carttpl=ajaxcart">Domain Registration</a></li>
+<li><a href="cart.php?a=add&domain=transfer&carttpl=ajaxcart">Domain Transfer</a></li>
+<li><a href="cart.php?gid=9&carttpl=ajaxcart">Business Listing</a></li>
+<li><a href="cart.php?gid=9&carttpl=ajaxcart">ID Protect</a></li>
+<li><a href="cart.php?gid=9&carttpl=ajaxcart">Theft protection</a></li>
+<li><a href="domainprices.php">All domain pricing</a></li>
+</ul>
+<ul>
+<li><h2><a style="color:#BC449D;" href="renderingplans.php">Cloud Rendering</a></h2></li>
+<li><a href="renderingplans.php">Prices & Features</a></li>
+<li><a href="why-dimofinf-rendering.php">Why Dimofinf Rendering</a></li>
+<li><a href="cal8cores.php">Viewing Orders Calendars</a></li>
+<li><a href="renderingfaq.php">FAQ</a></li>
+<li><a href="knowledgebase.php?action=displayarticle&id=2755">Documentation</a></li>
+</ul>
+</div>
+<div class="row">
+<ul>
+<li><h2><a style="color:#BC449D;" href="distprog.php">Hosting distributor</a></h2></li>
+<li><a href="distprog.php">Features and Terms</a></li>
+<li><a href="branddistlev.php">Branding distributor</a></li>
+<li><a href="nobranddistlev.php">No-Branding distributor</a></li>
+<li><a href="knowledgebase.php?action=displayarticle&id=2784&catid=81">How to start?</a></li>
+</ul>
+<ul>
+<li><h2><a style="color:#BC449D;">Other services</a></h2></li>
+<li><a href="sslcertificates.php">SSL Certificates</a></li>
+<li><a href="cart.php?gid=7&carttpl=ajaxcart">Dimofinf Mobile</a></li>
+</ul>
+</div>
+</li>
+<li class="carea">
+<a href="clientarea.php" class="navbutton navbutton-ar">Client Area</a>
+<div class="sub">
+<ul style="width:250px;">
+You have to login first to be able to view this data!<br /><br />
+<form method="post" action="dologin.php">
+<input type="hidden" name="token" value="da6ad0d7b8ed76e62079a1e91a14001ed72a5385" />
+<p>Email Address: <span style='float:right'><input name="username" type="text" size="20" /></span></p>
+<p>Password: <span style='float:right'><input name="password" type="password" size="20" /></span></p>
+<p><input type="submit" class="submitbutton" value="Login" /><span style='float:right'><input type="checkbox" name="rememberme" />&nbsp;Remember Me</span></p>
+</form>
+<a href="pwreset.php">Forgotten Your Password?</a>
+</ul>
+</div>
+</li>
+<li class="chelp">
+<a href="#" class="navbutton navbutton-ar">Help</a>
+<div class="sub">
+<div class="row">
+<ul>
+<li><h2><a style="color:#44B795;" href="submitticket.php">Support Tickets</a></h2></li>
+<li><a href="submitticket.php?step=2&deptid=5">Customer Service</a></li>
+<li><a href="submitticket.php?step=2&deptid=2">Hosting Support</a></li>
+<li><a href="submitticket.php?step=2&deptid=14">Customer Affairs</a></li>
+<li><a href="submitticket.php?step=2&deptid=19">Job Application</a></li>
+<li><a href="submitticket.php?step=2&deptid=8">Abuse Reports</a></li>
+</ul>
+<ul>
+<li><h2><a style="color:#44B795;" href="knowledgebase.php">Documentations</a></h2></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=73">Client Area</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=6">Dimofinf CMS</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=2">Hosting Services</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=111">Backup Services</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=114">SSL Certificates</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=78">Clients' Forum</a></li>
+</ul>
+</div>
+<div class="row">
+<ul>
+<li><h2><a style="color:#44B795;" href="downloads.php">Downloads</a></h2></li>
+<li><a href="downloads.php?action=displaycat&catid=4">Dimofinf blocks</a></li>
+<li><a href="downloads.php?action=displaycat&catid=5">Extra blocks</a></li>
+<li><a href="downloads.php?action=displaycat&catid=6">Flash blocks</a></li>
+<li><a href="downloads.php?action=displaycat&catid=2">Styles gallery</a></li>
+<li><a href="downloads.php?action=displaycat&catid=3">Helping tools</a></li>
+</ul>
+<ul>
+<li><h2><a style="color:#44B795;" href="#">Search</a></h2></li>
+<li>
+Use the search engine of the documentation or the files library:
+<br>
+</li>
+<li><a name="">Knowledgebase</a>
+<form method="post" action="knowledgebase.php?action=search">
+<input type="hidden" name="token" value="da6ad0d7b8ed76e62079a1e91a14001ed72a5385" /> <input name="search" type="text" size="15" />
+<input type="submit" value="Search" />
+</form>	
+</li>
+<li><a name="">Downloads</a>
+<form method="post" action="downloads.php?action=search">
+<input type="hidden" name="token" value="da6ad0d7b8ed76e62079a1e91a14001ed72a5385" /> <input name="search" type="text" size="15" />
+<input type="submit" value="Search" />
+</form>	
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="about">
+<a href="#" class="navbutton navbutton-ar">About us</a>
+<div class="sub">
+<ul style="width: 150px;">
+<li><h2><a style="color:#FF812D;" href="company.php?action=aboutus">Company</a></h2></li>
+<li><a href="company.php?action=aboutus">About Dimofinf</a></li>
+<li><a href="company.php?action=contactus">Contact Us</a></li>
+<li><a href="company.php?action=banks">Bank Accounts</a></li>
+<li><a href="company.php?action=management">Management</a></li>
+<li><a href="http://blog.dimofinf.net">Blog</a></li>
+<li><a href="tos.php">Terms of Service</a></li>
+<li><a href="privacy.php">Privacy Policy</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<br /><br />
+<table border="0" width="100%">
+<tr>
+<td valign="top" id="side_menu" style="width:210px; display: none">
+<div class="largfont"><img border="0" src="templates/dimint/images/titlemenu_icon.png">&nbsp;Client Area</div>
+<br />
+<div style="float:left;width:210px;">
+<form method="post" action="dologin.php">
+<input type="hidden" name="token" value="da6ad0d7b8ed76e62079a1e91a14001ed72a5385" />
+<p>Email Address: <span style='float:right'><input name="username" type="text" size="20" /></span></p>
+<p>Password: <span style='float:right'><input name="password" type="password" size="20" /></span></p>
+<p><input type="submit" class="submitbutton" value="Login" /> <input type="checkbox" name="rememberme" />&nbsp;Remember Me</p>
+</form>
+<a href="pwreset.php">Forgotten Your Password?</a>
+<hr></div>
+
+ 
+
+<div style="display: none">
+<div style="padding:15px 0px 15px 0px;">
+<br />
+<span class="largfont">
+<span style='float:left'><a href="announcementsrss.php"><img border="0" src="templates/dimint/images/rss.png" alt="Rss"></a></span>&nbsp;News
+</span>
+<br /><br />
+<div class="news">
+<div class="newss">
+<ul>
+<li>
+<strong><a href="announcements.php?id=102">Ramadan Offers</a></strong>
+<br /><span class="blue">30/07/2012</span>
+<p>
+	Greetings and best wishes for the return of the blessed Ramadan month, we ask God Almighty to accept from us and from you our good doings, in this occasion Dimofinf presents unbelievable offers and huge discounts on all...</li>
+<li>
+<strong><a href="announcements.php?id=98">Free Ramadan Style</a></strong>
+<br /><span class="blue">25/07/2012</span>
+<p>
+	For the holy month of Ramadan return, thanks to God we had released a new professional style for Ramadan at no cost for Dimofinf CMS 3.0.0. To provide the required and different support for our clients who use the 1st...</li>
+<li>
+<strong><a href="announcements.php?id=96">Ramadan Working Times</a></strong>
+<br /><span class="blue">22/07/2012</span>
+<p>
+	Our dear visitors, please accept our greetings and best wishes for the holy month of Ramadan, May God accepts from you and us all our doings.<br />
+	We want to draw your attention to the working times during the holy...</li>
+</ul>
+</div>
+<INPUT TYPE="image" class="prev" style="border:0;padding:0px;" src="templates/dimint/images/prev.png" title="Previous" name="">
+<INPUT TYPE="image" class="next" style="border:0;padding:0px;" src="templates/dimint/images/next.png" title="Next" name="">
+</div>
+<br />
+</div>
+<hr>
+</div>
+
+<br />
+<div style="padding:15px 0px 15px 0px;">
+<span style="float:left;"><img border="0" src="templates/dimint/images/dimmobile.png" alt="" title=""></span>
+Subscribe now in Dimofinf Mobile and enjoy the wide range of premium services. At a very small price, you will receive our SMS text messages wherever you are!
+<a href="cart.php?gid=7&carttpl=ajaxcart">More</a>
+</div>
+<br />
+
+<div style="padding:15px 0px 0px 0px;">
+<ul id="menu">
+<div class="largfont" style="padding:3px 0px 3px 0px;"><img border="0" src="images/currency-converter.gif">&nbsp;Currency Converter</div>
+<li>Currency 
+<select id="tocurrency" size="1" style="width:130px;height:22px;">
+<option value="SAR">Saudi Riyal</option>
+<option value="DZD">Algerian Dinar</option>
+<option value="ARS">Argentine Peso</option>
+<option value="AUD">Australian Dollars</option>
+<option value="BHD">Bahrain Dinar</option>
+<option value="BDT">Bangladeshi Taka</option>
+<option value="BRL">Brazilian Rey</option>
+<option value="GBP">England Pound</option>
+<option value="CAD">Canadian dollar</option>
+<option value="CLP">Chilean Peso</option>
+<option value="CNY">Chinese yuan</option>
+<option value="COP">Colombian pesos</option>
+<option value="KMF">Comoros Franc</option>
+<option value="CRC">Costa Rican Colon</option>
+<option value="HRK">KUNA Croat</option>
+<option value="CUP">Cuban Peso</option>
+<option value="CYP">Cyprus Pound</option>
+<option value="CZK">Czech Corona</option>
+<option value="DKK">Denmark Krone</option>
+<option value="EGP">Egyptian Pound</option>
+<option value="SVC">Salvadoran Colon</option>
+<option value="EUR">EUR</option>
+<option value="HKD">Hong Kong Dollar</option>
+<option value="HUF">forint</option>
+<option value="ISK">Iceland Krona</option>
+<option value="INR">Rs.</option>
+<option value="IDR">IDR</option>
+<option value="IQD">ID</option>
+<option value="JMD">J $</option>
+<option value="JPY">Japanese Yen</option>
+<option value="JOD">JD</option>
+<option value="KZT">Kazakhstan Teng</option>
+<option value="KES">shillings</option>
+<option value="KRW">Korean Won</option>
+<option value="KWD">KD</option>
+<option value="LBP">LL</option>
+<option value="LYD">LD</option>
+<option value="MKD">Mden</option>
+<option value="MYR">RM</option>
+<option value="MVR">Ruvija Maldivi</option>
+<option value="MTL">LM</option>
+<option value="MRO">Aoqguala Mauritanian</option>
+<option value="MXN">Mexican Peso</option>
+<option value="MAD">MAD</option>
+<option value="MZM">Maticll Mozambican</option>
+<option value="NPR">Nepalese Rupees</option>
+<option value="NZD">New Zealand dollars.</option>
+<option value="NIO">Nicaragua Cordoba</option>
+<option value="NGN">yoke</option>
+<option value="KPW">North Korea and won</option>
+<option value="NOK">NOK</option>
+<option value="OMR">RO</option>
+<option value="PKR">Rs</option>
+<option value="PAB">Panama Balboa</option>
+<option value="PYG">Paraguay Guarani</option>
+<option value="PEN">Peruvian Nuevo Sol</option>
+<option value="PHP">Peso Filippini</option>
+<option value="QAR">Real Qatar</option>
+<option value="ROL">Romanian Leu</option>
+<option value="RUB">Russian Ruble</option>
+<option value="SGD">S $</option>
+<option value="SOS">Somali Shilling</option>
+<option value="ZAR">South African Rand</option>
+<option value="LKR">Sri Lanka Rupee</option>
+<option value="SZL">for the Swiss Aalagueni</option>
+<option value="SEK">SEK</option>
+<option value="CHF">swf</option>
+<option value="SYP">LS</option>
+<option value="TWD">NT $</option>
+<option value="TZS">shillings Tanzanians</option>
+<option value="THB">Baht</option>
+<option value="TND">TND</option>
+<option value="TRL">TL</option>
+<option value="AED">AED</option>
+<option value="UAH">Ukrainian Hryvnia</option>
+<option value="UYU">new Uruguayan pesos</option>
+<option value="VEB">Venezuelan Bolivar</option>
+<option value="VND">VND</option>
+<option value="YER">YR</option>
+<option value="YUM">Yugoslav Dinar</option>
+<option value="ZMK">Zambian Kwacha</option>
+<option value="ZWD">Zimbabwean Dollars</option>
+</select></li>
+<li>US$ Amount <input id="amount" value=""  onkeyup="getcvInfo();return false;" autocomplete="off" size="6">
+<input onclick="getcvInfo();" type="submit" value="Convert" class="button" /></li>
+</ul>
+<div id="currencydiv"></div>
+<br /><span id="currencydivrl" style="display:none;"><img src='images/progress.gif'> Please Wait...</span>
+
+<script type="text/javascript">
+
+function getcvInfo(){
+$('#currencydiv').fadeOut();
+$('#currencydivrl').fadeIn('fast');
+$.post("crncyconv.php", {
+tocurrency: $('#tocurrency').val(),
+ulang: "english",
+amount: $('#amount').val()
+}, function(response){
+setTimeout("showresponse('currencydiv','"+escape(response)+"','currencydivrl')", 400);
+});
+return false;
+
+}	
+
+</script>
+</div>
+</td><td valign="top" id="content_left">
+
+
+
+
+<center>
+<div id="slider-wrapper">
+        
+<div id="slider" class="nivoSlider">
+<a href="renderingplans.php"><img src="templates/dimint/images/slider/main/left_rendering.jpg" alt="" title="" /></a>
+<a href="hostingplans.php"><img src="templates/dimint/images/slider/main/left_unlimited.jpg" alt="" title="" /></a>
+<a href="cmsservice.php"><img src="templates/dimint/images/slider/main/left_bancms.jpg" alt="" title="" /></a>
+<a href="distprog.php"><img src="templates/dimint/images/slider/main/left_distributor.jpg" alt="" title="" /></a>
+<a href="dedicatedservers.php"><img src="templates/dimint/images/slider/main/left_banservers.jpg" alt="" title="" /></a>
+<a href="cart.php?gid=17&carttpl=ajaxcart"><img src="templates/dimint/images/slider/main/left_bansds.jpg" alt="" title="" /></a>
+<a href="domainchecker.php"><img src="templates/dimint/images/slider/main/left_bandomains.jpg" alt="" title="" /></a>
+<a href="cart.php?gid=11&carttpl=slider"><img src="templates/dimint/images/slider/main/left_dbsplans.jpg" alt="" title="" /></a>
+</div>
+
+</div>
+</center>
+<hr>
+
+
+<br /><br /><br /><br />
+
+<table align="center" width="100%" border="0" cellspacing="0" cellpadding="0">
+
+	<tr>
+		<td width="100" valign="top" align="center"><img border="0" src="templates/dimint/images/cms_service.png" alt=""></td>
+		<td width="300" height="120" valign="top">
+		<h4><a style="color:#666666;" href="cmsservice.php" alt="Dimofinf CMS" title="Dimofinf CMS">Dimofinf CMS</a></h4>
+<div class="servicedesc">A professional Content Management System from Dimofinf.</div>
+		</td>
+				<td valign="top" align="center"><img border="0" src="templates/dimint/images/host_service.png" alt=""></td>
+		<td valign="top">
+		<h4><a style="color:#666666;" href="hostingplans.php" alt="Shared Hosting" title="Shared Hosting">Shared Hosting</a></h4>
+<div class="servicedesc">Unlimited shared hosting services, semi-dedicated servers and dedicated servers.</div>
+		</td>
+		
+	</tr>
+	
+	<tr>
+		<td valign="top" align="center"><img border="0" src="templates/dimint/images/dedicated_service.png" alt=""></td>
+		<td height="120" valign="top">
+		<h4><a style="color:#666666;" href="dedicatedservers.php" alt="Dedicated servers" title="Dedicated servers">Dedicated servers</a></h4>
+<div class="servicedesc">A new IBM-based hardware, a solid infrastructure and a high availability network at the lowest prices.</div>
+</td>
+		<td valign="top" align="center"><img border="0" src="templates/dimint/images/rendering_icon.png" alt=""></td>
+		<td valign="top">
+		<h4><a style="color:#666666;" href="renderingplans.php" alt="Cloud Rendering" title="Cloud Rendering">Cloud Rendering</a></h4>
+<div class="servicedesc">Rendering for 3D and 4D Graphics.</div>
+		</td>
+
+	</td>
+	</tr>
+	<tr>
+		<td valign="top" align="center"><img border="0" src="templates/dimint/images/dimbs_service.png" alt=""></td>
+		<td height="120" valign="top">
+<h4><a style="color:#666666;" href="backupservice.php" alt="Backup Services" title="Backup Services">Backup Services</a></h4>
+<div class="servicedesc">The ultimate backup service; multiple OS support.</div>
+		</td>
+		<td width="100" valign="top" align="center"><img border="0" src="templates/dimint/images/domain_service.png" alt=""></td>
+		<td width="300" valign="top">
+		<h4><a style="color:#666666;" href="domains.php" alt="Domains Registration" title="Domains Registration">Domains Registration</a></h4>
+<div class="servicedesc">Domain name registration service at the market LOWEST PRICE with no hidden fees.</div>
+		
+	</tr>
+	<tr>
+<td valign="top" align="center"><img border="0" src="templates/dimint/images/ssl_service.png" alt=""></td>
+		<td valign="top">
+		<h4><a style="color:#666666;" href="sslcertificates.php" alt="SSL Certificates" title="SSL Certificates">SSL Certificates</a></h4>
+<div class="servicedesc">Digital certificates that ensure a secure connection between your website(s) and your clients.</div>
+		</td>
+	</tr>
+
+	</table>
+
+<br />
+<br />
+<img border="0" src="templates/dimint/images/bar_top1.gif" alt="">
+
+<center>
+<h5>Why Dimofinf</h5>
+<div style="float:left;width:315px;">
+<div style="height:150px;">
+<div class="dimcircle2"></div>
+<div class="dimcircle1">
+<p><br />Since<br />1998</p>
+</div>
+<div class="dimcircle3"></div>
+<div class="dimcircle4"></div>
+</div>	
+<div style="text-align:left;padding:5px;">
+<h3>Dimofinf Registered</h3>
+<span class="servicedesc">
+Present in 4 countries and works in this field since 1998, provided hosting services with most recent technologies and reached the top of best companies which provide website hosting and servers services in the internet
+</span>
+</div>
+</div>
+
+<div style="float:left;width:315px">
+<div style="height:150px;">
+<div class="dimcircle2"></div>	
+<div class="dimcircle1">
+<p><br />Speed And Accuracy</p>
+</div>
+<div class="dimcircle3"></div>
+<div class="dimcircle4"></div>
+</div>
+<div style="text-align:left;padding:5px;">
+<h3>Experienced Teamwork</h3>
+<span class="servicedesc">
+We carefully choose our team members, we concentrate on elites, whenever we reach certain knowledge level we look for more, we fully understand the market and perfectly know its needs
+</span>
+</div>
+</div>
+
+<div style="float:left;width:315px">
+<div style="height:150px;">
+<div class="dimcircle2"></div>	
+<div class="dimcircle1">
+<p><br />Meeting needs</p>
+</div>
+<div class="dimcircle3"></div>
+<div class="dimcircle4"></div>
+</div>
+<div style="text-align:left;padding:5px;">
+<h3>Continuous Development</h3>
+<span class="servicedesc">
+We do not limit ourselves to what already available, we are fond of continuous development which is our target and principle before anything else, we believe that without the continuous development we would never continue all these years
+</span>
+</div>
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+
+<div style="float:left;width:315px">
+<div style="height:150px;">
+<div class="dimcircle2"></div>	
+<div class="dimcircle1">
+<p>99.9% Network Uptime Guaranteed</p>
+</div>
+<div class="dimcircle3"></div>
+<div class="dimcircle4"></div>
+</div>
+<div style="text-align:left;padding:5px;">
+<h3>Network Security and Stability</h3>
+<span class="servicedesc">
+The network protection and stability in Dimofinf are always taken very seriously, most of Dimofinf technical employers are paranoid about security, and they work all the time on this to proof their professionalism
+</span>
+</div>
+</div>
+
+<div style="float:left;width:315px">
+<div style="height:150px;">
+<div class="dimcircle2"></div>	
+<div class="dimcircle1">
+<p>Support and Guidance</p>
+</div>
+<div class="dimcircle3"></div>
+<div class="dimcircle4"></div>
+</div>
+<div style="text-align:left;padding:5px;">
+<h3>After Sales Services</h3>
+<span class="servicedesc">
+We care so much about after sales services, technical support round the hour every day of the year, fast in replay and problem analysis and solving 
+</span>
+</div>
+</div>
+
+<div style="float:left;width:315px">
+<div style="height:150px;">
+<div class="dimcircle2"></div>	
+<div class="dimcircle1">
+<p><br />Save some cash</p>
+</div>
+<div class="dimcircle3"></div>
+<div class="dimcircle4"></div>
+</div>
+<div style="text-align:left;padding:5px;">
+<h3>Competitive Prices</h3>
+<span class="servicedesc">
+The method of profiting in Dimofinf depends on the satisfaction of largest possible number of customers, with this we build strong bridge between us and the clients, we continuously care about the continuous using of our products by our clients, not just selling for only one time
+</span>
+</div>
+</div>
+
+</center>
+	
+<div style="clear: both;">&nbsp;</div>
+
+<img border="0" src="templates/dimint/images/bar_top.gif" alt="">
+
+<h5>Popular products</h5>
+<br /><br />
+
+<div class="popularbox servicedesc">
+<center><img border="0" src="templates/dimint/images/popular_hosting.png" alt="">
+<h3>Unlimited web hosting</h3>
+<span class="blue">Shared Hosting</span>
+</center>
+
+<div class="popularboxcontent">
+<font size="2" color="#0093CC">? </font>Unlimited web space/traffic<br />
+<font size="2" color="#0093CC">? </font>Unlimited domains/parked/add-ons<br />
+<font size="2" color="#0093CC">? </font>Unlimited FTP/E-mail accounts<br />
+<font size="2" color="#0093CC">? </font>On-site/Off-site Backup (Daily, Weekly, Monthly)<br />
+<font size="2" color="#0093CC">? </font>cPanel control panel for management<br />
+<font size="2" color="#0093CC">? </font>More than 200 PHP/MySQL scripts ready to install<br />
+<font size="2" color="#0093CC">? </font>Fast support 24/7/365<br />
+<font size="2" color="#0093CC">? </font>Stable and secured infrastructure<br />
+<font size="2" color="#0093CC">? </font>Subscription for 12 Months<br />
+	
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+<hr>
+<span style="float: left;">
+<form method="post" action="cart.php?a=add&pid=195&carttpl=ajaxcart">
+<input type="hidden" name="token" value="da6ad0d7b8ed76e62079a1e91a14001ed72a5385" />
+<input type="submit" value="Order Now!" class="buttongo" />
+</form>
+</span>
+<span style="float: right;">
+<b>$4.5 Monthly</b>
+</span>
+</div>
+
+<div class="popularbox servicedesc">
+<center><img border="0" src="templates/dimint/images/popular_cms.png" alt="">
+<h3>Owned License</h3>
+<span class="blue">Dimofinf CMS</span>
+</center>
+
+<div class="popularboxcontent">
+<font size="2" color="#0093CC">? </font>Owned license, therefore you can use the Software on your website for a lifetime.<br /><br />
+<font size="2" color="#0093CC">? </font>An upgrade license that will enable you to upgrade the software to any newer versions for free for one year, you can then optionally renew this license.<br /><br />
+<font size="2" color="#0093CC">? </font>Warranty and free technical support for one month (this service will be added automatically to your order).<br />
+	
+
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+<hr>
+<span style="float: left;">
+<form method="post" action="cart.php?a=add&pid=2&carttpl=ajaxcart">
+<input type="hidden" name="token" value="da6ad0d7b8ed76e62079a1e91a14001ed72a5385" />
+<input type="submit" value="Order Now!" class="buttongo" />
+</form>
+</span>
+<span style="float: right;">
+<b>  $133.33 One Time </b>
+</span>
+</div>
+<div class="popularbox servicedesc">
+<center><img border="0" src="templates/dimint/images/popular_s1.png" alt="">
+<h3>Dual Core G6950</h3>
+<span class="blue">Dedicated servers</span>
+</center>
+
+<div class="popularboxcontent" dir="ltr">
+<img border="0" src="templates/serverBadge/HP.gif">
+<img border="0" src="templates/serverBadge/Pentium.gif">
+<br />	
+<font size="2" color="#0093CC">? </font>Brand: HP ProLiant DL120<br />
+<font size="2" color="#0093CC">? </font>Processor: Intel® Pentium® G6950<br />
+<font size="2" color="#0093CC">? </font>Details: 3M Cache, 2.80 GHz<br />
+<font size="2" color="#0093CC">? </font>RAM: 4GB DDR3<br />
+<font size="2" color="#0093CC">? </font>HDD: 2x 250GB SATA2<br />
+<font size="2" color="#0093CC">? </font>IP: 1<br />
+<font size="2" color="#0093CC">? </font>Uplink Port: 1 x 100Mbps Full-Duplex<br />
+<font size="2" color="#0093CC">? </font>Traffic: 5000 GB <br />
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+<hr>
+<span style="float: left;">
+<form method="post" action="cart.php?a=add&pid=143&carttpl=ajaxcart">
+<input type="hidden" name="token" value="da6ad0d7b8ed76e62079a1e91a14001ed72a5385" />
+<input type="submit" value="Order Now!" class="buttongo" />
+</form>
+</span>
+<span style="float: right;">
+<b>$96.00 Monthly</b>
+</span>
+</div>
+
+<div class="popularbox servicedesc">
+	<center><img border="0" src="templates/dimint/images/popular_s2.png" alt="">
+<h3>Quad Core X3440</h3>
+<span class="blue">Dedicated servers</span>
+</center>
+
+<div class="popularboxcontent" dir="ltr">
+<img border="0" src="templates/serverBadge/HP.gif">
+<img border="0" src="templates/serverBadge/Xeon.gif">
+<br />
+<font size="2" color="#0093CC">? </font>Brand: HP ProLiant DL120<br />
+<font size="2" color="#0093CC">? </font>Processor: Intel® Xeon® X3440<br />
+<font size="2" color="#0093CC">? </font>Details: 8M Cache, 2.53 GHz<br />
+<font size="2" color="#0093CC">? </font>RAM: 8GB DDR3<br />
+<font size="2" color="#0093CC">? </font>HDD: 2x 500GB SATA2<br />
+<font size="2" color="#0093CC">? </font>IP: 1<br />
+<font size="2" color="#0093CC">? </font>Uplink Port: 1 x 100Mbps Full-Duplex<br />
+<font size="2" color="#0093CC">? </font>Traffic: 5000 GB <br />
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+<hr>
+<span style="float: left;">
+<form method="post" action="cart.php?a=add&pid=151&carttpl=ajaxcart">
+<input type="hidden" name="token" value="da6ad0d7b8ed76e62079a1e91a14001ed72a5385" />
+<input type="submit" value="Order Now!" class="buttongo" />
+</form>
+</span>
+<span style="float: right;">
+<b>$195.00 Monthly</b>
+</span>
+</div>
+
+<img border="0" src="templates/dimint/images/bar_down.gif" alt="">
+<div style="clear: both;">&nbsp;</div>
+
+
+<h5>Some of our customers</h5>
+<br /><br />
+
+<center><img border="0" src="templates/dimint/images/ourcustomers.gif" alt="Some of our customers"></center>
+<br /><br /><div style="clear: both;">&nbsp;</div>
+<img border="0" src="templates/dimint/images/bar_top.gif" alt="">
+
+
+
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<br /><br />
+<hr>
+<center><img border="0" src="templates/dimint/images/partners.gif" alt="" title=""></center>
+<br />
+<hr>
+<br />
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="footer">
+	<tr>
+<td style="padding-left:10px;"><h3>Our services</h3></td>
+<td style="padding-left:10px;"><h3>Documentations</h3></td>
+<td style="padding-left:10px;"><h3>Tickets</h3></td>
+<td style="padding-left:10px;"><h3>Company</h3></td>
+<td style="padding-left:10px;" rowspan="2" valign="top">
+
+
+<div style="padding:13px 6px 0px 6px;">
+<div dir="ltr"><img border="0" src="templates/dimint/images/paywith.gif">
+</div><br />
+<br /><br />
+<div dir="ltr" title="Click for company profile" style="cursor:pointer;cursor:hand;" onclick="javascript:window.showModalDialog('https://smarticon.geotrust.com/smarticonprofile?Referer=https://www.dimofinf.net', window)"><img border="0" oncontextmenu="return false;" alt="Click for company profile" src="images/geo.gif" name="itwhhilg" /></div>
+<br /><br />
+<div dir="ltr">
+Copyright <sup>©</sup> Dimensions Of Information Ltd.<br /> All rights reserved
+</div>
+
+<br /><br />
+</div>
+
+
+</td>
+	</tr>
+	<tr>
+<td valign="top">
+<div style="padding:0px 10px 0px 10px;">
+<ul id="footer">
+<li><a href="dedicatedservers.php">Dedicated servers</a></li>
+<li><a href="hostingplans.php">Hosting Services</a></li>
+<li><a href="renderingplans.php">Cloud Rendering</a></li>
+<li><a href="backupservice.php">Backup Services</a></li>
+<li><a href="cart.php?gid=10&carttpl=ajaxcart">SSL Certificates</a></li>
+<li><a href="cmsservice.php">Dimofinf CMS</a></li>
+<li><a href="domains.php">Domains Registration</a></li>
+</ul>
+</div>
+</td>
+<td valign="top">
+<div style="padding:0px 10px 0px 10px;">
+<ul id="footer">
+<li><a href="knowledgebase.php?action=displaycat&catid=73">Client Area</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=6">Dimofinf CMS</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=2">Hosting Services</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=111">Backup Services</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=114">SSL Certificates</a></li>
+<li><a href="knowledgebase.php?action=displaycat&catid=78">Clients' Forum</a></li>
+<li class="last"><a href="downloads.php">Downloads</a></li>
+</ul>
+</div>
+</td>
+<td valign="top">
+<div style="padding:0px 10px 0px 10px;">
+<ul id="footer">
+<li><a href="submitticket.php?step=2&deptid=5">Customer Service</a></li>
+<li><a href="submitticket.php?step=2&deptid=2">Hosting Support</a></li>
+<li><a href="submitticket.php?step=2&deptid=14">Customer Affairs</a></li>
+<li><a href="submitticket.php?step=2&deptid=19">Job Application</a></li>
+<li class="last"><a href="submitticket.php?step=2&deptid=8">Abuse Reports</a></li>
+</ul>
+</div>
+</td>
+<td valign="top">
+<div style="padding:0px 10px 0px 10px;">
+<ul id="footer">
+<li><a href="company.php?action=aboutus">About Dimofinf</a></li>
+<li><a href="company.php?action=contactus">Contact Us</a></li>
+<li><a href="company.php?action=banks">Bank Accounts</a></li>
+<li><a href="company.php?action=management">Management</a></li>
+<li><a href="http://blog.dimofinf.net">Blog</a></li>
+<li><a href="tos.php">Terms of Service</a></li>
+<li class="last"><a href="privacy.php">Privacy Policy</a></li>
+</ul>
+</div>
+</td>
+
+	</tr>
+
+</table>
+
+
+
+
+
+<!-- footer end-->
+
+
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+</body>
+</html>

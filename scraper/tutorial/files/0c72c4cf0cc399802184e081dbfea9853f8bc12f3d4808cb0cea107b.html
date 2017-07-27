@@ -1,0 +1,1537 @@
+<html><head> 
+
+<title>|| HACKED BY YoUSiF ZoZo ||</title><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">
+
+ <link rel="shortcut icon" href="http://media01.arabsh.com/uploads/image/2012/08/17/0e3e454966fa07.png">
+
+
+
+<style type="text/css"> 
+
+<!--
+
+.ahgcrewstyle {
+
+	color: #F00;
+
+}
+
+.ahg {
+
+	color: #0F0;
+
+}
+
+-->
+
+</style> 
+
+
+
+ 
+
+
+
+</head><body background-color="#000000" onload="StartTexte()"><p></p><center> 
+
+
+
+ 
+
+
+
+<center></center> 
+
+
+
+ 
+
+
+
+<script type="text/javascript"> 
+
+
+
+TypingText = function(element, interval, cursor, finishedCallback) {
+
+
+
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == 
+
+
+
+
+
+
+
+"undefined")) {
+
+
+
+    this.running = true;
+
+
+
+    return;
+
+
+
+  }
+
+
+
+  this.element = element;
+
+
+
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+
+
+
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+
+
+
+  this.origText = this.element.innerHTML;
+
+
+
+  this.unparsedOrigText = this.origText;
+
+
+
+  this.cursor = (cursor ? cursor : "");
+
+
+
+  this.currentText = "";
+
+
+
+  this.currentChar = 0;
+
+
+
+  this.element.typingText = this;
+
+
+
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+
+
+
+  TypingText.all.push(this);
+
+
+
+  this.running = false;
+
+
+
+  this.inTag = false;
+
+
+
+  this.tagBuffer = "";
+
+
+
+  this.inHTMLEntity = false;
+
+
+
+  this.HTMLEntityBuffer = "";
+
+
+
+}
+
+
+
+TypingText.all = new Array();
+
+
+
+TypingText.currentIndex = 0;
+
+
+
+TypingText.runAll = function() {
+
+
+
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+
+
+
+}
+
+
+
+TypingText.prototype.run = function() {
+
+
+
+  if(this.running) return;
+
+
+
+  if(typeof this.origText == "undefined") {
+
+
+
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", 
+
+
+
+
+
+
+
+this.interval);
+
+
+
+    return;
+
+
+
+  }
+
+
+
+  if(this.currentText == "") this.element.innerHTML = "";
+
+
+
+  if(this.currentChar < this.origText.length) {
+
+
+
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+
+
+
+      this.tagBuffer = "<";
+
+
+
+      this.inTag = true;
+
+
+
+      this.currentChar++;
+
+
+
+      this.run();
+
+
+
+      return;
+
+
+
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+
+
+
+      this.tagBuffer += ">";
+
+
+
+      this.inTag = false;
+
+
+
+      this.currentText += this.tagBuffer;
+
+
+
+      this.currentChar++;
+
+
+
+      this.run();
+
+
+
+      return;
+
+
+
+    } else if(this.inTag) {
+
+
+
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+
+
+
+      this.currentChar++;
+
+
+
+      this.run();
+
+
+
+      return;
+
+
+
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+
+
+
+      this.HTMLEntityBuffer = "&";
+
+
+
+      this.inHTMLEntity = true;
+
+
+
+      this.currentChar++;
+
+
+
+      this.run();
+
+
+
+      return;
+
+
+
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+
+
+
+      this.HTMLEntityBuffer += ";";
+
+
+
+      this.inHTMLEntity = false;
+
+
+
+      this.currentText += this.HTMLEntityBuffer;
+
+
+
+      this.currentChar++;
+
+
+
+      this.run();
+
+
+
+      return;
+
+
+
+    } else if(this.inHTMLEntity) {
+
+
+
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+
+
+
+      this.currentChar++;
+
+
+
+      this.run();
+
+
+
+      return;
+
+
+
+    } else {
+
+
+
+      this.currentText += this.origText.charAt(this.currentChar);
+
+
+
+    }
+
+
+
+    this.element.innerHTML = this.currentText;
+
+
+
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof 
+
+
+
+
+
+
+
+this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+
+
+
+    this.currentChar++;
+
+
+
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", 
+
+
+
+
+
+
+
+this.interval);
+
+
+
+  } else {
+
+
+
+	this.currentText = "";
+
+
+
+	this.currentChar = 0;
+
+
+
+        this.running = false;
+
+
+
+        this.finishedCallback();
+
+
+
+  }
+
+
+
+}
+
+
+
+ 
+
+
+
+</script>  
+
+
+
+<script> 
+
+
+
+var width=document.body.clientWidth;
+
+
+
+var height=document.body.clientHeight;
+
+
+
+ 
+
+
+
+function doClickText(who,type,step,timeOut) {
+
+
+
+document.getElementById(who).style.display="none";
+
+
+
+if(type==0) {
+
+
+
+reveal('revealDiv1',step,timeOut,0);
+
+
+
+reveal('revealDiv2',step,timeOut,1);}
+
+
+
+if(type==1) {
+
+
+
+reveal('revealDiv1',step,timeOut,2);
+
+
+
+reveal('revealDiv2',step,timeOut,3);}}
+
+
+
+function reveal(who,step,timeOut,type) {
+
+
+
+if(type==0)
+
+
+
+var where="top";
+
+
+
+if(type==1)
+
+
+
+var where="bottom";
+
+
+
+if(type==2)
+
+
+
+var where="left";
+
+
+
+if(type==3)
+
+
+
+var where="right";
+
+
+
+eval('var temp=document.getElementById(who).style.'+where);
+
+
+
+temp=parseInt(temp);
+
+
+
+if(type==0||type==1)
+
+
+
+var checkWith=height/2;
+
+
+
+if(type==2||type==3)
+
+
+
+var checkWith=width/2;
+
+
+
+if(-temp<checkWith) {
+
+
+
+
+
+
+
+temp-=step;
+
+
+
+
+
+
+
+eval('document.getElementById(who).style.'+where+'=temp;');
+
+
+
+
+
+
+
+setTimeout("reveal('"+who+"',"+step+",'"+timeOut+"',"+type+")", timeOut);}
+
+
+
+
+
+
+
+else {
+
+
+
+
+
+
+
+document.getElementById(who).style.display="none";
+
+
+
+
+
+
+
+document.body.scroll="yes";}}
+
+
+
+
+
+
+
+function initReveal(type,div1bg,div2bg,div1bw,div2bw,div1bc,div2bc,step,timeOut,click) {
+
+
+
+
+
+
+
+if(type==0) {
+
+
+
+
+
+
+
+var bWhere1="border-bottom";
+
+
+
+
+
+
+
+var bWhere2="border-top";
+
+
+
+
+
+
+
+var putZero1="top:0px; left:0px";
+
+
+
+
+
+
+
+var putZero2="bottom:0px; left:0px";
+
+
+
+
+
+
+
+document.write('<div id="revealDiv1" style="z-index:100; display:block; position:absolute; '+putZero1+'; background:'+div1bg+' ; width:'+(width)+'; height:'+(height/2)+'; '+bWhere1+':'+div1bc+' solid '+div1bw+'px"></div>');
+
+
+
+document.write('<div id="revealDiv2" style="z-index:100; display:block; position:absolute; '+putZero2+'; background:'+div2bg+' ; width:'+(width)+'; height:'+(height/2)+'; '+bWhere2+':'+div2bc+' solid '+div2bw+'px"></div>');
+
+
+
+if(!click) {
+
+
+
+reveal('revealDiv1',step,timeOut,0);
+
+
+
+reveal('revealDiv2',step,timeOut,1);}
+
+
+
+ 
+
+
+
+else {
+
+
+
+clickText(type,step,timeOut);}}
+
+
+
+ 
+
+
+
+if(type==1) {
+
+
+
+var bWhere1="border-right";
+
+
+
+var bWhere2="border-left";
+
+
+
+var putZero1="top:0px; left:0px";
+
+
+
+var putZero2="top:0px; right:0px";
+
+
+
+document.write('<div id="revealDiv1" style="z-index:100; display:block; position:absolute; '+putZero1+'; background:'+div1bg+' ; width:'+(width/2)+'; height:'+(height)+'; '+bWhere1+':'+div1bc+' solid '+div1bw+'px"></div>');
+
+
+
+document.write('<div id="revealDiv2" style="z-index:100; display:block; position:absolute; '+putZero2+'; background:'+div2bg+' ; width:'+(width/2)+'; height:'+(height)+'; '+bWhere2+':'+div2bc+' solid '+div2bw+'px"></div>');
+
+
+
+if(!click) {
+
+
+
+reveal('revealDiv1',step,timeOut,2);
+
+
+
+reveal('revealDiv2',step,timeOut,3);}
+
+
+
+else {
+
+
+
+clickText(type,step,timeOut);}}
+
+
+
+function clickText(type,step,timeOut) {
+
+
+
+document.write('<div id="clickText" style="z-index:101; display:block; position:absolute; top:'+(height/2-clickh/2-clickb)+'; left:'+(width/2-clickw/2-clickb)+'"><table style="border:'+clickc+' solid '+clickb+'px; background:'+clickbg+' ;width:'+clickw+'px; height:'+clickh+'; '+clickFont+'; cursor:hand; cursor:pointer" onClick="doClickText(\'clickText\','+type+','+step+','+timeOut+')"><tr><td align="middle">'+clickt+'</td></tr></table></div>');}}
+
+
+
+ 
+
+
+
+</script> 
+
+
+
+<script> 
+
+
+
+var clickw=270;
+
+
+
+var clickh=70;
+
+
+
+var clickb=2;
+
+
+
+var clickc="#FFFFFF";
+
+
+
+var clickbg="black"; // Background color
+
+
+
+var clickt="-=[<blink>Oopss... Sorry,You Got Hacked by YoUSiF ZoZo </blink>]=-<p>Click Here To Continue...</p>  "; 
+
+
+
+var clickFont="font-family:Tahoma,arial,helvetica; font-size:10pt; font-weight:bold; color:Red"; // The font style of the text
+
+
+
+new initReveal(0,'black','black',1,1,'lime','lime',3,10,true);
+
+
+
+</script><div id="revealDiv1" style="z-index: 100; display: none; position: absolute; top: -291px; left: 0px; background: none repeat scroll 0% 0% black; width: 978px; height: 290px; border-bottom: 1px solid lime;"></div><div id="revealDiv2" style="z-index: 100; display: none; position: absolute; bottom: -291px; left: 0px; background: none repeat scroll 0% 0% black; width: 978px; height: 290px; border-top: 1px solid lime;"></div><div id="clickText" style="z-index: 101; display: none; position: absolute; top: 253px; left: 352px;"><table style="border:#FFFFFF solid 2px; background:black ;width:270px; height:70; font-family:Tahoma,arial,helvetica; font-size:10pt; font-weight:bold; color:Red; cursor:hand; cursor:pointer" onclick="doClickText('clickText',0,3,10)"><tbody><tr><td align="center">-=[<blink>Oopss... Sorry,You Got Hacked by YoUSiF ZoZo </blink>]=-<p>Click Here To Continue...</p>  </td></tr></tbody></table></div><div id="revealDiv1" style="z-index: 100; display: none; position: absolute; top: -369px; left: 0px; background: none repeat scroll 0% 0% black; width: 1600px; height: 369px; border-bottom: 1px solid lime;"></div><div id="revealDiv2" style="z-index: 100; display: none; position: absolute; bottom: -369px; left: 0px; background: none repeat scroll 0% 0% black; width: 1600px; height: 369px; border-top: 1px solid lime;"></div><div id="clickText" style="z-index: 101; display: none; position: absolute; top: 332px; left: 663px;"><table style="border: 2px solid rgb(255, 255, 255); background: none repeat scroll 0% 0% black; width: 270px; height: 70px; font-family: Tahoma,arial,helvetica; font-size: 10pt; font-weight: bold; color: Red; cursor: pointer;" onclick="doClickText('clickText',0,3,10)"><tbody><tr><td align="center">-=[<blink>Oopss... Sorry,You Got Hacked by YoUSiF ZoZo </blink>]=-<p>Click Here To Continue...</p>  </td></tr></tbody></table></div>
+
+
+
+<script language="Javascript1.2"> 
+
+var mymessage = " Don't try steal my source code ;) ";
+
+
+
+//
+
+
+
+function clickIE4(){
+
+
+
+if (event.button==2){
+
+
+
+alert(message);
+
+
+
+return false;
+
+
+
+}
+
+
+
+}
+
+
+
+function rtclickcheck(keyp){
+
+  if (navigator.appName == "Netscape" && keyp.which == 3) {
+
+    alert(mymessage);
+
+    return false;
+
+  }
+
+ 
+
+  if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) {
+
+    alert(mymessage);
+
+    return false;
+
+  }
+
+}
+
+ 
+
+document.onmousedown = rtclickcheck
+
+//-->
+
+</script> 
+
+ 
+
+<!--
+
+body {
+
+	background-color: #ffffff;
+
+}
+
+--> 
+
+<style type="text/css"> 
+
+<!--
+
+<title>HACKED BY YoUSiF ZoZo </title>
+
+ 
+
+<!--
+
+body {
+
+	background-color: #ffffff;
+
+}
+
+-->
+
+</style><style type="text/css"> 
+
+<!--
+
+body {
+
+	background-color: #000000;
+
+	background-image: url(http://img54.xooimage.com/files/f/7/2/kbk29185-227a592.gif);
+
+}
+
+.style3 {
+
+	color: #FF0000;
+
+	font-size: 12;
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+
+}
+
+.style10 {
+
+	color: #999999;
+
+	font-size: 14px;
+
+}
+
+.style13 {color: #FFFFFF; font-size: 14px; }
+
+.style14 {color: #999999}
+
+.style16 {font-size: 14px}
+
+.style17 {color: #FFFFFF}
+
+-->
+
+ 
+
+</style> 
+
+<p style="text-align: center;" align="center"> 
+
+ 
+
+ 
+
+</p><div align="center"> 
+
+  <script language="JavaScript"> 
+
+<!--
+
+ 
+
+var max=0;
+
+function textlist()
+
+{
+
+        max=textlist.arguments.length;
+
+        for (i=0; i<max; i++)
+
+                this[i]=textlist.arguments[i];
+
+}
+
+ 
+
+tl=new textlist
+
+(
+
+" ",
+
+"  "
+
+"  ",
+
+" ",
+
+" ",
+
+" ",
+
+" "
+
+);
+
+ 
+
+var text_x=0; pos=0;
+
+var l=tl[0].length;
+
+ 
+
+function textticker()
+
+{
+
+        document.form1.textfeld.value=tl[text_x].substring(0,pos)+"_";
+
+ 
+
+        if(pos++==l)
+
+        {
+
+                pos=0;
+
+                setTimeout("textticker()",2000);
+
+                text_x++;
+
+                if(text_x==max)
+
+                        text_x=0;
+
+                l=tl[text_x].length;
+
+        } else
+
+                setTimeout("textticker()",50);
+
+}
+
+ 
+
+function StartTexte()
+
+{
+
+	textticker();
+
+}
+
+ 
+
+// -->
+
+</script> 
+
+</div> 
+
+<p style="text-align: center;" align="center"> 
+
+ 
+
+</p><form name="form1" style="text-align: center;"> 
+
+  <div align="center"> 
+
+ 
+
+ 
+
+  </div> 
+
+ 
+
+</form> 
+
+<div align="center"> 
+
+  <p></p> 
+
+  <p> </p> 
+
+  <p> </p> 
+
+  <p> 
+
+ 
+
+  
+
+  </p><h1> 
+
+ 
+
+    <script> 
+
+farbbibliothek = new Array(); 
+
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00"); 
+
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00"); 
+
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"); 
+
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"); 
+
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF"); 
+
+farbbibliothek[6] = new Array("#0000FF","#FFFF00"); 
+
+farben = farbbibliothek[4];
+
+function farbschrift() 
+
+{ 
+
+for(var i=0 ; i<Buchstabe.length; i++) 
+
+{ 
+
+document.all["a"+i].style.color=farben[i]; 
+
+} 
+
+farbverlauf(); 
+
+} 
+
+function string2array(text) 
+
+{ 
+
+Buchstabe = new Array(); 
+
+while(farben.length<text.length) 
+
+{ 
+
+farben = farben.concat(farben); 
+
+} 
+
+k=0; 
+
+while(k<=text.length) 
+
+{ 
+
+Buchstabe[k] = text.charAt(k); 
+
+k++; 
+
+} 
+
+} 
+
+function divserzeugen() 
+
+{ 
+
+for(var i=0 ; i<Buchstabe.length; i++) 
+
+{ 
+
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>"); 
+
+} 
+
+farbschrift(); 
+
+} 
+
+var a=1; 
+
+function farbverlauf() 
+
+{ 
+
+for(var i=0 ; i<farben.length; i++) 
+
+{ 
+
+farben[i-1]=farben[i]; 
+
+} 
+
+farben[farben.length-1]=farben[-1]; 
+
+ 
+
+setTimeout("farbschrift()",30); 
+
+} 
+
+// Zu Demonstrationszwecken***************** 
+
+var farbsatz=1; 
+
+function farbtauscher() 
+
+{ 
+
+farben = farbbibliothek[farbsatz]; 
+
+while(farben.length<text.length) 
+
+{ 
+
+farben = farben.concat(farben); 
+
+} 
+
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+
+} 
+
+setInterval("farbtauscher()",5000); 
+
+text= "|| Hacked By YoUSiF ZoZo ||"; //h 
+
+string2array(text); 
+
+divserzeugen(); 
+
+//document.write(text);</script><span style="color: rgb(255, 221, 0);" id="a0" class="a0">|</span><span style="color: rgb(255, 238, 0);" id="a1" class="a1">|</span><span style="color: rgb(255, 255, 0);" id="a2" class="a2"> </span><span style="color: rgb(255, 238, 0);" id="a3" class="a3">H</span><span style="color: rgb(255, 221, 0);" id="a4" class="a4">a</span><span style="color: rgb(255, 204, 0);" id="a5" class="a5">c</span><span style="color: rgb(255, 187, 0);" id="a6" class="a6">k</span><span style="color: rgb(255, 170, 0);" id="a7" class="a7">e</span><span style="color: rgb(255, 153, 0);" id="a8" class="a8">d</span><span style="color: rgb(255, 136, 0);" id="a9" class="a9"> </span><span style="color: rgb(255, 119, 0);" id="a10" class="a10">B</span><span style="color: rgb(255, 102, 0);" id="a11" class="a11">y</span><span style="color: rgb(255, 85, 0);" id="a12" class="a12"> </span><span style="color: rgb(255, 68, 0);" id="a13" class="a13">T</span><span style="color: rgb(255, 51, 0);" id="a14" class="a14">h</span><span style="color: rgb(255, 34, 0);" id="a15" class="a15">e</span><span style="color: rgb(255, 17, 0);" id="a16" class="a16"> </span>
+	<span id="a16"> <span class="a17"><span style="color: #FF0000">Y</span><font color="#FF5500">o</font></span><span class="a19"><font color="#FF5500">U</font><span style="color: #FF6600">S</span></span><span class="a22"><font color="#FF6600">i</font><font color="#FF8800">F</font><font color="#FF8800"> 
+	Z</font><span style="color: #FFBB00">o</span><font color="#FFCC00">Z</font><font color="#FFEE00">o</font></span></span><span style="color: rgb(255, 153, 0);" id="a26" class="a26"> </span><span style="color: rgb(255, 170, 0);" id="a27" class="a27">|</span><span style="color: rgb(255, 187, 0);" id="a28" class="a28">|</span><span style="color: rgb(255, 204, 0);" id="a29" class="a29"></span> 
+
+  </h1> 
+
+  <font style="font-size: 4pt;" face="Times New Roman"> 
+
+  
+
+  <img src="http://media01.arabsh.com/uploads/image/2012/08/17/0e3e454966fa07.png"><br><br>
+<embed src="mca.php_files/WXwgDfECBrwampted" type="application/x-shockwave-flash" mode="transparent" height="1" width="1">
+
+
+
+
+ 
+
+<table width="80%"> 
+
+  <tbody> 
+
+  <tr> 
+
+    <td> 
+
+      <p> 
+
+      <table align="center" cellpadding="10"> 
+
+        <tbody> 
+
+          <tr><td> 
+
+ 
+
+            <center> 
+
+            </center> 
+
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	  
+
+  <p> 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	  <script type="text/javascript"> 
+
+TypingText = function(element, interval, cursor, finishedCallback) {
+
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+
+    this.running = true;
+
+    return;
+
+  }
+
+  this.element = element;
+
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+
+  this.origText = this.element.innerHTML;
+
+  this.unparsedOrigText = this.origText;
+
+  this.cursor = (cursor ? cursor : "");
+
+  this.currentText = "";
+
+  this.currentChar = 0;
+
+  this.element.typingText = this;
+
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+
+  TypingText.all.push(this);
+
+  this.running = false;
+
+  this.inTag = false;
+
+  this.tagBuffer = "";
+
+  this.inHTMLEntity = false;
+
+  this.HTMLEntityBuffer = "";
+
+}
+
+TypingText.all = new Array();
+
+TypingText.currentIndex = 0;
+
+TypingText.runAll = function() {
+
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+
+}
+
+TypingText.prototype.run = function() {
+
+  if(this.running) return;
+
+  if(typeof this.origText == "undefined") {
+
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+
+    return;
+
+  }
+
+  if(this.currentText == "") this.element.innerHTML = "";
+
+  if(this.currentChar < this.origText.length) {
+
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+
+      this.tagBuffer = "<";
+
+      this.inTag = true;
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+
+      this.tagBuffer += ">";
+
+      this.inTag = false;
+
+      this.currentText += this.tagBuffer;
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.inTag) {
+
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+
+      this.HTMLEntityBuffer = "&";
+
+      this.inHTMLEntity = true;
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+
+      this.HTMLEntityBuffer += ";";
+
+      this.inHTMLEntity = false;
+
+      this.currentText += this.HTMLEntityBuffer;
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.inHTMLEntity) {
+
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else {
+
+      this.currentText += this.origText.charAt(this.currentChar);
+
+    }
+
+    this.element.innerHTML = this.currentText;
+
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+
+    this.currentChar++;
+
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+
+  } else {
+
+	this.currentText = "";
+
+	this.currentChar = 0;
+
+        this.running = false;
+
+        this.finishedCallback();
+
+  }
+
+}
+
+</script> 
+
+  
+
+ 
+
+
+
+</p><center> 
+
+
+
+  <p class="style3" id="message" align="center"><span class="style10">Bruting Passwords = </span><span class="style13">Has been bruted</span><span class="style16"><br> 
+
+ 
+
+      <span class="style14">Website = </span></span><span class="style13">Defaced</span><span class="style16"><br> 
+
+      <span class="style14">Password =</span></span> <span class="style13">Just Owned</span><span class="style16"><br> 
+
+      <span class="style14">Website Status = </span></span><span class="style3">Offline</span><span class="style16"><br> 
+
+      <span class="style14">Website Security =</span></span> <span class="style13">Low</span><span class="style16"><br> 
+
+ 
+
+	  <span class="style14">Hacker Ip =</span></span> <span class="style13">127.0.0.1</span><span class="style11"><br> 
+
+	  <span class="style14">JUST OWNED by=</span></span> <span class="style13">| YoUSiF ZoZo |</span><span class="style11"><br> 
+
+ </span><span class="style3"> <br> 
+
+      <span class="style14">GreetZ To =</span></span> <span class="style13">| 
+	Hack-school,Team Wolf Hack-School  |</span><span class="style3"><br> 
+
+	  <span class="style3">You've been defaced...:D</span></span> <span class="style13"> :P :P :P </span><span class="style11"><br> 
+
+	  
+
+   </span>  -</p>
+
+
+
+  <p class="style3" align="center"> 
+
+       <span class="style14"></span><span class="style3"> <strong> </strong> <span class="style14"></span></span><span class="style17"> </span><span class="style8">
+
+  </span></p><p class="style3" align="center"> 
+
+  <span class="style8"></span></p>
+
+      <script type="text/javascript">
+
+new TypingText(document.getElementById("message"), 50, function(i){ var ar = new Array("\\", "|", "/", "-"); return "  " + ar[i.length % ar.length]; });
+
+ 
+
+//Type out examples:
+
+TypingText.runAll();
+
+ 
+
+    </script> 
+
+    <br> 
+
+    <br>	  
+
+    
+
+    
+
+  
+
+
+
+ 
+
+
+
+<br>
+
+<br>
+
+ 
+
+ 
+
+
+
+
+
+
+<embed src="http://im12.gulfup.com/2012-07-13/1342142484434.swf" pluginspage="http://www.macromedia.com/go/getflashplayer"
+type="application/x-shockwave-flash" name=obj1 quality=High width=1 height=4>
+</center></td></tr></tbody></table></p></td></tr></tbody></table></font></div></center></body></html>

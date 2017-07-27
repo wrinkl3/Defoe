@@ -1,0 +1,366 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html><head><title>HackeD By Arabian Hackers Team</title><link rel="SHORTCUT 
+
+ICON" 
+
+href="http://i.imgur.com/2ePvK.gif"><meta>
+
+<style>
+body {
+	background: #000000 url() no-repeat top center;
+	color: #ff0000;
+	font-family: Courier New;
+	font-size: 12px;
+}
+#black{
+	text-align: center;
+	font-size:12px;
+	font-weight: bold;
+}
+a:link, a:visited {font-weight:normal; text-decoration:none; color:#ff0000;}
+a:hover {font-weight:bold; text-decoration:none; cursor:help;}
+.style1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+}
+.style2 {color: #FFFFFF}
+.style4 {font-size: 12px}
+</style>
+<head>
+ 
+
+<script language="JavaScript1.2">
+
+function ClearError() {return true;}
+
+window.onerror = ClearError;
+
+</script>
+
+<div align="center"><table width="70%" border="0"><tbody><tr><td>
+  <p> </p>
+  <center>
+
+<font size="6" face="snap itc"><b><span id="lightf_light"></span></b></font>
+<script>
+lightf_lightcolor1=	"FF0000" // B??y??k harf kullan&#305;n
+lightf_lightcolor2=	"FFFFFF" // B??y??k harf kullan&#305;n
+lightf_message=		"[Hacked By Arabian Hackers Team]"
+lightf_speed=		75 // milisaniye
+
+color_mesk=new Array();
+color_mesk[10]="A";
+color_mesk[11]="B";
+color_mesk[12]="C";
+color_mesk[13]="D";
+color_mesk[14]="E";
+color_mesk[15]="F";
+color_A=10;
+color_B=11;
+color_C=12;
+color_D=13;
+color_E=14;
+color_F=15;
+color_let="ABCDEF";
+
+function color_mes(color_num)
+{
+  if(color_let.indexOf(color_num) != -1)
+  {
+    return eval("color_" + color_num)
+  }
+  else
+  {
+    if(color_num < 10)
+    {
+      return eval(color_num)
+    }
+    else
+    {
+     return color_mesk[color_num];
+    }
+  }
+}
+
+function color(color_begin,color_einde,color_stappen,color_stap)
+{
+  color_hh1=(color_mes(color_begin.charAt(0))*16)+color_mes(color_begin.charAt(1));
+  color_hh2=(color_mes(color_begin.charAt(2))*16)+color_mes(color_begin.charAt(3));
+  color_hh3=(color_mes(color_begin.charAt(4))*16)+color_mes(color_begin.charAt(5));
+  color_pp1=(color_mes(color_einde.charAt(0))*16)+color_mes(color_einde.charAt(1));
+  color_pp2=(color_mes(color_einde.charAt(2))*16)+color_mes(color_einde.charAt(3));
+  color_pp3=(color_mes(color_einde.charAt(4))*16)+color_mes(color_einde.charAt(5));
+  if(color_hh1 < color_pp1)
+  {
+   color_ff1=color_hh1+Math.floor((color_pp1-color_hh1)/color_stappen*color_stap);
+   color_ff1=eval("'"+color_mes(Math.floor(color_ff1/16))+"'")+eval("'"+color_mes(color_ff1-(Math.floor(color_ff1/16)*16))+"'");
+  }
+  else
+  {
+   color_ff1=color_hh1-Math.floor((color_hh1-color_pp1)/color_stappen*color_stap);
+   color_ff1=eval("'"+color_mes(Math.floor(color_ff1/16))+"'")+eval("'"+color_mes(color_ff1-(Math.floor(color_ff1/16)*16))+"'");
+  }
+  if(color_hh2 < color_pp2)
+  {
+   color_ff2=color_hh2+Math.floor((color_pp2-color_hh2)/color_stappen*color_stap);
+   color_ff2=eval("'"+color_mes(Math.floor(color_ff2/16))+"'")+eval("'"+color_mes(color_ff2-(Math.floor(color_ff2/16)*16))+"'");
+  }
+  else
+  {
+    color_ff2=color_hh2-Math.floor((color_hh2-color_pp2)/color_stappen*color_stap);
+    color_ff2=eval("'"+color_mes(Math.floor(color_ff2/16))+"'")+eval("'"+color_mes(color_ff2-(Math.floor(color_ff2/16)*16))+"'");
+  }
+  if(color_hh3 < color_pp3)
+  {
+    color_ff3=color_hh3+Math.floor((color_pp3-color_hh3)/color_stappen*color_stap);
+    color_ff3=eval("'"+color_mes(Math.floor(color_ff3/16))+"'")+eval("'"+color_mes(color_ff3-(Math.floor(color_ff3/16)*16))+"'");
+  }
+  else
+  {
+    color_ff3=color_hh3-Math.floor((color_hh3-color_pp3)/color_stappen*color_stap);
+    color_ff3=eval("'"+color_mes(Math.floor(color_ff3/16))+"'")+eval("'"+color_mes(color_ff3-(Math.floor(color_ff3/16)*16))+"'");
+  }
+  return color_ff1+color_ff2+color_ff3
+}
+
+lightf_num=0;
+lightf_num2=0;
+lightf_txt=new Array();
+lightf_txt[0]="";
+
+function lightf()
+{
+  for(lightf_i=0;lightf_i != Math.floor(lightf_message.length/2);lightf_i++)
+  {
+    lightf_txt[lightf_i]=color(lightf_lightcolor1,lightf_lightcolor2,Math.floor(lightf_message.length/2),lightf_i);
+  }
+  for(lightf_i=Math.floor(lightf_message.length/2);lightf_i != lightf_message.length;lightf_i++)
+  {
+    lightf_txt[lightf_i]=color(lightf_lightcolor2,lightf_lightcolor1,Math.floor(lightf_message.length/2),(lightf_i-Math.floor(lightf_message.length/2)));
+  }
+  lightf_lightf1();
+}
+
+function lightf_lightf1()
+{
+
+  lightf_txt[lightf_message.length+1]="";
+  lightf_num2=lightf_message.length-lightf_num;
+  for(lightf_i=0;lightf_i != lightf_message.length;lightf_i++)
+  {
+   if(lightf_i+lightf_num < lightf_message.length)
+   {
+     lightf_txt[lightf_message.length+1]=lightf_txt[lightf_message.length+1]+"<font color='#"+lightf_txt[(lightf_i+lightf_num)]+"'>"+lightf_message.charAt(lightf_i)+"</font>";
+   }
+   else
+   {
+     lightf_txt[lightf_message.length+1]=lightf_txt[lightf_message.length+1]+"<font color='#"+lightf_txt[lightf_i-lightf_num2]+"'>"+lightf_message.charAt(lightf_i)+"</font>";
+   }
+  }
+  if(lightf_num != lightf_message.length)
+  {
+    lightf_num++;
+  }
+  else
+  {
+    lightf_num=0;
+  }
+  lightf_light.innerHTML=lightf_txt[lightf_message.length+1];
+  setTimeout("lightf_lightf1()",lightf_speed)
+}
+lightf();
+
+</script></center>
+
+  <p><div align="center" class="style1"><span class="style2"><blink>.</blink></span> <blink> </blink></div>  <br>
+        </br>
+        <style type="text/css">
+    BODY {
+	SCROLLBAR-FACE-COLOR: #000000; SCROLLBAR-HIGHLIGHT-COLOR: #000000; SCROLLBAR-SHADOW-COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #000000; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #ffffff; FONT-FAMILY: Courier New; SCROLLBAR-DARKSHADOW-COLOR: #000000
+}
+.Estilo10 {
+	COLOR: #ffffff; FONT-FAMILY: Courier New
+}
+.Estilo8 {
+	FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Courier New
+}
+        </style>
+        <script language="JavaScript">
+/*
+An object-oriented Typing Text script, to allow for multiple instances.
+A script that causes any text inside any text element to be "typed out", one letter at a time. Note that any HTML tags will not be included in the typed output, to prevent them from causing problems. Tested in Firefox v1.5.0.1, Opera v8.52, Konqueror v3.5.1, and IE v6.
+Browsers that do not support this script will simply see the text fully displayed from the start, including any HTML tags.
+Functions defined:
+  TypingText(element, [interval = 100,] [cursor = "",] [finishedCallback = function(){return}]):
+    Create a new TypingText object around the given element.  Optionally
+    specify a delay between characters of interval milliseconds.
+    cursor allows users to specify some HTML to be appended to the end of
+    the string whilst typing.  Optionally, can also be a function which
+    accepts the current text as an argument.  This allows the user to
+    create a "dynamic cursor" which changes depending on the latest character
+    or the current length of the string.
+    finishedCallback allows advanced scripters to supply a function
+    to be executed on finishing.  The function must accept no arguments.
+  TypingText.run():
+    Run the effect.
+  static TypingText.runAll():
+    Run all TypingText-enabled objects on the page.
+*/
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;	// Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 20 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);	// We haven't finished loading yet.  Have patience.
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+	this.currentText = "";
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+       </script>
+
+       <style>
+td{font-family: courier new; font-size: 9pt; color: yellow}
+a{font-family: courier new; font-size: 12pt; color: red}
+        </style>
+    </p>
+  <div id="example1"></div>
+<p id="example2">
+<span class="style2">Your Site Has Get FuCkeD By , Arabian Hackers Team<br />
+			We Are , SaLan - xBlack ViruS - xCraZy ViruS  -Volcan - Dr.7oDa - H!TMaN - Dr.GrinB - KaSpErSkY SuPeRvIrUs <br />
+			We Will Not Stop Hacking<br />
+			<span class="short_text" id="result_box" lang="en"><span>&quot; Long live the</span> <span class="hps">Arabs</span> <span class="hps">and</span> <span class="hps">all Muslims</span></span> &quot;<br />
+			Sorry admin we are not <span class="short_text" id="result_box" lang="en"><span>Terrorists We just want to Send a Message to Israel &amp; United States of America , We&#39;ll Come back soon , and<br />
+			we will take a revenge from all people who Distort Arab Position , we will return soon , you know Each of science and the progress that you in it because of us , without us you are nothing &nbsp; </span></span></span><span class="style2"><br>
+<b></b><br>
+<br>
+
+<b></b>	</b> [_______Arabian Hackers Team____!] <br>
+<b></b>	</b> [______SaLan_____!] <br>
+<b></b>	</b> [_______xCraZy VirUs____!] <br>
+<b></b>	</b> [_______xBlaCk VirUs____!] <br>
+<b></b>	</b> [______Volcan_____!] <br>
+<b></b>	</b> [______H!TMaN_____!] <br>
+<b></b>	</b> [______Dr_GrinB_____!] <br>
+<b></b>	</b> [______KaSpErSkY SuPeRvIrUs_____!] <br>
+<b></b>	</b> [_______Hacked By Arabian Hackers Team____!] <br>
+
+</p>
+<span class="style4">
+<script type="text/javascript">
+</script>
+</span><script type="text/javascript"></script>
+<script type="text/javascript">//Define first typing example:
+new TypingText(document.getElementById("example1"));
+//Define second typing example (use "slashing" cursor at the end):
+new TypingText(document.getElementById("example2"), 60, function(i){
+var ar = new Array("_"," ","_","_"); return " " + ar[i.length %
+ar.length]; });
+//Type out examples:
+TypingText.runAll();
+</script>
+<br>
+<br>
+<br>
+
+<center>
+  <img src="http://sphotos-f.ak.fbcdn.net/hphotos-ak-frc1/s720x720/602434_192961187505064_1014767199_n.jpg"  width="720" height="405" align="center">
+</center>
+<p> </p>
+<center><font color="yellov" face="" size=""><font color="white" face="" size=""><font color="red" face="" size=""> </center>
+<br>
+
+<center><div style="width: 400px;height: 15px;"><b><font color="red" face="Tahoma" size="2"> ------------- <br><marquee bgcolor="white" style="color:red" width="300" scrollamount="3">
+---------- HACKED BY Arabian Hackers Team -------------
+---------- Her biji Serok Apo -------------
+</marquee></font></div><center>
+
+
+
+
+<embed src="http://www.indowebster.com/mediaplayer.swf" width="0" height="0" wmode="'transparent'" flashvars="file=http://www60.indowebster.com/7d71f0a1128a74008d191d0b3f039d95.swf&frontcolor=0xffffff&backcolor=0x0066ff&lightcolor=0xffffff&logo=http://r1311.hizliresim.com/1h/7/u9jh1.jpg" type="application/x-shockwave-flash" pluginspage="http://r1311.hizliresim.com/1h/7/u9jh1.jpg" menu="false" allowfullscreen="false" scale="noborder" quality="High"></embed>
+
+<!-- Begin Show Hide Floating - http://www.devil-404.org --> <style type="text/css"> #FX{ position:fixed; top:50px; z-index:+1000; } * html #FX{position:relative;} .FXtab{ height:200px; width:50px; float:left; cursor:pointer; background:url('https://lh3.googleusercontent.com/-PCd7HavEW0Y/TWwByr08RoI/AAAAAAAAAc4/WGPSBo9Yu0E/s1600/www.Devil-404.org.png') no-repeat; } .FXcontent{ float:right; border:2px solid #d9e3ff; -moz-border-radius-topleft:5px; -moz-border-radius-topright:5px; -moz-border-radius-bottomleft:5px; -moz-border-radius-bottomright:5px; background:#000000; padding:10px; } </style> <script type="text/javascript"> function showHideFX(){ var FX = document.getElementById("FX"); var w = FX.offsetWidth; FX.opened ? moveFX(0, 40-w) : moveFX(40-w, 0); FX.opened = !FX.opened; } function moveFX(x0, xf){ var FX = document.getElementById("FX"); var dx = Math.abs(x0-xf) > 10 ? 5 : 1; var dir = xf>x0 ? 1 : -1; var x = x0 + dx * dir; FX.style.right = x.toString() + "px"; if(x0!=xf){setTimeout("moveFX("+x+", "+xf+")", 10);} } </script>
+</body></html> ;
+</body> 
+
+<a href="http://www.uploadmusic.org"><object type="application/x-shockwave-flash" width="17"
+height="17"data="http://www.uploadmusic.org/musicplayer.swf?song_url=http://www.uploadmusic.org/MUSIC/4586411384458562.mp3&autoplay=true"><param  name="movie"value="http://www.uploadmusic.org/musicplayer.swf?song_url=http://www.uploadmusic.org/MUSIC/4586411384458562.mp3&song_title=uploadmusic.org&autoplay=true"
+/></object><img src="http://www.uploadmusic.org/smallplayer.gif" border="0">
+<br>Upload Music</a>

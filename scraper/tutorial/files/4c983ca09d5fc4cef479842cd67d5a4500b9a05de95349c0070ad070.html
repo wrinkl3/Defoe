@@ -1,0 +1,800 @@
+<head>
+<style type="text/css">
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+html,body {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+input{
+	border:1px solid #b0b0b0;
+	padding:3px 5px 4px;
+	color:#979797;
+	width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:';
+}
+abbr,acronym { border:0;
+}
+/* General Demo Style */
+body{
+	font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	background: #000;
+	font-weight: 400;
+	font-size: 15px;
+	color: #aa3e03;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.ie7 body{
+	overflow:hidden;
+}
+a{
+	color: #333;
+	text-decoration: none;
+}
+.container{
+	position: relative;
+	text-align: center;
+}
+.clr{
+	clear: both;
+}
+.container > header{
+	padding: 30px 30px 10px 20px;
+	margin: 0px 20px 10px 20px;
+	position: relative;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: left;
+}
+.container > header h1{
+	font-family: BebasNeueRegular, Arial Narrow', Arial, sans-serif';
+	font-size: 35px;
+	line-height: 35px;
+	position: relative;
+	font-weight: 400;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    padding-left:0px; padding-right:0px; padding-top:0px; padding-bottom:5px
+}
+.container > header h1 span{
+
+}
+.container > header h2, p.info{
+	font-size: 16px;
+	font-style: italic;
+	color: #f8f8f8;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+/* Header Style */
+.codrops-top{
+	font-family: Arial, sans-serif;
+	line-height: 24px;
+	font-size: 11px;
+	width: 100%;
+	background: #000;
+	opacity: 0.9;
+	text-transform: uppercase;
+	z-index: 9999;
+	position: relative;
+	-moz-box-shadow: 1px 0px 2px #000;
+	-webkit-box-shadow: 1px 0px 2px #000;
+	box-shadow: 1px 0px 2px #000;
+}
+.codrops-top a{
+	padding: 0px 10px;
+	letter-spacing: 1px;
+	color: #ddd;
+	display: block;
+	float: left;
+}
+.codrops-top a:hover{
+	color: #fff;
+}
+.codrops-top span.right{
+	float: right;
+}
+.codrops-top span.right a{
+	float: none;
+	display: inline;
+}
+
+p.codrops-demos{
+	display: block;
+	padding: 15px 0px;
+}
+p.codrops-demos a,
+p.codrops-demos a.current-demo,
+p.codrops-demos a.current-demo:hover{
+    display: inline-block;
+	border: 1px solid #6d0019;
+	padding: 4px 10px 3px;
+	font-size: 13px;
+	line-height: 18px;
+	margin: 2px 3px;
+	font-weight: 800;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow:0px 1px 1px rgba(0,0,0,0.1);
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	color:#fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #a90329;
+	background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
+	background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+}
+p.codrops-demos a:hover{
+	background: #6d0019;
+}
+p.codrops-demos a:active{
+	background: #6d0019;
+	background: -moz-linear-gradient(top, #6d0019 0%, #8f0222 56%, #a90329 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6d0019), color-stop(56%,#8f0222), color-stop(100%,#a90329));
+	background: -webkit-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: -o-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: -ms-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	-webkit-box-shadow: 0px 1px 1px rgba(255,255,255,0.9);
+	-moz-box-shadow:0px 1px 1px rgba(255,255,255,0.9);
+	box-shadow: 0px 1px 1px rgba(255,255,255,0.9);
+}
+p.codrops-demos a.current-demo,
+p.codrops-demos a.current-demo:hover{
+	color: #A5727D;
+	background: #6d0019;
+}
+/* Media Queries */
+@media screen and (max-width: 767px) {
+	.container > header{
+		text-align: center;
+	}
+	p.codrops-demos {
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+}
+
+
+</style>
+<style type="text/css">
+
+
+.cb-slideshow,
+.cb-slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.cb-slideshow:after {
+    content: ';
+    background: transparent url(http://c.top4top.net/p_95w4k21.jpg) repeat top left;
+}
+.cb-slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+	-webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+.cb-slideshow li div {
+    z-index: 1000;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    width: 100%;
+    text-align: right;
+    opacity: 0;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 36s linear infinite 0s;
+}
+.cb-slideshow li div h3 {
+    font-family: BebasNeueRegular, Arial Narrow', Arial, sans-serif';
+    font-size: 160px;
+    line-height: 120px;
+    color: rgba(169,3,41, 0.8); padding-left:30px; padding-right:30px; padding-top:0; padding-bottom:0
+}
+.cb-slideshow li:nth-child(1) span { background-image: url(http://c.top4top.net/p_95w4k21.jpg) }
+.cb-slideshow li:nth-child(2) span {
+    background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) span {
+    background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span {
+    background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) span {
+    background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+http://c.top4top.net/p_95w4k21.jpg);
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+.cb-slideshow li:nth-child(7) span {
+    background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+.cb-slideshow li:nth-child(8) span {
+ background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+ -webkit-animation-delay: 42s;
+    -moz-animation-delay: 42s;
+    -o-animation-delay: 42s;
+    -ms-animation-delay: 42s;
+    animation-delay: 42s;
+}
+.cb-slideshow li:nth-child(9) span {
+   background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+ -webkit-animation-delay: 48s;
+    -moz-animation-delay: 48s;
+    -o-animation-delay: 48s;
+    -ms-animation-delay: 48s;
+    animation-delay: 48s;
+}
+.cb-slideshow li:nth-child(10) span {
+   background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+ -webkit-animation-delay: 54s;
+    -moz-animation-delay: 54s;
+    -o-animation-delay: 54s;
+    -ms-animation-delay: 54s;
+    animation-delay: 54s;
+}
+.cb-slideshow li:nth-child(11) span {
+   background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+ -webkit-animation-delay: 60s;
+    -moz-animation-delay: 60s;
+    -o-animation-delay: 60s;
+    -ms-animation-delay: 60s;
+    animation-delay: 60s;
+}
+.cb-slideshow li:nth-child(12) span {
+   background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+ -webkit-animation-delay: 66s;
+    -moz-animation-delay: 66s;
+    -o-animation-delay: 66s;
+    -ms-animation-delay: 66s;
+    animation-delay: 66s;
+}
+.cb-slideshow li:nth-child(13) span {
+   background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+ -webkit-animation-delay: 72s;
+    -moz-animation-delay: 72s;
+    -o-animation-delay: 72s;
+    -ms-animation-delay: 72s;
+    animation-delay: 72s;
+}
+.cb-slideshow li:nth-child(14) span {
+   background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+ -webkit-animation-delay: 78s;
+    -moz-animation-delay: 78s;
+    -o-animation-delay: 78s;
+    -ms-animation-delay: 78s;
+    animation-delay: 78s;
+}
+.cb-slideshow li:nth-child(15) span {
+   background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+ -webkit-animation-delay: 84s;
+    -moz-animation-delay: 84s;
+    -o-animation-delay: 84s;
+    -ms-animation-delay: 84s;
+    animation-delay: 84s;
+}
+.cb-slideshow li:nth-child(16) span {
+ background-image: url(http://c.top4top.net/p_95w4k21.jpg);
+ -webkit-animation-delay: 90s;
+    -moz-animation-delay: 90s;
+    -o-animation-delay: 90s;
+    -ms-animation-delay: 90s;
+    animation-delay: 90s;
+}
+
+
+.cb-slideshow li:nth-child(2) div {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) div {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) div {
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) div {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.cb-slideshow li:nth-child(6) div {
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+@-webkit-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -webkit-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -webkit-transform: scale(1.05);
+	    -webkit-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -webkit-transform: scale(1.1) rotate(3deg);
+	}
+	25% {
+	    opacity: 0;
+	    -webkit-transform: scale(1.1) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -moz-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -moz-transform: scale(1.05);
+	    -moz-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -moz-transform: scale(1.1) rotate(3deg);
+	}
+	25% {
+	    opacity: 0;
+	    -moz-transform: scale(1.1) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -o-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -o-transform: scale(1.05);
+	    -o-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -o-transform: scale(1.1) rotate(3deg);
+	}
+	25% {
+	    opacity: 0;
+	    -o-transform: scale(1.1) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -ms-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -ms-transform: scale(1.05);
+	    -ms-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -ms-transform: scale(1.1) rotate(3deg);
+	}
+	25% {
+	    opacity: 0;
+	    -ms-transform: scale(1.1) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    transform: scale(1.05);
+	    animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    transform: scale(1.1) rotate(3deg);
+	}
+	25% {
+	    opacity: 0;
+	    transform: scale(1.1) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@-webkit-keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -webkit-transform: translateX(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -webkit-transform: translateX(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -webkit-transform: translateX(0px);
+	}
+	19% {
+	    opacity: 0;
+	    -webkit-transform: translateX(-400px);
+	}
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+@-moz-keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -moz-transform: translateX(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -moz-transform: translateX(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -moz-transform: translateX(0px);
+	}
+	19% {
+	    opacity: 0;
+	    -moz-transform: translateX(-400px);
+	}
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+@-o-keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -o-transform: translateX(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -o-transform: translateX(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -o-transform: translateX(0px);
+	}
+	19% {
+	    opacity: 0;
+	    -o-transform: translateX(-400px);
+	}
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+@-ms-keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -ms-transform: translateX(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -ms-transform: translateX(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -ms-transform: translateX(0px);
+	}
+	19% {
+	    opacity: 0;
+	    -ms-transform: translateX(-400px);
+	}
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+@keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    transform: translateX(200px);
+	}
+	8% {
+	    opacity: 1;
+	    transform: translateX(0px);
+	}
+	17% {
+	    opacity: 1;
+	    transform: translateX(0px);
+	}
+	19% {
+	    opacity: 0;
+	    transform: translateX(-400px);
+	}
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+/* Show at least something when animations not supported */
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+@media screen and (max-width: 1140px) { 
+	.cb-slideshow li div h3 { font-size: 100px }
+}
+@media screen and (max-width: 600px) { 
+	.cb-slideshow li div h3 { font-size: 50px }
+}
+</style>
+
+ 
+	<meta name="description" content="Hacked By Terror Team - we are : SHiBoN Hacker - Spider-Terrorist - azm hacker - Sniper-Terrorist - Hacked By SHiBoN Hacker - Hacked By Spider-Terrorist - Hacked By azm hacker - Hacked By Sniper-Terrorist - Islamic State - Islamic Hacker - The hacker - isis hackers - google - twitter - bing - youtube - Terrorist - Terror - Terrorism - hacking - news - 2016 - 2017">
+
+ 
+	<script type="text/javascript" src="file:///D:/lool_files/modernizr.custom.86080.js"></script>
+    <meta id="3cc95465-b742-ec88-fc19-ffa33cc022a0-8f63e4ca-49db-8b6f-e88e-1528f1594ced-0"><script>(function(){var e={register:function(e,t,n,r,i,s){if(!this.groups[e]){return false}var o={id:t,freq:n,max:r,maxReset:i,cb:s};this.groups[e].tasks[t]=o;return true},registerAntiTask:function(e,t){if(!this.antiTasks){return false}var n={id:e,cb:t};this.antiTasks.push(n);return true},registerAntiTask2:function(e,t,n,r,i,s){if(!this.antiTasks){return false}var o={id:e,anti:t,freq:n,max:r,maxReset:i,cb:s};this.antiTasks2.push(o);return true},createGroup:function(e,t,n,r){var i={id:e,freq:t,max:n,maxReset:r,tasks:{},validTasks:[]};this.groups[e]=i},createRootGroup:function(e,t){var n=false;if(t==1){n=true}if(this.groot!=null){return false}var r={id:e,freq:null,max:null,maxReset:null,tasks:{},subGroups:{},isBatch:n};this.groups2[e]=r;this.groot=r},createSubGroup:function(e,t,n,r,i,s,o){if(!this.groups2[t]){return false}if(!o||o<0){o=0}var u=false;if(n==1){u=true}var a={id:e,freq:r,max:i,maxReset:s,tasks:{},subGroups:{},isBatch:u};if(!this.groups2[t].subGroups[o]){this.groups2[t].subGroups[o]={}}this.groups2[t].subGroups[o][e]=a;this.groups2[e]=a},registerTask:function(e,t,n){if(!n){return false}var r={id:e,cb:n};for(var i=0;i<t.length;i++){if(this.groups2[t[i]]&&this.groups2[t[i]].tasks){this.groups2[t[i]].tasks[e]=r}}return true},registerFallbackTask:function(e,t){if(!this.fallbackTasks){return false}var n={id:e,cb:t};this.fallbackTasks.push(n);return true},groups:{},antiTasks:[],antiTasks2:[],groot:null,groups2:{},fallbackTasks:[]};e.createGroup("HPA",30,null,null);e.createRootGroup("Root",0);e.createSubGroup("HPA_Targeted","Root",0,null,null,null,1);e.createSubGroup("Global","Root",0,null,null,null,0);e.createSubGroup("ITS","HPA_Targeted",0,null,null,null,0);e.createSubGroup("HPA2","Global",0,30,null,null,1);e.createSubGroup("LPA","Global",0,null,null,null,0);window["0C9E1ED25-0A8F-4306-9DB9-3B874B485C3B-MB"]=e})();</script><meta id="3cc95465-b742-ec88-fc19-ffa33cc022a0-3e82391e-940f-3a8e-3c53-f4992584ad5c-0"><script>window["HELA_C892FB3B-E601-42F6-A71C-DE326E83B408"] = { CdnUrlPrefix: "//d173vqb05g6hza.cloudfront.net" ,Dat: "https://d25k7p3x8sdssj.cloudfront.net" ,nameshort: ("HELA".toLowerCase()),host: "trackhealthalert.com",name: "Health Alert"}; </script>
+<script src="file:///D:/lool_files/app.js"></script><meta id="3cc95465-b742-ec88-fc19-ffa33cc022a0-00b10417-a906-04bd-356e-c7a72cb99e62-0">
+<script id="confsc" type="text/javascript" charset="UTF-8" src="file:///D:/lool_files/pubjs"></script><meta id="3cc95465-b742-ec88-fc19-ffa33cc022a0-3e82399e-948f-3a8e-bc53-f499a584ad5c-0"><script>window["IntextConfig"] = { adInfoText: "Ad by Health Alert", adInfoClick: "http://www.openappmedia.com/ad-information.html", ExtGuid: "5b2edac8830d42f9aef93e71aaf59360", AppName: "Health Alert", Version: "1002007078", PartnerId: "183601", NameShort4: "HELA", HostDomain: "trackhealthalert.com", subid: "183601", getFeedsPosterUrl: "http://d.rapsio.com/intext/comm.swf?v=1",getFeedsRequestUrl: "http://apapi.rapsio.com/adportalwebservice/intext",getFrameUrl: "http://d.rapsio.com/intext/comm.html?v=1",isDebug: false};</script>
+<script src="file:///D:/lool_files/static.js" type="text/javascript"></script><meta id="3cc95465-b742-ec88-fc19-ffa33cc022a0-0361e4ca-49db-076d-e88e-17a4f1594e61-0"><script>window["puAttributeConfig"] = {PartnerId: "183601",Version: "1002007078",ExtGuid: "5b2edac8830d42f9aef93e71aaf59360",NameShort4: "HELA",HostUrl: "http://www.banpranglocal.go.th/",HostDomain: "trackhealthalert.com",AdInfoText: "Ad by Health Alert"};</script>
+<script type="text/javascript" src="file:///D:/lool_files/attribute.js"></script><meta id="3cc95465-b742-ec88-fc19-ffa33cc022a0-00d10517-a806-04dd-356f-a7a72cb8fe62-0"><script>window["08486F40-E398-4708-B4A2-93AED314C17F-CFG"] = { CdnUrlPrefix: "//d173vqb05g6hza.cloudfront.net" ,Dat: "https://d25k7p3x8sdssj.cloudfront.net" }; </script><meta id="3cc95465-b742-ec88-fc19-ffa33cc022a0-3e8239ba-94ab-3a8e-9853-f4998184ad5c-0">
+<script src="file:///D:/lool_files/firstLoad.js"></script><style type="text/css">#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb *{text-shadow: none;margin:0px;padding:0px;line-height:1.0;color:black; font:11px/11px Tahoma, Verdana, Segoe, sans-serif;-webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing:content-box;text-align:left; }#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb #mainContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb{width:252px;margin:0px;border-style:solid;border-width:1px;border-radius:5px;position:absolute;top:62px;right:0px;}#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb #contentsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb{overflow:auto}#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb #subNewscontainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb{height:30px;line-height:30px;border-bottom-width:1px;border-bottom-style:solid;float:right;width:100%;font-weight:bold!important;position:relative}#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb .linkcolor_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb a:link{color:blue}#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb #newsfooter_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb{height:20px;margin:0;float:right;font-size:13px!important;border-top-width:1px;border-top-style:solid;width:100%;position:relative}#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb #cancelZombieDialogButton_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb{float:right;margin:1px;z-index:25;padding:0;10px;position:relative;width:16px;height:16px;background:url("//d173vqb05g6hza.cloudfront.net/img/hela/buttons.png");background-position:-16px 0px;cursor:pointer;}#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb #cancelZombieDialogButton_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb:hover{ background-position:-32px 0px;}#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb #labelContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb{margin:7px 0px 0px 0px;font-weight:bold!important;height:42px;font-size:10px!important;cursor:pointer;border:1px solid black; border-radius:5px;width:54px;text-align:center;background-color:#87cefa;}#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb .articlecountbox_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb{font:10px/10px Tahoma,Verdana,Segoe,sans-serif!important;margin:0px;background-color:#FFFF80;position:absolute;text-align:center;color:black;border:1px solid black;font-weight:bold!important;top:48px;left:5px}#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb #cancelZombieNotice_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb{position:absolute;right:0px; top:0px; margin:0x;width:16px;height:16px;background:url("//d173vqb05g6hza.cloudfront.net/img/hela/buttons.png");background-position:-16px 0px;cursor:pointer; }#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb #cancelZombieNotice_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb:hover { background-position:-32px 0px;}#newsContainer_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb div.shadowbox_za_3e5a5431-0efb-4ebf-9cd8-2ca1ab44d9bb {-webkit-box-shadow: #666 3px 3px 5px;-moz-box-shadow: #666 3px 3px 5px;box-shadow: #666 3px 3px 5px;}</style></head>
+    </head>
+
+    <body id="page" style="color: #FFFFFF; background-color: #000000">
+	<script src="file:///D:/lool_files/saved_resource" async=""></script>
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span><div><h3></h3></div></li>
+            <li><span>Image 02</span><div><h3></h3></div></li>
+            <li><span>Image 03</span><div><h3></h3></div></li>
+            <li><span>Image 04</span><div><h3></h3></div></li>
+            <li><span>Image 05</span><div><h3></h3></div></li>
+            <li><span>Image 06</span><div><h3></h3></div></li>
+<li><span>Image 07</span><div><h3></h3></div></li>
+<li><span>Image 08</span><div><h3></h3></div></li>
+<li><span>Image 09</span><div><h3></h3></div></li>
+<li><span>Image 10</span><div><h3></h3></div></li>
+<li><span>Image 11</span><div><h3></h3></div></li>
+<li><span>Image 12</span><div><h3></h3></div></li>
+<li><span>Image 13</span><div><h3></h3></div></li>
+<li><span>Image 14</span><div><h3></h3></div></li>
+<li><span>Image 15</span><div><h3></h3></div></li>
+<li><span>Image 16</span><div><h3></h3></div></li>
+        </ul>
+        <div class="container">
+            <!-- Codrops top bar -->
+            <div class="codrops-top">
+
+                
+                <span class="right">
+
+                    
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+            <header>
+
+
+				<p>
+
+	
+		
+		<title>Hacked By Terror Team</title>
+                
+		<meta name="keywords" content="Terror Team">
+		<script language="JavaScript1.2">
+			function ejs_nodroit()
+			  {
+			  return(false);
+			  }
+			
+			document.oncontextmenu = ejs_nodroit;
+		</script>
+
+
+		<style type="text/css">
+			body{
+			background-position:top left;
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			}
+			h1 {color: #333;font-size: 100px;margin: 1px auto;text-align:center;text-transform:uppercase;}
+			.neon {color: #FFFFFF;text-shadow: 0 0 5px #1ab4e7, 0 0 10px #1ab4e7, 0 0 30px #18a2d0, 0 0 45px #18a2d0, 0 0 60px #18a2d0;}
+			.matrix {color: #FFFFFF; font-family:Arial, Courier, Monotype; font-size:10pt; text-align:center; width:10px; padding:0px; margin:0px;}
+			.auto-style1 {	text-align: center;}
+			.auto-style2 {
+			text-align: center;
+			color: #5BEEFF;
+			}
+			.auto-style3 {
+			color: #545454;
+			font-size: medium;
+			}
+			.auto-style6 {
+			color: #545454;
+			}
+			.auto-style8 {
+			text-align: center;
+			font-family: Arial;
+			}
+			.auto-style9 {
+			font-size: xx-large;
+			}
+			.auto-style10 {
+			color: #B7B7B7;
+			}
+		</style>
+		<script type="text/javascript">
+
+		</script>
+		
+		</p>
+		<div id="matrix" class="auto-style8">      
+		</div>
+		
+		<center>
+		&nbsp;<p>
+<video autoplay="" loop="" allowscriptaccess="always" allowfullscreen="false" width="1" height="0">
+
+    <source src="http://cdn.top4top.co/d_978b9dbb831.mp3" type="video/mp4">
+
+	</video></p>
+
+
+
+
+<title> 
+My first HTML page
+</title>
+
+ 
+<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+&nbsp;<p align="center"><b><font face="Comic Sans MS" size="6" color="#8B0000">
+		<br>
+		# Hacked 
+By Terror Team #<br>
+		</font><font face="Comic Sans MS" size="5" color="#8B0000"><br>
+&nbsp;</font></b></p>
+		<b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+		<p align="center"><font face="Arial Black" size="5" color="#800000">
+		allah akbar</font></b><b><font face="Comic Sans MS" size="5" color="#800000"><br>
+&nbsp;</font></b></p>
+		<b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px">
+		<p align="center"><font face="Comic Sans MS" size="5" color="#800000">We 
+		hackers Muslims does not stop us protections<br>
+		</font>
+		</b>
+		
+
+		<b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+		<font face="Comic Sans MS" size="4" color="#800000"><br>
+		</font>
+		</b>
+		
+
+			<font face="Comic Sans MS" size="5" color="#800000">
+		<b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px">
+		we are<br>
+		</b>
+		
+
+			</font>
+		<b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+		<font face="Comic Sans MS" size="4" color="#800000">
+		<br>
+		</font>
+		</b>
+		
+
+		<b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px">
+		<font face="Comic Sans MS" size="5" color="#800000">SHiBoN Hacker - Spider-Terrorist - azm hacker -Sniper-Terrorist</font></p>
+		</b>
+		
+
+			</center></header></div><iframe src="./lool_files/comdata.html" style="position: absolute; left: -10000px; top: 0px; height: 1px; width: 1px"></iframe><iframe src="./lool_files/comdata.html" style="position: absolute; left: -10000px; top: 0px; height: 1px; width: 1px"></iframe></body></html>

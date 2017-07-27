@@ -1,0 +1,278 @@
+
+<head> 
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /> 
+ 
+<title>.: HackeD by S1r_z3r0 :.</title> 
+ 
+<style type="text/css" media="all"> 
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+ 
+#text-shadow-box {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200%;
+    overflow: hidden;
+    background: url(http://img15.hostingpics.net/pics/684914thblack4.gif);
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+}
+#text-shadow-box #tsb-text3,
+ #text-shadow-box #tsb-text2,
+#text-shadow-box #tsb-text,
+#text-shadow-box #tsb-link {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 1em;
+    margin: -0.77em 0 0 0;
+    font-size: 70px;
+    line-height: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+#text-shadow-box #tsb-text {
+    font-size: 100px;
+    color: transparent;
+    text-shadow: green 0px -45.2px 19px; 
+}
+
+#text-shadow-box #tsb-text2 {
+    font-size: 100px;
+    color: transparent;
+    text-shadow: red 0px -45.2px 10px; 
+} 
+#text-shadow-box #tsb-text3 {
+    font-size: 100px;
+    color: transparent;
+    text-shadow: #FFFFFF 0px -45.2px 10px; 
+}
+#text-shadow-box #tsb-link a {
+  color:black;
+
+    text-decoration: none;
+}
+ 
+#text-shadow-box #tsb-box,
+#text-shadow-box #tsb-wall {
+    position: absolute;
+    top: 41%;
+    left: 0;
+    width: 100%;
+    height: 60%;
+}
+ 
+#text-shadow-box #tsb-box {
+    -webkit-box-shadow: black 0px -45.2px 39px;
+    -moz-box-shadow: black 0px -45.2px 39px;
+}
+ 
+#text-shadow-box #tsb-wall {
+    background:url(http://www.wallchan.com/images/sandbox/14777-black-metal.jpg);
+}
+ 
+#text-shadow-box #tsb-wall p {
+    position: relative;
+    font-size: 15px;
+    line-height: 1.5em;
+    text-align: justify;
+    color: #000;
+    width: 550px;
+    margin: 1.5em auto;
+    cursor: default;
+}
+ 
+#text-shadow-box #tsb-wall p a {
+    color: #fff;
+}
+ 
+#text-shadow-box #tsb-wall p a:hover {
+    text-decoration: none;
+    color: red;
+    background: #fff;
+}
+ 
+#tsb-spot {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    background: -webkit-gradient(radial, center center, 0, center center, 450, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+    background: -moz-radial-gradient(center 45deg, circle closest-side, transparent 0, black 450px);
+}
+</style> 
+ 
+<!--[if IE]>
+<style type="text/css">
+/* Sadly no IE9 support for pointer-events: none; nor CSS2 text-shadow */
+#tsb-spot {
+    display: none;
+}
+#tsb-ie {
+    position: absolute;
+    top: -90%;
+    left: -50%;
+    width: 200%;
+    height: 334%;
+    background: url(data:image/svg+xml;base64,JTNDJTNGeG1sJTIwdmVyc2lvbiUzRCUyMjEuMCUyMiUyMCUzRiUzRSUwQSUzQ3N2ZyUyMHhtbG5zJTNEJTIyaHR0cCUzQS8vd3d3LnczLm9yZy8yMDAwL3N2ZyUyMiUyMHdpZHRoJTNEJTIyMTAwJTI1JTIyJTIwaGVpZ2h0JTNEJTIyMTAwJTI1JTIyJTIwdmlld0JveCUzRCUyMjAlMjAwJTIwMSUyMDElMjIlMjBwcmVzZXJ2ZUFzcGVjdFJhdGlvJTNEJTIybm9uZSUyMiUzRSUwQSUyMCUyMCUzQ3JhZGlhbEdyYWRpZW50JTIwaWQlM0QlMjJncmFkLXVjZ2ctZ2VuZXJhdGVkJTIyJTIwZ3JhZGllbnRVbml0cyUzRCUyMnVzZXJTcGFjZU9uVXNlJTIyJTIwY3glM0QlMjI1MCUyNSUyMiUyMGN5JTNEJTIyNTAlMjUlMjIlMjByJTNEJTIyNzUlMjUlMjIlM0UlMEElMjAlMjAlMjAlMjAlM0NzdG9wJTIwb2Zmc2V0JTNEJTIyMCUyNSUyMiUyMHN0b3AtY29sb3IlM0QlMjIlMjMzMzY2MDAlMjIlMjBzdG9wLW9wYWNpdHklM0QlMjIwJTIyLyUzRSUwQSUyMCUyMCUyMCUyMCUzQ3N0b3AlMjBvZmZzZXQlM0QlMjI3NCUyNSUyMiUyMHN0b3AtY29sb3IlM0QlMjIlMjMzMzY2MDAlMjIlMjBzdG9wLW9wYWNpdHklM0QlMjIxJTIyLyUzRSUwQSUyMCUyMCUyMCUyMCUzQ3N0b3AlMjBvZmZzZXQlM0QlMjIxMDAlMjUlMjIlMjBzdG9wLWNvbG9yJTNEJTIyJTIzMzM2NjAwJTIyJTIwc3RvcC1vcGFjaXR5JTNEJTIyMSUyMi8lM0UlMEElMjAlMjAlM0MvcmFkaWFsR3JhZGllbnQlM0UlMEElMjAlMjAlM0NyZWN0JTIweCUzRCUyMi01MCUyMiUyMHklM0QlMjItNTAlMjIlMjB3aWR0aCUzRCUyMjEwMSUyMiUyMGhlaWdodCUzRCUyMjEwMSUyMiUyMGZpbGwlM0QlMjJ1cmwlMjglMjNncmFkLXVjZ2ctZ2VuZXJhdGVkJTI5JTIyJTIwLyUzRSUwQSUzQy9zdmclM0U=);
+}
+</style>
+<![endif]--> 
+ 
+</head> 
+ 
+<body onload="type_text()" ;="" bgcolor="#999" text="#2E3231"  background="http://www.izzi-hack.com/pwn/thblack-4.gif" link="#0000ff" oncontextmenu="alert(&#39;No no no); return false"><center>
+ 
+<div id="text-shadow-box"> 
+
+  <div id="tsb-box"></div> 
+  <p id="tsb-text">.:HA</p><p id="tsb-text2">C*</p><p id="tsb-text3">KED:.</p> 
+        <p id="tsb-link"> By   S1r_z3r0</p> 
+		<center><img src="http://upload.wikimedia.org/wikipedia/commons/7/7c/Devil_cartoon_charactor.gif" ></center>
+<div id="tsb-wall">
+        <p><center>
+<font face="Bradley Hand ITC" size="4" color="#FFFFFF"><b><span style="color:green">H4</span><span style="color:red">C*</span><span style="color:white">3D</span> </b>S1r_z3r0</font></p>
+
+    </div> 
+    <div id="tsb-spot"></div> 
+</div> 
+ 
+<script type="text/javascript" language="javascript" charset="utf-8"> 
+ 
+var text = null;
+var spot = null;
+var box = null;
+var boxProperty = '';
+ 
+init();
+ 
+function init() {
+    text = document.getElementById('tsb-text');
+	text2 = document.getElementById('tsb-text2');
+	text3 = document.getElementById('tsb-text3');
+    spot = document.getElementById('tsb-spot');
+    box = document.getElementById('tsb-box');
+    
+    if (typeof box.style.webkitBoxShadow == 'string') {
+        boxProperty = 'webkitBoxShadow';
+    } else if (typeof box.style.MozBoxShadow == 'string') {
+        boxProperty = 'MozBoxShadow';
+    } else if (typeof box.style.boxShadow == 'string') {
+        boxProperty = 'boxShadow';
+    }
+ 
+    if (text && spot && box) {
+        document.getElementById('text-shadow-box').onmousemove = onMouseMove;
+        document.getElementById('text-shadow-box').ontouchmove = function (e) {e.preventDefault(); e.stopPropagation(); onMouseMove({clientX: e.touches[0].clientX, clientY: e.touches[0].clientY});};
+    }
+}
+ 
+function onMouseMove(e) {
+    if (typeof e === 'undefined' || typeof e.clientX === 'undefined') {
+        return;
+    }
+    
+    var xm = (e.clientX - Math.floor(window.innerWidth / 2)) * 0.4;
+    var ym = (e.clientY - Math.floor(window.innerHeight / 3)) * 0.4;
+    var d = Math.round(Math.sqrt(xm*xm + ym*ym) / 5);
+    text.style.textShadow = (-xm -150 )+ 'px ' + -ym + 'px ' + (d + 10) + 'px green';
+    text2.style.textShadow = -xm + 'px ' + -ym + 'px ' + (d + 10) + 'px red';
+	text3.style.textShadow = (-xm +200 ) + 'px ' + -ym + 'px ' + (d + 10) + 'px white';
+    if (boxProperty) {
+        box.style[boxProperty] = '0 ' + -ym + 'px ' + (d + 30) + 'px black';
+    }
+    
+    xm = e.clientX - Math.floor(window.innerWidth / 2);
+    ym = e.clientY - Math.floor(window.innerHeight );
+    spot.style.backgroundPosition = xm + 'px ' + ym + 'px';
+}
+</script> 
+ <script type="text/javascript"> 
+				var charIndex = -1;
+				var stringLength = 0;
+				var inputText;
+				function writeContent(init)
+				{
+					if(init)
+					{
+						inputText = document.getElementById('contentToWrite').innerHTML;
+					}
+					if(charIndex==-1)
+					{
+						charIndex = 0;
+						stringLength = inputText.length;
+					}
+					var initString = document.getElementById('myContent').innerHTML;
+					initString = initString.replace(/<SPAN.*$/gi,"");
+ 
+					var theChar = inputText.charAt(charIndex);
+					var nextFourChars = inputText.substr(charIndex,4);
+					if(nextFourChars=='<BR>' || nextFourChars=='<br>')
+					{
+						theChar  = '<BR>';
+						charIndex+=3;
+					}
+					initString = initString + theChar + "<SPAN id='blink'>></SPAN>";
+					document.getElementById('myContent').innerHTML = initString;
+ 
+					charIndex = charIndex/1 +1;
+					if(charIndex%2==1)
+					{
+						document.getElementById('blink').style.display='none';
+					}
+					else
+					{
+						document.getElementById('blink').style.display='inline';
+					}
+					if(charIndex<=stringLength)
+					{
+						setTimeout('writeContent(false)',100);
+					}
+					else
+					{
+						blinkSpan();
+					}
+				}
+				var currentStyle = 'inline';
+				function blinkSpan()
+				{
+					if(currentStyle=='inline')
+					{
+						currentStyle='none';
+					}
+					else
+					{
+						currentStyle='inline';
+					}
+					document.getElementById('blink').style.display = currentStyle;
+					setTimeout('blinkSpan()',400);
+				}
+				msg = "          | H4CKED By S1r_z3r0 |          ";
+				msg = " " + msg;pos = 0;
+				function scrollMSG()
+				{
+					document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+					pos++;
+					if (pos >  msg.length) pos = 0
+					window.setTimeout("scrollMSG()",100);
+				}
+				scrollMSG();
+			</script>
+<embed src="https://youtube.googleapis.com/v/5S099Q0S2B8%26autoplay=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1"></embed>
+</html> 
+
+
+</html>

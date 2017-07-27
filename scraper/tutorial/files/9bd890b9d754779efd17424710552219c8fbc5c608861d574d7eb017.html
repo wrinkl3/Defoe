@@ -1,0 +1,386 @@
+html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title> Owned BY Kai-H4xOrR</title>
+
+<style type="text/css"></style></head><body bgcolor="black">
+ <script>
+// Set the number of snowflakes (more than 30 - 40 not recommended)
+var snowmax=35
+
+// Set the colors for the snow. Add as many colors as you like
+var snowcolor=new Array("#aaaacc","#ddddFF","#ccccDD")
+
+// Set the fonts, that create the snowflakes. Add as many fonts as you like
+var snowtype=new Array("Arial Black","Arial Narrow","Times","Comic Sans MS")
+
+// Set the letter that creates your snowflake (recommended:*)
+var snowletter="*"
+
+// Set the speed of sinking (recommended values range from 0.3 to 2)
+var sinkspeed=0.9
+
+// Set the maximal-size of your snowflaxes
+var snowmaxsize=22
+
+// Set the minimal-size of your snowflaxes
+var snowminsize=8
+
+// Set the snowing-zone
+// Set 1 for all-over-snowing, set 2 for left-side-snowing 
+// Set 3 for center-snowing, set 4 for right-side-snowing
+var snowingzone=3
+
+///////////////////////////////////////////////////////////////////////////
+// CONFIGURATION ENDS HERE
+///////////////////////////////////////////////////////////////////////////
+
+
+// Do not edit below this line
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent 
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)  
+var browserok=ie5||ns6||opera
+
+function randommaker(range) {		
+	rand=Math.floor(range*Math.random())
+    return rand
+}
+
+function initsnow() {
+	if (ie5 || opera) {
+		marginbottom = document.body.clientHeight
+		marginright = document.body.clientWidth
+	}
+	else if (ns6) {
+		marginbottom = window.innerHeight
+		marginright = window.innerWidth
+	}
+	var snowsizerange=snowmaxsize-snowminsize
+	for (i=0;i<=snowmax;i++) {
+		crds[i] = 0;                      
+    	lftrght[i] = Math.random()*15;         
+    	x_mv[i] = 0.03 + Math.random()/10;
+		snow[i]=document.getElementById("s"+i)
+		snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+		snow[i].size=randommaker(snowsizerange)+snowminsize
+		snow[i].style.fontSize=snow[i].size
+		snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+		snow[i].sink=sinkspeed*snow[i].size/5
+		if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+		if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+		if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+		if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+		snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+		snow[i].style.left=snow[i].posx
+		snow[i].style.top=snow[i].posy
+	}
+	movesnow()
+}
+
+function movesnow() {
+	for (i=0;i<=snowmax;i++) {
+		crds[i] += x_mv[i];
+		snow[i].posy+=snow[i].sink
+		snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+		snow[i].style.top=snow[i].posy
+		
+		if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+			if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+			if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+			if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+			if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+			snow[i].posy=0
+		}
+	}
+	var timer=setTimeout("movesnow()",50)
+}
+
+for (i=0;i<=snowmax;i++) {
+	document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+	window.onload=initsnow
+}
+</script><span id="s0" style="position: absolute; top: 417.24000000000035px; font-family: &#39;Arial Black&#39;; font-size: 19px; color: rgb(221, 221, 255); left: 313.380539003334px;">*</span><span id="s1" style="position: absolute; top: 676.7999999999992px; font-family: &#39;Arial Black&#39;; font-size: 16px; color: rgb(204, 204, 221); left: 462.5218464515788px;">*</span><span id="s2" style="position: absolute; top: 492.4799999999994px; font-family: Times; font-size: 16px; color: rgb(170, 170, 204); left: 823.0661364004144px;">*</span><span id="s3" style="position: absolute; top: 349.91999999999956px; font-family: &#39;Arial Black&#39;; font-size: 8px; color: rgb(204, 204, 221); left: 754.318747452475px;">*</span><span id="s4" style="position: absolute; top: 161.99999999999986px; font-family: Times; font-size: 20px; color: rgb(170, 170, 204); left: 616.3425975778252px;">*</span><span id="s5" style="position: absolute; top: 432.00000000000176px; font-family: Times; font-size: 10px; color: rgb(204, 204, 221); left: 747.6189259749622px;">*</span><span id="s6" style="position: absolute; top: 471.2400000000003px; font-family: &#39;Arial Narrow&#39;; font-size: 17px; color: rgb(221, 221, 255); left: 483.2572633621519px;">*</span><span id="s7" style="position: absolute; top: 270.54000000000053px; font-family: &#39;Arial Black&#39;; font-size: 9px; color: rgb(204, 204, 221); left: 739.9221577211005px;">*</span><span id="s8" style="position: absolute; top: 125.27999999999987px; font-family: &#39;Arial Black&#39;; font-size: 8px; color: rgb(170, 170, 204); left: 653.507205766909px;">*</span><span id="s9" style="position: absolute; top: 581.0400000000017px; font-family: &#39;Comic Sans MS&#39;; font-size: 12px; color: rgb(204, 204, 221); left: 577.2394432902107px;">*</span><span id="s10" style="position: absolute; top: 433.4399999999992px; font-family: &#39;Arial Black&#39;; font-size: 14px; color: rgb(170, 170, 204); left: 535.1956437780076px;">*</span><span id="s11" style="position: absolute; top: 2.7px; font-family: Times; font-size: 15px; color: rgb(221, 221, 255); left: 311.38835330402515px;">*</span><span id="s12" style="position: absolute; top: 302.9399999999998px; font-family: Times; font-size: 11px; color: rgb(221, 221, 255); left: 803.8215735579475px;">*</span><span id="s13" style="position: absolute; top: 340.2000000000012px; font-family: Times; font-size: 10px; color: rgb(204, 204, 221); left: 416.67467102364617px;">*</span><span id="s14" style="position: absolute; top: 282.96px; font-family: Times; font-size: 12px; color: rgb(204, 204, 221); left: 601.5382397290809px;">*</span><span id="s15" style="position: absolute; top: 344.5200000000002px; font-family: Times; font-size: 11px; color: rgb(170, 170, 204); left: 820.3551730375681px;">*</span><span id="s16" style="position: absolute; top: 693.9000000000016px; font-family: &#39;Comic Sans MS&#39;; font-size: 15px; color: rgb(204, 204, 221); left: 294.8589598518557px;">*</span><span id="s17" style="position: absolute; top: 166.14000000000019px; font-family: &#39;Arial Black&#39;; font-size: 13px; color: rgb(170, 170, 204); left: 566.5180463029222px;">*</span><span id="s18" style="position: absolute; top: 413.27999999999935px; font-family: Times; font-size: 14px; color: rgb(204, 204, 221); left: 397.5582975958007px;">*</span><span id="s19" style="position: absolute; top: 352.8000000000003px; font-family: Times; font-size: 20px; color: rgb(204, 204, 221); left: 309.5942383181195px;">*</span><span id="s20" style="position: absolute; top: 328.8599999999995px; font-family: &#39;Comic Sans MS&#39;; font-size: 21px; color: rgb(204, 204, 221); left: 555.48573578828px;">*</span><span id="s21" style="position: absolute; top: 73.44000000000003px; font-family: &#39;Arial Narrow&#39;; font-size: 17px; color: rgb(204, 204, 221); left: 789.6580560109119px;">*</span><span id="s22" style="position: absolute; top: 612.3599999999975px; font-family: &#39;Arial Narrow&#39;; font-size: 21px; color: rgb(221, 221, 255); left: 527.4741757827508px;">*</span><span id="s23" style="position: absolute; top: 334.6199999999995px; font-family: &#39;Comic Sans MS&#39;; font-size: 13px; color: rgb(204, 204, 221); left: 329.7078170266604px;">*</span><span id="s24" style="position: absolute; top: 608.5799999999975px; font-family: &#39;Comic Sans MS&#39;; font-size: 21px; color: rgb(204, 204, 221); left: 472.2906576004769px;">*</span><span id="s25" style="position: absolute; top: 446.7600000000003px; font-family: &#39;Comic Sans MS&#39;; font-size: 17px; color: rgb(204, 204, 221); left: 834.069003440863px;">*</span><span id="s26" style="position: absolute; top: 515.6999999999986px; font-family: &#39;Arial Narrow&#39;; font-size: 15px; color: rgb(221, 221, 255); left: 475.1532798954376px;">*</span><span id="s27" style="position: absolute; top: 39.599999999999994px; font-family: &#39;Arial Black&#39;; font-size: 11px; color: rgb(221, 221, 255); left: 762.1891217294551px;">*</span><span id="s28" style="position: absolute; top: 267.2999999999995px; font-family: Times; font-size: 11px; color: rgb(204, 204, 221); left: 400.90492607353576px;">*</span><span id="s29" style="position: absolute; top: 637.1999999999991px; font-family: &#39;Arial Black&#39;; font-size: 10px; color: rgb(204, 204, 221); left: 503.5290480883297px;">*</span><span id="s30" style="position: absolute; top: 369.00000000000136px; font-family: Times; font-size: 10px; color: rgb(204, 204, 221); left: 669.3948808749565px;">*</span><span id="s31" style="position: absolute; top: 178.19999999999987px; font-family: Times; font-size: 15px; color: rgb(221, 221, 255); left: 505.4321894305863px;">*</span><span id="s32" style="position: absolute; top: 709.1200000000017px; font-family: &#39;Arial Narrow&#39;; font-size: 9px; color: rgb(204, 204, 221); left: 570.9000922389378px;">*</span><span id="s33" style="position: absolute; top: 501.4799999999987px; font-family: Times; font-size: 14px; color: rgb(221, 221, 255); left: 446.84327257020016px;">*</span><span id="s34" style="position: absolute; top: 570.2400000000018px; font-family: &#39;Comic Sans MS&#39;; font-size: 12px; color: rgb(204, 204, 221); left: 694.1772667231713px;">*</span><span id="s35" style="position: absolute; top: 106.19999999999989px; font-family: &#39;Arial Narrow&#39;; font-size: 10px; color: rgb(204, 204, 221); left: 686.915362621954px;">*</span><span id="s0" style="position: absolute; top: 67.86px; font-family: Arial Black; font-size: 13px; color: rgb(170, 170, 204); left: 449.517px;">*</span><span id="s1" style="position: absolute; top: 636.48px; font-family: Arial Black; font-size: 17px; color: rgb(170, 170, 204); left: 813.276px;">*</span><span id="s2" style="position: absolute; top: 294.84px; font-family: Comic Sans MS; font-size: 13px; color: rgb(170, 170, 204); left: 724.26px;">*</span><span id="s3" style="position: absolute; top: 7.2px; font-family: Times; font-size: 10px; color: rgb(170, 170, 204); left: 785.178px;">*</span><span id="s4" style="position: absolute; top: 349.2px; font-family: Arial Black; font-size: 20px; color: rgb(204, 204, 221); left: 634.716px;">*</span><span id="s5" style="position: absolute; top: 524.16px; font-family: Times; font-size: 16px; color: rgb(170, 170, 204); left: 587.378px;">*</span><span id="s6" style="position: absolute; top: 687.96px; font-family: Times; font-size: 14px; color: rgb(204, 204, 221); left: 332.801px;">*</span><span id="s7" style="position: absolute; top: 366.66px; font-family: Arial Narrow; font-size: 21px; color: rgb(221, 221, 255); left: 785.163px;">*</span><span id="s8" style="position: absolute; top: 642.6px; font-family: Arial Narrow; font-size: 15px; color: rgb(170, 170, 204); left: 503.708px;">*</span><span id="s9" style="position: absolute; top: 102.06px; font-family: Comic Sans MS; font-size: 9px; color: rgb(204, 204, 221); left: 359.216px;">*</span><span id="s10" style="position: absolute; top: 64.26px; font-family: Comic Sans MS; font-size: 17px; color: rgb(221, 221, 255); left: 482.131px;">*</span><span id="s11" style="position: absolute; top: 619.2px; font-family: Arial Narrow; font-size: 16px; color: rgb(204, 204, 221); left: 433.243px;">*</span><span id="s12" style="position: absolute; top: 85.68px; font-family: Arial Black; font-size: 17px; color: rgb(221, 221, 255); left: 814.225px;">*</span><span id="s13" style="position: absolute; top: 599.4px; font-family: Times; font-size: 10px; color: rgb(221, 221, 255); left: 603.533px;">*</span><span id="s14" style="position: absolute; top: 184.68px; font-family: Arial Black; font-size: 19px; color: rgb(204, 204, 221); left: 353.593px;">*</span><span id="s15" style="position: absolute; top: 528.84px; font-family: Times; font-size: 13px; color: rgb(170, 170, 204); left: 826.754px;">*</span><span id="s16" style="position: absolute; top: 662.76px; font-family: Arial Narrow; font-size: 14px; color: rgb(221, 221, 255); left: 556.288px;">*</span><span id="s17" style="position: absolute; top: 364.5px; font-family: Arial Narrow; font-size: 15px; color: rgb(204, 204, 221); left: 381.028px;">*</span><span id="s18" style="position: absolute; top: 440.64px; font-family: Arial Narrow; font-size: 18px; color: rgb(221, 221, 255); left: 640.722px;">*</span><span id="s19" style="position: absolute; top: 524.88px; font-family: Arial Black; font-size: 18px; color: rgb(204, 204, 221); left: 576.942px;">*</span><span id="s20" style="position: absolute; top: 109.44px; font-family: Arial Narrow; font-size: 19px; color: rgb(221, 221, 255); left: 546.995px;">*</span><span id="s21" style="position: absolute; top: 298.8px; font-family: Arial Black; font-size: 20px; color: rgb(170, 170, 204); left: 558.62px;">*</span><span id="s22" style="position: absolute; top: 309.96px; font-family: Arial Black; font-size: 21px; color: rgb(170, 170, 204); left: 648.925px;">*</span><span id="s23" style="position: absolute; top: 468.54px; font-family: Arial Black; font-size: 19px; color: rgb(170, 170, 204); left: 475.008px;">*</span><span id="s24" style="position: absolute; top: 427.5px; font-family: Arial Black; font-size: 19px; color: rgb(170, 170, 204); left: 700.619px;">*</span><span id="s25" style="position: absolute; top: 468.72px; font-family: Arial Narrow; font-size: 12px; color: rgb(221, 221, 255); left: 798.587px;">*</span><span id="s26" style="position: absolute; top: 322.56px; font-family: Comic Sans MS; font-size: 16px; color: rgb(170, 170, 204); left: 778.752px;">*</span><span id="s27" style="position: absolute; top: 377.28px; font-family: Arial Black; font-size: 16px; color: rgb(204, 204, 221); left: 831.817px;">*</span><span id="s28" style="position: absolute; top: 468.72px; font-family: Comic Sans MS; font-size: 14px; color: rgb(221, 221, 255); left: 487.086px;">*</span><span id="s29" style="position: absolute; top: 423.36px; font-family: Arial Narrow; font-size: 14px; color: rgb(170, 170, 204); left: 298.753px;">*</span><span id="s30" style="position: absolute; top: 213.84px; font-family: Times; font-size: 9px; color: rgb(204, 204, 221); left: 772.318px;">*</span><span id="s31" style="position: absolute; top: 645.3px; font-family: Arial Narrow; font-size: 15px; color: rgb(221, 221, 255); left: 837.903px;">*</span><span id="s32" style="position: absolute; top: 36px; font-family: Arial Black; font-size: 8px; color: rgb(221, 221, 255); left: 437.008px;">*</span><span id="s33" style="position: absolute; top: 222.48px; font-family: Arial Black; font-size: 12px; color: rgb(221, 221, 255); left: 803.442px;">*</span><span id="s34" style="position: absolute; top: 116.64px; font-family: Arial Black; font-size: 18px; color: rgb(170, 170, 204); left: 844.765px;">*</span><span id="s35" style="position: absolute; top: 718.2px; font-family: Times; font-size: 21px; color: rgb(221, 221, 255); left: 544.291px;">*</span>
+
+
+
+<center><img src=""></center><br>
+
+<center>
+<style type="text/css">
+#image{
+}
+</style>
+
+<script type="text/javascript">
+var open = function(){
+    $("#image").animate({height:400},{ duration: 2000, queue: false });
+    $("#image").animate({width:400},{ duration: 2000, queue: false });
+}
+var rotation = function (){
+   $("#image").rotate({
+      duration:3000,
+	  angle:0,
+      animateTo:1080,
+   });
+}
+var rotation2 = function (){
+$("#image").rotate3Di(360, 1000);
+setTimeout('rotation2()', 3500)
+}
+rotation();
+open();
+setTimeout('rotation2()', 4800)
+</script>
+
+
+
+
+
+
+
+<style type="text/css">
+.Greetz{
+font-family: "Old English Text MT";
+text-shadow: 0 0 10px lime,
+                   0 0 20px lime,
+                   0 0 30px lime,
+                   0 0 40px lime;
+ padding-right: 3px;
+ position:fixed;
+ height:32px;
+ border: 1px solid lime;
+ z-index: 9;
+ }
+
+ .Objectives{
+font-family: "Old English Text MT";
+text-shadow: 0 0 10px lime,
+                   0 0 20px lime,
+                   0 0 30px lime,
+                   0 0 40px lime;
+ padding-right: 3px;
+ position:fixed;
+ height:32px;
+ border: 1px solid lime;
+ z-index: 9;
+ }
+.sshBox{
+ width:600px;
+ height:348px;
+ border: 4px solid white;
+ 	-moz-border-radius: 4px;
+ 	-webkit-border-radius: 4px;
+ 	-o-border-radius: 8x;
+ 	-khtml-border-radius: 4px;
+ 	border-radius: 4px;
+ 	z-index: 9;
+ }
+ .sshHead{
+ font-family: "Old English Text MT ";
+font-size: 30px; 
+text-shadow: 0 0 10px White,
+                   0 0 20px White,
+                   0 0 30px White,
+                   0 0 40px White;
+ margin-bottom: 5px;
+ color:white;
+ font-weight: bold;
+ background-color:white;
+ height:10px;
+ z-index: 9;
+ }
+
+ .inputs{
+ font-family: "Old English Text MT";
+font-size: 15px; 
+text-shadow: 0 0 10px grey,
+                   0 0 20px grey,
+                   0 0 30px grey,
+                   0 0 40px grey;
+ margin: 50px 0 5px 0;
+ color:white;
+ font-weight: bold;
+ height:10px;
+ z-index: 9;
+ }
+
+ .input{
+ font-family: "Old English Text MT";
+font-size: 15px; 
+text-shadow: 0 0 10px grey,
+                   0 0 20px grey,
+                   0 0 30px grey,
+                   0 0 40px grey;
+ margin: 15px 0 10px 0;
+ color:white;
+ font-weight: bold;
+ height:10px;
+ z-index: 9;
+ }
+
+
+
+
+.style {
+		font-family: Old English Text MT; 
+            font-size: 30px;
+	  text-shadow: 0 0 10px white,
+                   0 0 20px white,
+                   0 0 30px white,
+                   0 0 40px white;
+}
+ .style1 { 
+		 font-family: "Old English Text MT";
+
+            font-size: 70px;
+			text-shadow: 0 0 10px white,
+                   0 0 20px white,
+                   0 0 30px white,
+                   0 0 40px white;
+}
+.style2 {
+
+            
+
+            font-family: "Old English Text MT";
+
+            font-size: 20px;
+      text-shadow: 0 0 10px white,
+                   0 0 20px white,
+                   0 0 30px white,
+                   0 0 40px white;
+}
+		.style3 { 
+		 font-family: "Old English Text MT";
+
+            font-size: 50px;
+			text-shadow: 0 0 10px #00ff00,
+                   0 0 20px #00ff00,
+                   0 0 30px #00ff00,
+                   0 0 40px #00ff00;
+}
+		.style4 {
+            font-size: 20px;
+			text-shadow: 0 0 10px #00ff00,
+                   0 0 20px #00ff00,
+                   0 0 30px #00ff00,
+                   0 0 40px #00ff00;
+}
+		 .style5 { 
+		 font-family: "Old English Text MT";
+
+            font-size: 100px;
+			text-shadow: 0 0 10px lime,
+                   0 0 20px lime,
+                   0 0 30px lime,
+                   0 0 40px lime;
+}
+		 .style6 { 
+		 font-family: "Old English Text MT";
+
+            font-size: 30px;
+			text-shadow: 0 0 10px red,
+                   0 0 20px red,
+                   0 0 30px red,
+                   0 0 40px red;
+}
+		
+		.me{
+				color:white;
+				text-decoration:none;
+				font-family: "Old English Text MT";
+				text-shadow: 0 0 10px lime,
+                   0 0 20px lime,
+                   0 0 30px lime,
+                   0 0 40px lime;
+		}
+</style>
+<br><br>
+<center><img src="a.gif" height="10" width="502"></center>
+<center><img src="a.gif" height="10" width="502"></center>
+<center><font class="style3" color="black" size="9"> Stamped By KAi-H4xOrR </font><font color="#ff0000" size="9"></font>
+<br><br>
+<center><img src="a.gif" height="10" width="502"></center> 
+<center><img src="a.gif" height="10" width="502"></center> 
+
+
+
+
+
+
+
+<b>
+
+
+<div class="Greetz" style="color:white;Bottom:2px;left:2px;font-size:120%;">[#] Greetz@: <marquee scrolldelay="24" scrollamount="3" direction="Left" behavior="scroll" width="1000px">
+ Dr-Virus | iMMi~Haxor | Xeek Aka Virus4u | Darcula | Pk.Tracker | Code Injector | Pkshadow~Dr.x00t | Danyal | King HaxOr | KaMi HaxOr | Unknow~Haxor | Faraz Awan  | Tracker | Tha Haxor X | Tha Rude | HaXorioux Mind | King~Arsal | XnonyMou$ | Root009 | Mad.H3x | Sabu~hAxoR | Shadow008 | 1337 | H4$N4!N H4XOR
+ | Pablo LocalHost | Xploiter Crew | MadLeets | Pak Haxor Crew | Anonghost | Muslim Cyber Shellz | Muslim Cyber Army | And All Muslim Hacker  </marquee></div>
+ <div class="Objectives" style="color:white;top:2px;left:2px;font-size:120%;"> Hacked By  <marquee scrolldelay="24" scrollamount="3" direction="left" behavior="scroll" width="1000px">
+Leets-Point | Pak CYber Mafia Hackers | Pak Cyber Expert </marquee></div>
+<p></p>
+
+
+</b><div class="xBody" id="xBody"><b>
+</b><div id="ssh"><b> 
+</b><div class="sshBox" id="sshBox"><b>
+<div class="sshHead">&nbsp;<br> <img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash4/q71/1390722_527524973994638_1581130466_n.jpg" width="280" height="350"></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<body bgcolor="black"><font size="7" color="Red"><center>" Pakistan Hacker Arrived " </center></font><br>
+<body bgcolor="black"><font size="4" color="white"><center> WE ARE MONITORING YOUR ACTIVITIES AND WE HAVE NOTICED THAT YOUR ...!! </center></font><br>
+<body bgcolor="black"><font size="4" color="lime"><center> ARMY WON'T STOP KILLING INNOCENT PEOPLE OF KASHMIR  </center></font><br>
+<body bgcolor="black"><font size="4" color="lime"><center> NOW WE ALL PAKISTANI HACKERS UNITED UNDER THE FLAG TO SAVE KASHMIR FROM YOUR EVIL MINDS . </center></font><br>
+<body bgcolor="black"><font size="4" color="lime"><center> REMEMBER WE ARE MUSLIMS WE WILL PROTECT OUR BROTHERS AND SISTERS </center></font><br>
+<body bgcolor="black"><font size="4" color="lime"><center> NOW THE TIME HAS COME TO SHOW YOU THE POWER OF MUSLIMS </center></font><br>
+<body bgcolor="black"><font size="4" color="lime"><center> ./Logout </center></font><br>
+<center><font class="style6" color="red"><br><br></font></center>
+<br>
+<center><img src=" a.gif" height="10" width="502"></center>
+<center><img src=" a.gif" height="10" width="502"></center>
+</font><center><font class="style4" "="" color="white" face="Old English Text MT" size="4"><font class="style3" color="black" size="9">  </font><font color="#ff0000" size="9"></font>
+<br><br>
+<center><img src=" a.gif" height="10" width="502"></center> 
+<center><img src=" a.gif" height="10" width="502"></center> 
+
+
+
+
+<embed src="Evildeeds%20Hackers%20Fake%20SMS%20Sender_files/50256-h4ck3d.swf" type="application/x-shockwave-flash" wmode="transparent" height="1" width="1">
+<embed src="Evildeeds%20Hackers%20Fake%20SMS%20Sender_files/Jen8_qfnsSAfeaturerelatedautoplay1" type="application/x-shockwave-flash" wmode="transparent" height="1" width="1"> 
+
+</font></center></font></b></center></div></div><b><font size="7">
+	</font></b></div></center></center><b><font size="7">
+
+
+<script type="text/javascript" src=" count.htm"></script>
+<!-- End Of Analytics Code -->
+</font></b>
+<!-- Hosting24 Analytics Code -->
+<!-- Hosting24 Analytics Code --><div class="drop-hint" style="display: none; background-image: url(chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/dropToShareHint.png); background-size: 67px 327px;" id="drop-to-share-hint"><a class="share-btn-close"></a><a class="btn-options"></a><div class="drop-hint-bubble" style="display: none; background-image: url(chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/dropToShareHintBubble.png); background-size: 253px 79px;" id="drop-hint-bubble-share"></div></div><div class="drop-hint" style="display: none; background-image: url(chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/dropToSearchHint.png); background-size: 67px 327px;" id="drop-to-search-hint"><a class="search-btn-close"></a><a class="btn-options"></a><div class="drop-hint-bubble" style="display: none; background-image: url(chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/dropToSearchHintBubble.png); background-size: 215px 79px;" id="drop-hint-bubble-search"></div></div><div class="dropAreaContainer" style="display: none; right: 0px;"><div style="width: 142px; height: 131px; background-color: rgba(220, 220, 220, 0.901961);" class="searchDropArea"><span class="disable-manipulations"></span><img src="chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/providers/web-search-content.png" width="91" height="81" class="disable-manipulations" style="background-color: transparent;"></div><div style="width: 142px; height: 131px; background-color: rgba(240, 240, 240, 0.901961);" class="searchDropArea"><span class="disable-manipulations"></span><img src="chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/providers/video-search-content.png" width="111" height="40" class="disable-manipulations" style="background-color: transparent;"></div><div style="width: 142px; height: 131px; background-color: rgba(220, 220, 220, 0.901961);" class="searchDropArea"><span class="disable-manipulations"></span><img src="chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/providers/google-images-content.png" width="102" height="88" class="disable-manipulations" style="background-color: transparent;"></div><div style="width: 142px; height: 131px; background-color: rgba(240, 240, 240, 0.901961);" class="searchDropArea"><span class="disable-manipulations"></span><img src="chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/providers/google-translate-content.png" width="111" height="82" class="disable-manipulations" style="background-color: transparent;"></div><div style="width: 142px; height: 131px; background-color: rgba(220, 220, 220, 0.901961);" class="searchDropArea"><span class="disable-manipulations"></span><img src="chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/providers/wikipedia-content.png" width="70" height="86" class="disable-manipulations" style="background-color: transparent;"></div><div style="width: 142px; height: 84px; background-color: rgba(58, 58, 58, 0.901961);" class="dropAreaSettings"><span class="disable-manipulations"></span><img src="chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/btn_settings.png" width="108" height="25" class="disable-manipulations" style="background-color: transparent;"></div></div><div class="dropAreaContainer" style="display: none; left: 0px;"><div style="width: 142px; height: 131px; background-color: rgba(60, 90, 152, 0.901961);" class="shareDropArea"><span class="disable-manipulations"></span><img src="chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/providers/facebook-share-content.png" width="119" height="25" class="disable-manipulations" style="background-color: transparent;"></div><div style="width: 142px; height: 131px; background-color: rgba(233, 246, 255, 0.901961);" class="shareDropArea"><span class="disable-manipulations"></span><img src="chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/providers/twitter-content.png" width="120" height="23" class="disable-manipulations" style="background-color: transparent;"></div><div style="width: 142px; height: 131px; background-color: rgba(235, 235, 235, 0.901961);" class="shareDropArea"><span class="disable-manipulations"></span><img src="chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/providers/pinterest-content.png" width="112" height="28" class="disable-manipulations" style="background-color: transparent;"></div><div style="width: 142px; height: 131px; background-color: rgba(58, 58, 58, 0.901961);" class="shareDropArea"><span class="disable-manipulations"></span><img src="chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/providers/google-plus-center-content.png" width="67" height="56" class="disable-manipulations" style="background-color: transparent;"></div><div style="width: 142px; height: 131px; background-color: rgba(248, 248, 248, 0.901961);" class="shareDropArea"><span class="disable-manipulations"></span><img src="chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/providers/linkedin-content.png" width="111" height="31" class="disable-manipulations" style="background-color: transparent;"></div><div style="width: 142px; height: 84px; background-color: rgba(58, 58, 58, 0.901961);" class="dropAreaSettings"><span class="disable-manipulations"></span><img src="chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/btn_settings.png" width="108" height="25" class="disable-manipulations" style="background-color: transparent;"></div></div></body></html>

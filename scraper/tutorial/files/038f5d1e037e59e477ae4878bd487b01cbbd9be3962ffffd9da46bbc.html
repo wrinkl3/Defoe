@@ -1,0 +1,622 @@
+<!DOCTYPE HTML>
+<HTML><HEAD><META content="IE=10.0000" http-equiv="X-UA-Compatible">
+<LINK href="http://fonts.googleapis.com/css?family=Fauna+One" rel="stylesheet" 
+type="text/css"> <LINK href="http://i.hizliresim.com/vRjmkm.jpg" rel="shortcut icon"> 
+ 
+<SCRIPT language="JavaScript">
+var brzinakucanja = 200;
+var pauzapor = 2000;
+var vremeid = null;
+var kretanje = false;
+var poruka = new Array();
+var slporuka = 0;
+var bezporuke = 0;
+poruka[0] = " | [ Hacked By Tivelve16 (Kadir siker affetmez)
+function prikaz() {
+var text = poruka[slporuka];
+if (bezporuke < text.length) {
+if (text.charAt(bezporuke) == " ")
+bezporuke++
+var ttporuka = text.substring(0, bezporuke + 1);
+document.title = ttporuka;
+bezporuke++
+vremeid = setTimeout("prikaz()", brzinakucanja);
+kretanje = true;
+} else {
+bezporuke = 0;
+slporuka++
+if (slporuka == poruka.length)
+slporuka = 0;
+vremeid = setTimeout("prikaz()", pauzapor);
+kretanje = true;
+}
+}
+function stop() {
+if (kretanje)
+clearTimeout(vremeid);
+kretanje = false
+}
+function start() {
+stop();
+prikaz();
+}
+start();
+</SCRIPT>
+  
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">  
+<META name="keywords" content=" | [ Hacked By Tivelve16 (Kadir siker affetmez)]&#10;<meta HTTP-EQUIV=" 
+content-type"=""> 
+<META name="description" content=" | [ Hacked By Tivelve16 (Kadir siker affetmez)] |">
+<SCRIPT type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:0,mirage:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/v=2965651658/"},atok:"46d7245de8fe7573628a114e8d9dabf4",zone:"zonehmirrors.net",rocket:"0",apps:{"dnschanger_detector":{"fix_url":null}}}];document.write('<script type="text/javascript" src="//ajax.cloudflare.com/cdn-cgi/nexp/v=3037830340/cloudflare.min.js"><'+'\/script>')}}catch(a){};
+//]]>
+</SCRIPT>
+
+<SCRIPT src="//ajax.cloudflare.com/cdn-cgi/nexp/v=3037830340/cloudflare.min.js" type="text/javascript"></SCRIPT>
+
+<STYLE type="text/css"></STYLE>
+ 
+<SCRIPT type="text/javascript">
+//<![CDATA[
+window.__CF=window.__CF||{};window.__CF.AJS={"dnschanger_detector":{"fix_url":null}};
+//]]>
+</SCRIPT>
+  <TITLE>| [ Ha_</TITLE>  
+<SCRIPT src="http://code.jquery.com/jquery-latest.min.js"></SCRIPT>
+  
+<SCRIPT>
+//
+ 
+var current_type = 1;
+(function($) {
+ 
+    function shuffle(a) {
+        var i = a.length, j;
+        while (i) {
+            var j = Math.floor((i--) * Math.random());
+            var t = a[i];
+            a[i] = a[j];
+            a[j] = t;
+        }
+    }
+ 
+    function randomAlphaNum() {
+        var rnd = Math.floor(Math.random() * 62);
+        if (rnd >= 52) return String.fromCharCode(rnd - 4);
+        else if (rnd >= 26) return String.fromCharCode(rnd + 71);
+        else return String.fromCharCode(rnd + 65);
+    }
+ 
+    $.fn.rot13 = function() {
+        this.each(function() {
+            $(this).text($(this).text().replace(/[a-z0-9]/ig, function(chr) {
+                var cc = chr.charCodeAt(0);
+                if (cc >= 65 && cc <= 90) cc = 65 + ((cc - 52) % 26);
+                else if (cc >= 97 && cc <= 122) cc = 97 + ((cc - 84) % 26);
+                else if (cc >= 48 && cc <= 57) cc = 48 + ((cc - 43) % 10);
+                return String.fromCharCode(cc);
+            }));
+        });
+        return this;
+    };
+ 
+    $.fn.scrambledWriter = function() {
+        this.each(function() {
+            var $ele = $(this), str = $ele.text(), progress = 0, replace = /[^\s]/g,
+                random = randomAlphaNum, inc = 3;
+            $ele.text('');
+            var timer = setInterval(function() {
+                $ele.text(str.substring(0, progress) + str.substring(progress, str.length - 1).replace(replace, random));
+                progress += inc
+                if (progress >= str.length + inc) { var nstr = $ele.text(); $ele.text(nstr.substring(0,nstr.length - 1));  current_type += 1; clearInterval(timer);}
+            }, 100);
+        });
+        return this;
+    };
+ 
+    $.fn.typewriter = function() {
+        this.each(function() {
+            var $ele = $(this), str = $ele.html(), progress = 0;
+            $ele.html('');
+            var timer = setInterval(function() {
+                $ele.html(str.substring(0, progress++) + (progress & 1 ? '_' : ''));
+                if (progress >= str.length) { current_type += 1; clearInterval(timer);}
+            }, 100);
+        });
+     
+        return this;
+    };
+ 
+    $.fn.unscramble = function() {
+        this.each(function() {
+            var $ele = $(this), str = $ele.text(), replace = /[^\s]/,
+                state = [], choose = [], reveal = 25, random = randomAlphaNum;
+         
+            for (var i = 0; i < str.length; i++) {
+                if (str[i].match(replace)) {
+                    state.push(random());
+                    choose.push(i);
+                } else {
+                    state.push(str[i]);
+                }
+            }
+         
+            shuffle(choose);
+            $ele.text(state.join(''));
+         
+            var timer = setInterval(function() {
+                var i, r = reveal;
+                while (r-- && choose.length) {
+                    i = choose.pop();
+                    state[i] = str[i];
+                }
+                for (i = 0; i < choose.length; i++) state[choose[i]] = random();
+                $ele.text(state.join(''));
+                if (choose.length == 0) { current_type += 1; clearInterval(timer);}
+            }, 200);
+        });
+        return this;
+    };
+ 
+})(jQuery);
+ 
+function replaceAll(txt, replace, with_this) {
+  return txt.replace(new RegExp(replace, 'g'),with_this);
+}
+ 
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(k).1L(b(){a U=1K 1J();a n=$("#T").S();n=1I(n,\'1H\',k.1G.1F);n=n.1E(/1D/,U);$("#T").S(n);b t(){a u=k.v+"     ";a r=0;k.v=\'\';a R=g(b(){k.v=u.1C(0,r++)+(r&1?\'1B\':\'\');c(r>=u.1A){e(R);t()}},1z)}t();s("p");$("#1y").j();a Q=g(b(){c(h==2){$("#1x").f();$("#1w").j();e(Q)}},i);a P=g(b(){c(h==3){$("#1v").f();$("#1u").N();e(P)}},i);a O=g(b(){c(h==4){$("#1t").f();$("#1s").j();e(O)}},i);a M=g(b(){c(h==5){$("#1r").f();$("#1q").N();e(M)}},i);a L=g(b(){c(h==6){$("#1p").f();$("#1o").j();e(L)}},i);a K=g(b(){c(h==7){$("#1n").q();$("#1m").f(H);$("#1l").j();e(K)}},1k);a J=g(b(){c(h==8){$("#1j").f();$("#1i").j();e(J)}},i);a F=g(b(){c(h==9){I.1h(0,1g);I.1f();$("#1e").f();$("#1d").j();$(\'#p\').1c({1b:"1a%",19:"H%"},b(){$("#p").m("x","5");$("#p").m("w","5");$("#p").m("d",$(k).d()-G);$("#18").m("d",$(k).d()-G);$("#17").f()});e(F)}},i);a E=g(b(){c(h==10){$("#16").q();$("#15").f();$("#14").j();e(E)}},i);a D=g(b(){c(h==11){$("#13").q();$("#Z").f();$("#Y").j();e(D)}},i);a C=g(b(){c(h==12){$("#X").q();$("#W").f();$("#V").j();e(C)}},i)});s();b s(o){a d=$(k).d();a l=$(k).l();a B=$("#"+o).d();a y=$("#"+o).l();d=A.z((d-B)/2);l=A.z((l-y)/2);c(d<0){d=2}c(l<0){l=2}$("#"+o).m("x",d);$("#"+o).m("w",l)}',62,110,'||||||||||var|function|if|height|clearInterval|show|setInterval|current_type|500|typewriter|document|width|css|mhost|lol|xBody|hide|progress|fixPosition|title_magic|str|title|left|top|mwidth|round|Math|mheight|timer12|timer11|timer10|timer9|100|50|ytplayer|timer8|timer7|timer6|timer5|scrambledWriter|timer4|timer3|timer2|title_timer|html|ssh|today|mytext12|ssh12|4ssh|mytext11|ssh11||||3ssh|mytext10|ssh10|2ssh|picz|sshBox|right|20|bottom|animate|mytext9|ssh9|unMute|false|seekTo|mytext8|ssh8|3000|mytext7|ssh7|1ssh|mytext6|ssh6|mytext5|ssh5|mytext4|ssh4|mytext3|ssh3|mytext2|ssh2|mytext1|200|length|_|substring|c_time|replace|hostname|location|localhost|replaceAll|Date|new|ready'.split('|')))
+ 
+</SCRIPT>
+ </HEAD>
+<BODY topmargin="0" rightmargin="0" bottommargin="0" leftmargin="0" style='background: url("http://i.hizliresim.com/yLMlEk.png") fixed no-repeat center / cover black; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;' 
+onkeydown="return false" ondragstart="return false" onselectstart="return false" 
+oncontextmenu="return false" bgcolor="#000" onload="type_text()" marginheight="0" 
+marginwidth="0">  
+<STYLE>
+body{
+font-family: "courier new";
+font-size:80%;
+color: #28FE14;
+}
+ 
+.xBody{
+width:660px;
+height:450px;
+position:absolute;
+z-index: 9;
+}
+.ssh{
+display:none;
+z-index: 9;
+}
+.sshBox{
+height:300px;
+border: 4px solid white;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4x;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    z-index: 9;
+}
+.sshHead{
+margin-bottom: 5px;
+color:black;
+font-weight: bold;
+background-color: white;
+height:20px;
+z-index: 9;
+ 
+}
+ 
+.greenBox{
+padding-left: 3px;
+position: absolute;
+height:22px;
+border: 1px solid #28FE14;
+z-index: 9;
+}
+.picz{
+position: absolute;
+width:500px;
+height:80%;
+display:none;
+right:2px;
+top:2px;
+}
+</STYLE>
+  
+<DIV class="xBody" id="xBody" style="left: 0px; top: 0px;">
+<DIV id="ssh">
+<DIV class="sshBox" id="sshBox">
+<DIV class="sshHead">[ Tivelve16]- Tivelve16</DIV>
+<DIV id="1ssh"><SPAN id="mytext1"> Tivelve16</SPAN><BR>
+<DIV class="ssh" id="ssh2">Enter Password:<SPAN id="mytext2"> ************ 
+</SPAN></DIV>
+<DIV class="ssh" id="ssh3">[root@tivelve16.Org]# <SPAN id="mytext3">Last 
+login: Fri Oct 30 18:29:55 UTC+0200 2015 </SPAN></DIV>
+<DIV class="ssh" id="ssh4">[root@Tivelve16.Org]# <SPAN id="mytext4" style="color: rgb(192, 68, 0);">Sistem 
+Hatasi.!!! &lt;- Fail -&gt;  </SPAN></DIV><BR><BR>
+<DIV align="center" class="ssh" id="ssh5" style="font-size: 300%;"><SPAN id="mytext5"> 
+| [ Hacked By Tivelve16] | </SPAN></DIV><BR>
+<DIV align="center" class="ssh" id="ssh5" style="font-size: 280%;"><SPAN id="mytext5"> 
+DEEBWEBTR </SPAN></DIV><BR>
+<DIV class="ssh" id="ssh6">[root@Tivelve16.Org]# <SPAN id="mytext6"> clear 
+all   </SPAN></DIV></DIV><BR>
+<DIV id="2ssh">
+<DIV class="ssh" id="ssh7">[root@Tivelve16.Org]# <SPAN id="mytext7">
+<CENTER>
+<H1>  | [ Hacked By Tivelve16  ] | </H1><BR> TÜRKLER YIKILMAZ. TÜRKLER HERYERDE . (Kadir siker affetmez :)) 
+</CENTER><BR>...Mesaj.<BR>...\\ Siten Hacklen'di... //<BR>...\\ 
+tivelve16 - Turkish security defacer! ... //<BR>...\\ 
+Zulmün Oldu?u Her Yerde TÜRKLER vard?r.<BR>..::[ Hiçbir sistem güvenli de?ildir. Burdan tüm Türklere ve bizi destekleyenlere selamlar.. 
+]::..<BR><BR><BR></SPAN></DIV>
+<DIV align="center" class="ssh" id="ssh5" style="font-size: 280%;"><SPAN id="mytext5">Tunisian 
+People</SPAN></DIV>
+<CENTER><BR>
+<P></P></CENTER></DIV>
+<DIV class="ssh" id="ssh10" style="padding-left: 5px;">[root@Tivelve16.Org]# 
+<SPAN id="mytext10">Demands ---&gt; <BR></SPAN></DIV></DIV></DIV></DIV>
+<DIV class="picz" id="picz"></DIV>
+<DIV id="ytapiplayer"></DIV>
+<SCRIPT>
+eval(function(p,a,c,k,e,d){while(c--)if(k[c])p=p.replace(new RegExp('\\b'+c.toString(a)+'\\b','g'),k[c]);return p}('w u(t){0=s.r("6");0.q();0.p();0.o(n)}7 4={m:"l"};7 2={k:"6"};j.i("h://g.f.e/v/d?c=1&b=0&a=3","9","1","1","8",5,5,4,2);',33,33,'ytplayer||atts||params|null|myytplayer|var||ytapiplayer|version|playerapiid|enablejsapi|1mlbypRQ878|com|youtube|www|http|embedSWF|swfobject|id|always|allowScriptAccess|true|setLoop|playVideo|mute|getElementById|document|playerId|onYouTubePlayerReady||function'.split('|')))
+</SCRIPT>
+ 
+<SCRIPT type="text/javascript">
+(function(){
+  var global = this;
+  var globalName = 'starField';
+  var numberOfStars = 90;
+ 
+  /* total depth of space ;)*/
+  var depthDimentsion = 2000;
+ 
+  /* % of space between browser and viewer.*/
+  var viewingDepth = 0.0001;
+ 
+  /* % of space moved in one step.*/
+  var forwardVelocity = 0.3;
+  var d = depthDimentsion*(viewingDepth/100);
+  var planeDepth = depthDimentsion - d;
+  var fv = planeDepth*(forwardVelocity/100);
+  var zMultiplier = (depthDimentsion)/d;
+  var starObjs, starHTML;
+  var posMod, sy, sx, windowCenterY, windowCenterX;
+  var scaleXAdjust, scaleYAdjust;
+  if((document.layers)&&(this.Layer)){
+    starHTML = [
+    '<layer id=\"stars','',
+    '\" left=\"0\" top=\"0\" width=\"1\" height=\"1"',
+    ' bgColor=\"#FFFFFF\"><\/layer>'];
+  }else{
+    starHTML = [
+    '<div id="stars','',
+    '" style="position:absolute;width:1px;overflow:',
+    'hidden;height:1px;background-color:#FFFFFF;',
+    'font-size:1px"><\/div>'];
+  }
+  function compatModeTest(obj){
+    if((document.compatMode)&&
+       (document.compatMode.indexOf('CSS') != -1)&&
+       (document.documentElement)){
+      return document.documentElement;
+    }else if(document.body){
+      return document.body;
+    }else{
+      return obj;
+    }
+  }
+  function getWindowState(){
+    var global = this;
+    var readScroll = {scrollLeft:NaN,scrollTop:NaN};
+    var readSizeC = {clientWidth:NaN,clientHeight:NaN};
+    var readSizeI = {innerWidth:NaN,innerHeight:NaN};
+    var readScrollX = 'scrollLeft';
+    var readScrollY = 'scrollTop';
+    function getWidthI(){return readSizeI.innerWidth;}
+    function getWidthC(){return readSizeC.clientWidth|0;}
+    function getHeightI(){return readSizeI.innerHeight;}
+    function getHeightC(){return readSizeC.clientHeight|0;}
+    function getHeightSmart(){
+        return retSmaller(getHeightI(), getHeightC());
+    }
+    function getWidthSmart(){
+        return retSmaller(getWidthI(), getWidthC());
+    }
+    function setInnerWH(){
+      theOne.getWidth = getWidthI;
+      theOne.getHeight = getHeightI;
+    }
+    function retSmaller(inr, other){
+      if(other > inr){
+        setInnerWH();
+        return inr;
+      }else{
+        return other;
+      }
+    }
+    var theOne = {
+      getScrollX:function(){return readScroll[readScrollX]|0;},
+      getScrollY:function(){return readScroll[readScrollY]|0;},
+      getWidth:getWidthC,
+      getHeight:getHeightC
+    };
+    function main(){return theOne;}
+    function rankObj(testObj){
+      var dv,dhN;
+      if(testObj&&(typeof testObj.clientWidth == 'number')&&
+         (typeof testObj.clientHeight == 'number')){
+        if(((dv = global.innerHeight - testObj.clientHeight) >= 0)&&
+           ((dh = global.innerWidth - testObj.clientWidth) >= 0)){
+          if(dh == dv){
+            return 0;
+          }else if((dh&&!dv)||(dv&&!dh)){
+            return (dh+dv);
+          }
+        }
+      }
+      return NaN;
+    }
+    if((typeof global.innerHeight == 'number')&&
+       (typeof global.innerWidth == 'number')){
+      readSizeI = global;
+      var bodyRank = rankObj(document.body);
+      var rankDocEl = rankObj(document.documentElement);
+      var selEl = null;
+      if(!isNaN(bodyRank)){
+        if(!isNaN(rankDocEl)){
+          if(bodyRank < rankDocEl){
+            selEl = document.body;
+          }else if(bodyRank > rankDocEl){
+            selEl = document.documentElement;
+          }else{
+            selEl = compatModeTest(document.body);
+          }
+        }else{
+          selEl = document.body;
+        }
+      }else if(!isNaN(rankDocEl)){
+        selEl = document.documentElement;
+      }
+      if(selEl){
+        readSizeC = selEl
+        theOne.getWidth = getWidthSmart;
+        theOne.getHeight = getHeightSmart;
+      }else{
+        setInnerWH();
+      }
+    }else{
+      readSizeC = compatModeTest(readSizeC);
+    }
+    if((typeof global.pageYOffset == 'number')&&
+       (typeof global.pageXOffset == 'number')){
+      readScroll = global;
+      readScrollY = 'pageYOffset';
+      readScrollX = 'pageXOffset';
+    }else{
+      readScroll = compatModeTest(readScroll);
+    }
+    return (getWindowState = main)();
+  }
+  var windowState = getWindowState();
+  function readWindow(){
+    scaleYAdjust = (((windowCenterY =
+            (windowState.getHeight() >>1)) - 16)*
+                         zMultiplier);
+    scaleXAdjust = (((windowCenterX =
+            (windowState.getWidth() >> 1)) - 16)*
+                        zMultiplier);
+    sy = windowCenterY + windowState.getScrollY();
+    sx = windowCenterX + windowState.getScrollX();
+  }
+  function getStyleObj(id){
+    var obj = null;
+    if(document.getElementById){
+      obj = document.getElementById(id);
+    }else if(document.all){
+      obj = document.all[id];
+    }else if(document.layers){
+      obj = document.layers[id];
+    }
+    return ((typeof obj != 'undefined')&&
+        (typeof obj.style != 'undefined'))?
+                    obj.style:obj;
+  }
+  function starObj(id, parent, prv){
+    var next,reset;
+    var divClip, div = getStyleObj("stars"+id);
+    var y,x,z,v,dx,dy,dm,dm2,px,py,widthPos,temp;
+    (reset = function(){
+      px = Math.random()<0.5 ? +1 : -1;
+      py = Math.random()<0.5 ? +1 : -1;
+      y = ((Math.random()*Math.random()*
+          scaleYAdjust)+windowCenterY);
+      x = ((Math.random()*Math.random()*
+          scaleXAdjust)+windowCenterX);
+      widthPos = (x + zMultiplier);
+      z = 0;
+    })();
+    z = Math.random()*planeDepth*0.8;
+    function step(){
+      temp = x * (v = d/(depthDimentsion - z));
+      dm = ((dm2 = ((widthPos * v)-temp)|0)>>1);
+      dy = (y * v);
+      dx = (temp);
+    }
+    if(div){
+      if(!posMod){
+        posMod = (typeof div.top == 'string')?'px':0;
+      }
+      divClip =  ((typeof div.clip != 'undefined')&&
+               (typeof div.clip != 'string'))?
+                       div.clip:div;
+      this.position = function(){
+        step();
+        if(((z += fv) >= planeDepth)||
+           ((dy+dm) > windowCenterY)||
+          ((dx+dm) > windowCenterX)){
+          reset();
+          step();
+          dm = 0;
+        }
+        div.top = ((sy+(py*dy)-dm)|0)+posMod;
+        div.left = ((sx+(px*dx)-dm)|0)+posMod;
+        divClip.width = (divClip.height = dm2+posMod);
+        next.position();
+      };
+    }else{
+      this.position = function(){return;};
+    }
+    if(++id < numberOfStars){
+      next = new starObj(id, parent)
+    }else{
+      next = parent
+    }
+  }
+  function init(){
+    if(!getStyleObj("stars"+(numberOfStars-1))){
+      setTimeout(starField, 200);
+    }else{
+      readWindow();
+      starObjs = new starObj(0, init);
+      init.act();
+    }
+  };
+  init.position = function(){return;}
+  init.act = function(){
+    readWindow();
+    starObjs.position();
+    setTimeout(init.act,50);
+  };
+  init.act.toString = function(){
+    return globalName+'.act()';
+  };
+  init.toString = function(){
+    while(global[globalName])globalName += globalName;
+    global[globalName] = this;
+    return globalName+'()';
+  };
+  for(var c = numberOfStars;c--;){
+    starHTML[1] = c;
+    document.write(starHTML.join(''));
+  }
+  setTimeout(init, 200);
+})();
+</SCRIPT>
+
+<DIV id="stars89" style="left: 102px; top: 213px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars88" style="left: 15px; top: 164px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars87" style="left: 68px; top: 296px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars86" style="left: 100px; top: 159px; width: 5px; height: 5px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars85" style="left: 100px; top: 154px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars84" style="left: 136px; top: 133px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars83" style="left: 65px; top: 117px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars82" style="left: 41px; top: 196px; width: 3px; height: 3px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars81" style="left: 73px; top: 268px; width: 4px; height: 4px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars80" style="left: 131px; top: 146px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars79" style="left: 53px; top: 179px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars78" style="left: 81px; top: 91px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars77" style="left: 96px; top: 166px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars76" style="left: 77px; top: 270px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars75" style="left: 68px; top: 105px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars74" style="left: 90px; top: 215px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars73" style="left: 78px; top: 29px; width: 3px; height: 3px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars72" style="left: 178px; top: 235px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars71" style="left: 82px; top: 112px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars70" style="left: 88px; top: 274px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars69" style="left: 115px; top: 233px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars68" style="left: 94px; top: 142px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars67" style="left: 111px; top: 147px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars66" style="left: 87px; top: 196px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars65" style="left: 83px; top: 224px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars64" style="left: 126px; top: 237px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars63" style="left: 103px; top: 181px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars62" style="left: 93px; top: 3px; width: 4px; height: 4px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars61" style="left: 51px; top: 223px; width: 4px; height: 4px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars60" style="left: 56px; top: 110px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars59" style="left: 127px; top: 166px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars58" style="left: 80px; top: 178px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars57" style="left: 84px; top: 107px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars56" style="left: 73px; top: 56px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars55" style="left: 156px; top: 131px; width: 3px; height: 3px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars54" style="left: 102px; top: 250px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars53" style="left: 85px; top: 105px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars52" style="left: 91px; top: 96px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars51" style="left: 97px; top: 170px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars50" style="left: 91px; top: 162px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars49" style="left: 101px; top: 195px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars48" style="left: 76px; top: 170px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars47" style="left: 32px; top: 235px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars46" style="left: 52px; top: 142px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars45" style="left: 111px; top: 170px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars44" style="left: 80px; top: 118px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars43" style="left: 85px; top: 219px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars42" style="left: 66px; top: 117px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars41" style="left: 104px; top: 151px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars40" style="left: 28px; top: 47px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars39" style="left: 85px; top: 225px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars38" style="left: 107px; top: 195px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars37" style="left: 61px; top: 238px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars36" style="left: 76px; top: 65px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars35" style="left: 144px; top: 121px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars34" style="left: 140px; top: 81px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars33" style="left: 117px; top: 205px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars32" style="left: 94px; top: 123px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars31" style="left: 91px; top: 144px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars30" style="left: 74px; top: 139px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars29" style="left: 92px; top: 112px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars28" style="left: 79px; top: 97px; width: 4px; height: 4px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars27" style="left: 30px; top: 110px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars26" style="left: 101px; top: 40px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars25" style="left: 81px; top: 155px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars24" style="left: 108px; top: 99px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars23" style="left: 56px; top: 185px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars22" style="left: 67px; top: 69px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars21" style="left: 116px; top: 116px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars20" style="left: 76px; top: 196px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars19" style="left: 92px; top: 116px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars18" style="left: 131px; top: 207px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars17" style="left: 90px; top: 155px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars16" style="left: 100px; top: 102px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars15" style="left: 89px; top: 162px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars14" style="left: 91px; top: 181px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars13" style="left: 98px; top: 296px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars12" style="left: 133px; top: 152px; width: 3px; height: 3px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars11" style="left: 74px; top: 67px; width: 5px; height: 5px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars10" style="left: 69px; top: 30px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars9" style="left: 136px; top: 111px; width: 3px; height: 3px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars8" style="left: 111px; top: 119px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars7" style="left: 95px; top: 253px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars6" style="left: 89px; top: 273px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars5" style="left: 33px; top: 240px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars4" style="left: 85px; top: 145px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars3" style="left: 64px; top: 216px; width: 2px; height: 2px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars2" style="left: 103px; top: 132px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars1" style="left: 92px; top: 111px; width: 3px; height: 3px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<DIV id="stars0" style="left: 80px; top: 144px; width: 1px; height: 1px; overflow: hidden; font-size: 1px; position: absolute; background-color: rgb(255, 255, 255);"></DIV>
+<SCRIPT language="Javascript">
+<!-- Lol Many scripts -->
+<!--
+document.write(unescape('%3C%53%63%72%69%70%74%20%4C%61%6E%67%75%61%67%65%3D%27%4A%61%76%61%73%63%72%69%70%74%27%3E%0A%3C%21%2D%2D%20%48%54%4D%4C%20%45%6E%63%72%79%70%74%69%6F%6E%20%62%79%20%4D%61%72%6B%65%74%61%63%74%69%63%6F%2E%63%6F%6D%20%2D%2D%3E%0A%3C%21%2D%2D%0A%64%6F%63%75%6D%65%6E%74%2E%77%72%69%74%65%28%75%6E%65%73%63%61%70%65%28%27%25%33%43%25%35%33%25%36%33%25%37%32%25%36%39%25%37%30%25%37%34%25%32%30%25%34%43%25%36%31%25%36%45%25%36%37%25%37%35%25%36%31%25%36%37%25%36%35%25%33%44%25%32%37%25%34%41%25%36%31%25%37%36%25%36%31%25%37%33%25%36%33%25%37%32%25%36%39%25%37%30%25%37%34%25%32%37%25%33%45%25%30%41%25%33%43%25%32%31%25%32%44%25%32%44%25%32%30%25%34%38%25%35%34%25%34%44%25%34%43%25%32%30%25%34%35%25%36%45%25%36%33%25%37%32%25%37%39%25%37%30%25%37%34%25%36%39%25%36%46%25%36%45%25%32%30%25%36%32%25%37%39%25%32%30%25%34%44%25%36%31%25%37%32%25%36%42%25%36%35%25%37%34%25%36%31%25%36%33%25%37%34%25%36%39%25%36%33%25%36%46%25%32%45%25%36%33%25%36%46%25%36%44%25%32%30%25%32%44%25%32%44%25%33%45%25%30%41%25%33%43%25%32%31%25%32%44%25%32%44%25%30%41%25%36%34%25%36%46%25%36%33%25%37%35%25%36%44%25%36%35%25%36%45%25%37%34%25%32%45%25%37%37%25%37%32%25%36%39%25%37%34%25%36%35%25%32%38%25%37%35%25%36%45%25%36%35%25%37%33%25%36%33%25%36%31%25%37%30%25%36%35%25%32%38%25%32%37%25%32%35%25%33%33%25%34%33%25%32%35%25%33%36%25%33%32%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%33%34%25%32%35%25%33%37%25%33%39%25%32%35%25%33%32%25%33%30%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%34%35%25%32%35%25%33%36%25%34%32%25%32%35%25%33%36%25%33%35%25%32%35%25%33%37%25%33%39%25%32%35%25%33%36%25%33%34%25%32%35%25%33%36%25%34%36%25%32%35%25%33%37%25%33%37%25%32%35%25%33%36%25%34%35%25%32%35%25%33%33%25%34%34%25%32%35%25%33%32%25%33%32%25%32%35%25%33%37%25%33%32%25%32%35%25%33%36%25%33%35%25%32%35%25%33%37%25%33%34%25%32%35%25%33%37%25%33%35%25%32%35%25%33%37%25%33%32%25%32%35%25%33%36%25%34%35%25%32%35%25%33%32%25%33%30%25%32%35%25%33%36%25%33%36%25%32%35%25%33%36%25%33%31%25%32%35%25%33%36%25%34%33%25%32%35%25%33%37%25%33%33%25%32%35%25%33%36%25%33%35%25%32%35%25%33%32%25%33%32%25%32%35%25%33%33%25%34%35%25%32%35%25%33%30%25%34%31%25%32%37%25%32%39%25%32%39%25%33%42%25%30%41%25%32%46%25%32%46%25%32%44%25%32%44%25%33%45%25%30%41%25%33%43%25%32%46%25%35%33%25%36%33%25%37%32%25%36%39%25%37%30%25%37%34%25%33%45%27%29%29%3B%0A%2F%2F%2D%2D%3E%0A%3C%2F%53%63%72%69%70%74%3E'));
+//-->
+</SCRIPT>
+
+<SCRIPT language="Javascript">
+<!-- HTML Encryption by Marketactico.com -->
+<!--
+document.write(unescape('%3C%53%63%72%69%70%74%20%4C%61%6E%67%75%61%67%65%3D%27%4A%61%76%61%73%63%72%69%70%74%27%3E%0A%3C%21%2D%2D%20%48%54%4D%4C%20%45%6E%63%72%79%70%74%69%6F%6E%20%62%79%20%4D%61%72%6B%65%74%61%63%74%69%63%6F%2E%63%6F%6D%20%2D%2D%3E%0A%3C%21%2D%2D%0A%64%6F%63%75%6D%65%6E%74%2E%77%72%69%74%65%28%75%6E%65%73%63%61%70%65%28%27%25%33%43%25%36%32%25%36%46%25%36%34%25%37%39%25%32%30%25%36%46%25%36%45%25%36%42%25%36%35%25%37%39%25%36%34%25%36%46%25%37%37%25%36%45%25%33%44%25%32%32%25%37%32%25%36%35%25%37%34%25%37%35%25%37%32%25%36%45%25%32%30%25%36%36%25%36%31%25%36%43%25%37%33%25%36%35%25%32%32%25%33%45%25%30%41%27%29%29%3B%0A%2F%2F%2D%2D%3E%0A%3C%2F%53%63%72%69%70%74%3E'));
+//-->
+</SCRIPT>
+
+<SCRIPT language="Javascript">
+<!-- HTML Encryption by Marketactico.com -->
+<!--
+document.write(unescape('%3C%62%6F%64%79%20%6F%6E%6B%65%79%64%6F%77%6E%3D%22%72%65%74%75%72%6E%20%66%61%6C%73%65%22%3E%0A'));
+//-->
+</SCRIPT>
+                                             <!-- --------Cursor--------- --> 
+<STYLE type="text/css">body, a, a:link{cursor:url(http://4.bp.blogspot.com/-hAF7tPUnmEE/TwGR3lRH0EI/AAAAAAAAAs8/6pki22hc3NE/s1600/ass.png), default;} a:hover {cursor:url(http://3.bp.blogspot.com/-bRikgqeZx0Q/TwGR4MUEC7I/AAAAAAAAAtA/isJmS0r35Qw/s1600/pointer.png),wait;}</STYLE>
+  <IFRAME width="1" height="1" src="https://www.youtube.com/embed/yPsUxLLeV1E?rel=0&amp;autoplay=1" 
+frameborder="0" allowfullscreen=""></IFRAME></BODY></HTML>

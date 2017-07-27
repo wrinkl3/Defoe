@@ -1,0 +1,101 @@
+
+<html>
+<head>
+<link rel="SHORTCUT ICON" href="http://3.bp.blogspot.com/-FFxSBwmZeJ0/T3WvTLAy56I/AAAAAAAAARs/ePKYyVFgOh0/s1600/Cur2.gif" type="image"></head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<BODY BACKGROUND="http://img401.imageshack.us/img401/6250/matrixf.gif">
+<body onLoad="writetext()" bgcolor="#000000" text="#1eff00">
+<script language="JavaScript">
+msg = new Array();
+msg[0] = "<font face='chiller' size='10' color='#ff0000'><center><font face='chiller' size='20'><i>Hack By Shan Shider!!!</font><p><font face='Times New Roman' color='rgb(107,245,115)' size='5'>I Cambodia Hacker<br>Where Are You Admin?<br>why your security is not normalized?<br>if I had to report to you that your security easily?<br>help in repair, I say once again PLEASE IN REPAIR!<br>thanks for reading<br>I'm Shan Shider<br><font color='red' size='8'> Insect <sup>&reg</sup><br>I'm Shan Shider Hacker of Cambodia <center><img src='https://scontent-b-ams.xx.fbcdn.net/hphotos-prn2/t1/1560501_1397287227187867_1851243701_n.jpg'><center></h3><p></center>";
+
+text1 = "";
+text2 = "";
+count = 0;
+count2 = 0;
+text = msg[0].split("");
+function writetext() {
+text1 = text2 + "<font color='#00FF00'>" + text[count] + "</font>";
+text2 += text[count];
+document.all["nothing"].innerHTML = text1;
+if (count < text.length-1){
+count++;
+setTimeout('writetext()', 25);
+}
+else {
+count = 0;
+if (count2 != 6) {
+count2++;
+text2 += "<p>";
+text = eval('msg['+count2+'].split("")');
+setTimeout('writetext()', 25);
+}
+}
+}
+</script>
+
+<script language="JavaScript">
+function keypresed() {
+alert('Shan Shider');
+}
+document.onkeydown=keypresed;
+// -->
+</script>
+
+<script>
+function tb5_makeArray(n){ this.length = n; return this.length;
+}
+tb5_messages = new tb5_makeArray(3);
+
+tb5_messages[0] = "Hacked By Shan Shider";
+tb5_messages[1] = "Cambodia Hacker";
+tb5_rptType = 'infinite';
+tb5_rptNbr = 10;
+tb5_speed = 50;
+tb5_delay = 2000;
+var tb5_counter=1;
+var tb5_currMsg=0;
+var tb5_stsmsg="";
+function tb5_shuffle(arr){
+var k;
+for (i=0; i<arr.length; i++){ k = Math.round(Math.random() * (arr.length - i - 1)) + i; temp = arr[i];arr[i]=arr[k];arr[k]=temp;
+}
+return arr;
+}
+tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = " ";
+}
+tb5_arr = tb5_shuffle(tb5_arr);
+function tb5_init(n){
+var k;
+if (n == tb5_arr.length){ if (tb5_currMsg == tb5_messages.length-1){ if ((tb5_rptType == 'finite') && (tb5_counter==tb5_rptNbr)){ clearTimeout(tb5_timerID); return; } tb5_counter++; tb5_currMsg=0; } else{ tb5_currMsg++; } n=0; tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length); tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length); for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = "#"; } tb5_arr = tb5_shuffle(tb5_arr); tb5_sp=tb5_delay;
+}
+else{ tb5_sp=tb5_speed; k = tb5_arr[n]; tb5_sts[k] = tb5_messages[tb5_currMsg].charAt(k); tb5_stsmsg = ""; for (var i=0; i<tb5_sts.length; i++) tb5_stsmsg += tb5_sts[i]; document.title = tb5_stsmsg; n++; } tb5_timerID = setTimeout("tb5_init("+n+")", tb5_sp);
+}
+function tb5_randomizetitle(){ tb5_init(0);
+}
+tb5_randomizetitle();
+</script>
+
+<div id="nothing" style="font-family: &#39;Courier&#39;;"></div>
+<script>
+var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+function mischandler(){
+return false;
+}
+function mousehandler(e){
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if((eventbutton==2)||(eventbutton==3)) return false;
+}
+document.oncontextmenu = mischandler;
+document.onmousedown = mousehandler;
+document.onmouseup = mousehandler;
+</script>
+<embed src="http://www.youtube.com/v/waegeORCTmU?autohide=1&amp;version=3&autoplay=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1">
+</body>
+</html>

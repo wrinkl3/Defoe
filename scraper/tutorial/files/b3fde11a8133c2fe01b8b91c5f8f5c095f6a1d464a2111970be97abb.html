@@ -1,0 +1,205 @@
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<title>HaCkEd By ElGeNeRaL EsSo | Ro-T@WiNdOwSLiVe.CoM</title>
+<meta name="keywords" content="HaCkEd By ElGeNeRaL EsSo | Ro-T@WiNdOwSLiVe.CoM">
+<meta name="description" content="HaCkEd By ElGeNeRaL EsSo | Ro-T@WiNdOwSLiVe.CoM">
+</head>  
+  <script language="JavaScript1.2">               
+
+/*****************************************
+* Visit our site at http://www.star28.com/ for more code
+* This notice must stay intact for use
+***********************************************/            
+//change 1 to another integer to alter the scroll speed. Greater is faster               
+var speed=1               
+var currentpos=0,alt=1,curpos1=0,curpos2=-1               
+function initialize(){               
+startit()               
+}               
+function scrollwindow(){               
+if (document.all)               
+temp=document.body.scrollTop               
+else               
+temp=window.pageYOffset               
+if (alt==0)               
+alt=1               
+else               
+alt=0               
+if (alt==0)               
+curpos1=temp               
+else               
+curpos2=temp               
+if (curpos1!=curpos2){               
+if (document.all)               
+currentpos=document.body.scrollTop+speed               
+else               
+currentpos=window.pageYOffset+speed               
+window.scroll(0,currentpos)               
+}               
+else{               
+currentpos=30               
+window.scroll(0,currentpos)               
+}               
+}               
+function startit(){               
+setInterval("scrollwindow()",30)               
+}               
+window.onload=initialize               
+</script>
+  
+  
+  
+  
+
+<body bgcolor="#000000"><html>
+<head>
+<SCRIPT LANGUAGE="JavaScript1.2"> 
+function quakeMe(){ 
+if (parent.moveBy){ 
+for (i=16; i>0; i--) { 
+parent.moveBy(0,i); 
+parent.moveBy(i,0); 
+parent.moveBy(0,-i); 
+parent.moveBy(-i,0); 
+parent.moveBy(0,i); 
+parent.moveBy(i,0); 
+parent.moveBy(0,-i); 
+parent.moveBy(-i,0); 
+} 
+} 
+} 
+quakeMe(); 
+</SCRIPT>
+  <script language="JavaScript">
+// Visit our site at http://www.star28.com/ for more code
+if (document.all){
+Cols=10;
+Cl=24;
+Cs=100;
+Ts=10;
+Tc='#FF9933';
+Tc1='#FFCC00';
+MnS=5;
+MxS=10;
+I=Cs;
+Sp=new Array();S=new Array();Y=new Array();
+C=new Array();M=new Array();B=new Array();
+RC=new Array();E=new Array();Tcc=new Array(0,1);
+document.write("<div id='Container' style='position:absolute;top:0;left:-"+Cs+"'>");
+document.write("<div style='position:relative'>");
+for(i=0; i < Cols; i++){
+S[i]=I+=Cs;
+document.write("<div id='A' style='position:absolute;top:0;font-family:Arial;font-size:"
++Ts+"px;left:"+S[i]+";width:"+Ts+"px;height:0px;color:"+Tc+";visibility:hidden'></div>");
+}
+document.write("</div></div>");
+
+for(j=0; j < Cols; j++){
+RC[j]=1+Math.round(Math.random()*Cl);  
+Y[j]=0;
+Sp[j]=Math.round(MnS+Math.random()*MxS); 
+for(i=0; i < RC[j]; i++){
+ B[i]='';
+ C[i]=Math.round(Math.random()*1)+' ';
+ M[j]=B[0]+=C[i];
+ }
+}
+function Cycle(){
+Container.style.top=window.document.body.scrollTop;
+for (i=0; i < Cols; i++){
+var r = Math.floor(Math.random()*Tcc.length);
+E[i] = '<font color='+Tc1+'>'+Tcc[r]+'</font>';
+Y[i]+=Sp[i];
+
+if (Y[i] > window.document.body.clientHeight){
+ for(i2=0; i2 < Cols; i2++){
+ RC[i2]=1+Math.round(Math.random()*Cl);  
+ for(i3=0; i3 < RC[i2]; i3++){
+ B[i3]='';
+ C[i3]=Math.round(Math.random()*1)+' ';
+ C[Math.floor(Math.random()*i2)]=' '+' ';
+ M[i]=B[0]+=C[i3];
+ Y[i]=-Ts*M[i].length/1.5;
+ A[i].style.visibility='visible';
+ }
+ Sp[i]=Math.round(MnS+Math.random()*MxS);
+ }
+}
+A[i].style.top=Y[i];
+A[i].innerHTML=M[i]+' '+E[i]+' ';
+}
+setTimeout('Cycle()',20)
+}
+Cycle();
+}
+// -->
+</script>
+  
+  
+  
+  
+
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">
+<img border="0" src="http://upload.traidnt.net/upfiles/Dmk52261.png" width="400" height="150"></p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+  
+  
+  
+  
+
+<table border="1" width="100%">
+	<tr>
+		<td>
+		<p align="center"><u><b><font color="#FF9900" size="7" face="Courier New">
+		HaCkEd By ElGeNeRaL EsSo</font></b></u></td>
+	</tr>
+</table>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+<img border="0" src="http://n4hr.com/up/uploads/82f4d7ea6f.jpg" width="560" height="265"></p>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+&nbsp;</p>
+<table border="1" width="100%">
+	<tr>
+		<td>
+		<p align="center"><font face="Courier New">&nbsp;</font><b><font size="7" face="Courier New" color="#FF9900">! 
+		Sorry Admin ! </font></b></td>
+	</tr>
+</table>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">
+<img border="0" " width="300" height="215"></p>
+<table border="1" width="100%">
+	<tr>
+		<td>
+		<p align="center"><font size="7" color="#FF9900" face="Courier New"><b>
+		Add Me :</b></font></p>
+		<p align="center"><u><font size="7" color="#FF9900" face="Courier New">
+		<b>Ro-T@WiNdOwSLiVe.CoM</b></font></u></td>
+<p align="center"><u><font size="7" color="#FF9900" face="Courier New">
+		<b>greetings to team hacker egypt</b></font></u></td>
+<p align="center"><u><font size="7" color="#FF9900" face="Courier New">
+		<b>the lord hacker of egypt</b></font></u></td>
+<p align="center"><u><font size="7" color="#FF9900" face="Courier New">
+		<b>dr.silent hill</b></font></u></td>
+<p align="center"><u><font size="7" color="#FF9900" face="Courier New">
+		<b>solly</b></font></u></td>
+<p align="center"><u><font size="7" color="#FF9900" face="Courier New">
+		<b>alsaaek</b></font></u></td>
+	</tr>
+</table>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+<img border="0" src="" width="301" height="360"></p>

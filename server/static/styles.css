@@ -1,0 +1,63 @@
+*{
+    font-family:'Dosis';
+}
+
+.logo{
+  font-size: 15px;
+}
+
+.container{
+  width:800px; 
+  margin:30px auto 0; 
+}
+
+.message{
+  margin: 20px auto 0;
+  font-size: 20px;
+}
+
+.tab-content{
+  margin-top: 65px;
+}
+
+.about{
+  font-size: 20px;
+}
+
+.title{
+  text-align:center;
+  font-size: 30px;
+}
+
+input{
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid green;
+  border-radius: 3px;
+  outline: none;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-left: 3px;
+    margin-right: 5px;
+
+}
+
+button[disabled] {
+  background-color: #FF85A1
+}
+
+form.tab-form-demo .tab-pane {
+  margin: 20px 20px;
+}

@@ -1,0 +1,224 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+ 
+<!-- saved from url=(0025) --> 
+<!-- saved from url=(0018)/ -->
+<!--Piczo right-click protect message. To customize, edit the text between the quotes' ' below.--> <title>
+|| Hacked By OuT-L4w ||</title>
+<meta name="keywords" content="|| Hacked By OuT-L4w ||">
+<meta name="description" content="|| Hacked By OuT-L4w ||">
+<script src="file:///F:/New%20Folder/index.php_fichiers/swfobject_modified.htm" type="text/javascript"></script>
+</head>
+  <script language="JavaScript1.2">
+// *******************************************************************
+// script by drevil_nz, Michael Dillon, Christchurch New Zealand. 
+// Permission granted to use this script provided this credit        
+// remains intact. Visit my homepage www.chc.quik.co.nz/juggler/mikey.html
+// Script written for Internet Explorer 4.0+.
+// ******************************************************************* 
+
+var message="|| Hacked By OuT-L4w ||"     //specifys the title
+var message=message+"          " //gives a pause at the end,1 space=1 speed unit, here I used 10 spaces@150 each = 1.5seconds. 
+i="0"			         //declares the variable and sets it to start at 0
+var temptitle=""                 //declares the variable and sets it to have no value yet.
+var speed="150"                  //the delay in milliseconds between letters
+
+function titler(){
+if (!document.all&&!document.getElementById)
+return
+document.title=temptitle+message.charAt(i)  //sets the initial title
+temptitle=temptitle+message.charAt(i)       //increases the title by one letter
+i++					    //increments the counter
+if(i==message.length)			    //determines the end of the message
+{
+i="0"					    //resets the counter at the end of the message
+temptitle=""				    //resets the title to a blank value
+}
+setTimeout("titler()",speed) 		   //Restarts. Remove line for no-repeat.
+}
+
+window.onload=titler
+</script> 
+
+<body style="background-image: url('http://img258.imageshack.us/img258/976/deathsentence110241.jpg');" oncontextmenu="alert('?? ?? ?????????? ? !!'); return false" noop="if (window.event != null &amp;&amp; window.event.button == 2) alert (--==SPIDER==-- );">
+<script language="JavaScript1.2">
+<!--Sembunyikan dari browser yang tidak mendukung Javascript
+ //awal code tulisan titlebar bergerak
+ var kiri = "[ "; //Karakter Penutup di kiri
+ var kanan = " ]"; //Karakter Penutup di Kanan
+ var pesan = "+--==[ HackeD bY --==S-man & A.Becha==--.::-Bosnian-::. ]==--+"; //Tulisan yang akan Berjalan
+ var kecepatan = 100; //Kecepatan Tulisan [Makin Kecil, Makin Cepat
+ 
+ function th3sn0wbr4in() 
+ {
+ document.title=kiri+pesan+kanan;
+ pesan=pesan.substring(1,pesan.length)+pesan.charAt(0);
+ setTimeout("th3sn0wbr4in()",kecepatan);
+ }
+ th3sn0wbr4in();
+ //akhir code tulisan titlebar bergerak
+ // -->
+              
+ 
+ 
+ 
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Hacked! By (S-A)</title></head><body style="background-image: url(http://wavemaker.free.fr/images/wallpaper/dark/wallpaper_dark03.png);" vlink="#999999" alink="#993300" background="index.php_files/p_0001.jpg" bgcolor="#333366" link="#0066cc" text="#ffffff">
+<owned by="" dashaxer=""><noscript></noscript><!-- --><script type="text/javascript" src="index.php_files/p.js"></script><script> 
+/*
+An object-oriented Typing Text script, to allow for multiple instances.
+A script that causes any text inside any text element to be "typed out", one letter at a time. Note that any HTML tags will not be included in the typed output, to prevent them from causing problems. Tested in Firefox v1.5.0.1, Opera v8.52, Konqueror v3.5.1, and IE v6.
+Browsers that do not support this script will simply see the text fully displayed from the start, including any HTML tags.
+ 
+ Functions defined:
+  TypingText(element, [interval = 100,] [cursor = "",] [finishedCallback = function(){return}]):
+    Create a new TypingText object around the given element.  Optionally
+    specify a delay between characters of interval milliseconds.
+    cursor allows users to specify some HTML to be appended to the end of
+    the string whilst typing.  Optionally, can also be a function which
+    accepts the current text as an argument.  This allows the user to
+    create a "dynamic cursor" which changes depending on the latest character
+    or the current length of the string.
+    finishedCallback allows advanced scripters to supply a function
+    to be executed on finishing.  The function must accept no arguments.
+ 
+  TypingText.run():
+    Run the effect.
+ 
+  static TypingText.runAll():
+    Run all TypingText-enabled objects on the page.
+*/
+ 
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;	// Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 20 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);	// We haven't finished loading yet.  Have patience.
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+	this.currentText = "";
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script> 
+
+<style> 
+body {
+	padding:0;
+	margin:0;
+	background-image:url(http://iasstes-team.com/p_0001.jpg);
+	background-repeat: no-repeat;
+	background-position:top;
+background-color: black;
+color: white;
+font: normal 80% Verdana;
+margin-top: 0px;
+margin-left: 0px;
+padding: 0;
+margin-right: 0px;
+}
+ 
+td{font-family: verdana; font-size: 20pt; color: green}
+a{font-family: verdana; font-size: 20pt; color: silver}
+/* REMOVE HORIZONTAL SCROLLBAR*/ 					
+   	body {								
+	overflow-x: hidden;						
+ 
+</style> 
+ 
+ 
+<!-- #BeginEditable "doctitle" --><!-- #EndEditable -->
+
+<center> 
+  
+  <div id="example1"> 
+<p> 
+<desinget by="" tooli=""></desinget>
+<b><a href="http://store3.up-00.com/Jun11/f8W58091.jpg">
+<img src="http://im18.gulfup.com/2011-11-08/1320775816511.jpg" border="0" height="348" width="416"></a></b></p>
+<p>...::| HaCkeD By OuT-L4w |::.<span lang="ar-sa">.</span>.</p>
+<p>I Do iT For LuLs</p>
+<p>YOUR SECURITY IS --------- 0 %</p>
+<p>See Ya </p>
+<p>
+<font color="#C0C0C0">T5J[at]Live.Com</font></div>
+</center>
+
+<embed src="http://www.youtube.com/v/EHg7PUItA9M&feature=related&amp;autoplay=1" type="application/x-shockwave-flash" wmode="transparent" height="1" width="1">

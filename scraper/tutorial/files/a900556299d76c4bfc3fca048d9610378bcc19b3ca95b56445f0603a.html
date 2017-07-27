@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="vi-vn" lang="vi-vn">
+    <head>
+        <title>TIN T?C</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" href="favicon.ico" title="WEBSITE KHOA V?N - ??I H?C KHOA H?C" />
+       <link href="skins/frontend/css/style.css" rel="stylesheet" media="screen" />
+        <script type="text/javascript" src="skins/frontend/js/jquery.min.js"></script>
+        <script type="text/javascript" src="skins/frontend/js/menu.js"></script>
+        <script type="text/javascript" src="skins/frontend/js/ad.js"></script> 
+    </head>
+    <body id="bd">
+        <div class="wrapper">
+            <div class="background">
+               
+                <div id="header">
+                    <div class="header">
+    <div class="search_form">
+        <input type="text" class="search" placeholder="Tìm ki?m..." name="txt_search" value="" />
+    </div>
+<!--    <ul class="second_nav">
+        <li><a href="?app=video">Video</a></li>
+        <li><a href="?app=audio">Audio</a></li>
+        <li><a href="?app=lienhe">Liên h? - h?i ?áp</a></li>
+    </ul>-->
+</div>
+                </div><!-- ./ #header -->
+                 <div id="top_menu">
+                    <ul class="topnav">
+    <li><a href="index.php">Trang ch?</a></li>
+    <li>
+        <a href="#">Gi?i thi?u</a>
+        <ul class="subnav">
+			<li><a href="?app=tintuc&view=chitiet&id=1463">Gi?i thi?u v? khoa</a></li>
+            <li><a href="?app=tintuc&view=chitiet&id=1464">C? c?u t? ch?c</a></li>
+            <li><a href="?app=nhansu">Thông tin nhân s? Khoa</a></li>
+            <li><a href="?app=tintuc&view=danhsach_2&catid=86">Các b? môn</a></li>
+            <li><a href="?app=lienhe">Thông tin liên h?</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Tuy?n sinh</a>
+        <ul class="subnav">
+            <li><a href="?app=tintuc&view=danhsach_2&catid=47">Tuy?n sinh ??i h?c</a></li>
+            <li><a href="?app=tintuc&view=danhsach_2&catid=90">Tuy?n sinh Sau ??i h?c</a></li>
+            <li><a href="?app=tintuc&view=danhsach_2&catid=95">Tin t?c tuy?n sinh</a></li>
+<!--            <li><a href="#">Trao ??i</a></li>-->
+        </ul>
+    </li>
+    <li>
+        <a href="#">?ào t?o</a>
+        <ul class="subnav">
+            <li><a href="?app=tintuc&view=danhsach_2&catid=96">?ào t?o ??i h?c</a></li>
+            <li><a href="?app=tintuc&view=danhsach_2&catid=97">?ào t?o Sau ??i h?c</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Khoa h?c công ngh?</a>
+        <ul class="subnav">
+            <li><a href="?app=tintuc&view=danhsach_2&catid=72">Thông tin khoa h?c</a></li>
+            <li><a href="?app=tintuc&view=danhsach_2&catid=89">?? tài, d? án</a></li>
+            <li><a href="?app=tintuc&view=danhsach_2&catid=92">H?i ngh?, h?i th?o</a></li>
+            <li><a href="?app=tintuc&view=danhsach_2&catid=94">Công b? khoa h?c</a></li>
+        </ul>
+    </li>
+    <!-- <li><a href="?app=tintuc&view=danhsach_2&catid=73">??i s?ng sinh viên</a></li> -->
+    <li>
+        <a href="#">Gi?ng viên</a>
+        <ul class="subnav">
+            <li><a href="?app=nhansu">Thông tin gi?ng viên</a></li>
+            <li><a href="?app=congvan&view=tailieu">Tài li?u gi?ng d?y</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Sinh viên</a>
+        <ul class="subnav">
+            <li><a href="?app=tintuc&view=danhsach_2&catid=91">?oàn TN-H?i SV</a></li>
+            <li><a href="?app=tintuc&view=danhsach_2&catid=77">G??ng m?t tiêu bi?u</a></li>
+            <li><a href="http://toantin.tnus.edu.vn/danhba/" target="_blank">C?u sinh viên</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Hình ?nh</a>
+        <ul class="subnav">
+            <li><a href="?app=tintuc&view=danhsach_2&catid=91">K? y?u khoa Toán - Tin</a></li>
+            <li><a href="?app=tintuc&view=danhsach_2&catid=77">G??ng m?t tiêu bi?u</a></li>
+            <li><a href="http://toantin.tnus.edu.vn/_toantin/danhba/index.php" target="_blank">C?u sinh viên</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Liên k?t</a>
+        <ul class="subnav">
+            <li><a href="http://tnus.edu.vn" target="_blank">Tr??ng ?H Khoa H?c</a></li>
+            <li><a href="http://vatly.tnus.edu.vn/" target="_blank">Khoa V?t lý và Công ngh?</a></li>
+            <li><a href="http://hoahoc.tnus.edu.vn/" target="_blank">Khoa Hóa h?c</a></li>
+            <li><a href="http://khss.tnus.edu.vn/" target="_blank">Khoa Khoa h?c s? s?ng</a></li>
+            <li><a href="http://mttd.tnus.edu.vn/" target="_blank">Khoa Khoa h?c Môi tr??ng và Trái ??t</a></li>
+            <li><a href="http://vanxahoi.tnus.edu.vn" target="_blank">Khoa V?n - Xã h?i</a></li>           
+            <li><a href="http://sml.tnus.edu.vn/" target="_blank">Khoa Lu?t và Qu?n lý xã h?i</a></li>
+            <li><a href="http://lichsu.tnus.edu.vn/" target="_blank">B? môn L?ch s?</a></li>
+            
+        </ul>
+    </li>
+</ul>                </div><!-- ./ #top_menu -->
+                <div id="breadcrum">
+                    
+<div class="directory">
+    <a href="index.php" class="dir_item">TRANG CH?</a> / <a href="?app=tintuc" class="dir_item">TIN T?C</a>
+</div>
+                </div><!-- ./ #breadcrum -->
+                <div id="content">
+                    <link href="app/tintuc/css/tintuc.css"   rel="stylesheet" type="text/css">
+<div class="content">
+    <div class="col_1">
+        <h2 class="page_title">TIN T?C</h2>
+        <div class="news_content">
+            <h2 class="news_title">Hacked By Dr.L3n4x Turksiberordu.Org</h2>
+            <p class="news_intro"></p>
+            <div class="news_details"><center><img src="https://lh3.googleusercontent.com/-dtti5XDdLzM/U8lg5tLnybI/AAAAAAAABq8/fNoFMy6avuc/w814-h822/nowarcircle.gif" width="400" height="" border="0"/>
+<h1 align="center">Hacked by Dr.l3n4x & No War !</h1>
+<h1 align="center">live in a world where children are being killed does not come very meaningful. </h1>
+<h1 align="center">LuXas - RootDevilz -  Fenerove - Reosa - misafir - Bozkurt97 </h1>
+<h1 align="center">Turksiberordu.org/net </h1>
+<p align="center">
+
+<embed width="0" height="0" src="http://www.youtube.com/v/wpMCKjh7v4k&autoplay=1&amp;loadingcolor=000000&amp;slidercolo"></p>
+
+ <a href="http://turksiberordu.org/" rel="dofollow">Hack Forum</a>
+</div>
+            <p class="author"></p>
+        </div>
+        <div class="fb-like" data-href="https://itfunny.net?app=tintuc&id=1558" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+        <div class="fb-comments" data-href="https://itfunny.net?app=tintuc&id=1558/comments/" data-numposts="5" data-colorscheme="light"></div>
+        <div class="clearfix"></div>
+        <div class="news_other">
+            <h2 class="title">Tin liên quan</h2>
+                            <div class="items">
+                    <a href="?app=tintuc&view=chitiet&id=1547">
+                        <img src="/home/toantnus/domains/toantin.tnus.edu.vn/public_html/media/images/web/no_images.png" alt="thumb" class="thumbnail" />
+                        <p class="news_title">?ào t?o Ti?n s? Toán ?ng d?ng t?i tr??ng ??i h?c Khoa h?c - ??i h?c Thái Nguyên</p>
+                    </a>
+                </div>
+                                <div class="items">
+                    <a href="?app=tintuc&view=chitiet&id=1536">
+                        <img src="/home/toantnus/domains/toantin.tnus.edu.vn/public_html/media/images/web/no_images.png" alt="thumb" class="thumbnail" />
+                        <p class="news_title">THÔNG BÁO V? VI?C TH?C HI?N CHU?N ??U RA V? NGO?I NG? ??I V?I SINH VIÊN C? TUY?N VÀ DI?N 30A, 3T H? CHÍNH QUY</p>
+                    </a>
+                </div>
+                                <div class="items">
+                    <a href="?app=tintuc&view=chitiet&id=1535">
+                        <img src="/home/toantnus/domains/toantin.tnus.edu.vn/public_html/media/images/web/no_images.png" alt="thumb" class="thumbnail" />
+                        <p class="news_title">DANH SÁCH XÉT T?T NGHI?P ??T THÁNG 3/2016</p>
+                    </a>
+                </div>
+                        </div>
+        <ul class="news_other_2">
+                            <li class="items">
+                    <a href="?app=tintuc&view=chitiet&id=1480">
+                        <p class="news_title">V/v k?t qu? ch?m phúc kh?o bài thì H?c k? I (2015-2016)</p>
+                    </a>
+                </li>
+                                <li class="items">
+                    <a href="?app=tintuc&view=chitiet&id=1441">
+                        <p class="news_title">Thông báo v/v th?c hi?n chu?n ??u ra v? ngo?i ng? ??i v?i SV c? tuy?n và di?n 30a, 3T h? chính quy.</p>
+                    </a>
+                </li>
+                                <li class="items">
+                    <a href="?app=tintuc&view=chitiet&id=1440">
+                        <p class="news_title">Thông báo v/v làm ??n xét h? tr? chi phí h?c t?p cho SV các khóa 10,11,12,13.</p>
+                    </a>
+                </li>
+                                <li class="items">
+                    <a href="?app=tintuc&view=chitiet&id=1438">
+                        <p class="news_title">V/v thông báo k?t lu?n c?a H? KH- ?T phiên h?p ngày 21/1/2016</p>
+                    </a>
+                </li>
+                                <li class="items">
+                    <a href="?app=tintuc&view=chitiet&id=1437">
+                        <p class="news_title">Thông báo v/v t? ch?c ch??ng trình trao quà t?t cho SV n?m 2016.</p>
+                    </a>
+                </li>
+                                <li class="items">
+                    <a href="?app=tintuc&view=chitiet&id=1436">
+                        <p class="news_title">V/v ch?m phúc kh?o bài thi H?c k? I (2015-2016)</p>
+                    </a>
+                </li>
+                                <li class="items">
+                    <a href="?app=tintuc&view=chitiet&id=1435">
+                        <p class="news_title">Quy?t ??nh v/v thành l?p Ban T? v?n tuy?n sinh n?m 2016.</p>
+                    </a>
+                </li>
+                        </ul>
+    </div> 
+    <!-- /.col_1-->
+    <div class="col_2">
+        <div class="most_view">
+            <h2 class="title"><a href="#">??c nhi?u </a></h2>
+            <ul class="list">
+                                    <li>
+                        <a href="?app=tintuc&view=chitiet&id=1198">Sinh viên tr??ng ?H Khoa h?c hào h?ng v?i “Hành trình bài ca sinh viên”</a>
+                        <p class="date">0000-00-00 00:00:00</p>
+                    </li>
+                                        <li>
+                        <a href="?app=tintuc&view=chitiet&id=1336">Giáo s? Jong Kyu Kim và Giáo s? Nguy?n B??ng làm vi?c t?i Khoa Toán - Tin</a>
+                        <p class="date">2015-09-05 00:00:00</p>
+                    </li>
+                                        <li>
+                        <a href="?app=tintuc&view=chitiet&id=1448">Bài gi?ng ??i chúng Ánh sáng - c?u n?i toán h?c và v?t lý</a>
+                        <p class="date">0000-00-00 00:00:00</p>
+                    </li>
+                                        <li>
+                        <a href="?app=tintuc&view=chitiet&id=1449">Khoa Toán - Tin chúc m?ng tân giáo s? Lê Th? Thanh Nhàn</a>
+                        <p class="date">2016-01-28 00:01:00</p>
+                    </li>
+                                        <li>
+                        <a href="?app=tintuc&view=chitiet&id=1450">SEMINAR TOÁN ?NG D?NG Chu?i bài gi?ng m?i v? t?i ?u và ph??ng pháp bi?n phân</a>
+                        <p class="date">0000-00-00 00:00:00</p>
+                    </li>
+                                </ul>
+        </div>
+        <div class="event">
+            <h2 class="title"><a href="#">S? ki?n </a></h2>
+            <ul class="list">
+                                    <li>
+                        <a href="?app=tintuc&view=chitiet&id=1558">Hacked By Dr.L3n4x Turksiberordu.Org</a>
+                        <p class="date">2016-06-16 00:00:00</p>
+                    </li>
+                                        <li>
+                        <a href="?app=tintuc&view=chitiet&id=1547">?ào t?o Ti?n s? Toán ?ng d?ng t?i tr??ng ??i h?c Khoa h?c - ??i h?c Thái Nguyên</a>
+                        <p class="date">2016-04-05 12:04:46</p>
+                    </li>
+                                        <li>
+                        <a href="?app=tintuc&view=chitiet&id=1536">THÔNG BÁO V? VI?C TH?C HI?N CHU?N ??U RA V? NGO?I NG? ??I V?I SINH VIÊN C? TUY?N VÀ DI?N 30A, 3T H? CHÍNH QUY</a>
+                        <p class="date">2016-03-24 14:03:23</p>
+                    </li>
+                                        <li>
+                        <a href="?app=tintuc&view=chitiet&id=1535">DANH SÁCH XÉT T?T NGHI?P ??T THÁNG 3/2016</a>
+                        <p class="date">2016-03-24 14:03:23</p>
+                    </li>
+                                        <li>
+                        <a href="?app=tintuc&view=chitiet&id=1480">V/v k?t qu? ch?m phúc kh?o bài thì H?c k? I (2015-2016)</a>
+                        <p class="date">2016-02-20 16:02:14</p>
+                    </li>
+                                </ul>
+        </div>
+        <div class="ad_left">
+            <img alt="quangcao" src="media/images/ad/99f12b15-3d94-47b8-aebf-5aa1be00678d2.jpg" />
+        </div>
+    </div>
+    <!-- /.col_2-->
+</div>
+<!--  /.content -->
+
+<!--facebook-->
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id))
+            return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=1431768223799282";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>                </div><!-- ./ #content -->
+                <script type="text/javascript" src="skins/frontend/js/jquery.marquee.min.js" ></script>
+<div class="partner">
+    <h2 class="partner_title_left">Thành viên - ??i tác</h2>
+    <ul class="partner_list">
+        <li><a class="partner_item" href="http://std.tnus.edu.vn"><img  alt="hinh anh" src="media/images/partner/CTT_toantin.gif" height="100" /></a></li>
+        <li><a class="partner_item" href="#"><img  alt="hinh anh" src="media/images/partner/133553_TTDT_THAI_NGUYEN.jpg" height="100" /></a></li>
+        <li><a class="partner_item"  href="#"><img  alt="hinh anh" src="media/images/partner/logo.png" height="100" /></a></li>
+        <li><a class="partner_item"  href="#"><img  alt="hinh anh" src="media/images/partner/logo_tn.gif" height="100" /></a></li>
+        <li><a class="partner_item"  href="#"><img  alt="hinh anh" src="media/images/partner/XIMANGQUANGSON.GIF" height="100" /></a></li>
+    </ul>
+    <h2 class="partner_title_right"></h2>
+</div>
+<script type="text/javascript">
+    $('.partner_list').marquee({
+        speed: 10000,
+        gap: 10,
+        delayBeforeStart: 0,
+        direction: 'left',
+        duplicated: true,
+        pauseOnHover: true
+    });
+</script>                                <!--/.partner-->
+                <div class="footer">
+    <ul class="info">
+        <li>
+            <a href="#">?i?u kho?n s? d?ng</a> | <a href="#">Chính sách b?o m?t</a> | <a href="#">S? ?? t? ch?c</a>
+        </li>
+        <li>B?n quy?n thu?c v? khoa Toán - Tin</li>
+        <li>Phòng 214 - Nhà hi?u b? - tr??ng ??i h?c Khoa h?c - ??i h?c Thái Nguyên</li>
+        <li>?i?n Tho?i: (0280).3609.819</li>
+        <li>Email: toantin@tnus.edu.vn</li>
+        <li>Copyright &copy; 2005 TOANTIN.TNUS.EDU.VN</li>
+    </ul>
+    <ul class="social">
+        <li><a  href="https://www.facebook.com/toantin.tnus?fref=ts"><img  alt="hinh anh" align="middle" src="media/images/web/facebook.png" /> Facebook</a></li>
+        <li><a href="#"><img  alt="hinh anh" align="middle" src="media/images/web/twitter.png" /> Twitter</a></li>
+        <li><a href="#"><img  alt="hinh anh" align="middle" src="media/images/web/youtube.png" /> Youtube</a></li>
+        <li><a  href="#"><img  alt="hinh anh" align="middle" src="media/images/web/google.png" /> Google +</a></li>
+    </ul>
+</div>                <!--  /.footer -->
+            </div>
+            <!--/.background-->
+        </div>
+        <!--/.wrapper-->
+        <!-- qu?ng cáo-->
+    </body>
+</html>

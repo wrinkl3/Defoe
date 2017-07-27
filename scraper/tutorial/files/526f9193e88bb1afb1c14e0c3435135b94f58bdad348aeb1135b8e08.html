@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <title>Login : Musica Studios</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="http://www.musica.id/application/views/front/musica/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="http://www.musica.id/application/views/front/musica/favicon-16x16.png" sizes="16x16">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="http://www.musica.id/application/views/front/musica/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://www.musica.id/application/views/front/musica/assets/css/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="http://www.musica.id/application/views/front/musica/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="http://www.musica.id/application/views/front/musica/assets/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS Page Style -->
+    <link rel="stylesheet" href="http://www.musica.id/application/views/front/musica/assets/css/pages/page_log_reg_v2.css">
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="http://www.musica.id/application/views/front/musica/assets/css/themes/default.css" id="style_color">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="http://www.musica.id/application/views/front/musica/assets/css/custom.css">
+</head>
+
+<body class="header-fixed">
+    <!--=== Style Switcher ===-->
+    <!--<i class="style-switcher-btn fa fa-cogs hidden-xs animated fadeInRight"></i>
+<div class="style-switcher animated fadeInRight">
+    <div class="theme-close"><i class="icon-close"></i></div>
+    <div class="theme-heading">Theme Colors</div>
+    <ul class="list-unstyled">
+        <li class="theme-default theme-active" data-style="default" data-header="light"></li>
+        <li class="theme-blue" data-style="blue" data-header="light"></li>
+        <li class="theme-orange" data-style="orange" data-header="light"></li>
+        <li class="theme-red" data-style="red" data-header="light"></li>
+        <li class="theme-light last" data-style="light" data-header="light"></li>
+        <li class="theme-purple" data-style="purple" data-header="light"></li>
+        <li class="theme-aqua" data-style="aqua" data-header="light"></li>
+        <li class="theme-brown" data-style="brown" data-header="light"></li>
+        <li class="theme-dark-blue" data-style="dark-blue" data-header="light"></li>
+        <li class="theme-light-green last" data-style="light-green" data-header="light"></li>        
+    </ul>
+    <div class="style-switcher-logo"><a href="index.html"><img src="http://www.musica.id/application/views/front/musica/assets/img/logo2-default.png" width="71" heigt="26" alt=""></a></div>
+</div><!--/style-switcher-->
+    <!--=== End Style Switcher ===-->
+	    <!--=== Content Part ===-->
+    <div class="container animated fadeIn">
+        <!--Reg Block-->
+        <div class="reg-block">
+            <div class="reg-block-header">
+                <h2>Sign In</h2>
+                <!-- ul class="social-icons text-center">
+                    <li>
+                        <a class="rounded-x social_facebook" href="https://www.facebook.com/MusicaStudios"></a>
+                    </li>
+                    <li>
+                        <a class="rounded-x social_twitter" href="https://twitter.com/MusicaStudios"></a>
+                    </li>
+                    <li>
+                        <a class="rounded-x social_googleplus" href="https://plus.google.com/+MusicaStudios"></a>
+                    </li>
+                    <li>
+                        <a class="rounded-x social_youtube" href="https://www.youtube.com/user/musicastudios"></a>
+                    </li>
+                </ul-->
+                <p>Don't Have Account? Click <a class="color-green" href="http://www.musica.id/register">Sign Up</a> to registration.</p>
+                <div class="tab-pane fade in active" id="alert-3">
+					                                        <div class="alert alert-success fade in">
+                    	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+						<strong>*Hacked By [V]404_NOT_FOUND zuehehehe</strong>
+                    </div> 
+					                </div>                
+            </div>
+			<form action="http://www.musica.id/login?next=" method="post" class="formID">
+            <div class="input-group margin-bottom-20">
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input type="text" class="validate[required] form-control" placeholder="Username" name="username">
+            </div>
+            <div class="input-group margin-bottom-20">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" class="validate[required] form-control" placeholder="Password" name="password">
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <input type="submit" class="btn-u btn-block" name="submit" value="Log In">
+                </div>
+            </div>
+            </form>
+            
+            
+            <hr> 
+            <div id="reset_password">           
+            <form action="http://www.musica.id/front/member/send_conf_new_pass" method="post" class="formID">
+            <div class="bck">
+            <p>Enter your registered email</p>
+            </div>
+            <div class="input-group margin-bottom-20" >
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input type="text" class="validate[required,custom[email]] form-control" placeholder="Email" name="email"> 
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <input type="submit" class="btn-u btn-block" name="submit" value="Reset Password">
+                </div>
+            </div>
+            </form>
+            </div>
+            
+            <div class="bck">
+                <div style="float:left;margin-left:20px">
+                    <a class="color-green" href="http://www.musica.id/">Back Home</a>
+                </div>    
+                <div style="float:right;margin-right:20px">   
+                    <a class="color-green" style="cursor:pointer" onClick="reset_password();">Forgot Password?</a>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            
+            <div class="bck">
+            	
+            </div>
+        </div>
+        <!--End Reg Block-->
+    </div>
+    <!--/container-->
+    <!--=== End Content Part ===-->
+
+	<script src="http://www.musica.id/application/views/front/musica/scripts/jquery.min.js"></script>
+    <script src='http://www.musica.id/application/views/front/musica/scripts/jquery-1.8.3.min.js'></script>
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="http://www.musica.id/application/views/front/musica/assets/plugins/countdown/jquery.countdown.js"></script>
+    <script type="text/javascript" src="http://www.musica.id/application/views/front/musica/assets/plugins/backstretch/jquery.backstretch.min.js"></script>
+    <!-- form validation -->                    
+    <link rel="stylesheet" href="http://www.musica.id/application/views/front/musica/css/validationEngine.jquery.css" type="text/css"/>
+    <link rel="stylesheet" href="http://www.musica.id/application/views/front/musica/css/template.css" type="text/css"/>
+    <script src="http://www.musica.id/application/views/front/musica/scripts/js/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://www.musica.id/application/views/front/musica/scripts/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        $.backstretch([
+      //"http://www.musica.id/application/views/front/musica/assets/img/noahbg.jpg",
+      //"http://www.musica.id/application/views/front/musica/assets/img/dmasive.JPG",
+      //"http://www.musica.id/application/views/front/musica/assets/img/sher.jpg"
+      "http://www.musica.id/application/views/front/musica/assets/img/noah-392015.jpg",
+      "http://www.musica.id/application/views/front/musica/assets/img/nidji-392015.jpg",
+      "http://www.musica.id/application/views/front/musica/assets/img/geisha-392015.jpg",
+      "http://www.musica.id/application/views/front/musica/assets/img/dmasive.JPG"
+      ], {
+            fade: 1000,
+            duration: 7000
+        });
+    </script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="http://www.musica.id/application/views/front/musica/assets/js/app.js"></script>
+    <script type="text/javascript" src="http://www.musica.id/application/views/front/musica/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+			jQuery(".formID").validationEngine();
+			document.getElementById('reset_password').style.display = 'none';
+            App.init();
+        });
+		
+		function reset_password(){
+			document.getElementById('reset_password').style.display = 'block';
+		}
+    </script>
+    <!--[if lt IE 9]>
+    <script src="http://www.musica.id/application/views/front/musica/assets/plugins/respond.js"></script>
+    <script src="http://www.musica.id/application/views/front/musica/assets/plugins/html5shiv.js"></script>
+<![endif]-->
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-29166220-1']);
+        _gaq.push(['_setDomainName', 'htmlstream.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+
+</html>

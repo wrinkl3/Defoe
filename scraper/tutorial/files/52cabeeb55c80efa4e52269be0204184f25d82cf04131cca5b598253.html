@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>HacKeD By Team DMar algnoob</title>
+<LINK rel="SHORTCUT ICON" href="http://i924.photobucket.com/albums/ad89/shaawa_dj/flags/th_Tunisia-240-animated-flag-gifs.gif"> 
+<style type="text/css">
+*,html,body,div,p,h2{padding: 0px;margin: 0px;}body{background-color: #000000;}#container{margin: 0 auto;width: 980px;padding-top: 40px;}#content-container{float: left;width: 980px;}#content{clear: left;float: left;width: 581px;padding: 20px 0 20px 0;margin: 0 0 0 30px;display: inline;color: #333;}#content h2 {font-family: Cambria;font-size: 170px;}#aside{float: right;width: 348px;padding: 0px;display: inline;background-image: url('805740121.jpg');height: 376px}.hacker{float: right;font-family: Cambria;font-size: 30px;font-weight: bold;}.notes{padding-top: 90px;line-height: 1.3em;font-weight: bold;font-size: 16px;font-family: "Courier New";}.contact{padding-top: 30px;font-size: 18px;font-family: "Courier New", Courier, monospace;font-weight: bold;color: #800000;}#music{padding: 80px 80px 0px 0px;float: right;clear: right;}</style>
+</head>
+<script type="text/javascript">/*<![CDATA[*/ 
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+	this.currentText = "";
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+ 
+/*]]>*/</script> 
+ 
+<body>
+<div id="container">
+	<div id="content-container">
+		<div id="content" style="width: 652px; height: 1477px">
+ 
+<h2>Hacked</h2>
+<p class="hacker">By <b><font size="5">DmaR algno0oB</font></b></p>
+<p class="hacker">&nbsp;</p>
+<p class="hacker">&nbsp;</p>
+<p class="hacker"><font size="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><b><font size="5">&nbsp;</font></b></p>
+<p class="notes">&nbsp;</p>
+ <p align="left">
+	<font face="Aharoni"><font color="#FFFFFF">!! </font><font color="#800000">
+	Sorry</font><font color="#FFFFFF"> Admin </font><font color="#800000">Your</font><font color="#008000">
+	</font><font color="#FFFFFF">Site </font><font color="#800000">Has</font><font color="#FFFFFF"> 
+	Been</font><font color="#800000"> HaCkeD</font><font color="#FFFFFF"> !!</font></font></p>
+<p align="left">
+	<font face="Aharoni" color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	!!</font><font face="Aharoni" color="#800000">Fuck</font><font face="Aharoni" color="#FFFFFF"> 
+	You </font><font face="Aharoni" color="#800000">Admin</font><font face="Aharoni" color="#FFFFFF">!!</font></p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+                <img src="http://store2.up-00.com/Jun11/P7N51357.gif" width="319" border="0" height="80"></p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;<b><span lang="en-us"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	[</font><font color="#800000">#</font><font color="#FFFFFF">]</font><font color="#800000">D</font><font color="#FFFFFF">M</font><font color="#800000">A</font><font color="#FFFFFF">R</font><font color="#282828"> 
+	</font><font color="#800000"> 
+	al </font><font color="#FFFFFF">g</font><font color="#800000">no</font><font color="#FFFFFF">0</font><font color="#800000">o</font><font color="#FFFFFF">B[</font><font color="#800000">#</font><font color="#FFFFFF">]</font></span></b></p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	<b><span lang="en-us"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	[</font><font color="#800000">#</font><font color="#FFFFFF">]</font></span></b>&nbsp;<span lang="en-us"><a href="mailto:dr.dmar07@hotmail.com" style="text-decoration: none; font-weight: 700"><font color="#FF0000">Q</font><font color="#FFFFFF">07</font><font color="#FF0000">@hot</font><font color="#FFFFFF">m</font><font color="#FF0000">ail.com</font></a></span><b><span lang="en-us"><font color="#FFFFFF">[</font><font color="#800000">#</font><font color="#FFFFFF">]</font></span></b></p>
+<p align="left">
+                <img src="http://store2.up-00.com/Jun11/P7N51357.gif" width="319" border="0" height="80"></p>
+<p>
+<span style="text-align: left; widows: 2; text-transform: none; text-indent: 0px; font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(0,0,0); word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(0,0,0)" class="Apple-style-span">
+<font color="#ff0000" face="AGA Aladdin Regular" style="margin: 0px; padding: 0px">
+<span lang="ar-sa" style="margin: 0px; padding: 0px">&nbsp;</span></font></p>
+</span>
+<p align="left">
+	<b><span lang="en-us"><font color="#282828">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</font></span><span lang="en-us" style="font-family: Tahoma">
+	<font color="#282828">&nbsp;</font></span></b><span style="font-family: Tahoma" lang="en-us"><b><font color="#800000">J</font><font color="#FFFFFF">bB</font><font color="#800000">ar</font><font color="#282828"> </font>
+	<font color="#800000">h</font><font color="#FFFFFF">a</font><font color="#800000">c</font><font color="#FFFFFF">k</font><font color="#800000">e</font><font color="#FFFFFF">r</font><font color="#282828"> </font>
+	</b></span><b><span lang="en-us" style="font-family: Tahoma">
+	<font color="#282828">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+	</span></b><span style="font-family: Tahoma" lang="en-us">
+		<font color="#282828">|<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+		<font color="#808080">|</font><font color="#282828">&nbsp; </font>
+	</b></span>
+	<span style="text-align: left; widows: 2; text-transform: none; text-indent: 0px; font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; white-space: normal; orphans: 2; letter-spacing: normal; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(0,0,0)" class="Apple-style-span">
+	<font face="AGA Aladdin Regular" style="margin: 0px; padding: 0px" color="#800000">
+	Dr</font></span><span style="text-align: left; widows: 2; text-transform: none; text-indent: 0px; font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(0,0,0); word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(0,0,0)" class="Apple-style-span"><font color="#ff0000" face="AGA Aladdin Regular" style="margin: 0px; padding: 0px">.</font></span><span style="text-align: left; widows: 2; text-transform: none; text-indent: 0px; font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; white-space: normal; orphans: 2; letter-spacing: normal; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(0,0,0)" class="Apple-style-span"><font face="AGA Aladdin Regular" style="margin: 0px; padding: 0px" color="#800000">Mo</font></span><font face="AGA Aladdin Regular" style="margin: 0px; padding: 0px" color="#FFFFFF"><span style="text-align: left; widows: 2; text-transform: none; text-indent: 0px; font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; white-space: normal; orphans: 2; letter-spacing: normal; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(0,0,0)" class="Apple-style-span">taz</span></font><font color="#ff0000" face="AGA Aladdin Regular" style="margin: 0px; padding: 0px"><span style="text-align: left; widows: 2; text-transform: none; text-indent: 0px; font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; white-space: normal; orphans: 2; letter-spacing: normal; color: #800000; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(0,0,0)" class="Apple-style-span">.Ha</span></font><span style="text-align: left; widows: 2; text-transform: none; text-indent: 0px; font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; white-space: normal; orphans: 2; letter-spacing: normal; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(0,0,0)" class="Apple-style-span"><font face="AGA Aladdin Regular" style="margin: 0px; padding: 0px" color="#FFFFFF">Ck</font><font face="AGA Aladdin Regular" style="margin: 0px; padding: 0px" color="#800000">E</font></span><b><font color="#800000">r&nbsp;&nbsp;&nbsp; </font>
+	<font color="#808080">|</font><span lang="en-us"><font color="#800000">
+	</font></span></b></p>
+<p align="left">
+	&nbsp;<span lang="en-us"><b><font color="#282828">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><a href="mailto:o5eo@hotmail.com" style="text-decoration: none">
+	<font size="4" color="#FFFFFF">i</font><font size="4"><font color="#FF0000">3-@hot</font><font color="#FFFFFF">m</font></font><font color="#FF0000"><font size="4">ail.com</font></font></a><font color="#282828">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+	<font color="#808080">|</font><font color="#282828">&nbsp; </font><font color="#FFFFFF">
+	&nbsp;</font></b><font color="#FF0000">p</font><font color="#FFFFFF">F</font><font color="#FF0000">n</font><a href="mailto:dr.dmar07@hotmail.com" style="text-decoration: none; font-weight: 700"><font color="#FF0000">@hot</font><font color="#FFFFFF">m</font><font color="#FF0000">ail.com</font></a><font color="#FF0000">&nbsp;&nbsp;
+	</font><font color="#808080">|</font></span></p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="center">
+	<font face="PT Simple Bold Ruled"><b>&nbsp;</b></font><span lang="ar-sa"><b><font face="PT Simple Bold Ruled">&#1578;&#1605;
+	<font color="#800000">&#1575;&#1604;&#1588;&#1591;&#1601;</font> &#1608;<font color="#800000">&#1575;&#1604;&#1580;&#1585;&#1576;&#1593;&#1577;</font> &#1605;&#1606; 
+	&#1602;&#1576;&#1604; /&#1548;</font></b></span></p>
+<p align="justify">
+	<span lang="ar-sa"><b><font face="Tahoma"><font color="#FFFFFF">&#1583;&#1605;&#1605;&#1570;&#1570;&#1585;</font><font color="#800000"> 
+	&#1548;&#1575;&#1604;&#1580;&#1606;&#1608;&#1576;</font><font color="#FFFFFF">(</font><font color="#800000">#</font><font color="#FFFFFF">)</font><font color="#800000">&#1600;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	&#1600;(</font><font color="#FFFFFF">#</font><font color="#800000">)</font>&nbsp;&nbsp;&nbsp;
+	</font></b></span></p>
+<p align="center">
+	<span lang="ar-sa"><b><font face="Tahoma" size="2">^_^</font></b></span></p>
+<p align="center">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	<b><span <div style="text-align: center">
+	<font size="5" color="#ffffff" face="Comic Sans MS">Gr</font><font size="5" color="#FF0000" face="Comic Sans MS">33</font><font size="5" color="#ffffff" face="Comic Sans MS">Ts</font></span></b></p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	<span lang="ar-sa">&nbsp; </span></p>
+<p align="left">
+	<span lang="ar-sa">&nbsp;</span> ~<font color="#800000">ErHaBi-511</font> ~
+	<font color="#FFFFFF">dr.t56e</font> ~<font color="#FF0000">Mr.w3leed</font>~ <font color="#FFFFFF">
+	kabos alqhtani</font> <span lang="ar-sa">~ </span><font color="#FF0000">wolf<span lang="ar-sa">
+	</span>hacker</font><span lang="ar-sa">~</span></p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	<span lang="ar-sa"><font size="4" color="#FFFFFF">
+	...................................................</font></span></p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	<font face="Curlz MT" color="#808080" size="4">and all in msn</font><font size="4" color="#FFFFFF"> </font></p>
+<p align="left">
+	<span lang="ar-sa">...........................=</span></p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+ 
+ 
+<embed src="http://www.m5zn.com/uploads/2011/5/27/embed/0527111605009sepozfq0.swf" width="23" height="16"
+wmode="\'transparent\'"
+flashvars="file=http://bogelpunk.webs.com/music/bogel.mp3&amp;frontcolor=0xffffff&amp;backcolor=0x0
+ 
+066ff&amp;lightcolor=0xffffff&amp;logo=http://www.indowebster.com/images/idws.png&amp;autostart=true&amp;usefullscreen=false&amp;s
+ 
+howeq=false&amp;volume=130"
+type="application/x-shockwave-flash"
+pluginspage="http://www.macromedia.com/go/getflashplayer" menu="false"
+allowfullscreen="false" scale="noborder" quality="low" align="left"></p>
+		</div>
+	</div>
+	<div style="position: absolute; width: 463px; height: 260px; z-index: 1; left: 862px; top: 66px" id="layer1">
+		<img style="cursor: -moz-zoom-in" alt="http://www6.0zz0.com/2011/07/04/12/359435458.jpg" src="http://www6.0zz0.com/2011/07/04/12/359435458.jpg" width="398" height="562"></div>
+	<p>&nbsp;</p>
+ 
+</div>
+ 
+</body>
+</html>
+ 
+

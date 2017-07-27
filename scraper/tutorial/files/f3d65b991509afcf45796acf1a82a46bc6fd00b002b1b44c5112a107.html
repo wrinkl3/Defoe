@@ -1,0 +1,3408 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+
+
+<link href="theme/style_blue/user_css/main.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="theme/style_blue/user_css/superfish.css" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="theme/style_blue/user_css/superfish-vertical.css" />
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<title>
+
+
+
+??????? ??????????? ???? ??????
+
+
+
+-
+
+
+
+ 
+
+
+
+</title>
+
+
+
+<meta http-equiv="content-language" content="ar-sa">
+<meta http-equiv="content-type" content="text/html; charset=windows-1256">
+<meta http-equiv="expires" content="0">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="author" content="">
+<meta name="copyright" content="copyright (c) by ">
+<meta name="keywords" content=" ??? ??? ??????
+??? ?????? ??? ??????">
+<meta name="description" content="">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="1 days">
+<meta name="rating" content="general">
+
+<!-- add  this site to bookmark -->
+
+<script type="text/javascript">
+
+function bookmark(url,description)
+
+{
+
+netscape="Netscape User's hit CTRL+D to add a bookmark to this site."
+
+if (navigator.appName=='Microsoft Internet Explorer')
+
+{
+
+ window.external.AddFavorite(url,description);
+
+ 
+
+}
+
+else if (navigator.appName=='Netscape')
+
+{
+
+alert(netscape);
+
+}
+
+}
+
+//--> 
+
+</SCRIPT>
+
+<!-- begin calnder pop up menu without time -->
+
+<script language="javascript">
+
+		var activeElement = false;
+
+		function setDate( elementName )	{
+
+			activeElement = document.forms[0].elements[ elementName ];
+
+			var w = window.open("calendar.htm", "DateSelector", "width=280,height=280,resizable=no,scrollbars=no,menu=no,location=no,status=no");
+
+			w.focus();
+
+		}
+
+		function GetDateSelectorDate() { return activeElement.value; }
+
+		function SetDateSelectorDate( dateString ) { activeElement.value = dateString; }
+
+	</script>
+
+<!-- end calnder pop up menu without time -->
+
+
+<!-- ImageReady Preload Script (Untitled-1) -->
+
+<SCRIPT TYPE="text/javascript">
+
+<!--
+
+
+
+function newImage(arg) {
+
+	if (document.images) {
+
+		rslt = new Image();
+
+		rslt.src = arg;
+
+		return rslt;
+
+	}
+
+}
+
+/*///////////////////////////////////////////////*/
+
+function changeImages() {
+
+	if (document.images && (preloadFlag == true)) {
+
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+
+		}
+
+	}
+
+}
+
+/*///////////////////////////////////////////////*/
+
+function view_hide(img1,img2)
+
+{
+
+
+
+document.getElementById(img1).style.display="none";
+
+document.getElementById(img2).style.display="";
+
+}
+
+// -->
+
+</SCRIPT>
+
+
+<script>
+
+/////////////////////======================================
+
+<!-- VALIDATION -->
+
+
+
+var IsValidePage = true;
+
+var global_func_terminator;		// flag indicates that the function (checkControls) should exit
+
+/**
+
+ * validateForm
+
+ * @param formControl Form Control
+
+ * @return boolean
+
+ */
+String.prototype.trim = function()
+{
+	return this.replace(/^\s+|\s+$/g, '');
+};
+String.prototype.ltrim = function()
+{
+	return this.replace(/^\s+/, '');
+};
+String.prototype.rtrim = function()
+{
+	return this.replace(/^\s+$/, '');
+};
+
+
+// a trick function to fix the problem that the FCKeditor does not feel with the changes in the text before validation by m.nasr
+
+function saveData(instanceName)
+
+{
+    var id =  document.getElementById(instanceName);
+    var EditorHtml = $(id).tinymce().getContent();
+    id.value =EditorHtml ;
+}
+
+
+function clearData(instanceName)
+
+{
+
+	 var oEditor = FCKeditorAPI.GetInstance(instanceName) ;
+
+	 oEditor.SetHTML('');
+
+
+
+}
+
+
+
+/////////////////////////////////////===============
+
+function validateForm(formControl) {
+
+
+
+	if(formControl.cancel_validation)
+
+		return true;
+
+
+
+    IsValidePage = true;
+
+	checkControls(formControl.childNodes);
+
+	global_func_terminator = "";	// reset the flag
+
+    return IsValidePage;
+
+}
+
+/**
+
+ * checkControls
+
+ */
+
+/////////////////////////////////////===============
+
+function checkControls(childNodes) {
+
+   for( var i=0; i<childNodes.length; i++ ) {
+
+       var elem = childNodes[i];
+
+
+
+       if( elem.tagName == "SPAN" ) {
+
+		    if(document.getElementById(elem.getAttribute("validateControl")) == null) continue;
+
+            if( elem.getAttribute("validateControl") ) {
+
+                   var ret = eval( elem.getAttribute("funcName") + "(\"" + elem.getAttribute("validateControl") + "\");" );
+
+                   elem.innerHTML = "";
+
+                   if( !ret ) {
+
+						if(elem.title=="msgbox"){
+
+							alert(elem.getAttribute("errorMessage"));
+
+							
+
+							if(document.getElementById(elem.getAttribute("validateControl")).type != 'hidden')
+
+							{
+
+								document.getElementById(elem.getAttribute("validateControl")).focus();
+
+								}
+
+							
+
+								
+
+	                        global_func_terminator = "exit_func";
+
+							IsValidePage = false;
+
+							return false;
+
+						}
+
+                        elem.innerHTML = elem.getAttribute("errorMessage");
+
+                        IsValidePage = false;
+
+                   }
+
+            }
+
+       }
+
+	 
+
+		if( global_func_terminator == "exit_func"){			
+
+//			alert(global_func_terminator);
+
+			return false;
+
+		}
+
+        checkControls(childNodes[i].childNodes);
+
+   }
+
+}
+
+/**
+
+ *Reset controls
+
+ *a function to reset the spans of the form when HTML reset button was pressed by t.soliman
+
+ */
+
+/////////////////////////////////////===============
+
+function resetControls(formName) {
+
+	var spans = document.getElementsByTagName('span');
+
+	
+
+	for(i=0;i<spans.length; i++)
+
+	{
+
+		var elem = spans[i]; 
+
+		if (elem.getAttribute("funcName")) {
+
+			//alert(elem.innerHTML);
+
+			elem.innerHTML = "";
+
+		}
+
+	}
+
+	
+
+}
+
+/**
+
+ * validateEmpty
+
+ * @param elemetID string
+
+ * @return boolean
+
+ */
+
+/////////////////////////////////////===============
+
+function validateEmpty(elementID) {
+   var element = document.getElementById(elementID);
+
+   if(element.nodeName 	== 'INPUT')
+   {
+   		
+	   switch( element.type ) {
+		  case "text" :
+		  case "textarea":
+		  case "password" :
+			if( element.value.trim().length == 0 ) {
+				return false;
+			 }
+			 break;
+		  case "select-one" :
+			if( element.length == 0 || element.selectedIndex == -1 ) {
+				return false;
+			 }
+			  break;
+		   case "radio" :
+		   var radioElements = frm1.elements[elementID];
+		   for( var i=0; i<radioElements.length; i++) {
+				 var radioElem = radioElements[i];
+				 if( radioElem.checked ) {
+					 return true;
+				 }
+		   }
+			return false;
+			break; 	 
+	   }
+	}
+	else
+	{
+	
+		if( element.value.trim().length == 0 ) 
+            return false;
+	}
+   return true;
+}
+//////////////////////=================
+
+/*
+
+ * isValidEmail
+
+*/
+
+/*function isValidEmail(elementID) {
+
+ var email = document.getElementById(elementID).value;
+
+   
+
+	if(email == ""){
+
+		return true;	// because email isnt required
+
+	}
+
+    if (! allValidChars(email)) {  // check to make sure all characters are valid
+
+        return false;
+
+    }
+
+    if (email.indexOf("@") < 1) { //  must contain @, and it must not be the first character
+
+        return false;
+
+    } else if (email.lastIndexOf(".") <= email.indexOf("@")) {  // last dot must be after the @
+
+        return false;
+
+    } else if (email.indexOf("@") == email.length) {  // @ must not be the last character
+
+        return false;
+
+    }
+
+	
+
+    return true;
+
+}
+
+*/
+
+//////////////////////=================
+
+function isValidEmail(elementID){
+
+ 	var email = document.getElementById(elementID).value.trim();
+
+	if(email == ""){
+
+		return true;	// because email isnt required
+
+	}
+
+	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+	if (filter.test(email)) {
+
+		return true;
+
+	}
+
+	return false;
+
+}
+
+
+
+//////////////////////=================
+
+function allValidChars(email) {
+
+  var parsed = true;
+
+  var validchars = "abcdefghijklmnopqrstuvwxyz0123456789@.-_";
+
+  for (var i=0; i < email.length; i++) {
+
+    var letter = email.charAt(i).toLowerCase();
+
+    if (validchars.indexOf(letter) != -1)
+
+      continue;
+
+    parsed = false;
+
+    break;
+
+  }
+
+  return parsed;
+
+}
+
+
+
+/**
+
+ * customValidatePassword
+
+ * @param elemetID string
+
+ * @return boolean
+
+ */
+
+////////////////////////////================
+
+function validateCharacters(elementID){
+
+	var iChars = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?0123456789";
+
+	for (var i = 0; i < document.getElementById(elementID).value.length; i++) {
+
+		if (iChars.indexOf(document.getElementById(elementID).value.charAt(i)) != -1) {
+
+			//alert ("?? ???? ???? ???? ?????, ?? ???? ??? ?????? ???? ???.");
+
+			return false;
+
+		}
+
+	}
+
+	return true;
+
+}
+
+////////////////////////////================
+
+function validURL(elementID) {
+
+     var theurl=document.getElementById(elementID).value.trim();
+
+	 //alert (theurl);
+
+	 if(theurl == ""){
+
+		return true;	// because url isnt required
+
+	}
+
+
+
+	 var tomatch= /http:\/\/[A-Za-z0-9\.\/-_]{3,}/i;
+
+	 //var tomatch = /^http+:\/\/[A-Za-z0-9-_]+\\.[A-Za-z0-9-_%&\?\/.=]+$/
+
+     if (tomatch.test(theurl))
+
+     {
+
+         //window.alert("URL OK.");
+
+         return true;
+
+     }
+
+     else
+
+     {
+
+         //window.alert("URL invalid. Try again.");
+
+         return false; 
+
+     }
+
+}
+
+////////////////////////////===========
+
+
+
+/**
+
+ * customValidatePassword
+
+ * @param elemetID string
+
+ * @return boolean
+
+ */
+
+//////////////////////=================
+
+function customValidatePassword(elementID) {
+
+   var confirmPassword = document.getElementById(elementID);
+
+	var password = document.getElementById("password");
+
+
+
+	if(confirmPassword.value == ""){
+
+		return true;	//  the (validateEmpty) VALIDATION will do the job
+
+	}
+
+
+
+   if( confirmPassword.value != password.value ) {
+
+	   return false;
+
+   }
+
+
+
+   return true;
+
+}
+
+////
+
+////////////////////////////=======================
+
+function validateNumbers(elementID){
+
+	//alert (document.getElementById(elementID).value.length);
+
+	var iChars = "0123456789";
+
+	for (var i = 0; i < document.getElementById(elementID).value.trim().length; i++) {
+
+	//alert(document.getElementById(elementID).value.charAt(i));
+
+		if (iChars.indexOf(document.getElementById(elementID).value.charAt(i)) == -1) {
+
+			//alert ("?? ???? ???? ??? ???? ????");
+
+			//alert(document.getElementById(elementID).value.charAt(i));
+
+			return false;
+
+		}
+
+	}
+
+	return true;
+
+}
+
+////////////////////////////=======================
+
+function validateContact(elementID){
+
+	var iChars = "0123456789,";
+
+	for (var i = 0; i < document.getElementById(elementID).value.length; i++) {
+
+		if (iChars.indexOf(document.getElementById(elementID).value.charAt(i)) == -1) {
+
+			return false;
+
+		}
+
+	}
+
+	return true;
+
+}
+
+////////////////////////////===========================
+
+function validateDDL(elementID){
+
+	var ddl=document.getElementById(elementID).selectedIndex;
+
+		if (ddl == 0) {
+
+			return false;
+
+		}else{
+
+		return true;
+
+		}
+
+
+
+}
+
+////////////////////////////===========================
+
+function validateMobile(elementID){
+
+   var mobile=document.getElementById(elementID).value;
+
+   if (mobile == "") return true;
+
+	 var tomatch= /^9665[0-9]{8}/i;
+
+	 //var tomatch = /^http+:\/\/[A-Za-z0-9-_]+\\.[A-Za-z0-9-_%&\?\/.=]+$/
+
+     if (tomatch.test(mobile))
+
+     {
+
+         //window.alert("mobile OK.");
+
+         return true;
+
+     }
+
+     else
+
+     {
+
+         //window.alert("mobile invalid. Try again.");
+
+         return false; 
+
+     }
+
+}
+
+//////////////////////=======================
+
+function floatNum(elementID) {
+
+
+
+ 	var element = document.getElementById(elementID).value;
+
+	if(element == ""){
+
+		return true;	// because it isnt required
+
+	}
+
+
+
+	if(document.getElementById(elementID).value == 0)
+
+		return false;  // because the value (zero) is not allowed
+
+
+
+	var iChars = "0123456789.";
+
+	for (var i = 0; i < document.getElementById(elementID).value.length; i++) {
+
+		if (iChars.indexOf(document.getElementById(elementID).value.charAt(i)) == -1) {
+
+			return false;
+
+		}
+
+	}
+
+	return true;
+
+}
+
+//////////////////////=======================
+
+function validateNoneZero(elementID){
+
+
+
+ var element = document.getElementById(elementID).value;
+
+   
+
+	if(element == ""){
+
+		return true;	// because the field is not required
+
+	}
+
+
+
+	if(document.getElementById(elementID).value == 0)
+
+		return false;  // because the value (zero) is not allowed
+
+
+
+/*then validate that all chars are numeric*/
+
+
+
+	var iChars = "0123456789";
+
+	for (var i = 0; i < document.getElementById(elementID).value.length; i++) {
+
+		if (iChars.indexOf(document.getElementById(elementID).value.charAt(i)) == -1) {
+
+			return false;
+
+		}
+
+	}
+
+	return true;
+
+}
+
+//////////////////////=======================
+
+function validateCalender(elementID)
+
+{
+
+	
+
+	date1= document.getElementById(elementID).value;
+
+	date2=document.getElementById(document.getElementById(elementID+'Span').getAttribute("validateControl2")).value;
+
+	if (date1 >= date2){
+
+			return false;
+
+	}
+
+return true;
+
+}
+
+////////////////////////////=================
+
+function notEqual(elementID)
+
+{
+
+	if(validateEmpty(elementID))
+
+	{
+
+	date1= document.getElementById(elementID).value;
+
+	date2=document.getElementById(elementID+'Span').getAttribute("validateValue");
+
+	if (date1 == date2){
+
+			return false;
+
+	}
+
+	}
+
+	else
+
+	{
+
+					return false;
+
+		}
+
+return true;
+
+}
+
+//////////////////////////
+
+
+
+//function  bu mzaki to count words 
+
+
+
+function validateNumWords(elementID) {
+
+   var element   = document.getElementById(elementID);
+
+   dataarray =element.value.split(" ");
+
+   if(dataarray.length > eval(element.getAttribute("maxwords")))
+
+   	{
+
+	return false;
+
+	}
+
+	else
+
+	{
+
+	return true;
+
+	}
+
+
+
+}
+
+function validateMinmumNumWords(elementID) {
+
+   var element   = document.getElementById(elementID);
+
+   dataarray =element.value.split(" ");
+
+   if(dataarray.length < eval(element.getAttribute("minwords")))
+
+   	{
+
+	return false;
+
+	}
+
+	else
+
+	{
+
+	return true;
+
+	}
+
+
+
+}
+
+
+
+function validateNumFromTo(elementID) {
+
+   var element   = document.getElementById(elementID);
+
+  
+
+  
+
+   if(element.value < eval(element.getAttribute("startNum")) ||  element.value > eval(element.getAttribute("endnum")) )
+
+   	{
+
+	return false;
+
+	}
+
+	else
+
+	{
+
+	return true;
+
+	}
+
+
+
+}
+
+/////////////
+
+
+
+//////////////
+
+
+
+</script>
+
+
+<script type="text/javascript"><!--
+
+      var strSoftHyphen = (navigator.userAgent.toLowerCase().indexOf("applewebkit") > -1 || document.all) ? "&shy;" : "<wbr/>"; // use soft-hyphen for IE and Opera which are known to implement it correctly
+
+      
+
+////////////////////////////////////////////////////////////////////////
+
+      function softWrap(str, maxcolumns) {
+
+        // these regular expressions need to incorporate variables (function params), so cant be static properties of the function, to save a few operations in repeated use
+
+        var wordspaceRe = new RegExp('^\\w{1,' + maxcolumns + '}\\s+');
+
+        var punctuationRe = new RegExp('^[!\\._\\-\\\\\,=\\*]{1,' + maxcolumns + '}');
+
+
+
+        var wrapstr = "";
+
+        var charCount = 0;
+
+        while(str.length) {
+
+          var endidx = 1;
+
+          // shortcut if there's less remaining characters than the maxcols
+
+          if(str.length < maxcolumns) {
+
+            wrapstr += str;
+
+            break;
+
+          }
+
+          // look ahead for space characters
+
+          var spaceMatches = str.match(wordspaceRe);
+
+          if(spaceMatches && spaceMatches[0]) {
+
+            endidx = spaceMatches[0].length;
+
+            wrapstr += str.substring(0, endidx); 
+
+            str = str.substring(endidx);
+
+            charCount = 0; // reset 
+
+            continue;
+
+          } else {
+
+            // handle markup
+
+            if(str.charAt(0) == "<" && str.indexOf(">") > -1) {
+
+              endidx = str.indexOf(">");
+
+              charCount++; // count as one character
+
+            } else if( str.charAt(0) == "&" && str.match(/^&\w+;/) ) { // handle entities
+
+              endidx = (str.indexOf(";") > -1) ? str.indexOf(";") +1 : str.length;
+
+              charCount++; // count as one character
+
+            } else { 
+
+              var puncMatches = str.match(punctuationRe);
+
+              if(puncMatches && puncMatches[0]) {
+
+                // handle punctuation
+
+                endidx = puncMatches[0].length;
+
+                charCount += endidx; // count as one character
+
+              } else {
+
+                charCount++; // default case is just one character
+
+              }
+
+            }
+
+          }
+
+          wrapstr += str.substring(0, endidx);
+
+      
+
+          if(charCount >= maxcolumns) {
+
+            wrapstr += strSoftHyphen;
+
+            charCount = 0;
+
+          }
+
+          str = str.substring(endidx);
+
+        }
+
+      
+
+        return wrapstr;
+
+      }
+
+////////////////////////////////////////////////////////////////////////
+
+      function byId(id) {
+
+        return document.getElementById(id);
+
+      }
+
+////////////////////////////////////////////////////////////////////////
+
+      function testSoftWrap(txt, _columns) {
+
+        var columns = _columns || 12;
+
+        var wrappedTxt = softWrap(txt, columns);
+
+		return wrappedTxt;
+
+        //document.getElementById("out").innerHTML = wrappedTxt;
+
+        //document.getElementById("outx").innerHTML = "<xmp>" + wrappedTxt + "</xmp>";
+
+      }
+
+////////////////////////////////////////////////////////////////////////
+
+      /*function benchmarkSoftWrap(txt, _columns, _count) {
+
+        var columns = _columns || 12;
+
+        var count = _count || 100;
+
+        var wrappedTxt;
+
+        var start = new Date();
+
+        for(var i=0; i<count; i++) {
+
+          wrappedTxt = softWrap(txt, columns);
+
+        }
+
+        var end = new Date();
+
+        var elapsed = (end.getTime() - start.getTime()) / 1000;
+
+        document.getElementById("out").innerHTML = wrappedTxt;
+
+        document.getElementById("outx").innerHTML = "<xmp>" + wrappedTxt + "</xmp>";
+
+        alert("took " + elapsed + " seconds, to softwrap " + count + " times");
+
+      }*/
+
+
+
+		function countChar(src, counter, count)
+		{
+			//alert(document.getElementById(src).value.length);
+			var counterValue = count - document.getElementById(src).value.length;
+			var value = '';
+			if(counterValue < 0)
+			{
+				for(var i = 0; i < count; i ++)
+				{
+					value = value + document.getElementById(src).value.charAt(i);
+				}
+				document.getElementById(src).value = value;
+				counterValue = 0;
+			}
+			document.getElementById(counter).value = counterValue
+		}
+
+////////////////////////////================
+
+function validPDF(elementID) {
+
+     var filename=document.getElementById(elementID).value;
+
+	 if(filename == ""){
+
+		return true;	// because url isnt required
+
+	}
+
+	 var tomatch= /[A-Za-z0-9\.\/-_]\.pdf/i;
+
+     if (tomatch.test(filename))
+
+     {
+
+         //window.alert("URL OK.");
+
+         return true;
+
+     }
+
+     else
+
+     {
+
+         //window.alert("URL invalid. Try again.");
+
+         return false; 
+
+     }
+
+}
+
+// --></script>
+
+
+
+
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+
+<script type="text/javascript" src="js/hoverIntent.js"></script>
+
+<link rel="stylesheet" type="text/css" href="theme/style_blue/user_css/contentslider.css" />
+
+
+
+<script src="js/contentslider.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/superfish.js"></script><meta http-equiv="Content-Type" content="text/html; charset=windows-1256" />
+
+
+
+<script type="text/javascript">
+
+
+
+// initialise plugins
+
+	
+
+		jQuery(function(){
+
+			jQuery('ul.sf-menu').superfish();
+
+		});
+
+function MM_swapImgRestore() { //v3.0
+
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+
+}
+
+function MM_preloadImages() { //v3.0
+
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+
+}
+
+
+
+function MM_findObj(n, d) { //v4.01
+
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+
+}
+
+
+
+function MM_swapImage() { //v3.0
+
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+
+}
+
+</script>
+
+
+
+
+
+</head>
+
+<body >
+
+<div id="mother">
+
+  <div id="header" class=" aligncenter ">
+
+  <div id="back_hel"></div>
+
+
+
+    <div id="header_img" class=" " ><img src="theme/images_blue/header_01.jpg" width="916" height="88" /></div>
+
+    <div id="new_div" >
+
+      <table class="width_100">
+
+        <tr>
+
+          <td><img src="theme/images_blue/news_title.gif" width="80" height="23" /></td>
+
+          <td class="new_back">
+
+         
+
+                            <marquee direction="right" scrolldelay="10" scrollamount="2" id="projmarq" onMouseOver="document.getElementById('projmarq').stop();" onMouseOut="document.getElementById('projmarq').start();">
+
+                              
+                              <a href="news.php?op=viewNews&id=5738&catID=9" class="marq">
+
+                              Hacker by Team 313   
+
+                              </a>&nbsp;&nbsp;&nbsp;
+
+                              
+                              <a href="news.php?op=viewNews&id=5737&catID=9" class="marq">
+
+                              ?? ??????
+
+                              </a>&nbsp;&nbsp;&nbsp;
+
+                              
+                              <a href="news.php?op=viewNews&id=5736&catID=9" class="marq">
+
+                              Hacker by Team 313  67 Hacker by Team 313   
+
+                              </a>&nbsp;&nbsp;&nbsp;
+
+                              
+                              <a href="news.php?op=viewNews&id=5735&catID=9" class="marq">
+
+                              ???? ?????? ?? .. ??????? ?????? : ???? ??????? ??????? ???? ??????? ?????? ?????? ??????? ??? ?????? ??? ??????
+
+                              </a>&nbsp;&nbsp;&nbsp;
+
+                              
+                              <a href="news.php?op=viewNews&id=5734&catID=9" class="marq">
+
+                              Hacker by Team 313   Hacker by Team 313   Hacker by Team 313   Hacker by Team 313   
+
+                              </a>&nbsp;&nbsp;&nbsp;
+
+                              
+                              <a href="news.php?op=viewNews&id=5733&catID=9" class="marq">
+
+                              ?????? ????? ??????? ?????? ?????? ??????? ?????????
+
+                              </a>&nbsp;&nbsp;&nbsp;
+
+                              
+                              <a href="news.php?op=viewNews&id=5732&catID=9" class="marq">
+
+                              ??????? ??????? ????????? ??? ??????? ????? ????
+
+                              </a>&nbsp;&nbsp;&nbsp;
+
+                              
+                              <a href="news.php?op=viewNews&id=5731&catID=9" class="marq">
+
+                              ?????? ???? ??? ?????????????? ??????????
+
+                              </a>&nbsp;&nbsp;&nbsp;
+
+                              
+                              <a href="news.php?op=viewNews&id=5729&catID=9" class="marq">
+
+                              Hacker 2by Team 313   
+
+                              </a>&nbsp;&nbsp;&nbsp;
+
+                              
+                              <a href="news.php?op=viewNews&id=5728&catID=9" class="marq">
+
+                              ?????? ????? ???????? ????? ?????? ????? ??????? ??????? 
+
+                              </a>&nbsp;&nbsp;&nbsp;
+
+                              
+                              </marquee>
+
+          
+
+          </td>
+
+        </tr>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <div id="header_2" class=" aligncenter  ">
+
+    <table class="width_100">
+
+      <tr>
+
+        <td class="search_back"><table class="aligncenter">
+
+            <tr>
+
+              <td class="search_date aligncenter">
+
+              <table >
+
+                  <tr>
+
+                    <td class="date">April 30, 2012, 5:26 pm</td>
+                  </tr>
+
+                  <tr>
+
+                    <td class="input_search_td">
+
+                    <table >
+
+					<form method="get" action="search.php">
+
+  <tr>
+
+    <td class="noborder_search" >  <input name="textfield" type="text" class="input_search"  /></td>
+
+	<input type="hidden" name="default" value="1" />
+
+	<input type="hidden" name="searchphrase" value="any" />
+
+    <td>  <input name="" type="submit" value=" " class="search_button lang_x" title="?????" alt="?????"  /></td>
+  </tr>
+</form>
+</table>                    </td>
+                  </tr>
+                </table></td>
+            </tr>
+
+            <tr>
+
+              <td>
+
+			  
+
+  
+
+	<a href="http://qh.gov.sa/news.php?op=viewNews&id=4393&catID=9" target="_blank"><img border="0" src="uploads/album/large/nobthah.gif" width="197" height="41" alt="?????? ... ??????? ?????? ????????" title="?????? ... ??????? ?????? ????????" /></a>
+
+
+			  </td>
+            </tr>
+
+        </table></td>
+
+        <td>
+
+  
+
+	
+	<a href="http://qh.gov.sa/news.php?op=viewNews&id=5700&catID=9" target="_blank"><img border="0" src="uploads/album/large/3233434.jpg" width="678" height="116" alt="?????? ????? ??????? ???????? ?????????" title="?????? ????? ??????? ???????? ?????????" /></a>
+
+	
+
+
+
+		</td>
+
+      </tr>
+
+    </table>
+
+  </div>
+
+  <div id="Content" class="aligncenter" >
+
+    <div id="content_here" >
+
+        
+
+      <div id="news_here">
+
+              
+
+
+
+                <div id="slider1" class="sliderwrapper">
+
+
+
+                
+
+
+                                <div class="contentdiv">
+
+
+
+                                        <table class="aligncenter">
+
+
+
+                              <tr>
+
+
+
+                                <td><table class="width_100">
+
+
+
+                                  <tr>
+
+
+
+                                    <td width="386" style="padding-left:5px;" >
+
+
+
+                                    <table  >
+
+
+
+                                      <tr>
+
+
+
+                                        <td width="358">
+
+
+                                         <img src="uploads/album/large/3233434.jpg" width="358" height="218" />	
+
+
+
+                                            </td>
+
+
+
+                                      </tr>
+
+
+
+                                    </table>
+
+
+
+                                    </td>
+
+
+
+                                    <td width="682" >
+
+                                    
+
+                                    <table height="222px">
+
+                                                <!--???????-->
+
+                                      <tr >
+
+                                        <td style="padding-top:10px;"> <a href="news.php?op=viewNews&id=5738&catID=9" class="classfiled" >Hacker by Team 313   </a></td> </tr>
+
+                                                <!-- ????? -->
+
+                                      
+
+                                     
+
+                                       <tr > <td class="defult_font" >?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ?????? ?? ??? team313?? ????? ?? ??? team313 <a href="news.php?op=viewNews&id=5738&catID=9"></a></td>
+
+                                       </tr>
+
+                                        
+
+                                             <!-- ???? ?????? -->
+
+                                       <tr style="vertical-align:bottom" > 
+
+                                      <td>
+
+                                        <table>
+
+                                          <tr>                                  
+
+    <td class="date_art_main3">2012-04-30</td>
+
+    <td><a href="news.php?op=viewNews&id=5738&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+                                        </table>
+
+                                        </td>
+
+                                          </tr>
+
+                                      
+
+                                       <!--///////////////////////////////////////////////////// -->
+
+
+
+
+
+                                    </table>
+
+                                    
+
+                                    </td>
+
+
+
+                                  </tr>
+
+
+
+                                </table></td>
+
+
+
+                              </tr>
+
+
+
+                            </table>
+
+
+
+                </div>
+
+
+
+                
+
+
+                                <div class="contentdiv">
+
+
+
+                                        <table class="aligncenter">
+
+
+
+                              <tr>
+
+
+
+                                <td><table class="width_100">
+
+
+
+                                  <tr>
+
+
+
+                                    <td width="386" style="padding-left:5px;" >
+
+
+
+                                    <table  >
+
+
+
+                                      <tr>
+
+
+
+                                        <td width="358">
+
+
+                                         <img src="uploads/album/large/3233434.jpg" width="358" height="218" />	
+
+
+
+                                            </td>
+
+
+
+                                      </tr>
+
+
+
+                                    </table>
+
+
+
+                                    </td>
+
+
+
+                                    <td width="682" >
+
+                                    
+
+                                    <table height="222px">
+
+                                                <!--???????-->
+
+                                      <tr >
+
+                                        <td style="padding-top:10px;"> <a href="news.php?op=viewNews&id=5737&catID=9" class="classfiled" >?? ??????</a></td> </tr>
+
+                                                <!-- ????? -->
+
+                                      
+
+                                     
+
+                                       <tr > <td class="defult_font" > <a href="news.php?op=viewNews&id=5737&catID=9"></a></td>
+
+                                       </tr>
+
+                                        
+
+                                             <!-- ???? ?????? -->
+
+                                       <tr style="vertical-align:bottom" > 
+
+                                      <td>
+
+                                        <table>
+
+                                          <tr>                                  
+
+    <td class="date_art_main3">2012-04-30</td>
+
+    <td><a href="news.php?op=viewNews&id=5737&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+                                        </table>
+
+                                        </td>
+
+                                          </tr>
+
+                                      
+
+                                       <!--///////////////////////////////////////////////////// -->
+
+
+
+
+
+                                    </table>
+
+                                    
+
+                                    </td>
+
+
+
+                                  </tr>
+
+
+
+                                </table></td>
+
+
+
+                              </tr>
+
+
+
+                            </table>
+
+
+
+                </div>
+
+
+
+                
+
+
+                                <div class="contentdiv">
+
+
+
+                                        <table class="aligncenter">
+
+
+
+                              <tr>
+
+
+
+                                <td><table class="width_100">
+
+
+
+                                  <tr>
+
+
+
+                                    <td width="386" style="padding-left:5px;" >
+
+
+
+                                    <table  >
+
+
+
+                                      <tr>
+
+
+
+                                        <td width="358">
+
+
+                                         <img src="uploads/album/large/3233434.jpg" width="358" height="218" />	
+
+
+
+                                            </td>
+
+
+
+                                      </tr>
+
+
+
+                                    </table>
+
+
+
+                                    </td>
+
+
+
+                                    <td width="682" >
+
+                                    
+
+                                    <table height="222px">
+
+                                                <!--???????-->
+
+                                      <tr >
+
+                                        <td style="padding-top:10px;"> <a href="news.php?op=viewNews&id=5735&catID=9" class="classfiled" >???? ?????? ?? .. ??????? ?????? : ???? ??????? ??????? ???? ??????? ?????? ?????? ??????? ??? ?????? ??? ??????</a></td> </tr>
+
+                                                <!-- ????? -->
+
+                                      
+
+                                     
+
+                                       <tr > <td class="defult_font" >??? ????? ?????? ????? ?????? ?????? ?????? ?????? ??????? ???? ?? ???? ?????? ?? ???? ??????? ??????? ?????? ??? ?????? ?????? ??? ? ??????? ?????? ?????? ??????? ??? ?????? ??? ?????? ? ??? ????? ????? ?? ? <a href="news.php?op=viewNews&id=5735&catID=9"></a></td>
+
+                                       </tr>
+
+                                        
+
+                                             <!-- ???? ?????? -->
+
+                                       <tr style="vertical-align:bottom" > 
+
+                                      <td>
+
+                                        <table>
+
+                                          <tr>                                  
+
+    <td class="date_art_main3">2012-04-30</td>
+
+    <td><a href="news.php?op=viewNews&id=5735&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+                                        </table>
+
+                                        </td>
+
+                                          </tr>
+
+                                      
+
+                                       <!--///////////////////////////////////////////////////// -->
+
+
+
+
+
+                                    </table>
+
+                                    
+
+                                    </td>
+
+
+
+                                  </tr>
+
+
+
+                                </table></td>
+
+
+
+                              </tr>
+
+
+
+                            </table>
+
+
+
+                </div>
+
+
+
+                
+
+
+                                <div class="contentdiv">
+
+
+
+                                        <table class="aligncenter">
+
+
+
+                              <tr>
+
+
+
+                                <td><table class="width_100">
+
+
+
+                                  <tr>
+
+
+
+                                    <td width="386" style="padding-left:5px;" >
+
+
+
+                                    <table  >
+
+
+
+                                      <tr>
+
+
+
+                                        <td width="358">
+
+
+                                         <img src="uploads/album/large/new_doc_12.jpg" width="358" height="218" />	
+
+
+
+                                            </td>
+
+
+
+                                      </tr>
+
+
+
+                                    </table>
+
+
+
+                                    </td>
+
+
+
+                                    <td width="682" >
+
+                                    
+
+                                    <table height="222px">
+
+                                                <!--???????-->
+
+                                      <tr >
+
+                                        <td style="padding-top:10px;"> <a href="news.php?op=viewNews&id=5733&catID=9" class="classfiled" >?????? ????? ??????? ?????? ?????? ??????? ?????????</a></td> </tr>
+
+                                                <!-- ????? -->
+
+                                      
+
+                                     
+
+                                       <tr > <td class="defult_font" >????? ??? ????? ????? ???? ??? ??????? ???????? ??????  ???????? ????? ???????? ?? ????? ?????? ????????? ? ??????? ?????? ????? ???? ?????? ? ????? ??????? ???????? ???? ??? ??? ???????? ???????? :
+
+(?????? ????? ??????? ?????? ?????? ??????? ????????)
+
+ 
+ <a href="news.php?op=viewNews&id=5733&catID=9"></a></td>
+
+                                       </tr>
+
+                                        
+
+                                             <!-- ???? ?????? -->
+
+                                       <tr style="vertical-align:bottom" > 
+
+                                      <td>
+
+                                        <table>
+
+                                          <tr>                                  
+
+    <td class="date_art_main3">2012-04-30</td>
+
+    <td><a href="news.php?op=viewNews&id=5733&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+                                        </table>
+
+                                        </td>
+
+                                          </tr>
+
+                                      
+
+                                       <!--///////////////////////////////////////////////////// -->
+
+
+
+
+
+                                    </table>
+
+                                    
+
+                                    </td>
+
+
+
+                                  </tr>
+
+
+
+                                </table></td>
+
+
+
+                              </tr>
+
+
+
+                            </table>
+
+
+
+                </div>
+
+
+
+                
+
+
+                                <div class="contentdiv">
+
+
+
+                                        <table class="aligncenter">
+
+
+
+                              <tr>
+
+
+
+                                <td><table class="width_100">
+
+
+
+                                  <tr>
+
+
+
+                                    <td width="386" style="padding-left:5px;" >
+
+
+
+                                    <table  >
+
+
+
+                                      <tr>
+
+
+
+                                        <td width="358">
+
+
+                                         <img src="uploads/album/large/3233434.jpg" width="358" height="218" />	
+
+
+
+                                            </td>
+
+
+
+                                      </tr>
+
+
+
+                                    </table>
+
+
+
+                                    </td>
+
+
+
+                                    <td width="682" >
+
+                                    
+
+                                    <table height="222px">
+
+                                                <!--???????-->
+
+                                      <tr >
+
+                                        <td style="padding-top:10px;"> <a href="news.php?op=viewNews&id=5729&catID=9" class="classfiled" >Hacker 2by Team 313   </a></td> </tr>
+
+                                                <!-- ????? -->
+
+                                      
+
+                                     
+
+                                       <tr > <td class="defult_font" >Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+ <a href="news.php?op=viewNews&id=5729&catID=9"></a></td>
+
+                                       </tr>
+
+                                        
+
+                                             <!-- ???? ?????? -->
+
+                                       <tr style="vertical-align:bottom" > 
+
+                                      <td>
+
+                                        <table>
+
+                                          <tr>                                  
+
+    <td class="date_art_main3">2012-04-29</td>
+
+    <td><a href="news.php?op=viewNews&id=5729&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+                                        </table>
+
+                                        </td>
+
+                                          </tr>
+
+                                      
+
+                                       <!--///////////////////////////////////////////////////// -->
+
+
+
+
+
+                                    </table>
+
+                                    
+
+                                    </td>
+
+
+
+                                  </tr>
+
+
+
+                                </table></td>
+
+
+
+                              </tr>
+
+
+
+                            </table>
+
+
+
+                </div>
+
+
+
+                
+
+
+                                <div class="contentdiv">
+
+
+
+                                        <table class="aligncenter">
+
+
+
+                              <tr>
+
+
+
+                                <td><table class="width_100">
+
+
+
+                                  <tr>
+
+
+
+                                    <td width="386" style="padding-left:5px;" >
+
+
+
+                                    <table  >
+
+
+
+                                      <tr>
+
+
+
+                                        <td width="358">
+
+
+                                         <img src="uploads/album/large/1111asyaah_%26%238235%3B%281%29%26%238236%3B_%26%238235%3B%26%238236%3B.jpg" width="358" height="218" />	
+
+
+
+                                            </td>
+
+
+
+                                      </tr>
+
+
+
+                                    </table>
+
+
+
+                                    </td>
+
+
+
+                                    <td width="682" >
+
+                                    
+
+                                    <table height="222px">
+
+                                                <!--???????-->
+
+                                      <tr >
+
+                                        <td style="padding-top:10px;"> <a href="news.php?op=viewNews&id=5728&catID=9" class="classfiled" >?????? ????? ???????? ????? ?????? ????? ??????? ??????? </a></td> </tr>
+
+                                                <!-- ????? -->
+
+                                      
+
+                                     
+
+                                       <tr > <td class="defult_font" >???? ????? ?????? ????? ?????? ??????? ????????? ???? ?????? ??????? ???? ?? ???? ?????? ???????? ???? ????? ????? ????? ?????? ?????  ??????? ??????? ???? ????? ?????????? ??????? ??????? ????? ???? ????? ???? ???????? ??????? ??????? ???? <a href="news.php?op=viewNews&id=5728&catID=9"></a></td>
+
+                                       </tr>
+
+                                        
+
+                                             <!-- ???? ?????? -->
+
+                                       <tr style="vertical-align:bottom" > 
+
+                                      <td>
+
+                                        <table>
+
+                                          <tr>                                  
+
+    <td class="date_art_main3">2012-04-29</td>
+
+    <td><a href="news.php?op=viewNews&id=5728&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+                                        </table>
+
+                                        </td>
+
+                                          </tr>
+
+                                      
+
+                                       <!--///////////////////////////////////////////////////// -->
+
+
+
+
+
+                                    </table>
+
+                                    
+
+                                    </td>
+
+
+
+                                  </tr>
+
+
+
+                                </table></td>
+
+
+
+                              </tr>
+
+
+
+                            </table>
+
+
+
+                </div>
+
+
+
+                
+
+
+                                <div class="contentdiv">
+
+
+
+                                        <table class="aligncenter">
+
+
+
+                              <tr>
+
+
+
+                                <td><table class="width_100">
+
+
+
+                                  <tr>
+
+
+
+                                    <td width="386" style="padding-left:5px;" >
+
+
+
+                                    <table  >
+
+
+
+                                      <tr>
+
+
+
+                                        <td width="358">
+
+
+                                         <img src="uploads/album/large/3233434.jpg" width="358" height="218" />	
+
+
+
+                                            </td>
+
+
+
+                                      </tr>
+
+
+
+                                    </table>
+
+
+
+                                    </td>
+
+
+
+                                    <td width="682" >
+
+                                    
+
+                                    <table height="222px">
+
+                                                <!--???????-->
+
+                                      <tr >
+
+                                        <td style="padding-top:10px;"> <a href="news.php?op=viewNews&id=5727&catID=9" class="classfiled" >Hacker by Team 313   Hacker by Team 313   Hacker by Team 313   Hacker by Team 313   Hacker by Team 313   Hacker by Team 313   Hacker by Team 313   Hac</a></td> </tr>
+
+                                                <!-- ????? -->
+
+                                      
+
+                                     
+
+                                       <tr > <td class="defult_font" >Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+ <a href="news.php?op=viewNews&id=5727&catID=9"></a></td>
+
+                                       </tr>
+
+                                        
+
+                                             <!-- ???? ?????? -->
+
+                                       <tr style="vertical-align:bottom" > 
+
+                                      <td>
+
+                                        <table>
+
+                                          <tr>                                  
+
+    <td class="date_art_main3">2012-04-29</td>
+
+    <td><a href="news.php?op=viewNews&id=5727&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+                                        </table>
+
+                                        </td>
+
+                                          </tr>
+
+                                      
+
+                                       <!--///////////////////////////////////////////////////// -->
+
+
+
+
+
+                                    </table>
+
+                                    
+
+                                    </td>
+
+
+
+                                  </tr>
+
+
+
+                                </table></td>
+
+
+
+                              </tr>
+
+
+
+                            </table>
+
+
+
+                </div>
+
+
+
+                
+
+
+                                <div class="contentdiv">
+
+
+
+                                        <table class="aligncenter">
+
+
+
+                              <tr>
+
+
+
+                                <td><table class="width_100">
+
+
+
+                                  <tr>
+
+
+
+                                    <td width="386" style="padding-left:5px;" >
+
+
+
+                                    <table  >
+
+
+
+                                      <tr>
+
+
+
+                                        <td width="358">
+
+
+                                         <img src="uploads/album/large/1_%C7%E1%D4%DD%C7%C7%C7%C7%C7%C1_%CA%E3%D1%ED%D6_%CE%E1%ED%CC%ED_%2854%29.jpg" width="358" height="218" />	
+
+
+
+                                            </td>
+
+
+
+                                      </tr>
+
+
+
+                                    </table>
+
+
+
+                                    </td>
+
+
+
+                                    <td width="682" >
+
+                                    
+
+                                    <table height="222px">
+
+                                                <!--???????-->
+
+                                      <tr >
+
+                                        <td style="padding-top:10px;"> <a href="news.php?op=viewNews&id=5726&catID=9" class="classfiled" >????? ??????? ??????? .. ?????? ?????? ????? ???? ??????? ??????? </a></td> </tr>
+
+                                                <!-- ????? -->
+
+                                      
+
+                                     
+
+                                       <tr > <td class="defult_font" >????? ?????? ?????? ??????? ????? ???? ????? ????? ???? ??????? ??????? ???? 1433?? ? ????? ?????????? ?????? ??????? ????? ??????? ???? ??????? ? ????? ????? ??????? ??????? ???? ?????? ????? ??? <a href="news.php?op=viewNews&id=5726&catID=9"></a></td>
+
+                                       </tr>
+
+                                        
+
+                                             <!-- ???? ?????? -->
+
+                                       <tr style="vertical-align:bottom" > 
+
+                                      <td>
+
+                                        <table>
+
+                                          <tr>                                  
+
+    <td class="date_art_main3">2012-04-28</td>
+
+    <td><a href="news.php?op=viewNews&id=5726&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+                                        </table>
+
+                                        </td>
+
+                                          </tr>
+
+                                      
+
+                                       <!--///////////////////////////////////////////////////// -->
+
+
+
+
+
+                                    </table>
+
+                                    
+
+                                    </td>
+
+
+
+                                  </tr>
+
+
+
+                                </table></td>
+
+
+
+                              </tr>
+
+
+
+                            </table>
+
+
+
+                </div>
+
+
+
+                
+
+
+                
+
+
+
+                </div>
+
+                
+
+                
+
+
+
+           
+
+                      
+
+               <div id="paginate-slider1" class="pagination "  >
+
+
+
+               </div> 
+
+             
+
+             <!-- <div class="div_pageing_sahm"> <img src="theme/images_blue/r_off.gif"/> <img src="theme/images_blue/l_off.gif"/>	</div>-->
+
+               
+
+              
+
+
+
+                 
+
+
+
+                <script type="text/javascript">
+
+
+
+                
+
+
+
+                featuredcontentslider.init({
+
+
+
+                    id: "slider1",  //id of main slider DIV
+
+
+
+                    contentsource: ["inline", ""],  //Valid values: ["inline", ""] or ["ajax", "path_to_file"]
+
+
+
+                    toc: "#increment",  //Valid values: "#increment", "markup", ["label1", "label2", etc]
+
+
+
+                    nextprev: ['<img src="theme/images_blue/r_off.gif"/>','<img src="theme/images_blue/l_off.gif"/>' ],  //labels for "prev" and "next" links. Set to "" to hide.
+
+
+
+                    revealtype: "click", //Behavior of pagination links to reveal the slides: "click" or "mouseover"
+
+
+
+                    enablefade: [false, 0.1],  //[true/false, fadedegree]
+
+
+
+                    autorotate: [true, 6000],  //[true/false, pausetime]
+
+
+
+                    onChange: function(previndex, curindex){  //event handler fired whenever script changes slide
+
+
+
+                        //previndex holds index of last slide viewed b4 current (1=1st slide, 2nd=2nd etc)
+
+
+
+                        //curindex holds index of currently shown slide (1=1st slide, 2nd=2nd etc)
+
+
+
+                    }
+
+
+
+                })
+
+
+
+                
+
+
+
+                </script>
+
+
+
+                 
+
+
+
+     
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      
+
+      <div id="two_col" >
+
+      
+
+      <div id="col_1" >
+
+        <div class="left_menu_row">
+
+
+
+        <table >
+
+
+  <tr>
+
+    <td><img src="theme/images_blue/most_read.gif" width="142" height="21" /></td>
+
+  </tr>
+
+  <tr>
+
+    <td>
+
+    <ul class="ul_nodes">
+
+    
+<li ><a href="news.php?op=viewNews&id=4212&catID=31">100 ????? ????? ??? ??????? ??????...</a></li>
+
+
+<li ><a href="news.php?op=viewNews&id=5211&catID=31">??? ?????? ???? ?? ???? ( 295 ) ?????...</a></li>
+
+
+<li ><a href="news.php?op=viewNews&id=4274&catID=31">??? ?????? ???? ??? ??????? ??????...</a></li>
+
+
+      </ul>
+
+    
+
+    </ul>
+
+    
+
+    </td>
+
+  </tr>
+
+  
+</table>
+
+
+
+        </div>
+
+        <div class="left_menu_row marg_top">
+
+        <table >
+
+        
+  <tr>
+
+    <td><img src="theme/images_blue/most_comm.gif" width="142" height="21" /></td>
+
+  </tr>
+
+  <tr>
+
+    <td>
+
+    <ul class="ul_nodes">
+
+    
+<li><a href="news.php?op=viewNews&id=5211&catID=31">??? ?????? ???? ?? ???? ( 295 ) ?????...</a></li>
+
+
+<li><a href="news.php?op=viewNews&id=4212&catID=31">100 ????? ????? ??? ??????? ??????...</a></li>
+
+
+<li><a href="news.php?op=viewNews&id=4327&catID=31">??? ?????? ???? ?? ???? 25 ????? ????...</a></li>
+
+
+      </ul>
+
+    
+
+   
+
+    
+
+    </td>
+
+  </tr>
+
+ 
+</table>
+
+
+
+        </div>
+
+        <div class="left_menu_row marg_top">
+
+        <table class="aligncenter" >
+
+  <tr>
+
+    <td><img src="theme/images_blue/mail_title.gif" width="142" height="21" /></td>
+
+  </tr>
+
+  <tr>
+
+
+
+  <td class="mail_back">
+
+  
+
+  <form method="post" name="frm1" id="frm1" onsubmit="return validateForm(this);">
+
+  <table >
+
+  <tr>
+
+    <td class="padding_top"><input name="newsletter_email" id="newsletter_email" type="text" class="mail_inpt" />
+
+	<span class="error" errorMessage="?? ???? ???? ??????" validateControl="newsletter_email" funcName="validateEmpty"></span><span class="error" errorMessage="?? ???? ???? ?????? ???? ????" validateControl="newsletter_email" funcName="isValidEmail"></span></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="padding_top_bottom"><input type="submit" value="" class="button_join" /></td>
+
+  </tr>
+
+</table>
+
+
+
+  </form>
+
+  
+
+  </td>
+
+  </tr>
+
+ 
+
+</table>
+
+</div>
+
+
+<div class="left_menu_row">
+
+
+
+	
+	<a href="http://qh.gov.sa/news.php?catID=29" target="_blank"><img border="0" src="uploads/album/large/mojtama3333.jpg" width="138" height="52" alt="????? ??????? ????? " title="????? ??????? ????? " /></a>
+
+	
+</div>
+
+
+
+
+
+
+
+
+<div class="left_menu_row">
+
+
+
+	
+	<a href="http://qh.gov.sa/news.php?catID=31" target="_blank"><img border="0" src="uploads/album/large/akbartawdeef.gif" width="140" height="58" alt="????? ??????? ???????? ????????" title="????? ??????? ???????? ????????" /></a>
+
+	
+</div>
+
+
+
+
+<div class="left_menu_row "><table >
+
+  <tr>
+
+    <td><img src="theme/images_blue/links_title.gif" width="142" height="21" /></td>
+
+  </tr>
+
+  <tr>
+
+    <td>
+
+    <ul class="ul_links">
+
+	
+    	<li><a href="http://www.cfbb.med.sa/" target="_blank">???? ?????? ???? ????</a></li>
+
+	
+    	<li><a href="http://www.youtube.com/user/qassim1health" target="_blank">???? ??? ?????? ??? ???? ????</a></li>
+
+	
+    	<li><a href="http://balsamksa.com/" target="_blank">???? ?????? ???? ???????</a></li>
+
+	
+    	<li><a href="http://qh.gov.sa/news.php?op=viewNews&id=4191&catID=9" target="_blank">?????? ??????? ??? ?????</a></li>
+
+	
+    	<li><a href="http://www.qh.gov.sa/news.php?op=viewNews&id=3847&catID=9" target="_blank">?????? ??????? ?????? ?????</a></li>
+
+	
+    	<li><a href="http://www.psccq.med.sa/" target="_blank">???? ?????? ????? ?????</a></li>
+
+	
+    	<li><a href="http://WWW.GOOGLE.COM" target="_blank">google</a></li>
+
+	
+    	<li><a href="http://www.moh.gov.sa" target="_blank">????? ?????</a></li>
+
+	
+    	<li><a href="http://www.kfshb.med.sa/" target="_blank">?????? ????? ??? ??????? ?????</a></li>
+
+	
+    	<li><a href="http://www.mph-q.com/" target="_blank">?????? ??????? ????????</a></li>
+
+	
+    </ul>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td class="aligncenter"><img src="theme/images_blue/end_links.gif" width="138" height="9px" class="marg_top" /></td>
+
+  </tr>
+
+</table></div>
+
+
+
+<div class="left_menu_row">
+
+
+
+	
+	<a href="http://www.qh.gov.sa/news.php?catID=30" target="_blank"><img border="0" src="uploads/album/large/modaraaa.jpg" width="138" height="54" alt="?????? ???? ????? ???????? ??????????? ????????" title="?????? ???? ????? ???????? ??????????? ????????" /></a>
+
+	
+</div>
+
+
+
+
+<div class="left_menu_row">
+
+
+
+	
+	<a href="http://webmail.moh.gov.sa" target="_blank"><img border="0" src="uploads/album/large/emaill.jpg" width="138" height="56" alt="?????? ??????? " title="?????? ??????? " /></a>
+
+	
+</div>
+
+
+
+	<div class="left_menu_row">
+
+      <form id="form1" name="form1" method="post" action="">
+
+        <label>
+
+          <select name="select" id="select" onchange="if(this.value != '') window.open(this.value, '_blank');" style="width:140px;height:22px;">
+
+		  	<option value="" selected="selected">????? ????????</option>
+
+			
+				<option value="http://www.aawsat.com/">????? ????? ??????</option>
+
+			
+				<option value="http://www.aleqt.com/">????? ??????????</option>
+
+			
+				<option value="http://international.daralhayat.com/">????? ??????</option>
+
+			
+				<option value="http://www.alyaum.com/">????? ?????</option>
+
+			
+				<option value="http://www.al-madina.com">????? ???????</option>
+
+			
+				<option value="http://www.okaz.com.sa">????? ????</option>
+
+			
+				<option value="http://www.alwatan.com.sa">????? ?????</option>
+
+			
+				<option value="http://www.alriyadh.com/">????? ??????</option>
+
+			
+				<option value="http://www.al-jazirah.com/">????? ???????</option>
+
+			
+          </select>
+
+        </label>
+
+      </form>
+
+    </div>
+
+        </div>
+
+        <div id="col_2" >
+
+        <table class="width_100">
+
+  <tr>
+
+    <td class="start_cont">&nbsp;</td>
+
+  </tr>
+
+  <tr>
+
+    <td>
+
+    
+
+    
+
+    
+    <div class="one_art_main">
+
+    <table >
+
+  <tr>
+
+    <td colspan="2" class="art_title_main">
+
+    <a href="news.php?op=viewNews&id=5736&catID=9">Hacker by Team 313  67 Hacker by Team 313   
+
+    </a>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="456" class="defult_font"> Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+</td>
+
+     <td width="192" class="img_art"><img src="uploads/album/large/3233434.jpg" alt=""  title="" width="60" height="53" /></td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2" class="more_det_main"><table class="width_100" >
+
+  <tr>
+
+    <td class="date_art_main">2012-04-30</td>
+
+    <td><a href="news.php?op=viewNews&id=5736&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+</table>
+
+</td>
+
+  </tr>
+
+</table>
+
+
+
+    
+
+    
+
+    </div>
+
+
+    <div class="one_art_main">
+
+    <table >
+
+  <tr>
+
+    <td colspan="2" class="art_title_main">
+
+    <a href="news.php?op=viewNews&id=5734&catID=9">Hacker by Team 313   Hacker by Team 313...
+
+    </a>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="456" class="defult_font"> Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313 
+Hacker by Team 313...</td>
+
+     <td width="192" class="img_art"><img src="uploads/album/large/3233434.jpg" alt=""  title="" width="60" height="53" /></td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2" class="more_det_main"><table class="width_100" >
+
+  <tr>
+
+    <td class="date_art_main">2012-04-30</td>
+
+    <td><a href="news.php?op=viewNews&id=5734&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+</table>
+
+</td>
+
+  </tr>
+
+</table>
+
+
+
+    
+
+    
+
+    </div>
+
+
+    <div class="one_art_main">
+
+    <table >
+
+  <tr>
+
+    <td colspan="2" class="art_title_main">
+
+    <a href="news.php?op=viewNews&id=5732&catID=9">??????? ??????? ????????? ??? ??????? ????? ????
+
+    </a>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="456" class="defult_font"> ?????? ?????? ????? ????? ????? ??? ?????? ??????? ??????? ????????? ???? ?? ???? ??????? ???????? ??????? ?????? ?? ???? ??????? ??????  ??????? ????? ??? ????????? ????????? ???????? ???? ?????????? ????? ???????? ???????????? ???????? ??????? ???????</td>
+
+     <td width="192" class="img_art"><img src="uploads/album/large/%CE%D8%DD_%284%29.jpg" alt=""  title="" width="60" height="53" /></td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2" class="more_det_main"><table class="width_100" >
+
+  <tr>
+
+    <td class="date_art_main">2012-04-30</td>
+
+    <td><a href="news.php?op=viewNews&id=5732&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+</table>
+
+</td>
+
+  </tr>
+
+</table>
+
+
+
+    
+
+    
+
+    </div>
+
+
+    <div class="one_art_main">
+
+    <table >
+
+  <tr>
+
+    <td colspan="2" class="art_title_main">
+
+    <a href="news.php?op=viewNews&id=5731&catID=9">?????? ???? ??? ?????????????? ??????????
+
+    </a>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="456" class="defult_font"> ????? ???? ????????? ????? ??? ???????? ?????? ???? ??? ??? ????? ???? ??????? ???????? ???????? ??????? ?????? ??????? ????? ???? ??? ??? ????? ?????? ????????? ?????? ?? ????? ??????? ?????? ??????? ?????? ???? </td>
+
+     <td width="192" class="img_art"><img src="uploads/album/large/DSC00358.jpg" alt=""  title="" width="60" height="53" /></td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2" class="more_det_main"><table class="width_100" >
+
+  <tr>
+
+    <td class="date_art_main">2012-04-30</td>
+
+    <td><a href="news.php?op=viewNews&id=5731&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+</table>
+
+</td>
+
+  </tr>
+
+</table>
+
+
+
+    
+
+    
+
+    </div>
+
+
+    <div class="one_art_main">
+
+    <table >
+
+  <tr>
+
+    <td colspan="2" class="art_title_main">
+
+    <a href="news.php?op=viewNews&id=5724&catID=9">?????? ???? ?????? ????? ?????? ????????
+
+    </a>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="456" class="defult_font"> ????? ????? ???????? ??????? ????? ????? ?????? ??????? ??????? ????? ??????? ??????? ???? ????? ??????? ??????? ????? ????? ?????? 
+??? ??? ????? ????? ?????? ?? ???? ???????? ?????? ???????/ ???? ???????? ?? ??? ???? ???????? ??????? ????? ????? ??????...</td>
+
+     <td width="192" class="img_art"><img src="uploads/album/large/IMG_1727.JPG" alt=""  title="" width="60" height="53" /></td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2" class="more_det_main"><table class="width_100" >
+
+  <tr>
+
+    <td class="date_art_main">2012-04-28</td>
+
+    <td><a href="news.php?op=viewNews&id=5724&catID=9"><img src="theme/images_blue/more_det.gif" width="32" height="13" /></a></td>
+
+  </tr>
+
+</table>
+
+</td>
+
+  </tr>
+
+</table>
+
+
+
+    
+
+    
+
+    </div>
+
+
+<div class="one_art_main"><span style="float:left; height:40px"><a href="news.php?op=catNews"><img src="theme/images_blue/more_news.gif"  style="padding:10px 0 10px 10px" /></a></span></div>
+
+    
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td class="padding_top_bottom" align="center"><table border="0">
+
+  <tr>
+    <td class="album_bac

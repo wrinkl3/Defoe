@@ -1,0 +1,111 @@
+    <p align="center"><font size="8" face="rockwell"><sup><strong><script>
+farbbibliothek = new Array();
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00");
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00");
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF");
+farbbibliothek[6] = new Array("#0000FF","#FFFF00");
+farben = farbbibliothek[4];
+function farbschrift()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.all["a"+i].style.color=farben[i];
+}
+farbverlauf();
+}
+function string2array(text)
+{
+Buchstabe = new Array();
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+k=0;
+while(k<=text.length)
+{
+Buchstabe[k] = text.charAt(k);
+k++;
+}
+}
+function divserzeugen()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>");
+}
+farbschrift();
+}
+var a=1;
+function farbverlauf()
+{
+for(var i=0 ; i<farben.length; i++)
+{
+farben[i-1]=farben[i];
+}
+farben[farben.length-1]=farben[-1];
+
+setTimeout("farbschrift()",30);
+}
+// Zu Demonstrationszwecken*****************
+var farbsatz=1;
+function farbtauscher()
+{
+farben = farbbibliothek[farbsatz];
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001));
+}
+setInterval("farbtauscher()",5000);
+text= "The Site Is Defaced By Syrian Free Hacker"; //h
+string2array(text);
+divserzeugen();
+//document.write(text);</script></p></strong></sup></font></p><font size="7" face="rockwell"><strong></strong></font>
+</body>
+</html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>&lt;*...Hacked By Syrian Free Hacker...*&gt;</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<style type="text/css"><!--
+body {
+	background-color: #010000;
+}
+.style2 {color: #FFFFFF}
+.style6 {font-style: italic; color: #FFFFFF;}
+--></style>
+</head>
+<body><span></span>
+<p><font size="6"><br>
+</font></p><font size="6"></font>
+<p align="center"><sup><strong><font size="5" color="#ff0000" face="Georgia"><span><img alt="" title="" src="http://hh7.an3m1.com/Sep/hh7.net_c9f7898c9f2.gif"></span></font></strong></sup></p>
+<p align="center"><sup><strong><font size="5" color="#ff0000" face="Georgia"><span><img alt="" title="" src="http://rcdc3240.org/%5B1%5D.jpg" width="720" height="518"></span></font></strong></sup></p>
+<p align="center"><sup><strong><font size="5" color="#ff0000" face="Georgia"><span>&nbsp;</span></font></strong></sup></p>
+<p align="center"><sup><strong><font size="6" color="#ff0000" face="segoe script"><span><font color="#0000ff">Syria</font> <font color="#ffff00">Will Stand</font> <font color="#ff0033">To The End</font> <br>
+</span></font></strong></sup></p>
+<p align="center"><sup><strong><font size="5" color="#ff0000" face="Georgia"><span><img alt="" title="" src="http://hh7.an3m1.com/Sep/hh7.net_c9f7898c9f2.gif"></span></font></strong></sup></p>
+<p align="center"><strong><font size="5" color="#ff0000" face="Georgia"><span></span></font></strong><sup><strong><font size="5" color="#ff0000" face="Georgia"><span><img alt="" title="" src="http://www7.0zz0.com/2011/12/23/07/960687844.jpg" width="673" height="449">&nbsp;</span></font></strong></sup></p>
+<p align="center"><sup><strong><font size="5" color="#ff0000" face="Georgia"><span>&nbsp;</span></font></strong></sup><strong><font size="5" color="#ff0000" face="Georgia"><span><img alt="" title="" src="http://hh7.an3m1.com/Sep/hh7.net_c9f7898c9f2.gif"></span></font></strong></p>
+<p align="center"><sup><strong><font size="5" color="#ff0000" face="Georgia"><span><img alt="" title="" src="http://dimensionfour.org/7DC2n.png"></span></font></strong></sup></p>
+<p align="center"><sup><strong><font size="5" color="#ff0000" face="Georgia"><span>&nbsp;</span></font></strong></sup></p>
+<p align="center"><strong><font size="5" color="#ff0000" face="Georgia"><span><img alt="" title="" src="http://hh7.an3m1.com/Sep/hh7.net_c9f7898c9f2.gif"></span></font></strong></p>
+ <object type="application/x-shockwave-flash" data="http://flash-mp3-player.net/medias/player_mp3_mini.swf" width="200" height="20"><param name="movie" value="http://flash-mp3-player.net/medias/player_mp3_mini.swf"><param name="bgcolor" value="#000000"> 
+<param name="FlashVars" value="mp3=http://dimensionfour.org/tejarat.net_%20hacked%20by%20RastaMan.mp3&autoplay=1"&loop=true"&playingColor=362A45"&arrowColor=52FF00"></object>
+ 
+ </body></html>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+			  

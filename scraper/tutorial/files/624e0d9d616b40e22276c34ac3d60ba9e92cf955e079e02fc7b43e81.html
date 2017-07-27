@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Exception</title>
+</head>
+<html>
+<body>
+  <h1>Exception</h1>
+<h2>Message</h2>  
+<pre>The view "index.html" was not found/is not readable.</pre>
+<h2>Code</h2>  
+<pre>0</pre>
+<h2>Trace</h2>  
+<pre>#0 /home/hosting/web/newlandsselfcatering.co.uk/lib/itsy/itsy.class.php(102): itsy_controller->_render('index.html', true)
+#1 /home/hosting/web/newlandsselfcatering.co.uk/public_html/index.php(55): itsy::dispatch('default', 'index.html', NULL, false, true)
+#2 {main}</pre>
+  
+  <div id="itsy-development">
+    <h1>Log</h1>
+    <div class="indent">
+      <pre><b>CORE - Starting Itsy</b>
+<b>CORE - Dispatching:</b> controller: default, action: index.html, param: , partial: , itsy: 1
+<b>CORE - Auto Loader:</b> default_controller
+<b>CORE - Loading Controller:</b> default_controller
+<b>CORE - Auto Loader:</b> itsy_controller
+<b>CORE - Auto Loader:</b> itsy_request
+<b>CONTROLLER - default_controller - Execute:</b> action: index.html, param: 
+<b>CONTROLLER - default_controller - Render</b>
+<b>CORE - Dispatching:</b> controller: itsy_error, action: _exception, param: Array, partial: , itsy: 
+<b>CORE - Auto Loader:</b> itsy_error_controller
+<b>CORE - Loading Controller:</b> itsy_error_controller
+<b>CONTROLLER - itsy_error_controller - Execute:</b> action: _exception, param: Array
+<b>CONTROLLER - itsy_error_controller - Render</b>
+<b>CONTROLLER - itsy_error_controller - Render Layout</b>
+</pre>
+    </div>
+
+    <h1>_GET</h1>
+    <div class="indent">
+      <pre>Array
+(
+    [page] => index.html
+)
+</pre>
+    </div>
+
+    <h1>_POST</h1>
+    <div class="indent">
+      <pre>Array
+(
+)
+</pre>
+    </div>
+
+    <h1>_COOKIE</h1>
+    <div class="indent">
+      <pre>Array
+(
+)
+</pre>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,880 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Bill Portal</title>
+
+<link href="MahBill/Home/css/default.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="MahBill/Home/css/vertical.news.slider.css?v=1.0"  >
+<script src="MahBill/Js/jquery-1.11.3.min.js" type="text/javascript"></script>
+
+
+ 
+<script type="text/javascript">
+var loginreturn='';
+if(loginreturn){
+	var win = window.open("loginaction123.action?Tid=85a7061c05a5bf3e6b0b8b3bb80e525d9c0a1f1d",'','left=0,top=0,width=1024,height=700,toolbar=0,resizable=1,scrollbars=1,status=1');
+	if(win){
+		window.open('', '_parent');
+	}
+	window.close();
+}
+
+$(document).ready(function(){
+	$("#tab-cont2").hide();
+	$("#tab-cont3").hide();
+	$("#tab-cont4").hide();
+	$("#tab1").click(function(){
+		//$("#tab-cont1").fadeIn();
+		$('#tab-cont1').slideToggle();
+		$("#tab-cont2").hide();
+		$("#tab-cont3").hide();
+		$("#tab-cont4").hide();
+		$("#tab1").removeClass("menuitem");
+		$("#tab1").addClass("menuitemactive");
+		$("#tab2, #tab3, #tab4").removeClass("menuitemactive");
+		$("#tab2, #tab3, #tab4").addClass("menuitem");
+		
+	});	
+	$("#tab2").click(function(){
+		//$("#tab-cont2").fadeIn();
+		$('#tab-cont2').slideToggle();
+		$("#tab-cont1").hide();
+		$("#tab-cont3").hide();
+		$("#tab-cont4").hide();
+		$("#tab2").removeClass("menuitem");
+		$("#tab2").addClass("menuitemactive");
+		$("#tab1, #tab3, #tab4").removeClass("menuitemactive");
+		$("#tab1, #tab3, #tab4").addClass("menuitem");
+		
+	});
+	$("#tab3").click(function(){
+		//$("#tab-cont3").fadeIn();
+		$('#tab-cont3').slideToggle();
+		$("#tab-cont1").hide();
+		$("#tab-cont2").hide();
+		$("#tab-cont4").hide();
+		$("#tab3").removeClass("menuitem");
+		$("#tab3").addClass("menuitemactive");
+		$("#tab1, #tab2, #tab4").removeClass("menuitemactive");
+		$("#tab1, #tab2, #tab4").addClass("menuitem");
+		
+	});
+	$("#tab4").click(function(){
+		//$("#tab-cont4").fadeIn();
+		$('#tab-cont4').slideToggle();
+		$("#tab-cont1").hide();
+		$("#tab-cont2").hide();
+		$("#tab-cont3").hide();
+		$("#tab4").removeClass("menuitem");
+		$("#tab4").addClass("menuitemactive");
+		$("#tab1, #tab2, #tab3").removeClass("menuitemactive");
+		$("#tab1, #tab2, #tab3").addClass("menuitem");
+		
+	});
+});
+function validate(){
+//alert("test");
+var pass=document.getElementById("password").value;
+var userName=document.getElementById("userName").value;
+var assistId=document.getElementById("assi").value;
+
+//test2();
+//document.login.action="loginaction123.action?login=true";
+//document.login.submit();
+if(userName == "" )
+{
+	alert('Please enter a UserName');
+}
+else if(pass == "")
+{
+	alert('Please Enter a Password');
+}
+else
+{
+	 //alert("test");
+	encryption(pass,assistId);
+	//alert("test");
+	var url="authenticate.action?login=true";
+	document.login.action=url;
+	document.login.submit();
+	/*var url="authenticate.action?login=true&userName="+document.getElementById("userName").value+"&password="+document.getElementById("password").value+"&code="+document.getElementById("code").value;
+	
+	var url="loginaction.action?login=true&userName="+document.getElementById("userName").value+"&password="+document.getElementById("password").value+"&code="+document.getElementById("code").value;
+	var win = window.open(url,'','left=0,top=0,width=1024,height=700,toolbar=0,resizable=1,scrollbars=1,status=1');
+	if(win){
+		document.getElementById("password").value="";
+		document.getElementById("userName").value="";
+		document.getElementById("code").value="";
+	    window.open('', '_parent');
+	} */
+}
+}
+function encryption(pass,assistId){
+	//alert("test");
+	 var ran = document.login.ran.value;
+	 //alert(ran);
+	 var saltedhash=calcMD5(calcMD5(pass)+ran);
+	 //alert("saltHash"+saltedhash);
+	// if(assistId!=null || assistId!=''){
+	//		 var saltAsstID=calcMD5(calcMD5(assi_user)+ran);
+			// alert("saltAsstID"+saltAsstID);
+			// document.getElementById("assi").value=saltAsstID;
+	//}
+	//alert(saltedhash);
+	 document.getElementById("password").value=saltedhash;
+
+}
+function test2(){
+
+	var val=3;
+	 $.blockUI();
+}
+function encryption(pass,assistId){
+	 var ran = document.login.ran.value;
+	 //alert(ran);
+	 var saltedhash=calcMD5(calcMD5(pass)+ran);
+	 //alert("saltHash"+saltedhash);
+	// if(assistId!=null || assistId!=''){
+	//		 var saltAsstID=calcMD5(calcMD5(assi_user)+ran);
+			// alert("saltAsstID"+saltAsstID);
+			// document.getElementById("assi").value=saltAsstID;
+	//}
+	//alert(saltedhash);
+	 document.getElementById("password").value=saltedhash;
+
+}
+var hex_chr = "0123456789abcdef";
+function rhex(num)
+{
+  str = "";
+  for(j = 0; j <= 3; j++)
+    str += hex_chr.charAt((num >> (j * 8 + 4)) & 0x0F) +
+           hex_chr.charAt((num >> (j * 8)) & 0x0F);
+  return str;
+}
+function str2blks_MD5(str)
+{
+
+  nblk = ((str.length + 8) >> 6) + 1;
+  blks = new Array(nblk * 16);
+  for(i = 0; i < nblk * 16; i++) blks[i] = 0;
+  for(i = 0; i < str.length; i++)
+    blks[i >> 2] |= str.charCodeAt(i) << ((i % 4) * 8);
+  blks[i >> 2] |= 0x80 << ((i % 4) * 8);
+  blks[nblk * 16 - 2] = str.length * 8;
+  return blks;
+}
+function add(x, y)
+{
+  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
+  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+  return (msw << 16) | (lsw & 0xFFFF);
+}
+function rol(num, cnt)
+{
+  return (num << cnt) | (num >>> (32 - cnt));
+}
+function cmn(q, a, b, x, s, t)
+{
+  return add(rol(add(add(a, q), add(x, t)), s), b);
+}
+function ff(a, b, c, d, x, s, t)
+{
+  return cmn((b & c) | ((~b) & d), a, b, x, s, t);
+}
+function gg(a, b, c, d, x, s, t)
+{
+  return cmn((b & d) | (c & (~d)), a, b, x, s, t);
+}
+function hh(a, b, c, d, x, s, t)
+{
+  return cmn(b ^ c ^ d, a, b, x, s, t);
+}
+function ii(a, b, c, d, x, s, t)
+{
+  return cmn(c ^ (b | (~d)), a, b, x, s, t);
+}
+function calcMD5(str)
+{
+
+  x = str2blks_MD5(str);
+  a =  1732584193;
+  b = -271733879;
+  c = -1732584194;
+  d =  271733878;
+
+  for(i = 0; i < x.length; i += 16)
+  {
+    olda = a;
+    oldb = b;
+    oldc = c;
+    oldd = d;
+
+    a = ff(a, b, c, d, x[i+ 0], 7 , -680876936);
+    d = ff(d, a, b, c, x[i+ 1], 12, -389564586);
+    c = ff(c, d, a, b, x[i+ 2], 17,  606105819);
+    b = ff(b, c, d, a, x[i+ 3], 22, -1044525330);
+    a = ff(a, b, c, d, x[i+ 4], 7 , -176418897);
+    d = ff(d, a, b, c, x[i+ 5], 12,  1200080426);
+    c = ff(c, d, a, b, x[i+ 6], 17, -1473231341);
+    b = ff(b, c, d, a, x[i+ 7], 22, -45705983);
+    a = ff(a, b, c, d, x[i+ 8], 7 ,  1770035416);
+    d = ff(d, a, b, c, x[i+ 9], 12, -1958414417);
+    c = ff(c, d, a, b, x[i+10], 17, -42063);
+    b = ff(b, c, d, a, x[i+11], 22, -1990404162);
+    a = ff(a, b, c, d, x[i+12], 7 ,  1804603682);
+    d = ff(d, a, b, c, x[i+13], 12, -40341101);
+    c = ff(c, d, a, b, x[i+14], 17, -1502002290);
+    b = ff(b, c, d, a, x[i+15], 22,  1236535329);
+
+    a = gg(a, b, c, d, x[i+ 1], 5 , -165796510);
+    d = gg(d, a, b, c, x[i+ 6], 9 , -1069501632);
+    c = gg(c, d, a, b, x[i+11], 14,  643717713);
+    b = gg(b, c, d, a, x[i+ 0], 20, -373897302);
+    a = gg(a, b, c, d, x[i+ 5], 5 , -701558691);
+    d = gg(d, a, b, c, x[i+10], 9 ,  38016083);
+    c = gg(c, d, a, b, x[i+15], 14, -660478335);
+    b = gg(b, c, d, a, x[i+ 4], 20, -405537848);
+    a = gg(a, b, c, d, x[i+ 9], 5 ,  568446438);
+    d = gg(d, a, b, c, x[i+14], 9 , -1019803690);
+    c = gg(c, d, a, b, x[i+ 3], 14, -187363961);
+    b = gg(b, c, d, a, x[i+ 8], 20,  1163531501);
+    a = gg(a, b, c, d, x[i+13], 5 , -1444681467);
+    d = gg(d, a, b, c, x[i+ 2], 9 , -51403784);
+    c = gg(c, d, a, b, x[i+ 7], 14,  1735328473);
+    b = gg(b, c, d, a, x[i+12], 20, -1926607734);
+
+    a = hh(a, b, c, d, x[i+ 5], 4 , -378558);
+    d = hh(d, a, b, c, x[i+ 8], 11, -2022574463);
+    c = hh(c, d, a, b, x[i+11], 16,  1839030562);
+    b = hh(b, c, d, a, x[i+14], 23, -35309556);
+    a = hh(a, b, c, d, x[i+ 1], 4 , -1530992060);
+    d = hh(d, a, b, c, x[i+ 4], 11,  1272893353);
+    c = hh(c, d, a, b, x[i+ 7], 16, -155497632);
+    b = hh(b, c, d, a, x[i+10], 23, -1094730640);
+    a = hh(a, b, c, d, x[i+13], 4 ,  681279174);
+    d = hh(d, a, b, c, x[i+ 0], 11, -358537222);
+    c = hh(c, d, a, b, x[i+ 3], 16, -722521979);
+    b = hh(b, c, d, a, x[i+ 6], 23,  76029189);
+    a = hh(a, b, c, d, x[i+ 9], 4 , -640364487);
+    d = hh(d, a, b, c, x[i+12], 11, -421815835);
+    c = hh(c, d, a, b, x[i+15], 16,  530742520);
+    b = hh(b, c, d, a, x[i+ 2], 23, -995338651);
+
+    a = ii(a, b, c, d, x[i+ 0], 6 , -198630844);
+    d = ii(d, a, b, c, x[i+ 7], 10,  1126891415);
+    c = ii(c, d, a, b, x[i+14], 15, -1416354905);
+    b = ii(b, c, d, a, x[i+ 5], 21, -57434055);
+    a = ii(a, b, c, d, x[i+12], 6 ,  1700485571);
+    d = ii(d, a, b, c, x[i+ 3], 10, -1894986606);
+    c = ii(c, d, a, b, x[i+10], 15, -1051523);
+    b = ii(b, c, d, a, x[i+ 1], 21, -2054922799);
+    a = ii(a, b, c, d, x[i+ 8], 6 ,  1873313359);
+    d = ii(d, a, b, c, x[i+15], 10, -30611744);
+    c = ii(c, d, a, b, x[i+ 6], 15, -1560198380);
+    b = ii(b, c, d, a, x[i+13], 21,  1309151649);
+    a = ii(a, b, c, d, x[i+ 4], 6 , -145523070);
+    d = ii(d, a, b, c, x[i+11], 10, -1120210379);
+    c = ii(c, d, a, b, x[i+ 2], 15,  718787259);
+    b = ii(b, c, d, a, x[i+ 9], 21, -343485551);
+
+    a = add(a, olda);
+    b = add(b, oldb);
+    c = add(c, oldc);
+    d = add(d, oldd);
+  }
+
+  return rhex(a) + rhex(b) + rhex(c) + rhex(d);
+}
+function refresh()
+{
+var captcha=document.getElementById("captchaImage");
+
+captcha.src="MahBill/Home/Cap_Img.jsp?"+Math.random();
+
+}
+function downloadXMLFile(){
+	//alert(document.getElementById("flagval").value);
+	//document.login.action="Test123.action";
+	 val = document.getElementById("flagval").value;
+	if(val == "null"){
+	//document.login.action="/BillPortal123/MahBill/Home/Test123.jsp?flag="+val;
+	//document.getElementById("flagval").value = "";
+	//document.login.submit();
+	}else{
+
+	}
+}
+
+</script>
+</head>
+
+
+
+<body onLoad="downloadXMLFile()">
+
+
+
+<body>
+<div id="main-conatiner">
+	<div id="container-top">
+	<form name="login" action="/BillPortal/MahBill/Home/.action;jsessionid=irH4jK6NlooO84dddfzUdBwR" method="post">
+		<div id="top-strip">
+			<a href="#helpDesk_form" id="login_pop">Helpdesk and Contact details.</a>
+			<a href="#x" class="overlay" id="helpDesk_form"></a>
+        <div class="popup">
+        <div class="helpdesk_div">
+     <br>
+     <span class="head">E-mail</span><br>devteam.beams@mahakosh.in<br>jd.it@mahakosh.in<br>aao2compdat.mum-mh@gov.in<br>
+<span class="head">Help Line support</span><br> 022-22023490<br>022-22029128<br>022-22022391<br>022-22022381
+</div>
+            <a class="close" href="#close"></a>
+        </div>
+						 
+		</div>
+		<div id="top-block">
+			<div id="logo">
+				<div class="spanheight"></div>
+				<img src="MahBill/Home/images/logo.png" alt="Bill portal" />
+				
+				Directorate Of Accounts and Treasuries<br />
+				<span class="small">Finance Department, Government Of Maharashtra</span>
+			</div>
+			<div id="top-logo-right">
+				<div class="emb">
+					<a href="http://www.india.gov.in" target="_blank"><img src="MahBill/Home/images/emb.png" alt="Government of India" title="Government of India(link opens in new window)" /></a>
+				</div>
+				<div class="small-text">
+					Bill Portal
+				</div>
+			</div>
+		</div>
+		<div id="header-container">
+		<div class="mis-link"> 
+			<a href="MahBill/MIS/mis.jsp" class="main-link" target="_blank"> <img src="MahBill/Home/images/chart.png" alt="report" /> MIS Report</a>
+			<a href="http://115.112.238.236:8080/BillPortal123/" class="main-link" target="_blank"> <img src="MahBill/Home/images/chart.png" alt="report" /> Test Mode</a>
+		</div>
+			<div id="left-head">
+				<div id="left-head-box">
+					<a href="#login_form" id="login_pop" class="login-cont-heading">
+						<img src="MahBill/Home/images/login.png" alt="login"  />
+						<br /><br />
+
+					To Access your Bill Portal Account Please Click Here to Login</a>
+			<!--Login form starts here-->
+			<a href="#x" class="overlay" id="login_form"></a>
+        <div class="popup">
+			<div class="login-box">
+           
+        		<div class="login-head-title">Login</div>
+        	
+        	<div class="login-area">
+				<div class="login-area-box">
+					<div class="text-label">
+						<img src="MahBill/Home/images/log1.gif" alt="username" /> Username
+					</div>
+					<input type="text" name="userName" maxlength="15" value="" id="userName" class="input-area" onfocus="if (this.value=='Username') this.value = ''" onblur="if (this.value=='') this.value = 'Username'"/>
+				</div>
+				<div class="login-row" style="display:none;">
+					  <input type="text" name="assi" value="" id="assi" class="login-input" placeholder="Asst. User ID"/>
+					</div>
+				<div class="login-area-box">
+					<div class="text-label">
+						<img src="MahBill/Home/images/log2.gif" alt="username" /> Password
+					</div>
+					<input type="password" name="password" maxlength="15" id="password" class="input-area" onfocus="if (this.value=='Password') this.value = ''" onblur="if (this.value=='') this.value = 'Password'"/>
+				</div>
+		</div>
+		<div class="login-area">
+				<div class="login-area-box">
+					<div class="captcha-img">
+						<img src="MahBill/Home/Cap_Img.jsp" id="captchaImage"   border="0"  alt="Captcha image"/>&nbsp;&nbsp;&nbsp;<img src="MahBill/Home/images/refresh.png" id="captchaImageRefresh"   onclick="refresh();" width="28" height="25" border="0" alt="Refresh"/>
+					</div>
+					
+				</div>
+				<div class="login-area-box">
+					<div class="text-label">
+					<img src="MahBill/Home/images/log3.gif" alt="username" />
+						 Enter Captcha
+					</div>
+					<input type="text" name="code" value="" id="code" class="input-area" onfocus="if (this.value=='Enter Captcha') this.value = ''" onblur="if (this.value=='') this.value = 'Enter Captcha'"/>
+				</div>
+		</div>
+		<div class="login-area">
+				<div class="login-area-box">
+					<input type="button" name="Login" value='Login' onClick="validate()" class="submit-button" />
+					
+				</div>
+				<input type="hidden" name="ran" id="ran" value="fO0kWamE8GCx0MVO"/>
+				<!--<div class="login-area-box">
+					<input type="reset" name="Reset Password" value="Forgot Password" class="reset-button" />
+				</div>-->
+		</div>
+		
+		</div>
+            <a class="close" href="#close"></a>
+        </div><!-- login form ends -->
+				</div>
+			</div>
+			<div id="right-head">
+				<div class="news-holder cf">
+
+    <ul class="news-headlines">
+      <li class="selected">MTR 24A <a href="MahBill/Home/MTR24ABillFormat.pdf" target="_blank">    <img src="MahBill/Home/images/pdfIcon.png" alt="login"  /></a></li>
+      <li>MTR 31 <a href="MahBill/Home/MTR31BillFormat.pdf" target="_blank">    <img src="MahBill/Home/images/pdfIcon.png" alt="login"  /></a></li>
+	  <li>MTR 18 <a href="MahBill/Home/MTR18BillFormat.pdf" target="_blank">   <img src="MahBill/Home/images/pdfIcon.png" alt="login"  /></a></li>
+	  <li>GIS 8 <a href="MahBill/Home/GIS8BillFormat.pdf" target="_blank">    <img src="MahBill/Home/images/pdfIcon.png" alt="login"  /></a></li>
+      
+     
+      <!-- li.highlight gets inserted here -->
+    </ul>
+
+    <div class="news-preview">
+
+      <div class="news-content top-content">
+        <p><a ><font size="2"><b>Claims Covered:</b> </font></a>
+        	<ul>
+        		<li>Medical Reimbursement
+        		<ul>
+        			<li>NON GAZ</li>
+        			<li>GAZ</li>
+        		</ul>
+        		</li>
+        		<li><a href="MahBill/Home/Medical_User_Manual.pdf" target="_blank">User Manual</a></li>
+        		<li><a href="MahBill/MIS/Roomtypereport.jsp" target="_blank"><font size="2">Room Type Master</font></a></li>
+        		<li><a href="MahBill/MIS/Diseasereport.jsp" target="_blank"><font size="2">Disease Master</font></a></li>
+        	</ul>
+        </p>
+       
+        
+      </div><!-- .news-content -->
+
+       <div class="news-content">
+       <p><ul><li><b>Claims Covered:</b>
+       	<ul>
+       		<li>Telephone</li>
+       		<li>Electricity</li>
+       		<li>Water</li>
+       		
+       		<li>Contingent Expenditure</li>
+       		</ul>
+       		</li>
+       		<li><a href="MahBill/Home/TelephoneElectricityWater_User_Manual.pdf" target="_blank"><font size="2">User Manual</font></a></li>
+       	</ul>
+       
+       </p>
+     
+        
+      </div>
+		
+		<div class="news-content">
+		<p><ul><li><b>Claims Covered:</b>
+       	<ul>
+       		<li> Transfer TA</li>
+       	</ul>
+       	</li>
+       	<li><a href="#" target="_blank"><font size="2">User Manual</font></a></li>
+		<li><a href="MahBill/MIS/Travelreport.jsp" target="_blank"><font size="2">Grade Pay Eligibility Master</font></a></li>
+       
+      </div>
+      <div class="news-content">
+      <p><ul><li><b>Claims Covered:</b>
+       	<ul>
+       		<li> GIS</li>
+       	</ul>
+       	</li>
+		<li><a href="#" target="_blank"><font size="2">User Manual</font></a></li>
+		<li><a href="MahBill/MIS/GISRates.jsp" target="_blank"><font size="2">Rates For State Govt.</font></a></li>
+      
+        
+      </div>
+   </div><!-- .news-preview -->
+
+  </div>
+			</div>
+		</div>
+		</form>
+
+
+
+
+	</div>
+	
+	<div id="container-bottom">
+	
+		<div id="bottom-left-block">
+			
+				
+					<div class="bottom-right-block-head">District Report</div>
+					
+				
+				<div class="bottom-block-text">
+					
+						
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ 
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="MahBill/Css/systemBillPortal.css">
+<link rel="stylesheet" type="text/css" href="Css/billCss.css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>District Report</title>
+<script>
+function altRows(id){
+	if(document.getElementsByTagName){
+		var table = document.getElementById(id);
+		var rows = table.getElementsByTagName("tr");
+
+		for(i = 0; i < rows.length; i++){
+			if(i % 2 == 0){
+				rows[i].className = "evenrowcolor";
+			}else{
+				rows[i].className = "oddrowcolor";
+			}
+		}
+	}
+}
+function openNewWindow(dist_cd,reg_cd,trea_cd,District){
+
+	//var url="GetDisrictReport.action?distCd="+dist_cd+"&reg="+reg_cd+"&treacd="+trea_cd;
+	var id=dist_cd+","+reg_cd+","+trea_cd;
+	var url="MahBill/Home/ddoreport.jsp?id="+id+"&District="+District;
+	var win = window.open(url,'','left=250,top=150,width=850,height=500,toolbar=0,resizable=1,scrollbars=1,status=1');
+	if(win){
+	    window.open('', '_parent');
+	}
+}
+window.onload=function(){
+	altRows('alternatecolor');
+};
+</script>
+<style>
+a:hover{
+		text-color:#B03060;
+		}
+.evenrowcolor{background:#F0EDED;}
+.oddrowcolor{background:#fff;}
+</style> 
+</head>
+<body>
+	<form name="Distreport" method="post">
+	<div class="left-block-text" style="width:94%; margin:1%; height:auto; padding:0 2%;">
+						
+<table width="100%" align="center" border="1" id="alternatecolor"  class="altRows" cellspacing="0" cellpadding="5" style="border-collapse:collapse;" >
+								<tr>
+								    <td class="TRC-display" align="center"  ><font face="verdana">District</font></td>
+									<td class="TRC-display" align="center"  ><font face="verdana">
+										Claims
+										
+									</font></td>
+									<td class="TRC-display" align="center"  ><font face="verdana">
+									Bills
+									</font></td>
+								</tr>
+								<tr>
+
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('4','5','','AHMEDNAGAR')">Ahmednagar</a></font></td>
+				<td align="center"><font face="verdana" >10733</font></td>
+				<td align="center"><font face="verdana" >5200</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('2','6','','AKOLA')">Akola</a></font></td>
+				<td align="center"><font face="verdana" >6094</font></td>
+				<td align="center"><font face="verdana" >2398</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('1','6','','AMRAVATI')">Amravati</a></font></td>
+				<td align="center"><font face="verdana" >15383</font></td>
+				<td align="center"><font face="verdana" >7184</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('1','3','','AURANGABAD')">Aurangabad</a></font></td>
+				<td align="center"><font face="verdana" >4964</font></td>
+				<td align="center"><font face="verdana" >2806</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('3','3','','BEED')">Beed</a></font></td>
+				<td align="center"><font face="verdana" >4511</font></td>
+				<td align="center"><font face="verdana" >1878</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('7','4','','BHANDARA')">Bhandara</a></font></td>
+				<td align="center"><font face="verdana" >7582</font></td>
+				<td align="center"><font face="verdana" >3270</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('3','6','','BULDHANA')">Buldhana</a></font></td>
+				<td align="center"><font face="verdana" >6050</font></td>
+				<td align="center"><font face="verdana" >2608</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('8','4','','CHANDRAPUR')">Chandrapur</a></font></td>
+				<td align="center"><font face="verdana" >7725</font></td>
+				<td align="center"><font face="verdana" >2985</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('2','5','','DHULE')">Dhule</a></font></td>
+				<td align="center"><font face="verdana" >7641</font></td>
+				<td align="center"><font face="verdana" >2846</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('9','4','','GADCHIROLI')">Gadchiroli</a></font></td>
+				<td align="center"><font face="verdana" >7772</font></td>
+				<td align="center"><font face="verdana" >3100</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('4','4','','GONDIA')">Gondia</a></font></td>
+				<td align="center"><font face="verdana" >5561</font></td>
+				<td align="center"><font face="verdana" >2440</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('8','3','','HINGOLI')">Hingoli</a></font></td>
+				<td align="center"><font face="verdana" >849</font></td>
+				<td align="center"><font face="verdana" >452</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('3','5','','JALGAON')">Jalgaon</a></font></td>
+				<td align="center"><font face="verdana" >11920</font></td>
+				<td align="center"><font face="verdana" >4535</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('6','3','','JALNA')">Jalna</a></font></td>
+				<td align="center"><font face="verdana" >4595</font></td>
+				<td align="center"><font face="verdana" >1804</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('6','2','','KOLHAPUR')">Kolhapur</a></font></td>
+				<td align="center"><font face="verdana" >11935</font></td>
+				<td align="center"><font face="verdana" >4707</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('7','3','','LATUR')">Latur</a></font></td>
+				<td align="center"><font face="verdana" >7378</font></td>
+				<td align="center"><font face="verdana" >3130</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('1','9','','MANTRALAYA')">Mantralaya</a></font></td>
+				<td align="center"><font face="verdana" >6</font></td>
+				<td align="center"><font face="verdana" >3</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('6','4','','NAGPUR')">Nagpur</a></font></td>
+				<td align="center"><font face="verdana" >31580</font></td>
+				<td align="center"><font face="verdana" >10818</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('4','3','','NANDED')">Nanded</a></font></td>
+				<td align="center"><font face="verdana" >4808</font></td>
+				<td align="center"><font face="verdana" >1687</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('5','5','','NANDURBAR')">Nandurbar</a></font></td>
+				<td align="center"><font face="verdana" >3881</font></td>
+				<td align="center"><font face="verdana" >1749</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('1','5','','NASHIK')">Nashik</a></font></td>
+				<td align="center"><font face="verdana" >22108</font></td>
+				<td align="center"><font face="verdana" >7893</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('5','3','','OSMANABAD')">Osmanabad</a></font></td>
+				<td align="center"><font face="verdana" >5666</font></td>
+				<td align="center"><font face="verdana" >1959</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('1','7','','P.A.O.')">P.a.o.</a></font></td>
+				<td align="center"><font face="verdana" >51711</font></td>
+				<td align="center"><font face="verdana" >12684</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('6','1','','PALGHAR')">Palghar</a></font></td>
+				<td align="center"><font face="verdana" >4181</font></td>
+				<td align="center"><font face="verdana" >1404</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('2','3','','PARBHANI')">Parbhani</a></font></td>
+				<td align="center"><font face="verdana" >3085</font></td>
+				<td align="center"><font face="verdana" >1478</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('2','2','','PUNE')">Pune</a></font></td>
+				<td align="center"><font face="verdana" >40020</font></td>
+				<td align="center"><font face="verdana" >12262</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('3','1','','RAIGAD')">Raigad</a></font></td>
+				<td align="center"><font face="verdana" >9312</font></td>
+				<td align="center"><font face="verdana" >4096</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('4','1','','RATNAGIRI')">Ratnagiri</a></font></td>
+				<td align="center"><font face="verdana" >10568</font></td>
+				<td align="center"><font face="verdana" >3851</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('4','2','','SANGLI')">Sangli</a></font></td>
+				<td align="center"><font face="verdana" >10704</font></td>
+				<td align="center"><font face="verdana" >4225</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('3','2','','SATARA')">Satara</a></font></td>
+				<td align="center"><font face="verdana" >9465</font></td>
+				<td align="center"><font face="verdana" >3986</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('5','1','','SINDHUDURG')">Sindhudurg</a></font></td>
+				<td align="center"><font face="verdana" >8490</font></td>
+				<td align="center"><font face="verdana" >2829</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('5','2','','SOLAPUR')">Solapur</a></font></td>
+				<td align="center"><font face="verdana" >8767</font></td>
+				<td align="center"><font face="verdana" >4330</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('2','1','','THANE')">Thane</a></font></td>
+				<td align="center"><font face="verdana" >19214</font></td>
+				<td align="center"><font face="verdana" >7098</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('5','4','','WARDHA')">Wardha</a></font></td>
+				<td align="center"><font face="verdana" >2551</font></td>
+				<td align="center"><font face="verdana" >1466</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('5','6','','WASHIM')">Washim</a></font></td>
+				<td align="center"><font face="verdana" >3185</font></td>
+				<td align="center"><font face="verdana" >1515</font></td>
+			</tr>
+		
+			
+				<td><font face="verdana" ><a href="#" onclick="openNewWindow('4','6','','YAVATMAL')">Yavatmal</a></font></td>
+				<td align="center"><font face="verdana" >8128</font></td>
+				<td align="center"><font face="verdana" >3742</font></td>
+			</tr>
+		
+		</table>
+	</div>
+	</form>
+	
+</body>
+</html>
+					
+					
+				</div>
+			</div>
+		<div id="bottom-right-block">
+		<div class="bottom-block">
+			<div  class="glossymenu">
+
+                <a href="javascript:void(0)" class="menuitem" id="tab1">About The System</a>
+                <div class="submenu" id="tab-cont1"><div class="bottom-block-text-content" >
+						It is a system to be used by Drawing and Disbursing Officers, Govt. of Maharashtra. All the bills prepared by DDOs excluding Pay bills are generated by the system. DDO feeds the required information for preparing the claim. In turn system imposes restrictions and validations for calculating the final sanction amount for the claim. Claims approved by DDO are utilized to prepare the bill for submission to treasury. 
+<br />
+<br />
+
+Bill Portal will be integrated with BEAMS for implementing budget watch The bill formats are generated as per AGs requirement and are sanctioned by AG. The authorization for budget and the bar code has been made part of the bill, hence called bill cum bds. The bill data as input by DDO on Bill Portal will be made available to Treasury for further processing. The system generates all types of MIS reports required for decision support system. <br />
+<br />
+
+
+Each bill is divided into following 5 parts- 1) Accounting Information 2) Core Portion of the bill 3) Payee details & certification by DDO 4) Space for Treasury, and 5) Working Space for AG office.Bill History will be stored permanently on this portal and will be made available to any stakeholder as and when required.
+				
+					</div>
+					</div>
+                <a href="javascript:void(0)" class="menuitem" id="tab2">Latest Orders</a>
+                <div class="submenu" id="tab-cont2">
+                <div class="bottom-block-text-content">
+						
+					</div>
+				</div>
+                <a href="javascript:void(0)" class="menuitem" id="tab3">Koshagar Niyam 1968</a>
+                <div class="submenu" id="tab-cont3">
+                <div class="bottom-block-text-content">
+					<a href="MahBill/Pdf/koshagar_niyam.pdf" class="block-links">
+					<img src="MahBill/Home/images/l2.png" alt="link1" /><br /> Koshagar Niyam 1968</a>
+					</div>
+                </div>
+                <a href="javascript:void(0)" class="menuitem" id="tab4">Financial Rules</a>
+                <div class="submenu" id="tab-cont4">
+                <div class="bottom-block-text-content" >
+					<a href="MahBill/Pdf/B_F_R.pdf" class="block-links">
+					<img src="MahBill/Home/images/l2.png" alt="link2" /><br /> Financial Rules</a>
+					</div>
+                </div>
+                
+    </div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	<div class="glossymenu2" align="center" >
+		<a href="http://www.mahakosh.gov.in" target="_blank"><img src="MahBill/Home/images/img1.png" alt="Mahakosh" title="Mahakosh.in(Link that opens in a new window)"/></a>
+	<a href="https://www.maharashtra.gov.in/1125/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%8D%E0%A4%AF-%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0" target="_blank"><img src="MahBill/Home/images/img2.png" alt="Test Mode" title="Government of Maharashtra(Link that opens in a new window)"/></a>
+	
+		
+	</div>
+	<div id="footer">
+		For any queries please feel free to mail us @ devteam.beams@mahakosh.in/aao2compdat.mum-mh@gov.in<br />
+
+Copyright &copy; 2014. All Rights Reserved.Designed and Developed by National Informatics Center, Pune.
+	</div>
+	
+<input type="hidden" name="flagval" id="flagval" value="null"></input>	
+</div>
+  <script src="MahBill/Js/vertical.news.slider.js"></script>
+  
+</body>
+</html>

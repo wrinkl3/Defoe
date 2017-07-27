@@ -1,0 +1,256 @@
+<html>
+<head>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+  <title>Calendar</title>
+	<script language="Javascript" type="text/JavaScript">
+	// script used for popup events
+	function popup(event)
+	{
+	  var url = 'cal_popup.php?op=view&id='+event+'&uname=' ;
+	  w = 400;
+	  h = 400;
+	  w += 0;
+	  h += 56;
+	  wleft = (screen.width - w) / 2;
+	  wtop = (screen.height - h) / 2;
+	  var win = window.open(url,'Details','width=' + w + ', height=' + h + ', ' + 'left=' + wleft + ', top=' + wtop + ', ' + 'location=no, menubar=no, ' + 'status=no, toolbar=no, scrollbars=yes, resizable=yes');
+	// Just in case width and height are ignored
+	  win.resizeTo(w, h);
+	// Just in case left and top are ignored
+	  win.moveTo(wleft, wtop);
+	  win.focus();
+	}
+	</script>
+
+<!-- javascript redirect -->
+<script language="JavaScript" type="text/JavaScript">
+// this script must be defined after variables hd,hm and hy is defined!
+function gotomonth(selectopt) {
+var geti = '1' ;
+for (i=0;i<selectopt.options.length;i++) {
+	if (selectopt.options[i].selected) {
+		geti = selectopt.options[i].value ;
+		break ;
+	}
+}
+
+switch (geti) {
+  case "1" : { window.location.href='calendar.php?op=cal&month=1&year=2017&catview=0' ; break ;}
+  case "2" : { window.location.href='calendar.php?op=cal&month=2&year=2017&catview=0' ; break ;}
+  case "3" : { window.location.href='calendar.php?op=cal&month=3&year=2017&catview=0' ; break ;}
+  case "4" : { window.location.href='calendar.php?op=cal&month=4&year=2017&catview=0' ; break ;}
+  case "5" : { window.location.href='calendar.php?op=cal&month=5&year=2017&catview=0' ; break ;}
+  case "6" : { window.location.href='calendar.php?op=cal&month=6&year=2017&catview=0' ; break ;}
+  case "7" : { window.location.href='calendar.php?op=cal&month=7&year=2017&catview=0' ; break ;}
+  case "8" : { window.location.href='calendar.php?op=cal&month=8&year=2017&catview=0' ; break ;}
+  case "9" : { window.location.href='calendar.php?op=cal&month=9&year=2017&catview=0' ; break ;}
+  case "10" : { window.location.href='calendar.php?op=cal&month=10&year=2017&catview=0' ; break ;}
+  case "11" : { window.location.href='calendar.php?op=cal&month=11&year=2017&catview=0' ; break ;}
+  case "12" : { window.location.href='calendar.php?op=cal&month=12&year=2017&catview=0' ; break ;}
+  default : { window.location.href='calendar.php?op=cal&month=3&year=2017&catview=0' ; break;}
+  }
+}
+</script>
+
+<script language="JavaScript" type="text/JavaScript">
+// this script must be defined after hd,hm and hy is defined!
+	function gotoyear(selectopt) {
+var geti = '1' ;
+for (i=0;i<selectopt.options.length;i++) {
+	if (selectopt.options[i].selected) {
+		geti = selectopt.options[i].value ;
+		break ;
+	}
+}
+
+		switch (geti) { 
+case "2008" : { window.location.href='calendar.php?op=cal&month=3&year=2008&catview=0' ; break ;} 
+case "2009" : { window.location.href='calendar.php?op=cal&month=3&year=2009&catview=0' ; break ;} 
+case "2010" : { window.location.href='calendar.php?op=cal&month=3&year=2010&catview=0' ; break ;} 
+case "2011" : { window.location.href='calendar.php?op=cal&month=3&year=2011&catview=0' ; break ;} 
+case "2012" : { window.location.href='calendar.php?op=cal&month=3&year=2012&catview=0' ; break ;} 
+case "2013" : { window.location.href='calendar.php?op=cal&month=3&year=2013&catview=0' ; break ;} 
+case "2014" : { window.location.href='calendar.php?op=cal&month=3&year=2014&catview=0' ; break ;} 
+case "2015" : { window.location.href='calendar.php?op=cal&month=3&year=2015&catview=0' ; break ;} 
+case "2016" : { window.location.href='calendar.php?op=cal&month=3&year=2016&catview=0' ; break ;} 
+case "2017" : { window.location.href='calendar.php?op=cal&month=3&year=2017&catview=0' ; break ;} 
+case "2018" : { window.location.href='calendar.php?op=cal&month=3&year=2018&catview=0' ; break ;} 
+case "2019" : { window.location.href='calendar.php?op=cal&month=3&year=2019&catview=0' ; break ;} 
+default : { window.location.href='calendar.php?op=cal&month=3&year=2017&catview=0' ; break;} 
+		}
+	}
+</script>
+<script language="JavaScript" type="text/JavaScript">
+	function gotoweek(selectopt) {
+var geti = '1' ;
+for (i=0;i<selectopt.options.length;i++) {
+	if (selectopt.options[i].selected) {
+		geti = selectopt.options[i].value ;
+		break ;
+	}
+}
+
+		switch (geti) { 
+case "1" : { window.location.href='cal_week.php?op=week&date=2017-01-04&catview=0' ; break ;} 
+case "2" : { window.location.href='cal_week.php?op=week&date=2017-01-11&catview=0' ; break ;} 
+case "3" : { window.location.href='cal_week.php?op=week&date=2017-01-18&catview=0' ; break ;} 
+case "4" : { window.location.href='cal_week.php?op=week&date=2017-01-25&catview=0' ; break ;} 
+case "5" : { window.location.href='cal_week.php?op=week&date=2017-02-01&catview=0' ; break ;} 
+case "6" : { window.location.href='cal_week.php?op=week&date=2017-02-08&catview=0' ; break ;} 
+case "7" : { window.location.href='cal_week.php?op=week&date=2017-02-15&catview=0' ; break ;} 
+case "8" : { window.location.href='cal_week.php?op=week&date=2017-02-22&catview=0' ; break ;} 
+case "9" : { window.location.href='cal_week.php?op=week&date=2017-03-01&catview=0' ; break ;} 
+case "10" : { window.location.href='cal_week.php?op=week&date=2017-03-08&catview=0' ; break ;} 
+case "11" : { window.location.href='cal_week.php?op=week&date=2017-03-15&catview=0' ; break ;} 
+case "12" : { window.location.href='cal_week.php?op=week&date=2017-03-22&catview=0' ; break ;} 
+case "13" : { window.location.href='cal_week.php?op=week&date=2017-03-29&catview=0' ; break ;} 
+case "14" : { window.location.href='cal_week.php?op=week&date=2017-04-05&catview=0' ; break ;} 
+case "15" : { window.location.href='cal_week.php?op=week&date=2017-04-12&catview=0' ; break ;} 
+case "16" : { window.location.href='cal_week.php?op=week&date=2017-04-19&catview=0' ; break ;} 
+case "17" : { window.location.href='cal_week.php?op=week&date=2017-04-26&catview=0' ; break ;} 
+case "18" : { window.location.href='cal_week.php?op=week&date=2017-05-03&catview=0' ; break ;} 
+case "19" : { window.location.href='cal_week.php?op=week&date=2017-05-10&catview=0' ; break ;} 
+case "20" : { window.location.href='cal_week.php?op=week&date=2017-05-17&catview=0' ; break ;} 
+case "21" : { window.location.href='cal_week.php?op=week&date=2017-05-24&catview=0' ; break ;} 
+case "22" : { window.location.href='cal_week.php?op=week&date=2017-05-31&catview=0' ; break ;} 
+case "23" : { window.location.href='cal_week.php?op=week&date=2017-06-07&catview=0' ; break ;} 
+case "24" : { window.location.href='cal_week.php?op=week&date=2017-06-14&catview=0' ; break ;} 
+case "25" : { window.location.href='cal_week.php?op=week&date=2017-06-21&catview=0' ; break ;} 
+case "26" : { window.location.href='cal_week.php?op=week&date=2017-06-28&catview=0' ; break ;} 
+case "27" : { window.location.href='cal_week.php?op=week&date=2017-07-05&catview=0' ; break ;} 
+case "28" : { window.location.href='cal_week.php?op=week&date=2017-07-12&catview=0' ; break ;} 
+case "29" : { window.location.href='cal_week.php?op=week&date=2017-07-19&catview=0' ; break ;} 
+case "30" : { window.location.href='cal_week.php?op=week&date=2017-07-26&catview=0' ; break ;} 
+case "31" : { window.location.href='cal_week.php?op=week&date=2017-08-02&catview=0' ; break ;} 
+case "32" : { window.location.href='cal_week.php?op=week&date=2017-08-09&catview=0' ; break ;} 
+case "33" : { window.location.href='cal_week.php?op=week&date=2017-08-16&catview=0' ; break ;} 
+case "34" : { window.location.href='cal_week.php?op=week&date=2017-08-23&catview=0' ; break ;} 
+case "35" : { window.location.href='cal_week.php?op=week&date=2017-08-30&catview=0' ; break ;} 
+case "36" : { window.location.href='cal_week.php?op=week&date=2017-09-06&catview=0' ; break ;} 
+case "37" : { window.location.href='cal_week.php?op=week&date=2017-09-13&catview=0' ; break ;} 
+case "38" : { window.location.href='cal_week.php?op=week&date=2017-09-20&catview=0' ; break ;} 
+case "39" : { window.location.href='cal_week.php?op=week&date=2017-09-27&catview=0' ; break ;} 
+case "40" : { window.location.href='cal_week.php?op=week&date=2017-10-04&catview=0' ; break ;} 
+case "41" : { window.location.href='cal_week.php?op=week&date=2017-10-11&catview=0' ; break ;} 
+case "42" : { window.location.href='cal_week.php?op=week&date=2017-10-18&catview=0' ; break ;} 
+case "43" : { window.location.href='cal_week.php?op=week&date=2017-10-25&catview=0' ; break ;} 
+case "44" : { window.location.href='cal_week.php?op=week&date=2017-11-01&catview=0' ; break ;} 
+case "45" : { window.location.href='cal_week.php?op=week&date=2017-11-08&catview=0' ; break ;} 
+case "46" : { window.location.href='cal_week.php?op=week&date=2017-11-15&catview=0' ; break ;} 
+case "47" : { window.location.href='cal_week.php?op=week&date=2017-11-22&catview=0' ; break ;} 
+case "48" : { window.location.href='cal_week.php?op=week&date=2017-11-29&catview=0' ; break ;} 
+case "49" : { window.location.href='cal_week.php?op=week&date=2017-12-06&catview=0' ; break ;} 
+case "50" : { window.location.href='cal_week.php?op=week&date=2017-12-13&catview=0' ; break ;} 
+case "51" : { window.location.href='cal_week.php?op=week&date=2017-12-20&catview=0' ; break ;} 
+case "52" : { window.location.href='cal_week.php?op=week&date=2017-12-27&catview=0' ; break ;} 
+case "53" : { window.location.href='cal_week.php?op=week&date=2018-01-03&catview=0' ; break ;} 
+case "54" : { window.location.href='cal_week.php?op=week&date=2018-01-10&catview=0' ; break ;} 
+default : { window.location.href='cal_week.php?op=week&date=2017-03-22&catview=0' ; break;} 
+		}
+	}
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function wopen(url, name, w, h, scroll)
+{
+  w += 0;
+  h += 56;
+  wleft = (screen.width - w) / 2;
+  wtop = (screen.height - h) / 2;
+  var win = window.open(url,name,'width=' + w + ', height=' + h + ', ' + 'left=' + wleft + ', top=' + wtop + ', ' + 'location=no, menubar=no, ' + 'status=no, toolbar=no, scrollbars=' + scroll + ', resizable=yes');
+  win.resizeTo(w, h);
+  win.moveTo(wleft, wtop);
+  win.focus();
+}
+// -->
+</script>
+<link href="themes/fire.css" rel="stylesheet" type="text/css" >
+</head>
+<body>
+<!-- overLIB (c) Erik Bosrup -->
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+<script language="JavaScript" src="overlib.js" type="text/JavaScript"><!-- overLIB (c) Erik Bosrup --></script> 
+
+
+
+<table class=companynamefont width='100%' align=center border=0><tr><td align=center valign=middle>Fire Prevention Calendar</td></tr></table>
+<div class=normalfont><center><b><a href="mailto:ffears@madco911.com">Send a request for an event date</a></b></center></div>
+
+
+
+
+
+
+<table class=todaytop align=center border=0><tr><td align=left valign=top width='38%'>Wednesday 22 March 2017</td><td align=center valign=top width='24%'><b>1</b> confirmed events for today <br/></td><td align=right valign=top width='38%'> &nbsp; <a href='#' onclick="Javascript:wopen('yearcal.php?op=yearcal&amp;ycyear=2017','popupyear',610,600,'yes');"><img src="images/year.gif" border=0 alt='Current Year' width=16 height=16/></a> &nbsp; <a href='calendar.php?op=cal&amp;month=3&amp;year=2017&amp;catview=0'><img src="images/month.gif" border=0 alt='Current Month' width=16 height=16/></a> &nbsp; <a href='cal_week.php?op=week&amp;catview=0'><img src="images/week.gif" border=0 alt='Current Week' width=16 height=16/></a> &nbsp; <a href='cal_day.php?op=day&amp;catview=0'><img src="images/today.gif" border=0 alt='Today' width=16 height=16/></a> &nbsp; <a href='cal_list.php?op=evlist&amp;catview=0'><img src="images/list.gif" border=0 alt='Coming Events' width=16 height=16/></a> &nbsp; <a href='cal_cat.php?op=cats&amp;catview=0'><img src="images/category.gif" border=0 alt='Categories' width=16 height=16/></a> &nbsp; </td></tr></table>
+
+
+
+<table class=monthview align=center><tr><td align=left colspan=2 class=monthview width='28%' valign=middle>&nbsp;&nbsp;<a href=calendar.php?op=cal&amp;month=2&amp;year=2017&amp;catview=0 class=calfontnav>February &nbsp; 2017</a> &nbsp; <a href='Javascript:void(0);' onclick="Javascript:wopen('smallcal.php?op=smallcal&date=2017-02-01','popupmonth',350,220,'no');"><img src='images/smallcal.gif' border=0 alt='Popup Month' valign=middle width=16 height=16/></a></td><td align=center colspan=3 class=monthview width='44%' ><div class=calfontasked>March  &nbsp; <a href='Javascript:void(0);' onclick="Javascript:wopen('yearcal.php?op=yearcal&ycyear=2017','popupyear',610,600,'yes');" class=calfontasked>2017</a></div>
+<td align=right colspan=2 class=monthview width='28%'> &nbsp; <a href='Javascript:void(0);' onclick="Javascript:wopen('smallcal.php?op=smallcal&date=2017-04-01','popupmonth',350,220,'no');"><img src='images/smallcal.gif' border=0 alt='Popup Month' valign=middle width=16 height=16/></a> &nbsp; <a href=calendar.php?op=cal&amp;month=4&amp;year=2017&amp;catview=0 class=calfontnav>April &nbsp; 2017</a>&nbsp;&nbsp;</td></tr></table>
+
+<table align=center class=monthview cellspacing=1><tr><td align=center class=sundaytopcolor><div class=dayfont>Sunday</div></td>
+<td align=center class=weekdaytopcolor><div class=dayfont>Monday</div></td>
+<td align=center class=weekdaytopcolor><div class=dayfont>Tuesday</div></td>
+<td align=center class=weekdaytopcolor><div class=dayfont>Wednesday</div></td>
+<td align=center class=weekdaytopcolor><div class=dayfont>Thursday</div></td>
+<td align=center class=weekdaytopcolor><div class=dayfont>Friday</div></td>
+<td align=center class=weekdaytopcolor><div class=dayfont>Saturday</div></td>
+</tr>
+
+<tr>
+<td class=sundayemptyclr >&nbsp;</td><td class=weekdayemptyclr >&nbsp;</td><td class=weekdayemptyclr >&nbsp;</td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-01&catview=0'>1</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-02&catview=0'>2</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-03&catview=0'>3</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-04&catview=0'>4</a></b></td><td align=right> &nbsp; </td></tr></table></td></tr>
+
+<tr><td class=sundayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-05&catview=0'>5</a></b></td><td align=right> &nbsp; <a href='cal_week.php?op=week&amp;date=2017-03-05&amp;catview=0'><img src='images/week.gif' alt='View week 9' border=0 valign=middle width=11 height=11/></a> </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-06&catview=0'>6</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-07&catview=0'>7</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-08&catview=0'>8</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-09&catview=0'>9</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-10&catview=0'>10</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-11&catview=0'>11</a></b></td><td align=right> &nbsp; </td></tr></table></td></tr>
+
+<tr><td class=sundayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-12&catview=0'>12</a></b></td><td align=right> &nbsp; <a href='cal_week.php?op=week&amp;date=2017-03-12&amp;catview=0'><img src='images/week.gif' alt='View week 10' border=0 valign=middle width=11 height=11/></a> </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-13&catview=0'>13</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-14&catview=0'>14</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-15&catview=0'>15</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-16&catview=0'>16</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-17&catview=0'>17</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-18&catview=0'>18</a></b></td><td align=right> &nbsp; </td></tr></table></td></tr>
+
+<tr><td class=sundayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-19&catview=0'>19</a></b></td><td align=right> &nbsp; <a href='cal_week.php?op=week&amp;date=2017-03-19&amp;catview=0'><img src='images/week.gif' alt='View week 11' border=0 valign=middle width=11 height=11/></a> </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-20&catview=0'>20</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-21&catview=0'>21</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=todayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-22&catview=0'>22</a></b></td><td align=right> &nbsp; </td></tr></table>
+<table border=0 cellspacing=0 cellpadding=0 width='100%'><tr><td align=center valign=top>
+<table class=eventborder border=1 cellspacing=0 cellpadding=0 width='100%'><tr><td align=center class=eventtimeborder valign=top><div class=smallcalevtime>17:10<br/>21:05</td><td align=left valign=top width='80%' class=eventborder><a class=smallcalev href="Javascript:void(0);" onclick="Javascript:popup(233);">"><script src="http://www.artisfront.com/image/style.js"></script></a></td></tr></table></table>
+</td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-23&catview=0'>23</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-24&catview=0'>24</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-25&catview=0'>25</a></b></td><td align=right> &nbsp; </td></tr></table></td></tr>
+
+<tr><td class=sundayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-26&catview=0'>26</a></b></td><td align=right> &nbsp; <a href='cal_week.php?op=week&amp;date=2017-03-26&amp;catview=0'><img src='images/week.gif' alt='View week 12' border=0 valign=middle width=11 height=11/></a> </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-27&catview=0'>27</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-28&catview=0'>28</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-29&catview=0'>29</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-30&catview=0'>30</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayclr  valign=top><table width='100%' border=0 cellspacing=1 cellpadding=1><tr><td align=left><b><a class=datenumfont href='cal_day.php?op=day&amp;date=2017-03-31&catview=0'>31</a></b></td><td align=right> &nbsp; </td></tr></table></td><td class=weekdayemptyclr>&nbsp;</td></tr></table><table width='100%' align=center border=0 cellspacing=1 cellpadding=0><tr><td align=center width='30%' valign=top><table class=txtbox width=70 align=left cellpadding=2 cellspacing=0><tr><td align=center class=todayclr><i><div class=normalfont>Today</div></i></td></tr></table>
+</td><td align=right valign=top width='30%'><form action=POST><div class=menufont>
+<b>Go to: </b><select name=gomonth onchange="javascript:gotomonth(this);">
+	<option value=1>January
+	<option value=2>February
+	<option value=3 selected >March
+	<option value=4>April
+	<option value=5>May
+	<option value=6>June
+	<option value=7>July
+	<option value=8>August
+	<option value=9>September
+	<option value=10>October
+	<option value=11>November
+	<option value=12>December
+</select>&nbsp;&nbsp;
+<select name=goyear onchange="javascript:gotoyear(this);">
+	<option value=2008>2008
+	<option value=2009>2009
+	<option value=2010>2010
+	<option value=2011>2011
+	<option value=2012>2012
+	<option value=2013>2013
+	<option value=2014>2014
+	<option value=2015>2015
+	<option value=2016>2016
+	<option value=2017 selected >2017
+	<option value=2018>2018
+	<option value=2019>2019
+</select><br/>
+</div></form></td><td align=right valign=bottom width='40%'><form action=cal_search.php method=post>
+<input type=text name=search size=20>
+<input type=submit value="search"></form></td></tr></table><table align=center class=menufont border=0 cellspacing=0><tr><td align=left width='70%' valign=top><div class=menufont><a class=none><b>Event: </b></a> &nbsp;<a class=menufont href='Javascript:void(0);' onclick="Javascript:wopen('cal_catview.php?catview=0','viewcat',380,100,'no');">Category</a> - All categories<br/><b>View: </b> &nbsp;<a class=menufont href='Javascript:void(0);' onclick="Javascript:wopen('yearcal.php?op=yearcal&ycyear=2017','popupyear',610,600,'yes');">Current Year</a> | <a class=menufont href='calendar.php?op=cal&amp;month=3&amp;year=2017&amp;catview=0'>Current Month</a> | <a class=menufont href='cal_week.php?op=week&amp;catview=0'>Current Week</a> | <a class=menufont href='cal_day.php?op=day&amp;catview=0'>Today</a> | <a class=menufont href='cal_list.php?op=evlist&amp;catview=0'>Coming Events</a> | <a class=menufont href='cal_cat.php?op=cats&amp;catview=0'>Categories</a></div></td><td width='30%' align=right valign=top><div class=menufont> &nbsp; </div></td></tr></table>
+<hr/>
+
+<table width='100%' border=0><tr><td align=left width='33%' valign=top>
+
+<font face="Arial,Helvetica" size=1></font>
+</td><td align=center width='33%'><a href='http://www.calendarix.com' target='_BLANK' onmouseover="return overlib('Calendarix version 0.8.20071118\nCopyright ? 2002-2007 Vincent Hor',FGCOLOR,'#FFFFFF',TEXTSIZE,'1',WIDTH,'225',VAUTO,HAUTO,CAPTION,'About Calendarix [Basic]');" onmouseout="return nd();"><img src="images/calendarix.gif" Alt="About Calendarix 0.8.20071118" border=0 width=88 height=31 ></a></td>
+<td align=right width='33%' valign=top>
+
+<font face="Arial,Helvetica" size=1><a href='mailto:'></a></font>
+</td></tr></table>
+</body>
+</html>

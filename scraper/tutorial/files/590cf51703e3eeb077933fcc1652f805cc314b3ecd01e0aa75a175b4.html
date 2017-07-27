@@ -1,0 +1,175 @@
+<html dir="rtl">
+ 
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>&#1578;&#1605; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1605;&#1606; &#1602;&#1576;&#1604; &#1576;&#1606; &#1604;&#1575;&#1583;&#1606; &#1607;&#1603;&#1585;</title>
+<style> 
+<!--
+P {
+	FONT-SIZE: 11px; FONT-FAMILY: arial,sans-serif
+}
+DIV.Section1 {
+	page: Section1
+}
+-->
+</style>
+<meta name="keywords" content="&#1578;&#1605; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1605;&#1606; &#1602;&#1576;&#1604; &#1576;&#1606; &#1604;&#1575;&#1583;&#1606; &#1607;&#1603;&#1585;">
+<meta name="description" content="&#1578;&#1605; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1605;&#1606; &#1602;&#1576;&#1604; &#1576;&#1606; &#1604;&#1575;&#1583;&#1606; &#1607;&#1603;&#1585;">
+</head>
+ 
+<body bgcolor="#FFFFFF" text="#800000">
+ </STYLE>
+</head>
+<body bgcolor="#FFFFFF" text="#800000">
+<div align="Center" class="style"><div align="Center" class="style"><pre>
+<font face="Book Antiqua"><span lang="en-us"><font color="#FFFFFF" size="3"><b><img border="0" src="http://www.wpclipart.com/signs_symbol/skull/skull_and_crossbones_large.png" width="187" height="178"></b></font></span></font><font size="3">
+</font></pre></div></div>
+<p align="center">
+      <b>
+      <font size="3" face="Times New Roman">
+      <SCRIPT>
+farbbibliothek = new Array(); 
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00"); 
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00"); 
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"); 
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"); 
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF"); 
+farbbibliothek[6] = new Array("#0000FF","#FFFF00"); 
+farben = farbbibliothek[4];
+function farbschrift() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.all["a"+i].style.color=farben[i]; 
+} 
+farbverlauf(); 
+} 
+function string2array(text) 
+{ 
+Buchstabe = new Array(); 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+k=0; 
+while(k<=text.length) 
+{ 
+Buchstabe[k] = text.charAt(k); 
+k++; 
+} 
+} 
+function divserzeugen() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>"); 
+} 
+farbschrift(); 
+} 
+var a=1; 
+function farbverlauf() 
+{ 
+for(var i=0 ; i<farben.length; i++) 
+{ 
+farben[i-1]=farben[i]; 
+} 
+farben[farben.length-1]=farben[-1]; 
+
+setTimeout("farbschrift()",30); 
+} 
+// Zu Demonstrationszwecken***************** 
+var farbsatz=1; 
+function farbtauscher() 
+{ 
+farben = farbbibliothek[farbsatz]; 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+} 
+setInterval("farbtauscher()",5000); 
+text= "| HaCked By BIn LaDen HaCker |"; //h 
+string2array(text); 
+divserzeugen(); 
+//document.write(text); 
+      </SCRIPT></font></b></p>
+<p class="style1" style="text-align: center" align="center">
+<span lang="ar-sa"><b>
+<font face="Times New Roman" color="#000000" size="4">&#1578;&#1605; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1605;&#1606; &#1602;&#1576;&#1604; &#1576;&#1606; &#1604;&#1575;&#1583;&#1606; &#1607;&#1603;&#1585;</font></b></span><span class="SpellE"><b><span lang="ar-sa"><font face="Tahoma" size="4" color="#000000"> 
+<br>
+&nbsp;</font></span></b></span></p>
+<p class="Estilo2 Estilo2" align="center" style="color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: bold; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">
+<span lang="ar-sa"><font size="3">&#1610;&#1575;&#1604;&#1604;&#1607;</font><font size="3"> .. &#1610; &#1576;&#1591;&#1604; &#1605;&#1575;&#1611;&#1606;&#1610; 
+&#1605;&#1603;&#1579;&#1585; &#1576; &#1570;&#1604;&#1603;&#1604;&#1575;&#1605; &#1608;&#1588;&#1608;&#1601; &#1604;&#1603; &#1581;&#1605;&#1570;&#1610;&#1607; &#1570;&#1602;&#1608;&#1609;&#1575;&#1611; &#1589;&#1583;&#1602;&#1606;&#1610; &#1604;&#1570;&#1578;&#1594;&#1610;&#1610;&#1585; &#1576; &#1589;&#1604;&#1570;&#1581;&#1610;&#1570;&#1578; &#1570;&#1604;&#1605;&#1580;&#1604;&#1583;&#1575;&#1578;&#1611;</font></span></p>
+<p class="Estilo2 Estilo2" align="center" style="color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: bold; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">
+<span lang="ar-sa"><font size="3">&#1593;&#1604;&#1609; &#1576;&#1575;&#1604;&#1603; &#1578;&#1576;&#1610; &#1578;&#1601;&#1610;&#1583;&#1603; &#1576;&#1588;&#1610; .. &#1604;&#1604;&#1570;&#1587;&#1601; &#1548; &#1603;&#1604; &#1605;&#1588;&#1603;&#1604;&#1607; 
+&#1604;&#1607;&#1575;&#1611; &#1581;&#1604;<span class="Apple-converted-space">&nbsp;</span><img border="0" src="http://im12.gulfup.com/2012-08-27/1346037991111.png" width="20" height="20"><br>
+&#1575;&#1608;&#1608;&#1608;&#1607; &#1589;&#1581; &#1576;&#1582;&#1589;&#1608;&#1589; &#1575;&#1606;&#1603; &#1605;&#1593;&#1591;&#1604; &#1578;&#1588;&#1594;&#1610;&#1604; &#1575;&#1604;&#1576;&#1610;&#1585;&#1604; + &#1575;&#1604;&#1576;&#1575;&#1610;&#1579;&#1608;&#1606; &#1576;&#1575;&#1604;&#1587;&#1610;&#1585;&#1601;&#1585; &lt;&lt; &#1590;1 &#1578;&#1585;&#1609; &#1588;&#1594;&#1604;&#1578;&#1607; &#1594;&#1589;&#1576; &#1593;&#1606;&#1603;
+<br>
+&#1610;&#1570;&#1604;&#1604;&#1607; .. &#1602;&#1600;&#1608;&#1583; &#1576;&#1600;&#1570;&#1610; &#1610;&#1614; &#1570;&#1576;&#1608;&#1581;&#1605;&#1570;&#1610;&#1607; &#1575;&#1606;&#1578; &#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;<span class="Apple-converted-space">&nbsp;</span><img border="0" src="http://im12.gulfup.com/2012-08-27/1346037991913.png" width="20" height="20"><br>
+<br>
+&#1585;&#1575;&#1588;&#1583; &#1607;&#1603;&#1585;
+<img border="0" src="http://im12.gulfup.com/2012-08-27/1346037991111.png" width="20" height="20"><img border="0" src="http://im12.gulfup.com/2012-08-27/1346037991111.png" width="20" height="20"> 
+&#1588;&#1601;&#1578; &#1603;&#1610;&#1601; &#1607;&#1584;&#1575; &#1587;&#1610;&#1585;&#1601;&#1585; &#1606;&#1601;&#1587; &#1605;&#1588;&#1603;&#1604;&#1578;&#1603; </font><font face="Tahoma" size="3">Not Acceptable</font><font size="3">
+</font></span>
+<span lang="en-us" style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: large; font-style: normal; font-variant: normal; font-weight: bold; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; ">
+<span class="Apple-converted-space">&nbsp;</span><img border="0" src="http://im12.gulfup.com/2012-08-27/134603799172.png" width="20" height="20"></span><span lang="ar-sa"><font size="3"><img border="0" src="http://im12.gulfup.com/2012-08-27/1346037991111.png" width="20" height="20"></font></span><span lang="en-us" style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: large; font-style: normal; font-variant: normal; font-weight: bold; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><img border="0" src="http://im12.gulfup.com/2012-08-27/134603799172.png" width="20" height="20"><br>
+</span>
+<span style="color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: bold; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" lang="ar-sa">
+<font size="3">&#1608;&#1602;&#1604;&#1578; &#1604;&#1603; &#1578;&#1582;&#1591;&#1610;&#1607;&#1575; &#1576;&#1575;&#1604;&#1607;&#1575;&#1578;&#1603;&#1587; &#1576;&#1575;&#1604;&#1593;&#1575;&#1605;&#1607;</font></span><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: large; font-style: normal; font-variant: normal; font-weight: bold; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; " lang="ar-sa">
+</span><span lang="ar-sa"><font size="3">
+<img border="0" src="http://im12.gulfup.com/2012-08-27/1346037991111.png" width="20" height="20"> 
+&#1576;&#1587; &#1588;&#1603;&#1604;&#1603; &#1604;&#1604;&#1581;&#1610;&#1606; &#1605;&#1575; &#1587;&#1605;&#1593;&#1578; &#1576;&#1588;&#1610; &#1575;&#1587;&#1605;&#1607; &#1588;&#1604; &#1605;&#1582;&#1601;&#1610; &#1593; &#1575;&#1604;&#1587;&#1610;&#1585;&#1601;&#1585; <br>
+&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607;&#1607; &#1575;&#1575;&#1575;&#1607; &#1610;&#1575; &#1585;&#1575;&#1588;&#1583; &lt;<img border="0" src="http://im12.gulfup.com/2012-08-27/1346037991913.png" width="20" height="20"></font></span></p>
+<p dir="ltr" align="center"><b><font face="Tahoma" color="#008000" size="3">----</font><span lang="ar-sa"><font face="Tahoma" color="#008000" size="3">------------------------</font><font face="Tahoma" color="#FFFFFF" size="3"><br>
+</font>
+</span><font face="Tahoma" size="3" color="#FFFFFF">
+<br>
+</font><font face="Tahoma" size="3" color="#6666FF">BIn LaDen HaCker</font><font face="Tahoma" size="3" color="#000000"><br>
+<br>
+onk@hotmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; 
+XuH@hotmail.com<br>
+<br>
+www.</font><font size="3"><font color="#008000">Ksa-H4ck</font><font color="#000000">.com</font></font><font face="Tahoma" size="4"><p dir="ltr" align="center">
+<font size="3" face="Tahoma" color="#008000">----<span lang="ar-sa">-----------------------</span>-</font></font><span lang="ar-sa"><font face="Tahoma" color="#FFFFFF" size="3"><br>
+</font>
+</span><font face="Tahoma" size="3" color="#FFFFFF">
+<br>
+</font>
+	<span lang="en-us"><span class="style14"><strong>
+	<font face="Tahoma" size="3"><font color="#6666FF">RashiD HaCker</font><br>
+</font></strong></span></span><font face="Tahoma" size="3" color="#000000">
+<br>
+pgt@hotmail.com</font><font face="Tahoma" size="4"></p><p dir="ltr" align="center">
+<font size="3" face="Tahoma" color="#008000">----<span lang="ar-sa">-----------------------</span>-</font></p>
+</font></b>
+<p align="center">
+	<span lang="en-us"><span class="style14"><strong>
+	<font face="Tahoma" size="3"><font color="#6666FF">Gr</font>33<font color="#6666FF">tZ</font>:<span class="Apple-converted-space">&nbsp;</span>rEx 
+	iraq<span class="Apple-converted-space">&nbsp;</span>-<span class="Apple-converted-space">&nbsp;</span>ErHaBi 
+	Hail<span class="Apple-converted-space">&nbsp;</span>-<span class="Apple-converted-space">&nbsp;</span>5FaSh 
+	HaCker<span class="Apple-converted-space">&nbsp;</span>-<span class="Apple-converted-space">&nbsp;</span>SeVeRuS<span class="Apple-converted-space">&nbsp;</span>-<span class="Apple-converted-space">&nbsp;</span>Wahsh 
+	HaCker<span class="Apple-converted-space">&nbsp;</span>- D3oS<span class="Apple-converted-space">&nbsp;</span>-&nbsp; SiLiPoR<span class="Apple-converted-space">&nbsp;</span><br>
+	Jeen 7Frawy<span class="Apple-converted-space">&nbsp;</span>-<span class="Apple-converted-space">&nbsp;</span>ViRuS 
+	506<span class="Apple-converted-space">&nbsp;</span>-<span class="Apple-converted-space">&nbsp;</span>Hitler 
+	ALTamimi<span class="Apple-converted-space">&nbsp;</span>-<span class="Apple-converted-space">&nbsp;</span>RashiD 
+	HaCker - Dr.SHA6H</font></strong></span></span><b><font face="Tahoma" size="3"><br>
+</font></b><font face="Book Antiqua" size="3"><br>
+</font><b><font face="Tahoma" size="3" color="#FFFFFF"> 
+	<a href="http://www.zone-h.com/archive/notifier=BIn%20LaDen%20HaCker">Zone-H</a></font></b></p>
+<b>
+<p align="center"><font class="RxB" face="Consolas" size="3" color="#000000">./ExIT</font></p>
+</b>
+<p class="style1" style="text-align: center" align="center">
+<font face="Times New Roman" size="3"><br>
+&nbsp;</font></p>
+<p align="center">
+&nbsp;</p><embed width="20" height="15" src="http://youtube.googleapis.com/v/kWrUyYDO8Yc&autoplay=1"></p>
+</b>
+
+</body>
+
+</html>

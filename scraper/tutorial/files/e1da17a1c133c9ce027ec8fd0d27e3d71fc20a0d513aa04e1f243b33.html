@@ -1,0 +1,137 @@
+<script>
+TypingText = function(element, interval, cursor, finishedCallback) { if((typeof document.getElementById == "undefined") || (typeof element.innerHTML ==
+"undefined")) { this.running = true; // Never run. return; } this.element = element; this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; }); this.interval = (typeof interval == "undefined" ? 100 : interval); this.origText = this.element.innerHTML; this.unparsedOrigText = this.origText; this.cursor = (cursor ? cursor : ""); this.currentText = ""; this.currentChar = 0; this.element.typingText = this; if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++; TypingText.all.push(this); this.running = false; this.inTag = false; this.tagBuffer = ""; this.inHTMLEntity = false; this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() { for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() { if(this.running) return; if(typeof this.origText == "undefined") { setTimeout("document.getElementById('" + this.element.id + "').typingText.run()",
+this.interval); // We haven't finished loading yet. Have patience. return; } if(this.currentText == "") this.element.innerHTML = "";
+// this.origText = this.origText.replace(/<([^<])*>/, ""); // Strip HTML from text. if(this.currentChar < this.origText.length) { if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) { this.tagBuffer = "<"; this.inTag = true; this.currentChar++; this.run(); return; } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) { this.tagBuffer += ">"; this.inTag = false; this.currentText += this.tagBuffer; this.currentChar++; this.run(); return; } else if(this.inTag) { this.tagBuffer += this.origText.charAt(this.currentChar); this.currentChar++; this.run(); return; } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) { this.HTMLEntityBuffer = "&"; this.inHTMLEntity = true; this.currentChar++; this.run(); return; } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) { this.HTMLEntityBuffer += ";"; this.inHTMLEntity = false; this.currentText += this.HTMLEntityBuffer; this.currentChar++; this.run(); return; } else if(this.inHTMLEntity) { this.HTMLEntityBuffer += this.origText.charAt(this.currentChar); this.currentChar++; this.run(); return; } else { this.currentText += this.origText.charAt(this.currentChar); } this.element.innerHTML = this.currentText; this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof
+this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : ""); this.currentChar++; setTimeout("document.getElementById('" + this.element.id + "').typingText.run()",
+this.interval); } else { this.currentText = ""; this.currentChar = 0; this.running = false; this.finishedCallback(); }
+}</script>
+
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAACfElEQVRIx7WUz0syQRjHv7M/3CAkcoU8FgmRSGcrD1kQgRQdwn8j8CRBpyA8KXUP6ipBUEgkRRcjgxLqYASBWRcNFNFc3XXc6bDvvvIm4Yvo9zC7M/Ps8/3szDND8EexWCx2fMxYJpPJPD9jYHK5XK7paSAQCAQ2NggRzAnTOBgMBjc3AavVarVa+2dcrVar1SoQiUQie3vtceFnoGk8MeH3h8P9A8hm4/FQqHNc6Pbh+vrKiscDEELIvzPtvvnGWLs1dXJyfp5K/Z6/K4CmtVq6DoiiIHAcIAiCwPOAIPA8xwE8b6CZtpQa8bVava5p3VemKwBjZmpCOM5oed5YEUKAcllRmk3g87NcVhSgVms0KAUopbTV6gMApYwRAug6pYwBjUarRSnw9WUY6bquAwDPi6IoAsPDBqCmNZuU9gGgUCiXGw1gaEiSRBGwWIynJEmSJAEcx3EGoK4z1jbmuM6q6Qng6enh4fGxe6Je1QFQqVQqlcrvx6ZXmXl/BTBvqGg0Gt3fH9wfmz6m/mOXDO3uhsM7O4wtLS0v+3zA6+vb28tLe97pHB+fmgKurhKJ62tgaysU2t7uXgV/A1Kpu7vbW8ZyuY+PbBZwOp3OyUmgWCwWi0VAlmVZlnvv53K53Ps74Ha7XDMzwOysxzM3RwhJp9Pp+3vGEonLy4sLwOv1eufnAUWp1xUFsNlsNpsNKJVKpVIJsFgsFkkCNE3TVNW4mATBOPeUtk+HqqqqqgJ2u91utwOKUqspCpBMJpM3N4DPt7CwuAgIpvHqqt+/tmbskds9uBoYHR0ZkWXg7CwePz0FyOHh0dHBAWP5fKGQzw/O+KccjrExhwP4Bt4OPjeZKoCiAAAAAElFTkSuQmCC" rel="icon<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Kiss Me _-_-_-_ Saideh - Reza</title><style type="text/css">
+<!--
+
+-->
+</style><SCRIPT LANGUAGE=JAVASCRIPT><!-- Nifty Title Descrambler Script
+if (document.all||document.getElementById){
+var thetitle=document.title
+document.title=''
+}
+var data="Hacked By Zarbat Security Group";
+var done=1;
+function statusIn(text){
+decrypt(text,22,22);
+}
+function statusOut(){
+self.status='';
+done=1;
+}
+function decrypt(text, max, delay){
+if (done){
+done = 0;
+decrypt_helper(text, max, delay,  0, max);
+}
+}
+function decrypt_helper(text, runs_left, delay, charvar, max){
+if (!done){
+runs_left = runs_left - 1;
+var status = text.substring(0,charvar);
+for(var current_char = charvar; current_char < text.length; current_char++){
+status += data.charAt(Math.round(Math.random()*data.length));
+}
+document.title = status;
+var rerun = "decrypt_helper('" + text + "'," + runs_left + "," + delay + "," + charvar + "," + max + ");"
+var new_char = charvar + 1;
+var next_char = "decrypt_helper('" + text + "'," + max + "," + delay + "," + new_char + "," + max + ");"
+if(runs_left > 0){
+setTimeout(rerun, delay);
+}
+else{
+if (charvar < text.length){
+setTimeout(next_char, Math.round(delay*(charvar+3)/(charvar+1)));
+}
+else
+{
+done = 1;
+}
+}
+}
+}
+//if IE 4+ or NS 6+
+if (document.all||document.getElementById)
+statusIn(thetitle)
+// --></SCRIPT><!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]-->
+<link rel="File-List" href="index_files/filelist.xml">
+<!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</script>
+<style type="text/css">
+<!--
+.style2 {font-style: italic; font-family: "Times New Roman", Times, serif;}
+body {
+	background-color: #000000;
+}
+.style4 {color: #FF0000}
+.style5 {color: #FFFFFF}
+.style6 {color: #009900}
+-->
+</style>
+</head>
+
+<body text="#FFFFFF" link="#CCCCCC" vlink="#FFFFFF" alink="#FF0000">
+<div id="Layer1" style="position:absolute; left:432px; top:2px; width:354px; height:416px; z-index:1"> 
+  <div align="left"> 
+    <div align="center">
+      <div align="left">
+        <pre><font size="1"><br>                                       j$<br>                                      ,$$b<br>                                      $$$$.<br>                                     j$$$$b<br>              ,                     j$$$$$$:<br>              $b.                   $$$$$$$$                      ,<br>              $$$b.                j$$$$$$$$:                  ,s$;<br>              !$$$$b.              $$$$$$$$$l               ,s$$$?<br>              :$$$$$$b.           ;$$$$$$$$$$            .s$$$$$$'<br>               $$$$$$$$b.         l$$$$$$$$$$          ,d$$$$$$$'<br>               `$$$$$$$$$b        $$$$$$$$$$$        ,d$$$$$$$$'<br>                `$$$$$$$$$b.      $$$$$$$$$$!      ,$$$$$$$$$$'<br>                 `$$$$$$$$$$,     $$$$$$$$$$;    ,$$$$$$$$$$$'<br>                  `$$$$$$$$$$b    !$$$$$$$$$'   d$$$$$$$$$$P<br>                   `Y$$$$$$$$$b   :$$$$$$$$$  ,$$$$$$$$$$$&quot;<br>                     ?$$$$$$$$$$.  $$$$$$$$! ,$$$$$$$$$$?'<br>      &quot;$S%s,._        `$$$$$$$$$$. !$$$$$$$;.$$$$$$$$$$&quot;<br>        &quot;$$$$$$S%s,.    &quot;$$$$$$$$$.`$$$$$$$'d$$$$$$$$&quot;<br>          &quot;$$$$$$$$$$Ss.  &quot;$$$$$$$b $$$$$$$,$$$$$$$&quot;         _,+s%#SS$$$S'<br>            &quot;$$$$$$$$$$$$s. &quot;$$$$$$.!$$$$$;$$$$$$&quot;     .,sdd$$$$$$$$$$P~<br>              `?$$$$$$$$$$$Ss.&quot;$$$$$,$$$$;$$$$$&quot;  _,sd$$$$$$$$$$$$$P'<br>                 `+$$$$$$$$$$$b,`$$$$;$$$;$$$&quot; ,d$$$$$$$$$$$$$P+&quot;~<br>                    ~&quot;?$j?$$$$$$$,~$$$$$$$$$'s$$$$$$$$$$?+&quot;^~<br>                          ~&quot;&quot;+_SS$$b$$$$$$$s$$$SS*+&quot;&quot;~<br>                      _.,,ss%%##%sss$$$$$$$$$SS%s+.<br>                 .,sS$$$$$$$$$$$P&quot;~,s$$$$$$$.`$$$$$$$%s._<br>              ,d$$$$$$$$$j$P+&quot;~ .d$$$$'$$':$$b.~&quot;Yj$$$Tindo.<br>            ,$$j?j$$7++&quot;~     ,d$$$$$' !$  &quot;$$$b.  ~+Y$$$$$$$s.<br>                            ,$$$$P+~   :$   `$$$$,     ~&quot;+*$$$$b.<br>                           d$Y+~       `$     &quot;?$$<br>                          &quot;~            $.       &quot;<br>                                        `$b.<br>                                          ~&quot;+s,<br>                                              `+s</font></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="center"><b><font size="4" face="Courier New">Reza - Saideh </font></b> </p>
+<p align="center"><b><font face="Courier New" size="7">[ 
+</font><font size="4" face="Courier New">My LOve </font>
+<font color="#ff0000" face="Courier New" size="7">4</font>
+<font face="Courier New" size="4">Ever</font><font face="Courier New" size="7"> 
+]</font></b></p>
+<h1 align="center" class="style2"><span class="style6">my</span> <span class="style5">love</span> <span class="style4">Saideh</span></h1>
+</body>
+</html>

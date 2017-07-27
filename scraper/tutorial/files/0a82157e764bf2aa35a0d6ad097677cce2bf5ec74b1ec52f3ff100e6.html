@@ -1,0 +1,644 @@
+<HTML>
+
+
+
+<HEAD>
+
+
+
+<base target="_blank">
+
+
+
+<SCRIPT LANGUAGE="Javascript">
+
+
+
+<!--
+
+
+
+var Words ="<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+
+
+<html>
+
+
+
+<head>
+
+
+  <meta http-equiv="Content-Language" content="en-us">
+
+
+
+  <title>Hacked by LiByA HaCkErS TeaM</title>
+
+
+  <script language="javascript">
+
+
+
+ <!--
+
+
+
+ function Is() {
+
+
+
+     var agent = navigator.userAgent.toLowerCase();
+
+
+
+     this.major = parseInt(navigator.appVersion);
+
+
+
+     this.minor = parseFloat(navigator.appVersion);
+
+
+
+     this.ns  = ((agent.indexOf('mozilla')!=-1) && ((agent.indexOf('spoofer')==-1) && (agent.indexOf('compatible') == -1)));
+
+
+
+     this.ns2 = (this.ns && (this.major == 2));
+
+
+
+     this.ns3 = (this.ns && (this.major == 3));
+
+
+
+     this.ns4b = (this.ns && (this.major == 4) && (this.minor <= 4.03));
+
+
+
+     this.ns4 = (this.ns && (this.major >= 4));
+
+
+
+     this.ie   = (agent.indexOf("msie") != -1);
+
+
+
+     this.ie3  = (this.ie && (this.major == 2));
+
+
+
+     this.ie4  = (this.ie && (this.major >= 4));
+
+
+
+     this.op3 = (agent.indexOf("opera") != -1);
+
+
+
+ }
+
+
+
+ 
+
+
+
+ var is = new Is()
+
+
+
+ if(is.ns4) {
+
+
+
+     doc = "document";
+
+
+
+     sty = "";
+
+
+
+     htm = ".document"
+
+
+
+ 
+
+
+
+ } else if(is.ie4) {
+
+
+
+     doc = "document.all";
+
+
+
+     sty = ".style";
+
+
+
+     htm = ""
+
+
+
+ }
+
+
+
+ 
+
+
+
+ var text1 = "", text2 = "", count = 0, count2=0;
+
+
+
+ msg = new Array();
+
+
+
+ msg[0] = "  <center><font face=Impact Size=8 color=#ff0000>Sorry Admin</font>   ";
+
+
+
+ msg[1] = "  <font face=Impact Size=15 color=#206000>                                                                                                                                                                                                                You Have Been Hacked ! </font>";
+
+
+
+ msg[2] = "<font face=Impact size=15 color=#0000ff><center><hl> </hl> ";
+
+
+
+ msg[3] = "  <u> BY</u>";
+
+
+
+ msg[4] = "<font face=Impact Size=15 color=#206000>Hacked by LiByA HaCkErS TeaM</font>";
+
+
+
+ msg[5] = "  <font face=Impact Size=15 color=#206000></font>";
+
+
+
+ msg[6] = "  <font face=Impact Size=15 color=#ff0000>              </font>";
+
+
+
+ msg[7] = "  <font face=Impact Size=15 color=#ff0000>  </font>";
+
+
+
+ msg[8] = "<h1></h1> <br>";
+
+
+
+ msg[9] = "  ";
+
+
+
+ 
+
+
+
+ text = msg[0].split("");
+
+
+
+ function writetext(){
+
+
+
+     text1 ='<tt>'+text2 + '<b style="color:#ff666">'+text[count]+'</b></tt>';
+
+
+
+     text2 += text[count];
+
+
+
+     fillHTML = eval(doc + '["nothing"]' + htm);
+
+
+
+     if(is.ns4) {
+
+
+
+         fillHTML.write(text1);
+
+
+
+         fillHTML.close();
+
+
+
+     } else {
+
+
+
+         fillHTML.innerHTML = text1;
+
+
+
+     }
+
+
+
+ 
+
+
+
+     if (!(count >= text.length-1)){
+
+
+
+         count+=1;
+
+
+
+         setTimeout('writetext()',1);
+
+
+
+     }
+
+
+
+ 
+
+
+
+     else{
+
+
+
+         count=0;
+
+
+
+         text2+='<p>'
+
+
+
+         if (count2!=6){
+
+
+
+             count2++
+
+
+
+             text = eval('msg['+count2+'].split("")');
+
+
+
+             setTimeout('writetext()',5);
+
+
+
+ 
+
+
+
+         }
+
+
+
+     }
+
+
+
+ }
+
+
+
+ <!-- MAdem Türksün G&#246;ster Urksün -->
+
+
+
+ //-->
+
+
+
+    </script>
+
+
+
+  <script language="JavaScript">
+
+
+
+var brzinakucanja = 200;
+
+
+
+var pauzapor = 2000;
+
+
+
+var vremeid = null;
+
+
+
+var kretanje = false;
+
+
+
+var poruka = new Array();
+
+
+
+var slporuka = 0;
+
+
+
+var bezporuke = 0;
+
+
+
+poruka[0] = " Hacked By LiByA HaCkErS TeaM"
+
+
+
+poruka[1] = " Oops.! Your Security is Dead...!!!"
+
+
+
+function prikaz() {
+
+
+
+   var text = poruka[slporuka];
+
+
+
+
+
+
+
+   if (bezporuke < text.length) {
+
+
+
+      if (text.charAt(bezporuke) == " ")
+
+
+
+               bezporuke++
+
+
+
+           var ttporuka = text.substring(0, bezporuke + 1);
+
+
+
+           document.title = ttporuka;
+
+
+
+           bezporuke++
+
+
+
+           vremeid = setTimeout("prikaz()", brzinakucanja);
+
+
+
+            kretanje = true;
+
+
+
+   } else {
+
+
+
+      bezporuke = 0;
+
+
+
+      slporuka++
+
+
+
+      if (slporuka == poruka.length)
+
+
+
+         slporuka = 0;
+
+
+
+      vremeid = setTimeout("prikaz()", pauzapor);
+
+
+
+      kretanje = true;
+
+
+
+   }
+
+
+
+}
+
+
+
+function stop() {
+
+
+
+   if (kretanje)
+
+
+
+      clearTimeout(vremeid);
+
+
+
+   kretanje = false
+
+
+
+}
+
+
+
+function start() {
+
+
+
+   stop();
+
+
+
+   prikaz();
+
+
+
+}
+
+
+
+start();
+
+
+
+    </script>
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<link REL="SHORTCUT ICON" HREF="http://www3.0zz0.com/2012/02/15/21/245115777.jpg"></head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Hacked By Black Tighr</title>
+<style type="text/css">
+*,html,body,div,p,h2{padding: 0px;margin: 0px;}body{background-color: #000000;}#container{margin: 0 auto;width: 980px;padding-top: 40px;}#content-container{float: left;width: 980px;}#content{clear: left;float: left;width: 581px;padding: 20px 0 20px 0;margin: 0 0 0 30px;display: inline;color: #333333;}#content h2 {font-family: Cambria;font-size: 170px;}#aside{float: right;width: 348px;padding: 0px;display: inline;background-image: url('http://www4.0zz0.com/2012/02/06/13/745373339.jpg');height: 376px;}.hacker{float: right;font-family: Cambria;font-size: 30px;font-weight: bold;}.notes{padding-top: 90px;line-height: 1.3em;font-weight: bold;font-size: 16px;font-family: "Courier New";}.contact{padding-top: 30px;font-size: 18px;font-family: "Courier New", Courier, monospace;font-weight: bold;color: #800000;}#music{padding: 80px 80px 0px 0px;float: right;clear: right;}</style>
+<meta name="keywords" content="Hacked By LiByA HaCkErS TeaM">
+<script type="text/javascript">/*<![CDATA[*/ 
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+    this.currentText = "";
+    this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+
+/*]]>*/</script> 
+
+</head><body>
+<div id="container">
+    <div id="content-container">
+        <div id="content">
+<h2>Hacked</h2>
+<marquee><p class="hacker">LiByA HaCkErS TeaM</p></marquee>
+<p id="message" class="notes">        
+Hacked By Black Tighr <br>
+<span id="result_box" class="short_text" lang="en"><span class="hps">We ArE a 
+Team</span> <span class="hps"> LiByA HaCkErS </span> </span><span class="hps">
+<span id="result_box" lang="en">F</span></span><span id="result_box" class="short_text" lang="en"><span class="hps">oRgeT</span>
+</span><span class="hps"><span id="result_box" lang="en">R</span></span><span id="result_box" class="short_text" lang="en"><span class="hps">eVeNgE 
+!!</span></span><br>
+Your SecuRiTy 1s DoWn admin<br>
+ThaT's BeCaUsE <span class="hps"><span lang="en-us">YoU ArE WeAK</span></span> , 
+ThIs IS JuST WaRnInG<br>
+Dont Forget . Black Tighr Was Here ^_*<br>
+
+contact:tirxly@yahoo.com<br>
+
+    <br>
+    <font color="red">Black Tighr +-+moqr +-+lil-brown</font> 
+ <br>
+
+  
+    <font color="red">  Good Bye ... </font>  </p>
+<script type="text/javascript">/*<![CDATA[*/ 
+new TypingText(document.getElementById("message"), 90, function(i){ var ar = new Array("_", " ", "_", " "); return " " + ar[i.length % ar.length]; });
+ 
+//Type out examples:
+TypingText.runAll();
+  /*]]>*/</script>
+
+        <p align="center">&nbsp;</div>
+        <div id="aside" style="width: 348px; height: 376px">
+        <object width="0" height="0"><param name="movie" value="http://www.youtube.com/v/0RA1yjEIieE&autoplay=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/0RA1yjEIieE&autoplay=1" type="application/x-shockwave-flash" width="0" height="0" allowscriptaccess="always" allowfullscreen="true"></embed></object><script type="text/javascript">
+            
+<script type="text/javascript"></html>
+
+<DIV class=layermensaje id=ttecleado ?></DIV></FONT>
+
+<P></P><!-- 1220403912 --><!-- 1220589876 --><!-- 1230604338 -->
+
+</BODY></HTML>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2900.3020" name=GENERATOR></HEAD>
+<BODY oncontextmenu="return false" onselectstart="return false" 
+onafterprint=onafterprint() bgColor=#000000 onbeforeprint=onbeforeprint() 
+background=index_files/www.foodmixerreviews.htm onload=teclear();>
+<P align=center><TD height="62" colSpan="7" width="466"></TD></TR>
+<img border="0" src="http://www3.0zz0.com/2012/02/15/21/591047848.jpg" width="292" height="421"> <TR></TR></TBODY></TABLE>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR>
+<STYLE>.layermensaje {
+</script>
+<img border="0" src="http://www3.0zz0.com/2012/02/15/21/591047848.jpg" width="292" height="421">

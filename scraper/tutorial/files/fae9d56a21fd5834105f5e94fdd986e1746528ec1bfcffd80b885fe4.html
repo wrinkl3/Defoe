@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Police Lines School And College, Rangpur</title>
+        <link href="css/layout.css" rel="stylesheet" type="text/css" />
+        <link href="css/menu.css" rel="stylesheet" type="text/css" />
+        <link href="css/slider.css" rel="stylesheet" type="text/css" />
+       <!-- <link href="css/nivo-slider.css" type="text/css" rel="stylesheet"/>-->
+        <link href="css/colorbox.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>        
+<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>-->
+<script type="text/javascript" src="js/jquery.tinycarousel.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <a class="logo" href="index.php"><img src="images/logo.png" width="801" height="118" /></a>
+            
+        </header>
+            <div class="navigation">
+<ul id="nav">
+    <li><a href="index.php">Home</a></li>
+    <li><a class="hsubs" style="cursor:pointer;">Administration</a>
+        <ul class="subs"> 
+            <li><a href="messagedetail.php?type=chairman">President</a></li>
+            <li><a href="messagedetail.php?type=principal">Principal</a></li>
+            <li><a href="messagedetail.php?type=vice-principal-college">Vice Principal College</a></li>
+            <li><a href="messagedetail.php?type=vice-principal-school">Vice Principal School</a></li>
+            <li><a href="member.php?type=governingbody">Governing Body</a></li>
+            <li><a href="list.php?type=academiccouncil">Academic Council</a></li>
+            <li><a href="member.php?type=teacher&section=college">Faculty Member College</a> </li>
+            <li><a href="member.php?type=teacher&section=school">Faculty Member School</a> </li>
+            <li><a href="list.php?type=guidence">Students Guidence Cell</a></li>
+            <li><a href="member.php?type=staff&section=officestaff">Office Staff</a></li>
+            <li><a href="member.php?type=staff&section=supportinghand">Staff (4th Class)</a></li>
+        </ul>
+    </li>
+    <li><a class="hsubs" style="cursor:pointer;">Academic</a>                         
+        <ul class="subs">
+            <li><a style="cursor:pointer">Syllabus</a>
+            	<ul>
+                	<li><a href="accademic.php?type=college_syllavus">College Syllabus</a></li>
+                    <li><a href="accademic.php?type=school_syllavus">School Syllabus</a></li>
+                </ul>
+            </li>
+            <li><a style="cursor:pointer">Academic (School)</a>
+            	<ul>
+                	<li><a href="school.php?type=primary_school">Primary School</a></li>
+                    <li><a href="secondary_school.php?type=secondary_school">Secondary School</a></li>
+                </ul>
+            </li>
+            <li><a style="cursor:pointer">Academic (College)</a>
+            	<ul>
+                	<li><a href="college.php?type=college">Class Teacher</a></li>
+                    <li><a href="department.php?type=department">Department</a></li>
+                </ul>
+            </li>
+            <li><a>Lesson Plan</a>
+            	<ul>
+                                       <li><a href="lessonPlan.php?sid=1">Nursery</a></li>
+                                       <li><a href="lessonPlan.php?sid=2">K.G</a></li>
+                                       <li><a href="lessonPlan.php?sid=3">One</a></li>
+                                       <li><a href="lessonPlan.php?sid=4">Two</a></li>
+                                       <li><a href="lessonPlan.php?sid=5">Three</a></li>
+                                       <li><a href="lessonPlan.php?sid=6">Four</a></li>
+                                       <li><a href="lessonPlan.php?sid=7">Five</a></li>
+                                       <li><a href="lessonPlan.php?sid=8">Six</a></li>
+                                       <li><a href="lessonPlan.php?sid=9">Seven</a></li>
+                                       <li><a href="lessonPlan.php?sid=10">Eight</a></li>
+                                       <li><a href="lessonPlan.php?sid=11">Nine</a></li>
+                                       <li><a href="lessonPlan.php?sid=12">Ten</a></li>
+                                       <li><a href="lessonPlan.php?sid=13">Eleven</a></li>
+                                       <li><a href="lessonPlan.php?sid=14">Twelve</a></li>
+                                   </ul>
+            </li>
+            <li><a href="accademic.php?type=library">Library and Lab</a></li>
+            <li><a href="accademic.php?type=magazine">Magazine</a></li>
+            <li><a href="accademic.php?type=year-calender">Year Calender</a></li>
+        </ul>
+    </li>
+    <li><a style="cursor:pointer;" class="hsubs">Co-Curricular</a>
+        <ul class="subs">
+            <li><a href="co-curricular.php?type=sports">Sports</a></li>
+            <li><a href="co-curricular.php?type=cultural">Cultural</a></li>
+            <li><a href="co-curricular.php?type=debate">Debate</a></li>
+            <li><a href="co-curricular.php?type=rover">Rover Scout</a></li>
+            <li><a href="co-curricular.php?type=bncc">BNCC</a></li>
+            <li><a href="co-curricular.php?type=boygirlsoutguide">Boy Scout & Girl&lsquo;s Guide</a></li>
+            <li><a href="co-curricular.php?type=house">House</a></li>
+        </ul>
+    </li>
+    <li><a style="cursor:pointer;" class="hsubs">Admission</a>
+        <ul class="subs">
+            <li><a href="admission.php?type=schooladmission">School Admission</a></li>
+            <li><a href="admission.php?type=collegeadmission">College Admission</a></li>
+        </ul>
+    </li>
+    <li><a style="cursor:pointer;" class="hsubs">Achievements</a>
+        <ul class="subs">
+            <li><a href="achievments.php?type=psc_result">Psc Result</a></li>
+            <li><a href="achievments.php?type=jsc_result">Jsc Result</a></li>
+            <li><a href="achievments.php?type=ssc_result">SSC Result</a></li>
+            <li><a href="achievments.php?type=hsc_result">HSC Result</a></li>
+            <li><a href="achievments.php?type=academic_achievement">Academic Achievement</a></li>
+        </ul>
+    </li>
+    <li><a style="cursor:pointer;">Download</a>
+        <ul class="subs">
+            <li><a href="download.php?type=admission_notice">Admission Notice</a></li>
+            <li><a href="download.php?type=admission_forms">Admission Forms</a></li>
+            <li><a href="download.php?type=exam_notice">Exam Notice</a></li>
+            <li><a href="download.php?type=class_routine">Class Routine</a></li>
+            <li><a href="arrival_departure.php">Arrival And Departure</a></li>             
+            <li><a href="all-notice.php">Notices</a></li>
+        </ul>
+    </li>
+    <li><a style="cursor:pointer;" class="hsubs">Online Apply</a>
+    	<ul class="subs">
+            <li><a href="onlineAdmission/admissionform.php">Online Admission</a></li>
+            
+        </ul>
+    </li>
+    <li class="studentlogin"><a href="userlogin/index.php">Student Login</a></li>
+    <div id="lavalamp"></div>
+</ul>
+</div>       <div class="container">
+            
+           
+			<div id="slide-container" class="clearfix">
+                <div id="slider-wrapper" class="left">
+                    
+                        <script type="text/javascript" src="js/jssor.core.js"></script>
+    <script type="text/javascript" src="js/jssor.utils.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script>
+        jssor_slider1_starter = function (containerId) {
+
+            var options = {
+                $AutoPlay: true,                                   //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $SlideDuration: 800,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+
+                $NavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorNavigator$,                       //[Required] Class to create navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+                    $SpacingX: 10,                                  //[Optional] Horizontal space between each item in pixel, default value is 0
+                    $SpacingY: 10,                                  //[Optional] Vertical space between each item in pixel, default value is 0
+                    $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$(containerId, options);
+        }
+    </script>
+
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. --> 
+    <div id="slider1_container" style="position: relative; width: 680px;height: 320px; overflow: hidden;">
+ 
+        <!-- Slides Container --> 
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 680px; height: 320px;
+            overflow: hidden;">
+            <div><img u="image" src="images/slide-image-1.jpg" /></div>
+            <div><img u="image" src="images/slide-image-2.jpg" /></div>
+            <div><img u="image" src="images/slide-image-3.jpg" /></div>
+            <div><img u="image" src="images/slide-image-2.jpg" /></div>
+        </div> 
+ 
+        <style>
+            .jssorn17 div, .jssorn17 div:hover, .jssorn17 .av
+            {
+                background: url(images/n17.png) no-repeat;
+                overflow:hidden;
+                cursor: pointer;
+            }
+            .jssorn17 div { background-position: -7px -7px; }
+            .jssorn17 div:hover, .jssorn17 .av:hover { background-position: -37px -7px; }
+            .jssorn17 .av { background-position: -67px -7px; }
+            .jssorn17 .dn, .jssorn17 .dn:hover { background-position: -97px -7px; }
+        </style>
+        <!-- navigator container -->
+        <div u="navigator" class="jssorn17" style="position: absolute; bottom: 16px; right: 6px;">
+            <!-- navigator item prototype -->
+            <div u="prototype" style="POSITION: absolute; WIDTH: 16px; HEIGHT: 16px;"></div>
+        </div>
+        <!-- Navigator Skin End -->
+        <!-- Trigger --> 
+        <script>
+            jssor_slider1_starter('slider1_container');
+        </script> 
+    </div>           
+                </div>
+                <div id="quickmenu" class="left">
+                    <h2 class="replace">Our Schools</h2>
+                    <div class="viewport">
+                        <ul class="overview">
+                                                    <li><a href="ourschool.php?type=introduction" class="menu-box round_4"> <span class="title">Introduction</span><span class="arrow"></span> </a></li>
+                           
+                                                    <li><a href="ourschool.php?type=motto_and_aims" class="menu-box round_4"> <span class="title">Vision & Mission</span><span class="arrow"></span> </a></li>
+                           
+                                                    <li><a href="ourschool.php?type=present_facilities" class="menu-box round_4"> <span class="title">Striking Features of the Institution</span><span class="arrow"></span> </a></li>
+                           
+                                                    <li><a href="ourschool.php?type=administration_body" class="menu-box round_4"> <span class="title">Rules related to tution fees</span><span class="arrow"></span> </a></li>
+                           
+                                                    <li><a href="ourschool.php?type=contact_us" class="menu-box round_4"> <span class="title">Contact Us</span><span class="arrow"></span> </a></li>
+                           
+                                                   
+                        </ul>
+                    </div>
+                    <a class="buttons prev" href="#">Prev</a> <a class="buttons next" href="#">Next</a> </div>
+		</div>
+        	<div class="contentarea">
+            	<div class="leftarea">
+                	<div class="leftside">
+                        <div class="topleft homepage">
+                        	                            <h2>Hacked Anonymous Arabe</h2>
+                            <!--<h3>Rangpur Cantonment</h3>-->
+                                                        <h1 style="text-align: center; color: #ff0000;"><span style="color: #ff0000;">#</span> <span style="color: #000000;">Hacked By Anonymous Arabe</span> <span style="color: #ff0000;"><em><strong>#</strong></em></span></h1>
+<p><span style="color: #ff0000;"><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Hacked By Ghost-iraqi009 #</strong></em></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="color: #ff0000;"><em><strong><a href="https://web.facebook.com/Anon.official.arabe2/">Anonymous Arabe sur facebook&nbsp;</a>&nbsp;<img src="tinymce/plugins/emoticons/img/smiley-wink.gif" alt="" /></strong></em></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="color: #ff0000;"><em><strong>--==| Hamooda El Bess - Black Ops - Juba 007 - Anonphantom - Boy Crazy - Emadxa Sy - Kh.040.Mar - Elgeneral - Mr. LEGenD |==--</strong></em></span></p>                        </div>
+                        <div class="homebottom">
+                                                	<div class="style1">
+                            	<h2>Facilities</h2>
+                                                        <img src="gallery/gallery__05182016134656.jpg" width="60">
+                                <p>The institution possesses for the students:
+
+A rich Library.
+Students&rsquo; guidance and... <a href="details.php?type=facilities">Read More</a></p>
+                            </div>
+                                                	<div class="style1">
+                            	<h2>Events</h2>
+                                                        <img src="gallery/gallery__07112016135337.jpg" width="60">
+                                <p>The institution possesses for the students:
+
+International Mother Laguage Day.
+Calibrating... <a href="details.php?type=events">Read More</a></p>
+                            </div>
+                                                	<div class="style1">
+                            	<h2>Awards</h2>
+                                                        <img src="gallery/" width="60">
+                                <p>Our Institution awarded for achiving place in board exam in different year. Students also get... <a href="details.php?type=awards">Read More</a></p>
+                            </div>
+                                                 
+                        </div>
+                    </div>
+                </div>
+                <div class="rightarea">
+                	<script src="js/jquery.bxslider.min.js" type="text/javascript"></script>
+<link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+blockquote {
+    /*background: url("https://dl.dropbox.com/u/96099766/RotatingTestimonial/open-quote.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background:url(open-quote.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    border: 0 none;
+    clear: both;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 29px;
+    margin: 0;
+    /*padding: 4px 0 0 36px;*/
+    position: relative;
+    quotes: none;
+}
+blockquote p a{
+	text-decoration:none;
+	color:#212121;
+}
+.notice{
+    float: left;
+    height: 347px;
+    margin: 0 15px;
+    width: 240px;
+	autoControls: true;
+}
+.webmail{
+    float: left;
+    margin: 0 15px;
+    width: 240px;
+	autoControls: true;	
+}
+.webmail > h2 {
+    border-bottom: 1px solid;
+    font-family: arial;
+    font-size: 22px;
+    margin: 10px 0;
+	color:#212121;
+}
+</style>
+<script type="text/javascript">
+         $(document).ready(function () {           
+             $('.bxslider').bxSlider({
+                // mode: 'vertical',
+				mode: 'horizontal',
+                 slideMargin: 3,
+                 auto:true,
+				 autoHover: true
+             });             
+         });
+    </script>
+ <div class="webmail">
+	<h2>Mobile Transaction</h2>
+    
+    <a href="mobiletransaction.php">Mobile Transaction</a>
+</div>
+<div class="notice">
+	<h2>Notice</h2>
+    <ul class="bxslider">
+            <li style="height:260px;">
+            <blockquote>            	
+                Junior One to Five classes will be remain closed on 7th and 8th may due to unavoidable circumstances.                <p style="text-align:right; margin:0 20px 0 0 !important;"><a href="notice.php?id=22">- Class Suspended</a></p>	
+            </blockquote>
+        </li>
+           <li style="height:260px;">
+            <blockquote>            	
+                Agami Kal-O (09-05-2016) Junior One Theke Class Five Porjonta Shokol Class Bondho Thakbe. Principal                <p style="text-align:right; margin:0 20px 0 0 !important;"><a href="notice.php?id=23">- General Notice</a></p>	
+            </blockquote>
+        </li>
+           <li style="height:260px;">
+            <blockquote>            	
+                Parents meeting of Class-V, Section-Joba, Belly &amp; Jui will be held on 25.05.16 at 10AM at PLSCR. Please attend.                <p style="text-align:right; margin:0 20px 0 0 !important;"><a href="notice.php?id=24">- Parents Meeting For Class V at 10AM</a></p>	
+            </blockquote>
+        </li>
+           <li style="height:260px;">
+            <blockquote>            	
+                Parents meeting of Class-V, Section-Padma, Shapla &amp; Golap will be held on 25.05.16 at 12 noon at PLSCR. Please attend.                <p style="text-align:right; margin:0 20px 0 0 !important;"><a href="notice.php?id=25">- Parents Meeting For Class V at 12PM</a></p>	
+            </blockquote>
+        </li>
+           
+    </ul>
+</div>
+
+<div class="webmail">
+	<h2>Web Mail</h2>
+	<a href="http://cpscrbd.com:2095/"><img src="images/WebMail21.png" width="213" height="100" /></a>
+</div>
+<div class="webmail">
+	<h2>Online Admission</h2>
+	<a href=""><img src="images/Online-Admission.png" width="243" height="80" /></a>
+</div>                </div>
+            </div>
+            <div class="footer-area">
+            	<div class="footer">
+	<div class="top-footer">
+    	<div class="left-top-footer">
+        	<h2>Campus Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.4418040105033!2d89.24660981454144!3d25.755966815124857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e32e007b5d6557%3A0x82eac090907225cb!2sPolice+Lines+School+And+College!5e0!3m2!1sen!2sbd!4v1463510055989" width="431" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="right-top-footer">
+        	<h2>Contact School</h2>
+        	<p><strong>Our Address:</strong> Police Lines School And College, Rangpur</p> 
+        	<p>Website&nbsp;&nbsp;&nbsp;&nbsp; : www.plscr.edu.bd</p>
+                <p>Email : &nbsp;&nbsp; plscr.com@gmail.com</p>
+                <p>Telephone : 0521-63532</p>
+
+
+            <!--<form id="contactform" action="" method="post">
+            	<p>
+                	<label>Name</label>
+                    <input type="text" name="name" class="txtarea"/>
+                </p>
+                <p>
+                	<label>Email</label>
+                    <input type="text" name="email" class="txtarea" />
+                </p>
+                <p>
+                	<label>Message</label>
+                    <textarea rows="7" cols="22" name="message"></textarea>
+                </p>
+                <p>
+                	<label> </label>
+                    <input type="submit" name="submitcontact" value="Send" class="btnsubmit"/>
+                </p>
+            </form>-->
+        </div>
+
+    </div>
+	<div align="center"><p style="margin:0 0 25px;">Copyright &copy; 2016 DhakaSoft, 01552-344430. All Rights Reserved | Designed by DhakaSoft</p></div>
+</div>            </div>
+       </div>
+<script type="text/javascript">
+   /* $(window).load(function() {
+        $('#slider').nivoSlider({
+			effect: 'fade', 		
+		});
+    });*/
+</script> 
+<script type="text/javascript">
+
+	// Quick Menu
+	$('#quickmenu').tinycarousel({ 
+		axis: 'y',
+		display: 3, 
+		duration: 500,
+	});
+</script>        
+    </body>
+</html>

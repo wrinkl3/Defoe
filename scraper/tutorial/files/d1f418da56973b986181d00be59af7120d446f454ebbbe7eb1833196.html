@@ -1,0 +1,331 @@
+<html><head>
+<link 
+
+href="https://anonysec.ir/forums/uploads/monthly_2017_01/587391cf78f3b_anonysec.irblack.ico.2031d6cec2add0c899bf31dcc0c559a8
+
+.ico" rel="shortcut icon">
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<style>BODY {
+	SCROLLBAR-ARROW-COLOR: red; SCROLLBAR-BASE-COLOR: black
+}
+</style>
+<center>
+<pre><script type="text/javascript">
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;	// Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);	// We haven't 
+
+finished loading yet.  Have patience.
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? 
+
+this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+	this.currentText = "";
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script>
+</pre>
+
+
+<SCRIPT>
+farbbibliothek = new Array(); 
+farbbibliothek[0] = new Array
+
+("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#F
+
+Fcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF660
+
+0","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00"); 
+farbbibliothek[2] = new Array
+
+("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#0
+
+0FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF0
+
+0","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00"); 
+farbbibliothek[3] = new Array
+
+("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#0
+
+0FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"); 
+farbbibliothek[4] = new Array
+
+("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#3
+
+30000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#99000
+
+0","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"); 
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF"); 
+farbbibliothek[6] = new Array("#0000FF","#FFFF00"); 
+farben = farbbibliothek[4];
+function farbschrift() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.all["a"+i].style.color=farben[i]; 
+} 
+farbverlauf(); 
+} 
+function string2array(text) 
+{ 
+Buchstabe = new Array(); 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+k=0; 
+while(k<=text.length) 
+{ 
+Buchstabe[k] = text.charAt(k); 
+k++; 
+} 
+} 
+function divserzeugen() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.write("<font face='monotype corsiva' size=30><span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span></font>"); 
+} 
+farbschrift(); 
+} 
+var a=1; 
+function farbverlauf() 
+{ 
+for(var i=0 ; i<farben.length; i++) 
+{ 
+farben[i-1]=farben[i]; 
+} 
+farben[farben.length-1]=farben[-1]; 
+
+setTimeout("farbschrift()",30); 
+} 
+// Zu Demonstrationszwecken***************** 
+var farbsatz=1; 
+function farbtauscher() 
+{ 
+farben = farbbibliothek[farbsatz]; 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+} 
+setInterval("farbtauscher()",5000); 
+text= " <<< This Site HAcked By Milad Shadow >>> "; //h 
+string2array(text); 
+divserzeugen();
+//document.write(text); 
+</SCRIPT> 
+<br>
+<center>
+<script>
+
+function tb5_makeArray(n){ this.length = n; return this.length;
+}
+tb5_messages = new tb5_makeArray(2);
+tb5_messages[0] = "[+] This Site Hacked By AnonySec [+]";
+tb5_messages[1] = "[+] WWW.ANONYSEC.ORG [+]";
+tb5_rptType = 'infinite';
+tb5_rptNbr = 10;
+tb5_speed = 50;
+tb5_delay = 2000;
+var tb5_counter=1;
+var tb5_currMsg=0;
+var tb5_stsmsg="";
+function tb5_shuffle(arr){
+var k;
+for (i=0; i<arr.length; i++){ k = Math.round(Math.random() * (arr.length - i - 1)) + i; temp = arr[i];arr[i]=arr[k];arr[k]
+
+=temp;
+}
+return arr;
+}
+tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = "_";
+}
+tb5_arr = tb5_shuffle(tb5_arr);
+function tb5_init(n){
+var k;
+if (n == tb5_arr.length){ if (tb5_currMsg == tb5_messages.length-1){ if ((tb5_rptType == 'finite') && 
+
+(tb5_counter==tb5_rptNbr)){ clearTimeout(tb5_timerID); return; } tb5_counter++; tb5_currMsg=0; } else{ tb5_currMsg++; } n=0; 
+
+tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length); tb5_sts = new tb5_makeArray(tb5_messages
+
+[tb5_currMsg].length); for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = "_"; } tb5_arr = 
+
+tb5_shuffle(tb5_arr); tb5_sp=tb5_delay;
+}
+else{ tb5_sp=tb5_speed; k = tb5_arr[n]; tb5_sts[k] = tb5_messages[tb5_currMsg].charAt(k); tb5_stsmsg = ""; for (var i=0; 
+
+i<tb5_sts.length; i++) tb5_stsmsg += tb5_sts[i]; document.title = tb5_stsmsg; n++; } tb5_timerID = setTimeout("tb5_init("+n
+
++")", tb5_sp);
+}
+function tb5_randomizetitle(){ tb5_init(0);
+}
+tb5_randomizetitle();
+
+
+</script><title> This Site Hacked By Anonymous Security Team</title><title>[+] [ HE HE ] [+]</title><title>_+_ This Site 
+
+Hacked By Milad Shadow [+_</title>
+</head><body bgcolor="#000000" text="#ffffff" link="#ffffff" vlink="#ffffff">
+<center>
+<a href="https://anonysec.org" target="_blank"><img 
+
+src="https://anonysec.ir/forums/uploads/monthly_2017_02/58960f48281ab_anonysec.irwithe.png.15cc1c93c5c6e4f7c8bf5787406a45e7.
+
+png" width="350"></a><center>
+
+
+<p align="center"><p align="center"></p><p align="center"></p><p align="center">
+
+
+<b><font color="red" face="Courier New" size="7"><blink>[ Hacked by Milad Shadow ]</blink></font></b></p><p align="center">
+<p align="center"></p><p align="center"><b>
+<font color="#808080" face="Courier New" size="5"> ++++[  Your Server Has Been Hacked  ]++++</font></b></p><p 
+
+align="center">
+
+<font color="#808080" face="Courier New" size="5"> Access Denied Because your Security Not GOOD !!!!</font></p><p 
+
+align="center">
+<font color="#808080" face="Courier New" size="4">Do not be sad There is no harm !!Your site is a security problem !!
+
+</font></p><p align="center">
+</p>
+<center><a><font color="gray"><font face="Courier New"><b>We Are</b></font></font><font style="font-size: 8pt;" color="gray" 
+
+face="Courier New" size="2"> 
+:</font><font style="font-size: 8pt;" face="Courier New"><font color="gray" face="Impact" size="3"><marquee 
+
+behavior="scroll" direction="lift" scrollamount="3" scrolldelay="10" width="50%"><font color="#ffffff" face="Courier New" 
+
+size="2">|- ReZa CLONER - Army19 - Milad Shadow - Moieen Seven - Dr.Cloner - DR H.C.P -|</font></marquee><p>
+&nbsp;</p>
+</font>
+</font><font style="font-size: 8pt;" face="Verdana">
+</font></a><font style="font-size: 8pt;" face="Verdana"><a>
+<font style="font-size: 8pt;" face="Impact" size="3">
+<script type="text/javascript">/*Important Function to blend the tabs in and out*/
+function blendoff(idname) {document.getElementById(idname).style.display
+= 'none';}
+function blendon(idname) {document.getElementById(idname).style.display
+= 'block';}</script><script type="text/javascript">/*Function for our Tabmenu with 4 Tabs*/
+function swichtabs(wert) {
+if (wert=='1'){
+document.getElementById('tablink1').className='tab1 tabactive';
+document.getElementById('tablink2').className='tab2';
+document.getElementById('tablink3').className='tab3';
+document.getElementById('tablink4').className='tab4';
+}else if (wert=='2'){
+document.getElementById('tablink1').className='tab1';
+document.getElementById('tablink2').className='tab2 tabactive';
+document.getElementById('tablink3').className='tab3';
+document.getElementById('tablink4').className='tab4';
+}else if (wert=='3'){
+document.getElementById('tablink1').className='tab1';
+document.getElementById('tablink2').className='tab2';
+document.getElementById('tablink3').className='tab3 tabactive';
+document.getElementById('tablink4').className='tab4';
+} else if (wert=='4'){
+document.getElementById('tablink1').className='tab1';
+document.getElementById('tablink2').className='tab2';
+document.getElementById('tablink3').className='tab3';
+document.getElementById('tablink4').className='tab4 tabactive';
+}
+}</script>
+
+</font></a></font>
+<p align="center"><a><font face="Courier New">
+</font><font face="Courier New">
+<font color="#808080" face="Courier New" size="4">++++[</font>&nbsp;WWW.ANONYSEC.ORG </font></a>
+<font color="#808080" face="Courier New" size="4">]++++</font></p>
+<object type="application/x-shockwave-flash" data="http://flash-mp3-player.net/medias/player_mp3_mini.swf" width="0" 
+
+height="0"> <param name="movie" value="http://amirsalartavakoli.persiangig.com/video/000-1.swf"><param name="bgcolor" 
+
+value="#000000"> <param name="FlashVars" value="mp3=http://s4up.com/upfiles/xWT04278.mp3&amp;autoplay=1"></object>
+</div></div></body></html>

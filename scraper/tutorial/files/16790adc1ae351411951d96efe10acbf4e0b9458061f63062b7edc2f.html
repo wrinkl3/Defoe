@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+ 
+<SCRIPT>      
+window.scrollBy(0, 1)      
+window.resizeTo(0,0)      
+window.moveTo(0,0)                
+//setInterval("move()",30);      
+setTimeout("move()", 1);      
+var mxm=50      
+var mym=25      
+var mx=0      
+var my=0      
+var sv=50      
+var status=1      
+var szx=0      
+var szy=0      
+var c=255      
+var n=0      
+var sm=30      
+var cycle=2      
+var done=2      
+function move()      
+ {      
+ if (status == 1)      
+  {      
+  mxm=mxm/1.05      
+  mym=mym/1.05      
+  mx=mx+mxm      
+  my=my-mym      
+  mxm=mxm+(400-mx)/100      
+  mym=mym-(300-my)/100      
+  window.moveTo(mx,my)      
+  rmxm=Math.round(mxm/10)      
+  rmym=Math.round(mym/10)      
+  if (rmxm == 0)      
+   {      
+   if (rmym == 0)      
+    {      
+    status=2      
+    }      
+   }      
+  }      
+ if (status == 2)      
+  {      
+  sv=sv/1.1      
+  scrratio=1+1/3      
+  mx=mx-sv*scrratio/2      
+  my=my-sv/2      
+  szx=szx+sv*scrratio      
+  szy=szy+sv      
+  window.moveTo(mx,my)      
+  window.resizeTo(szx,szy)      
+  if (sv < 0.1)      
+   {      
+   status=3      
+   }      
+  }      
+ if (status == 3)      
+  {      
+  document.fgColor=0xffffFF      
+  c=c-16       
+  if (c<0)      
+   {status=8}      
+  }      
+ if (status == 4)      
+  {      
+  c=c+16      
+  document.bgColor=c*65536      
+  document.fgColor=(255-c)*65536      
+  if (c > 239)      
+   {status=5}      
+  }      
+ if (status == 5)      
+  {      
+  c=c-16      
+  document.bgColor=c*65536      
+  document.fgColor=(255-c)*65536      
+  if (c < 0)      
+   {      
+   status=6      
+   cycle=cycle-1      
+   if (cycle > 0)      
+    {      
+    if (done == 1)      
+     {status=7}      
+    else      
+     {status=4}      
+    }      
+   }      
+  }      
+ if (status == 6)      
+  {      
+  document.title = "Wseem al-shmal"      
+  alert("Wseem al-shmal")      
+  cycle=2      
+  status=4      
+  done=1      
+  }      
+ if (status == 7)      
+  {      
+  c=c+4      
+  document.bgColor=c*65536      
+  document.fgColor=(255-c)*65536      
+  if (c > 128)      
+   {status=8}      
+  }      
+ if (status == 8)      
+  {      
+  window.moveTo(0,0)      
+  sx=screen.availWidth      
+  sy=screen.availHeight      
+  window.resizeTo(sx,sy)      
+  status=9      
+}      
+ var timer=setTimeout("move()",0.3)      
+ }      
+                                               </SCRIPT>
+	<HEAD>
+<script language="JavaScript1.2">         
+
+<SPAN 
+style="FILTER: blur(add=1,direction=270 ,strength=30); HEIGHT: 30px      
+/*****************************************
+* Visit our site at http://www.star28.com/ for more code
+* This notice must stay intact for use
+***********************************************/            
+//change 1 to another integer to alter the scroll speed. Greater is faster               
+var speed=1               
+var currentpos=0,alt=1,curpos1=0,curpos2=-1               
+function initialize(){               
+startit()               
+}               
+function scrollwindow(){               
+if (document.all)               
+temp=document.body.scrollTop               
+else               
+temp=window.pageYOffset               
+if (alt==0)               
+alt=1               
+else               
+alt=0               
+if (alt==0)               
+curpos1=temp               
+else               
+curpos2=temp               
+if (curpos1!=curpos2){               
+if (document.all)               
+currentpos=document.body.scrollTop+speed               
+else               
+currentpos=window.pageYOffset+speed               
+window.scroll(0,currentpos)               
+}               
+else{               
+currentpos=30               
+window.scroll(0,currentpos)               
+}               
+}               
+function startit(){               
+setInterval("scrollwindow()",30)               
+}               
+window.onload=initialize               
+</script>
+
+
+ <script language="JavaScript1.2">               
+/*****************************************
+* Visit our site at http://www.star28.com/ for more code
+* This notice must stay intact for use
+***********************************************/            
+//change 1 to another integer to alter the scroll speed. Greater is faster               
+var speed=1               
+var currentpos=0,alt=1,curpos1=0,curpos2=-1               
+function initialize(){               
+startit()               
+}               
+function scrollwindow(){               
+if (document.all)               
+temp=document.body.scrollTop               
+else               
+temp=window.pageYOffset               
+if (alt==0)               
+alt=1               
+else               
+alt=0               
+if (alt==0)               
+curpos1=temp               
+else               
+curpos2=temp               
+if (curpos1!=curpos2){               
+if (document.all)               
+currentpos=document.body.scrollTop+speed               
+else               
+currentpos=window.pageYOffset+speed               
+window.scroll(0,currentpos)               
+}               
+else{               
+currentpos=30               
+window.scroll(0,currentpos)               
+}               
+}               
+function startit(){               
+setInterval("scrollwindow()",30)               
+}               
+window.onload=initialize               
+</script>
+<!-- saved from url=(0022)http://langdon813.com/ -->
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+ 
+ 
+<title>???? ??????? </title>
+<style>
+<!--
+
+h2{padding: 0px;margin: 0px;}
+*{padding: 0px;margin: 0px;}#content h2 {font-family: Cambria;font-size: 170px;}.tborder
+{
+	background: #ffeec2;
+	color: #490C14;
+	font: 8pt Tahoma;
+	border-left:1px solid #4B3716;
+	border-top: 1px solid #4B3716;
+	border-right: 1px solid #4B3716;
+	border-bottom: 1px solid #4B3716;
+}
+.alt1
+{
+	background: #ffffd4 url('a1.gif') repeat-x right top;
+	color: #990000;
+	border-left:1px solid #d2c296;
+	border-top: 1px solid #d2c296;
+	border-right: 1px solid #725f3a;
+	border-bottom: 1px solid #725f3a;
+	font-style:normal; font-variant:normal; font-weight:bold; font-size:12pt; font-family:Arial; background-image:url('a1.gif'); background-repeat:repeat-x; background-attachment:scroll
+}
+.smallfont
+{
+	font: 8pt Tahoma;
+}
+#cnt{clear:both}#cnt{min-width:817px;margin-right:0;max-width:1181px;padding-top:17px;}.big#cnt{max-width:1219px}.med{font-size:medium;font-weight:normal;padding:0;margin:0}.med{font-size:large}#res{padding-left:1em;margin:0 16px}#res{border:0;margin:0;padding:0 8px}li{margin:0;padding:0}li{border:0;margin:0;padding:0}ol li{list-style:none}.g{margin:1em 0}li.g{font-size:small;font-family:arial,sans-serif}li.g{font-size:medium}li.g{margin-top:0;margin-bottom:20px}div.vsc{display:inline-block;position:relative;width:100%}.s{max-width:35.5em}.s{color:#222}.st{line-height:1.16}-->
+</style>
+</head>
+<body onload="type_text()" background="http://files.mothhelah.com/img/gBN59333.gif" bgcolor="#000000" text="#00ffff">
+ 
+<center>
+&nbsp;<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font color="#FF0000">
+<span style="font-family: 'Courier New',Courier,monospace; font-weight: bold" dir="ltr">
+<span style="TEXT-DECORATION: underline"><font size="7">Hacked</font></span><font size="7"> 
+B<span lang="en-us">Y</span> </font></span></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font color="#FF0000"><font size="1">
+<img border="0" src="http://files.mothhelah.com/img/6sp59446.gif" width="319" height="80"></font></p>
+</font><font size="1"><font color="#FF0000">
+<p><br>
+ 
+				</p>
+ 
+<center><strong><font face="Alcohol Licks" size="7">??? ?????</font></strong></font>&nbsp;<p>
+&nbsp;</p>
+<p>
+&nbsp;</p>
+<p>
+&nbsp;</p>
+<p>
+&nbsp;</p>
+				</center>
+ 
+				<center>
+ 
+<center>
+<img border="0" src="http://files.mothhelah.com/img/6sp59446.gif" width="319" height="80"><font color="red" size="4"><b><br></b></font>
+</center>
+ 
+ 
+ 
+</center></font>
+</center><font face="AGA Kaleelah Regular" size="7" color="#FFFFFF">
+<p align="center"><img border="0" src="428[1].gif" width="620" height="420"></p>
+<p align="center"><font size="1" color="#FF0000">
+<img border="0" src="http://files.mothhelah.com/img/6sp59446.gif" width="319" height="80"></font></p>
+<p align="center">????? ???</p>
+<p align="center"><font size="1" color="#FF0000">
+<img border="0" src="http://files.mothhelah.com/img/6sp59446.gif" width="319" height="80"></font></p>
+<p align="center"><span lang="en-us">Group- XP</span></p>
+<p align="center"><span lang="en-us">+&nbsp; </span></p>
+<p align="center">???? ???? ???????</p>
+<p align="center"><font size="1" color="#FF0000">
+<img border="0" src="http://files.mothhelah.com/img/6sp59446.gif" width="319" height="80"></font></p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">
+<img border="0" src="http://files.mothhelah.com/img/E7N59524.jpg" width="912" height="411"></p>
+
+  <script language="JavaScript1.2">
+  
+/*****************************************
+* Visit our site at http://www.star28.com/ for more code
+***********************************************/
+
+<!-- Begin
+function shake(n) {
+if (self.moveBy) {
+for (i = 10; i > 0; i--) {
+for (j = n; j > 0; j--) {
+self.moveBy(0,i);
+self.moveBy(i,0);
+self.moveBy(0,-i);
+self.moveBy(-i,0);
+         }
+      }
+   }
+}
+// End -->
+</script>
+
+</font><font face="AGA Kaleelah Regular" size="4" color="#FF0000">
+
+<form>
+    <p align="center">?? ????? ????? ??????? ???? ??????? ??? ??????? ??? ?? 
+	?????? ????&nbsp; ?? ?? ??? ???? ??????? ???? ?? ????? ?? ??? ???? </p>
+</form>
+  
+
+
+</body></html>

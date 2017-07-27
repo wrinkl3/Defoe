@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Forteks Engenharia</title>
+<link href="css/forteks-estilo.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="css/coin-slider-styles.css" type="text/css" />
+<link type="text/css" href="css/banner.css" rel="stylesheet" />
+
+<!-- Lightbox jquery -->
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/borda.js"></script>
+<script type="text/javascript" src="lightbox_jquery/js/jquery.lightbox-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="lightbox_jquery/css/jquery.lightbox-0.5.css" media="screen" />
+<!-- Máscara para input -->
+<script type="text/javascript" language="javascript" src="js/jquery.maskedinput.js"></script>
+<!-- Banner -->
+<script language="javascript" src="js/banner.js" type="text/javascript"></script>
+<script type="text/javascript" language="javascript" src="js/coin-slider.min.js"></script>
+
+<script>
+	// Borda arrendondadas
+	DD_roundies.addRule('.geral .meio .interna .col1 .subitens .subitem a.mais','3px 3px 10px 3px', true);
+	DD_roundies.addRule('.geral .meio .interna .col1 .subitens .subitem a.img','3px 3px', true);
+	DD_roundies.addRule('.geral .meio .interna .col1 .conteudo_galeria a.voltar','3px 3px 3px 10px', true);
+
+//Coin slider [index]
+$(document).ready(function() {
+	$("#coin-slider").coinslider({ width: 960, height: 250});
+	//$(".bg .geral .meio_interna .interna .tit").append('<div class="fim_titulo"></div>');
+	//$(".bg .geral .meio_interna .interna_ext .tit").append('<div class="fim_titulo"></div>');
+});
+$(function(){
+	$(".menu ul li").hover(function(){
+		left = $(this).offset().left;
+		$("ul",this).css("left", left+"px");
+		$(this).children("ul").show(400);
+			
+	}, function(){
+		$(this).children("ul").hide(400);
+	});
+})
+$(function(){
+	$(".geral .meio .col1 .noticia_dest ul li a").click(function(){
+		//linq = $("a",this).attr("href");
+		//linq = linq.substring(9);
+		img = $("img",this).attr("src");
+		linq = $("img",this).attr("alt");
+		linq = "pg_noticia.php?secao=noticia&idcat="+linq;
+		tit = $("strong",this).html();
+		txt = $("span",this).html();
+		//alert("linq= "+linq);
+		
+		$(".geral .meio .col1 .noticia_dest .img_grande a").attr("href", linq);
+		$(".geral .meio .col1 .noticia_dest .txt_grande a").attr("href", linq);
+		$(".geral .meio .col1 .noticia_dest ul li a").attr("class", "");		
+		$(".geral .meio .col1 .noticia_dest .img_grande img").fadeOut("fast");
+		$(".geral .meio .col1 .noticia_dest .img_grande img").css("display", "none");
+		$(".geral .meio .col1 .noticia_dest .img_grande img").attr("src", img);
+		$(".geral .meio .col1 .noticia_dest .img_grande img").fadeIn("fast");
+		txt = "<strong>"+tit+"</strong><br>"+txt;
+		$(".geral .meio .col1 .noticia_dest .txt_grande a").html(txt);
+		$(this).attr("class", "ativo");
+			
+	});
+});
+
+</script>
+<script type="text/javascript">
+
+	//DD_roundies.addRule('.bt_form','5px 5px', true);
+
+	//Habilita o LightBox	
+	$(function() {
+		$('.lightbox').lightBox();
+	});
+</script>
+<!-- Fim Lightbox jquery -->
+<script>
+
+	$(document).ready(function() {
+		// Máscara para telefone
+		$("#fone").mask("(99) 9999-9999");
+	});
+
+	//valida email
+	function eh_email(mail){
+		var ret = false;
+		if (typeof(mail) != "undefined"){
+		  mail = mail.match(/(\w+)@(.+)\.(\w+)$/);
+		  if (mail != null){
+			 if ((mail[3].length==2) || (mail[3].length==3)) 
+				ret = true;
+			 }
+		  }
+		return ret;
+	}
+
+
+	// valida formulario de contato
+	function valida_contato(){
+	if(document.form_ct.nome.value==""){
+		alert("Preencha o campo Nome.");
+		document.form_ct.nome.focus();
+		return false;
+	}else if(document.form_ct.email.value==""){
+		alert("Preencha o campo E-mail.");
+		document.form_ct.email.focus();			
+		return false;
+	}else if(!eh_email(document.form_ct.email.value)) {
+		alert("Informe um e-mail válido!");
+		document.form_ct.email.focus();
+		return false;
+	}else if(document.form_ct.assunto_para.value==""){
+		alert("Informe o Assunto.");
+		document.form_ct.assunto_para.focus();
+		return false;
+	}else if(document.form_ct.fone.value==""|| document.orc_pf.fone.value=="(__) ____-____"){
+		alert("Informe um número para contato.");
+		document.form_ct.fone.focus();
+		return false;
+	}else if(document.form_ct.mensagem.value==""){
+		alert("Digite a sua Mensagem.");
+		document.form_ct.mensagem.focus();
+		return false;
+	}
+	return true;
+}
+
+// valida Trabalhe conosco
+function valida_trab_conosco(){
+	if(document.form_ct.nome.value==""){
+		alert("Preencha o campo Nome.");
+		document.form_ct.nome.focus();
+		return false;
+	}else if(document.form_ct.email.value==""){
+		alert("Preencha o campo E-mail.");
+		document.form_ct.email.focus();			
+		return false;
+	}else if(!eh_email(document.form_ct.email.value)) {
+		alert("Informe um e-mail válido!");
+		document.form_ct.email.focus();
+		return false;
+	}else if(document.form_ct.fone.value==""){
+		alert("Informe um número para contato.");
+		document.form_ct.fone.focus();
+		return false;
+	}else if(document.form_ct.arquivo.value==""){
+		alert("Selecione um arquivo para enviar.");
+		document.form_ct.arquivo.focus();
+		return false;
+	}
+	return true;
+}
+
+/*
+$(function(){
+	var alinhamento = $(".conteudo_mais img").attr("align");
+	var ali_video = $(".geral .meio .interna .col1 .interna_video .ver_video").attr("align");
+	var src = $(".conteudo_mais img").attr("src");
+	if(alinhamento!="left"){		
+		$(".conteudo_mais img").css("margin-left","8px");
+		$(".conteudo_mais img").css("margin-bottom","8px");
+	}else{
+		$(".conteudo_mais img").css("margin-right","8px");
+		$(".conteudo_mais img").css("margin-bottom","8px");	
+	}
+	if(ali_video!="left" && ali_video=="undefined"){		
+		$(".geral .meio .interna .col1 .interna_video .ver_video img").css("margin-left","8px");
+		$(".geral .meio .interna .col1 .interna_video .ver_video img").css("margin-bottom","8px");
+		$(".geral .meio .interna .col1 .interna_video .ver_video iframe").css("margin-left","8px");
+		$(".geral .meio .interna .col1 .interna_video .ver_video iframe").css("margin-bottom","8px");
+	}else{
+		$(".geral .meio .interna .col1 .interna_video .ver_video img").css("margin-right","8px");
+		$(".geral .meio .interna .col1 .interna_video .ver_video img").css("margin-bottom","8px");
+		$(".geral .meio .interna .col1 .interna_video .ver_video iframez").css("margin-right","8px");
+		$(".geral .meio .interna .col1 .interna_video .ver_video iframe").css("margin-bottom","8px");	
+	}
+})*/
+</script>
+<script language="javascript" src="js/banner_parceiro_p.js" type="text/javascript"></script>
+<script>
+	$(function(){
+		banner_parceiro_p();
+	});
+</script>
+<style>
+<!--
+.bg {
+	width:100%;
+	@width:99.9%;
+	background:#FFF url(img/bg_body_int.png) left top repeat-x;
+	margin:0;
+	float:left;
+	padding:0 0 0 0;
+	height:auto;
+}
+#twitter_update_list {
+	font-size: 13px;
+	line-height: 21px;
+	list-style: none;
+	}
+#twitter_update_list li {
+	border-bottom:#f2f2f2 1px solid;
+	padding-bottom: 7px;
+	margin-bottom: 9px;
+	}
+#twitter_update_list span, {
+	color: #444444;
+	text-decoration: none;
+	}
+ 
+#twitter_update_list span a {
+	color: #445566;
+	}
+ 
+#twitter_update_list span a:hover {
+	color: #223344;
+	}
+ 
+#twitter_update_list a {
+	color: #445566;
+	}
+-->
+</style>
+</head>
+
+<body>
+<div class="bg">
+<div class="geral">
+		    <div class="topo">
+    	<div class="logo" title="Início"><a href="./"></a></div>
+        <div class="menu">
+        	<ul>
+            	<li><a href="index.php">Início</a></li>
+                <li><a href="javascript:void(0);">Empresa</a>
+                    <ul class="submenu" style="display:none;">
+                    	<li class="itemativo"><a href="javascript:void(0);">Empresa</a></li>
+                                                <li><a href="pg_conteudo.php?secao=empresa&idcat=78">Organograma corporativo</a></li>
+                                                <li><a href="pg_conteudo.php?secao=empresa&idcat=14">História</a></li>
+                                                <li><a href="pg_conteudo.php?secao=empresa&idcat=9">Visão, Missão e Valores</a></li>
+                                                <li><a href="pg_conteudo.php?secao=empresa&idcat=76">Organograma Corporativo em QSMS</a></li>
+                                                <li><a href="pg_conteudo.php?secao=empresa&idcat=19">Localização</a></li>
+                                            </ul>
+                </li>
+                
+                <li><a href="javascript:void(0);">Atuação</a>
+                	<ul class="submenu" style="display:none;">
+                    	<li class="itemativo"><a href="javascript:void(0);">Atuação</a></li>
+                                                <li><a href="pg_conteudo.php?secao=atuacao&idcat=1">Hacked by Houssem_Rx </a></li>
+                                                <li><a href="pg_conteudo.php?secao=atuacao&idcat=61">Manutenção Predial e Industrial</a></li>
+                                                <li><a href="pg_conteudo.php?secao=atuacao&idcat=62">Limpeza e Conservação  Predial</a></li>
+                                                <li><a href="pg_conteudo.php?secao=atuacao&idcat=63">Locação de Mão de Obra</a></li>
+                                                <li><a href="pg_conteudo.php?secao=atuacao&idcat=64">Locação de Veículos</a></li>
+                                                <li><a href="pg_conteudo.php?secao=atuacao&idcat=65">Guindastes e Munck</a></li>
+                                            </ul>
+                </li>
+                <li><a href="cliente.php">Clientes</a></li>              
+                <li><a href="javascript:void(0);">Obras e Serviços</a>
+                	<ul class="submenu" style="display:none;">
+                    	<li class="itemativo"><a href="javascript:void(0);">Obras e Serviços</a></li>
+                                                <li><a href="pg_conteudo.php?secao=obraservico&idcat=27">Em andamento</a></li>
+                                                <li><a href="pg_conteudo.php?secao=obraservico&idcat=28">Concluídas</a></li>
+                                            </ul>
+                </li>
+                <li><a href="javascript:void(0);"><img src="img/sgi.png" border="0" /></a>
+                	<ul class="submenu" style="display:none; margin:0px 0 0 0;">
+                    	<li class="itemativo"><a href="javascript:void(0);"><img src="img/sgi.png" border="0" /></a></li>
+                                                <li><a href="pg_conteudo.php?secao=sgi&idcat=60">Certificado SGI</a></li>
+                                                <li><a href="pg_conteudo.php?secao=sgi&idcat=59">Código de Ética</a></li>
+                                            </ul>
+                </li>                
+                <li><a href="trab_conosco.php">Trabalhe Conosco</a></li>
+                <li><a href="fale_conosco.php">Fale Conosco</a></li>
+            </ul>
+        </div>
+    </div>    
+    <div class="meio">
+    
+    	<div class="interna">
+        	            <div class="tit">Atuação / Hacked by Houssem_Rx </div>
+
+            <div class="col1">
+            <div class="conteudo_mais">
+			
+            <h2>Hacked by Houssem_Rx </h2><br />
+			<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	&nbsp;</p><br />
+<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	Own3d by Houssem_Rx</p><br />
+<p><br />
+	Tunisian Hackers ^_^ !</p><br />
+			            <div class="arquivoAnexoImg"><div class="titArquivoAnexo"></div><ul></ul></div>			            
+                        	<div class="galeriaSeTem">
+					<a href="galeria.php?idgal=961914"></a></h3>              
+                </div>
+                        					<div class="redesociais">
+                    <!-- AddThis Button BEGIN -->
+                    <div class="addthis_toolbox addthis_default_style ">
+                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                    <a class="addthis_button_tweet"></a>
+                    <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+                    <div class="g-plusone" data-size="medium" data-href="http://www.3webs.com.br/" style="clear:both;"></div>
+                    </div><!--a class="addthis_button_pinterest_pinit" style="float:left; display:inline;"></a>
+                    <a class="addthis_counter addthis_pill_style" style="float:left; display:inline;"></a>
+                    
+                    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script-->
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51006e5f4c328d47"></script>
+                    <!-- AddThis Button END -->
+                    </div>            </div>
+            <div class="subitens">
+                        	
+                <div class="subitem">
+                <a href="pg_conteudo_sub.php?secao=atuacao&idcat=1&idsubcat=1">
+                    <h3>subcat 1 > cat 1 > atuacao</h3>
+                    <div class="texto">
+				<div class="imgMini"><img src="admin/" border="0" align="left" width="100" /></div>						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the...</div>
+                    <div class="bt_mais">ver mais</div>
+                </a>
+                </div>
+                        	
+                <div class="subitem">
+                <a href="pg_conteudo_sub.php?secao=atuacao&idcat=1&idsubcat=2">
+                    <h3>subcat 2 > cat 1 > atuacao</h3>
+                    <div class="texto">
+									
+	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an...</div>
+                    <div class="bt_mais">ver mais</div>
+                </a>
+                </div>
+                        </div>
+
+			</div>
+            	<div class="col2">
+            	                <div class="video_dest">
+               	  <div class="tit"></div>
+                    <div class="video_code">
+                                        </div>
+                    <a href="pg_video.php?id=73"><img src="admin/ckeditor/ckfinder/userfiles/Images/videos/videos.jpg" width="260" border="0" /></a>
+                                        <div class="mais"><a href="pg_video.php">Mais vídeos</a></div>
+                </div>
+                                                <div class="depoi">
+                	                	<a href="pg_depoi.php?secao=depoimento&idcat=69">
+                    <div class="tit"></div>                    
+                    <div class="depoi_txt">
+                    
+	
+
+	&ldquo;&Eacute; ter a oportunidade de crescer profissionalmente, compartilhar os conhecimentos e pr&aacute;tica com uma equipe qualificada; Ter perspectiva de melhoria,...                    <span></span>
+                    </div>
+                    </a>
+                                        <div class="mais"><a href="pg_depoi.php">Mais depoimentos</a></div>
+                </div>
+				                <div class="twitter">
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'leonardofbfilho',
+  interval: 30000,
+  title: 'Construtora',
+  subject: 'Forteks Engenharia',
+  width: 260,
+  height: 200,
+  links: '',
+  theme: {
+	shell: {
+	  background: '#74699A',
+	  color: '#ffffff'
+	},
+	tweets: {
+	  background: '#ffffff',
+	  color: '#444444',
+	  links: '#1985b5'
+	}
+  },
+  features: {
+	scrollbar: false,
+	loop: true,
+	live: true,
+	behavior: 'default'
+  }
+}).render().start();
+</script>
+</div>			</div>        </div>
+    </div>
+    
+</div>
+</div>
+<div class="rodape">
+	<div class="rodape-centro">
+    	<div class="endereco">
+            Rua Cezídio de Albuquerque, 240<br />
+			Cidade dos funcionários - Fortaleza/CE<br />
+            Fone/Fax: (85) 3279-2009 / 3279-1499<br />
+            E-mail: forteks@forteks.com.br
+        </div>
+        <div class="direitos">
+        	© Forteks Engenharia 2013 - Todos os direitos reservados.
+        </div>
+        <div class="selo3webs">
+        	<a href="http://www.3webs.com.br/" target="_blank" title="3webs"></a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

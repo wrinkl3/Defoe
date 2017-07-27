@@ -1,0 +1,675 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="Content-Style-Type" content="text/css"/>
+	<title>EMA - Weather Forecast</title>
+	<script src="/scripts/jquery/jquery.js" type="text/javascript" ></script>
+	<link href="/layouts/egypt/styles/template.css" rel="stylesheet" type="text/css" />
+	
+		
+		<!--[if lte IE 6]>
+		<link href="/layouts/egypt/styles/ie6.css" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		
+		<!--[if gte IE 7.0]>
+		<link href="/layouts/egypt/styles/ie7.css" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		
+	
+</head>
+
+<body id="bg-body">
+<div id="mfi-general-container">
+
+	<!-- BEGIN: HEADER -->
+	<a name="Top" id="Top"></a>
+		<div id="mfi-header">
+			<div id="mfi-header-top">
+				<div class="logolang-container">
+					<div class="logo">
+						<a href="/">
+						<img src="/layouts/egypt/images/logo_ema.jpg" />
+						</a>
+					</div>
+					<div id="mfi-header-lang">
+						<span class="ja-usertools">
+							<!-- Language Selectors -->
+							<a href="/articles?menu=62&amp;articleid=132%3E%3Ch1%3Ehacked+by+Freebsdsudan%3C/h1%3E&lang=en"><img style="cursor: pointer;" title="English" src="/images/flag/en.gif" id="flag" /></a><a href="/articles?menu=62&amp;articleid=132%3E%3Ch1%3Ehacked+by+Freebsdsudan%3C/h1%3E&lang=eg"><img style="cursor: pointer;" title="Arabic Egyptian" src="/images/flag/eg.gif" id="flag" /></a>						</span>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div id="mfi-header-mainmenu">
+					<div class="header-modules" ><div class="classic"  ><div class="module-content"><ul> <li   ><a href="/map?menu=3&lang="><h1>hacked by Freebsdsudan</h1>" >Weather</a></li>
+ <li   ><a href="/articles?menu=61&lang="><h1>hacked by Freebsdsudan</h1>" >Climate</a></li>
+ <li   ><a href="/productview?menu=83&lang="><h1>hacked by Freebsdsudan</h1>" >Marine</a></li>
+ <li   ><a href="/articles?menu=52&lang="><h1>hacked by Freebsdsudan</h1>" >Research</a></li>
+ <li class='active_menu'  ><a href="/articles?menu=62&lang="><h1>hacked by Freebsdsudan</h1>" >News</a></li>
+ <li   ><a href="/articles?menu=63&lang="><h1>hacked by Freebsdsudan</h1>" >Cooperation</a></li>
+ <li   ><a href="/articles?menu=36&lang="><h1>hacked by Freebsdsudan</h1>" >About</a></li>
+</ul></div><div class="module-footer"></div></div></div>				</div>
+			</div>
+			<div id="mfi-header-bluearea"></div>
+		</div>
+	<!-- END: HEADER -->
+	
+	<!-- BEGIN: WHITE AREA -->
+	<div id="mfi-top">	
+		<div class="top-modules" ><div class="buttonstyle"  ><div class="module-content"><div class='buttonstyle'><div class='module-title'></div><div class='module-content'><ul> <li   ><a href="http://ema.gov.eg/userauth/index/loginm" target='_self'>Agromet private access</a></li>
+ <li   ><a href="http://mail.ema.gov.eg/src/login.php" target='_blank'>Mail Access</a></li>
+</ul></div><div class='module-footer'></div></div></div><div class="module-footer"></div></div><div class="buttonstyle"  ><div class="module-content"><form method="post" action="/search/index/find?lang="><h1>hacked by Freebsdsudan</h1>" id="form">
+	<div class="mfi-search">
+		<label>Search</label>
+	
+			<input type="text" name="searchfield" value="" />
+			<input type="button" id="gobutton" name="go" value=""  onclick="$('form#form').submit()" />
+	</div>
+</form>
+</div><div class="module-footer"></div></div></div>	</div>
+	<!-- END: WHITE AREA -->
+	
+	<!-- BEGIN: WARNING AREA -->
+	<div id="mfi-topright">
+			<div class="topright-modules" ><div class="warnings"  ><div class="module-content"><div class="warning-container">
+	<div class="warning-shadow"></div>
+	<div class="warning-image">
+		<img src="/data/warning/warning_thumb.jpg"  border="0" width="100" height="90"/>
+	</div>
+	<div class="warning-content">
+		<div class="warning-title">
+			Warnings		</div>
+		<div class="warning-text">
+			<span class="generatewarning">Warning generate</span>
+		</div>
+				<div>
+			<a href="/detailwarning?menu=62&lang="><h1>hacked by Freebsdsudan</h1>">> Details</a>
+		</div>
+			</div>
+</div>
+</div><div class="module-footer"></div></div></div>	</div>
+	<!-- END: WARNING AREA -->
+
+		<div id="mfi-content">
+			<!-- BEGIN: LEFT COLUMN -->
+			<div id="mfi-leftcol">
+				<div class="left-modules" ><div class="none"  ><div class="module-content"><div class='classic'><div class='module-title'></div><div class='module-content'><ul> <li   ><a href="/articles?menu=37&lang="><h1>hacked by Freebsdsudan</h1>" >Training</a></li>
+ <li  style='margin-left:20px;' ><a href="/productview?menu=74&lang="><h1>hacked by Freebsdsudan</h1>" >Training tbooks</a></li>
+</ul></div><div class='module-footer'></div></div></div><div class="module-footer"></div></div><div class="golden"  ><div class="module-title">nwp</div><div class="module-content"><ul> <li   ><a href="http://www.mirt.gov.eg" target='_blank'>rtc</a></li>
+ <li   ><a href="http://www.nwp.gov.eg/" target='_blank'>NWP</a></li>
+</ul></div><div class="module-footer"></div></div><div class="golden"  ><div class="module-title">Links</div><div class="module-content"><ul> <li   ><a href="http://www.wmo.int" target='_blank'>WMO</a></li>
+ <li   ><a href="http://www.icao.int" target='_blank'>ICAO</a></li>
+ <li   ><a href="http://www.ictp.it" target='_blank'>ICTP</a></li>
+ <li   ><a href="http://www.arableagueonline.org" target='_blank'>Arab League</a></li>
+ <li   ><a href="http://www.noaa.gov" target='_blank'>NOAA</a></li>
+</ul></div><div class="module-footer"></div></div></div>			</div>
+			<!-- END: LEFT COLUMN -->
+			
+			<!-- BEGIN: COMPONENT CONTENT -->
+			<div id="mfi-component-content">
+				<div>
+				
+<div class="maincompo">
+	<div class="component-title">
+		????? ???????	</div>
+	<div class="component-content">
+		<div class="subinfo">
+				<a href="/articles?menu=62&lang="><h1>hacked by Freebsdsudan</h1>&catid=1" >????? ???????</a>
+				 - written by   - Tuesday 05 April, 08:33		</div>
+		
+		<div class="mainpart_article">
+					
+			<div class="introduction_article">
+				<p>
+					<table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width: 564px; margin-left: 5.4pt; border-collapse: collapse; height: 119px;">
+	<tbody>
+		<tr style="page-break-inside: avoid; height: 45.15pt;">
+			<td style="padding: 0in 5.4pt; width: 272.05pt; height: 45.15pt;" valign="top" width="363">
+				<h1 dir="ltr" style="text-align: center;">
+					<strong><span style="font-size: 12px;">Egyptian Meteorological Authority</span></strong></h1>
+				<h1 dir="ltr" style="text-align: center;">
+					<strong><span style="font-size: 12px;">(EMA)</span></strong></h1>
+			</td>
+			<td style="padding: 0in 5.4pt; width: 82.05pt; height: 45.15pt;" valign="top" width="109">
+				<p class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b style=""><o:p>&nbsp;</o:p></b></span><span style="font-size: 14px;"><b style=""><o:p></o:p></b></span></p>
+			</td>
+			<td style="padding: 0in 5.4pt; width: 82.05pt; height: 45.15pt;" valign="top" width="109">
+				<p class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<b style=""><o:p></o:p></b></p>
+			</td>
+			<td style="padding: 0in 5.4pt; width: 82.05pt; height: 45.15pt;" valign="top" width="109">
+				<p class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<b style=""><o:p></o:p></b></p>
+			</td>
+			<td style="padding: 0in 5.4pt; width: 333pt; height: 45.15pt;" valign="top" width="444">
+				<h1 dir="ltr" style="text-align: center;">
+					<span style="font-size: 14px;">World Meteorological Organization</span></h1>
+				<p>
+					<span style="font-size: 12px;"><b style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; (WMO)</b></span></p>
+			</td>
+			<td style="padding: 0in 5.4pt; width: 333pt; height: 45.15pt;" valign="top" width="444">
+				&nbsp;</td>
+			<td style="padding: 0in 5.4pt; width: 333pt; height: 45.15pt;" valign="top" width="444">
+				<p class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><br />
+					</span><b style=""><span style="font-size: 16pt;"><o:p></o:p></span></b></p>
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal" dir="ltr" style="direction: ltr; unicode-bidi: embed; text-align: center;">
+	<st1:placename w:st="on"><span style="font-size: 12px;"><b style="">WMO</b></span></st1:placename><span style="font-size: 12px;"><b style=""> </b></span><b style=""><span style="font-size: 16pt;"><st1:placename w:st="on"><span style="font-size: 12px;">Regional</span></st1:placename><span style="font-size: 12px;"> </span><st1:placename w:st="on"><span style="font-size: 12px;">Training</span></st1:placename><span style="font-size: 12px;"> </span><st1:placetype w:st="on"><span style="font-size: 12px;">Center</span></st1:placetype><span style="font-size: 12px;"> / </span><st1:place w:st="on"><st1:city w:st="on"><span style="font-size: 12px;">Cairo</span></st1:city></st1:place><o:p></o:p></span></b></p>
+<p class="MsoNormal" dir="ltr" style="direction: ltr; unicode-bidi: embed; text-align: center;">
+	<span style="font-size: 12px;"><b style="">(RTC/C) List of Courses (2010-2012)</b></span><b style=""><span style="font-size: 16pt;"><o:p></o:p></span></b></p>
+				</p>
+				<br />
+			</div>
+						<div class="content_article"><p>
+				<p><table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border: medium none ; width: 332px; margin-left: 5.4pt; border-collapse: collapse; height: 2040px;">
+	<thead>
+		<tr style="">
+			<td style="border: 1pt solid windowtext; padding: 0in 5.4pt; background: rgb(204, 255, 204) none repeat scroll 0% 0%; width: 71.9pt; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b style="">Course</b></span><b style=""><span style="font-size: 14pt;"><o:p></o:p></span></b></p>
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b style="">Ref. No.</b></span><b style=""><span style="font-size: 14pt;"><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; background: rgb(204, 255, 204) none repeat scroll 0% 0%; width: 221.2pt; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b style=""><span lang="FR">Course Title</span></b></span><b style=""><span lang="FR" style="font-size: 14pt;"><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; background: rgb(204, 255, 204) none repeat scroll 0% 0%; width: 64.15pt; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b style=""><span lang="FR">Duration</span></b></span><b style=""><span lang="FR" style="font-size: 13pt;"><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; background: rgb(204, 255, 204) none repeat scroll 0% 0%; width: 73.2pt; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" width="98">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b style="">Starting</b></span><b style=""><span style="font-size: 14pt;"><o:p></o:p></span></b></p>
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b style="">Date</b></span><b style=""><span style="font-size: 14pt;"><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; background: rgb(204, 255, 204) none repeat scroll 0% 0%; width: 275.3pt; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b style="">Qualification</b></span><b style=""><span style="font-size: 14pt;"><o:p></o:p></span></b></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Mj-01</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc73072322"></a><a name="_Toc72749365"></a><a name="_Toc72427818"></a><a name="_Toc72427692"></a><a name="_Toc72427586"><span style=""><span style=""><span style=""><span style=""><b><span style="text-transform: uppercase;">meteorologist</span></b></span></span></span></span></a></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>8 Months</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Nov. every year</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<h2 align="center" dir="ltr" style="text-align: center; line-height: 12pt;">
+					<span style="font-size: 12px;">B.Sc. in Physics and/or mathematics</span></h2>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b><span lang="FR">Mm-01</span></b></span><b><span lang="FR" style=""><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc73072323"></a><a name="_Toc72749366"></a><a name="_Toc72427819"></a><a name="_Toc72427693"></a><a name="_Toc72427587"></a><a name="_Toc72427223"></a><a name="_Toc72427112"></a><a name="_Toc72426695"><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><b><span lang="FR" style="text-transform: uppercase;">Satellite images interpretation</span></b></span></span></span></span></span></span></span></a></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<h2 align="center" dir="ltr" style="text-align: center;">
+					<span style="font-size: 12px;"><a name="_Toc72426170">4 Weeks</a></span></h2>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Dec. every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Mj-01 &amp; 2 years Experience as a forecaster in any Forecasting Center</b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Mm-02</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;"><a name="_Toc73072324"></a><a name="_Toc72749367"></a><a name="_Toc72427820"></a><a name="_Toc72427694"></a><a name="_Toc72427588"></a><a name="_Toc72427224"></a><a name="_Toc72427113"></a><a name="_Toc72426702"><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="text-transform: uppercase;">Numerical weather prediction</span></span></span></span></span></span></span></span></a></span><span style="text-transform: uppercase;"><o:p></o:p></span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc72426187"><b><span style="">8 Weeks</span></b></a></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Jan. every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc72426185"><b><span style="">Mj-01 &amp; 2 years Experience as a forecaster in any </span></b></a></span><st1:place w:st="on"><st1:placename w:st="on"><span style="font-size: 12px;"><b>Forecasting</b></span></st1:placename><span style="font-size: 12px;"><b> </b></span><span style=""><b><span style=""><st1:placetype w:st="on"><span style="font-size: 12px;">Center</span></st1:placetype></span></b></span></st1:place><span style="font-size: 12px;"><b>. (UNIX and Fortran are highly needed)</b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Mm-03</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<h2 align="center" dir="ltr" style="text-align: center;">
+					<span style="font-size: 12px;"><a name="_Toc73072325"></a><a name="_Toc72749368"></a><a name="_Toc72427821"></a><a name="_Toc72427695"></a><a name="_Toc72427589"></a><a name="_Toc72427225"></a><a name="_Toc72427114"></a><a name="_Toc72426709"><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="text-transform: uppercase;">Synoptic meteorology</span></span></span></span></span></span></span></span></a></span><span style="text-transform: uppercase;"><o:p></o:p></span></h2>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc72426203"><b>8 Weeks</b></a></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Mar. every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Mj-01 &amp; 3 years Experience as a forecaster in international weather Center</b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Mm-04</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc73072326"></a><a name="_Toc72749369"></a><a name="_Toc72427822"></a><a name="_Toc72427696"></a><a name="_Toc72427590"></a><a name="_Toc72427226"></a><a name="_Toc72427115"></a><a name="_Toc72426715"><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><b><span style="text-transform: uppercase;">Agrometeorologist</span></b></span></span></span></span></span></span></span></a></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>&nbsp;8 Weeks</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Feb. every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Mj-01 &amp; 2 years Experience as a forecaster in any Forecasting Center</b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTj-01</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc73072327"></a><a name="_Toc72749378"></a><a name="_Toc72427830"></a><a name="_Toc72427704"></a><a name="_Toc72427598"></a><a name="_Toc72427234"></a><a name="_Toc72427124"></a><a name="_Toc72426770"><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><b><span style="text-transform: uppercase;">Meteorological observer</span></b></span></span></span></span></span></span></span></a></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>6 months</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Sep. every year</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Secondary school certificate (Science or Mathematics) and/or Electronic technician certificate</b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTm-05</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc73072328"><b><span style="text-transform: uppercase;">agromet technician</span></b></a></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b><span lang="EN-GB">9 weeks</span></b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Sep. every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>M01 &amp; 2 years Experience as a forecaster in any </b></span><b><st1:place w:st="on"><st1:placename w:st="on"><span style="font-size: 12px;">Forecasting</span></st1:placename><span style="font-size: 12px;"> </span><st1:placetype w:st="on"><span style="font-size: 12px;">Center</span></st1:placetype></st1:place><span style="font-size: 12px;"> and/or engineer of hydrology</span><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTm-01</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc73072329"></a><a name="_Toc72749371"></a><a name="_Toc72427824"></a><a name="_Toc72427698"></a><a name="_Toc72427592"></a><a name="_Toc72427228"></a><a name="_Toc72427117"></a><a name="_Toc72426724"><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><b><span style="text-transform: uppercase;">Climatolog</span></b></span></span></span></span></span></span></span></a><b><span style="text-transform: uppercase;">y technical ASSISTANT</span></b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b><span lang="EN-GB">15 weeks</span></b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Jan. every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Satisfactory completion of course MTj-01 and 2 years experience in the field of meteorology</b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTm-02</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc73072330"></a><a name="_Toc72749372"></a><a name="_Toc72427825"></a><a name="_Toc72427699"></a><a name="_Toc72427593"></a><a name="_Toc72427229"></a><a name="_Toc72427118"></a><a name="_Toc72426732"><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><b><span style="text-transform: uppercase;">Synoptic technical assistant</span></b></span></span></span></span></span></span></span></a></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>15 weeks</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Jan. every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Satisfactory completion of course MTj-01 and at least two years experience in the field of meteorology</b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTm-01-E</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc73072333"></a><a name="_Toc72749375"></a><a name="_Toc72427827"></a><a name="_Toc72427701"></a><a name="_Toc72427595"></a><a name="_Toc72427231"></a><a name="_Toc72427120"></a><a name="_Toc72426752"><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><b><span style="text-transform: uppercase;">Fundamentals of Electronics</span></b></span></span></span></span></span></span></span></a></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>8 weeks</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Feb every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Secondary school certificate (science or math) and/or Satisfactory completion of course MTj-01 </b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTm-02-E</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b><span style="text-transform: uppercase;">Logic circuits</span></b></span><b><span style="text-transform: uppercase;"><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>4 weeks</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Apr every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Secondary school certificate (science or math) and/or Satisfactory completion of course MTj-01 </b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTm-03-E</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc73072334"></a><a name="_Toc72749376"></a><a name="_Toc72427828"></a><a name="_Toc72427702"></a><a name="_Toc72427596"></a><a name="_Toc72427232"></a><a name="_Toc72427121"></a><a name="_Toc72426759"><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><b><span style="text-transform: uppercase;">Automatic weather observing systems (awos)</span></b></span></span></span></span></span></span></span></a></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>2 weeks</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Sep. every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Secondary school certificate (science or math) and/or Satisfactory completion of course MTj-01 </b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTm-04-E</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b><span style="text-transform: uppercase;">Microprocessor operations</span></b></span><b><span style="text-transform: uppercase;"><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>3 weeks</b></span><b><span style=""><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">May every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Secondary school certificate (science or math) and/or Satisfactory completion of course MTj-01 </b></span><b><span style=""><o:p></o:p></span></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTm-05-E</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc73072335"></a><a name="_Toc72749377"></a><a name="_Toc72427829"></a><a name="_Toc72427703"></a><a name="_Toc72427597"></a><a name="_Toc72427233"></a><a name="_Toc72427123"></a><a name="_Toc72426766"><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><b><span style="text-transform: uppercase;">Meteorological telecommunications</span></b></span></span></span></span></span></span></span></a></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>3 weeks</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Mar. every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Secondary school certificate (science or math) and/or Satisfactory completion of course MTj-01 </b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTm-06-E</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><a name="_Toc73072332"></a><a name="_Toc72749374"></a><a name="_Toc72427826"></a><a name="_Toc72427700"></a><a name="_Toc72427594"></a><a name="_Toc72427230"></a><a name="_Toc72427119"></a><a name="_Toc72426745"><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><b><span style="text-transform: uppercase;">Instrument calibration</span></b></span></span></span></span></span></span></span></a></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>2 weeks</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Oct. every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Secondary school certificate (science or math) and/or Satisfactory completion of course MTj-01 </b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTm-07-E</b></span><b><span style=""><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b><span style="text-transform: uppercase;">Satellite communication system</span></b></span><b><span style="text-transform: uppercase;"><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>2 weeks</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">May every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Secondary school certificate &amp; MTm-01-E</b><b> &amp; MTm-02-E</b></span><b><span style=""><o:p></o:p></span></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTj-02</b></span><b><span style=""><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b><span style="text-transform: uppercase;">AERONUTICAL METEOROLOGY</span></b></span><b><span style="text-transform: uppercase;"><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>12 weeks</b></span><b><span style=""><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Feb. every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Secondary school certificate (science or math) or MTj-01</b></span><b><span style=""><o:p></o:p></span></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Mm-05</b></span><b><span style=""><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b><span style="text-transform: uppercase;">Climatology Data Base</span></b></span><b><span style="text-transform: uppercase;"><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>8 weeks</b></span><b><span style=""><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<h3 dir="ltr">
+					<span style="font-size: 12px;">Jan. every year</span></h3>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>MTm-02 &amp; 2 years Experience as a Meteorologist </b></span><b><span style=""><o:p></o:p></span></b></p>
+			</td>
+		</tr>
+		<tr style="">
+			<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 71.9pt;" width="96">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>HTj-01</b></span><b><span style=""><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 221.2pt;" width="295">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b><span style="text-transform: uppercase;">HYdrological TECHNICIAN</span></b></span><b><span style="text-transform: uppercase;"><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 64.15pt;" width="86">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>12 weeks</b></span><b><span style=""><o:p></o:p></span></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 73.2pt;" width="98">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Nov. every year</b></span><b><o:p></o:p></b></p>
+			</td>
+			<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 275.3pt;" width="367">
+				<p align="center" class="MsoNormal" dir="ltr" style="text-align: center; direction: ltr; unicode-bidi: embed;">
+					<span style="font-size: 12px;"><b>Secondary school certificate (Science or Mathematics) and/or Electronic technician certificate</b></span><b><o:p></o:p></b></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p align="right" class="MsoNormal" dir="rtl" style="text-align: left;">
+	<span style="font-size: 12px;"><b style=""><span dir="ltr"><o:p>&nbsp;</o:p></span></b></span><b style=""><span dir="ltr" style="font-size: 16pt;"><o:p> <br />
+	</o:p></span></b></p>
+</p>
+			</div>
+					</div>
+	</div>
+	<div class="component-footer"></div>
+</div>
+				</div>
+				
+				<div id="mfi-middle">
+								</div>
+			</div>
+			<!-- END: COMPONENT CONTENT -->
+			
+			<!-- BEGIN: RIGHT COLUMN -->
+			<!--  <div id="mfi-rightcol">
+							</div> -->
+			<!-- END: RIGHT COLUMN -->
+		</div>
+
+		<!-- BEGIN: BOTTOM -->
+		<div id="mfi-bottom">
+			<div id="mfi-bottom-modules">
+			<div class="bottom-modules" ><div class="browny" style="width:925px;" ><div class="module-content">
+<div class="article">
+	<div class="title_article">
+		<h3></h3>
+		<!--
+		<div class="informations_article">
+			<a href="/articles?menu=62&lang="><h1>hacked by Freebsdsudan</h1>&catid=" ></a>
+			 - written by   - Thursday 01 January, 00:00		</div> -->
+	</div>
+	
+	<div class="mainpart_article">
+				<div class="introduction_article">
+			<p>
+							</p>
+		</div>
+				<div class="content_article"><p>
+			<p></p>
+		</div>
+			</div>
+</div>
+</div><div class="module-footer"></div></div></div>			</div
+			<div id="mfi-footer" class="mfi-footer">
+			    <p class="mfi-align">
+					<small>Copyright  &copy; 2005 - 2013 MFI. Designed by <a href="http://www.mfi.fr/">MFI</a></small>
+					<br/>
+				</p>
+			</div>
+		</div>
+		<!-- END: BOTTOM -->
+	</div>
+</body>
+</html>

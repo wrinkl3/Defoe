@@ -1,0 +1,431 @@
+?
+ 
+ 
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+ 
+  <head> 
+ 
+  <SCRIPT LANGUAGE="JavaScript"> 
+ 
+      <!-- Begin
+ 
+      function popUp(URL) {
+ 
+        day = new Date();
+ 
+        id = day.getTime();
+ 
+        eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=550,height=550,left = 408,top = 109');");
+ 
+      }
+ 
+      --> 
+ 
+    </script> 
+ 
+    <style> 
+ 
+      td
+ 
+      {
+ 
+        background-color: #1f1f1f;
+ 
+        font-family: Courier New;
+ 
+        font-size:9pt;
+ 
+        color:#00FF00;
+ 
+        border-color: #ffffff;
+ 
+        border-width:1pt;
+ 
+        border-style:solid;
+ 
+        border-collapse:collapse;
+ 
+        padding:0pt 3pt;
+ 
+        vertical-align:top;
+ 
+      }
+ 
+      table
+ 
+      {
+ 
+        border-color: #88aace;
+ 
+        border-width:0pt 1pt;
+ 
+        border-style:dash;
+ 
+      }
+ 
+      A:Link, A:Visited
+ 
+      {
+ 
+        color: #88aace;
+ 
+      }
+ 
+      A.no:Link, A.no:Visited
+ 
+      {
+ 
+        color: #88aace;
+ 
+        text-decoration: none;
+ 
+      }
+ 
+      A:Hover, A:Visited:Hover , A.no:Hover, A.no:Visited:Hover
+ 
+      {
+ 
+        color: #88aace;
+ 
+        background-color:#2e2e2e;
+ 
+        text-decoration:
+ 
+        overline underline;
+ 
+      }
+ 
+      .style1
+ 
+      {
+ 
+        color: #88aace
+ 
+      }
+ 
+      .style2
+ 
+      {
+ 
+        color: 1f1f1f
+ 
+      }
+ 
+      body
+ 
+      {
+ 
+        color:white;
+         
+        background-position:center;
+ 
+        background-attachment:fixed;
+ 
+        </div>
+ 
+      }
+ 
+    </style> </head> 
+ 
+  <BODY bgColor="#000000" onLoad="teclear();" oncontextmenu="return false" onselectstart="return false"> 
+ 	<span class="auto-style1">
+	</span> 
+    <DIV align="center"><SPAN style="FILTER: blur(add=1,direction=170,strength=30); HEIGHT: 50px"> 
+ 
+    <STYLE> 
+ 
+      .layermensaje {
+ 
+        FONT-SIZE: 10pt;LINE-HEIGHT: 10pt; FONT-FAMILY: "Arial"
+ 
+      }
+ 
+    .auto-style1 {
+		font-size: xx-large;
+	}
+ 
+    .auto-style2 {
+		font-size: xx-large;
+		color: #04CE13;
+	}
+	.auto-style3 {
+		color: #D9EC1E;
+	}
+	.auto-style4 {
+		color: #FA2003;
+	}
+	.auto-style5 {
+		color: #54FA2A;
+	}
+	.auto-style6 {
+		color: #2A30FA;
+	}
+	.auto-style7 {
+		font-size: xx-large;
+		color: #F8A505;
+	}
+	.auto-style8 {
+		font-size: 50pt;
+		font-family: Aharoni;
+	}
+ 
+    .auto-style9 {
+	font-size: x-large;
+}
+ 
+    .auto-style10 {
+		color: #E10404;
+	}
+	.auto-style11 {
+		color: #7BA2FC;
+	}
+ 
+    .auto-style12 {
+		font-size: x-large;
+		color: #F59B11;
+	}
+ 
+    .auto-style13 {
+	color: #EEF805;
+}
+ 
+    </STYLE> 
+ 
+    <FONT style="FONT-SIZE: 8pt" face="Courier New"> 
+ 
+      <script type="text/javascript"> 
+ 
+        var charIndex = -1;
+ 
+        var stringLength = 0;
+ 
+        var inputText;
+ 
+        function writeContent(init)
+ 
+        {
+ 
+          if(init)
+ 
+          {
+ 
+            inputText = document.getElementById('contentToWrite').innerHTML;
+ 
+          }
+ 
+          if(charIndex==-1)
+ 
+          {
+ 
+            charIndex = 0;
+ 
+            stringLength = inputText.length;
+ 
+          }
+ 
+          var initString = document.getElementById('myContent').innerHTML;
+ 
+          initString = initString.replace(/<SPAN.*$/gi,"");
+ 
+ 
+ 
+          var theChar = inputText.charAt(charIndex);
+ 
+          var nextFourChars = inputText.substr(charIndex,4);
+ 
+          if(nextFourChars=='<BR>' || nextFourChars=='<br>')
+ 
+          {
+ 
+            theChar  = '<BR>';
+ 
+            charIndex+=3;
+ 
+          }
+ 
+          initString = initString + theChar + "<SPAN id='blink'>></SPAN>";
+ 
+          document.getElementById('myContent').innerHTML = initString;
+ 
+ 
+ 
+          charIndex = charIndex/1 +1;
+ 
+          if(charIndex%2==1)
+ 
+          {
+ 
+            document.getElementById('blink').style.display='none';
+ 
+          }
+ 
+          else
+ 
+          {
+ 
+            document.getElementById('blink').style.display='inline';
+ 
+          }
+ 
+          if(charIndex<=stringLength)
+ 
+          {
+ 
+            setTimeout('writeContent(false)',100);
+ 
+          }
+ 
+          else
+ 
+          {
+ 
+            blinkSpan();
+ 
+          }
+ 
+        }
+ 
+        var currentStyle = 'inline';
+ 
+        function blinkSpan()
+ 
+        {
+ 
+          if(currentStyle=='inline')
+ 
+          {
+ 
+            currentStyle='none';
+ 
+          }
+ 
+          else
+ 
+          {
+ 
+            currentStyle='inline';
+ 
+          }
+ 
+          document.getElementById('blink').style.display = currentStyle;
+ 
+          setTimeout('blinkSpan()',400);
+ 
+        }
+
+        msg = "Hacked By Elgeneral EssO";
+ 
+ 
+ 
+        msg = " " + msg;pos = 0;
+ 
+        function scrollMSG()
+ 
+        {
+ 
+          document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+ 
+          pos++;
+ 
+          if (pos >  msg.length) pos = 0
+ 
+          window.setTimeout("scrollMSG()",100);
+ 
+        }
+ 
+        scrollMSG();
+ 
+      </script> 
+ 
+            </font> 
+ 
+            <center><FONT style="FONT-SIZE: 8pt" face="Courier New"> 
+ 
+      	  <br /><br /> 
+ 
+              <img src="http://im38.gulfup.com/fzAsV.png"  alt="Logo" /><br /><SPAN style="FILTER: blur(add=1,direction=170,strength=30); HEIGHT: 50px"> 
+ 
+    <FONT style="FONT-SIZE: 8pt"> 
+ 
+      	  <span class="auto-style8"><span class="auto-style11">Hacked By</span>
+			<span class="auto-style10">ElGeneraL EssO</span></span></font></span><br /><br /> <table width="800" height="0"> 
+ 
+          <tr> 
+ 
+            <td> 
+ 
+              <div id="myContent" class="tip"> 
+ 
+              </div> 
+ 
+              <div id="contentToWrite" style="display:none" text-decoration:"overline" class="tip"> - Please wait ... <br/>
+- Connection....<br/>
+- Site Down....<br/>
+- Hacked By ElGeneraL EssO<br/>
+- Try to Hack Server Wait Please.........1,2,3,4,5,6,7,8,9,10<br/>
+-  Done<br/>
+root@bt:~#</div> 
+
+ 
+            </td> 
+ 
+          </tr> 
+ 
+        </table> 
+ 
+        <p>&nbsp;</p> 
+ 
+        <script type="text/javascript"> 
+ 
+
+         writeContent(true);
+ 
+        </script> 
+ 
+        <form name="form1" method="post" action=""><strong>
+			<span class="auto-style2">
+			<img alt="" height="337" src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-ash3/1010262_1383503811864259_909775330_n.jpg" width="631" /><br />
+			Klachinkove Team<br />
+			</span><span class="auto-style7">facebook.com/klachnikove.tn</span></strong></br>
+		 <form name="form1" method="post" action=""><strong>
+			 <span class="auto-style3"><span class="auto-style9">Greetz To 
+			 </span> </span>
+			 <span class="auto-style4"><span class="auto-style9">Klachinkove klach</span></span><span class="auto-style9">,
+			 <span class="auto-style6">Ih Éb </span>,<SPAN style="FILTER: blur(add=1,direction=170,strength=30); HEIGHT: 50px"><FONT face="Courier New"><span id=".reactRoot[3718955].[2]{comment173634369477133_173638509476719}.[1:0].[4:0:1].[3:1].[4:0:1].[1:1].[1:0].[1:0:2]" data-ft="{&quot;tn&quot;:&quot;K&quot;}" dir="rtl"><span id=".reactRoot[3718955].[2]{comment173634369477133_173638509476719}.[1:0].[4:0:1].[3:1].[4:0:1].[1:1].[1:0].[1:0:2].[2:0]"><span id=".reactRoot[3718955].[2]{comment173634369477133_173638509476719}.[1:0].[4:0:1].[3:1].[4:0:1].[1:1].[1:0].[1:0:2].[2:0].[3:0:0]">
+			 <span class="auto-style13">HcErArKaNi</span></span></span></span></font></span>,
+			 <span class="auto-style5">Danger</span>,
+			 <span class="auto-style6">Lootz Htaccess</span>, Mark Suzo, Saadi 
+			 Med, <span class="auto-style4">??? ??? ???? ???????</span>,Aladin 
+			 Abr ,Aymen Cyril Kamar, Oussama Chebbi, Najd Cherif,
+			 <span class="auto-style5">Hamichou Cssiste</span>, Gha Da,
+			 <span class="auto-style4">Louay Soufi</span>,<span class="auto-style5">Méhdii 
+			 Méhdii</span>, Yazan Omrane, <span class="auto-style6">HaxBacK</span>,
+			 <span class="auto-style4">?? ?Virú?</span></span></strong><span class="auto-style1">.<br />
+			 <br />
+			 <br />
+			 Sorry for hack your site but this the only way to send you this 
+			 message<br />
+			 </span><br class="auto-style9" />
+        </form>
+      </center> 
+ 
+      <center>      
+      <span class="auto-style12">Message 1  </span>  <br />
+<iframe width="640" height="360" src="http://www.youtube.com/embed/p5INuktvy5I?rel=0" frameborder="0" allowfullscreen></iframe>
+	  <br />
+	 <span class="auto-style12">Message 2 </span> <br />
+<iframe width="640" height="360" src="http://www.youtube.com/embed/l-q3Vq7m4NQ?rel=0" frameborder="0" allowfullscreen></iframe><br/>
+<span class="auto-style12">Message 3 </span> <br />
+<iframe width="640" height="360" src="http://www.youtube.com/embed/PtA54zi-deI?rel=0" frameborder="0" allowfullscreen></iframe><br/>
+      </center> 
+<a href="http://www.uploadmusic.org"><object type="application/x-shockwave-flash" width="17"
+height="17"data="http://www.uploadmusic.org/musicplayer.swf?song_url=http://www.uploadmusic.org/MUSIC/8863771380041343.mp3&autoplay=true"><param  name="movie"value="http://www.uploadmusic.org/musicplayer.swf?song_url=http://www.uploadmusic.org/MUSIC/8863771380041343.mp3&song_title=uploadmusic.org&autoplay=true"
+/></object>&nbsp;</a>
+        </body> 
+ 
+ 
+
+</html> 

@@ -1,0 +1,140 @@
+<!doctype html>
+<html ng-app="defoe">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="loading-dots.js"></script>
+    <link href=' https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<body ng-controller="CheckController">
+<div>
+  <div name="outerForm" class="tab-form-demo">
+    <uib-tabset active="active">
+      <uib-tab index="0" heading="Defoe" disable="true" classes="logo">
+      </uib-tab>
+      <uib-tab index="1" heading="Check">
+            <div>
+            <div class="title">
+            <h1>IS THIS WEBSITE DEFACED?</h1>
+            </div>
+            <div class="container">
+              <form ng-submit="getResult(urlToCheck)">
+                <input type="text" id="urlToCheck" name="urlToCheck" placeholder="https://example.com" ng-model="urlToCheck" ng-disabled="isLoading1">
+                <button type="submit" ng-disabled="isLoading1">Check</button>
+              </form>
+              <div class="message" ng-style="{'color':rescolor1}">
+                <p><span ng-bind="result1"></span><span loading-dots is-loading="isLoading1"></span></p>
+              </div>
+            </div>
+            </div>
+      </uib-tab>
+      <uib-tab index="2" heading="Report">
+        <div>
+            <div class="title">
+            <h1>REPORT WEBPAGE</h1>
+            </div>
+            <div class="container">
+              <form ng-submit="reportUrl(urlToReport, status)">
+                <input type="text" id="urlToReport" name="urlToReport" placeholder="https://example.com" ng-model="urlToReport" ng-disabled="isLoading2">
+                <button type="submit" ng-disabled="isLoading2">Report</button>
+                <select ng-model="status" id = "status" name = "status">
+                <option value="defaced">Defaced</option>
+                <option value="notDefaced">Not Defaced</option>
+                </select>
+              </form>
+              <div class="message" ng-style="{'color':rescolor2}">
+                <p><span ng-bind="result2"></span><span loading-dots is-loading="isLoading2"></span></p>
+              </div>
+            </div>
+            </div>
+      </uib-tab>
+      <uib-tab index="3" heading="About">
+        <div>
+            <div class="title">
+            <h1>ABOUT</h1>
+            </div>
+            <div class="container">
+            <div class="about">
+              <p>
+              Defoe is a defacement recognition system built using Selenium, LiRE, scikit-learn, AngularJS and Flask. Defoe uses a preselected dataset of defaced webpages, as well as user submissions in order to tell whether a website has been vandalized or not. 
+              </p>
+              </div>
+              </div>
+            </div>
+            </div>
+      </uib-tab>
+    </uib-tabset>
+  </div>
+</div>
+  </body>
+<script type="text/javascript">
+  angular.module('defoe', ['ngAnimate', 'ngSanitize', 'ui.bootstrap', 'angularLoadingDots']).controller('CheckController', ['$scope', '$log', '$http', '$timeout',
+  function($scope, $log, $http, $timeout) {
+  $scope.active = 1;
+
+
+  $scope.isLoading1 = false;
+  $scope.isLoading2 = false;
+
+  $scope.putMessage1 = function(text, color){
+    $scope.result1 = text;
+    $scope.rescolor1 = color;
+  }
+
+  $scope.putMessage2 = function(text, color){
+    $scope.result2 = text;
+    $scope.rescolor2 = color;
+  }
+
+  $scope.getResult = function(url) {
+    $scope.isLoading1 = true;
+    $scope.putMessage1('checking', 'orange');
+    // get the URL from the input
+    encoded = encodeURIComponent(encodeURIComponent(url));
+    $log.log(encoded)
+    // fire the API request
+    $http.get('/defoe/api/v1.0/' + encoded)
+    .then(function(success) {
+        $scope.isLoading1 = false;
+        var res = success.data.isDefaced;
+        $log.log(res);
+        if(res == 'true'){
+          $scope.putMessage1('yes', 'red');
+        }else{
+          $scope.putMessage1('no', 'green');
+        }
+      },
+      function(error) {
+        $scope.isLoading1 = false;
+        $scope.putMessage1('bad url', 'orange');
+        $log.log(error);
+      });
+    };
+   $scope.reportUrl = function(url, status) {
+    $scope.isLoading2 = true;
+    $scope.putMessage2('reporting', 'orange');
+    encoded = encodeURIComponent(encodeURIComponent(url));
+    $log.log(encoded)
+    var defaced = (status == 'defaced');
+    var data = {'url': encoded, 'isDefaced': defaced};
+    $log.log(data);
+    $http.post('/defoe/api/v1.0/report', data)
+    .then(function(success) {
+        $scope.isLoading2 = false;
+        $scope.putMessage2('reported', 'green');
+      },
+      function(error) {
+        $scope.isLoading2 = false;
+        $scope.putMessage2('bad url', 'orange');
+        $log.log(error);
+      });
+    };
+
+}
+]);
+</script>
+</html>

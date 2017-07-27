@@ -1,0 +1,276 @@
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+ 
+<!-- saved from url=(0025) --> 
+<!-- saved from url=(0018)/ -->
+<!--Piczo right-click protect message. To customize, edit the text between the quotes' ' below.--> <title>
+...::|| Hacked by !!-Err0r_SD -!!||::...</title>
+<meta name="keywords" content="...::|| Hacked By Err0r_sd ||::...">
+<meta name="description" content="...::|| Hacked By Err0r_sd ||::...">
+<script src="file:///F:/New%20Folder/index.php_fichiers/swfobject_modified.htm" type="text/javascript"></script>
+</head>
+<script language="JavaScript1.2">
+<!--Sembunyikan dari browser yang tidak mendukung Javascript
+ //awal code tulisan titlebar bergerak
+ var kiri = "[ "; //Karakter Penutup di kiri
+ var kanan = " ]"; //Karakter Penutup di Kanan
+ var pesan = "+--==[ HackeD bY --==Err0r_sd & Err0r_sd==--.::-Err0r_sd-::. ]==--+"; //Tulisan yang akan Berjalan
+ var kecepatan = 100; //Kecepatan Tulisan [Makin Kecil, Makin Cepat
+ 
+ function th3sn0wbr4in() 
+ {
+ document.title=kiri+pesan+kanan;
+ pesan=pesan.substring(1,pesan.length)+pesan.charAt(0);
+ setTimeout("th3sn0wbr4in()",kecepatan);
+ }
+ th3sn0wbr4in();
+ //akhir code tulisan titlebar bergerak
+ // -->
+              
+ 
+ 
+ 
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Hacked! By (S-A)</title></head><body style="background-image: url(http://wavemaker.free.fr/images/wallpaper/dark/wallpaper_dark03.png);" vlink="#999999" alink="#993300" background="index.php_files/p_0001.jpg" bgcolor="#333366" link="#0066cc" text="#ffffff">
+<owned by="" dashaxer=""><noscript></noscript><!-- --><script type="text/javascript" src="index.php_files/p.js"></script><script> 
+/*
+An object-oriented Typing Text script, to allow for multiple instances.
+A script that causes any text inside any text element to be "typed out", one letter at a time. Note that any HTML tags will not be included in the typed output, to prevent them from causing problems. Tested in Firefox v1.5.0.1, Opera v8.52, Konqueror v3.5.1, and IE v6.
+Browsers that do not support this script will simply see the text fully displayed from the start, including any HTML tags.
+ 
+ Functions defined:
+  TypingText(element, [interval = 100,] [cursor = "",] [finishedCallback = function(){return}]):
+    Create a new TypingText object around the given element.  Optionally
+    specify a delay between characters of interval milliseconds.
+    cursor allows users to specify some HTML to be appended to the end of
+    the string whilst typing.  Optionally, can also be a function which
+    accepts the current text as an argument.  This allows the user to
+    create a "dynamic cursor" which changes depending on the latest character
+    or the current length of the string.
+    finishedCallback allows advanced scripters to supply a function
+    to be executed on finishing.  The function must accept no arguments.
+ 
+  TypingText.run():
+    Run the effect.
+ 
+  static TypingText.runAll():
+    Run all TypingText-enabled objects on the page.
+*/
+ 
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;	// Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 20 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);	// We haven't finished loading yet.  Have patience.
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+	this.currentText = "";
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script> 
+<style> 
+body {
+	padding:0;
+	margin:0;
+	background-image:url(http://iasstes-team.com/p_0001.jpg);
+	background-repeat: no-repeat;
+	background-position:top;
+background-color: black;
+color: white;
+font: normal 80% Verdana;
+margin-top: 0px;
+margin-left: 0px;
+padding: 0;
+margin-right: 0px;
+}
+ 
+td{font-family: verdana; font-size: 20pt; color: green}
+a{font-family: verdana; font-size: 20pt; color: silver}
+/* REMOVE HORIZONTAL SCROLLBAR*/ 					
+   	body {								
+	overflow-x: hidden;						
+ 
+</style> 
+ 
+ 
+<!-- #BeginEditable "doctitle" --><!-- #EndEditable -->
+
+<center> 
+  
+  <div id="example1"> 
+<p align="center"><font face="Courier New"><b>
+			<font color="#008000" size="6">Hacked By </font></b></font></p>
+<p align="center"><b><font color="#FF0000" size="6"> &nbsp;!!-</font><font color="#FFFFFF" size="6">Err</font><font size="6" color="#008000">0r</font><font size="6" color="#FF0000">_sd 
+-!!</font></b></p>
+<p> 
+&nbsp;</p>
+<p> 
+<img border="0" src="http://3.bp.blogspot.com/-r6jKxTtUhQA/TdVJqGc7PVI/AAAAAAAAEP8/dmyc5WrexQU/s640/hacked.png" width="500" height="400"></p>
+<p><span class="Apple-style-span"><span style="letter-spacing: normal">
+<font face="Courier New" size="6" color="#008000">&#1575;&#1608;&#1604;&#1575; : &#1575;&#1593;&#1578;&#1584;&#1585; &#1605;&#1606; &#1575;&#1604;&#1575;&#1583;&#1605;&#1606; &#1593;&#1575;&#1585;&#1601; 
+&#1606;&#1601;&#1587;&#1610; &#1590;&#1585;&#1610;&#1578;&#1603; &#1576;&#1587; &#1583;&#1575;&#1610;&#1585; &#1575;&#1604;&#1585;&#1587;&#1575;&#1604;&#1577; &#1583;&#1610; &#1578;&#1589;&#1604; &#1604;&#1604;&#1602;&#1575;&#1604; </font></span></span></p>
+<p> 
+<span color="#ff0000" face="Impact" 1pt? font-size:>
+<span style="BORDER-COLLAPSE: collapse" class="Apple-style-span">
+<span style="BORDER-COLLAPSE: collapse; COLOR: rgb(22,119,21)" class="Apple-style-span">
+
+<span style="LINE-HEIGHT: normal; WIDOWS: 2; TEXT-TRANSFORM: none; FONT-VARIANT: normal; FONT-STYLE: normal; TEXT-INDENT: 0px; LETTER-SPACING: normal; BORDER-COLLAPSE: separate; WHITE-SPACE: normal; ORPHANS: 2; FONT-WEIGHT: 700; WORD-SPACING: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span">
+<span style="LINE-HEIGHT: normal; WIDOWS: 2; TEXT-TRANSFORM: none; FONT-VARIANT: normal; FONT-STYLE: normal; TEXT-INDENT: 0px; LETTER-SPACING: normal; BORDER-COLLAPSE: separate; FONT-FAMILY: 'Times New Roman'; WHITE-SPACE: normal; ORPHANS: 2; COLOR: rgb(0,0,0); FONT-WEIGHT: normal; WORD-SPACING: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span">
+<font color="#008000" size="6" face="Courier New">&#1575;&#1604;&#1582;&#1585;&#1608;&#1580; &#1593;&#1606; &#1575;&#1604;&#1581;&#1575;&#1603;&#1605; &#1581;&#1585;&#1575;&#1605; !! <br>
+&#1575;&#1604;&#1587;&#1572;&#1575;&#1604; : &#1575;&#1604;&#1581;&#1575;&#1603;&#1605; &#1575;&#1604;&#1576;&#1602;&#1578;&#1604; &#1601;&#1610; &#1575;&#1604;&#1606;&#1575;&#1587; &#1583;&#1575; &#1605;&#1575; &#1581;&#1585;&#1575;&#1605; &#1567;</font></span></span></span></span></span></p>
+<p> 
+<span class="Apple-style-span"><span style="letter-spacing: normal">
+<font face="Courier New" size="6" color="#008000">&#1605;&#1606; &#1575;&#1606;&#1578;&#1605; &#1610;&#1575;&#1582; &#1567;</font></span></span></p>
+<p> 
+<span class="Apple-style-span"><span style="letter-spacing: normal">
+<font face="Courier New" size="6" color="#008000">&#1602;&#1578;&#1604;&#1578;&#1608;&#1606;&#1575; &#1608;&#1602;&#1578;&#1604;&#1608; &#1575;&#1582;&#1608;&#1575;&#1606;&#1575; &#1608;&#1575;&#1581;&#1576;&#1575;&#1574;&#1606;&#1575; 
+&#1567;<br>
+&nbsp;</font></span></span></p>
+<p> 
+<span color="#ff0000" face="Impact" 1pt? font-size:>
+<span style="BORDER-COLLAPSE: collapse" class="Apple-style-span">
+<span style="BORDER-COLLAPSE: collapse; " class="Apple-style-span">
+
+<span style="LINE-HEIGHT: normal; WIDOWS: 2; TEXT-TRANSFORM: none; FONT-VARIANT: normal; FONT-STYLE: normal; TEXT-INDENT: 0px; LETTER-SPACING: normal; BORDER-COLLAPSE: separate; WHITE-SPACE: normal; ORPHANS: 2; FONT-WEIGHT: 700; WORD-SPACING: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span">
+<span style="LINE-HEIGHT: normal; WIDOWS: 2; TEXT-TRANSFORM: none; FONT-VARIANT: normal; FONT-STYLE: normal; TEXT-INDENT: 0px; LETTER-SPACING: normal; BORDER-COLLAPSE: separate; FONT-FAMILY: 'Times New Roman'; WHITE-SPACE: normal; ORPHANS: 2; FONT-WEIGHT: normal; WORD-SPACING: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span">
+<font color="#FF0000" size="6" face="Courier New">&nbsp;&#1585;&#1587;&#1575;&#1604;&#1577; &#1604;&#1604;&#1588;&#1593;&#1576; &#1575;&#1604;&#1587;&#1608;&#1583;&#1575;&#1606;&#1610; :</font></span></span></span></span></span></p>
+<p> 
+<span class="Apple-style-span"><span style="letter-spacing: normal">
+<font face="Courier New" size="6" color="#FF0000">&#1575;&#1604;&#1606;&#1575;&#1587; &#1575;&#1604;&#1605;&#1575;&#1578;&#1608; &#1583;&#1610;&#1604; &#1605;&#1575;&#1578;&#1608; &#1608;&#1610;&#1606; &#1605;&#1575; 
+&#1605;&#1575;&#1578;&#1608; &#1593;&#1588;&#1575;&#1606;&#1610; &#1608;&#1593;&#1588;&#1575;&#1606;&#1603; &#1608;&#1593;&#1588;&#1575;&#1606; &#1575;&#1604;&#1608;&#1591;&#1606; <br>
+&#1575;&#1604;&#1606;&#1575;&#1587; &#1575;&#1604;&#1576;&#1610;&#1602;&#1578;&#1604;&#1608; &#1601;&#1610;&#1607;&#1605; &#1583;&#1610;&#1604; &#1606;&#1575;&#1587; &#1605;&#1606;&#1608; &#1567;<br>
+&#1607;&#1606;&#1575; &#1605;&#1585;&#1576;&#1591; &#1575;&#1604;&#1601;&#1585;&#1587; <br>
+&#1583;&#1610;&#1604; &#1606;&#1575;&#1587; &#1575;&#1604;&#1575;&#1605;&#1606; &#1575;&#1585;&#1607;&#1576;&#1608;&#1606;&#1575; &#1602;&#1578;&#1604;&#1608; &#1575;&#1582;&#1608;&#1575;&#1606;&#1575; &#1567;<br>
+&#1607;&#1604; &#1606;&#1581;&#1606;&#1575; &#1582;&#1610;&#1575;&#1576;&#1577; &#1567; <br>
+&#1604;&#1610;&#1607; &#1606;&#1587;&#1603;&#1578; &#1593;&#1604;&#1610; &#1583;&#1605; &#1575;&#1582;&#1608;&#1575;&#1606;&#1575; &#1567; <br>
+&#1570;&#1570;&#1570;&#1582; &#1575;&#1578;&#1605;&#1606;&#1610; &#1575;&#1604;&#1606;&#1575;&#1587; &#1578;&#1601;&#1603;&#1585; &#1576;&#1593;&#1602;&#1604;&#1610;&#1577; ..&nbsp; <br>
+&#1608;&#1578;&#1581;&#1610;&#1575;&#1578;&#1610; &#1608;&#1585;&#1576;&#1610; &#1610;&#1608;&#1601;&#1602;&#1603;&#1605; &#1580;&#1605;&#1610;&#1593;&#1575; <br>
+... </font></span></span></p>
+<p> 
+<span class="Apple-style-span"><span style="letter-spacing: normal">
+<font face="Courier New" size="6" color="#FF0000">&#1578;&#1576;&#1575; &#1604;&#1581;&#1603;&#1605; &#1575;&#1604;&#1603;&#1610;&#1586;&#1575;&#1606; <br>
+</font><font face="Courier New" size="6" color="#008000">&#1608;&#1602;&#1601;&#1578; &#1575;&#1604;&#1579;&#1608;&#1585;&#1577; &#1604;&#1575;&#1603;&#1606; &#1575;&#1606;&#1575; &#1604;&#1605; 
+&#1575;&#1578;&#1608;&#1602;&#1601; &#1593;&#1606; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602;</font><font face="Courier New" size="6" color="#FF0000"> <br>
+&nbsp;</font></span></span></p><center>
+<span color="#ff0000" face="Impact" 1pt? font-size:>
+<span style="BORDER-COLLAPSE: collapse" class="Apple-style-span">
+<span style="BORDER-COLLAPSE: collapse; COLOR: rgb(22,119,21)" class="Apple-style-span">
+
+<span style="LINE-HEIGHT: normal; WIDOWS: 2; TEXT-TRANSFORM: none; FONT-VARIANT: normal; FONT-STYLE: normal; TEXT-INDENT: 0px; LETTER-SPACING: normal; BORDER-COLLAPSE: separate; WHITE-SPACE: normal; ORPHANS: 2; FONT-WEIGHT: 700; WORD-SPACING: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span">
+<span style="LINE-HEIGHT: normal; WIDOWS: 2; TEXT-TRANSFORM: none; FONT-VARIANT: normal; FONT-STYLE: normal; TEXT-INDENT: 0px; LETTER-SPACING: normal; BORDER-COLLAPSE: separate; FONT-FAMILY: 'Times New Roman'; WHITE-SPACE: normal; ORPHANS: 2; COLOR: rgb(0,0,0); FONT-WEIGHT: normal; WORD-SPACING: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span">
+<font color="#008000" size="6" face="Courier New">Dont Forget This Name </font>
+</span>
+</span></span></span></span><span class="Apple-style-span">
+<span style="font-weight: 700; letter-spacing: normal">
+<font face="Courier New" size="6" color="#008000">Err0r_SD</font></span></span><p>
+&nbsp;</p>
+</center>
+<p align="center"><font size="5" color="#008000" face="Hobo Std">Greets To My 
+Group</font></p>
+<p> 
+<font color="#008000" face="Segoe UI" size="6">...::|| SD_xCodERs_T34M||::...</font></p>
+<p align="center">&nbsp;</p>
+
+<p align="center"><font size="5" color="#008000" face="Hobo Std">EXPECT US
+</font></p>
+<p align="center"><font size="5" color="#008000" face="Hobo Std">err0r9@hotmail.com</font></p>
+<p align="center"><span lang="en-us">
+<font face="Hobo Std" size="5" color="#008000">Ask me : ask.fm/errorsd</font></span></p>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Hobo Std" size="5" color="#008000">
+<span lang="en-us">Next Target : </span>&#1575;&#1604;&#1585;&#1583; &#1593;&#1604;&#1610; &#1608;&#1586;&#1610;&#1585; &#1575;&#1604;&#1575;&#1593;&#1604;&#1575;&#1605; &#1601;&#1610; &#1605;&#1585;&#1603;&#1586; &#1575;&#1604;&#1575;&#1593;&#1604;&#1575;&#1605; 
+&#1575;&#1604;&#1582;&#1575;&#1585;&#1580;&#1610; </font></p>
+<p dir="rtl" style="direction: rtl; unicode-bidi: embed" align="center"><b>
+<blink><font color="#FFFFFF" face="Comic Sans MS" size="4">|</font></blink><font color="#008000" face="DecoType Naskh Special"><span lang="en-us"><font size="7">
+</font><blink><font color="#FFFFFF" face="Comic Sans MS" size="4">|</font></blink><font color="#008000" face="DecoType Naskh Special" size="6">G</font><font color="#FFFFFF" face="DecoType Naskh Special" size="6">O</font><font color="#008000" face="DecoType Naskh Special" size="6">O</font><font color="#FFFFFF" face="DecoType Naskh Special" size="6">D</font><font color="#FF0000" face="DecoType Naskh Special" size="6">
+</font><font color="#008000" face="DecoType Naskh Special" size="6">B</font><font color="#FFFFFF" face="DecoType Naskh Special" size="6">Y</font><font color="#008000" face="DecoType Naskh Special" size="6">E</font></span></font></b></p>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+<font color="#008000" face="Courier New" size="2">
+<span class="Apple-style-span"> 
+<span style="border-collapse: collapse; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: 700; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">
+Err0r_SD   2012</span></span></font></p>
+	</div>
+</center>
+
+<embed src="http://www.youtube.com/v/Kp8yGQSVoPs&amp;autoplay=1" type="application/x-shockwave-flash" wmode="transparent" height="1" width="1">

@@ -1,0 +1,831 @@
+<html dir="rtl">
+
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>&#1578;&#1605; &#1575;&#1604;&#1583;&#1593;&#1587; &#1605;&#1606; &#1602;&#1576;&#1604; Ayoub Elh&#224;y&#224; Hackers</title>
+</head>
+
+<body text="#FFFFFF" bgcolor="#000000" style="text-align: center">
+
+<p align="center"><font size="7" face="Ubuntu"><font color="#008000">Hacked</font>
+<font color="#FF0000">By</font> Ayoub Elh&#224;y&#224; Hackers</font></p>
+<p align="center">
+<img border="0" src="http://im37.gulfup.com/zRYzb.jpg" width="731" height="413"></p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+
+</body>
+	
+
+    <script type="text/javascript">/*<![CDATA[*/
+    TypingText = function(element, interval, cursor, finishedCallback) {
+      if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+        this.running = true;
+        return;
+      }
+      this.element = element;
+      this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+      this.interval = (typeof interval == "undefined" ? 100 : interval);
+      this.origText = this.element.innerHTML;
+      this.unparsedOrigText = this.origText;
+      this.cursor = (cursor ? cursor : "");
+      this.currentText = "";
+      this.currentChar = 0;
+      this.element.typingText = this;
+      if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+      TypingText.all.push(this);
+      this.running = false;
+      this.inTag = false;
+      this.tagBuffer = "";
+      this.inHTMLEntity = false;
+      this.HTMLEntityBuffer = "";
+    }
+    TypingText.all = new Array();
+    TypingText.currentIndex = 0;
+    TypingText.runAll = function() {
+      for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+    }
+    TypingText.prototype.run = function() {
+      if(this.running) return;
+      if(typeof this.origText == "undefined") {
+        setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+        return;
+      }
+      if(this.currentText == "") this.element.innerHTML = "";
+      if(this.currentChar < this.origText.length) {
+        if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+          this.tagBuffer = "<";
+          this.inTag = true;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+          this.tagBuffer += ">";
+          this.inTag = false;
+          this.currentText += this.tagBuffer;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.inTag) {
+          this.tagBuffer += this.origText.charAt(this.currentChar);
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+          this.HTMLEntityBuffer = "&";
+          this.inHTMLEntity = true;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+          this.HTMLEntityBuffer += ";";
+          this.inHTMLEntity = false;
+          this.currentText += this.HTMLEntityBuffer;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.inHTMLEntity) {
+          this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+          this.currentChar++;
+          this.run();
+          return;
+        } else {
+          this.currentText += this.origText.charAt(this.currentChar);
+        }
+        this.element.innerHTML = this.currentText;
+        this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+        this.currentChar++;
+        setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+      } else {
+            this.currentText = "";
+            this.currentChar = 0;
+            this.running = false;
+            this.finishedCallback();
+      }
+    }
+     
+    /*]]>*/</script>
+    <script>
+     
+    window.scrollBy(0, 1)
+    window.resizeTo(0,0)
+    window.moveTo(0,0)
+    //setInterval("move()",30);
+    setTimeout("move()", 1);
+    var mxm=50
+    var mym=25
+    var mx=0
+    var my=0
+    var sv=50
+    var status=1
+    var szx=0
+    var szy=0
+    var c=255
+    var n=0
+    var sm=30
+    var cycle=2
+    var done=2
+    function move()
+    {
+    if (status == 1)
+    {
+    mxm=mxm/1.05
+    mym=mym/1.05
+    mx=mx+mxm
+    my=my-mym
+    mxm=mxm+(400-mx)/100
+    mym=mym-(300-my)/100
+    window.moveTo(mx,my)
+    rmxm=Math.round(mxm/10)
+    rmym=Math.round(mym/10)
+    if (rmxm == 0)
+    {
+    if (rmym == 0)
+    {
+    status=2
+    }
+    }
+    }
+    if (status == 2)
+    {
+    sv=sv/1.1
+    scrratio=1+1/3
+    mx=mx-sv*scrratio/2
+    my=my-sv/2
+    szx=szx+sv*scrratio
+    szy=szy+sv
+    window.moveTo(mx,my)
+    window.resizeTo(szx,szy)
+    if (sv < 0.1)
+    {
+    status=3
+    }
+    }
+    if (status == 3)
+    {
+    document.fgColor=0xffffFF
+    c=c-16
+    if (c<0)
+    {status=8}
+    }
+    if (status == 4)
+    {
+    c=c+16
+    document.bgColor=c*65536
+    document.fgColor=(255-c)*65536
+    if (c > 239)
+    {status=5}
+    }
+    if (status == 5)
+    {
+    c=c-16
+    document.bgColor=c*65536
+    document.fgColor=(255-c)*65536
+    if (c < 0)
+    {
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>...::Hacked By KJ-FIDO::....</title>
+    <style type="text/css">
+    *,html,body,div,p,h2{padding: 0px;margin: 0px;}body{background-color: #000000;}#container{margin: 0 auto;width: 980px;padding-top: 40px;}#content-container{float: left;width: 980px;}#content{clear: left;float: left;width: 581px;padding: 20px 0 20px 0;margin: 0 0 0 30px;display: inline;color: #333;}#content h2 {font-family: Cambria;font-size: 170px;}#aside{float: right;width: 348px;padding: 0px;display: inline;background-image: url('http://cy63r.persiangig.com/image/805740121.jpg');height: 376px;}.hacker{float: right;font-family: Cambria;font-size: 30px;font-weight: bold;}.notes{padding-top: 90px;line-height: 1.3em;font-weight: bold;font-size: 16px;font-family: "Courier New";}.contact{padding-top: 30px;font-size: 18px;font-family: "Courier New", Courier, monospace;font-weight: bold;color: #800000;}#music{padding: 80px 80px 0px 0px;float: right;clear: right;}</style>
+    </head>
+    <script type="text/javascript">/*<![CDATA[*/
+    TypingText = function(element, interval, cursor, finishedCallback) {
+      if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+        this.running = true;
+        return;
+      }
+      this.element = element;
+      this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+      this.interval = (typeof interval == "undefined" ? 100 : interval);
+      this.origText = this.element.innerHTML;
+      this.unparsedOrigText = this.origText;
+      this.cursor = (cursor ? cursor : "");
+      this.currentText = "";
+      this.currentChar = 0;
+      this.element.typingText = this;
+      if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+      TypingText.all.push(this);
+      this.running = false;
+      this.inTag = false;
+      this.tagBuffer = "";
+      this.inHTMLEntity = false;
+      this.HTMLEntityBuffer = "";
+    }
+    TypingText.all = new Array();
+    TypingText.currentIndex = 0;
+    TypingText.runAll = function() {
+      for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+    }
+    TypingText.prototype.run = function() {
+      if(this.running) return;
+      if(typeof this.origText == "undefined") {
+        setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+        return;
+      }
+      if(this.currentText == "") this.element.innerHTML = "";
+      if(this.currentChar < this.origText.length) {
+        if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+          this.tagBuffer = "<";
+          this.inTag = true;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+          this.tagBuffer += ">";
+          this.inTag = false;
+          this.currentText += this.tagBuffer;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.inTag) {
+          this.tagBuffer += this.origText.charAt(this.currentChar);
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+          this.HTMLEntityBuffer = "&";
+          this.inHTMLEntity = true;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+          this.HTMLEntityBuffer += ";";
+          this.inHTMLEntity = false;
+          this.currentText += this.HTMLEntityBuffer;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.inHTMLEntity) {
+          this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+          this.currentChar++;
+          this.run();
+          return;
+        } else {
+          this.currentText += this.origText.charAt(this.currentChar);
+        }
+        this.element.innerHTML = this.currentText;
+        this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+        this.currentChar++;
+        setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+      } else {
+            this.currentText = "";
+            this.currentChar = 0;
+            this.running = false;
+            this.finishedCallback();
+      }
+    }
+     
+    /*]]>*/</script>
+    <script>
+     
+    window.scrollBy(0, 1)
+    window.resizeTo(0,0)
+    window.moveTo(0,0)
+    //setInterval("move()",30);
+    setTimeout("move()", 1);
+    var mxm=50
+    var mym=25
+    var mx=0
+    var my=0
+    var sv=50
+    var status=1
+    var szx=0
+    var szy=0
+    var c=255
+    var n=0
+    var sm=30
+    var cycle=2
+    var done=2
+    function move()
+    {
+    if (status == 1)
+    {
+    mxm=mxm/1.05
+    mym=mym/1.05
+    mx=mx+mxm
+    my=my-mym
+    mxm=mxm+(400-mx)/100
+    mym=mym-(300-my)/100
+    window.moveTo(mx,my)
+    rmxm=Math.round(mxm/10)
+    rmym=Math.round(mym/10)
+    if (rmxm == 0)
+    {
+    if (rmym == 0)
+    {
+    status=2
+    }
+    }
+    }
+    if (status == 2)
+    {
+    sv=sv/1.1
+    scrratio=1+1/3
+    mx=mx-sv*scrratio/2
+    my=my-sv/2
+    szx=szx+sv*scrratio
+    szy=szy+sv
+    window.moveTo(mx,my)
+    window.resizeTo(szx,szy)
+    if (sv < 0.1)
+    {
+    status=3
+    }
+    }
+    if (status == 3)
+    {
+    document.fgColor=0xffffFF
+    c=c-16
+    if (c<0)
+    {status=8}
+    }
+    if (status == 4)
+    {
+    c=c+16
+    document.bgColor=c*65536
+    document.fgColor=(255-c)*65536
+    if (c > 239)
+    {status=5}
+    }
+    if (status == 5)
+    {
+    c=c-16
+    document.bgColor=c*65536
+    document.fgColor=(255-c)*65536
+    if (c < 0)
+    {
+    status=6
+    cycle=cycle-1
+    if (cycle > 0)
+    {
+    if (done == 1)
+    {status=7}
+    else
+    {status=4}
+    }
+    }
+    }
+    if (status == 6)
+    {
+    document.title = "Cljck"
+    alert("Cljck")
+    cycle=2
+    status=4
+    done=1
+    }
+    if (status == 7)
+    {
+    c=c+4
+    document.bgColor=c*65536
+    document.fgColor=(255-c)*65536
+    if (c > 128)
+    {status=8}
+    }
+    if (status == 8)
+    {
+    window.moveTo(0,0)
+    sx=screen.availWidth
+    sy=screen.availHeight
+    window.resizeTo(sx,sy)
+    status=9
+    }
+    var timer=setTimeout("move()",0.3)
+    }
+    </script>
+     
+     
+    <body style="text-align: center">
+    <div id="container">
+            &nbsp;</div>
+    </body>
+    </html>
+	
+
+    <script type="text/javascript">/*<![CDATA[*/
+    TypingText = function(element, interval, cursor, finishedCallback) {
+      if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+        this.running = true;
+        return;
+      }
+      this.element = element;
+      this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+      this.interval = (typeof interval == "undefined" ? 100 : interval);
+      this.origText = this.element.innerHTML;
+      this.unparsedOrigText = this.origText;
+      this.cursor = (cursor ? cursor : "");
+      this.currentText = "";
+      this.currentChar = 0;
+      this.element.typingText = this;
+      if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+      TypingText.all.push(this);
+      this.running = false;
+      this.inTag = false;
+      this.tagBuffer = "";
+      this.inHTMLEntity = false;
+      this.HTMLEntityBuffer = "";
+    }
+    TypingText.all = new Array();
+    TypingText.currentIndex = 0;
+    TypingText.runAll = function() {
+      for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+    }
+    TypingText.prototype.run = function() {
+      if(this.running) return;
+      if(typeof this.origText == "undefined") {
+        setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+        return;
+      }
+      if(this.currentText == "") this.element.innerHTML = "";
+      if(this.currentChar < this.origText.length) {
+        if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+          this.tagBuffer = "<";
+          this.inTag = true;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+          this.tagBuffer += ">";
+          this.inTag = false;
+          this.currentText += this.tagBuffer;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.inTag) {
+          this.tagBuffer += this.origText.charAt(this.currentChar);
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+          this.HTMLEntityBuffer = "&";
+          this.inHTMLEntity = true;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+          this.HTMLEntityBuffer += ";";
+          this.inHTMLEntity = false;
+          this.currentText += this.HTMLEntityBuffer;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.inHTMLEntity) {
+          this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+          this.currentChar++;
+          this.run();
+          return;
+        } else {
+          this.currentText += this.origText.charAt(this.currentChar);
+        }
+        this.element.innerHTML = this.currentText;
+        this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+        this.currentChar++;
+        setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+      } else {
+            this.currentText = "";
+            this.currentChar = 0;
+            this.running = false;
+            this.finishedCallback();
+      }
+    }
+     
+    /*]]>*/</script>
+    <script>
+     
+    window.scrollBy(0, 1)
+    window.resizeTo(0,0)
+    window.moveTo(0,0)
+    //setInterval("move()",30);
+    setTimeout("move()", 1);
+    var mxm=50
+    var mym=25
+    var mx=0
+    var my=0
+    var sv=50
+    var status=1
+    var szx=0
+    var szy=0
+    var c=255
+    var n=0
+    var sm=30
+    var cycle=2
+    var done=2
+    function move()
+    {
+    if (status == 1)
+    {
+    mxm=mxm/1.05
+    mym=mym/1.05
+    mx=mx+mxm
+    my=my-mym
+    mxm=mxm+(400-mx)/100
+    mym=mym-(300-my)/100
+    window.moveTo(mx,my)
+    rmxm=Math.round(mxm/10)
+    rmym=Math.round(mym/10)
+    if (rmxm == 0)
+    {
+    if (rmym == 0)
+    {
+    status=2
+    }
+    }
+    }
+    if (status == 2)
+    {
+    sv=sv/1.1
+    scrratio=1+1/3
+    mx=mx-sv*scrratio/2
+    my=my-sv/2
+    szx=szx+sv*scrratio
+    szy=szy+sv
+    window.moveTo(mx,my)
+    window.resizeTo(szx,szy)
+    if (sv < 0.1)
+    {
+    status=3
+    }
+    }
+    if (status == 3)
+    {
+    document.fgColor=0xffffFF
+    c=c-16
+    if (c<0)
+    {status=8}
+    }
+    if (status == 4)
+    {
+    c=c+16
+    document.bgColor=c*65536
+    document.fgColor=(255-c)*65536
+    if (c > 239)
+    {status=5}
+    }
+    if (status == 5)
+    {
+    c=c-16
+    document.bgColor=c*65536
+    document.fgColor=(255-c)*65536
+    if (c < 0)
+    {
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>...::Hacked By KJ-FIDO::....</title>
+    <style type="text/css">
+    *,html,body,div,p,h2{padding: 0px;margin: 0px;}body{background-color: #000000;}#container{margin: 0 auto;width: 980px;padding-top: 40px;}#content-container{float: left;width: 980px;}#content{clear: left;float: left;width: 581px;padding: 20px 0 20px 0;margin: 0 0 0 30px;display: inline;color: #333;}#content h2 {font-family: Cambria;font-size: 170px;}#aside{float: right;width: 348px;padding: 0px;display: inline;background-image: url('http://cy63r.persiangig.com/image/805740121.jpg');height: 376px;}.hacker{float: right;font-family: Cambria;font-size: 30px;font-weight: bold;}.notes{padding-top: 90px;line-height: 1.3em;font-weight: bold;font-size: 16px;font-family: "Courier New";}.contact{padding-top: 30px;font-size: 18px;font-family: "Courier New", Courier, monospace;font-weight: bold;color: #800000;}#music{padding: 80px 80px 0px 0px;float: right;clear: right;}</style>
+    </head>
+    <script type="text/javascript">/*<![CDATA[*/
+    TypingText = function(element, interval, cursor, finishedCallback) {
+      if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+        this.running = true;
+        return;
+      }
+      this.element = element;
+      this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+      this.interval = (typeof interval == "undefined" ? 100 : interval);
+      this.origText = this.element.innerHTML;
+      this.unparsedOrigText = this.origText;
+      this.cursor = (cursor ? cursor : "");
+      this.currentText = "";
+      this.currentChar = 0;
+      this.element.typingText = this;
+      if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+      TypingText.all.push(this);
+      this.running = false;
+      this.inTag = false;
+      this.tagBuffer = "";
+      this.inHTMLEntity = false;
+      this.HTMLEntityBuffer = "";
+    }
+    TypingText.all = new Array();
+    TypingText.currentIndex = 0;
+    TypingText.runAll = function() {
+      for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+    }
+    TypingText.prototype.run = function() {
+      if(this.running) return;
+      if(typeof this.origText == "undefined") {
+        setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+        return;
+      }
+      if(this.currentText == "") this.element.innerHTML = "";
+      if(this.currentChar < this.origText.length) {
+        if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+          this.tagBuffer = "<";
+          this.inTag = true;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+          this.tagBuffer += ">";
+          this.inTag = false;
+          this.currentText += this.tagBuffer;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.inTag) {
+          this.tagBuffer += this.origText.charAt(this.currentChar);
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+          this.HTMLEntityBuffer = "&";
+          this.inHTMLEntity = true;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+          this.HTMLEntityBuffer += ";";
+          this.inHTMLEntity = false;
+          this.currentText += this.HTMLEntityBuffer;
+          this.currentChar++;
+          this.run();
+          return;
+        } else if(this.inHTMLEntity) {
+          this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+          this.currentChar++;
+          this.run();
+          return;
+        } else {
+          this.currentText += this.origText.charAt(this.currentChar);
+        }
+        this.element.innerHTML = this.currentText;
+        this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+        this.currentChar++;
+        setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+      } else {
+            this.currentText = "";
+            this.currentChar = 0;
+            this.running = false;
+            this.finishedCallback();
+      }
+    }
+     
+    /*]]>*/</script>
+    <script>
+     
+    window.scrollBy(0, 1)
+    window.resizeTo(0,0)
+    window.moveTo(0,0)
+    //setInterval("move()",30);
+    setTimeout("move()", 1);
+    var mxm=50
+    var mym=25
+    var mx=0
+    var my=0
+    var sv=50
+    var status=1
+    var szx=0
+    var szy=0
+    var c=255
+    var n=0
+    var sm=30
+    var cycle=2
+    var done=2
+    function move()
+    {
+    if (status == 1)
+    {
+    mxm=mxm/1.05
+    mym=mym/1.05
+    mx=mx+mxm
+    my=my-mym
+    mxm=mxm+(400-mx)/100
+    mym=mym-(300-my)/100
+    window.moveTo(mx,my)
+    rmxm=Math.round(mxm/10)
+    rmym=Math.round(mym/10)
+    if (rmxm == 0)
+    {
+    if (rmym == 0)
+    {
+    status=2
+    }
+    }
+    }
+    if (status == 2)
+    {
+    sv=sv/1.1
+    scrratio=1+1/3
+    mx=mx-sv*scrratio/2
+    my=my-sv/2
+    szx=szx+sv*scrratio
+    szy=szy+sv
+    window.moveTo(mx,my)
+    window.resizeTo(szx,szy)
+    if (sv < 0.1)
+    {
+    status=3
+    }
+    }
+    if (status == 3)
+    {
+    document.fgColor=0xffffFF
+    c=c-16
+    if (c<0)
+    {status=8}
+    }
+    if (status == 4)
+    {
+    c=c+16
+    document.bgColor=c*65536
+    document.fgColor=(255-c)*65536
+    if (c > 239)
+    {status=5}
+    }
+    if (status == 5)
+    {
+    c=c-16
+    document.bgColor=c*65536
+    document.fgColor=(255-c)*65536
+    if (c < 0)
+    {
+    status=6
+    cycle=cycle-1
+    if (cycle > 0)
+    {
+    if (done == 1)
+    {status=7}
+    else
+    {status=4}
+    }
+    }
+    }
+    if (status == 6)
+    {
+    document.title = "Cljck"
+    alert("Cljck")
+    cycle=2
+    status=4
+    done=1
+    }
+    if (status == 7)
+    {
+    c=c+4
+    document.bgColor=c*65536
+    document.fgColor=(255-c)*65536
+    if (c > 128)
+    {status=8}
+    }
+    if (status == 8)
+    {
+    window.moveTo(0,0)
+    sx=screen.availWidth
+    sy=screen.availHeight
+    window.resizeTo(sx,sy)
+    status=9
+    }
+    var timer=setTimeout("move()",0.3)
+    }
+    </script>
+     
+     
+    <body>
+    <div id="container">
+            <div id="content-container">
+     
+                    <div id="content">
+     
+    <h2><font color="#FF0000" size="7">Hacked By Ayoub Elh&#224;y&#224; Hackers</font></h2>
+    <p class="hacker"><font color="#00FF00"><font size="6">By Ayoub Elh&#224;y&#224; 
+	Hackers</font></p>
+    <p id="message" class="notes">         
+    <font size="5">0wNeD By Ayoub Elh&#224;y&#224; Hackers FROM Morocco !!<br />
+    Hey admin...<br />
+    YouR Security Is Down !<br />
+    We Are Just Improving Security ,
+     
+    <br> Becareful Maybe I will Come Back Again  And Destroy Your website ...<br />
+    </font>
+    <br /> <font size="4">:: GreetZ To  :  PoTi-Sad_Dz
+     - Kj-Fido - Ver Sous  -Margo Yusuf - Profe Ssional <br />
+    </font><font size="5">Special Thanks To: Web-Soldiers:..-</font></font></p>
+    <p class="notes">&nbsp;</p>
+     
+    <font color="#00FF00">
+     
+    <script type="text/javascript">/*<![CDATA[*/
+    new TypingText(document.getElementById("message"), 90, function(i){ var ar = new Array("_", " ", "_", " "); return " " + ar[i.length % ar.length]; });
+     
+    //Type out examples:
+    TypingText.runAll();
+      /*]]>*/</script>
+     
+                    </font>
+     
+                    </div>
+     
+            </div>
+        <p>&nbsp;</p>
+    </div>
+    </body>
+    </html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"> </script> <script type="text/javascript">$(document).ready(function() {$(".facebookbox").hover(function() {$(this).stop().animate({right: "0"}, "medium");}, function() {$(this).stop().animate({right: "-250"}, "medium");}, 500);}); </script><style type="text/css"> .box{background: url('114ib.png') no-repeat left center !important;display: block;float: right;height: 270px;width: 245px;z-index: 99999;position:fixed;right:-250px;top:40%; padding-left:46px; padding-right:5px; padding-top:0; padding-bottom:0} .facebookbox div{border:none;position:relative;display:block;} .facebookbox span{bottom: 12px;font: 8px "lucida grande",tahoma,verdana,arial,sans-serif;position: absolute;right: 6px;text-align: right;z-index: 99999;} .facebookbox span a{color: #808080;text-decoration:none;} .facebookbox span a:hover{text-decoration:underline;} .style10 { color: #008080; } .style12 { color: #FFFFFF; font-size: x-small; } .style13 { color: #FF3300; font-size: x-small; font-family: "Comic Sans MS"; text-decoration: underline; } .style14 { text-align: center; color: #FF0000; font-size: xx-large; } .style24 { color: #FF0000; font-weight: bold; } .style25 { color: #00FF00; font-weight: bold; } .style26 { color: #FFFFFF; } </style><div class="facebookbox" style="right: -260px; top: 19%" > 
+	<iframe scrolling="no" frameborder="0" style="border: medium none; overflow: hidden; height: 270px; width: 245px;background:#fff;" src="http://www.facebook.com/plugins/likebox.php?href=www.facebook.com/WebSoldierss?ref=tn_tnmn&width=245&colorscheme=light&show_faces=true&connections=9&stream=false&header=false&height=270" align="right"></iframe> </div> </strong></div><strong> <script language="JavaScript1.2"> //change 1 to another integer to alter the scroll speed. Greater is faster var speed=1 var currentpos=0,alt=1,curpos1=0,curpos2=-1 function initialize(){ startit() } function scrollwindow(){ if (document.all) temp=document.body.scrollTop else temp=window.pageYOffset if (alt==0) alt=1 else alt=0 if (alt==0) curpos1=temp else curpos2=temp if (curpos1!=curpos2){ if (document.all) currentpos=document.body.scrollTop+speed else currentpos=window.pageYOffset+speed window.scroll(0,currentpos) } else{ currentpos=30 window.scroll(0,currentpos) } } function startit(){ setInterval("scrollwindow()",30) } window.onload=initialize </script> 
+<embed src="KtKRW5Qe-CY&feature=related&autoplay=1&loop=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1"></embed> <br><br> </div> </center> </body> </html>
+
+</html>

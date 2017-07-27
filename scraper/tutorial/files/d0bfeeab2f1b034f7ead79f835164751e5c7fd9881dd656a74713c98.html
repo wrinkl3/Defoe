@@ -1,0 +1,511 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NBSM</title>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="style/bjqs.css">
+
+    <link rel="stylesheet" href="style/jqueryslidemenu.css" media="screen" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="style/stylesheet_tm.css">
+    <link href="SpryAssets/SpryAccordion.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="sryle/flexslider.css" type="text/css" media="screen" />
+    <script src="js/jquery.min.js"></script>
+       <script src="js/jquery-ui.min.js"></script>
+       <script src="SpryAssets/SpryAccordion.js" type="text/javascript"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+	<script type="text/javascript">
+$(document).ready(function()
+{
+$(".tracks_marquee").hover
+  (
+    function()
+    {
+       $(this).attr("scrollamount","3");
+       $(this).start();  
+    },
+    function()
+    {
+       $(this).attr("scrollamount","0");
+       $(this).stop();
+    }
+  )
+})
+</script> 
+
+     <script type="text/javascript" src="js/jquery.min.js"></script>
+     <script type="text/javascript" src="js/jqueryslidemenu.js"></script>
+     
+     
+   
+	<script type="text/javascript">
+		$(document).ready(function(){
+	
+	 // hide #back-top first
+	 $(".back_to_top").hide();
+	 
+	 // fade in #back-top
+	 $(function () {
+	  $(window).scroll(function () {
+	   if ($(this).scrollTop() > 1) {
+		$('.back_to_top').fadeIn();
+	   } else {
+		$('.back_to_top').fadeOut();
+	   }
+	  });
+	
+	  // scroll body to 0px on click
+	  $('.back_to_top a').click(function () {
+	   $('body,html').animate({
+		scrollTop: 0
+	   }, 800);
+	   return false;
+	  });
+	 });
+	
+	});
+	</script>
+    <!-- some pretty fonts for this demo page - not required for the slider -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300' rel='stylesheet' type='text/css'> -->
+
+    <!-- demo.css contains additional styles used to set up this demo page - not required for the slider --> 
+    <link rel="stylesheet" href="style/demo.css">
+
+    <!-- load jQuery and the plugin -->
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/bjqs-1.3.min.js"></script>
+<script class="secret-source">
+        jQuery(document).ready(function($) {
+
+          $('#banner-fade').bjqs({
+			
+            height      : 325,
+            width       : 675,
+            responsive  : true
+          });
+
+        });
+      </script>
+      
+      <!--scroll-->
+      <link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/styleaa.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.codrops1.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!-- the mousewheel plugin -->
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<!-- the jScrollPane script -->
+		<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" src="js/scroll-startstop.events.jquery.js"></script>
+		<!--<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=PT+Serif+Caption:400,400italic' rel='stylesheet' type='text/css' />-->
+
+                
+  <!--<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7243260-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>-->
+      
+ <script type="text/javascript">
+			$(function() {
+			
+				// the element we want to apply the jScrollPane
+				var $el					= $('#jp-container').jScrollPane({
+					verticalGutter 	: -16
+				}),
+						
+				// the extension functions and options 	
+					extensionPlugin 	= {
+						
+						extPluginOpts	: {
+							// speed for the fadeOut animation
+							mouseLeaveFadeSpeed	: 500,
+							// scrollbar fades out after hovertimeout_t milliseconds
+							hovertimeout_t		: 1000,
+							// if set to false, the scrollbar will be shown on mouseenter and hidden on mouseleave
+							// if set to true, the same will happen, but the scrollbar will be also hidden on mouseenter after "hovertimeout_t" ms
+							// also, it will be shown when we start to scroll and hidden when stopping
+							useTimeout			: true,
+							// the extension only applies for devices with width > deviceWidth
+							deviceWidth			: 980
+						},
+						hovertimeout	: null, // timeout to hide the scrollbar
+						isScrollbarHover: false,// true if the mouse is over the scrollbar
+						elementtimeout	: null,	// avoids showing the scrollbar when moving from inside the element to outside, passing over the scrollbar
+						isScrolling		: false,// true if scrolling
+						addHoverFunc	: function() {
+							
+							// run only if the window has a width bigger than deviceWidth
+							if( $(window).width() <= this.extPluginOpts.deviceWidth ) return false;
+							
+							var instance		= this;
+							
+							// functions to show / hide the scrollbar
+							$.fn.jspmouseenter 	= $.fn.show;
+							$.fn.jspmouseleave 	= $.fn.fadeOut;
+							
+							// hide the jScrollPane vertical bar
+							var $vBar			= this.getContentPane().siblings('.jspVerticalBar').hide();
+							
+							/*
+							 * mouseenter / mouseleave events on the main element
+							 * also scrollstart / scrollstop - @James Padolsey : http://james.padolsey.com/javascript/special-scroll-events-for-jquery/
+							 */
+							$el.bind('mouseenter.jsp',function() {
+								
+								// show the scrollbar
+								$vBar.stop( true, true ).jspmouseenter();
+								
+								if( !instance.extPluginOpts.useTimeout ) return false;
+								
+								// hide the scrollbar after hovertimeout_t ms
+								clearTimeout( instance.hovertimeout );
+								instance.hovertimeout 	= setTimeout(function() {
+									// if scrolling at the moment don't hide it
+									if( !instance.isScrolling )
+										$vBar.stop( true, true ).jspmouseleave( instance.extPluginOpts.mouseLeaveFadeSpeed || 0 );
+								}, instance.extPluginOpts.hovertimeout_t );
+								
+								
+							}).bind('mouseleave.jsp',function() {
+								
+								// hide the scrollbar
+								if( !instance.extPluginOpts.useTimeout )
+									$vBar.stop( true, true ).jspmouseleave( instance.extPluginOpts.mouseLeaveFadeSpeed || 0 );
+								else {
+								clearTimeout( instance.elementtimeout );
+								if( !instance.isScrolling )
+										$vBar.stop( true, true ).jspmouseleave( instance.extPluginOpts.mouseLeaveFadeSpeed || 0 );
+								}
+								
+							});
+							
+							if( this.extPluginOpts.useTimeout ) {
+								
+								$el.bind('scrollstart.jsp', function() {
+								
+									// when scrolling show the scrollbar
+								clearTimeout( instance.hovertimeout );
+								instance.isScrolling	= true;
+								$vBar.stop( true, true ).jspmouseenter();
+								
+							}).bind('scrollstop.jsp', function() {
+								
+									// when stop scrolling hide the scrollbar (if not hovering it at the moment)
+								clearTimeout( instance.hovertimeout );
+								instance.isScrolling	= false;
+								instance.hovertimeout 	= setTimeout(function() {
+									if( !instance.isScrollbarHover )
+											$vBar.stop( true, true ).jspmouseleave( instance.extPluginOpts.mouseLeaveFadeSpeed || 0 );
+									}, instance.extPluginOpts.hovertimeout_t );
+								
+							});
+							
+								// wrap the scrollbar
+								// we need this to be able to add the mouseenter / mouseleave events to the scrollbar
+							var $vBarWrapper	= $('<div/>').css({
+								position	: 'absolute',
+								left		: $vBar.css('left'),
+								top			: $vBar.css('top'),
+								right		: $vBar.css('right'),
+								bottom		: $vBar.css('bottom'),
+								width		: $vBar.width(),
+								height		: $vBar.height()
+							}).bind('mouseenter.jsp',function() {
+								
+								clearTimeout( instance.hovertimeout );
+								clearTimeout( instance.elementtimeout );
+								
+								instance.isScrollbarHover	= true;
+								
+									// show the scrollbar after 100 ms.
+									// avoids showing the scrollbar when moving from inside the element to outside, passing over the scrollbar								
+								instance.elementtimeout	= setTimeout(function() {
+									$vBar.stop( true, true ).jspmouseenter();
+								}, 100 );	
+								
+							}).bind('mouseleave.jsp',function() {
+								
+									// hide the scrollbar after hovertimeout_t
+								clearTimeout( instance.hovertimeout );
+								instance.isScrollbarHover	= false;
+								instance.hovertimeout = setTimeout(function() {
+										// if scrolling at the moment don't hide it
+									if( !instance.isScrolling )
+											$vBar.stop( true, true ).jspmouseleave( instance.extPluginOpts.mouseLeaveFadeSpeed || 0 );
+									}, instance.extPluginOpts.hovertimeout_t );
+								
+							});
+							
+							$vBar.wrap( $vBarWrapper );
+							
+						}
+						
+						}
+						
+					},
+					
+					// the jScrollPane instance
+					jspapi 			= $el.data('jsp');
+					
+				// extend the jScollPane plugin	
+				$.extend( true, jspapi, extensionPlugin );
+				jspapi.addHoverFunc();
+			
+			});
+		</script>
+                
+                    <script src="js/csscustom.js"></script> 
+		<script src="js/js.php"></script>
+</head>
+
+<body>
+ <!--header-->
+<div class="header">
+	<div class="headercont">
+    	<div class="npgov-logo"></div>
+        <div class="blong">GOVERNMENT OF NEPAL<br />
+        					<span>MINISTRY OF INDUSTRY</span><br />
+                            <hglt>NEPAL BUREAU OF STANDARDS AND METROLOGY</hglt>
+                            <div class="nslogo"></div>
+        </div>
+        <div class="npflag"></div>
+         
+        <div class="flag">
+            	
+                <form id="language" name="language" method="post" action="#" style="margin-top:-15px; margin-left:110px; ">
+                	 <input type="hidden" id="lid" name="lid" value="1">
+	 		 <input type="hidden" name="task" id="task" value="cl" />
+                    
+                	                                    <u>English </u>
+                                   
+                                                          &nbsp;&nbsp; | &nbsp;&nbsp;<a ref="#" onClick="change_language()" style="cursor:pointer;color:#000;" >??????  </a>
+                                                  </form> 
+                </ul>
+            </div>
+        <div class="clear"></div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+  function change_language()
+  {
+  	document.language.submit();
+  }
+</script><!--header ends-->
+
+<!--navigation-->
+
+<div class="menu">
+    <div class="menu-cont">
+
+        <nav>
+            <div id="myslidemenu" class="jqueryslidemenu">
+
+                <ul>
+                    <li><a href="index.php" class="">HOME</a></li>
+                    <li><a href="index.php" class="">ABOUT US</a>
+
+                        <ul>
+                            <li><a href="index.php?func=staffs">OUR TEAM</a></li>
+                            <li><a href="index.php?func=cms&amp;abr=cms4">ORGANIZATION CHART</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="index.php?func=acts" class="">ACTS & REGULATIONS</a></li>
+                    <li><a href="index.php?func=publication" class="">PUBLICATIONS</a></li>
+
+                    <li><a href="index.php?func=gallery" class="first">POHOTO GALLERY</a></li>
+                    <li><a href="index.php?func=download" class="">DOWNLOADS</a></li>
+                    <li><a href="index.php?func=contactus" class="">CONTACT US</a></li>
+                    
+<!--                  
+                    <li><a href="index.php?func=testingfee">TESTING FEE</a></li>-->
+                </ul>
+                <br style="clear: left" />
+            </div>
+
+        </nav>
+
+    </div>
+</div><!--navigation ends-->
+
+<!--content-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NBSM</title>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="style/bjqs.css">
+
+    <!-- some pretty fonts for this demo page - not required for the slider -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300' rel='stylesheet' type='text/css'> 
+
+    <!-- demo.css contains additional styles used to set up this demo page - not required for the slider --> 
+    <link rel="stylesheet" href="style/demo.css">
+    <link rel="stylesheet" type="text/css" href="style/elastislide.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+<noscript>
+
+    <!-- load jQuery and the plugin -->
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="js/bjqs-1.3.min.js"></script>
+<script class="secret-source">
+        jQuery(document).ready(function($) {
+
+          $('#banner-fade').bjqs({
+			
+            height      : 325,
+            width       : 675,
+            responsive  : true
+          });
+
+        });
+      </script>
+    
+    <!--slider-->
+    <style>
+				.es-carousel ul{
+					display:block;
+				}
+			</style>
+		</noscript>
+		<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</script>
+	
+		<script type="text/javascript" src="../js/jquery-1.2.6.min.js"></script>
+				<script type="text/javascript" src="../js/superfish.js"></script>
+		<script type="text/javascript">
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('ul.sf-menu').superfish();
+		});
+
+		</script>
+    
+    
+</head>
+
+<body>
+<!--header--> 
+
+<!--header ends-->
+
+<!--navigation-->
+
+<!--navigation ends-->
+
+<!--content-->
+<div class="content">
+	<div class="content-cont">
+    	<div class="cont-top"></div>
+        <div class="clear"></div>
+        	
+            <!--main content-->	
+            
+            
+            
+        	<div class="maincont-in">
+            
+            	<!--left top menu-->
+            	
+               <!--left top menu ends-->
+                
+               		<!--slider--><!--slider ends-->
+                	<div class="leftcontent-in">
+                    
+                    	<!--news and events--><!--news and events ends-->
+                        
+                        <!--welcome box-->
+              			 <div class="inner-details-full">
+                       	   <div class="inner-details-full-title">POHOTO GALLERY<span class="eventdate"></span></div><!--starts photo gallery container--><br />
+            <div class="container">
+			
+			<div class="gal-contents">
+				<div id="rg-gallery" class="rg-gallery">
+					<div class="rg-thumbs">
+						<!-- Elastislide Carousel Thumbnail Viewer -->
+						<div class="es-carousel-wrapper">
+							<div class="es-nav">
+								<span class="es-nav-prev">Previous</span>
+								<span class="es-nav-next">Next</span>
+							</div>
+							<div class="es-carousel">
+								<ul>
+                                                                    				</ul>			</div>
+						</div>
+						<!-- End Elastislide Carousel Thumbnail Viewer -->
+					</div><!-- rg-thumbs -->
+				</div><!-- rg-gallery -->
+				</div><!-- content -->
+		</div><!-- ends photo gallery container -->
+              <div class="clear"></div>             
+		</div>
+                       	   
+           			    </div>
+                        
+                  		
+                        
+           	  </div>
+                	<div class="clear"></div>
+            <!--main content ends-->
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<!--content ends-->
+<div class="footer">
+	
+
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="js/gallery.js"></script>
+   
+            
+</body>
+</html>
+ <div class="clear"></div>
+<!--content ends-->
+<div class="footer">
+	<div class="footer-cont">
+    <div class="shortlink">
+   	<a href="index.php">Home</a> |  <a href="#">Departments</a> |  <a href="#">Laboratory</a> |  <a href="http://localhost/nbsmmm/file/download/ ">Ns Application Form</a> |  <a href="index.php?func=cms&amp;abr=cms8">Standard List</a> |  <a href="index.php?func=contactus">Contact Us</a></div><a href="http://www.facebook.com/nbsmnepal"><img src="images/fbk.png" border="0"/></a></div></div>
+
+
+<div class="copyright">Copyright © 2013 Nepal Bureau of Standard & Meterology. All Rights Reserved.</div></div>
+</body>
+</html>
+ 

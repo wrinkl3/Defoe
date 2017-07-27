@@ -1,0 +1,1404 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="Brags, Auctions, Classified, Realestate, Jobs, Services, Gigs, Auto Auctions, Auto Proxy Settings, Auto Proxy, Charity, Move Ads, Post Realestate Ads, Post Brags Ads, Post Classifieds, Post Realestate, Paythismuch, Move Ads Using Ebay, Copy Ads From Ebay, Free Brags, Post a Free Brags Ads, Discount Coupon for Free Trial, Bid Products, Bid Auctions, Post a Classifieds Ads, Post a Realestate Ads, Post a Job Ads, Post an Service Ads, Post a Gigs Ads, Create a Gigs Ad, Create a Services Ad, Create a Jobs Ad,  Create a Real Estate Ad, Create a Auction Ad, Move an Auction Ad, Move an Auction Ad from Ebay, Create a Brags Ad, Cars, Clothing, Apparel, Collectibles, Sporting goods, Digital cameras, Antiques, Tickets, Jewelry, Online shopping, Auction, Online auction" />
+
+
+
+<link rel="SHORTCUT ICON" href="images/favicon.ico">
+
+<title>Pay This Much | Home</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<link href="css/jquery.countdown.css" rel="stylesheet" type="text/css" />
+
+<link href="css1/style.css" type="text/css" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+
+<link rel="stylesheet" type="text/css" href="gal/stylesheet/vertical.css" />
+
+<link rel="stylesheet" type="text/css" href="gal/stylesheet/horizontal.css" />
+
+<script language="javascript" type="text/javascript" src="gal/script/mootools-1.2.1-core.js"></script>
+
+<script language="javascript" type="text/javascript" src="gal/script/mootools-1.2-more.js"></script>
+
+<script language="javascript" type="text/javascript" src="gal/script/slideitmoo-1.1.js"></script>
+
+<script language="JavaScript" src="gen_validatorv31.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="jscroller2-1.0.css">
+
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript" src="jscroller2-1.61.js"></script>
+
+<script type="text/javascript" src="tiny_mce/tiny_mce.js"></script>
+
+<script type="text/javascript" src="tinymce.js"></script>
+
+<script language="javascript" type="text/javascript" src="scripts/jquery.js"></script>
+
+<script src="scripts/searchjs.js" type="text/javascript"></script>
+
+<script src="scripts/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript" src="scripts/jquery.countdown.min.js"></script>
+
+<script type="text/javascript" src="scripts/stscode.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32153069-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<script language="javascript" type="text/javascript">
+
+$(document).ready(function(){
+
+	$("a[rel^='prettyPhoto']").prettyPhoto({
+
+
+
+										   showTitle: false /* true/false */
+
+
+
+										   });
+
+
+
+	$('input.deletebutton').click(function(){
+
+
+
+		var conf=confirm("Are You Sure You Want To Delete This Image?");
+
+
+
+		if(conf)
+
+
+
+		{
+
+
+
+			window.location="login.html?delete="+$(this).attr('name');
+
+
+
+		}
+
+
+
+	});
+
+
+
+	$('input.deletebuttons').click(function(){
+
+
+
+		var conf=confirm("Are You Sure You Want To Delete This Image?");
+
+
+
+		if(conf)
+
+
+
+		{
+
+
+
+			window.location="login.html?delete="+$(this).attr('name');
+
+
+
+		}
+
+
+
+	});
+
+
+
+	$('span.delAdds').click(function(){
+
+
+
+		var conf=confirm("Are You Sure You Want To Delete This Image?");
+
+
+
+		if(conf)
+
+
+
+		{
+
+
+
+			window.location="login.html?deleteAdd="+$(this).attr('id');
+
+
+
+		}
+
+
+	});
+
+
+	$('input[name=search]').click(function(){
+
+
+	$(this).val('');
+
+
+	});
+
+
+
+
+	runScroller();
+
+
+
+});
+
+function timedRefresh() { 
+ setTimeout("location.reload(true);",0);
+}
+
+</script>
+
+</head>
+
+
+<body onload="NewsScrollStart()">
+
+
+<div class="mainvid">
+
+<div align="center">
+
+<div class="pageWidth">
+
+<div class="logoBack">
+
+
+<form name="login" action="login.php" method="POST" enctype="multipart/form-data">
+
+<div class="welcomeGuest">
+
+Welcome Guest
+</div>
+
+<div align="right" style="margin-right:20px">
+
+
+<div align="right">
+
+<table><tr><td>
+
+<!--
+
+<input name="uname" type="text"  value="Username" onfocus="formText(this)"/>
+
+--><input type="checkbox" name="remember" value="remember" /> <strong>Always ON</strong>
+
+<input name="uname" type="text"  value="" onfocus="formText(this)"/>
+
+&nbsp;&nbsp;
+
+<input name="ppass" type="password" value="" onfocus="formText(this)"/>
+
+<input type="hidden" name="return_to" value="aHR0cDovL3d3dy5wYXl0aGlzbXVjaC5jb20v"/>
+
+</td></tr>
+<tr>
+<td align="left"><span style="padding-left:85px; text-align:left;">User Name</span><span style="padding-left:105px; text-align:left;">Password</span></td>
+</tr>
+
+<!--
+
+<tr><td align="right"> 
+
+<input type="checkbox" name="remember" value="remember" />
+
+<font face="Comic Sans MS, cursive"><b>Remember Me</b></font>  &nbsp;&nbsp;&nbsp;
+
+</td></tr>
+
+-->
+
+</table>
+
+        </div>
+
+        <div align="right" style="margin-left:20px; margin-right:2px; margin-top:20px">
+
+		   	<span class="link"></span><a href="index.php?mode=register1"><input name="r_now" type="button" value="Register Now" onclick="jascript:window.location.href='index.php?mode=register1';"/><!--	Register Now  --></a>&nbsp;&nbsp;&nbsp;
+
+            <span class="link"></span><a href="index.php?mode=forgerpass"><input name="fpwd" type="button" value="Forget Password" onclick="jascript:window.location.href='index.php?mode=forgerpass';"/><!-- Forgot Password --></a>&nbsp;&nbsp;
+
+			
+
+          
+            <input name="btnlogin" type="submit" value="LogIn"/>
+
+		
+		</div>
+
+        </form>
+
+         <div align="right" class="menu" style="padding-top:-10px; padding-bottom:30px;">
+
+         <a href="index.php"><font face="Times New Roman, Times, serif">Home</font></a> | <a href="index.php?mode=news"><font face="Times New Roman, Times, serif">News</font></a> | <a href="index.php?mode=company_info"><font face="Times New Roman, Times, serif">Company Info</font></a> | <a href="index.php?mode=adsadd"><font face="Times New Roman, Times, serif">Advertise With Us</font></a> | <a href="index.php?mode=fac"><font face="Times New Roman, Times, serif">FAQ</font></a> | <a href="index.php?mode=avoid_scams"><font face="Times New Roman, Times, serif">Avoid Scams</font></a> | <a href="index.php?mode=charities"><font face="Times New Roman, Times, serif">Charity</font></a> | <!--<a href="index.php?mode=creditpolicy"><font face="Times New Roman, Times, serif">Credit Policy</font></a> |--> <a href="index.php?mode=fees"><font face="Times New Roman, Times, serif">Fees</font></a> | <a href="index.php?mode=ads"><font face="Times New Roman, Times, serif">Move Ads</font></a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>       
+
+<div align="center">
+
+<div class="pageWidth menuBack">
+
+<div class="searchArea" align="left">
+
+<!-- *************************************************** -->
+
+  <script  language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+
+  <script language="javascript" type="text/javascript" src="jquery.autocomplete.js"></script>
+
+<script language="javascript" type="text/javascript">
+
+$(function() {
+
+        $("#searchstring").autocomplete('search.php');
+
+        $("#flush").click(function() {
+
+                var ac = $("#searchstring").data('autocompleter');
+
+                if (ac && $.isFunction(ac.cacheFlush)) {
+
+                        ac.cacheFlush();
+
+                } else {
+
+                        alert('Error flushing cache');
+
+                }
+
+        });
+
+        $("#ac2").autocomplete({
+
+                url: 'search.php',
+
+                sortFunction: function(a, b) {
+
+                        a = String(a.data[0]).toLowerCase();
+
+                        b = String(b.data[0]).toLowerCase();
+
+                        if (a > b) {
+
+                                return 1;
+
+                        }
+
+                        if (a < b) {
+
+                                return -1;
+
+                        }
+
+                        return 0;
+
+                },
+
+                showValue: function(value, data) {
+
+                        return '<span style="color:#D23D63">' + value + '</span>';
+
+                }
+
+        });
+
+});
+
+        </script>
+
+        <link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" />
+
+
+
+<!-- *************************************************** -->
+
+
+
+
+
+    <div  style="padding-left:30px">
+
+
+
+
+
+
+
+        <form action="index.php" method="GET">
+
+
+
+<input type="hidden" name="mode" value="categorysearch"/>
+
+
+
+    <div style="float:left"><input name="searchstring" type="text"  id="searchstring"  style="width:200px" value="" />
+
+
+
+
+
+
+
+    &nbsp;</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+<div style="float:left">
+
+
+
+
+
+
+
+<input type="hidden" name="searchnow" value="1" />
+
+
+
+
+
+
+
+<input type="submit" value="Search" class="buttonClass" style="float:left" name="btnsearch" id="btnsearch" /></div>
+
+
+
+
+
+
+
+    </form>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div style="float:left; padding-left:10px; margin-top:15px"><img src="images/menu.jpg" width="543" height="83" border="0" usemap="#Map" />
+
+
+
+
+
+
+
+      <map name="Map" id="Map">
+
+
+
+
+
+
+
+        <area shape="rect" coords="5,8,73,69" href="index.php?mode=brags" />
+
+
+
+
+
+
+
+        <area shape="rect" coords="83,6,150,69" href="index.php?mode=all_auctions" />
+
+
+
+
+
+
+
+        <area shape="rect" coords="162,5,228,69" href="index.php?mode=classifieds" />
+
+
+
+
+
+
+
+        <area shape="rect" coords="238,6,305,68" href="index.php?mode=realestateadvt" />
+
+
+
+
+
+
+
+        <area shape="rect" coords="317,5,384,68" href="index.php?mode=jobs"/>
+
+
+
+
+
+
+
+        <area shape="rect" coords="396,4,460,69" href="index.php?mode=services" />
+
+
+
+
+
+
+
+        <area shape="rect" coords="470,5,539,69" href="index.php?mode=gigs" />
+
+
+
+
+
+
+
+      </map>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+</div>
+<!--Left Menu Goes Here-->
+
+<div align="center">
+
+<div class="pageWidth">
+
+<div class="leftColumn">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--default view-->
+
+
+
+
+
+	 <div class="newSectionHeading">News</div>
+
+
+
+
+
+        <div class="topLeftYellowBlock"></div>
+
+
+
+
+
+        <div class="leftYellowBlock" align="left">
+
+
+
+
+
+		
+
+
+
+
+<div class="headingType1">Latest News</div> <a href='index.php?mode=newsdetails&id=18' style='color:#000000; text-decoration:none;'>The fastest growing Classified , Auction and reporting website! </a><hr/><br/><a href='index.php?mode=newsdetails&id=19' style='color:#000000; text-decoration:none;'>Finally a great tool to help save money!</a><hr/><br/><a href='index.php?mode=newsdetails&id=20' style='color:#000000; text-decoration:none;'>Before you buy anything check what others paid! </a><hr/><br/><a href='index.php?mode=newsdetails&id=21' style='color:#000000; text-decoration:none;'>Great to also give to a charity! </a><hr/><br/><a href='index.php?mode=newsdetails&id=22' style='color:#000000; text-decoration:none;'>It feels good to know your not over paying! </a><hr/><br/>
+
+
+
+
+     <div></div></div>
+
+
+
+
+
+ <div class="bottomLeftYellowBlock"></div>
+
+
+
+
+
+        <div class="newSectionHeading">Coupon Codes</div>
+
+
+
+
+
+        <div class="topLeftYellowBlock"></div>
+
+
+
+
+
+        <div class="leftYellowBlock">
+
+
+
+
+
+    <div class="headingType1">FREETRIAL2012</div>
+
+
+
+
+
+           <div class="headingType2"><strong>To get 100% Discount, Copy-Paste or Type this discount coupon in the coupon box before you post an ad.</strong><br />
+
+
+
+
+
+            <br />
+
+
+
+
+
+					
+
+
+
+
+
+          </div> 
+
+
+
+
+
+		  <div>
+
+
+
+
+
+		  
+
+
+
+
+		  </div>
+
+
+
+
+
+		  <br /><br />
+
+
+
+
+
+     <div><img src="images/pic1.jpg" width="216" height="187" border="0" /></div></div>
+
+
+
+
+
+ <div class="bottomLeftYellowBlock"></div>
+
+
+
+
+
+
+
+
+
+
+	
+
+    </div>  
+
+<!--Left Menu Ends Here-->  
+
+<!--Working Area Starts Here-->
+
+		  
+
+ <div class="middleColumn">
+		<div class="SEheading">The Charitable Search Engine Of Sales</div>
+					
+
+	
+  <div align="center" style=" margin-left:0px;padding-top:0px; margin-top:10px;">
+  
+  <div><span style="font-size: large;"><img src="admin/uploads/top2.jpg" border="0" alt="" width="534" height="11" /></span></div>
+<div style="border-right: #e1cd9a 1px solid; background: #fffebb; border-left: #e1cd9a 1px solid; width: 534px; height: 768px;">
+<div style="text-align: center;"><span style="font-size: large;">PayThisMuch.com = stupid&nbsp;<strong>&nbsp;<br /></strong><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p dir="ltr" align="center"><strong>***uR&nbsp;S!t3&nbsp;H4S&nbsp;B33N&nbsp;H4cK3D***</strong></p>
+<p dir="ltr" align="center"><strong>***uR&nbsp;S3cUR!tY&nbsp;w4$&nbsp;D0wN**</strong></p>
+<p dir="ltr" align="center">??? ???&nbsp;</p>
+<p dir="ltr" align="center">????????? ???</p>
+<p dir="ltr" align="center">AntiHacker</p>
+<p dir="ltr" align="center">&nbsp;??? ????? ???? ??? ?? ????&nbsp;</p>
+<p dir="ltr" align="center">greetz :</p>
+<p dir="ltr" align="center"><a href="http://www.aljyyosh.com">www.aljyyosh.com</a>&nbsp;+&nbsp;<a href="http://www.v4-team.com">www.v4-team.com</a></p>
+<p dir="ltr" align="center"><a href="http://www.v4-team.com"></a>members</p>
+<p dir="ltr" align="center">&nbsp;</p>
+<p dir="ltr" align="center">#admin#</p>
+<p dir="ltr" align="center">#your site is scam #</p>
+<p dir="ltr" align="center"><strong>*</strong></p>
+<p dir="ltr" align="center">&nbsp;</p>
+<p dir="ltr" align="center"><strong><br /></strong></p>
+</strong></span>
+<p>&nbsp;</p>
+</div>
+<p class="MsoNormal" style="text-align: center; margin: 0in 0in 0pt;"><span style="font-family: arial black,avant garde; font-size: 14pt;"><span style="font-size: medium;"></span></span></p>
+</div>
+<div><span style="font-family: arial black,avant garde;"><img src="admin/uploads/bottom2.jpg" border="0" alt="" width="534" height="11" /><img title="a" src="http://i.imgur.com/JJm3X.png" alt="a" width="922" height="770" /></span></div>
+<!--Session data--><!--Session data--><!--Session data--><!--Session data--><!--Session data--><!--Session data--><!--Session data--><!--Session data--> 
+  </div>
+  <!--<p style="padding-left: 20px;">
+	<span style="font-family: arial,helvetica,sans-serif; font-size: 18px;"><strong>The Charitable Search <span style="color: rgb(255, 0, 0);"><u>Engine of Sales</u></span><br />
+	</strong></span></p>
+<p style="padding-left: 20px;">
+	<span style="font-family: arial,helvetica,sans-serif; font-size: 16px;"><strong>PayThisMuch.com=Social Media Evolved</strong></span></p>
+<p style="padding-left: 20px;">
+	<span style="font-size: 14px;"><span style="font-family: arial,helvetica,sans-serif;"><strong>FREE to search our <u>Ads</u></strong>,<strong> <u>SOLD</u> Prices and <u>Post</u> what you Paid</strong></span></span></p>
+<p style="padding-left: 20px;">
+	<strong><span style="font-size: 16px;"><span style="font-family: arial,helvetica,sans-serif;"><u>Buy</u> &amp; <u>Sell</u> Anything Using our <u>Auction</u> &amp; <u>Classified</u> Ads<br />
+	</span></span></strong></p>
+<p style="padding-left: 20px;">
+	<span style="font-size: 12px;"><strong><span style="font-family: arial,helvetica,sans-serif;">PayThisMuch.com contributes a portion of its revenue to charity <span style="color: rgb(255, 0, 0);"><u>READ MORE</u></span></span></strong><br />
+	</span></p>
+<p style="font-size: 16px; font-family: arial,helvetica,sans-serif; padding-left: 20px;">
+	<span style="font-size: 14px;"><span style="font-family: arial,helvetica,sans-serif;"><b>Our <span style="color: rgb(255, 0, 0);">Search Engine of Sales</span> enables you to search our global<br />
+	database of transactions that the community has reported</b></span></span></p>
+<p style="font-size: 14px; font-family: arial,helvetica,sans-serif; padding-left: 20px;">
+	<strong><span style="font-size: 14px;"><span style="font-family: arial,helvetica,sans-serif;"><span style="font-size: 16px;"><span style="color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 0, 0);">Brag Area </span></span>-</span> Go here to describe what you bought or find<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; who has the best price. FREE to USE!!<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Now it&#39;s your turn to join in! <span style="color: rgb(255, 0, 0);"><u>READ MORE</u></span></span></span></strong></p>
+<p style="font-size: 14px; font-family: arial,helvetica,sans-serif; padding-left: 20px;">
+	<strong><span style="font-size: 14px;"><span style="font-family: arial,helvetica,sans-serif;"><span style="font-size: 16px;"><span style="color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 0, 0);">AUCTIONA</span></span></span></span></span>- if a low listing fee is charged a portion will be<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; donated to charity <span style="font-size: 14px;"><span style="font-family: arial,helvetica,sans-serif;"><span style="color: rgb(255, 0, 0);"><u>READ MORE</u></span></span></span></strong></p>
+<p style="padding-left: 20px;">
+	<strong><span style="font-size: 14px;"><span style="font-family: arial,helvetica,sans-serif;">PayThisMuch.com - Where serious buyers and sellers meet!</span></span></strong></p>
+<p style="font-size: 14px; font-family: arial,helvetica,sans-serif; padding-left: 20px;">
+	<strong><span style="font-size: 14px;"><span style="font-family: arial,helvetica,sans-serif;"><span style="font-size: 16px;"><span style="color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 0, 0);">CLASSIFIEDS</span></span></span></span></span>- if a low listing fee is charged a portion <br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; will be donated to charity <span style="font-size: 14px;"><span style="font-family: arial,helvetica,sans-serif;"><span style="color: rgb(255, 0, 0);"><u>READ MORE</u></span></span></span></strong></p>
+<p style="padding-left: 20px;">
+	<span style="font-size: 12px;"><span style="font-family: arial,helvetica,sans-serif;"><strong><u><span style="font-size: 16px;">Buying</span></u> - Search our <span style="font-size: 16px;">Classifieds</span> and <span style="font-size: 16px;">Auctions</span></strong></span></span><span style="font-family: arial,helvetica,sans-serif;"><strong> <span style="font-size: 12px;">to find what you want<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from our sellers who are also helping charities</span> <span style="font-size: 12px;"><span style="color: rgb(255, 0, 0);"><u>READ MORE</u></span></span></strong></span></p>
+<p style="padding-left: 20px;">
+	<link href="file:///C:%5CDOCUME~1%5CChandra%5CLOCALS~1%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_filelist.xml" rel="File-List" /><link href="file:///C:%5CDOCUME~1%5CChandra%5CLOCALS~1%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_themedata.thmx" rel="themeData" /><link href="file:///C:%5CDOCUME~1%5CChandra%5CLOCALS~1%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_colorschememapping.xml" rel="colorSchemeMapping" />
+	
+	
+	
+	
+	
+	
+	
+	<xml><w:latentstyles deflockedstate="false" defpriority="99" defqformat="false" defsemihidden="true" defunhidewhenused="true" latentstylecount="267"><w:lsdexception locked="false" name="Normal" priority="0" qformat="true" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="heading 1" priority="9" qformat="true" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="heading 2" priority="9" qformat="true"><w:lsdexception locked="false" name="heading 3" priority="9" qformat="true"><w:lsdexception locked="false" name="heading 4" priority="9" qformat="true"><w:lsdexception locked="false" name="heading 5" priority="9" qformat="true"><w:lsdexception locked="false" name="heading 6" priority="9" qformat="true"><w:lsdexception locked="false" name="heading 7" priority="9" qformat="true"><w:lsdexception locked="false" name="heading 8" priority="9" qformat="true"><w:lsdexception locked="false" name="heading 9" priority="9" qformat="true"><w:lsdexception locked="false" name="toc 1" priority="39"><w:lsdexception locked="false" name="toc 2" priority="39"><w:lsdexception locked="false" name="toc 3" priority="39"><w:lsdexception locked="false" name="toc 4" priority="39"><w:lsdexception locked="false" name="toc 5" priority="39"><w:lsdexception locked="false" name="toc 6" priority="39"><w:lsdexception locked="false" name="toc 7" priority="39"><w:lsdexception locked="false" name="toc 8" priority="39"><w:lsdexception locked="false" name="toc 9" priority="39"><w:lsdexception locked="false" name="caption" priority="35" qformat="true"><w:lsdexception locked="false" name="Title" priority="10" qformat="true" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Default Paragraph Font" priority="1"><w:lsdexception locked="false" name="Subtitle" priority="11" qformat="true" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Strong" priority="0" qformat="true" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Emphasis" priority="20" qformat="true" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Table Grid" priority="59" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Placeholder Text" unhidewhenused="false"><w:lsdexception locked="false" name="No Spacing" priority="1" qformat="true" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Shading" priority="60" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light List" priority="61" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Grid" priority="62" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 1" priority="63" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 2" priority="64" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 1" priority="65" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 2" priority="66" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 1" priority="67" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 2" priority="68" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 3" priority="69" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Dark List" priority="70" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Shading" priority="71" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful List" priority="72" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Grid" priority="73" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Shading Accent 1" priority="60" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light List Accent 1" priority="61" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Grid Accent 1" priority="62" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 1 Accent 1" priority="63" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 2 Accent 1" priority="64" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 1 Accent 1" priority="65" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Revision" unhidewhenused="false"><w:lsdexception locked="false" name="List Paragraph" priority="34" qformat="true" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Quote" priority="29" qformat="true" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Intense Quote" priority="30" qformat="true" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 2 Accent 1" priority="66" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 1 Accent 1" priority="67" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 2 Accent 1" priority="68" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 3 Accent 1" priority="69" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Dark List Accent 1" priority="70" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Shading Accent 1" priority="71" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful List Accent 1" priority="72" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Grid Accent 1" priority="73" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Shading Accent 2" priority="60" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light List Accent 2" priority="61" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Grid Accent 2" priority="62" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 1 Accent 2" priority="63" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 2 Accent 2" priority="64" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 1 Accent 2" priority="65" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 2 Accent 2" priority="66" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 1 Accent 2" priority="67" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 2 Accent 2" priority="68" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 3 Accent 2" priority="69" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Dark List Accent 2" priority="70" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Shading Accent 2" priority="71" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful List Accent 2" priority="72" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Grid Accent 2" priority="73" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Shading Accent 3" priority="60" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light List Accent 3" priority="61" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Grid Accent 3" priority="62" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 1 Accent 3" priority="63" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 2 Accent 3" priority="64" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 1 Accent 3" priority="65" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 2 Accent 3" priority="66" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 1 Accent 3" priority="67" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 2 Accent 3" priority="68" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 3 Accent 3" priority="69" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Dark List Accent 3" priority="70" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Shading Accent 3" priority="71" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful List Accent 3" priority="72" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Grid Accent 3" priority="73" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Shading Accent 4" priority="60" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light List Accent 4" priority="61" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Grid Accent 4" priority="62" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 1 Accent 4" priority="63" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 2 Accent 4" priority="64" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 1 Accent 4" priority="65" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 2 Accent 4" priority="66" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 1 Accent 4" priority="67" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 2 Accent 4" priority="68" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 3 Accent 4" priority="69" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Dark List Accent 4" priority="70" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Shading Accent 4" priority="71" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful List Accent 4" priority="72" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Grid Accent 4" priority="73" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Shading Accent 5" priority="60" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light List Accent 5" priority="61" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Grid Accent 5" priority="62" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 1 Accent 5" priority="63" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 2 Accent 5" priority="64" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 1 Accent 5" priority="65" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 2 Accent 5" priority="66" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 1 Accent 5" priority="67" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 2 Accent 5" priority="68" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 3 Accent 5" priority="69" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Dark List Accent 5" priority="70" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Shading Accent 5" priority="71" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful List Accent 5" priority="72" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Grid Accent 5" priority="73" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Shading Accent 6" priority="60" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light List Accent 6" priority="61" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Light Grid Accent 6" priority="62" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 1 Accent 6" priority="63" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Shading 2 Accent 6" priority="64" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 1 Accent 6" priority="65" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium List 2 Accent 6" priority="66" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 1 Accent 6" priority="67" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 2 Accent 6" priority="68" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Medium Grid 3 Accent 6" priority="69" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Dark List Accent 6" priority="70" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Shading Accent 6" priority="71" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful List Accent 6" priority="72" semihidden="false" unhidewhenused="false"><w:lsdexception locked="false" name="Colorful Grid Accent 6" priority="73" semihidden="false" unhidewhenused="false"><w:lsdexception locked=		</div>
+		-->
+   
+
+		
+
+
+<!--Classifieds Area Goes Here-->
+
+<!--Classified Area Ends Here-->
+
+<!-- Working Area Ends Here-->
+
+<!--Advertisement and Sponsors Section starts Here-->
+
+	<div style="padding:10px;">
+
+		<div class="SEheading">Advertisement & Sponsor Section</div></div>
+
+	    <div class="topLeftYellowBlock1"></div>
+
+	    <div class="leftYellowBlock" >
+
+    	<div style="margin-left:30px; margin-right:30px">
+
+<!-- Boottom advt section -->
+
+<table >
+
+  <tr><td width="42" align="center" valign="middle">
+
+  <!-- Video 1 -->
+
+<!--<script language="javascript" type='text/javascript' src='swfobject.js'></script>-->
+
+<!--<div id='mediaspace'>Video1</div>-->
+
+<!--<script language="javascript" type='text/javascript'>
+
+  var so = new SWFObject('player-viral.swf','mpl','120','120','9');
+
+  so.addParam('allowfullscreen','true');
+
+  so.addParam('allowscriptaccess','always');
+
+  so.addParam('wmode','opaque');
+
+  so.addVariable('file','1.flv');
+
+  so.addVariable('controlbar','none');
+
+  so.addVariable('dock','false');
+
+  so.addVariable('autostart','true');
+
+  so.addVariable('repeat','always');
+
+  so.write('mediaspace');
+
+</script>-->
+
+	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="120" height="120" id="video player" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="videoplayer1.swf" /><param name="FlashVars" value="videoFile=1.flv" /><param name="quality" value="high" /><param name="bgcolor" value="#999999" />	<embed src="videoplayer1.swf" FlashVars="videoFile=1.flv" quality="high" bgcolor="#999999" width="120" height="120" name="video player" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	</object>
+  
+
+  <!-- Video 2 -->
+
+  &nbsp;</td>
+
+<td width="46" align="center">
+
+<!--<script language="javascript" type='text/javascript' src='swfobject.js'></script>-->
+
+<!--<div id='mediaspace2'>video2</div>-->
+
+<!--<script language="javascript" type='text/javascript'>
+
+  var so = new SWFObject('player-viral.swf','mpl','120','120','9');
+
+  so.addParam('allowfullscreen','true');
+
+  so.addParam('allowscriptaccess','always');
+
+  so.addParam('wmode','opaque');
+
+  so.addVariable('file','2.flv');
+
+  so.addVariable('controlbar','none');
+
+  so.addVariable('dock','false');
+
+  so.addVariable('autostart','true');
+
+  so.addVariable('repeat','always');
+
+  so.write('mediaspace2');
+
+</script>-->
+
+	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="120" height="120" id="video player" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="videoplayer2.swf" /><param name="FlashVars" value="videoFile=2.flv" /><param name="quality" value="high" /><param name="bgcolor" value="#999999" />	<embed src="videoplayer2.swf" FlashVars="videoFile=2.flv" quality="high" bgcolor="#999999" width="120" height="120" name="video player" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	</object>
+
+&nbsp;</td>
+
+<td width="35" align="center">
+
+<!--<script language="javascript" type='text/javascript' src='swfobject.js'></script>-->
+
+<!--<div id='mediaspace3'>video3</div>-->
+
+<!--<script language="javascript" type='text/javascript'>
+
+  var so = new SWFObject('player-viral.swf','mpl','120','120','9');
+
+  so.addParam('allowfullscreen','true');
+
+  so.addParam('allowscriptaccess','always');
+
+  so.addParam('wmode','opaque');
+
+  so.addVariable('file','3.flv');
+
+  so.addVariable('controlbar','none');
+
+  so.addVariable('dock','false');
+
+  so.addVariable('autostart','true');
+
+  so.addVariable('repeat','always');
+
+  so.write('mediaspace3');
+
+</script>-->
+
+	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="120" height="120" id="video player" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="videoplayer3.swf" /><param name="FlashVars" value="videoFile=3.flv" /><param name="quality" value="high" /><param name="bgcolor" value="#999999" />	<embed src="videoplayer3.swf" FlashVars="videoFile=3.flv" quality="high" bgcolor="#999999" width="120" height="120" name="video player" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	</object>
+
+&nbsp;</td>
+
+</tr>
+
+<tr><td colspan="3">
+
+</td></tr></table>
+
+<!-- Boottom advt section -->
+
+<!-- DIV OF PAGE SECTION -->
+
+</div>
+
+    </div>
+
+	   <div class="bottomLeftYellowBlock1"></div>
+   </div>
+
+<div class="rightColumn" style="float:right;">
+
+ 
+<style type="text/css">
+
+/*Example CSS for the two demo scrollers*/
+
+#pscroller1{
+
+width: 140px;
+
+height: 600px;
+
+padding: 5px;
+
+position:relative;
+
+/*z-index: 0;*/
+
+}
+
+#pscroller2{
+
+width: 140px;
+
+height: 20px;
+
+padding: 3px;
+
+position:relative;
+
+}
+
+#pscroller2 a{
+
+text-decoration: none;
+
+}
+
+.someclass{ //class to apply to your scroller(s) if desired
+
+}
+
+</style>
+
+<script type="text/javascript">
+
+/*Example message arrays for the two demo scrollers*/
+
+var pausecontent=new Array()
+
+pausecontent[0]='<a href="http://www.google.com"><img src="admin/include/upload/1436.jpg" border="0" width="120" height="120"></a><a href="http://www.paythismuch.com"><img src="admin/include/upload/select-waterfall.jpg" border="0" width="120" height="120"></a><a href="http://www.paythismuch.com"><img src="admin/include/upload/4139_1_b.jpg" border="0" width="120" height="120"></a><a href="http://www.paythismuch.com"><img src="admin/include/upload/PAY.jpg" border="0" width="120" height="120"></a><a href="http://www.paythismuch.com/"><img src="admin/include/upload/Toys 009.jpg" border="0" width="120" height="120"></a><a href="http://www.paythismuch.com/"><img src="admin/include/upload/scan0001.jpg" border="0" width="120" height="120"></a><a href="http://www.paythismuch.com/"><img src="admin/include/upload/Mas Side.jpg" border="0" width="120" height="120"></a><a href="http://www.google.com/"><img src="admin/include/upload/Copy of cat25.jpg" border="0" width="120" height="120"></a><a href="http://www.google.com"><img src="admin/include/upload/Ambassador-3.jpg" border="0" width="120" height="120"></a>'
+
+pausecontent[1]='<a href=""><img src="/admin/include/upload/1436.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/select-waterfall.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/4139_1_b.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/PAY.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/Toys 009.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/scan0001.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/Mas Side.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/Copy of cat25.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/Ambassador-3.jpg" border="0" width="120" height="120"></a>'
+
+	 pausecontent[2]='<a href=""><img src="/admin/include/upload/1436.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/select-waterfall.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/4139_1_b.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/PAY.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/Toys 009.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/scan0001.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/Mas Side.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/Copy of cat25.jpg" border="0" width="120" height="120"></a><a href=""><img src="/admin/include/upload/Ambassador-3.jpg" border="0" width="120" height="120"></a>'
+
+ pausecontent[3]='
+	 <a href=""><img src="admin/include/upload/1436.jpg" border="0" width="120" height="120"></a>
+	 <a href=""><img src="admin/include/upload/select-waterfall.jpg" border="0" width="120" height="120"></a>
+	 <a href=""><img src="admin/include/upload/4139_1_b.jpg" border="0" width="120" height="120"></a>
+	 <a href=""><img src="admin/include/upload/PAY.jpg" border="0" width="120" height="120"></a>
+	 <a href=""><img src="admin/include/upload/Toys 009.jpg" border="0" width="120" height="120"></a>
+	 <a href=""><img src="admin/include/upload/scan0001.jpg" border="0" width="120" height="120"></a>
+	 <a href=""><img src="admin/include/upload/Mas Side.jpg" border="0" width="120" height="120"></a>
+	 <a href=""><img src="admin/include/upload/Copy of cat25.jpg" border="0" width="120" height="120"></a>
+	 <a href=""><img src="admin/include/upload/Ambassador-3.jpg" border="0" width="120" height="120"></a>'
+
+</script>
+
+	<script type="text/javascript">
+
+/***********************************************
+
+* Pausing up-down scroller- © Dynamic Drive (www.dynamicdrive.com)
+
+* This notice MUST stay intact for legal use
+
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+
+***********************************************/
+
+function pausescroller(content, divId, divClass, delay){
+
+this.content=content //message array content
+
+this.tickerid=divId //ID of ticker div to display information
+
+this.delay=delay //Delay between msg change, in miliseconds.
+
+this.mouseoverBol=0 //Boolean to indicate whether mouse is currently over scroller (and pause it if it is)
+
+this.hiddendivpointer=1 //index of message array for hidden div
+
+document.write('<div id="'+divId+'" class="'+divClass+'" style="position: relative; overflow: hidden" align="left"><div class="innerDiv" style="position: absolute; width: 100%" id="'+divId+'1">'+content[0]+'</div><div class="innerDiv" style="position: absolute; width: 100%; visibility: hidden" id="'+divId+'2">'+content[1]+'</div></div>')
+
+var scrollerinstance=this
+
+if (window.addEventListener) //run onload in DOM2 browsers
+
+window.addEventListener("load", function(){scrollerinstance.initialize()}, false)
+
+else if (window.attachEvent) //run onload in IE5.5+
+
+window.attachEvent("onload", function(){scrollerinstance.initialize()})
+
+else if (document.getElementById) //if legacy DOM browsers, just start scroller after 0.5 sec
+
+setTimeout(function(){scrollerinstance.initialize()}, 500)
+
+}
+
+// -------------------------------------------------------------------
+
+// initialize()- Initialize scroller method.
+
+// -Get div objects, set initial positions, start up down animation
+
+// -------------------------------------------------------------------
+
+pausescroller.prototype.initialize=function(){
+
+this.tickerdiv=document.getElementById(this.tickerid)
+
+this.visiblediv=document.getElementById(this.tickerid+"1")
+
+this.hiddendiv=document.getElementById(this.tickerid+"2")
+
+this.visibledivtop=parseInt(pausescroller.getCSSpadding(this.tickerdiv))
+
+//set width of inner DIVs to outer DIV's width minus padding (padding assumed to be top padding x 2)
+
+this.visiblediv.style.width=this.hiddendiv.style.width=this.tickerdiv.offsetWidth-(this.visibledivtop*2)+"px"
+
+this.getinline(this.visiblediv, this.hiddendiv)
+
+this.hiddendiv.style.visibility="visible"
+
+var scrollerinstance=this
+
+document.getElementById(this.tickerid).onmouseover=function(){scrollerinstance.mouseoverBol=1}
+
+document.getElementById(this.tickerid).onmouseout=function(){scrollerinstance.mouseoverBol=0}
+
+if (window.attachEvent) //Clean up loose references in IE
+
+window.attachEvent("onunload", function(){scrollerinstance.tickerdiv.onmouseover=scrollerinstance.tickerdiv.onmouseout=null})
+
+setTimeout(function(){scrollerinstance.animateup()}, this.delay)
+
+}
+
+// -------------------------------------------------------------------
+
+// animateup()- Move the two inner divs of the scroller up and in sync
+
+// -------------------------------------------------------------------
+
+pausescroller.prototype.animateup=function(){
+
+var scrollerinstance=this
+
+if (parseInt(this.hiddendiv.style.top)>(this.visibledivtop+5)){
+
+this.visiblediv.style.top=parseInt(this.visiblediv.style.top)-5+"px"
+
+this.hiddendiv.style.top=parseInt(this.hiddendiv.style.top)-5+"px"
+
+setTimeout(function(){scrollerinstance.animateup()}, 50)
+
+}
+
+else{
+
+this.getinline(this.hiddendiv, this.visiblediv)
+
+this.swapdivs()
+
+setTimeout(function(){scrollerinstance.setmessage()}, this.delay)
+
+}
+
+}
+
+// -------------------------------------------------------------------
+
+// swapdivs()- Swap between which is the visible and which is the hidden div
+
+// -------------------------------------------------------------------
+
+pausescroller.prototype.swapdivs=function(){
+
+var tempcontainer=this.visiblediv
+
+this.visiblediv=this.hiddendiv
+
+this.hiddendiv=tempcontainer
+
+}
+
+pausescroller.prototype.getinline=function(div1, div2){
+div1.style.top=this.visibledivtop+"px"
+div2.style.top=Math.max(div1.parentNode.offsetHeight, div1.offsetHeight)+"px"
+}
+
+// -------------------------------------------------------------------
+
+// setmessage()- Populate the hidden div with the next message before it's visible
+
+// -------------------------------------------------------------------
+
+pausescroller.prototype.setmessage=function(){
+var scrollerinstance=this
+
+if (this.mouseoverBol==1) //if mouse is currently over scoller, do nothing (pause it)
+setTimeout(function(){scrollerinstance.setmessage()}, 100)
+
+else{
+
+var i=this.hiddendivpointer
+
+var ceiling=this.content.length
+
+this.hiddendivpointer=(i+1>ceiling-1)? 0 : i+1
+
+this.hiddendiv.innerHTML=this.content[this.hiddendivpointer]
+
+this.animateup()
+
+}
+
+}
+
+pausescroller.getCSSpadding=function(tickerobj){ //get CSS padding value, if any
+
+if (tickerobj.currentStyle)
+
+return tickerobj.currentStyle["paddingTop"]
+
+else if (window.getComputedStyle) //if DOM2
+
+return window.getComputedStyle(tickerobj, "").getPropertyValue("padding-top")
+
+else
+
+return 0
+
+}
+
+</script>
+
+<br/>
+
+<ul style="margin:0px; padding:0px;">
+
+ <h4 style="background-color:#FFFF99; border-bottom:2px solid #990000;">Our Sponsors</h4>
+
+ </ul>
+
+<div>
+
+<div >
+
+<!-- MARKED TO STOP RIGHT SIDE BANNER -->
+
+<link rel="stylesheet" type="text/css" href="gal/stylesheet/vertical.css" />
+
+<!--<script language="javascript" type="text/javascript" src="gal/script/mootools-1.2.1-core.js"></script>-->
+
+<script language="javascript" type="text/javascript" src="gal/script/mootools-1.2-more.js"></script>
+
+<script language="javascript" type="text/javascript" src="gal/script/slideitmoo-1.1.js"></script>
+
+<script language="javascript" type="text/javascript">
+
+window.addEvents({
+
+		'domready': function(){
+
+			/* thumbnails example , div containers */
+
+			var sMoo = new SlideItMoo({
+
+						overallContainer: 'SlideItMoo_vertical_outer',
+
+						elementScrolled: 'SlideItMoo_vertical_inner',
+
+						thumbsContainer: 'SlideItMoo_vertical_items',		
+
+						itemsVisible:6,
+
+						elemsSlide:1,
+
+						duration:300,
+
+						itemsSelector: '.SlideItMoo_element',
+
+						itemWidth: 158,
+
+												autoSlide:1000,
+
+						slideVertical: true,
+
+						showControls:0,
+
+						direction:-1,
+
+						onChange: function(index){
+
+						}
+
+			});
+
+		}
+
+	});
+
+</script>
+
+
+<div>
+
+	
+
+	<div id="SlideItMoo_vertical_outer">	
+
+
+
+        <div id="SlideItMoo_vertical_inner">			
+
+			<div id="SlideItMoo_vertical_items">
+
+				
+				<div class="SlideItMoo_element">
+
+                    	<img src="admin/include/upload/1436.jpg" width=120 border=0/>
+
+                </div>	
+
+			
+				<div class="SlideItMoo_element">
+
+                    	<img src="admin/include/upload/select-waterfall.jpg" width=120 border=0/>
+
+                </div>	
+
+			
+				<div class="SlideItMoo_element">
+
+                    	<img src="admin/include/upload/4139_1_b.jpg" width=120 border=0/>
+
+                </div>	
+
+			
+				<div class="SlideItMoo_element">
+
+                    	<img src="admin/include/upload/PAY.jpg" width=120 border=0/>
+
+                </div>	
+
+			
+				<div class="SlideItMoo_element">
+
+                    	<img src="admin/include/upload/Toys 009.jpg" width=120 border=0/>
+
+                </div>	
+
+			
+				<div class="SlideItMoo_element">
+
+                    	<img src="admin/include/upload/scan0001.jpg" width=120 border=0/>
+
+                </div>	
+
+			
+				<div class="SlideItMoo_element">
+
+                    	<img src="admin/include/upload/Mas Side.jpg" width=120 border=0/>
+
+                </div>	
+
+			
+				<div class="SlideItMoo_element">
+
+                    	<img src="admin/include/upload/Copy of cat25.jpg" width=120 border=0/>
+
+                </div>	
+
+			
+				<div class="SlideItMoo_element">
+
+                    	<img src="admin/include/upload/Ambassador-3.jpg" width=120 border=0/>
+
+                </div>	
+
+			
+			</div>			
+
+		</div>
+
+
+
+	</div>	
+
+</div>	
+
+<!-- MARKED TO STOP RIGHT SIDE BANNER -->
+
+</div>
+
+<br/>
+
+<span id="siteseal"><script language="javascript" type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=3WXXKeJUVGxbbbJDL0iEXxUOpSdAQjpHHDs9jSSo7DTLjjAIruh9qyP"></script><br/><span style="font-family: arial; font-size: 9px;">EV SSL Certificates</span></span>
+
+</div>
+
+   
+   </div>
+
+</div> 
+<!-- Advertise and Sponsors section ends Here-->
+ </div>
+
+<!-- Footer Content Start -->
+
+<!--Footer starts -->
+
+<div align="center" style="clear:both">
+  <div class="pageWidth">
+  <div style="margin-top:20px; border-top:2px solid #900" class="link"><a href="index.php">Home</a> |  <a href="index.php?mode=company_info">Company Info</a>  |  <a href="adsadd.php">Advertise With Us</a>  |  <a href="index.php?mode=fac">FAQ</a>  |  <a href="index.php?mode=avoid_scams">Avoid Scams</a> | <a href="index.php?mode=charities">Charity</a>  |  <a href="index.php?mode=fees">Fees</a><br />
+<span style="font-size:12px">Copyright &copy; 2010 PayThisMuch.com. All rights reserved.</span> | <a href="index.php?mode=ppolicy">Privacy Policy</a> | <a href="index.php?mode=termcondition">Terms And Conditions</a> </div>
+  </div>
+</div>
+<br />
+</body>
+</html>
+</div>
+</body>
+</html>

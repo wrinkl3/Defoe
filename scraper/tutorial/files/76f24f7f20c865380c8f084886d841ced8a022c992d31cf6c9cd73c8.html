@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Hacked by Abd3l L0ukay !</title>
+<style type="text/css">
+/*----------Text Styles----------*/
+.ws6 {font-size: 8px;}
+.ws7 {font-size: 9.3px;}
+.ws8 {font-size: 11px;}
+.ws9 {font-size: 12px;}
+.ws10 {font-size: 13px;}
+.ws11 {font-size: 15px;}
+.ws12 {font-size: 16px;}
+.ws14 {font-size: 19px;}
+.ws16 {font-size: 21px;}
+.ws18 {font-size: 24px;}
+.ws20 {font-size: 27px;}
+.ws22 {font-size: 29px;}
+.ws24 {font-size: 32px;}
+.ws26 {font-size: 35px;}
+.ws28 {font-size: 37px;}
+.ws36 {font-size: 48px;}
+.ws48 {font-size: 64px;}
+.ws72 {font-size: 96px;}
+.wpmd {font-size: 13px;font-family: Arial,Helvetica,Sans-Serif;font-style: normal;font-weight: normal;}
+/*----------Para Styles----------*/
+DIV,UL,OL /* Left */
+{
+ margin-top: 0px;
+ margin-bottom: 0px;
+}
+</style>
+
+</head>
+<body bgColor="#000000">
+<div id="text1" style="position:absolute; overflow:hidden; left:356px; top:35px; width:537px; height:121px; z-index:0">
+<div class="wpmd">
+<div><font color="#FF0000" face="Impact" class="ws72"><B>Abd3l L0uaky</B></font></div>
+</div></div>
+
+<div id="text2" style="position:absolute; overflow:hidden; left:570px; top:156px; width:131px; height:25px; z-index:1">
+<div class="wpmd">
+<div><font color="#FFFFFF" face="Courier New" class="ws16"><B>Was here !</B></font></div>
+</div></div>
+
+<script language="JavaScript">
+
+fCol='444444'; //face colour.
+sCol='FF0000'; //seconds colour.
+mCol='444444'; //minutes colour.
+hCol='444444'; //hours colour.
+
+YCbase=30; //Clock height.
+XCbase=30; //Clock width.
+
+
+H='...';
+H=H.split('');
+M='....';
+M=M.split('');
+S='.....';
+S=S.split('');
+NS4=(document.layers);
+NS6=(document.getElementById&&!document.all);
+IE4=(document.all);
+Ypos=0;
+Xpos=0;
+cdots=12;
+Split=360/cdots;
+if (NS6){
+for (i=1; i < cdots+1; i++){
+document.write('<div id="n6Digits'+i+'" style="position:absolute;top:0px;left:0px;width:30px;height:30px;font-family:Arial;font-size:10px;color:#'+fCol+';text-align:center;padding-top:10px">'+i+'</div>');
+}
+for (i=0; i < M.length; i++){
+document.write('<div id="Ny'+i+'" style="position:absolute;top:0px;left:0px;width:2px;height:2px;font-size:2px;background:#'+mCol+'"></div>');
+}
+for (i=0; i < H.length; i++){
+document.write('<div id="Nz'+i+'" style="position:absolute;top:0px;left:0px;width:2px;height:2px;font-size:2px;background:#'+hCol+'"></div>');
+}
+for (i=0; i < S.length; i++){
+document.write('<div id="Nx'+i+'" style="position:absolute;top:0px;left:0px;width:2px;height:2px;font-size:2px;background:#'+sCol+'"></div>');
+}
+}
+if (NS4){
+dgts='1 2 3 4 5 6 7 8 9 10 11 12';
+dgts=dgts.split(' ')
+for (i=0; i < cdots; i++){
+document.write('<layer name=nsDigits'+i+' top=0 left=0 height=30 width=30><center><font face=Arial size=1 color='+fCol+'>'+dgts[i]+'</font></center></layer>');
+}
+for (i=0; i < M.length; i++){
+document.write('<layer name=ny'+i+' top=0 left=0 bgcolor='+mCol+' clip="0,0,2,2"></layer>');
+}
+for (i=0; i < H.length; i++){
+document.write('<layer name=nz'+i+' top=0 left=0 bgcolor='+hCol+' clip="0,0,2,2"></layer>');
+}
+for (i=0; i < S.length; i++){
+document.write('<layer name=nx'+i+' top=0 left=0 bgcolor='+sCol+' clip="0,0,2,2"></layer>');
+}
+}
+if (IE4){
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=1; i < cdots+1; i++){
+document.write('<div id="ieDigits" style="position:absolute;top:0px;left:0px;width:30px;height:30px;font-family:Arial;font-size:10px;color:'+fCol+';text-align:center;padding-top:10px">'+i+'</div>');
+}
+document.write('</div></div>')
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < M.length; i++){
+document.write('<div id=y style="position:absolute;width:2px;height:2px;font-size:2px;background:'+mCol+'"></div>');
+}
+document.write('</div></div>')
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < H.length; i++){
+document.write('<div id=z style="position:absolute;width:2px;height:2px;font-size:2px;background:'+hCol+'"></div>');
+}
+document.write('</div></div>')
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < S.length; i++){
+document.write('<div id=x style="position:absolute;width:2px;height:2px;font-size:2px;background:'+sCol+'"></div>');
+}
+document.write('</div></div>')
+}
+
+
+
+function clock(){
+time = new Date ();
+secs = time.getSeconds();
+sec = -1.57 + Math.PI * secs/30;
+mins = time.getMinutes();
+min = -1.57 + Math.PI * mins/30;
+hr = time.getHours();
+hrs = -1.57 + Math.PI * hr/6 + Math.PI*parseInt(time.getMinutes())/360;
+
+if (NS6){
+Ypos=window.pageYOffset+window.innerHeight-YCbase-25;
+Xpos=window.pageXOffset+window.innerWidth-XCbase-30;
+for (i=1; i < cdots+1; i++){
+ document.getElementById("n6Digits"+i).style.top=Ypos-15+YCbase*Math.sin(-1.56 +i *Split*Math.PI/180)
+ document.getElementById("n6Digits"+i).style.left=Xpos-15+XCbase*Math.cos(-1.56 +i*Split*Math.PI/180)
+ }
+for (i=0; i < S.length; i++){
+ document.getElementById("Nx"+i).style.top=Ypos+i*YCbase/4.1*Math.sin(sec);
+ document.getElementById("Nx"+i).style.left=Xpos+i*XCbase/4.1*Math.cos(sec);
+ }
+for (i=0; i < M.length; i++){
+ document.getElementById("Ny"+i).style.top=Ypos+i*YCbase/4.1*Math.sin(min);
+ document.getElementById("Ny"+i).style.left=Xpos+i*XCbase/4.1*Math.cos(min);
+ }
+for (i=0; i < H.length; i++){
+ document.getElementById("Nz"+i).style.top=Ypos+i*YCbase/4.1*Math.sin(hrs);
+ document.getElementById("Nz"+i).style.left=Xpos+i*XCbase/4.1*Math.cos(hrs);
+ }
+}
+if (NS4){
+Ypos=window.pageYOffset+window.innerHeight-YCbase-20;
+Xpos=window.pageXOffset+window.innerWidth-XCbase-30;
+for (i=0; i < cdots; ++i){
+ document.layers["nsDigits"+i].top=Ypos-5+YCbase*Math.sin(-1.045 +i*Split*Math.PI/180)
+ document.layers["nsDigits"+i].left=Xpos-15+XCbase*Math.cos(-1.045 +i*Split*Math.PI/180)
+ }
+for (i=0; i < S.length; i++){
+ document.layers["nx"+i].top=Ypos+i*YCbase/4.1*Math.sin(sec);
+ document.layers["nx"+i].left=Xpos+i*XCbase/4.1*Math.cos(sec);
+ }
+for (i=0; i < M.length; i++){
+ document.layers["ny"+i].top=Ypos+i*YCbase/4.1*Math.sin(min);
+ document.layers["ny"+i].left=Xpos+i*XCbase/4.1*Math.cos(min);
+ }
+for (i=0; i < H.length; i++){
+ document.layers["nz"+i].top=Ypos+i*YCbase/4.1*Math.sin(hrs);
+ document.layers["nz"+i].left=Xpos+i*XCbase/4.1*Math.cos(hrs);
+ }
+}
+
+if (IE4){
+Ypos=document.body.scrollTop+window.document.body.clientHeight-YCbase-20;
+Xpos=document.body.scrollLeft+window.document.body.clientWidth-XCbase-20;
+for (i=0; i < cdots; ++i){
+ ieDigits[i].style.pixelTop=Ypos-15+YCbase*Math.sin(-1.045 +i *Split*Math.PI/180)
+ ieDigits[i].style.pixelLeft=Xpos-15+XCbase*Math.cos(-1.045 +i *Split*Math.PI/180)
+ }
+for (i=0; i < S.length; i++){
+ x[i].style.pixelTop =Ypos+i*YCbase/4.1*Math.sin(sec);
+ x[i].style.pixelLeft=Xpos+i*XCbase/4.1*Math.cos(sec);
+ }
+for (i=0; i < M.length; i++){
+ y[i].style.pixelTop =Ypos+i*YCbase/4.1*Math.sin(min);
+ y[i].style.pixelLeft=Xpos+i*XCbase/4.1*Math.cos(min);
+ }
+for (i=0; i < H.length; i++){
+ z[i].style.pixelTop =Ypos+i*YCbase/4.1*Math.sin(hrs);
+ z[i].style.pixelLeft=Xpos+i*XCbase/4.1*Math.cos(hrs);
+ }
+}
+setTimeout('clock()',100);
+}
+clock();
+//-->
+</script>
+<script language="JavaScript">
+<!--
+var yBase = 200;
+var xBase = 200;
+var yAmpl = 10;
+var yMax = 40;
+var step = .2;
+var ystep = .5;
+var currStep = 0;
+var tAmpl=1;
+var Xbpos = 1;
+var Ybpos = 1;
+var i = 0;
+var j = 0;
+var ff=(document.getElementById&&!document.all);
+var ns=(document.layers);
+var ie=(document.all);
+
+if (ns){
+	for(xy=0;xy<7;xy++)
+	  document.write("<layer id=\"a"+ xy +"\" LEFT=10 TOP=10 VISIBILITY=SHOW BGCOLOR=\"#FFFF00\" CLIP=\"0,0,3,3\"><\/layer>");
+} else if (ie||ff) {
+  document.write('<div id="starsDiv" style="position:absolute;z-index:999;top:0px;left:0px">')
+  for (xy=0;xy<7;xy++)
+  document.write('<div style="position:relative;width:3px;height:3px;background:#FFFF00;font-size:2px;visibility:visible"></div>')
+  document.write('</div>')
+}	
+
+function MoveHandler(e)
+{
+    if (ie) {
+    	Xbpos = window.event.clientX + document.body.scrollLeft;
+    	Ybpos = window.event.clientY + document.body.scrollTop;
+    }
+    else {
+    	Xbpos = e.pageX;
+    	Ybpos = e.pageY;
+    }
+}
+
+if(ns)window.captureEvents(Event.MOUSEMOVE);
+document.onmousemove = MoveHandler;
+
+
+function animateLogo() 
+{
+if (ie)
+{
+ yBase = window.document.body.offsetHeight/4;
+ xBase = window.document.body.offsetWidth/4;
+}
+else
+{
+ yBase = window.innerHeight/4 ;
+ xBase = window.innerWidth/4;
+}
+
+if (!ns)
+{
+  var totaldivs=document.getElementById("starsDiv").getElementsByTagName("div");
+  for ( i = 0 ; i < totaldivs.length ; i++ )
+  {
+    var tempdiv=totaldivs[i].style;
+    tempdiv.top = Ybpos + Math.cos((20*Math.sin(currStep/20))+i*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + i*25)/10);
+    tempdiv.left = Xbpos + Math.sin((20*Math.sin(currStep/20))+i*70)*xBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + i*25)/10);
+  }
+}
+else if (document.layers)
+{
+ for ( j = 0 ; j < 7 ; j++ ) 
+ {
+   var templayer="a"+j
+   document.layers[templayer].top = Ybpos + Math.cos((20*Math.sin(currStep/20))+j*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+   document.layers[templayer].left =Xbpos + Math.sin((20*Math.sin(currStep/20))+j*70)*xBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+ }
+}
+currStep += step;
+setTimeout("animateLogo()", 15);
+}
+animateLogo();
+// -->
+</script>
+<div id="text3" style="position:absolute; overflow:hidden; left:445px; top:200px; width:389px; height:44px; z-index:4">
+</div>
+
+<div id="text4" style="position:absolute; overflow:hidden; left:459px; top:267px; width:531px; height:17px; z-index:5">
+<div class="wpmd">
+<div><font color="#FFFFFF" class="ws12"><B>Your site has been owned by Abd3l L0ukay !</B></font></div>
+
+</div></div>
+
+<div id="text5" style="position:absolute; overflow:hidden; left:490px; top:208px; width:385px; height:25px; z-index:6">
+<div class="wpmd">
+<div><font color="#FF0000" class="ws12"><B>-------------------------------------------------------</B></font></div>
+</div></div>
+
+<div id="hr1" style="position:absolute; overflow:hidden; left:368px; top:299px; width:536px; height:14px; z-index:7">
+<hr size=2 width=536 color="#FF0000">
+</div>
+
+<div id="hr4" style="position:absolute; overflow:hidden; left:371px; top:354px; width:536px; height:14px; z-index:8">
+<hr size=2 width=536 color="#FF0000">
+</div>
+
+<div id="text6" style="position:absolute; overflow:hidden; left:439px; top:326px; width:374px; height:21px; z-index:9">
+
+<div class="wpmd">
+<div align=center><font color="#FF0000" face="Arial Black" class="ws12"><B>D'ont stop !</B></font></div>
+</div></div>
+
+
+</body>
+</html>

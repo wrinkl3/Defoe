@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sangupta:jopensurf:1.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sangupta/jopensurf/1.0.0/1bd187a9869f85a0a6874c67f73e639bfa31ff0a/jopensurf-1.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/commons-lang3-3.6/commons-lang3-3.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sangupta/jopensurf/1.0.0/b99e0d7a036402f3f1070d3049393d03f726e5e4/jopensurf-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

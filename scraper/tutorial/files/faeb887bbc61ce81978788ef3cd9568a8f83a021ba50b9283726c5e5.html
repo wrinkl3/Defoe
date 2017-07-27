@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+<link rel="shortcut icon" href="http://demo.pinacms.com/style/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="http://demo.pinacms.com/style/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="http://demo.pinacms.com/style/css/basic.css" />
+<link rel="stylesheet" type="text/css" href="http://demo.pinacms.com/style/css/style.css" />
+
+<!--[if IE]>
+<link rel="stylesheet" media="all" type="text/css" href="http://demo.pinacms.com/style/css/main_ie.css" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link rel="stylesheet" media="all" type="text/css" href="http://demo.pinacms.com/style/css/main_lte_ie6.css" />
+<![endif]-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="http://demo.pinacms.com/js/cufon-yui.js"></script>
+<script type="text/javascript" src="http://demo.pinacms.com/js/century_gothic_400.font.js"></script>
+<script type="text/javascript" src="http://demo.pinacms.com/js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="http://demo.pinacms.com/js/myjquery.js"></script>
+
+<script type="text/javascript" src="http://demo.pinacms.com/js/jquery.form.js"></script>
+
+<script type="text/javascript" src="http://demo.pinacms.com/js/pina.skin.js"></script>
+<script type="text/javascript" src="http://demo.pinacms.com/js/pina.request.js"></script>
+<script type="text/javascript" src="http://demo.pinacms.com/js/pina.page-edit.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://demo.pinacms.com/style/css/common.css" />
+<script type="text/javascript" src="http://demo.pinacms.com/js/common.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://demo.pinacms.com/style/css/blockui.css" />
+<script type="text/javascript" src="http://demo.pinacms.com/js/admin/jquery.blockUI.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="http://demo.pinacms.com/style/css/menu.slider.css" />
+
+<script type="text/javascript" src="http://demo.pinacms.com/js/jquery.carouFredSel.packed.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://demo.pinacms.com/style/css/fancybox.css" />
+<script type="text/javascript" src="http://demo.pinacms.com/js/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="http://demo.pinacms.com/style/css/slide.css" />
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	$(function(){
+		$('.slide-home-wrapper .slide-home-container').carouFredSel({
+			items: 1,
+			scroll: {
+				fx: 'crossfade'
+			},
+			auto: {
+				timeoutDuration: 5000,
+				duration: 300
+			},
+			pagination: {
+				container: '.slide-home-wrapper .slide-home-pager',
+				duration: 300
+			}
+		});
+	});
+</script>
+
+
+
+<script language="JavaScript">
+
+var PinaLng = {
+	data: {},
+	add: function(key, val)
+	{
+		this.data[key] = val;
+	},
+	lng: function(key)
+	{
+		if (this.data[key]) return this.data[key];
+	}
+}
+
+
+PinaLng.add("request_sending_failed", "Request sending failed");
+PinaLng.add("are_you_sure_to_delete", "Are you sure you want to delete?");
+PinaLng.add("action_executed", "Action executed");
+PinaLng.add("please_wait_", "Please, wait...");
+PinaLng.add("information_has_been_deleted", "Information has been deleted successfully");
+PinaLng.add("information_has_been_saved", "Information has been saved");
+</script>
+<!--[if lt IE 7]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE7.js" type="text/javascript"></script>
+<![endif]-->
+
+
+
+
+
+</head>
+
+<body>
+	
+	<div id="pg_wrap">
+		<div id="header" class="clearfix noprint">
+	<div class="container clearfix">
+		
+		<ul class="customer_navi alignright">
+	<li><a href="http://demo.pinacms.com/enter.html" rel="div.overlay:eq(0)">Sign in</a></li>
+	<li><a href="http://demo.pinacms.com/register.html">Register</a></li>
+	
+</ul>
+
+		<h2 id="branding"><a href="http://demo.pinacms.com/" title=""></a></h2>		
+		<div class="main_navi clearfix">
+		<ul><li>	<a href="/">
+	Home
+</a></li><li>	<a href="http://demo.pinacms.com/page.php?action=blog.view&blog_id=1">
+	Blog
+</a></li><li>	<a href="http://demo.pinacms.com/team.html">
+	Team
+</a></li><li>	<a href="http://demo.pinacms.com/page.php?action=wizard.install">
+	Create a website
+</a></li></ul>
+
+</div>
+			</div><!-- container -->
+</div><!-- header-->
+		<div id="myloginoverlay" class="overlay mediumoverlay">
+<h2>Authentication</h2>
+<p>Not registered yet? <a href="http://demo.pinacms.com/register.html">Register &#8594;</a></p>
+<form class="login-form" action="api.php" method="POST">    <fieldset>
+	<input type="hidden" name="action" value="user.login" />
+        <input type="hidden" name="redirect_action" value="" />
+
+	<label for="user_login">Login *</label><input type="text"  name="user_login" size="35" maxlength="40" id="quicksignInUsername" value="admin"  />	<label for="user_password">Password *</label><input type="password"  name="user_password" size="35" id="quicksignInPassword" value="admin"  />
+        <span class="passhelp">
+            <a href="http://demo.pinacms.com/page.php?action=user.restore-password">I forgot my password &#8594;</a>
+        </span>
+
+	<input class="formbutton" type="submit" alt="Sign in" value="Sign in" name="" title="Sign in" />
+    </fieldset>
+</form>
+
+
+
+<script type="text/javascript">
+
+$(".login-form").ajaxPageEdit(function(){
+	location.reload();
+});
+
+</script>
+
+</div><!-- myloginoverlay -->
+
+		<div id="floatswrap" class="bigftfl clearfix">
+			<div class="container clearfix">
+				
+
+				<div class="page-view-wrapper"><h1 class="shop-cat-title whereAmI">hacked by VETO</h1>
+<h3>&lt;H1&gt;HACKED BY veTO</h3>
+
+<p>
+</p></div>
+			</div><!-- container -->
+		</div><!-- floatswrap-->
+	</div>
+
+	
+	<div id="footer" class="bigft clearfix noprint">
+		<div class="container clearfix">
+			<div class="footer_box">
+				<div class="footer_inner_box clearfix">
+					<div class="widget widget_pages">
+	<h4 class="widget-title">Help</h4>
+	<ul>
+						<li>
+							<a href="http://demo.pinacms.com/page-4.html">
+							Privacy statement
+			</a>
+		</li>
+								<li>
+							<a href="http://demo.pinacms.com/page-5.html">
+							Refund policy
+			</a>
+		</li>
+					</ul>
+</div>
+
+				</div><!-- footer_inner_box -->
+			</div><!-- footer_box -->
+
+			<div class="footer_box middle">
+				<div class="footer_inner_box clearfix">
+					<div class="widget widget_pages">
+	<h4 class="widget-title">About us</h4>
+	<ul>
+						<li>
+							<a href="http://demo.pinacms.com/page.php?action=blog.view&blog_id=1">
+							Blog
+			</a>
+		</li>
+								<li>
+							<a href="http://demo.pinacms.com/team.html">
+							Team
+			</a>
+		</li>
+					</ul>
+</div>
+
+					<div class="widget widget_pages" style="margin-top: 8px;">
+						<ul>
+						<li>
+							<a href="http://demo.pinacms.com/page.php?action=product-review.common">Reviews</a>
+						</li>
+						<ul>
+					</div>
+				</div><!-- footer_inner_box -->
+			</div><!-- footer_box -->
+
+			<div class="footer_box">
+				<div class="footer_inner_box clearfix">
+					<div class="widget widget_community">
+	<h4 class="widget-title">The Community</h4>
+			<a href="http://facebook.com/pinacms" target="_blank"><img src="http://demo.pinacms.com/style/images/socialIcons/facebook.jpg" alt="Follow on Facebook"/></a>
+				<a href="http://twitter.com/pinacms" target="_blank"><img src="http://demo.pinacms.com/style/images/socialIcons/twitter.jpg" alt="Follow on Twitter"/></a>
+	</div>
+
+				</div><!-- footer_inner_box -->
+			</div><!-- footer_box -->
+
+			<p class="footer_notes">
+				<span class="copyright">&copy; 2014. <a href="http://dobrosite.ru/">Dobrosite ltd</a>
+				| <a href="http://demo.pinacms.com/feedback.html">Contact us</a></span>
+				<span>Powered by <a href="http://www.pinacms.com">PinaCMS - software for creating a Sitebuilder and SaaS platform</a></span>
+			</p>
+
+			<p>&nbsp;</p>
+
+			
+		</div><!-- container -->
+	</div><!-- end footer -->	
+</body>
+</html>

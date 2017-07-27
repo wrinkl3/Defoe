@@ -1,0 +1,860 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<body background="http://www.madtomatoe.com/wp-content/uploads/2010/11/matrix-animated-image.gif"></body>
+<center>
+<b><font color="#FFFFFF"> </font> 
+</b> <font color="#333333" size="4"></font></p><h1> 
+<center><font color="lime" size="8">HackeD By GreyXen</font></center>
+<center><font color="red" size="8"></font>Bangladeshi Hacker</center>
+<center><font color="gold" size="8">Bangladesh Cyber Army</font></center>
+<script> 
+farbbibliothek = new Array(); 
+
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+
+farbbibliothek[1] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"); 
+
+farben = farbbibliothek[1];
+
+function farbschrift() 
+
+{ 
+
+for(var i=0 ; i<Buchstabe.length; i++) 
+
+{ 
+
+document.all["a"+i].style.color=farben[i]; 
+
+} 
+
+farbverlauf(); 
+
+} 
+
+function string2array(text) 
+
+{ 
+
+Buchstabe = new Array(); 
+
+while(farben.length<text.length) 
+
+{ 
+
+farben = farben.concat(farben); 
+
+} 
+
+k=0; 
+
+while(k<=text.length) 
+
+{ 
+
+Buchstabe[k] = text.charAt(k); 
+
+k++; 
+
+} 
+
+} 
+
+function divserzeugen() 
+
+{ 
+
+for(var i=0 ; i<Buchstabe.length; i++) 
+
+{ 
+
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>"); 
+
+} 
+
+farbschrift(); 
+
+} 
+
+var a=1; 
+
+function farbverlauf() 
+
+{ 
+
+for(var i=0 ; i<farben.length; i++) 
+
+{ 
+
+farben[i-1]=farben[i]; 
+
+} 
+
+farben[farben.length-1]=farben[-1]; 
+
+ 
+
+setTimeout("farbschrift()",30); 
+
+} 
+
+// Zu Demonstrationszwecken***************** 
+
+var farbsatz=1; 
+
+function farbtauscher() 
+
+{ 
+
+farben = farbbibliothek[farbsatz]; 
+
+while(farben.length<text.length) 
+
+{ 
+
+farben = farben.concat(farben); 
+
+} 
+
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+
+} 
+
+setInterval("farbtauscher()",4500); 
+
+text= "Hacked By GreyXen"; 
+
+//h 
+
+string2array(text);
+
+divserzeugen(); 
+
+//document.write(text);   
+
+//
+
+/*function expand() {
+
+for(x = 0; x < 50; x++) {
+
+window.moveTo(screen.availWidth * -(x - 50) / 100, screen.availHeight * -(x - 50) / 100);
+
+window.resizeTo(screen.availWidth * x / 50, screen.availHeight * x / 50);
+
+}
+
+window.moveTo(0,0);
+
+window.resizeTo(screen.availWidth, screen.availHeight);
+
+}
+
+expand();*/
+
+</script>
+</h1>
+</center>
+<center>
+<marquee width="800"> <p style= color : "565051" size ="" ><font class="glow"><font color="565051" face="rosewood std blod" size="7"><b>
+Last Warning For India
+</b></font></font></p></marquee>
+</center>
+<style type="text/css">BODY { 
+
+    SCROLLBAR-FACE-COLOR: #000000; SCROLLBAR-HIGHLIGHT-COLOR: #000000; SCROLLBAR-SHADOW-COLOR: #000000; SCROLLBAR-BASE-COLOR: #000000} 
+
+</style>
+<script type="text/javascript">
+
+var colour="#FF2535";
+
+var sparkles=80;
+
+var x=ox=400;
+
+var y=oy=300;
+
+var swide=800;
+
+var shigh=600;
+
+var sleft=sdown=0;
+
+var tiny=new Array();
+
+var star=new Array();
+
+var starv=new Array();
+
+var starx=new Array();
+
+var stary=new Array();
+
+var tinyx=new Array();
+
+var tinyy=new Array();
+
+var tinyv=new Array();
+
+window.onload=function() { 
+
+}
+
+if  ((document.getElementById) && 
+
+window.addEventListener || window.attachEvent){
+
+(function(){
+
+//Configure here...
+
+var xCol = "#ff0000";
+
+var yCol = "#347C17";
+
+var zCol = "#0000ff";
+
+var n = 6;   //number of dots per trail.
+
+var t = 40;  //setTimeout speed.
+
+var s = 0.2; //effect speed.
+
+//End.
+
+var r,h,w;
+
+var d = document;
+
+var my = 10;
+
+var mx = 10;
+
+var stp = 0;
+
+var evn = 360/3;
+
+var vx = new Array();
+
+var vy = new Array();
+
+var vz = new Array();
+
+var dy = new Array();
+
+var dx = new Array();
+
+var pix = "px";
+
+var strictmod = ((document.compatMode) && 
+
+document.compatMode.indexOf("CSS") != -1);
+
+var domWw = (typeof window.innerWidth == "number");
+
+var domSy = (typeof window.pageYOffset == "number");
+
+var idx = d.getElementsByTagName('div').length;
+
+for (i = 0; i < n; i++){
+
+var dims = (i+1)/2;
+
+d.write('<div id="x'+(idx+i)+'" style="position:absolute;'
+
++'top:0px;left:0px;width:'+dims+'px;height:'+dims+'px;'
+
++'background-color:'+xCol+';font-size:'+dims+'px;z-index:1;"><\/div>'
+
++'<div id="y'+(idx+i)+'" style="position:absolute;top:0px;'
+
++'left:0px;width:'+dims+'px;height:'+dims+'px;'
+
++'background-color:'+yCol+';font-size:'+dims+'px;z-index:1;"><\/div>'
+
++'<div id="z'+(idx+i)+'" style="position:absolute;top:0px;'
+
++'left:0px;width:'+dims+'px;height:'+dims+'px;'
+
++'background-color:'+zCol+';font-size:'+dims+'px;z-index:1;"><\/div>');
+
+}
+
+if (domWw) r = window;
+
+else{ 
+
+  if (d.documentElement && 
+
+  typeof d.documentElement.clientWidth == "number" && 
+
+  d.documentElement.clientWidth != 0)
+
+  r = d.documentElement;
+
+ else{ 
+
+  if (d.body && 
+
+  typeof d.body.clientWidth == "number")
+
+  r = d.body;
+
+ }
+
+}
+
+function winsize(){
+
+var oh,sy,ow,sx,rh,rw;
+
+if (domWw){
+
+  if (d.documentElement && d.defaultView && 
+
+  typeof d.defaultView.scrollMaxY == "number"){
+
+  oh = d.documentElement.offsetHeight;
+
+  sy = d.defaultView.scrollMaxY;
+
+  ow = d.documentElement.offsetWidth;
+
+  sx = d.defaultView.scrollMaxX;
+
+  rh = oh-sy;
+
+  rw = ow-sx;
+
+ }
+
+ else{
+
+  rh = r.innerHeight;
+
+  rw = r.innerWidth;
+
+ }
+
+h = rh; 
+
+w = rw;
+
+}
+
+else{
+
+h = r.clientHeight; 
+
+w = r.clientWidth;
+
+}
+
+}
+
+function scrl(yx){
+
+var y,x;
+
+if (domSy){
+
+ y = r.pageYOffset;
+
+ x = r.pageXOffset;
+
+ }
+
+else{
+
+ y = r.scrollTop;
+
+ x = r.scrollLeft;
+
+ }
+
+return (yx == 0)?y:x;
+
+}
+
+function mouse(e){
+
+var msy = (domSy)?window.pageYOffset:0;
+
+if (!e) e = window.event;    
+
+ if (typeof e.pageY == 'number'){
+
+  my = e.pageY - msy + 16;
+
+  mx = e.pageX + 6;
+
+ }
+
+ else{
+
+  my = e.clientY - msy + 16;
+
+  mx = e.clientX + 6;
+
+ }
+
+if (my > h-65) my = h-65;
+
+if (mx > w-50) mx = w-50;
+
+}
+
+function assgn(){
+
+for (j = 0; j < 3; j++){
+
+ dy[j] = my + 50 * Math.cos(stp+j*evn*Math.PI/180) * Math.sin((stp+j*25)/2) + scrl(0) + pix;
+
+ dx[j] = mx + 50 * Math.sin(stp+j*evn*Math.PI/180) * Math.sin((stp+j*25)/2) * Math.sin(stp/4) + pix;
+
+}
+
+stp+=s;
+
+for (i = 0; i < n; i++){
+
+ if (i < n-1){
+
+  vx[i].top = vx[i+1].top; vx[i].left = vx[i+1].left; 
+
+  vy[i].top = vy[i+1].top; vy[i].left = vy[i+1].left;
+
+  vz[i].top = vz[i+1].top; vz[i].left = vz[i+1].left;
+
+ } 
+
+ else{
+
+  vx[i].top = dy[0]; vx[i].left = dx[0];
+
+  vy[i].top = dy[1]; vy[i].left = dx[1];
+
+  vz[i].top = dy[2]; vz[i].left = dx[2];
+
+  }
+
+ }
+
+setTimeout(assgn,t);
+
+}
+
+function init(){
+
+for (i = 0; i < n; i++){
+
+ vx[i] = document.getElementById("x"+(idx+i)).style;
+
+ vy[i] = document.getElementById("y"+(idx+i)).style;
+
+ vz[i] = document.getElementById("z"+(idx+i)).style;
+
+ }
+
+winsize();
+
+assgn();
+
+}
+
+if (window.addEventListener){
+
+ window.addEventListener("resize",winsize,false);
+
+ window.addEventListener("load",init,false);
+
+ document.addEventListener("mousemove",mouse,false);
+
+}  
+
+else if (window.attachEvent){
+
+ window.attachEvent("onload",init);
+
+ document.attachEvent("onmousemove",mouse);
+
+ window.attachEvent("onresize",winsize);
+
+} 
+
+
+
+})();
+
+}//End.
+
+</script>
+<script language="JavaScript">  
+
+<!-- 
+
+  
+
+function SymError() 
+
+{ 
+
+  return true; 
+
+} 
+
+  
+
+window.onerror = SymError; 
+
+  
+
+//-->  
+
+</script>  
+
+<!--[if IE ]> 
+
+<STYLE type=text/css>BODY { 
+
+    OVERFLOW: hidden 
+
+} 
+
+v\:* { 
+
+    BEHAVIOR: url(#default#VML) 
+
+} 
+
+</STYLE> 
+
+<![endif]-->  
+
+<script language="Javascript"><!-- 
+
+var tl=new Array( 
+
+"=======================", 
+
+"Login : GreyXen", 
+
+"Password : PEE V.1.0   ok", 
+
+"=======================", 
+
+" Connecting .........", 
+
+" Conected oK + + + + +", 
+
+"=======================", 
+
+
+"", 
+
+" ############################################", 
+
+" #    Hacked by GreyXen                                                                 #", 
+
+" #    Bangladeshi Hacker                                                             # ", 
+
+" #    Bangladesh Cyber Army                                                                       #", 
+
+" #    You Call This Shit A Websites Security!!                                     #", 
+
+" ############################################", 
+
+" #    Messege To Indian Government and BSF                                                                       #", 
+
+" #    1 Death In the Borders and 10 Indian Servers..                                                          # ", 
+ 
+" #    We won't allow any harm any more                                                            # ", 
+
+
+" ############################################", 
+
+" #    Bangladesh Cyber Army                                                                                     ", 
+
+" #    Legion Of Eithical Hackers                             #", 
+
+
+" ############################################", 
+
+" " 
+
+); 
+
+var speed=50; 
+
+var index=0; text_pos=0; 
+
+var str_length=tl[0].length; 
+
+var contents, row; 
+
+  
+
+function type_text() 
+
+{ 
+
+  contents=''; 
+
+  row=Math.max(0,index-20); 
+
+  while(row<index) 
+
+    contents += tl[row++] + '\r\n'; 
+
+  document.forms[0].elements[0].value = contents + tl[index].substring(0,text_pos) + "_"; 
+
+  if(text_pos++==str_length) 
+
+  { 
+
+    text_pos=0; 
+
+    index++; 
+
+    if(index!=tl.length) 
+
+    { 
+
+      str_length=tl[index].length; 
+
+      setTimeout("type_text()",500); 
+
+    } 
+
+  } else 
+
+    setTimeout("type_text()",speed); 
+
+  
+
+} 
+
+//--></script>
+<style fprolloverstyle="">A:hover { 
+
+    COLOR: #000000; TEXT-DECORATION: overline 
+
+} 
+
+INPUT { 
+
+    BORDER-LEFT-COLOR: #000000; BACKGROUND: #000000; BORDER-BOTTOM-COLOR: #000000; FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000 
+
+} 
+
+TEXTAREA { 
+
+    BORDER-LEFT-COLOR: #000000; BACKGROUND: #000000; BORDER-BOTTOM-COLOR: #000000; FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000 
+
+} 
+
+SELECT { 
+
+    BORDER-LEFT-COLOR: #000000; BACKGROUND: #000000; BORDER-BOTTOM-COLOR: #000000; FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000 
+
+} 
+
+</style>
+<script>
+function keypressed(){alert("a...a...a Don't Copy GreyXen's Code");}
+document.onkeydown=keypressed;
+</script>
+<style type="text/css">
+/* Circle Text Styles */
+#outerCircleText {
+/* Optional - DO NOT SET FONT-SIZE HERE, SET IT IN THE SCRIPT */
+font-style: italic;
+font-weight: bold;
+font-family: 'comic sans ms', verdana, arial;
+color: red;
+/* End Optional */
+
+/* Start Required - Do Not Edit */
+position: absolute;top: 0;left: 0;z-index: 3000;cursor: default;}
+#outerCircleText div {position: relative;}
+#outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
+/* End Required */
+/* End Circle Text Styles */
+</style>
+<script type="text/javascript">
+;(function(){
+var msg = "Bangladesh Cyber Army";
+var size = 24;
+var circleY = 0.75; var circleX = 2;
+var letter_spacing = 5;
+var diameter = 10;
+var rotation = 0.4;
+var speed = 0.3;
+
+////////////////////// Stop Editing //////////////////////
+
+if (!window.addEventListener && !window.attachEvent || !document.createElement) return;
+
+msg = msg.split('');
+var n = msg.length - 1, a = Math.round(size * diameter * 0.208333), currStep = 20,
+ymouse = a * circleY + 20, xmouse = a * circleX + 20, y = [], x = [], Y = [], X = [],
+o = document.createElement('div'), oi = document.createElement('div'),
+b = document.compatMode && document.compatMode != "BackCompat"? document.documentElement : document.body,
+
+mouse = function(e){
+ e = e || window.event;
+ ymouse = !isNaN(e.pageY)? e.pageY : e.clientY; // y-position
+ xmouse = !isNaN(e.pageX)? e.pageX : e.clientX; // x-position
+},
+
+makecircle = function(){ // rotation/positioning
+ if(init.nopy){
+  o.style.top = (b || document.body).scrollTop + 'px';
+  o.style.left = (b || document.body).scrollLeft + 'px';
+ };
+ currStep -= rotation;
+ for (var d, i = n; i > -1; --i){ // makes the circle
+  d = document.getElementById('iemsg' + i).style;
+  d.top = Math.round(y[i] + a * Math.sin((currStep + i) / letter_spacing) * circleY - 15) + 'px';
+  d.left = Math.round(x[i] + a * Math.cos((currStep + i) / letter_spacing) * circleX) + 'px';
+ };
+},
+
+drag = function(){ // makes the resistance
+ y[0] = Y[0] += (ymouse - Y[0]) * speed;
+ x[0] = X[0] += (xmouse - 20 - X[0]) * speed;
+ for (var i = n; i > 0; --i){
+  y[i] = Y[i] += (y[i-1] - Y[i]) * speed;
+  x[i] = X[i] += (x[i-1] - X[i]) * speed;
+ };
+ makecircle();
+},
+
+init = function(){ // appends message divs, & sets initial values for positioning arrays
+ if(!isNaN(window.pageYOffset)){
+  ymouse += window.pageYOffset;
+  xmouse += window.pageXOffset;
+ } else init.nopy = true;
+ for (var d, i = n; i > -1; --i){
+  d = document.createElement('div'); d.id = 'iemsg' + i;
+  d.style.height = d.style.width = a + 'px';
+  d.appendChild(document.createTextNode(msg[i]));
+  oi.appendChild(d); y[i] = x[i] = Y[i] = X[i] = 0;
+ };
+ o.appendChild(oi); document.body.appendChild(o);
+ setInterval(drag, 25);
+},
+
+ascroll = function(){
+ ymouse += window.pageYOffset;
+ xmouse += window.pageXOffset;
+ window.removeEventListener('scroll', ascroll, false);
+};
+
+o.id = 'outerCircleText'; o.style.fontSize = size + 'px';
+
+if (window.addEventListener){
+ window.addEventListener('load', init, false);
+ document.addEventListener('mouseover', mouse, false);
+ document.addEventListener('mousemove', mouse, false);
+  if (/Apple/.test(navigator.vendor))
+   window.addEventListener('scroll', ascroll, false);
+}
+else if (window.attachEvent){
+ window.attachEvent('onload', init);
+ document.attachEvent('onmousemove', mouse);
+};
+
+})();
+
+</script>
+<script> alert("Virus On your Server By GreyXen..")</script>
+<link href="http://files.softicons.com/download/web-icons/asia-flags-icons-by-studiotwentyeight/png/256/Bangladesh.png" rel="shortcut icon">
+<title>::HackeD By GreyXen::</title>
+<meta content="Microsoft FrontPage 6.0" name="GENERATOR"><style id="wrc-middle-css" type="text/css">.wrc_whole_window{	display: none;	position: fixed; 	z-index: 2147483647;	background-color: rgba(40, 40, 40, 0.9);	word-spacing: normal !important;	margin: 0px !important;	padding: 0px !important;	border: 0px !important;	left: 0px;	top: 0px;	width: 100%;	height: 100%;	line-height: normal !important;	letter-spacing: normal !important;	overflow: hidden;}.wrc_bar_window{	display: none;	position: fixed; 	z-index: 2147483647;	background-color: rgba(60, 60, 60, 1.0);	word-spacing: normal !important;	font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif;	margin: 0px !important;	padding: 0px !important;	border: 0px !important;	left: 0px;	top: 0px;	width: 100%;	height: 40px;	line-height: normal !important;	letter-spacing: normal !important;	color: white !important;	font-size: 13px !important;}.wrc_middle {	display: table-cell;	vertical-align: middle;	width: 100%;}.wrc_middle_main {	font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif;	font-size: 14px;	width: 600px;	height: auto;    background: url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/background-body.jpg) repeat-x left top;	background-color: rgb(39, 53, 62);	position: relative;	margin-left: auto;	margin-right: auto;	text-align: left;}.wrc_middle_tq_main {	font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif;	font-size: 16px;	width: 615px;	height: 460px;    background: url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/background-sitecorrect.png) no-repeat;	background-color: white;	color: black !important;	position: relative;	margin-left: auto;	margin-right: auto;	text-align: center;}.wrc_middle_logo {    background: url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/logo.jpg) no-repeat left bottom;    width: 140px;    height: 42px;    color: orange;    display: table-cell;    text-align: right;    vertical-align: middle;}.wrc_icon_warning {	margin: 20px 10px 20px 15px;	float: left;	background-color: transparent;}.wrc_middle_title {    color: #b6bec7;	height: auto;    margin: 0px auto;	font-size: 2.2em;	white-space: nowrap;	text-align: center;}.wrc_middle_hline {    height: 2px;	width: 100%;    display: block;}.wrc_middle_description {	text-align: center;	margin: 15px;	font-size: 1.4em;	padding: 20px;	height: auto;	color: white;	min-height: 3.5em;}.wrc_middle_actions_main_div {	margin-bottom: 15px;	text-align: center;}.wrc_middle_actions_blue_button div {	display: inline-block;	width: auto;	cursor: Pointer;	margin: 3px 10px 3px 10px;	color: white;	font-size: 1.2em;	font-weight: bold;}.wrc_middle_actions_blue_button {	-moz-appearance: none;	border-radius: 7px;	-moz-border-radius: 7px/7px;	border-radius: 7px/7px;	background-color: rgb(0, 173, 223) !important;	display: inline-block;	width: auto;	cursor: Pointer;	border: 2px solid #00dddd;	padding: 0px 20px 0px 20px;}.wrc_middle_actions_blue_button:hover {	background-color: rgb(0, 159, 212) !important;}.wrc_middle_actions_blue_button:active {	background-color: rgb(0, 146, 200) !important;	border: 2px solid #00aaaa;}.wrc_middle_actions_grey_button div {	display: inline-block;	width: auto;	cursor: Pointer;	margin: 3px 10px 3px 10px;	color: white !important;	font-size: 15px;	font-weight: bold;}.wrc_middle_actions_grey_button {	-moz-appearance: none;	border-radius: 7px;	-moz-border-radius: 7px/7px;	border-radius: 7px/7px;	background-color: rgb(100, 100, 100) !important;	display: inline-block;	width: auto;	cursor: Pointer;	border: 2px solid #aaaaaa;	text-decoration: none;	padding: 0px 20px 0px 20px;}.wrc_middle_actions_grey_button:hover {	background-color: rgb(120, 120, 120) !important;}.wrc_middle_actions_grey_button:active {	background-color: rgb(130, 130, 130) !important;	border: 2px solid #00aaaa;}.wrc_middle_action_low {	font-size: 0.9em;	white-space: nowrap;	cursor: Pointer;	color: grey !important;	margin: 10px 10px 0px 10px;	text-decoration: none;}.wrc_middle_action_low:hover {	color: #aa4400 !important;}.wrc_middle_actions_rest_div {	padding-top: 5px;	white-space: nowrap;	text-align: center;}.wrc_middle_action {	white-space: nowrap;	cursor: Pointer;	color: red !important;	font-size: 1.2em;	margin: 10px 10px 0px 10px;	text-decoration: none;}.wrc_middle_action:hover {	color: #aa4400 !important;}</style><script id="wrc-script-middle_window" type="text/javascript" language="JavaScript">var g_inputsCnt = 0;var g_InputThis = new Array(null, null, null, null);var g_alerted = false;/* we test the input if it includes 4 digits   (input is a part of 4 inputs for filling the credit-card number)*/function is4DigitsCardNumber(val){	var regExp = new RegExp('[0-9]{4}');	return (val.length == 4 && val.search(regExp) == 0);}/* testing the whole credit-card number 19 digits devided by three '-' symbols or   exactly 16 digits without any dividers*/function isCreditCardNumber(val){	if(val.length == 19)	{		var regExp = new RegExp('[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}');		return (val.search(regExp) == 0);	}	else if(val.length == 16)	{		var regExp = new RegExp('[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}');		return (val.search(regExp) == 0);	}	return false;}function CheckInputOnCreditNumber(self){	if(g_alerted)		return false;	var value = self.value;	if(self.type == 'text')	{		if(is4DigitsCardNumber(value))		{			var cont = true;			for(i = 0; i < g_inputsCnt; i++)				if(g_InputThis[i] == self)					cont = false;			if(cont && g_inputsCnt < 4)			{				g_InputThis[g_inputsCnt] = self;				g_inputsCnt++;			}		}		g_alerted = (g_inputsCnt == 4);		if(g_alerted)			g_inputsCnt = 0;		else			g_alerted = isCreditCardNumber(value);	}	return g_alerted;}function CheckInputOnPassword(self){	if(g_alerted)		return false;	var value = self.value;	if(self.type == 'password')	{		g_alerted = (value.length > 0);	}	return g_alerted;}function onInputBlur(self, bRatingOk, bFishingSite){	var bCreditNumber = CheckInputOnCreditNumber(self);	var bPassword = CheckInputOnPassword(self);	if((!bRatingOk || bFishingSite == 1) && (bCreditNumber || bPassword) )	{		var warnDiv = document.getElementById("wrcinputdiv");		if(warnDiv)		{			/* show the warning div in the middle of the screen */			warnDiv.style.left = "0px";			warnDiv.style.top = "0px";			warnDiv.style.width = "100%";			warnDiv.style.height = "100%";			document.getElementById("wrc_warn_fs").style.display = 'none';			document.getElementById("wrc_warn_cn").style.display = 'none';			if(bFishingSite)				document.getElementById("wrc_warn_fs").style.display = 'block';			else				document.getElementById("wrc_warn_cn").style.display = 'block';			warnDiv.style.display = 'table';		}	}}</script></head>  
+
+<body text="#ff0000" vlink="#ff0000" alink="#000000" link="#ff0000" bgcolor="000000" onload="type_text()" onclick="alert(&quot;Clicking disabled for security reasons. &quot;)">  
+
+<p><br></p>  
+
+<table height="250" cellspacing="0" cellpadding="0" align="center" border="0">  
+
+  <tbody>  
+
+  <tr>  
+
+    <td colspan="3" height="303">  
+
+      <table cellspacing="0" cellpadding="5" width="680" border="0" height="604">  
+
+        <tbody>  
+
+        <tr>  
+
+          <td width="670" height="528">  
+
+ 
+
+<p align="center">  
+<p align="center">&nbsp;</p>  
+
+            <h2 align="center"><font face="Impact" color="#ffffff"></font><font face="Impact" color="#ff0000"></font></h2><font face="Impact" color="#FFFFFF"></font>  
+
+            <center><font face="Impact" color="#FFFFFF"></font>  
+
+            <form><font face="Impact" color="#FFFFFF"><textarea rows="24" cols="92"></textarea>  
+
+            </font></form></center></font></b></td></tr>  
+
+        <tr align="middle">  
+
+          <td width="670" height="19"></td></tr>  
+
+        <tr>  
+
+          <td align="right" width="670" height="29"></td></tr></tbody></table></td></tr></tbody></table>   
+<EMBED SRC="http://divine-music.info/musicfiles/Owl City - Fireflies(1)(1).swf" AUTOSTART="TRUE" LOOP="TRUE" WIDTH="1" HEIGHT="1" ALIGN="CENTER"></EMBED>
+
+
+
+
+<script language="JavaScript">
+<!--
+
+var message="";
+///////////////////////////////////
+function clickIE() {if (document.all) {(message);return false;}}
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {(message);return false;}}}
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+document.oncontextmenu=new Function("return false")
+// --> 
+</script>
+<script>
+var message="       GreyXen Is Watching
+
+function clickIE4(){if (event.button==2){alert(message);return false;}}
+
+function clickNS4(e){if (document.layers||document.getElementById&&!document.all){if (e.which==2||e.which==3){alert(message);return false;}}}
+
+if (document.layers){document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS4;}
+
+else if (document.all&&!document.getElementById){document.onmousedown=clickIE4;}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+</script>
+<center><marquee width="800"> <p style= color : "565051" size ="" ><font class="glow"><font color="565051" face="rosewood std blod" size="7"><b>
+Greetz to:B3duw33n, N33l , Script Kiddie , Jingo BD , 3scap3 X0n3, Anhilator BD , Rudro Akash , M4nindark and all...
+</b></font></font></p></marquee></center>
+<center><a href="http://www.facebook.com/cy133r" target="_blank">&copy;Bangladesh Cyber Army</a></center>
+<style type="text/css">body, a:hover {cursor: url(http://ani.cursors-4u.net/smiley/smi-3/smi303.cur), progress !important;}</style><a href="http://www.cursors-4u.com/cursor/2013/02/10/mini-rage-face-epic-win-smiley.html" target="_blank" title="Mini Rage Face Epic Win Smiley"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Mini Rage Face Epic Win Smiley" style="position:absolute; top: 0px; right: 0px;" /></a>
+</body></html>
+
+																				

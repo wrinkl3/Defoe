@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body bgcolor="#000000">
+<script type="text/javascript">
+//Created by Title bar Maker (http://www.bosiljak.hr/titlemaker)
+function tb7_makeArray(n){
+	this.length = n;
+	return this.length;
+}
+
+tb7_messages = new tb7_makeArray(1);
+tb7_messages[0] = "==Hacked By N3RD==";
+tb7_rptType = 'infinite';
+tb7_rptNbr = 5;
+tb7_speed = 250;
+tb7_timeOneMsg = 6000;
+tb7_minBrojRazmaka = 0;
+tb7_maxBrojRazmaka = 3;
+var tb7_counter=1;
+var tb7_currMsg;
+var tb7_stsmsg="";
+var tb7_brojac = 0;
+var tb7_expand = true;
+var tb7_run=false
+var tb7_tmpmsg="";
+var tb7_spaces="";
+var tb7_timer=null;
+for (var i=0; i<tb7_minBrojRazmaka; i++)
+	tb7_spaces += "_";
+for (var i=0; i<tb7_messages.length; i++){
+	tb7_tmpmsg="";
+	for (var j=0; j<tb7_messages[i].length; j++){
+		tb7_tmpmsg=tb7_tmpmsg+tb7_spaces+tb7_messages[i].charAt(j);
+	}
+	tb7_messages[i]=tb7_tmpmsg;
+}
+function tb7_settitle(){
+if (!tb7_run){
+	clearTimeout(tb7_timer2);
+	return;
+}
+var tb7_sts = "";
+if (tb7_brojac == 0)
+	document.title = tb7_messages[tb7_currMsg]
+else{
+	for (var i=0; i<tb7_messages[tb7_currMsg].length; i++){
+		for (var j=0; j<tb7_brojac; j++)
+			tb7_sts += "_";
+		tb7_sts += tb7_messages[tb7_currMsg].charAt(i);
+	}
+	document.title = tb7_sts;
+}
+if (tb7_expand && (tb7_brojac >= tb7_maxBrojRazmaka))
+	tb7_expand=false;
+if (!tb7_expand && tb7_brojac < tb7_minBrojRazmaka)
+	tb7_expand = true;
+if (tb7_expand) 
+	tb7_brojac++ 
+else tb7_brojac--;
+tb7_timer2 = setTimeout("tb7_settitle()", tb7_speed);
+}
+function tb7_coordinator(){
+if (!tb7_run){
+	tb7_currMsg=0;
+	tb7_run = true;
+	tb7_settitle();
+}
+else{
+	if (tb7_currMsg == tb7_messages.length-1){
+		if ((tb7_rptType == 'finite') && (tb7_counter==tb7_rptNbr)){
+			clearTimeout(tb7_timer);
+			tb7_run = false;
+			return;
+		}
+		tb7_counter++;
+		tb7_currMsg=0;
+	}
+	else{
+		tb7_currMsg++;
+	}
+}
+tb7_timer = setTimeout("tb7_coordinator()",tb7_timeOneMsg);
+}
+tb7_coordinator();
+</script>
+
+
+<center>
+<b>
+<p><font color="#FF0000" size="+6"> hacked by N3RD</font></p>
+<br />
+<br />
+<br />
+
+<p><font color="#339900" size="+6"> Iran FOr EveR </font></p>
+</b>
+</center>
+<p>  
+</body>
+</html>

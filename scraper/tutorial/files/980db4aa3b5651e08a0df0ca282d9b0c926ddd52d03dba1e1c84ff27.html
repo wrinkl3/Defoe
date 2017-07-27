@@ -1,0 +1,579 @@
+
+<html dir="rtl">
+<head> 
+  <link rel="SHORTCUT ICON" href="http://t0.gstatic.com/images?q=tbn:ANd9GcQj6HfVpPXcMDa4Yq3z80SvX27kO2wZyJm5ZNJnsEv4WRRHSL-Z?w=640&h=1050" type="image/x-icon"/>
+
+  <script language="JavaScript1.2">               
+
+/*****************************************
+* Visit our site at http://achemlal-info1.blogspot.com/ for more code
+* This notice must stay intact for use
+***********************************************/            
+//change 1 to another integer to alter the scroll speed. Greater is faster               
+var speed=1               
+var currentpos=0,alt=1,curpos1=0,curpos2=-1               
+function initialize(){               
+startit()               
+}               
+function scrollwindow(){               
+if (document.all)               
+temp=document.body.scrollTop               
+else               
+temp=window.pageYOffset               
+if (alt==0)               
+alt=1               
+else               
+alt=0               
+if (alt==0)               
+curpos1=temp               
+else               
+curpos2=temp               
+if (curpos1!=curpos2){               
+if (document.all)               
+currentpos=document.body.scrollTop+speed               
+else               
+currentpos=window.pageYOffset+speed               
+window.scroll(0,currentpos)               
+}               
+else{               
+currentpos=30               
+window.scroll(0,currentpos)               
+}               
+}               
+function startit(){               
+setInterval("scrollwindow()",30)               
+}               
+window.onload=initialize               
+</script>
+  
+  
+  
+  
+<meta http-equiv="Content-Language" content="Fr-fr">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Hacked by SquiCk H4ck3r</title>
+<meta http-equiv="Content-Language" content="Fr-fr">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>HACKER BY SquiCk H4ck3r</title>
+
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:10pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:black;
+}
+</style>
+<script>
+var x,y
+var step=20
+var flag=0
+var message="Welcome!!!"
+message=message.split("Casper Guigou")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+
+<script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+
+</head>
+
+<script language="JavaScript">
+
+ var ieKey, nKey;
+n = (document.layers) ? 1 : 0;
+ie = (document.all) ? 1 : 0;
+function moveImage() {
+if (n) {
+block = document.blockDiv;
+}
+if (ie) {
+block = blockDiv.style;
+}
+block.xpos = parseInt(block.left);
+block.active = 0;
+document.onkeydown = keyDown;
+document.onkeyup = keyUp;
+
+if (n) {
+document.captureEvents(Event.keydown | Event.keyup); 
+   }
+}
+function keyDown(e) {
+if (n) {
+nKey = e.which;
+ieKey = 0;
+}
+if (ie) {
+ieKey = event.keyCode;
+nKey = 0;
+}
+if ((nKey == 97 || ieKey == 65) && !block.active) {   
+block.active = 1;
+slideLeft();
+}
+if ((nKey == 100 || ieKey == 68) && !block.active) {   
+block.active = 1;
+slideRight();
+   }
+}
+function keyUp(e) {
+if (n) {
+nKey = e.which;
+ieKey = 0;
+}
+if (ie) {
+ieKey = event.keyCode;
+nKey = 0;
+}
+if ((nKey == 97 || ieKey == 65 || nKey == 100 || ieKey == 68))
+block.active = 0;
+}
+function slideRight() {
+if (block.active) {
+block.xpos += 5;
+block.left = block.xpos;
+status = block.xpos;
+setTimeout("slideRight()", 25);
+   }
+}
+function slideLeft() {
+if (block.active) {
+block.xpos -= 5;
+block.left = block.xpos;
+status = block.xpos;
+setTimeout("slideLeft()", 25);
+   }
+}
+//  End -->
+var a=1;
+function farbverlauf()
+{
+for(var i=0 ; i<farben.length; i++)
+{
+farben[i-1]=farben[i];
+}
+farben[farben.length-1]=farben[-1];
+
+setTimeout("farbschrift()",30);
+}
+// Zu Demonstrationszwecken*****************
+var farbsatz=1;
+function farbtauscher()
+{
+farben = farbbibliothek[farbsatz];
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001));
+}
+setInterval("farbtauscher()",5000);
+text= " ./ Hacked By Casper Guigou /. ";
+string2array(text);
+divserzeugen();
+//document.write(text);
+</SCRIPT>
+</td></table>
+<meta name="copyright" content="DeV&#238;&#238;L_Hk"/>
+<style type="text/css">body, a, a:hover {cursor: url(http://hellox.persiangig.com/DefacePage/negro.cur), progress;}</style>
+<meta name="description" content="We are Anonymous, We are legion, We don't forgive, We don't forget, United as one, Divided by zero, Expect us."/>
+<style type="text/css">
+body
+{
+background: url('http://i66.servimg.com/u/f66/14/86/38/04/ground10.gif');
+background-position: center;
+}
+H1 {font-family: Impact;
+        line-height: 1.6em;
+  font-size: 250%;
+        color: gray;
+  background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#8A0808));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+H4 {font-family: Impact;
+        line-height: 1.6em;
+  font-size: 170%;
+        color: gray;
+  background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#8A0808));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+pre
+{
+color: white;
+}
+pre.mes2
+{
+font-size: 120%;
+}
+::-webkit-scrollbar {
+    height: 16px;
+    overflow: visible;
+    width: 16px;
+    background: #fff;
+}
+::-webkit-scrollbar-button {
+    display: none;
+    height:0;
+    width: 0;
+}
+::-webkit-scrollbar-track {
+    -moz-background-clip: border;
+    -webkit-background-clip: border;
+    background-clip: border-box;
+    border-width: 0 0 0 4px;
+    border: solid transparent;
+}
+::-webkit-scrollbar-track:hover {
+    background-color:rgba(0,0,0,.05);
+    -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1);
+    -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1);
+    box-shadow: inset 1px 0 0 rgba(0,0,0,.1);
+}
+::-webkit-scrollbar-track:active {
+    background-color:rgba(0,0,0,.05);
+    -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.14), inset -1px 0 0 rgba(0,0,0,.07);
+    -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.14), inset -1px 0 0 rgba(0,0,0,.07);
+    box-shadow: inset 1px 0 0 rgba(0,0,0,.14), inset -1px 0 0 rgba(0,0,0,.07);
+}
+::-webkit-scrollbar-track:horizontal {
+    border-width: 4px 0 0;
+}
+::-webkit-scrollbar-track:horizontal:hover {
+    -moz-box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
+}
+::-webkit-scrollbar-track:horizontal:active {
+    -moz-box-shadow: inset 0 1px 0 rgba(0,0,0,.14), inset 0 -1px 0 rgba(0,0,0,.07);
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.14), inset 0 -1px 0 rgba(0,0,0,.07);
+    box-shadow: inset 0 1px 0 rgba(0,0,0,.14), inset 0 -1px 0 rgba(0,0,0,.07);
+}
+::-webkit-scrollbar-thumb {
+    -moz-background-clip: border;
+    -webkit-background-clip: border;
+    background-clip: border-box;
+    background-color: rgba(0,0,0,.2);
+    /*border-width: 1px 1px 1px 6px;
+    border: solid transparent;*/
+    -moz-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+    min-height: 28px;
+    padding: 100px 0 0;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color:rgba(0,0,0,.4);
+    -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
+}
+::-webkit-scrollbar-thumb:active {
+    background-color:rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 1px 1px 3px rgba(0,0,0,0.35);
+    -webkit-box-shadow: inset 1px 1px 3px rgba(0,0,0,0.35);
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.35);
+}
+::-webkit-scrollbar-thumb:horizontal {
+    border-width: 6px 1px 1px;
+    -moz-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.07);
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.07);
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.07);
+    padding: 0 0 0 100px;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+body::-webkit-scrollbar-track-piece {
+    -moz-background-clip: border;
+    -webkit-background-clip: border;
+    background-clip: border-box;
+    background-color: #f5f5f5;
+    /*border-width: 0 0 0 3px;
+    border: solid #fff;*/
+    -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.14), inset -1px 0 0 rgba(0,0,0,.07);
+    -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.14), inset -1px 0 0 rgba(0,0,0,.07);
+    box-shadow: inset 1px 0 0 rgba(0,0,0,.14), inset -1px 0 0 rgba(0,0,0,.07);
+}
+body::-webkit-scrollbar-track-piece:horizontal {
+    border-width:3px 0 0;
+    -moz-box-shadow: inset 0 1px 0 rgba(0,0,0,.14), inset 0 -1px 0 rgba(0,0,0,.07);
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.14), inset 0 -1px 0 rgba(0,0,0,.07);
+    box-shadow: inset 0 1px 0 rgba(0,0,0,.14), inset 0 -1px 0 rgba(0,0,0,.07);
+}
+body::-webkit-scrollbar-thumb {
+    border-width: 1px 1px 1px 5px;
+}
+body::-webkit-scrollbar-thumb:horizontal {
+    border-width: 5px 1px 1px;
+}
+body::-webkit-scrollbar-corner {
+    -moz-background-clip: border;
+    -webkit-background-clip: border;
+    background-clip: border-box;
+    background-color: #f5f5f5;
+    border-width: 3px 0 0 3px;
+    border: solid #fff;
+    -moz-box-shadow: inset 1px 1px 0 rgba(0,0,0,.14);
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.14);
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.14);
+}
+</style>
+ 
+
+
+</head>
+
+
+<body>
+<center>
+<span lang="fr"><font color="#FF0000"><font size="7">Hacked</font><font size="7"> 
+By SquiCk H4ck3r</font></font></span><font size="7"><br>
+
+<SCRIPT>
+farbbibliothek = new Array();
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00");
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00");
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF");
+farbbibliothek[6] = new Array("#0000FF","#FFFF00");
+farben = farbbibliothek[4];
+function farbschrift()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.all["a"+i].style.color=farben[i];
+}
+farbverlauf();
+}
+function string2array(text)
+{
+Buchstabe = new Array();
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+k=0;
+while(k<=text.length)
+{
+Buchstabe[k] = text.charAt(k);
+k++;
+}
+}
+function divserzeugen()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.write("<font face='monotype corsiva' size=30><span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span></font>");
+}
+farbschrift();
+}
+
+<script language="javascript">
+
+</script>
+
+<body bgcolor="#000000">
+</font>
+<center>
+&nbsp;</p>
+<img src="http://im74.gulfup.com/WEExT.jpg" width="564" height="388"  alt=""/>
+<pre style="font: 35px/25px courier;"><b><script language="JavaScript1.2">
+var message="Hacked By SquiCk H4ck3r "
+var neonbasecolor="Noir"
+var neontextcolor="white"
+var neontextcolor2="#A4A4A4"
+var flashspeed=2                                             
+var flashingletters=2                                           
+var flashingletters2=1                                         
+var flashpause=0      
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+function neon(){
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+crossref(n).style.color=neontextcolor
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+ 
+}
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+</script></b></pre><div align="center">
+</strong><strong><p class="style40" style="text-shadow: #f82a2a 0px 0px 10px;" align="center"><span><span class="style11"><img src="http://www14.0zz0.com/2012/06/05/19/846300184.gif "></span></span></p>
+
+<div style="text-shadow: 0px 0px 5px red;">
+<span style="color: white;">
+<span style="color: white;">
+<marquee scrollamount="7" direction="left" width="50%"> Hacked by SquiCk H4ck3r</marquee></span>
+
+</body>
+
+<p align="center"><font size="5">&#9835; <font color="#00FF00">Hacked by SquiCk H4ck3r</font> &#9835;</font></p>
+
+<font style="#808080" size="5">&#1575;&#1604;&#1587;&#1604;&#1575;&#1605; &#1593;&#1604;&#1610;&#1603;&#1605; &#1608; &#1585;&#1581;&#1605;&#1577; &#1575;&#1604;&#1604;&#1607; &#1608; &#1576;&#1585;&#1603;&#1575;&#1578;&#1607;<br>
+	&#1575;&#1605;&#1575; &#1576;&#1593;&#1583; &#1601;&#1606;&#1581;&#1606; &#1605;&#1606; &#1604;&#1586;&#1575;&#1604;&#1578; &#1602;&#1604;&#1608;&#1576;&#1607;&#1605; &#1578;&#1606;&#1576;&#1590; &#1608; &#1593;&#1602;&#1608;&#1604;&#1607;&#1605; &#1578;&#1601;&#1603;&#1585;<br>
+	&#1606;&#1581;&#1606; &#1605;&#1606; &#1575;&#1582;&#1578;&#1585;&#1606;&#1575; &#1591;&#1585;&#1610;&#1602; &#1575;&#1604;&#1580;&#1607;&#1575;&#1583; &#1575;&#1604;&#1575;&#1604;&#1603;&#1578;&#1585;&#1608;&#1606;&#1610; <br>
+&nbsp;</font><div class="text_exposed_show">
+	
+	<font style="#808080" size="5">&#1604;&#1606;&#1583;&#1575;&#1601;&#1593; &#1593;&#1604;&#1609; &#1605;&#1575; &#1583;&#1601;&#1593; &#1593;&#1604;&#1610;&#1607; &#1575;&#1580;&#1583;&#1575;&#1583;&#1606;&#1575; &#1608; &#1575;&#1604;&#1584;&#1610;&#1606; &#1587;&#1576;&#1602;&#1608;&#1606;&#1575;<br>
+	&#1606;&#1581;&#1606; &#1605;&#1606; &#1575;&#1582;&#1578;&#1585;&#1606;&#1575; &#1575;&#1606; &#1606;&#1603;&#1605;&#1604; &#1575;&#1604;&#1605;&#1588;&#1608;&#1575;&#1585; &#1608; &#1606;&#1603;&#1608;&#1606; &#1605;&#1606; &#1575;&#1604;&#1587;&#1604;&#1587;&#1604;&#1577;<br>
+	&#1606;&#1581;&#1606; &#1605;&#1606; &#1606;&#1606;&#1575;&#1605; &#1575;&#1604;&#1609; &#1575;&#1606; &#1578;&#1583;&#1602; &#1575;&#1604;&#1587;&#1575;&#1593;&#1577;<br>
+	&#1604;&#1575; &#1606;&#1583;&#1593;&#1610; &#1575;&#1604;&#1593;&#1576;&#1602;&#1585;&#1610;&#1577; &#1575;&#1608; &#1605;&#1575; &#1588;&#1575;&#1576;&#1607; &#1604;&#1603;&#1606; &#1606;&#1587;&#1578;&#1593;&#1610;&#1606; &#1576;&#1593;&#1602;&#1608;&#1604;&#1606;&#1575; &#1604;&#1578;&#1581;&#1602;&#1610;&#1602; &#1575;&#1607;&#1583;&#1575;&#1601;&#1606;&#1575;<br>
+	&#1605;&#1606; &#1581;&#1575;&#1608;&#1604; &#1575;&#1608; &#1581;&#1578;&#1609; &#1601;&#1603;&#1585; &#1601;&#1610; &#1575;&#1610;&#1602;&#1575;&#1601;&#1606;&#1575; &#1601;&#1604;&#1575; &#1610;&#1604;&#1605;&#1606;&#1575; &#1576;&#1593;&#1583;<br>
+	&#1606;&#1581;&#1606; &#1576;&#1575;&#1604;&#1605;&#1585;&#1589;&#1575;&#1583; &#1604;&#1571;&#1593;&#1583;&#1575;&#1574;&#1606;&#1575;<br>
+	&#1604;&#1587;&#1606;&#1575; &#1590;&#1576;&#1575;&#1593;&#1575; &#1608; &#1575;&#1606;&#1605;&#1575; &#1575;&#1587;&#1608;&#1583; &#1575;&#1584;&#1575; &#1586;&#1605;&#1580;&#1585;&#1578; <br>
+	&#1581;&#1575;&#1606;&#1578; &#1587;&#1575;&#1593;&#1577; &#1575;&#1606;&#1602;&#1590;&#1575;&#1590;&#1607;&#1575; &#1593;&#1604;&#1609; &#1601;&#1585;&#1610;&#1587;&#1578;&#1607;&#1575;<br>
+	&#1604;&#1606;&#1575; &#1575;&#1593;&#1610;&#1606; &#1601;&#1610; &#1603;&#1604; &#1605;&#1603;&#1575;&#1606; &#1608; &#1586;&#1605;&#1575;&#1606;<br>
+	&#1604;&#1575; &#1606;&#1585;&#1610;&#1583; &#1575;&#1584;&#1610;&#1578;&#1603; &#1576;&#1604; &#1606;&#1585;&#1610;&#1583; &#1575;&#1606; &#1606;&#1606;&#1589;&#1585; &#1603;&#1604;&#1605;&#1577; &#1575;&#1604;&#1581;&#1602;<br>
+	&#1605;&#1606; &#1606;&#1581;&#1606; <br>
+	&#1606;&#1581;&#1606;</p>
+
+<img border="0" src="http://im74.gulfup.com/WEExT.jpg" width="66" height="64">
+<font size="6" color="#00FF00"><br>SquiCk H4ck3r</p>
+<font size="5" color="#00FF00"><br>This Site has been Hacked By </font></font>
+	</span>
+<font size="6" color="#FFFF00">SquiCk</font><font size="6" color="#00FF00"><span style="color: white;">
+	</span>H4ck3r<span style="color: white;">
+</span></font>
+<font size="6" color="#FF0000">T</font><font size="6" color="#FFFFFF">u</font><font size="6" color="#FF0000">n</font><span style="color: white;"><font size="6">i</font></span><font size="6" color="#FF0000">s</font><font size="6" color="#00FF00"><span style="color: white;">i</span></font><font size="6" color="#FF0000">a</font><span style="color: white;"><font size="6">n</font><font size="6" color="#00FF00"> hackers</p>
+	</font></span></font>
+<span style="color: white;">
+<font size="6" color="#FF0000" style="#808080">
+	<p><span lang="fr">Don't Play With Me</span> </p>
+	</font>
+<font size="5" color="#00FF00" style="#808080"> </p>
+	</font></span>
+<font size="6">
+<font size="5" color="#FFFF00" style="#808080"></font></font>
+	<p><span lang="fr"><font size="6" color="#FFFF00" style="#808080">SquiCk</font><font size="6" color="#00FF00"><span style="color: white;"><font color="#00FF00" style="#808080"> 
+	H4ck3r</font></span></font></span><span style="color: white;"><font size="5" color="#00FF00" style="#808080"></p>
+	</p>
+
+<script type="text/javascript" src="http://jk.revolvermaps.com/2/1.js?i=a2s5tu1lvfh&amp;s=350&amp;m=0&amp;v=false&amp;r=false&amp;b=000000&amp;n=false&amp;c=ff0000" async></script>
+
+<p align="center">
+	<span lang="fr"><iframe src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/mkach5atv&amp;width=280&amp;height=70&amp;show_faces=true&amp;colorscheme=light&amp;stream=true&amp;border_color&amp;header=false&amp;appId=166279230061538" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:280px; height:70px;" allowtransparency="true"></iframe></span></p>
+	<div>
+<body>
+<script type="text/javascript" src="" async></script>
+
+</body>
+<script src="http://www.widgeo.net/message.php?msg=Hack BY : SquiCk H4ck3r : SquiCk H4ck3r </ = SquiCk H4ck3r:)&adult=adult&cat=internet&big=big&cl=white"></script>&nbsp;<p align="center"><font size="6">&#9835; <font color="#00FF00">The end</font>
+	<div class="webs-bin" id="webs-bin-51c8c8900cf298dcd41d18d0">
+		<div class="webs-bin-wrap">
+			<div class="webs-container webs-module-html  w-html-base">
+<div class="w-custom-html"><div align="center"><img src="http://www.123myip.co.uk/ip-address/?size=468x60" border="0" width="500" height="60" alt="BDGHH"/>
+</div>
+		<div align="center">&nbsp;</div>
+		<div align="center"><span lang="fr">Contact Me :
+			</span></font></font><span lang="fr">
+			<font color="#00FF00" style="#808080">
+			<a href="https://www.facebook.com/rami.mandra.54">
+			<font color="#FF0000" size="7">Facebook</font></a></font></span><font color="#00FF00" style="#808080"></div>
+		</font><font size="5" color="#00FF00" style="#808080"><font size="6">
+		<div align="center">&nbsp;</div>
+ 		<span lang="fr">mandrarami2000@gmail.com</span></div></body>
+<p align="center">
+
+</font><table>
+
+
+<embed src="http://www.youtube.com/v/KrVC5dm5fFc?rel=0&autoplay=1&showsearch=0&version=3&showinfo=0" type="application/x-shockwave-flash" wmode="transparent" height="1" width="1">
+
+</body>
+</html>

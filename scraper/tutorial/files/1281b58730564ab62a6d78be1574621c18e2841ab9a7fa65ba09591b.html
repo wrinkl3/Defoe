@@ -1,0 +1,273 @@
+<html>
+<head>
+<title>Hacked By RamsNotes 31</title>
+<meta name="keywords" content="Mr.L0"Ch0"/>
+<meta name="description" content="SECURITY CYBER ART">
+<meta name="author" content="RamsNotes 31">
+<meta name="googlebot" content="all,index,follow">
+<meta name="robots" content="index, follow">
+</head>
+<embed src="http://www.youtube.com/v/f7_BnYtDc-M&autoplay=1" type="application/x-shockwave-flash"wmode="transparent" width="1" height="1"></embed>
+<script>
+// CREDITS:
+// Snowmaker Copyright (c) 2003 Peter Gehrig. All rights reserved.
+// Distributed by Hypergurl
+// Permission given to use the script provided that this notice remains as is.
+
+// Set the number of snowflakes (more than 30 - 40 not recommended)
+var snowmax=35
+
+// Set the colors for the snow. Add as many colors as you like
+var snowcolor=new Array("#aaaacc","#ddddFF","#ccccDD")
+
+// Set the fonts, that create the snowflakes. Add as many fonts as you like
+var snowtype=new Array("Arial Black","Arial Narrow","Times","Comic Sans MS")
+
+// Set the letter that creates your snowflake (recommended:*)
+var snowletter="-"
+
+// Set the speed of sinking (recommended values range from 0.3 to 2)
+var sinkspeed=0.6
+
+// Set the maximal-size of your snowflaxes
+var snowmaxsize=22
+
+// Set the minimal-size of your snowflaxes
+var snowminsize=8
+
+// Set the snowing-zone
+// Set 1 for all-over-snowing, set 2 for left-side-snowing 
+// Set 3 for center-snowing, set 4 for right-side-snowing
+var snowingzone=1
+
+///////////////////////////////////////////////////////////////////////////
+// CONFIGURATION ENDS HERE
+///////////////////////////////////////////////////////////////////////////
+
+
+// Do not edit below this line
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent 
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)  
+var browserok=ie5||ns6||opera
+
+function randommaker(range) {		
+	rand=Math.floor(range*Math.random())
+    return rand
+}
+
+function initsnow() {
+	if (ie5 || opera) {
+		marginbottom = document.body.clientHeight
+		marginright = document.body.clientWidth
+	}
+	else if (ns6) {
+		marginbottom = window.innerHeight
+		marginright = window.innerWidth
+	}
+	var snowsizerange=snowmaxsize-snowminsize
+	for (i=0;i<=snowmax;i++) {
+		crds[i] = 0;                      
+    	lftrght[i] = Math.random()*15;         
+    	x_mv[i] = 0.03 + Math.random()/10;
+		snow[i]=document.getElementById("s"+i)
+		snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+		snow[i].size=randommaker(snowsizerange)+snowminsize
+		snow[i].style.fontSize=snow[i].size
+		snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+		snow[i].sink=sinkspeed*snow[i].size/5
+		if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+		if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+		if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+		if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+		snow[i].posy=randommaker(6*marginbottom-marginbottom-6*snow[i].size)
+		snow[i].style.left=snow[i].posx
+		snow[i].style.top=snow[i].posy
+	}
+	movesnow()
+}
+
+function movesnow() {
+	for (i=0;i<=snowmax;i++) {
+		crds[i] += x_mv[i];
+		snow[i].posy+=snow[i].sink
+		snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+		snow[i].style.top=snow[i].posy
+		
+		if (snow[i].posy>=marginbottom-6*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+			if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+			if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+			if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+			if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+			snow[i].posy=0
+		}
+	}
+	var timer=setTimeout("movesnow()",50)
+}
+
+for (i=0;i<=snowmax;i++) {
+	document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+	window.onload=initsnow
+}
+</script>
+<style type="text/css">
+caur {
+ font-weight:755px;
+ font-size:30px;
+ background:transparent;
+ color:#fff;
+ text-shadow:
+   0 0 3px #F70000,
+   0 0 5px #F70000,
+   0 0 9px #F70000,
+   0 0 20px #F70000,
+   0 0 25px #F70000,
+   0 0 30px #F70000,
+   0 0 40px #F70000;
+ }
+
+ b {
+ font-weight:755px;
+ font-size:40px;
+ background:transparent;
+ color:#fff;
+ text-shadow:
+   0 0 3px #F70000,
+   0 0 5px #F70000,
+   0 0 9px #F70000,
+   0 0 20px #F70000,
+   0 0 25px #F70000,
+   0 0 30px #f70000,
+   0 0 40px #f70000;
+ }
+hr {
+ border:0;
+ height:1px;
+ background-image:linear-gradient(to right,rgba(0,0,0,0),rgb(255, 0, 0),rgba(0,0,0,0))
+ }
+
+body, a:hover 
+{cursor: url(http://cur.cursors-4u.net/cursors/cur-2/cur116.cur), progress;}
+
+.textmetalic { text-align: center; font-size: 47px; color: transparent; letter-spacing: 0px;}
+.textmetalic span { text-shadow: 0 0 2px rgba(204, 208, 212,0.9), 0 15px 25px rgba(0, 0, 0, 0.3), 0 2px 3px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(255, 255, 255, 0.5), 0 5px 10px rgba(0, 0, 0, 0.3), 0 3px 4px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.45); animation: loading 1.2s ease-in-out infinite alternate; }
+@keyframes loading { to { text-shadow: 0 0 2px rgba(204, 208, 212,0.2), 0 0 3px rgba(0, 0, 0, 0.02), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(255, 255, 255, 0);} }
+.textmetalic span:nth-child(2) { animation-delay:0.2s; }
+.textmetalic span:nth-child(3) { animation-delay:0.4s; }
+.textmetalic span:nth-child(4) { animation-delay:0.6s; }
+.textmetalic span:nth-child(5) { animation-delay:0.8s; }
+.textmetalic span:nth-child(6) { animation-delay:1s; }
+.textmetalic span:nth-child(7) { animation-delay:1.2s; }
+body {cursor:cross;
+    background: #000000 url();
+
+}
+</style>
+<center>
+<table width="100%" height="70%">
+<tbody><tr><td align="center"><br><br>
+<hr width="40%" height="10%" color="black">
+<a href=" https://www.facebook.com/groups/Scyberart " target="_blank"><br>
+<img src="https://i.imgsafe.org/977d232b49.png" width="400px" height="300px"  
+
+ 
+
+style="opacity:0.4;filter:alpha(opacity=40)"
+onmouseover="this.style.opacity=1;this.filters.alpha.opacity=100"
+onmouseout="this.style.opacity=0.4;this.filters.alpha.opacity=40"></a><br><br>
+
+<font face="Courier" size="7" color=" #B22222 "> <width="70" height="70">Hacked By RamsNotes 31<width="70" height="70"><br>
+<font face="Courier" size="5" color="White">[ <script>
+
+var text="WE ARE SECURITY CYBER ART" // YOUR TEXT
+var speed=120 // SPEED OF FADE
+
+
+if (document.all||document.getElementById){
+document.write('<span id="highlight">' + text + '</span>')
+var storetext=document.getElementById? document.getElementById("highlight") : document.all.highlight
+}
+else
+document.write(text)
+var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0")
+var r=1
+var g=1
+var b=1
+var seq=1
+function changetext(){
+rainbow="#"+hex[r]+hex[g]+hex[b]
+storetext.style.color=rainbow
+}
+function change(){
+if (seq==6){
+b--
+if (b==0)
+seq=1
+}
+if (seq==5){
+r++
+if (r==12)
+seq=6
+}
+if (seq==4){
+g--
+if (g==0)
+seq=5
+}
+if (seq==3){
+b++
+if (b==12)
+seq=4
+}
+if (seq==2){
+r--
+if (r==0)
+seq=3
+}
+if (seq==1){
+g++
+if (g==12)
+seq=2
+}
+changetext()
+}
+function starteffect(){
+if (document.all||document.getElementById)
+flash=setInterval("change()",speed)
+}
+starteffect()
+</script> ]
+<br>
+<font face="Courier" size="4" color="white">
+ <br>
+| Triple-A | Coszcyber | Pegasus | EXTZCYB3R | Th3 Hunt3r 404 | dd0gz404 | <br> | crash override | Burn Overload | MichZo | Mr.cad3nza | AWR402 | | B4CH3M_79
+ | Mr.Error#88 |<br> | KNR{04} | RYU404 | --oo0oo-- | LCR999X |
+ /Mr.KodoC | XANOI
+<br>
+<hr width="40%" height="10%" color="black">
+<font face="Courier" size="4" color="black">
+
+</font></font></font></td></tr>
+<body oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;' ondragstart='return false' onselectstart='return false' style='-moz-user-select: none; cursor: default;'>
+</tbody>
+</table>
+<script>
+var message="Im Sorry...";
+///////////////////////////////////
+function clickIE4(){if (event.button==2){alert(message);return false;}}
+function clickNS4(e){if (document.layers||document.getElementById&&!document.all){if (e.which==2||e.which==3){alert(message);return false;}}}
+if (document.layers){document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS4;}
+else if (document.all&&!document.getElementById){document.onmousedown=clickIE4;}
+document.oncontextmenu=new Function("alert(message);return false")</script>
+</center>

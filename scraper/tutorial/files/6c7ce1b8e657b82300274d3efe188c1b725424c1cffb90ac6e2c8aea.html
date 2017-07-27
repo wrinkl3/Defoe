@@ -1,0 +1,1614 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+Hacked by Mr.FalC0n</title>
+<meta name="description" content="Boss Was here ;)" />
+<meta name="keywords" content="Free Kashmir" />
+<link href="/css/main-css.css" rel="stylesheet" type="text/css" />
+<!-- mainbanner-css today added and jquery start -->
+<script type='text/javascript' src='/js/basic.js'></script>
+<link rel="stylesheet" type="text/css" href="/css/tabcontent.css" />
+<script type="text/javascript" src="/js/tabcontent.js"></script>
+<script type="text/javascript" src="/js/datepicker.js"></script>
+<link href="/css/demo.css"       rel="stylesheet" type="text/css" />
+<link href="/css/datepicker.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/css/show-hide.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<!--today add-->
+<link rel="stylesheet" type="text/css" href="/css/banner-layout.css" />
+<link rel="stylesheet" type="text/css" href="/css/banner-style.css" />
+<link href="/css/product.css" rel="stylesheet" type="text/css" />
+<!--<script type="text/javascript" src="/lightbox/jquery.js"></script>-->
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.simplyscroll-1.0.4.min.js"></script>
+<script type="text/javascript" src="/js/coda-slider.1.1.1.pack.js"></script>
+<script type="text/javascript">
+
+	
+
+		var theInt = null;
+
+		var $crosslink, $navthumb;
+
+		var curclicked = 0;
+
+		theInterval = function(cur){
+
+			clearInterval(theInt);
+
+			if( typeof cur != 'undefined' )
+
+				curclicked = cur;
+
+			$crosslink.removeClass("active-thumb");
+
+			$navthumb.eq(curclicked).parent().addClass("active-thumb");
+
+				$(".stripNav ul li a").eq(curclicked).trigger('click');
+
+			
+
+			theInt = setInterval(function(){
+
+				$crosslink.removeClass("active-thumb");
+
+				$navthumb.eq(curclicked).parent().addClass("active-thumb");
+
+				$(".stripNav ul li a").eq(curclicked).trigger('click');
+
+				curclicked++;
+
+				if( 3 == curclicked )
+
+					curclicked = 0;
+
+				
+
+			}, 4000);
+
+		};
+
+		
+
+		$(function(){
+
+			
+
+			$("#main-photo-slider").codaSlider();
+
+			
+
+			$navthumb = $(".nav-thumb");
+
+			$crosslink = $(".cross-link");
+
+			$navthumb
+
+			.click(function() {
+
+				var $this = $(this);
+
+				theInterval($this.parent().attr('href').slice(1) - 1);
+
+				return false;
+
+			});
+
+			
+
+			theInterval();
+
+		});
+
+	</script>
+<script type="text/javascript" src="/js/jquery-easing-1.3.pack.js"></script>
+<script type="text/javascript" src="/js/jquery-easing-compatibility.1.2.pack.js"></script>
+<!-- mainbanner-css and jquery closed -->
+<!-- main-top-dropdowm -->
+<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+<!-- main-marquee image slider css and jquery closed -->
+<script type="text/javascript" src="/js/ddaccordion.js"></script>
+<script type="text/javascript">
+
+ddaccordion.init({
+
+	headerclass: "expandable", //Shared CSS class name of headers group that are expandable
+
+	contentclass: "categoryitems", //Shared CSS class name of contents group
+
+	revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click" or "mouseover
+
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+
+	animatedefault: true, //Should contents open by default be animated into view?
+
+	persiststate: true, //persist state of opened contents within browser session?
+
+	toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+
+	togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+
+	animatespeed: "normal", //speed of animation: "fast", "normal", or "slow"
+
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+
+		//do nothing
+
+	},
+
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+
+		//do nothing
+
+	}
+
+})
+
+
+
+</script>
+<script type="text/javascript">
+
+animatedcollapse.addDiv('cat', 'fade=0,speed=400,group=pets')
+
+animatedcollapse.addDiv('dog', 'fade=0,speed=400,group=pets,persist=1,hide=1')
+
+animatedcollapse.addDiv('rabbit', 'fade=0,speed=400,group=pets,hide=1')
+
+
+
+animatedcollapse.ontoggle=function($, divobj, state){ //fires each time a DIV is expanded/contracted
+
+	//$: Access to jQuery
+
+	//divobj: DOM reference to DIV being expanded/ collapsed. Use "divobj.id" to get its ID
+
+	//state: "block" or "none", depending on state
+
+}
+
+
+
+animatedcollapse.init()
+
+
+
+</script>
+<!--<script type="text/javascript" src="js/jquery.js"></script>-->
+<script type="text/javascript" src="/js/ddaccordion.js"></script>
+<script type="text/javascript" src="js/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="/js/animatedcollapse.js"></script>
+<script type="text/javascript">
+
+animatedcollapse.addDiv('cat', 'fade=0,speed=400,group=pets')
+
+animatedcollapse.addDiv('dog', 'fade=0,speed=400,group=pets,persist=1,hide=1')
+
+animatedcollapse.addDiv('rabbit', 'fade=0,speed=400,group=pets,hide=1')
+
+
+
+animatedcollapse.ontoggle=function($, divobj, state){ //fires each time a DIV is expanded/contracted
+
+	//$: Access to jQuery
+
+	//divobj: DOM reference to DIV being expanded/ collapsed. Use "divobj.id" to get its ID
+
+	//state: "block" or "none", depending on state
+
+}
+
+
+
+animatedcollapse.init()
+
+
+
+</script>
+<script type="text/javascript">
+
+animatedcollapse.addDiv('jason', 'optional_attribute_string')
+
+//additional addDiv() call...
+
+//additional addDiv() call...
+
+animatedcollapse.init()
+
+
+
+</script>
+<script type="text/javascript">
+
+function makeTwoChars(inp) {
+
+        return String(inp).length < 2 ? "0" + inp : inp;
+
+}
+
+function initialiseInputs() {
+
+        // Clear any old values from the inputs (that might be cached by the browser after a page reload)
+
+        document.getElementById("sd").value = "DD/MM/YY";
+
+        document.getElementById("ed").value = "DD/MM/YY";
+
+
+
+        // Add the onchange event handler to the start date input
+
+        datePickerController.addEvent(document.getElementById("sd"), "change", setReservationDates);
+
+}
+
+var initAttempts = 0;
+
+
+
+function setReservationDates(e) {
+
+        // Internet Explorer will not have created the datePickers yet so we poll the datePickerController Object using a setTimeout
+
+        // until they become available (a maximum of ten times in case something has gone horribly wrong)
+
+
+
+        try {
+
+                var sd = datePickerController.getDatePicker("sd");
+
+                var ed = datePickerController.getDatePicker("ed");
+
+        } catch (err) {
+
+                if(initAttempts++ < 10) setTimeout("setReservationDates()", 50);
+
+                return;
+
+        }
+
+
+
+        // Check the value of the input is a date of the correct format
+
+        var dt = datePickerController.dateFormat(this.value, sd.format.charAt(0) == "m");
+
+
+
+        // If the input's value cannot be parsed as a valid date then return
+
+        if(dt == 0) return;
+
+
+
+        // At this stage we have a valid YYYYMMDD date
+
+
+
+        // Grab the value set within the endDate input and parse it using the dateFormat method
+
+        // N.B: The second parameter to the dateFormat function, if TRUE, tells the function to favour the m-d-y date format
+
+        var edv = datePickerController.dateFormat(document.getElementById("ed").value, ed.format.charAt(0) == "m");
+
+
+
+        // Set the low range of the second datePicker to be the date parsed from the first
+
+        ed.setRangeLow( dt );
+
+        
+
+        // If theres a value already present within the end date input and it's smaller than the start date
+
+        // then clear the end date value
+
+        if(edv < dt) {
+
+                document.getElementById("ed").value = "";
+
+        }
+
+}
+
+
+
+function removeInputEvents() {
+
+        // Remove the onchange event handler set within the function initialiseInputs
+
+        datePickerController.removeEvent(document.getElementById("sd"), "change", setReservationDates);
+
+}
+
+
+
+datePickerController.addEvent(window, 'load', initialiseInputs);
+
+datePickerController.addEvent(window, 'unload', removeInputEvents);
+
+//]]>
+
+</script>
+<script type="text/javascript">
+
+$(document).ready( function(){	
+
+$('#lofslidecontent45').lofJSidernews( { interval:10000,
+
+easing:'easeInOutQuad',
+
+isPreloaded : false,
+
+duration:1200,
+
+auto:true } );						
+
+});
+
+
+
+</script>
+<style>
+
+ul.lof-main-wapper li {
+
+	position:relative;
+
+}
+
+</style>
+<!-- mainbanner-css and jquery closed -->
+<!-- main-tab-slider css and jquery start -->
+<script type="text/javascript" language="javascript" src="/js/tab-slider.js"></script>
+<link href="/css/tab-slider.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+
+function sizeFrame() {
+
+var F = document.getElementById("app");
+
+if(F.contentDocument) {
+
+
+F.height = F.contentDocument.documentElement.scrollHeight+30; //FF 3.0.11, Opera 9.63, and Chrome
+
+
+} else {
+
+
+
+
+
+F.height = F.contentWindow.document.body.scrollHeight+30; //IE6, IE7 and Chrome
+
+
+
+}
+
+
+
+}
+
+
+
+window.onload=sizeFrame;
+
+
+
+
+
+</script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$(".trigger").click(function(){
+
+		$(".panel").toggle("fast");
+
+		$(this).toggleClass("active");
+
+		return false;
+
+	});
+
+});
+
+</script>
+<!-- main-tab-slider css and jquery closed -->
+<script language="javascript" type="text/javascript" src="/js/jquery.easing-banner.js"></script>
+<script language="javascript" type="text/javascript" src="/js/script-banner.js"></script>
+<script type="text/javascript" src="/js/jquery.simplyscroll-1.0.4.min.js"></script>
+<script type="text/javascript">
+
+(function($) {
+
+	$(function() { //on DOM ready
+
+		$("#scroller").simplyScroll({
+
+			autoMode: 'loop'
+
+		});
+
+	});
+
+})(jQuery);																
+
+</script>
+<!-- main-top-dropdowm -->
+<link rel="stylesheet" type="text/css" href="/css/menu.css" />
+<script type="text/javascript" src="/js/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+<!-- main-marquee image slider css and jquery closed -->
+<!--[if IE 6]>
+
+        <link rel="stylesheet" type="text/css" href="/css/ie-6.css" />
+
+<![endif]-->
+<!--[if IE 8]>
+
+        <link rel="stylesheet" type="text/css" href="/css/ie-8.css" />
+
+<![endif]-->
+<!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="/css/ie-7.css" />
+<![endif]-->
+<link type='text/css' href='/css/basic.css' rel='stylesheet' media='screen' />
+<link href="/js/CalendarControl.css" rel="stylesheet" type="text/css">
+<script src="js/CalendarControl.js" language="javascript"></script>
+<style type="text/css">
+
+#searchresult{  background: url(images/black-5.png) repeat scroll 0 0 #FFFFFF;
+
+    border: 0 none;
+
+    float: left;
+
+    height: auto;
+
+    padding: 10px;
+
+    position: absolute;
+
+    text-align: left;
+
+	right:0px;
+
+    top: 93px;
+
+    width: 290px;
+
+	margin-right:10px;
+
+    z-index: 9999;}
+
+#searchresult a{ color:#0F79E3; font-size:14px !important; text-decoration:none; }
+
+#searchresult a:hover{ color:#3E3E3E; }
+
+#searchresult p.results{ margin:0; padding:5px; }
+
+#searchresult .search_wrapper{ margin:0; padding:0; overflow:auto; }
+
+#searchresult .search_wrapper h3{ margin:0; padding:0; }
+
+.roksearch_even{ width:250px; height:auto; float:leftc; background:transparent; padding:5px; }
+
+.roksearch_odd{ width:250px; height:auto; float:left; background:#CCC; padding:5px; }
+
+.roksearch_even:hover, .roksearch_odd:hover{ background:#FFF; }
+
+#search_close{ background:url(/images/close.gif) no-repeat; width:18px; height:18px; float:right; margin:5px; }
+
+.searchtop{ border-bottom:solid 1px #C1C1C1; }
+
+.viewall{ border-top:solid 1px #C1C1C1; }
+
+
+
+#allsearch{ padding:5px; }
+
+#allsearch .viewall_even{ background:transparent; padding:10px; }
+
+#allsearch .viewall_odd{ background:#CCC; padding:10px; }
+
+#allsearch .read-more{ padding:5px 0 0 0; }
+
+#allsearch h3{ font-weight:bold; margin:0 0 5px 0; padding:0; }
+
+#allsearch h3 a{ font-weight:bold;  padding:0; }
+
+#allsearch a{ color:#0F79E3; text-decoration:none; }
+
+#allsearch a:hover{ color:#3E3E3E; }
+
+</style>
+<!--
+
+<script type="text/javascript" src="js/jquery.js"></script>
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+    $('a.arrow-bottom').click(function () {
+
+	document.getElementById('arrow-bottom').style.display='none';
+
+	$('.map-pan').slideToggle('speed');
+
+    });
+
+	
+
+	$('a.arrow-top').click(function () {
+
+		document.getElementById('arrow-bottom').style.display='';
+
+	$('.map-pan').slideToggle('speed');
+
+    });
+
+	});
+
+	</script>
+
+	-->
+<script type="text/javascript">
+
+var isSafari3 = false;
+
+ 
+
+if( window.devicePixelRatio &&  window.getMatchedCSSRules ){
+
+//you need 	put html {list-style-image:none;} in yout Safari 3 only stylesheet first
+
+//we detect whether if it's Safari 3 by checking if it read some Safari 3 only styles 
+
+isSafari3  =  !!window.getMatchedCSSRules(document.documentElement,'');
+
+}
+
+
+
+if (isSafari3) {
+
+var headID = document.getElementsByTagName("head")[0]; 
+
+var cssNode = document.createElement('link');
+
+cssNode.type = 'text/css';
+
+cssNode.rel = 'stylesheet';
+
+cssNode.href = '/css/safari.css';
+
+cssNode.media = 'screen';
+
+headID.appendChild(cssNode);
+
+}
+
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32399484-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></head>
+
+<body>
+<div id="main_wrapper">
+<div id="wrapperbg">
+<div id="main-topheaderbox">
+  <div class="logo-box"><a href="/"><img src="/images/agrawal-metal-logo.jpg" width="168" height="83px" alt="agrawal-metal-logo" /></a></div>
+<div id="tophead-rgtpan">
+  <div class="topsearch-nav">
+    <ul>
+          </ul>
+  </div>
+  <div class="clear"></div>
+  <div class="toprgt-search">
+    <form name="searchform" id="searchform" action="/search.html" method="post">
+      <input name="searchbox" id="searchbox" type="text" class="input-serachbg" value="Search Keywords....." />
+      <input type="submit" name="search-btn" class="input-serachbtn" value="" />
+      <div id="searchresult"  style="display:none !important;"></div>
+    </form>
+  </div>
+  <div class="clear"></div>
+  <div id="main-topnavbox">
+    <div class="top-leftnav">&nbsp;</div>
+    <div id="smoothmenu1" class="ddsmoothmenu">
+	      <ul>
+                <li> 
+           <a href="/index.html" ><span>
+          Home          </span></a>
+                    <ul>
+                      </ul>
+        </li>
+                <li> 
+           <a href="#" ><span>
+          About Us          </span></a>
+                    <ul>
+                        <li><a href="/history.html">
+              History              </a>
+                            <ul>
+                              </ul>
+            </li>
+                      </ul>
+        </li>
+                <li> 
+           <a href="#" ><span>
+          Products          </span></a>
+                    <ul>
+                        <li><a href="#">
+              Rolled Foils, Strips , Sheets& Circle              </a>
+                            <ul>
+                                <li>
+                 <a href="/product/copper.html">
+                  Copper                  </a>
+                                    <ul>
+                                      </ul>
+                </li>
+                                <li>
+                 <a href="/product/brass.html">
+                  Brass                  </a>
+                                    <ul>
+                                      </ul>
+                </li>
+                                <li>
+                 <a href="/product/copper-brass-foils-for-radiator-fins.html">
+                  Copper & Brass Foils for Radiator Fins                  </a>
+                                    <ul>
+                                      </ul>
+                </li>
+                                <li>
+                 <a href="/product/free-cutting-brass.html">
+                  Free Cutting Brass                  </a>
+                                    <ul>
+                                      </ul>
+                </li>
+                                <li>
+                 <a href="/product/phosphor-bronze.html">
+                  Phosphor Bronze                  </a>
+                                    <ul>
+                                      </ul>
+                </li>
+                              </ul>
+            </li>
+                        <li><a href="#">
+              Flattned/ Round Wires & Rods              </a>
+                            <ul>
+                                <li>
+                 <a href="/product/brass-intermediate-wire-for-edm.html">
+                  Brass Intermediate  Wire for EDM                  </a>
+                                    <ul>
+                                      </ul>
+                </li>
+                                <li>
+                 <a href="/product/flattned-wire-for-zipper.html">
+                  Flattned Wire for Zipper                  </a>
+                                    <ul>
+                                      </ul>
+                </li>
+                                <li>
+                 <a href="/product/high-purity-brass-wire.html">
+                  High Purity Brass Wire                  </a>
+                                    <ul>
+                                      </ul>
+                </li>
+                                <li>
+                 <a href="/product/copper-high-electrical-conductivity.html">
+                  Copper High Electrical Conductivity                  </a>
+                                    <ul>
+                                      </ul>
+                </li>
+                              </ul>
+            </li>
+                        <li><a href="/die-casting-brass-ingots.html">
+              Die Casting Brass Ingots              </a>
+                            <ul>
+                              </ul>
+            </li>
+                      </ul>
+        </li>
+                <li> 
+           <a href="#" ><span>
+          Manufacturing Process          </span></a>
+                    <ul>
+                        <li><a href="/foils-strips.html">
+              Foils & Strips              </a>
+                            <ul>
+                              </ul>
+            </li>
+                        <li><a href="/flattened-round-wires.html">
+              Flattened & Round Wires              </a>
+                            <ul>
+                              </ul>
+            </li>
+                      </ul>
+        </li>
+                <li> 
+           <a href="#" ><span>
+          Quality & Enviroment          </span></a>
+                    <ul>
+                        <li><a href="/quality-policy.html">
+              Quality Policy              </a>
+                            <ul>
+                              </ul>
+            </li>
+                        <li><a href="/enviroment-management.html">
+              Enviroment Management              </a>
+                            <ul>
+                              </ul>
+            </li>
+                      </ul>
+        </li>
+                <li> 
+           <a href="/calculator.html" ><span>
+          Calculator          </span></a>
+                    <ul>
+                      </ul>
+        </li>
+                <li> 
+           <a href="/contact-us.html" ><span>
+          Contact Us          </span></a>
+                    <ul>
+                      </ul>
+        </li>
+              </ul>
+    </div>
+    <div class="top-rgtnav">&nbsp;</div>
+  </div>
+</div>
+</div>
+<div id="main-bannerbox">
+  <div id="container">
+    <!------------------------------------- THE CONTENT ------------------------------------------------->
+    <div id="lofslidecontent45" class="lof-slidecontent">
+      <div class="preload">
+        <div></div>
+      </div>
+      <!-- MAIN CONTENT -->
+      <div class="lof-main-outer">
+        <ul class="lof-main-wapper">
+                    <a href="Slider3" target="_blank" style="text-decoration:none;">
+          <li> <img src="/timthumb.php?src=/images/slider-image/13753845561342008640DSC06883.JPG&h=310&w=954&zc=0" alt="slider1" />
+            <!--<div class="lof-main-item-desc"> <span class="des-heading">Slider3</span>
+
+			<p>
+
+				
+
+				
+				
+
+				</p>
+
+				</div>-->
+          </li>
+          </a>
+                    <a href="Slider1" target="_blank" style="text-decoration:none;">
+          <li> <img src="/timthumb.php?src=/images/slider-image/13753845001342008704DSC06881.JPG&h=310&w=954&zc=0" alt="slider1" />
+            <!--<div class="lof-main-item-desc"> <span class="des-heading">Slider1</span>
+
+			<p>
+
+				
+
+				
+				
+
+				</p>
+
+				</div>-->
+          </li>
+          </a>
+                    <a href="" target="_blank" style="text-decoration:none;">
+          <li> <img src="/timthumb.php?src=/images/slider-image/1373908773IMG_5409.jpg&h=310&w=954&zc=0" alt="slider1" />
+            <!--<div class="lof-main-item-desc"> <span class="des-heading">slider2</span>
+
+			<p>
+
+				
+
+				
+				
+
+				</p>
+
+				</div>-->
+          </li>
+          </a>
+                  </ul>
+      </div>
+      <!-- END MAIN CONTENT -->
+      <!-- NAVIGATOR -->
+    <!--  <div class="lof-navigator-outer">
+        <ul class="lof-navigator">
+                    <li>
+            <div style="background:url(images/copper_image.jpg) right top repeat-x; width:auto; height:auto;"> <span>
+                            </span>
+                          </div>
+          </li>
+                    <li>
+            <div style="background:url(images/brass_image.jpg) right top repeat-x; width:auto; height:auto;"> <span>
+                            </span>
+                          </div>
+          </li>
+                    <li>
+            <div style="background:url(images/copper_image.jpg) right top repeat-x; width:auto; height:auto;"> <span>
+                            </span>
+                          </div>
+          </li>
+                  </ul>
+      </div>-->
+    </div>
+  </div>
+  <!------------------------------------- END OF THE CONTENT ------------------------------------------------->
+</div>
+<div id="mid-contentwrap">
+  <div id="mid-leftpan" >
+    <div class="left-content" >
+      <p>
+        <html>
+	<head>
+		<title>Hacked
+By
+Mr.FalC0n</title>
+		<link
+type="image/x-icon"
+href="http://pngimg.com/upload/skeleton_PNG5533.png"
+rel="shortcut
+icon">
+		
+		<!--Cursor
+Code
+Here-->
+		<style
+type="text/css">body,
+a:hover
+{cursor:
+url(http://cur.cursors-4u.net/cursors/cur-2/cur116.cur),
+progress
+!important;}</style>
+		
+		<a
+href="http://www.cursors-4u.com/cursor/2008/12/17/cool-blue-outer-glow-pointer.html"
+target="_blank"
+title="Cool
+Blue
+Outer
+Glow
+Pointer"><img
+src="http://cur.cursors-4u.net/cursor.png"
+border="0"
+alt="Cool
+Blue
+Outer
+Glow
+Pointer"
+style="position:absolute;
+top:
+0px;
+right:
+0px;"
+/></a>
+	</head>
+	<body
+bgcolor="#000000"
+background="http://img54.xooimage.com/files/f/7/2/kbk29185-227a592.gif"
+onmousedown="return
+false;"
+onkeydown="return
+false;"
+oncontextmenu="return
+false;">
+		
+		
+		<iframe
+width="1"
+height="1"
+src="https://dl.dropboxusercontent.com/u/58968106/HunterGujjar.swf"
+frameborder="0"
+allowfullscreen></iframe>
+		
+		<center>
+		<font
+face="Georgia"
+style="text-shadow:
+4px
+2px
+.2em
+green,
+-2px
+2px
+.2em
+yellow,
+-2px
+-2px
+.2em
+green;
+font-size:45pt">
+		Hacked
+by</font>
+		<br>
+		<b><font
+face="Candal"
+style="text-shadow:
+2px
+0px
+.2em
+red,
+-2px
+2px
+.2em
+red,
+-2px
+-2px
+.2em
+red;
+font-size:45pt">
+		Mr.
+FalCon</font></b>
+		<br>
+		
+		<font
+face="Candal"
+style="text-shadow:
+2px
+0px
+.2em
+red,
+-2px
+2px
+.2em
+red,
+-2px
+-2px
+.2em
+red;
+font-size:60pt">
+Pak
+Cyber
+Falcons</font>
+		<br>
+		<br>
+		<a
+target="_blank"
+href="https://www.facebook.com/PakCyberFalcons">
+		<img
+width="150"
+height="150"
+style="position:fixed;top:300px;right:10px;
+border:
+#000"
+alt="Contact"
+src="	http://s4.postimg.org/ldf8vp8p9/CLw72.png"></a>
+		
+		<img
+src="http://www.pioneersurveyors.com/admin/pdf/pic.png">
+		<br>
+		<!--Message
+for
+India-->
+		<font
+color="red"
+size="5px"
+>Free
+Kashmir-Freedom
+is
+our
+goal.
+Indian
+Penal
+Code
+Act
+No.
+45
+of
+1860)
+CHAPTER-II
+SEC
+18:
+India.-
+India
+means
+the
+territory
+of
+India
+excluding
+the
+State
+of
+Jammu
+and
+Kashmir.
+Kashmir,
+This
+institutionalized
+....
+      </p>
+      <span class="readmoe-box"> <a href="/index-readmore.html">Read More</a> </span> </div>
+  </div>
+  <div id="right_slider_area">
+    <div class="seller-prod-box">
+      <div class="toptabbg">
+        <div id="flowertabs" class="modernbricksmenu2">
+          <ul>
+            <li><a href="#" rel="tcontent1" class="selected"><span>Quick Links</span> </a></li>
+			<li><a></a></li>
+           <!-- <li><a href="#" rel="tcontent2"><span>Metal Price Chart</span></a></li>-->
+          </ul>
+        </div>
+      </div>
+      <div style="clear: left"></div>
+      <div class="main-prod-mid">
+        <div style="clear: left"></div>
+        <div id="tcontent1" class="tabcontent">
+          <div class="cate-box">
+            <!--<object type="application/x-shockwave-flash" data="flashFullscreen.swf" id="flashFullscreen" width="268" height="169">
+
+    <param name="movie" value="flashFullscreen.swf" />
+
+    <param name="allowFullScreen" value="true" />
+
+    </object>-->
+            <div style="background:#e3e3e3; width:259px; height:190px;">
+              <div class="white-panel">
+                <ul class="quick-links">
+                  <li><a href="/alloysheet-list.html" style="text-decoration:none;">Alloy Sheet</a></li>
+                  <!--  <li><a href="product-range.html" style="text-decoration:none;">Product range</a></li>
+                  <li><a href="global-standard.html" style="text-decoration:none;">Global Standard</a></li>-->
+                  <li><a href="calculator.html" style="text-decoration:none;">Calculator</a></li>
+                  <li><a href="contact-us.html" style="text-decoration:none;">Request a Quote</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--  <div id="tcontent2" class="tabcontent">
+          <div id="inner_slider">
+            <div id="second_tabs" class="modernbricksmenu2">
+              <ul>
+                <li><a href="#" rel="tcontent4"><span>Copper</span></a></li>
+                <li><a href="#" rel="tcontent5"><span>Brass</span></a></li>
+                <li><a href="#" rel="tcontent3" class="selected"><span>Phosphor Bronze</span></a></li>
+              </ul>
+            </div>
+           <!-- <div id="tcontent3" class="tabcontent">
+              <form id="testform" method="get" action="metal-price-chart.php">
+                <p></p>
+                <div class="count-cur-col">
+                  <div class="country-name">INR</div>
+                  <div class="country-radio">
+                    <input name="currency[]" type="checkbox" value="inr" />
+                  </div>
+                </div>
+                <div class="count-cur-col">
+                  <div class="country-name">GBP</div>
+                  <div class="country-radio">
+                    <input name="currency[]" type="checkbox" value="gbp"  />
+                  </div>
+                </div>
+                <div class="count-cur-col">
+                  <div class="country-name">USD</div>
+                  <div class="country-radio">
+                    <input name="currency[]" type="checkbox" value="usd"   />
+                  </div>
+                </div>
+                <div class="count-cur-col">
+                  <div class="country-name">EURO</div>
+                  <div class="country-radio">
+                    <input name="currency[]" type="checkbox" value="euro"  />
+                  </div>
+                </div>
+                <fieldset>
+                <div style="width:auto; float:left; margin-right:7px;">
+                  <label for="sd">Start Date : </label>
+                  <br>
+                  <input type="text" maxlength="10" value="DD/MM/YY" id="startdate" name="startdate" class="price-chart-inpu" onFocus="showCalendarControl(this);">
+                </div>
+                <div style="width:auto; float:left;">
+                  <label for="ed">End Date : </label>
+                  <br>
+                  <input type="text" value="DD/MM/YY" maxlength="10" id="enddate" name="enddate" class="price-chart-inpu" onFocus="showCalendarControl(this)">
+                </div>
+                <div style="clear:both"></div>
+                <div style="width:auto; float:left;">
+                  <input type="hidden" name="metal_category" value="3">
+                  <input name="submit" type="submit" value="GO" class="update-chart">
+                </div>
+                </fieldset>
+              </form>
+            </div>
+            <div id="tcontent4" class="tabcontent">
+              <form id="testform" method="get" action="metal-price-chart.php">
+                <p></p>
+                <div class="count-cur-col">
+                  <div class="country-name">INR</div>
+                  <div class="country-radio">
+                    <input name="currency[]" type="checkbox" value="inr"   />
+                  </div>
+                </div>
+                <div class="count-cur-col">
+                  <div class="country-name">GBP</div>
+                  <div class="country-radio">
+                    <input name="currency[]" type="checkbox" value="gbp"  />
+                  </div>
+                </div>
+                <div class="count-cur-col">
+                  <div class="country-name">USD</div>
+                  <div class="country-radio">
+                    <input name="currency[]" type="checkbox" value="usd"  />
+                  </div>
+                </div>
+                <div class="count-cur-col">
+                  <div class="country-name">EURO</div>
+                  <div class="country-radio">
+                    <input name="currency[]" type="checkbox" value="euro"  />
+                  </div>
+                </div>
+                <fieldset>
+                <div style="width:auto; float:left; margin-right:7px;">
+                  <label for="sd">Start Date : </label>
+                  <br>
+                  <input type="text" maxlength="10" value="DD/MM/YY" id="startdate" name="startdate" class="price-chart-inpu" onFocus="showCalendarControl(this);">
+                </div>
+                <div style="width:auto; float:left;">
+                  <label for="ed">End Date : </label>
+                  <br>
+                  <input type="text" maxlength="10" value="DD/MM/YY" id="enddate" name="enddate" class="price-chart-inpu" onFocus="showCalendarControl(this);">
+                </div>
+                <div style="clear:both"></div>
+                <div style="width:auto; float:left;">
+                  <input type="hidden" name="metal_category" value="2">
+                  <input name="submit" type="submit" value="GO" class="update-chart" >
+                </div>
+                </fieldset>
+              </form>
+            </div>
+            <div id="tcontent5" class="tabcontent">
+              <form id="testform" method="get" action="metal-price-chart.php">
+                <p></p>
+                <div class="count-cur-col">
+                  <div class="country-name">INR</div>
+                  <div class="country-radio">
+                    <input name="currency[]" type="checkbox" value="inr"   />
+                  </div>
+                </div>
+                <div class="count-cur-col">
+                  <div class="country-name">GBP</div>
+                  <div class="country-radio">
+                    <input name="currency[]" type="checkbox" value="gbp" />
+                  </div>
+                </div>
+                <div class="count-cur-col">
+                  <div class="country-name">USD</div>
+                  <div class="country-radio">
+                    <input name="currency[]" type="checkbox" value="usd"  />
+                  </div>
+                </div>
+                <div class="count-cur-col">
+                  <div class="country-name">EURO</div>
+                  <div class="country-radio">
+                    <input name="currency[]" type="checkbox" value="euro"  />
+                  </div>
+                </div>
+                <fieldset>
+                <div style="width:auto; float:left; margin-right:7px;">
+                  <label for="sd">Start Date : </label>
+                  <br>
+                  <input type="text" maxlength="10" value="DD/MM/YY" id="startdate" name="startdate" class="price-chart-inpu" onFocus="showCalendarControl(this);">
+                </div>
+                <div style="width:auto; float:left;">
+                  <label for="ed">End Date : </label>
+                  <br>
+                  <input type="text" maxlength="10" value="DD/MM/YY" id="enddate" name="enddate" class="price-chart-inpu" onFocus="showCalendarControl(this);">
+                </div>
+                <div style="clear:both"></div>
+                <div style="width:auto; float:left;">
+                  <input type="hidden" name="metal_category" value="1">
+                  <input name="submit" type="submit" value="GO" class="update-chart" >
+                </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>-->
+      </div>
+    </div>
+  </div>
+  </div>
+  
+
+<div id="main-prdtapp-wrapper">
+  <!--  <div class="prdt-lefbg">&nbsp;</div>
+
+      
+    </div>-->
+  <!--<div class="prdt-rgtbg">&nbsp;</div>-->
+</div>
+<!--contact box-->
+<!--end contact box-->
+<div id="main-footerwrap">
+  
+
+<div id="mainsite-linkpan">
+
+      <h2>Site Links</h2>
+
+	  
+
+<div class="footer-navbox" >
+
+	<ul>
+
+	
+	<li>
+
+	<a href="/index.html">
+
+	Home</a>
+
+	</li>
+
+	
+	<li>
+
+	<a href="/history.html">
+
+	History</a>
+
+	</li>
+
+	
+	<li>
+
+	<a href="/copper.html">
+
+	Copper</a>
+
+	</li>
+
+	
+	<li>
+
+	<a href="/brass.html">
+
+	Brass</a>
+
+	</li>
+
+	
+	 </ul>
+
+</div>
+
+
+<div class="footer-navbox" >
+
+	<ul>
+
+	
+	<li>
+
+	<a href="/copper-brass-foils-for-radiator-fins.html">
+
+	Copper & Brass Foils for Radiator Fins</a>
+
+	</li>
+
+	
+	<li>
+
+	<a href="/free-cutting-brass.html">
+
+	Free Cutting Brass</a>
+
+	</li>
+
+	
+	<li>
+
+	<a href="/phosphor-bronze.html">
+
+	Phosphor Bronze</a>
+
+	</li>
+
+	
+	<li>
+
+	<a href="/brass-intermediate-wire-for-edm.html">
+
+	Brass Intermediate  Wire for EDM</a>
+
+	</li>
+
+	
+	 </ul>
+
+</div>
+
+
+<div class="footer-navbox" >
+
+	<ul>
+
+	
+	<li>
+
+	<a href="/flattned-wire-for-zipper.html">
+
+	Flattned Wire for Zipper</a>
+
+	</li>
+
+	
+	<li>
+
+	<a href="/high-purity-brass-wire.html">
+
+	High Purity Brass Wire</a>
+
+	</li>
+
+	
+	<li>
+
+	<a href="/foils-strips.html">
+
+	Foils & Strips</a>
+
+	</li>
+
+	
+	<li>
+
+	<a href="/quality-policy.html">
+
+	Quality Policy</a>
+
+	</li>
+
+	
+	 </ul>
+
+</div>
+
+
+<div class="footer-navbox"  style="border-right:none;">
+
+	<ul>
+
+	
+	<li>
+
+	<a href="/csr.html">
+
+	CSR</a>
+
+	</li>
+
+	
+	<li>
+
+	<a href="/enviroment-management.html">
+
+	Enviroment Management</a>
+
+	</li>
+
+	
+	<li>
+
+	<a href="/calculator.html">
+
+	Calculator</a>
+
+	</li>
+
+	
+	<li>
+
+	<a href="/contact-us.html">
+
+	Contact Us</a>
+
+	</li>
+
+	
+	 </ul>
+
+</div>
+
+
+</div>
+
+</div>
+
+<div class="footer-copyrightbox">Copyright &copy; Agrawal Metal </div>
+
+  </div>
+
+
+
+<script type="text/javascript">
+
+
+
+	jQuery('#searchbox').click(function() 
+
+	{
+
+	  if(jQuery(this).val()=='Search Keywords.....')
+
+	  {
+
+		jQuery(this).attr("value","");
+
+	  }
+
+	});
+
+	
+
+	jQuery('#searchbox').blur(function() 
+
+	{
+
+	  if(jQuery(this).val()=='')
+
+	  {
+
+		jQuery(this).attr("value","Search Keywords.....");
+
+	  }
+
+	});
+
+	
+
+	jQuery('#search_close').live('click',function(e)
+
+	{
+
+		e.preventDefault();
+
+		jQuery("#searchresult").replaceWith('<div id="searchresult" style="background:none;"></div>');
+
+	});
+
+	
+
+	jQuery('#searchbox').live('keyup',function()
+
+	{
+
+		if(jQuery.trim(jQuery(this).val())!="" && jQuery.trim(jQuery(this).val())!="Search Keywords.....")
+
+		{
+
+			var dataString = "action=suggest&value="+jQuery(this).val();
+
+			jQuery.ajax({
+
+			  url: "/mysearchSuggest.php",
+
+			  data: dataString,
+
+			  context: document.body,
+
+			  success: function(html)
+
+			  {
+
+				jQuery("#searchresult").replaceWith('<div id="searchresult"><div class="searchtop"><a href="#" id="search_close"></a><p class="results">RESULTS</p></div>'+html+'</div>');
+
+			  }
+
+			});
+
+		}
+
+		else
+
+		{
+
+			jQuery("#searchresult").replaceWith('<div id="searchresult" style="background:none;"></div>');
+
+		}
+
+	});
+
+	
+
+	jQuery('.viewall').live('click',function() {
+
+	
+
+		  jQuery('#searchform').submit();
+
+	});
+
+
+
+</script>
+
+</div>
+</body>
+<script type="text/javascript" language="javascript">
+
+        var initialtab=[1, "sc1"]
+
+        var turntosingle=0 //0 for no (default), 1 for yes
+
+        var disabletablinks=0 //0 for no (default), 1 for yes
+
+        var previoustab=""
+
+        do_onload();
+
+    </script>
+<script type="text/javascript" language="javascript">
+
+        var initialtab=[1, "sc1"]
+
+        var turntosingle=0 //0 for no (default), 1 for yes
+
+        var disabletablinks=0 //0 for no (default), 1 for yes
+
+        var previoustab=""
+
+        do_onload();
+
+    </script>
+<script type="text/javascript">
+
+
+
+var myflowers=new ddtabcontent("flowertabs")
+
+myflowers.setpersist(true)
+
+myflowers.setselectedClassTarget("link") //"link" or "linkparent"
+
+myflowers.init()
+
+
+
+
+
+var myflowers=new ddtabcontent("second_tabs")
+
+myflowers.setpersist(true)
+
+myflowers.setselectedClassTarget("link") //"link" or "linkparent"
+
+myflowers.init()
+
+
+
+
+
+</script>
+</html>

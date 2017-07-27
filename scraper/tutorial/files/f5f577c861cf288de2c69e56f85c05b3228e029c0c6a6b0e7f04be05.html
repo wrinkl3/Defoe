@@ -1,0 +1,771 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html><head> 
+
+<body bgcolor="black">
+</p><embed src="http://www.youtube.com/v/BR3YCljPblU&autoplay=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1">
+
+<br>
+<br>
+<br>
+<TITLE>HaCkeD By Fallaga-Team</TITLE><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+ <link rel="shortcut icon" href="http://www.theflagshop.co.uk/ekmps/shops/speed/images/tunisia-flag-3ft-x-2ft-4772-p.jpg"/>
+<body bgcolor="#000000"><script type=type='text/javascript'></scr"+"ipt>")}}</script><center><img <img src="http://i453.photobucket.com/albums/qq258/esacaliver/headlines/HACKED.gif" align="middle" border="0"><br>
+<style type="text/css"> 
+
+<!--
+.ahgcrewstyle {
+	color: #F00;
+}
+.ahg {
+	color: #0F0;
+}
+-->
+</style> 
+
+ 
+
+<p></p><center> 
+
+ 
+
+<center></center> 
+
+ 
+
+<script type="text/javascript"> 
+
+TypingText = function(element, interval, cursor, finishedCallback) {
+
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == 
+
+
+
+"undefined")) {
+
+    this.running = true;
+
+    return;
+
+  }
+
+  this.element = element;
+
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+
+  this.origText = this.element.innerHTML;
+
+  this.unparsedOrigText = this.origText;
+
+  this.cursor = (cursor ? cursor : "");
+
+  this.currentText = "";
+
+  this.currentChar = 0;
+
+  this.element.typingText = this;
+
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+
+  TypingText.all.push(this);
+
+  this.running = false;
+
+  this.inTag = false;
+
+  this.tagBuffer = "";
+
+  this.inHTMLEntity = false;
+
+  this.HTMLEntityBuffer = "";
+
+}
+
+TypingText.all = new Array();
+
+TypingText.currentIndex = 0;
+
+TypingText.runAll = function() {
+
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+
+}
+
+TypingText.prototype.run = function() {
+
+  if(this.running) return;
+
+  if(typeof this.origText == "undefined") {
+
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", 
+
+
+
+this.interval);
+
+    return;
+
+  }
+
+  if(this.currentText == "") this.element.innerHTML = "";
+
+  if(this.currentChar < this.origText.length) {
+
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+
+      this.tagBuffer = "<";
+
+      this.inTag = true;
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+
+      this.tagBuffer += ">";
+
+      this.inTag = false;
+
+      this.currentText += this.tagBuffer;
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.inTag) {
+
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+
+      this.HTMLEntityBuffer = "&";
+
+      this.inHTMLEntity = true;
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+
+      this.HTMLEntityBuffer += ";";
+
+      this.inHTMLEntity = false;
+
+      this.currentText += this.HTMLEntityBuffer;
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else if(this.inHTMLEntity) {
+
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+
+      this.currentChar++;
+
+      this.run();
+
+      return;
+
+    } else {
+
+      this.currentText += this.origText.charAt(this.currentChar);
+
+    }
+
+    this.element.innerHTML = this.currentText;
+
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof 
+
+
+
+this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+
+    this.currentChar++;
+
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", 
+
+
+
+this.interval);
+
+  } else {
+
+	this.currentText = "";
+
+	this.currentChar = 0;
+
+        this.running = false;
+
+        this.finishedCallback();
+
+  }
+
+}
+
+ 
+
+</script>  
+
+<script> 
+
+var width=document.body.clientWidth;
+
+var height=document.body.clientHeight;
+
+ 
+
+function doClickText(who,type,step,timeOut) {
+
+document.getElementById(who).style.display="none";
+
+if(type==0) {
+
+reveal('revealDiv1',step,timeOut,0);
+
+reveal('revealDiv2',step,timeOut,1);}
+
+if(type==1) {
+
+reveal('revealDiv1',step,timeOut,2);
+
+reveal('revealDiv2',step,timeOut,3);}}
+
+function reveal(who,step,timeOut,type) {
+
+if(type==0)
+
+var where="top";
+
+if(type==1)
+
+var where="bottom";
+
+if(type==2)
+
+var where="left";
+
+if(type==3)
+
+var where="right";
+
+eval('var temp=document.getElementById(who).style.'+where);
+
+temp=parseInt(temp);
+
+if(type==0||type==1)
+
+var checkWith=height/2;
+
+if(type==2||type==3)
+
+var checkWith=width/2;
+
+if(-temp<checkWith) {
+
+
+
+temp-=step;
+
+
+
+eval('document.getElementById(who).style.'+where+'=temp;');
+
+
+
+setTimeout("reveal('"+who+"',"+step+",'"+timeOut+"',"+type+")", timeOut);}
+
+
+
+else {
+
+
+
+document.getElementById(who).style.display="none";
+
+
+
+document.body.scroll="yes";}}
+
+
+
+function initReveal(type,div1bg,div2bg,div1bw,div2bw,div1bc,div2bc,step,timeOut,click) {
+
+
+
+if(type==0) {
+
+
+
+var bWhere1="border-bottom";
+
+
+
+var bWhere2="border-top";
+
+
+
+var putZero1="top:0px; left:0px";
+
+
+
+var putZero2="bottom:0px; left:0px";
+
+
+
+document.write('<div id="revealDiv1" style="z-index:100; display:block; position:absolute; '+putZero1+'; background:'+div1bg+' ; width:'+(width)+'; height:'+(height/2)+'; '+bWhere1+':'+div1bc+' solid '+div1bw+'px"></div>');
+
+document.write('<div id="revealDiv2" style="z-index:100; display:block; position:absolute; '+putZero2+'; background:'+div2bg+' ; width:'+(width)+'; height:'+(height/2)+'; '+bWhere2+':'+div2bc+' solid '+div2bw+'px"></div>');
+
+if(!click) {
+
+reveal('revealDiv1',step,timeOut,0);
+
+reveal('revealDiv2',step,timeOut,1);}
+
+ 
+
+else {
+
+clickText(type,step,timeOut);}}
+
+ 
+
+if(type==1) {
+
+var bWhere1="border-right";
+
+var bWhere2="border-left";
+
+var putZero1="top:0px; left:0px";
+
+var putZero2="top:0px; right:0px";
+
+document.write('<div id="revealDiv1" style="z-index:100; display:block; position:absolute; '+putZero1+'; background:'+div1bg+' ; width:'+(width/2)+'; height:'+(height)+'; '+bWhere1+':'+div1bc+' solid '+div1bw+'px"></div>');
+
+document.write('<div id="revealDiv2" style="z-index:100; display:block; position:absolute; '+putZero2+'; background:'+div2bg+' ; width:'+(width/2)+'; height:'+(height)+'; '+bWhere2+':'+div2bc+' solid '+div2bw+'px"></div>');
+
+if(!click) {
+
+reveal('revealDiv1',step,timeOut,2);
+
+reveal('revealDiv2',step,timeOut,3);}
+
+else {
+
+clickText(type,step,timeOut);}}
+
+function clickText(type,step,timeOut) {
+
+document.write('<div id="clickText" style="z-index:101; display:block; position:absolute; top:'+(height/2-clickh/2-clickb)+'; left:'+(width/2-clickw/2-clickb)+'"><table style="border:'+clickc+' solid '+clickb+'px; background:'+clickbg+' ;width:'+clickw+'px; height:'+clickh+'; '+clickFont+'; cursor:hand; cursor:pointer" onClick="doClickText(\'clickText\','+type+','+step+','+timeOut+')"><tr><td align="middle">'+clickt+'</td></tr></table></div>');}}
+
+ 
+
+</script> 
+
+
+
+</script><div id="revealDiv1" style="z-index: 100; display: none; position: absolute; top: -369px; left: 0px; background: none repeat scroll 0% 0% black; width: 1600px; height: 369px; border-bottom: 1px solid lime;"></div><div id="revealDiv2" style="z-index: 100; display: none; position: absolute; bottom: -369px; left: 0px; background: none repeat scroll 0% 0% black; width: 1600px; height: 369px; border-top: 1px solid lime;"></div><div id="clickText" style="z-index: 101; display: none; position: absolute; top: 332px; left: 663px;"><table style="border: 2px solid rgb(255, 255, 255); background: none repeat scroll 0% 0% black; width: 270px; height: 70px; font-family: Tahoma,arial,helvetica; font-size: 10pt; font-weight: bold; color: Red; cursor: pointer;" onclick="doClickText('clickText',0,3,10)"><tbody><tr><td align="center">-=[<blink>Oopss... Sorry,You Got Hacked by Jaguar hacker</blink>]=-<p>Click Here To Continue...</p>  </td></tr></tbody></table></div>
+
+<script language="Javascript1.2"> 
+var mymessage = "wtf?? Don't try steal my source code ;) ";
+
+//
+
+function clickIE4(){
+
+if (event.button==2){
+
+alert(message);
+
+return false;
+
+}
+
+}
+
+function rtclickcheck(keyp){
+  if (navigator.appName == "Netscape" && keyp.which == 3) {
+    alert(mymessage);
+    return false;
+  }
+ 
+  if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) {
+    alert(mymessage);
+    return false;
+  }
+}
+ 
+document.onmousedown = rtclickcheck
+//-->
+</script> 
+ 
+<!--
+body {
+	background-color: #ffffff;
+}
+--> 
+<style type="text/css"> 
+<!--
+<title>HaCkeD By Fallaga-Team </title>
+ 
+<!--
+body {
+	background-color: #ffffff;
+}
+-->
+</style><style type="text/css"> 
+<!--
+body {
+	background-color: #000000;
+	background-image: url(http://i66.servimg.com/u/f66/14/86/38/04/ground10.gif);
+}
+.style3 {
+	color: #FF0000;
+	font-size: 12;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.style10 {
+	color: #999999;
+	font-size: 14px;
+}
+.style13 {color: #FFFFFF; font-size: 14px; }
+.style14 {color: #999999}
+.style16 {font-size: 14px}
+.style17 {color: #FFFFFF}
+-->
+ 
+</style></head><body background-color="#000000" onLoad="StartTexte()"> 
+<p style="text-align: center;" align="center"> 
+ 
+ 
+</p><div align="center"> 
+  <script language="JavaScript"> 
+<!--
+ 
+var max=0;
+function textlist()
+{
+        max=textlist.arguments.length;
+        for (i=0; i<max; i++)
+                this[i]=textlist.arguments[i];
+}
+ 
+tl=new textlist
+(
+" This site was HaCkeD By Prodigy TN .",
+" Never Perfect "
+" Don't worry, be Happy! ",
+" Islam Will Remain Again !",
+"  FREE MALI ",
+" Born in TUNISIA",
+
+);
+ 
+var text_x=0; pos=0;
+var l=tl[0].length;
+ 
+function textticker()
+{
+        document.form1.textfeld.value=tl[text_x].substring(0,pos)+"_";
+ 
+        if(pos++==l)
+        {
+                pos=0;
+                setTimeout("textticker()",2000);
+                text_x++;
+                if(text_x==max)
+                        text_x=0;
+                l=tl[text_x].length;
+        } else
+                setTimeout("textticker()",50);
+}
+ 
+function StartTexte()
+{
+	textticker();
+}
+ 
+// -->
+</script> 
+</div> 
+<p style="text-align: center;" align="center"> 
+ 
+</p><form name="form1" style="text-align: center;"> 
+  <div align="center"> 
+ 
+ 
+  </div> 
+ 
+</form> 
+<div align="center"> 
+  <p></p> 
+  <p> </p> 
+  <p> </p> 
+  <p> 
+ 
+  
+  <h1> 
+ 
+    <script> 
+farbbibliothek = new Array(); 
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00"); 
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00"); 
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"); 
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"); 
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF"); 
+farbbibliothek[6] = new Array("#0000FF","#FFFF00"); 
+farben = farbbibliothek[4];
+function farbschrift() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.all["a"+i].style.color=farben[i]; 
+} 
+farbverlauf(); 
+} 
+function string2array(text) 
+{ 
+Buchstabe = new Array(); 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+k=0; 
+while(k<=text.length) 
+{ 
+Buchstabe[k] = text.charAt(k); 
+k++; 
+} 
+} 
+function divserzeugen() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>"); 
+} 
+farbschrift(); 
+} 
+var a=1; 
+function farbverlauf() 
+{ 
+for(var i=0 ; i<farben.length; i++) 
+{ 
+farben[i-1]=farben[i]; 
+} 
+farben[farben.length-1]=farben[-1]; 
+ 
+setTimeout("farbschrift()",30); 
+} 
+// Zu Demonstrationszwecken***************** 
+var farbsatz=1; 
+function farbtauscher() 
+{ 
+farben = farbbibliothek[farbsatz]; 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+} 
+setInterval("farbtauscher()",5000); 
+text= "HaCkeD By Prodigy TN "; //h 
+string2array(text); 
+divserzeugen(); 
+//document.write(text);</script> 
+  </h1> 
+  </script></span><span style='font-size:4.0pt;mso-no-proof:yes'><img width=416 align="center"
+height=370 id="_x0000_i1030"
+src="http://i.imgur.com/8EHGSpg.png"
+
+style='mso-spacerun:yes'>
+
+
+
+<TABLE width="80%"> 
+  <TBODY> 
+  <TR> 
+    <TD> 
+      <P> 
+      <TABLE cellPadding=10 align=center> 
+        <TBODY> 
+          <TD> 
+ 
+            <CENTER> 
+            </CENTER> 
+ 
+	
+	
+	
+	
+	
+	
+	  
+  <p> 
+	
+	
+	
+	
+	
+	
+
+</div> 
+
+<center> 
+
+  <p align="center" class="style3" id="message"><span class="style10">This Site Was HaCkeD By </span><span class="style2">FallaGa-Team</span><span class="style13"><br> 
+ 
+      <span class="style14">Never </span></span></span></span> <span class="style13">Perfect</span></span><span class="style16"><br> 
+      <span class="style14">Don't Worry  </span></span><span class="style3">Don't Cry</span><span class="style16"><br> 
+      <span class="style14">Islam Will </span></span> <span class="style13">Remain Again</span><span class="style16"><br> 
+    
+	  <span class
+      <span class
+	 
+	  <span class="style13">Greetz: </span></span> <span class="style3">The Nightmare,Dr.XL,Gass,Fallag007,ADMIRAL,Spawn,And All Fallaga-Team </span><span class="style11"><br> 
+   </p>
+
+  <p align="center" class="style3"> 
+  <p align="center" class="style3"> 
+   <span class="style14"></span><span class="style3"> <strong>Proud To Be Tunisian</strong> <span class="style17"></span></span><span class="style14"> </span><span class="style8"></span></p></b>
+      <script type="text/javascript">
+new TypingText(document.getElementById("message"), 50, function(i){ var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length % ar.length]; });
+ 
+//Type out examples:
+TypingText.runAll();
+ 
+    </script> 
+    </span><br> 
+    <br>	  
+    
+    
+
+
+
+
+  
+
+ 
+
+ 
+ 
+
+</body></html>
+</Script>
+</script>
+<br /><br />
+
+
+<div align="center" class="shdw">Remember we can see you</div><br /><div align="center"><img src="http://www.123myip.co.uk/ip-address/?size=468x60" border="0" width="500" height="60" alt="BDGHH" /></div>
+
+
+
+<font color="lime">
+<div align="center">Copyright &copy; <span>Spysud_FallegaTeam</span>. All Rights Reserved.</div></font>
+<script>
+function start() {
+  
+  translateintorgb();
+  initsnow();
+  
+}
+window.onload = start;
+</script>
+   
+</body>
+ <br> 
+  
+</SCRIPT> 
+</head>
+
+
+
+
+
+
+<body>
+<p align=center style='text-align:center'><b><span lang=EN-US style='font-size:
+24.0pt;color:red;background:black;mso-ansi-language:EN-US;mso-no-proof:yes'>|
+We Are Fallaga-Team  |</span></b><b><span lang=EN-US
+style='font-family:"Georgia","serif";color:#66FFFF;mso-ansi-language:EN-US;
+mso-no-proof:yes'><o:p></o:p></span></b></p>
+
+</div>
+
+</body>
+
+
+
+  <script language="JavaScript1.2">               
+
+/*****************************************
+* Visit our site at http://www.star28.com/ for more code
+* This notice must stay intact for use
+***********************************************/            
+//change 1 to another integer to alter the scroll speed. Greater is faster               
+var speed=1.5               
+var currentpos=0,alt=1,curpos1=0,curpos2=-1               
+function initialize(){               
+startit()               
+}               
+function scrollwindow(){               
+if (document.all)               
+temp=document.body.scrollTop               
+else               
+temp=window.pageYOffset               
+if (alt==0)               
+alt=1               
+else               
+alt=0               
+if (alt==0)               
+curpos1=temp               
+else               
+curpos2=temp               
+if (curpos1!=curpos2){               
+if (document.all)               
+currentpos=document.body.scrollTop+speed               
+else               
+currentpos=window.pageYOffset+speed               
+window.scroll(0,currentpos)               
+}               
+else{               
+currentpos=30               
+window.scroll(0,currentpos)               
+}               
+}               
+function startit(){               
+setInterval("scrollwindow()",30)               
+}               
+window.onload=initialize               
+</script>
+  

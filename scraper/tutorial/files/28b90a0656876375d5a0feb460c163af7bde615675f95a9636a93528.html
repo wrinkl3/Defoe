@@ -1,0 +1,804 @@
+<html dir="rtl">
+
+<head>
+
+  <script language="JavaScript1.2">               
+
+/*****************************************
+* Visit our site at http://www.star28.com/ for more code
+* This notice must stay intact for use
+***********************************************/            
+//change 1 to another integer to alter the scroll speed. Greater is faster               
+var speed=1               
+var currentpos=0,alt=1,curpos1=0,curpos2=-1               
+function initialize(){               
+startit()               
+}               
+function scrollwindow(){               
+if (document.all)               
+temp=document.body.scrollTop               
+else               
+temp=window.pageYOffset               
+if (alt==0)               
+alt=1               
+else               
+alt=0               
+if (alt==0)               
+curpos1=temp               
+else               
+curpos2=temp               
+if (curpos1!=curpos2){               
+if (document.all)               
+currentpos=document.body.scrollTop+speed               
+else               
+currentpos=window.pageYOffset+speed               
+window.scroll(0,currentpos)               
+}               
+else{               
+currentpos=30               
+window.scroll(0,currentpos)               
+}               
+}               
+function startit(){               
+setInterval("scrollwindow()",30)               
+}               
+window.onload=initialize               
+</script>
+  
+  
+  
+  
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Mr.Sp!R!T</title>
+	<style>
+<!--
+.style40 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FF0000;
+
+	font-size: 45px;
+
+}
+
+.style40 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FF0000;
+
+	font-size: 45px;
+
+}
+
+.style56 {
+
+	color: #EA0000;
+
+}
+
+
+
+
+
+.style56 {
+
+	color: #EA0000;
+
+}
+
+
+
+
+
+.style11 {
+
+	color: #FFFFFF;
+
+}
+
+.style25 {
+
+	text-align: center;
+
+	color: rgb(255, 255, 255);
+
+	font-family: Tahoma;
+
+	font-size: x-large;
+
+}
+
+.style25 {
+
+	text-align: center;
+
+	color: rgb(255, 255, 255);
+
+	font-family: Tahoma;
+
+	font-size: x-large;
+
+}
+
+.style64 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FF0000;
+
+	font-size: x-large;
+
+}
+
+
+
+
+
+.style64 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FF0000;
+
+	font-size: x-large;
+
+}
+
+
+
+
+
+.style34 {
+
+	font-family: Chiller;
+
+	font-size: 40px;
+
+	color: #FF0000;
+
+}
+
+.style34 {
+
+	font-family: Chiller;
+
+	font-size: 40px;
+
+	color: #FF0000;
+
+}
+
+.style48 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Times New Roman", Times, serif;
+
+	color: #FFFFFF;
+
+	font-size: 36px;
+
+}
+
+
+
+
+
+.style48 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Times New Roman", Times, serif;
+
+	color: #FFFFFF;
+
+	font-size: 36px;
+
+}
+
+
+
+
+
+.style26 {
+
+	color: #FF0000;
+
+}
+
+.style26 {
+
+	color: #FF0000;
+
+}
+
+.style1 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	font-style: italic;
+
+	color: #FFFFFF;
+
+	font-size: xx-large;
+
+}
+
+.style1 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	font-style: italic;
+
+	color: #FFFFFF;
+
+	font-size: xx-large;
+
+}
+
+.style38 {
+
+	font-family: Tahoma;
+
+	font-size: xx-large;
+
+	color: rgb(192, 192, 192);
+
+}
+
+.style58 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #EA0000;
+
+	font-size: xx-large;
+
+}
+
+
+
+
+
+.style58 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #EA0000;
+
+	font-size: xx-large;
+
+}
+
+
+
+
+
+.style36 {
+
+	font-family: Chiller;
+
+	font-size: 40px;
+
+}
+
+.style36 {
+
+	font-family: Chiller;
+
+	font-size: 40px;
+
+}
+
+.style35 {
+
+	font-family: Chiller;
+
+}
+
+.style35 {
+
+	font-family: Chiller;
+
+}
+
+.style39 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FFFFFF;
+
+	font-size: x-large;
+
+}
+
+.style39 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FFFFFF;
+
+	font-size: x-large;
+
+}
+
+-->
+</style>
+</head>
+
+<body link="#000000" bgcolor="#000000">
+
+<style type="text/css">AFhss_dpnone{display:none;width:0;height:0}
+
+
+
+
+
+.style25 {
+
+	text-align: center;
+
+	color: rgb(255, 255, 255);
+
+	font-family: Tahoma;
+
+	font-size: x-large;
+
+}
+
+.style40 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FF0000;
+
+	font-size: 45px;
+
+}
+
+.style26 {
+
+	color: #FF0000;
+
+}
+
+.style48 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Times New Roman", Times, serif;
+
+	color: #FFFFFF;
+
+	font-size: 36px;
+
+}
+
+
+
+
+
+.style1 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	font-style: italic;
+
+	color: #FFFFFF;
+
+	font-size: xx-large;
+
+}
+
+.style14 {
+
+	text-align: center;
+
+	color: #B4B6B4;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: x-large;
+
+}
+
+.style58 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #EA0000;
+
+	font-size: xx-large;
+
+}
+
+
+
+
+
+.style50 {
+
+	color: #FFFFFF;
+
+}
+
+.style42 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FFFFFF;
+
+	font-size: large;
+
+	text-decoration: underline;
+
+}
+
+.style36 {
+
+	font-family: Chiller;
+
+	font-size: 40px;
+
+}
+
+.style35 {
+
+	font-family: Chiller;
+
+}
+
+.style34 {
+
+	font-family: Chiller;
+
+	font-size: 40px;
+
+	color: #FF0000;
+
+}
+
+.style43 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FFFFFF;
+
+	font-size: 35px;
+
+}
+
+.style39 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FFFFFF;
+
+	font-size: x-large;
+
+}
+
+.style51 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FFFFFF;
+
+	font-size: large;
+
+}
+
+.style52 {
+
+	text-decoration: underline;
+
+}
+
+.style57 {
+
+	color: #FF0000;
+
+	text-decoration: underline;
+
+}
+
+
+
+
+
+.style49 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #EA0000;
+
+	font-size: x-large;
+
+}
+
+.style56 {
+
+	color: #EA0000;
+
+}
+
+
+
+
+
+.style59 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FFFFFF;
+
+	font-size: xx-large;
+
+}
+
+.style60 {
+
+	text-align: center;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: x-large;
+
+}
+
+.style61 {
+
+	text-align: center;
+
+	color: #FFFFFF;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: x-large;
+
+}
+
+.style62 {
+
+	text-align: center;
+
+	color: #FF0000;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: x-large;
+
+}
+
+
+
+
+
+.style64 {
+
+	text-align: center;
+
+	font-weight: bold;
+
+	font-family: "Trebuchet MS";
+
+	color: #FF0000;
+
+	font-size: x-large;
+
+}
+
+
+
+
+
+</style>
+<script type="text/javascript">if(_AF2$.TOP==1){if(_AF2$.CH=='HSSCNL000242'){document.write("<scr"+"ipt src='http://box.anchorfree.net/insert/41.js?v="+ANCHORFREE_VERSION+"' type='text/javascript'></scr"+"ipt>")}else if(_AF2$.CH=='HSSCNL000248'){document.write("<scr"+"ipt src='http://box.anchorfree.net/insert/60f.js?v="+ANCHORFREE_VERSION+"' type='text/javascript'></scr"+"ipt>")}else if(_AF2$.CH=='HSSCNL000249'){document.write("<scr"+"ipt src='http://box.anchorfree.net/insert/61f.js?v="+ANCHORFREE_VERSION+"' type='text/javascript'></scr"+"ipt>")}else{var m=new RegExp(/&FBWCNT_FIREFOX=([0-9]+)/g).exec(_AF2$.HST);_AF2$.FBWCNT_FIREFOX=(m!=null&&typeof(m[1])!='undefined')?parseInt(m[1]):0;if(parseFloat(_AF2$.AFVER)>=2.03&&/NO_FBW_FIREFOX/.test(_AF2$.HST)==false&&_AF2$.FBWCNT_FIREFOX<10&&navigator.appVersion.indexOf("Win")!=-1){_AF2$.strl=1998;_AF2$.fbw=true}document.write("<scr"+"ipt src='http://box.anchorfree.net/insert/62fbw-f.js?v="+ANCHORFREE_VERSION+"' type='text/javascript'></scr"+"ipt>")}}</script>
+<div dir="ltr" align="center">
+	<span style="height: 30px; border: 1px dotted #FF0000">
+	<div align="center">
+		<table style="border-collapse: collapse; color: rgb(42,111,114); border: 1px dotted rgb(83,97,114)" id="table1" border="0" cellpadding="0" width="813" height="53">
+			<tr>
+				<td style="font-variant: normal; font-style: normal; font-family: tahoma,arial,geneva,lucida,'lucida grande',arial,helvetica,sans-serif; font-size: 10pt; font-weight: normal; width: 37%; border: 1px dotted #FFFFFF; background-color: #000000" height="30" align="middle">
+				<div id="s2" align="center">
+					<span style="height: 0px"><strong>
+					<span style="font-style: normal">
+					<p class="style40" style="text-shadow: #f82a2a 0px 0px 10px">
+					<em><span class="style56"><span lang="ar-sa">
+					<font color="#FFFFFF">&nbsp;</font><font color="#FF0000">~&gt;</font><font face="Snap ITC" color="#FFFFFF">
+					</font></span><font face="Snap ITC" color="#FFFFFF">HacKed</font>
+					<font face="Snap ITC">By</font><font color="#FFFFFF">
+					<font face="Snap ITC">Mr.Sp!R!T</font></font><span lang="ar-sa">&lt;~
+					</span></span></em></p>
+					</span></strong>
+					<p><strong><span style="font-style: normal"><em>
+					<span class="style56"><span lang="ar-sa">
+					<img src="http://www.iraqeon.net/uploads/13438184851.jpg" width="543" height="362"></span></span></em></span></strong></p>
+					<p><strong><span style="font-style: normal">
+					<span class="style11"><span class="style25">&nbsp;</span></span></span></strong></p>
+					<strong>
+					<p class="style40" style="text-shadow: #f82a2a 0px 0px 10px">
+					<em><span class="style56">!!</span> You
+					<span class="style11">Have</span> Just <span class="style11">
+					Got</span> Owned <span class="style56">!!</span></em></p>
+					</strong></span><strong><span class="style11">
+					<span class="style25">
+					<p class="style64" style="text-shadow: #f82a2a 0px 0px 10px">
+					<img src="http://www.iraqeon.net/uploads/13438184853.gif" width="737" height="40">
+					<br>
+					&#1575;&#1606;&#1575; &#1604;&#1587;&#1578; &#1604;&#1593;&#1576;&#1607; &#1605;&#1603;&#1578;&#1608;&#1576; &#1593;&#1604;&#1610;&#1607;&#1575;<br>
+					<br>
+					&#9608;&#9553;&#9474;&#9608;&#9553;&#9612;&#9474;&#9474;&#9608;&#9553;&#9612;&#9553;&#9612;&#9553;<br>
+					<br>
+					&quot;Made in China&quot;<br>
+					<br>
+					...&#1578;&#1604;&#1593;&#1576; &#1576;&#1600;&#1600;&#1600;&#1607;&#1600;&#1600;&#1575; &#1608; &#1578;&#1585;&#1605;&#1600;&#1600;&#1610;&#1607;&#1600;&#1600;&#1600;&#1575;<br>
+					<br>
+					&#1571;&#1606;&#1600;&#1600;&#1600;&#1600;&#1575;<br>
+					<br>
+					&#9608;&#9553;&#9474;&#9608;&#9553;&#9612;&#9474;&#9474;&#9608;&#9553;&#9612;&#9553;&#9612;&#9553;<br>
+					<br>
+					<font color="#FFFFFF" face="Sylfaen">(</font> MADE IN </span>
+					</span><span class="style34">IRaQ</span><span class="style11"><span class="style25">
+					<font face="SimSun">)</font><br>
+					<br>
+					&#1601;&#1573;&#1584;&#1575; &#1576;&#1583;&#1571;&#1578; &#1575;&#1604;&#1604;&#1593;&#1600;&#1600;&#1600;&#1600;&#1600;&#1600;&#1576;&#1600;&#1600;&#1600;&#1600;&#1577;<br>
+					<br>
+					&#1601;&#1571;&#1606;&#1600;&#1600;&#1600;&#1578; &#1578;&#1604;&#1593;&#1600;&#1600;&#1600;&#1600;&#1576; &#1576;&#1593;&#1600;&#1600;&#1600;&#1583;&#1575;&#1583; &#1593;&#1605;&#1585;&#1603;<br>
+					<br>
+					&nbsp;&#1604;&#1606; &#1571;&#1605;&#1600;&#1608;&#1578;<br>
+					<br>
+					&#1548;&#1548;&#1548; &#1570;&#1584;&#1570; &#1582;&#1587;&#1600;&#1600;&#1585;&#1578; &#1605;&#1606; &#1571;&#1581;&#1600;&#1576;<br>
+					<br>
+					...&#1604;&#1711;&#1606;&#1610; &#1587;&#1571;&#1593;&#1610;&#1588; &#1711;&#1570;&#1604;&#1605;&#1610;&#1578; <br>
+					<br>
+					&#1548;&#1548;&#1548; &#1570;&#1584;&#1570; &#1582;&#1587;&#1600;&#1600;&#1585;&#1578; &#1711;&#1600;&#1585;&#1570;&#1605;&#1600;&#1600;&#1600;&#1578;&#1600;&#1610;<br>
+					<br>
+					,,,,,, &#1578;&#1576;&#1575;&#1611; &#1604;&#1604;&#1603;&#1585;&#1575;&#1615;&#1605;&#1577;&#1612; &#1605;&#1575; &#1571;&#1579;&#1605;&#1606;&#1607;&#1575;<br>
+					<br>
+					L&#1060;&#1044;&#272;!nG &#163;n&#272; M&#1118; L!vE...</p>
+					<p class="style64" style="text-shadow: #f82a2a 0px 0px 10px">
+					<br>
+					<img src="http://www.iraqeon.net/uploads/13438184853.gif" width="698" height="56">
+					</p>
+					<p class="style64" style="text-shadow: #f82a2a 0px 0px 10px">
+					<br>
+					&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;|<br>
+					<br>
+					99,9%</p>
+					</span>
+					<p class="style48" style="text-shadow: #f82a2a 0px 0px 10px">
+					<span lang="ar-sa">[ </span>Security = <span class="style26">
+					0 </span><span lang="ar-sa">]</span></p>
+					<p class="style48" style="text-shadow: #f82a2a 0px 0px 10px">
+					&nbsp;( SafeMod ) = <span class="style26">OFF </span>(
+					<span class="style26">No Sec</span> )</p>
+					<p class="style48" style="text-shadow: #f82a2a 0px 0px 10px">
+					&nbsp;( This <span class="style26">Is</span> Very
+					<span class="style26">Bad</span> Security )</p>
+					<p class="style1" style="text-shadow: #f82a2a 0px 0px 10px">
+					&nbsp;<img src="http://www.iraqeon.net/uploads/13438184852.gif">
+					</p>
+					<p class="style38" style="text-shadow: #f82a2a 0px 0px 10px">
+					Don't <span class="style26">Forget</span> Me :</p>
+					<p class="style58" style="text-shadow: #f82a2a 0px 0px 10px">
+					<font face="Chiller" size="7"><blink>&nbsp;Mr.Sp!R!T</blink></font></p>
+					</span>
+					<p class="style38" style="text-shadow: #f82a2a 0px 0px 10px">
+					<span class="style36"><font color="#FF0000">EmAiL:-</font><a href="mailto:o_spirit_o@rogers.com"><font color="#FF0000">o_spirit_o</font><font color="#FFFFFF">@</font><font color="#FF0000">rogers.com</font></a></span></p>
+					<p class="style38" style="text-shadow: #f82a2a 0px 0px 10px">
+					<span class="style11"><span class="style36">F</span><span class="style35"><span class="style36">rom</span><span class="style34">
+					</span></span></span><span class="style34">IRaQ</span></p>
+					<span class="style11">
+					<p class="style38" style="text-shadow: #f82a2a 0px 0px 10px">
+					&nbsp;<img src="http://www.iraqeon.net/uploads/13438184852.gif" width="614" height="30">
+					</span>
+					<font color="#FF0000" face="Matura MT Script Capitals">&nbsp;</font></p>
+					<p class="style39" style="text-shadow: #f82a2a 0px 0px 10px">
+					| Mr.Sp!R!T Was <span class="style56">Here</span> |</p>
+					</strong>
+					<p><span style="height: 30px"><span class="style11">
+					<span style="font-style: normal"><strong>
+					<span style="height: 0px"><span class="style25">
+					<font javascript? text face="abadon" size="6" src="http://www.freewebs.com/p.js">
+					<object id="hatrk" border="0" style="height: 6px; width: 106px" classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+						<param name="movie" value="http://flash01.arabsh.com/uploads/flash/2012/03/26/0935464b60.swf">
+						<param name="quality" value="High">
+						<param name="base" value="http://flash01.arabsh.com/uploads/flash/2012/03/26/0935464b60.swf">
+						<param name="bgcolor" value="#000000">
+						<embed src="http://flash01.arabsh.com/uploads/flash/2012/03/26/0935464b60.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="hatrk" quality="High" bgcolor="#000000" style="width: 106px; height: 6px" base="http://flash01.arabsh.com/uploads/flash/2012/03/26/0935464b60.swf"></object>
+					</font></span></span></strong></span></span></span><br>
+				</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</span></div>
+
+</body>
+
+</html>

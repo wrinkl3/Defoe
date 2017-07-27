@@ -1,0 +1,285 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0039)http://scuolapascolimatera.gov.it/x.htm -->
+<html><object type="{92622AAD-05E8-4459-B256-765CE1E929FB}" cotype="cs" id="cosymantecbfw" style="width: 100%; height: 0px; display: block; position: absolute; z-index: 99999; top: 0px;"></object><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>HACKED BY General-c4 </title>
+
+<meta content="MSHTML 6.00.2900.2180" name="GENERATOR">
+<script>
+window.scrollBy(0, 1)
+window.resizeTo(0,0)
+window.moveTo(0,0)
+//setInterval("move()",30);
+setTimeout("move()", 1);
+var mxm=50
+var mym=25
+var mx=0
+var my=0
+var sv=50
+var status=1
+var szx=0
+var szy=0
+var c=255
+var n=0
+var sm=30
+var cycle=2
+var done=2
+function move()
+{
+if (status == 1)
+{
+mxm=mxm/1.05
+mym=mym/1.05
+mx=mx+mxm
+my=my-mym
+mxm=mxm+(400-mx)/100
+mym=mym-(300-my)/100
+window.moveTo(mx,my)
+rmxm=Math.round(mxm/10)
+rmym=Math.round(mym/10)
+if (rmxm == 0)
+{
+if (rmym == 0)
+{
+status=2
+}
+}
+}
+if (status == 2)
+{
+sv=sv/1.1
+scrratio=1+1/3
+mx=mx-sv*scrratio/2
+my=my-sv/2
+szx=szx+sv*scrratio
+szy=szy+sv
+window.moveTo(mx,my)
+window.resizeTo(szx,szy)
+if (sv < 0.1)
+{
+status=3
+}
+}
+if (status == 3)
+{
+document.fgColor=0xffffFF
+c=c-16
+if (c<0)
+{status=8}
+}
+if (status == 4)
+{
+c=c+16
+document.bgColor=c*65536
+document.fgColor=(255-c)*65536
+if (c > 239)
+{status=5}
+}
+if (status == 5)
+{
+c=c-16
+document.bgColor=c*65536
+document.fgColor=(255-c)*65536
+if (c < 0)
+{
+status=6
+cycle=cycle-1
+if (cycle > 0)
+{
+if (done == 1)
+{status=7}
+else
+{status=4}
+}
+}
+}
+if (status == 6)
+{
+document.title = "INC Team"
+alert("INC Team")
+cycle=2
+status=4
+done=1
+}
+if (status == 7)
+{
+c=c+4
+document.bgColor=c*65536
+document.fgColor=(255-c)*65536
+if (c > 128)
+{status=8}
+}
+if (status == 8)
+{
+window.moveTo(0,0)
+sx=screen.availWidth
+sy=screen.availHeight
+window.resizeTo(sx,sy)
+status=9
+}
+var timer=setTimeout("move()",0.3)
+}
+</script>
+
+<script language="JavaScript">
+msg = new Array(808080); //strings written in screen
+msg[0] = "<h2><h><center>..::HACKED BY General-c4::..</center></h></h2>";
+msg[1] = "<center> I LOVE HaCkEr </center>";
+msg[2] = "<center>Hi Admin</center>";
+msg[3] = "<center>YOU HAVE BEEN HACKED BY General-c4 </center>";
+msg[4] = "<center>You should be looking for AnotheR SecuritY for YouR ServeR </center>";
+msg[5] = "<center>Greets : noor_181412 , Abo-5rman_ , iKrooz__ , vip_9L7o9 , azoz__zac , xXHTLR_511_KSAx , ??? ???? <3  </center>";
+msg[6] = "<h2><b><center> General-c4 & ????????? </center></b></h2>"
+text1 = ""; //the same as text2, only the last character is highlighted
+text2 = ""; //current string, which will be written
+count = 0; //char index in string text
+count2 = 0; //number of strings
+text = msg[0].split(""); //text - string written
+function writetext() { //show strings above on screen
+text1 = text2 + "<font color='Red'>" + text[count] + "</font>"
+text2 += text[count];
+document.all["nothing"].innerHTML = text1; //where to write
+if (count < text.length-1){
+count++;
+setTimeout('writetext()', 25);
+}
+else { //if this string is written, get the new string
+count = 0;
+if (count2 != 6) { //write 4 strings
+count2++;
+text2 += "<p>"; //a new line
+text = eval('msg['+count2+'].split("")'); //get the new string to text
+setTimeout('writetext()', 25);
+}
+}
+}
+</script>
+<style type="text/css"></style><style type="text/css"></style><style type="text/css"></style><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script type="text/javascript" id="cosymantecbfw_resize">var kvcPushDownExceptions = {};									var retryCSSHack = 0;									var isUrlExcepted = function() {										if(!window.location || !kvcPushDownExceptions) {											return false;										}										var path = kvcPushDownExceptions[window.location.host];										if(!path) {											return false; 										}										var patt = new RegExp(path);										return patt.test(window.location.pathname);									};									document.addEventListener("initializeExceptionListEvent", function(e) {										if(!e || !e.detail) { 											return; 										} 										kvcPushDownExceptions = e.detail;									}, false);									var coAdjustToolbarHeight = function(h) { 									var e = document.getElementById("cosymantecbfw"); 									if(e) { 										var nOldHeight = 0;										if(window.getComputedStyle(e,null)) {											var height = window.getComputedStyle(e,null).getPropertyValue("height");											var oldHeight = height.replace("px", "");											nOldHeight = Number(oldHeight);											if(!isNaN(nOldHeight)) {												nOldHeight = 0;											}										}										if(document.readyState === "complete") {											applyCSSHack(nOldHeight, h);										} else {											window.addEventListener("onload", applyCSSHack(nOldHeight, h), false);										}										e.style.height = h + "px";										e.style.left = window.pageXOffset + "px";									}								};							var arrayElements = new Array();							var applyCSSHack = function( oldHeight, newHeight) {									if(isUrlExcepted()) {										return;									}									if(!document.body) {										if(retryCSSHack++ < 30) {											setTimeout(function() { applyCSSHack(oldHeight, newHeight); }, 100);										}										return;									}									arrayElements = new Array();									if(document.body.style) {										document.body.style.position = "relative";										var len = newHeight + "px";										document.body.style.setProperty("margin-top", len, "important");                                        document.body.style.setProperty("border", "1px solid transparent", "important");									}									walk(document.body);									for(var i = 0; i < arrayElements.length; i++) {										var elem = arrayElements[i];										if(null == window.getComputedStyle(elem,null)) {											continue;										}										var pos = window.getComputedStyle(elem,null).getPropertyValue("position");										if(pos !== "fixed") {											continue;										}										if(elem.parentNode == document.body) {											elem.style.position = "absolute";											continue;										}										var oldTop = window.getComputedStyle(elem,null).getPropertyValue("top");										oldTop = oldTop.replace("px", "");										var nOldTop = Number(oldTop);										if(!isNaN(nOldTop)) {											nOldTop = 0;										}										var top = nOldTop + (Number(newHeight) - Number(oldHeight));										if(elem.style) {											elem.style.top = top + "px";										}									}								};							var walk = function (elm) {								if(window.getComputedStyle(elm,null) && "auto" !== window.getComputedStyle(elm,null).getPropertyValue("top")) {									arrayElements.push(elm);								}								var node;								for (node = elm.firstChild; node; node = node.nextSibling) {									if (node.nodeType === 1) {										walk(node);									}								}							};</script><script type="text/javascript" src="./HACKED BY Muslim H4x0r_files/5"></script><script type="text/javascript" id="waxCS">var WAX = function () { var _arrInputs; return { getElement: function (i) { return _arrInputs[i]; }, setElement: function(i){ _arrInputs=i; } } }(); function waxGetElement(i) { return WAX.getElement(i); } function coSetPageData(t, d){ if('wax'==t) { WAX.setElement(d);} }</script></head><body text="16777215" bgcolor="#000000" onload="writetext()" style="" crossrider_data_store_temp="{}">
+
+<p></p>
+<div></div><font style="FONT-SIZE: 4pt" face="Courier New">
+</font><div align="center"><font style="FONT-SIZE: 4pt; color: #DFDFDF; border-color: #FFFFFF; -webkit-box-shadow: 0px 0px #CF0003; box-shadow: 0px 0px #CF0003;" face="Courier New">
+<center>
+  ´´´´´´´´´´´´´´´´´¶¶¶¶¶¶´´´´´´´´´´´´´¶¶¶¶¶¶¶´´´´´´´ ´´´´´´´´´<br>
+  ´´´´´´´´´´´´´´¶¶¶¶´´´´´´´´´´´´´´´´´´´´´´´¶¶¶¶´´´´´´´´´´´´´´<br>
+  ´´´´´´´´´´´´´¶¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´´´´´´´´´´´<br>
+  ´´´´´´´´´´´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´´´´´´´´´´<br>
+  ´´´´´´´´´´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´´´´´´´´´<br>
+  ´´´´´´´´´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´´´´´´´´´<br>
+  ´´´´´´´´´´¶¶´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´¶¶´´´´´´´´´´<br>
+  ´´´´´´´´´´¶¶´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´¶´´´´´´´´´´<br>
+  ´´´´´´´´´´¶¶´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´¶´´´´´´´´´´<br>
+  ´´´´´´´´´´¶¶´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´¶¶´´´´´´´´´´<br>
+  ´´´´´´´´´´¶¶´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´¶¶´´´´´´´´´´<br>
+  ´´´´´´´´´´´¶¶´¶¶´´´¶¶¶¶¶¶¶¶´´´´´¶¶¶¶¶¶¶¶´´´¶¶´¶¶´´´´´´´´´´´<br>
+  ´´´´´´´´´´´´¶¶¶¶´¶¶¶¶¶¶¶¶¶¶´´´´´¶¶¶¶¶¶¶¶¶¶´¶¶¶¶¶´´´´´´´´´´´<br>
+  ´´´´´´´´´´´´´¶¶¶´¶¶¶¶¶¶¶¶¶¶´´´´´¶¶¶¶¶¶¶¶¶¶´¶¶¶´´´´´´´´´´´´´<br>
+  ´´´´¶¶¶´´´´´´´¶¶´´¶¶¶¶¶¶¶¶´´´´´´´¶¶¶¶¶¶¶¶¶´´¶¶´´´´´´¶¶¶¶´´´<br>
+  ´´´¶¶¶¶¶´´´´´¶¶´´´¶¶¶¶¶¶¶´´´¶¶¶´´´¶¶¶¶¶¶¶´´´¶¶´´´´´¶¶¶¶¶¶´´<br>
+  ´´¶¶´´´¶¶´´´´¶¶´´´´´¶¶¶´´´´¶¶¶¶¶´´´´¶¶¶´´´´´¶¶´´´´¶¶´´´¶¶´´<br>
+  ´¶¶¶´´´´¶¶¶¶´´¶¶´´´´´´´´´´¶¶¶¶¶¶¶´´´´´´´´´´¶¶´´¶¶¶¶´´´´¶¶¶´<br>
+  ¶¶´´´´´´´´´¶¶¶¶¶¶¶¶´´´´´´´¶¶¶¶¶¶¶´´´´´´´¶¶¶¶¶¶¶¶¶´´´´´´´´¶¶<br>
+  ¶¶¶¶¶¶¶¶¶´´´´´¶¶¶¶¶¶¶¶´´´´¶¶¶¶¶¶¶´´´´¶¶¶¶¶¶¶¶´´´´´¶¶¶¶¶¶¶¶<br>
+  ´´¶¶¶¶´¶¶¶¶¶´´´´´´¶¶¶¶¶´´´´´´´´´´´´´´¶¶¶´¶¶´´´´´¶¶¶¶¶¶´¶¶¶´<br>
+  ´´´´´´´´´´¶¶¶¶¶¶´´¶¶¶´´¶¶´´´´´´´´´´´¶¶´´¶¶¶´´¶¶¶¶¶¶´´´´´´´´<br>
+  ´´´´´´´´´´´´´´¶¶¶¶¶¶´¶¶´¶¶¶¶¶¶¶¶¶¶¶´¶¶´¶¶¶¶¶¶´´´´´´´´´´´´´´<br>
+  ´´´´´´´´´´´´´´´´´´¶¶´¶¶´¶´¶´¶´¶´¶´¶´¶´¶´¶¶´´´´´´´´´´´´´´´´´<br>
+  ´´´´´´´´´´´´´´´´¶¶¶¶´´¶´¶´¶´¶´¶´¶´¶´¶´´´¶¶¶¶¶´´´´´´´´´´´´´´<br>
+  ´´´´´´´´´´´´¶¶¶¶¶´¶¶´´´¶¶¶¶¶¶¶¶¶¶¶¶¶´´´¶¶´¶¶¶¶¶´´´´´´´´´´´´<br>
+  ´´´´¶¶¶¶¶¶¶¶¶¶´´´´´¶¶´´´´´´´´´´´´´´´´´¶¶´´´´´´¶¶¶¶¶¶¶¶¶´´´´<br>
+  ´´´¶¶´´´´´´´´´´´¶¶¶¶¶¶¶´´´´´´´´´´´´´¶¶¶¶¶¶¶¶´´´´´´´´´´¶¶´´´<br>
+  ´´´´¶¶¶´´´´´¶¶¶¶¶´´´´´¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶´´´´´¶¶¶¶¶´´´´´¶¶¶´´´´<br>
+  ´´´´´´¶¶´´´¶¶¶´´´´´´´´´´´¶¶¶¶¶¶¶¶¶´´´´´´´´´´´¶¶¶´´´¶¶´´´´´´<br>
+  ´´´´´´¶¶´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´¶¶´´´´´´<br>
+  ´´´´´´´¶¶¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶ ¶¶´´´´´´´
+</center></font></div>
+<center><span color="#ff0000" face="Impact" 1pt?="" font-size:="">
+<div id="nothing" style="FONT-WEIGHT: bold; WIDTH: 800px; FONT-FAMILY: &#39;courier new&#39;; HEIGHT: 540px"><h2><h><center>..::HACKED BY Muslim General-c4::..</center></h></h2><p></p><center> I LOVE HaCkEr </center><p></p><center>Hi Admin</center><p></p><center>YOU HAVE BEEN HACKED BY Muslim General-c4 </center><p></p><center>You should be looking for AnotheR SecuritY for YouR ServeR </center><p></p><center></b>&gt;</h2></div><table align="center">
+  
+  <tbody></tbody></table>
+<script language="JavaScript">
+if (document.all){
+Cols = 9; //number of falldown binary string
+Cl = 50; //maximum length of binary string
+Cs = 100; //number of pixels between binary strings
+Ts = 10; //font-size of binary string
+Tc = '#008800'; //color of binary string
+Tc1 = '#00ff00'; //color of 1st bit in binary string
+MnS = 22; //minimum speed of binary string
+MxS = 25; //maximum spees of binary string
+I = Cs;
+Sp = new Array(); //array speed of binary strings
+S = new Array(); //the position of binary string
+Y = new Array(); //array of position of binary strings
+C = new Array(); //array save bits of string
+M = new Array(); //binary string
+B = new Array(); //temp for creating binary string
+RC = new Array(); //length of binary strings
+E = new Array(); //array of head-bit in written strings
+Tcc = new Array(0,1,2,3,4,5,6,7,8,9); //array of head-bit in binary strings
+
+document.write("<div id='Container' style='position:absolute; top:0; left+Cs+"'>");
+
+for (i=0; i < Cols; i++){ //area to show binary strings
+S[i] = I += Cs; //calculate the position of binary string
+document.write("<div id='A' style='position:absolute; top:0; font-family:Arial;" +
+"font-size:" + Ts + "px; left:" + S[i] + "; width:" + Ts + "px;" +
+"height:0px; color:" + Tc + "; visibility:hidden'></div>");
+}
+document.write("</div>");
+}
+
+for(j = 0; j < Cols; j++){
+RC[j] = 1 + Math.round(Math.random()*Cl); //random length of the binary strings
+for(i=0; i < RC[j]; i++){
+B[i] = ""; //sign of ending of string
+C[i] = Math.round(Math.random())+' '; //get bit in binary strings
+B[0] += C[i];
+}
+M[j] = B[0]; //binary string
+Y[j] = 0; //1st position of strings are 0
+Sp[j] = Math.round(MnS+Math.random()*MxS); //random speed of binary strings
+}
+function Cycle(){
+Container.style.top = window.document.body.scrollTop;
+for (i=0; i < Cols; i++){
+var r = Math.floor(Math.random()*Tcc.length); //get a position in table Tcc
+E[i] = '<font color='+Tc1+'>'+Tcc[r]+'</font>'; //get the head-bit
+Y[i]+=Sp[i]; //the position of current string
+if (Y[i] > window.document.body.clientHeight) { //if at the end of window, calculate again
+i2 = 1 + Math.round(Math.random()*Cols);
+RC[i2] = 1 + Math.round(Math.random()*Cl);
+for(i3 = 0; i3 < RC[i2]; i3++){ //get bit in binary strings
+B[i3] = "";
+C[i3] = Math.round(Math.random())+' ';
+B[0] += C[i3];
+}
+M[i] = B[0];
+Y[i] = -Ts*M[i].length/1.5; //hide 2/3 string at beginning
+Sp[i] = Math.round(MnS+Math.random()*MxS); //random speed of binary strings
+A[i].style.visibility = 'visible';
+}
+A[i].style.top=Y[i]; //the i-th in tag div A
+A[i].innerHTML=M[i] + ' ' + E[i]; //show the binary string in tag A
+}
+setTimeout('Cycle()',100)
+}
+Cycle();
+</script>
+<br>
+<h1><u>
+<center></center></u></h1><font color="red">
+<center><b></b></center>
+<u><center></center></u><b><center>!! PEACE OUT !!</center></b></font>
+</span></center>
+<font color="#ff0000" size="7">
+<p align="center">
+<font color="#FFFFFF" size="4">
+
+<embed src="https://youtube.googleapis.com/v/6d454zKmU88&amp;feature=related&amp;autoplay=1&amp;loop=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1" __idm_id__="18001921">
+
+
+
+
+
+
+</font></p></font></body></html>

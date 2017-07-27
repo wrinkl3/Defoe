@@ -1,0 +1,791 @@
+<html>
+
+<head>
+
+<link rel='icon' type='image/jpg' href='http://s4.postimg.org/enp48q6gd/mca.png'>
+<title>Hacked By Romantic</title>
+
+
+</head>
+
+
+<style>
+body {
+    background: url(http://s8.postimg.org/e6zaehuqd/flag.jpg);
+    background-size: 1500px 1300px;
+    background-repeat: no-repeat;
+}
+
+
+
+</style>
+
+<br>
+
+<center>
+<SCRIPT>
+
+
+
+farbbibliothek = new Array(); 
+
+
+
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+
+
+
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00"); 
+
+
+
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00"); 
+
+
+
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"); 
+
+
+
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"); 
+
+
+
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF"); 
+
+
+
+farbbibliothek[6] = new Array("#0000FF","#FFFF00"); 
+
+
+
+farben = farbbibliothek[4];
+
+
+
+function farbschrift() 
+
+
+
+{ 
+
+
+
+for(var i=0 ; i<Buchstabe.length; i++) 
+
+
+
+{ 
+
+
+
+document.all["a"+i].style.color=farben[i]; 
+
+
+
+} 
+
+
+
+farbverlauf(); 
+
+
+
+} 
+
+
+
+function string2array(text) 
+
+
+
+{ 
+
+
+
+Buchstabe = new Array(); 
+
+
+
+while(farben.length<text.length) 
+
+
+
+{ 
+
+
+
+farben = farben.concat(farben); 
+
+
+
+} 
+
+
+
+k=0; 
+
+
+
+while(k<=text.length) 
+
+
+
+{ 
+
+
+
+Buchstabe[k] = text.charAt(k); 
+
+
+
+k++; 
+
+
+
+} 
+
+
+
+} 
+
+
+
+function divserzeugen() 
+
+
+
+{ 
+
+
+
+for(var i=0 ; i<Buchstabe.length; i++) 
+
+
+
+{ 
+
+
+
+document.write("<font face='Vivaldi' size=30><span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span></font>"); 
+
+
+
+} 
+
+
+
+farbschrift(); 
+
+
+
+} 
+
+
+
+var a=1; 
+
+
+
+function farbverlauf() 
+
+
+
+{ 
+
+
+
+for(var i=0 ; i<farben.length; i++) 
+
+
+
+{ 
+
+
+
+farben[i-1]=farben[i]; 
+
+
+
+} 
+
+
+
+farben[farben.length-1]=farben[-1]; 
+
+
+
+setTimeout("farbschrift()",30); 
+
+
+
+} 
+
+
+
+// Zu Demonstrationszwecken***************** 
+
+
+
+var farbsatz=1; 
+
+
+
+function farbtauscher() 
+
+
+
+{ 
+
+
+
+farben = farbbibliothek[farbsatz]; 
+
+
+
+while(farben.length<text.length) 
+
+
+
+{ 
+
+
+
+farben = farben.concat(farben); 
+
+
+
+} 
+
+
+
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+
+
+
+} 
+
+
+
+setInterval("farbtauscher()",5000); 
+
+
+
+text= "Kicked By Romantic"; //h 
+
+
+
+string2array(text); 
+
+
+
+divserzeugen();
+
+
+
+//document.write(text); 
+
+
+
+</SCRIPT>
+<script>
+
+
+
+//mouse
+
+
+
+//Circling text trail- Tim Tilton
+
+
+
+//Website: http://www.tempermedia.com/
+
+
+
+//Visit http://www.dynamicdrive.com for this script and more
+
+
+
+function cursor_text_circle(){
+
+
+
+// your message here
+
+
+
+var msg='-----===Romantic===----- '.split('').reverse().join('');
+
+
+
+
+
+
+
+var font='Verdana,Arial';
+
+
+
+var size=3; // up to seven
+
+
+
+var color='#FFFFFF';
+
+
+
+
+
+
+
+// This is not the rotation speed, its the reaction speed, keep low!
+
+
+
+// Set this to 1 for just plain rotation w/out drag
+
+
+
+var speed=.3;
+
+
+
+
+
+
+
+// This is the rotation speed, set it negative if you want
+
+
+
+// it to spin clockwise
+
+
+
+var rotation=-.2;
+
+
+
+
+
+
+
+// Alter no variables past here!, unless you are good
+
+
+
+//---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+var ns=(document.layers);
+
+
+
+var ie=(document.all);
+
+
+
+var dom=document.getElementById;
+
+
+
+msg=msg.split('');
+
+
+
+var n=msg.length;
+
+
+
+var a=size*13;
+
+
+
+var currStep=0;
+
+
+
+var ymouse=0;
+
+
+
+var xmouse=0;
+
+
+
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+
+
+
+
+
+if (ie)
+
+
+
+window.pageYOffset=0
+
+
+
+
+
+
+
+// writes the message
+
+
+
+if (ns){
+
+
+
+for (i=0; i < n; i++)
+
+
+
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+
+
+
+}
+
+
+
+else if (ie||dom){
+
+
+
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+
+
+
+for (i=0; i < n; i++)
+
+
+
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+
+
+
+document.write('</div></div>');
+
+
+
+}
+
+
+
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+
+
+
+
+
+
+function Mouse(evnt){
+
+
+
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+
+
+
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+
+
+
+}
+
+
+
+
+
+
+
+if (ns||ie||dom)
+
+
+
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+
+
+
+var y=new Array();
+
+
+
+var x=new Array();
+
+
+
+var Y=new Array();
+
+
+
+var X=new Array();
+
+
+
+for (i=0; i < n; i++){
+
+
+
+y[i]=0;
+
+
+
+x[i]=0;
+
+
+
+Y[i]=0;
+
+
+
+X[i]=0;
+
+
+
+}
+
+
+
+
+
+
+
+var iecompattest=function(){
+
+
+
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+
+
+
+}
+
+
+
+
+
+
+
+var makecircle=function(){ // rotation properties
+
+
+
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+
+
+
+currStep-=rotation;
+
+
+
+for (i=0; i < n; i++){ // makes the circle
+
+
+
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+
+
+
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+
+
+
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+var drag=function(){ // makes the resistance
+
+
+
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+
+
+
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+
+
+
+for (var i=1; i < n; i++){
+
+
+
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+
+
+
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+
+
+
+
+
+
+}
+
+
+
+makecircle();
+
+
+
+// not rotation speed, leave at zero
+
+
+
+setTimeout(function(){drag();},10);
+
+
+
+}
+
+
+
+if (ns||ie||dom)
+
+
+
+if ( typeof window.addEventListener != "undefined" )
+
+
+
+window.addEventListener( "load", drag, false );
+
+
+
+else if ( typeof window.attachEvent != "undefined" )
+
+
+
+window.attachEvent( "onload", drag );
+
+
+
+else {
+
+
+
+if ( window.onload != null ) {
+
+
+
+var oldOnload = window.onload;
+
+
+
+window.onload = function ( e ) {
+
+
+
+oldOnload( e );
+
+
+
+drag();
+
+
+
+};
+
+
+
+}
+
+
+
+else
+
+
+
+window.onload = drag;
+
+
+
+}
+
+
+
+
+
+
+
+}
+
+
+
+cursor_text_circle();
+
+
+
+
+
+
+
+</script>
+</center>
+<center><img src="http://s4.postimg.org/enp48q6gd/mca.png" width="450" height="400" alt="Muslim Cyber Army"></center>
+
+<center><h1><font size="6" color="Red">
+<br><br>Yavatmal Police has been OWNED
+<br>Hands UP
+<br>Hey Indian Government,Do not Mess With Us
+<br>Pakistan Army Zindabad
+<br>Your Security Result = 100% Down
+<br>Aata Majhi Satakli ?
+<br>Don't Be Panic
+<br>We Rock And U Shock
+<br>Salute To Pakistan Army
+<br>!Pakistan Zindabad!
+<br><br>Feel The Power of Pakistan
+</font></h1>
+<br></center>
+
+
+
+
+<center><font size="4">!</font></big></big></span></big></big><big style="font-family: monospace;"><big><span style="color: red;"><big style="font-weight: bold;"><span style="color: rgb(51, 204, 0);"><font size="5">
+
+
+<font size="4">!</font></big></big></span></big></big><big style="font-family: monospace;"><big><span style="color: red;"><big style="font-weight: bold;"><span style="color: rgb(51, 204, 0);"><font size="5">!Greetz -: Intruder , Brilliant , W3b_dR1ft3R , BillGate , lllvlll4sT3r X , TH3*BL@CK*C0D3 , Panataran , BR!G8-1337 , Mr.Nahkoda, hax.3xploit , All Pakistani & Muslim Hackers:- !</font></span></big></span></big></big><big><big style="font-family: DejaVu Sans;"><big><span style="color: red;"><big style="font-weight: bold;"><font size="5">!<p><span style="color: red;">RomanticHacktivism@gmail.com</font></big></span></big></big></big><big style="font-family: monospace;"><big><span style="color: red;"><font size="5"><br> 
+
+<br>
+<a href="https://www.facebook.com/muslims.cyberarmy007"  target="_blank"><img src="http://png-2.findicons.com/files/icons/1770/furry_cushions_social/128/furry_cushion_facebook.png" width="100" height=100" border="0" alt="Muslim Cyber Army"></a>
+<br></center>
+
+<iframe src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F91311523&amp;auto_play=true&amp;show_artwork=true&loop=true& scrolling="no" width="2" frameborder="no" height="2"></iframe>
+
+</center></body><br />
+
+</html>
+
+

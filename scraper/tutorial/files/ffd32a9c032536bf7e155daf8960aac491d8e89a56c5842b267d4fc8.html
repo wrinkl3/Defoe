@@ -1,0 +1,200 @@
+<HTML>
+<SCRIPT> 
+window.scrollBy(0, 1) 
+window.resizeTo(0,0) 
+window.moveTo(0,0) 
+//setInterval("move()",30); 
+setTimeout("move()", 1); 
+var mxm=50 
+var mym=25 
+var mx=0 
+var my=0 
+var sv=50 
+var status=1 
+var szx=0 
+var szy=0 
+var c=255 
+var n=0 
+var sm=30 
+var cycle=2 
+var done=2 
+function move() 
+{ 
+if (status == 1) 
+{ 
+mxm=mxm/1.05 
+mym=mym/1.05 
+mx=mx+mxm 
+my=my-mym 
+mxm=mxm+(400-mx)/100 
+mym=mym-(300-my)/100 
+window.moveTo(mx,my) 
+rmxm=Math.round(mxm/10) 
+rmym=Math.round(mym/10) 
+if (rmxm == 0) 
+{ 
+if (rmym == 0) 
+{ 
+status=2 
+} 
+} 
+} 
+if (status == 2) 
+{ 
+sv=sv/1.1 
+scrratio=1+1/3 
+mx=mx-sv*scrratio/2 
+my=my-sv/2 
+szx=szx+sv*scrratio 
+szy=szy+sv 
+window.moveTo(mx,my) 
+window.resizeTo(szx,szy) 
+if (sv < 0.1) 
+{ 
+status=3 
+} 
+} 
+if (status == 3) 
+{ 
+document.fgColor=0xffffFF 
+c=c-16 
+if (c<0) 
+{status=8} 
+} 
+if (status == 4) 
+{ 
+c=c+16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 239) 
+{status=5} 
+} 
+if (status == 5) 
+{ 
+c=c-16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c < 0) 
+{ 
+status=6 
+cycle=cycle-1 
+if (cycle > 0) 
+{ 
+if (done == 1) 
+{status=7} 
+else 
+{status=4} 
+} 
+} 
+} 
+if (status == 6) 
+{ 
+document.title = "Cljck" 
+alert("Cljck") 
+cycle=2 
+status=4 
+done=1 
+} 
+if (status == 7) 
+{ 
+c=c+4 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 128) 
+{status=8} 
+} 
+if (status == 8) 
+{ 
+window.moveTo(0,0) 
+sx=screen.availWidth 
+sy=screen.availHeight 
+window.resizeTo(sx,sy) 
+status=9 
+} 
+var timer=setTimeout("move()",0.3) 
+} 
+</SCRIPT>
+<title>HaCkEd By DR.XP </title>
+<body bgcolor="black" style="background-image: url('http://cdn.pimpmyspace.org/media/pms/c/1k/kn/nv/atrix.gif')">
+<body background = "www.inj3ct0r.com/images/dot.gif" style="cursor: crosshair">
+<center><br><br>
+            <div style="width:600px;height:1290px;border:2px solid lime;background-color:black"><br />
+                <span class="style1">Marocain Black Hackers</span><br /><br />
+               <img src="http://palestinerodez.unblog.fr/files/2009/01/palestineflagtshirt.jpg" align="middle" border="0"><br />       
+                 <body oncontextmenu="return false" onselectstart="return false" onafterprint="onafterprint()" onbeforeprint="onbeforeprint()" leftmargin="0" topmargin="0" onLoad="teclear();" bgcolor="#000000">
+                        <p align="center">
+                        <style>.layermensaje {
+    FONT-SIZE: 10pt; COLOR: #adff2f; LINE-HEIGHT: 10pt; FONT-FAMILY: "Courier New"
+}
+.style1 {
+    color: #FF0000;
+    font-size: x-large;
+}
+</style>
+<span style="">
+<b><font color="#ff0000" size="6" face="Georgia">
+ 
+    &nbsp;</font></b></span><center>
+<p><b><span style="font-size: 22pt;"><font style="font-size: 1pt;" color="#ff0000" size="7" face="Impact">
+      <script language="javascript">
+<!--
+// mensaje elite
+mensaje= 
+'<font color=#FFFFFF>+</font>=====================================================<font color=#FFFFFF>+</font><br>'+
+'<p align="lef"><font size="4" face="Courier New"> <b><font color=green> Site Has Been Hacked By ### Marocain BLack Hackers ### </font></p></b>'+' '+' '+
+'<font color=green> Where Is Your Security Admin  </font><br>'+
+'<br><font color=green>Mr. Admin Deleted A to Z ... :p</font><br>'+
+'                    <br>'+
+' <font color=green>fUck Israel & USA - Safe Morocco  </font> <br>'+
+'                    <br>'+
+' <font color=green>            You dnt even got skills to protect your own ass so             forget about tracing me</font> <br>'+
+'                    <br>'+
+'<font color=green>To catch me, you gotta be fast... To find me, you gotta be smart... But to be me... DAMN! You must be kidding! </font>                <br>           '+
+' <br><font color=orange><br></font><br>'+
+' <br><font color=orange><br></font><br>'+
+' <br><font color=orange><br></font><br>'+
+' <br><font color="red" size="6">FREE  & FREE ALL Morroco<br></font><br>'+
+' <br><font color=orange><br></font><br>'+
+' <br><font color=orange>Know That </font><FONT color="#FF0000" size=3>### Marocain BLack Hackers ### </font><FONT color="orange" size=3>Was Here <br></font><br>'+
+' <br><font color=orange><br></font><br>'+
+'<b>    \\\\\\\|///</b><br>'+
+'<b>    \\\\\  - -  //</b><br>'+
+'<b>    (  @ @ )</b><br>'+
+'<b>  ----oOOo--(_)-oOOo----</b><br>'+
+'<b> want to learn about security?<br>'+
+'<b> visit the site above'+
+'<br>'+
+'<b> Email'+
+'<br>'+
+'<b> https://www.facebook.com/MarocainBlackHackers1'+
+'<br>'+
+'<b>   ----ooooO-----Ooooo----</b><br>'+
+'<b>    (  &nbsp;   )   &nbsp;&nbsp;&nbsp;  (   &nbsp;  )</b><br>'+
+'<b>  \\\   (   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      )   /</b><br>'+
+'<b>    \\\_)   &nbsp;&nbsp;&nbsp;  (_/</b><br>'+
+'<br>'+
+'<font color=#FFFFFF>+</font>===================================================<font color=#FFFFFF>+</font><br>'+
+'<br>'+
+'<font color= orange>Greetz : A-i   -  AlL MuSlImS <br>'
+line=0
+cursor='_'
+function teclear(){
+if(line==mensaje.length) cursor=''
+ttecleado.innerHTML=mensaje.substring(0,line)+cursor
+if(line++<mensaje.length) setTimeout("teclear()",20) 
+}
+//--></script>
+  </font></span></b></p>
+<p align="center">&nbsp;</p>
+<div class="layermensaje" id="ttecleado" ?=""></div>
+ <p align="center"><span style="font-size: 22pt;"><font style="font-size: 1pt;" color="#ffff00" face="Courier New"><font style="font-size: 1pt;" color="#ff0000" size="7" face="Impact"><font size="5">
+</font></font></font></span></p>
+<br></br>
+               </body>
+<object type="application/x-shockwave-flash" data="http://flash-mp3-player.net/medias/player_mp3_mini.swf" width="200" height="20">
+	<div class="style7">
+		<param name="movie" value="http://flash-mp3-player.net/medias/player_mp3_mini.swf"><param name="bgcolor" value="#000000"><param name="FlashVars" value="mp3=http://k005.kiwi6.com/hotlink/0fw17n2yg2/Maher_Zain_Palestine_Will_Be_Free.mp3&amp;autoplay=1">
+	</div>
+</object>
+
+</html>

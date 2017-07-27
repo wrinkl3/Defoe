@@ -1,0 +1,112 @@
+<html>
+<head>
+<SCRIPT language=JavaScript>
+ <!--Sembunyikan dari browser yang tidak mendukung Javascript
+ //awal code tulisan titlebar bergerak
+ var kiri = "[ "; //Karakter Penutup di kiri
+ var kanan = " ]"; //Karakter Penutup di Kanan
+ var pesan = "+--==[ HackeD BY  Cyber Ninja ]==--+"; //Tulisan yang akan Berjalan
+ var kecepatan = 100; //Kecepatan Tulisan [Makin Kecil, Makin Cepat
+ 
+ function th3sn0wbr4in() 
+ {
+ document.title=kiri+pesan+kanan;
+ pesan=pesan.substring(1,pesan.length)+pesan.charAt(0);
+ setTimeout("th3sn0wbr4in()",kecepatan);
+ }
+ th3sn0wbr4in();
+ //akhir code tulisan titlebar bergerak
+ // -->
+ </SCRIPT>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Audiowide);
+body {
+     margin: 0;
+     padding: 0;
+     font-size: 75%;
+     font-family: verdana, arial, san-serif;
+     color: #AAAAAA;
+     line-height: 1.5em;
+	   background: #000000 url(http://img43.imageshack.us/img43/4255/3gw.gif) top center repeat;
+         background-attachment:fixed; 
+
+}
+@font-face {
+	font-family: punk;
+	src: url('http://www.facecampus.in/fonts/punk2.ttf');
+}
+   </style>  
+<body>
+<center><img src="http://img708.imageshack.us/img708/9747/fcnd.png" /></center>
+
+
+<br><br><BR><center><SCRIPT language=JavaScript1.2> 
+ 
+/*
+Neon Lights Text
+By JavaScript Kit (http://javascriptkit.com)
+For this script, TOS, and 100s more DHTML scripts,
+Visit http://www.dynamicdrive.com
+*/
+ 
+var message=" INDIAN CYBER CREW " 
+var neonbasecolor="black"
+var neontextcolor="white"
+ 
+ 
+var flashspeed=100  //in milliseconds
+ 
+///No need to edit below this line/////
+ 
+var n=0
+if (document.all||document.getElementById){
+document.write('<b><font color="'+neonbasecolor+'" size="7" face="punk">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font></b>')
+}
+else
+document.write(message)
+ 
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : 
+document.getElementById("neonlight"+number)
+return crossobj
+}
+ 
+function neon(){
+ 
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+//eval("document.all.neonlight"+m).style.color=neonbasecolor
+crossref(m).style.color=neonbasecolor
+}
+ 
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+ 
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",1500)
+return
+}
+}
+ 
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+</SCRIPT></center>
+
+<br><br><br><br><br><center><font color=white size=6 face=punk><b>HACKED BY CYBER NINJA</b><br><br><b>aka<br><br>PFLASH PUNK</b><br><br><br>TOO LOW SECURITY</font> 
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<font color=#ffffff size=1 face=Tahoma><blink>Copyright © 2013 ID: z0n3s3c@fbi.al 
+</blink></font></center>
+</body>
+</html>

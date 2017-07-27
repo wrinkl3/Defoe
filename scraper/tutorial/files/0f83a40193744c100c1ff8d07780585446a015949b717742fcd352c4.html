@@ -1,0 +1,989 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Header1"><meta content="text/html; charset=utf-8" http-equiv="Content-Type" /><title>
+	?????? ?????? ????? ?? ??? ??????
+</title><meta name="keywords" content="Prince Salman Hospital,?????? ?????? ????? ?? ??? ??????,???? ????? ??????," /><link href="../css/scroll.css" rel="stylesheet" type="text/css" /><link href="../css/jscrollpane.css" media="all" rel="stylesheet" type="text/css" /><link href="../css/slider.css" rel="stylesheet" type="text/css" />
+    <!-- Google Analatics --->
+    <script type="text/javascript" language="javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-44048195-1', 'psh.med.sa');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analatics --->
+    <!-- navigation script -->
+    <script src="../scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="../scripts/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)  
+
+            $("ul.topnav li a").hover(function () { //When trigger is hovered...  
+
+                //Following events are applied to the subnav itself (moving subnav up and down)  
+                $(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click  
+
+                $(this).parent().hover(function () {
+                }, function () {
+                    $(this).parent().find("ul.subnav").slideUp('fast'); //When the mouse hovers out of the subnav, move it back up  
+                });
+
+                //Following events are applied to the trigger (Hover events for the trigger)  
+            }).hover(function () {
+                $(this).addClass("subhover"); //On hover over, add class "subhover"  
+            }, function () {  //On Hover Out  
+                $(this).removeClass("subhover"); //On hover out, remove class "subhover"  
+            });
+
+        });  
+    </script>
+    <!-- georgean date time script -->
+    <script type="text/javascript">
+
+        function GetDateTime() {
+
+            var CurrServerTime = new Date();
+
+
+            var serverMonthValue = CurrServerTime.getMonth() + 1;
+            var serverDayValue = CurrServerTime.getDate();
+            var serverYearValue = CurrServerTime.getFullYear();
+            var serverHoursValue = CurrServerTime.getHours();
+            var serverMinutesValue = CurrServerTime.getMinutes();
+            var serverSecondsValue = CurrServerTime.getSeconds();
+
+            if (serverSecondsValue < 10) {
+                serverSecondsValue = "0" + serverSecondsValue;
+            }
+
+            if (serverMinutesValue >= 60) {
+                serverMinutesValue -= 60;
+                serverHoursValue++;
+            }
+            if (serverHoursValue >= 24) {
+                serverHoursValue -= 24;
+                serverDayValue++;
+            }
+            CurrServerTime = new Date(Date.parse(serverMonthValue + '/' + serverDayValue + '/' + serverYearValue + ' ' + serverHoursValue + ':' + serverMinutesValue + ':' + serverSecondsValue));
+            document.getElementById('CurrServerTime').value = CurrServerTime.toString(); // UPDATE
+            var myDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            var DateVar = myDays[CurrServerTime.getDay()] + "," + "&nbsp";
+
+            if (CurrServerTime.getDate() < 10) DateVar += "0" + CurrServerTime.getDate() + "/"; else DateVar += CurrServerTime.getDate() + "/";
+            if (serverMonthValue < 10) DateVar += "0" + serverMonthValue + "/"; else DateVar += serverMonthValue + "/";
+            DateVar += CurrServerTime.getFullYear() + "&nbsp" + "|" + "&nbsp";
+            if (CurrServerTime.getHours() < 10) DateVar += "0" + CurrServerTime.getHours() + ":"; else DateVar += CurrServerTime.getHours() + ":";
+            if (CurrServerTime.getMinutes() < 10) DateVar += "0" + CurrServerTime.getMinutes(); else DateVar += CurrServerTime.getMinutes();
+            document.getElementById("NewsBarDiv").innerHTML = DateVar;
+
+            setTimeout("GetDateTime()", 1000); // second
+        }
+    </script>
+    <!-- hijri date script -->
+    <script src="../scripts/HijriCalender.js" type="text/javascript"></script>
+    <script src="../scripts/jquery-1.9.1.js" type="text/javascript"></script>
+    <!-- slider script -->
+    <script src="../scripts/loopedslider.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            // Option set as a global variable
+            //$.fn.loopedSlider.defaults.addPagination = true;
+
+            $('#loopedSlider').loopedSlider({
+                //autoStart: 3500,
+                hoverPause: false
+            });
+
+            $('#_loopedSlider').loopedSlider({
+                autoStart: 3500,
+                hoverPause: false
+            });
+
+        });
+    </script>
+    <!-- search box script -->
+    <script src="../scripts/forms.js" type="text/javascript"></script>
+    <!-- jquery conflict removing -->
+    <script type="text/javascript">
+        $.noConflict(true);
+    </script>
+    <!-- auto hight -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var h = document.getElementById("row-3").offsetHeight + 600;
+            document.getElementById("maincontainer").style.height = h + "px";
+            document.getElementById("container-shadow").style.height = h + "px";
+            document.getElementById("container").style.height = h + "px";
+
+        });
+           
+    </script>
+    <!------ LIGHTView --------------------------------------->
+    
+     <link id="ctl00_lnk_style_styles" href="../css/styles.css" rel="stylesheet" type="text/css" /><link id="ctl00_lnk_style_menu" href="../css/menu.css" rel="stylesheet" type="text/css" />
+      
+     
+
+    <script type="text/javascript" src="../lightview/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../lightview/js/swfobject.js"></script>
+    <script type="text/javascript" src="../lightview/js/excanvas/excanvas.js"></script>
+    <script type="text/javascript" src="../lightview/js/spinners/spinners.min.js"></script>
+    <script type="text/javascript" src="../lightview/js/lightview/lightview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../lightview/css/lightview/lightview.css" />
+    <!------ End LIGHTView --------------------------------------->
+<link href="../css/green.css" rel="stylesheet" type="text/css" /><link href="/WebResource.axd?d=QPZ90Ixh5Chyi08kBoFWjm_XuDVMxhc2-qQ9lWUlH_MksT6GGB_pcoF9Hc1kQxaQOJQ-K9hFnitlLZq8b22NsTJOu8KqKz56EcE286LqCl3TuucYoW4S5JlmZJRdg_StC3xXOA2&amp;t=634969090040000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=m97OXFpLHiPzutSpJJHcp5xgtW_t5ocqmeJ2Ajei0TgyV7BQfJ0sJZVZDw0T4KNa1SKon9-oDfpgmZnUfSiyuR9Fs9wlYoVX3a2Z9mxS84af7U9db9W02QVc2_xPXq2zHCEEJfVKxRPe_WO6xh889OI6mBY1&amp;t=634969090040000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=6Ez6g6ntJqL4idQAM30dutWuKIhVwXP5Cg9AGKnsZ7HT8hrVe5Gftibz7Xn_PDcnRc0ArEp43IRVxnd-8k0_uwdCECezDZTBMkg86XNQv4VlUHlhAeg5NdtnZC2I3Y2mHukLDQ2&amp;t=634969090040000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=ghMAAXzTgYrUeQcGxdcol_72oEazpr0T4N3kZrqBl9TYymqN-4r9OJnemGJOA6Yv266qwMVMTJT7M5QPlZZ6mkE6bXpCjLQpghLe0F0kuXZuCa6tATOfo5ut029lgE38QuoCvQ2&amp;t=634969090040000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=VLqd_JwV3IZD3uCmilnD_1PJ0wcCbqC2SuD5Uj20P-33_4KNJ4vwF9skeg9NAySqeAKp-K-zl8jinX8IoGQTXiSIKORMVPMZiHKoFk9Ipf5PIHiND0E1mqfh4525_b_I4txfgm9LybXt99ry9QDMci8RsoE1&amp;t=634969090040000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
+<body>
+    <form name="aspnetForm" method="post" action="Default.aspx" id="aspnetForm">
+<input type="hidden" name="ctl00_RadScriptManager1_TSM" id="ctl00_RadScriptManager1_TSM" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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NDcg2YVkAgIPDxYCHwIFD9in2YTZhdiy2YrYryAuLmRkAgEPZBYCAgEPZBYEAgEPPCsACQBkAgIPDxYCHwIFD9in2YTZhdiy2YrYryAuLmRkAgIPZBYCAgEPZBYEAgEPPCsACQBkAgIPDxYCHwIFD9in2YTZhdiy2YrYryAuLmRkAgMPZBYCAgEPZBYEAgEPPCsACQBkAgIPDxYCHwIFD9in2YTZhdiy2YrYryAuLmRkAgQPZBYCAgEPZBYEAgEPPCsACQBkAgIPDxYCHwIFD9in2YTZhdiy2YrYryAuLmRkAgcPDxYCHwMymwUAAQAAAP////8BAAAAAAAAAAwCAAAASE1vcmFzYWxhdHlMaWJyYXJ5LCBWZXJzaW9uPTEuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAUBAAAAKUFsZmFuYXIuRW1lcmdlbmN5LkJMTC5Db250ZW50TGlzdENyaXRlcmlhCQAAAB88TGFzdEl0ZW1zQ291bnQ+a19fQmFja2luZ0ZpZWxkHzxDb250ZW50TGlzdElkcz5rX19CYWNraW5nRmllbGQbPElzRnJvbURhdGU+a19fQmFja2luZ0ZpZWxkGTxJc1RvRGF0ZT5rX19CYWNraW5nRmllbGQjPEdldE5lc3RlZExpc3RJdGVtcz5rX19CYWNraW5nRmllbGQZPEZyb21EYXRlPmtfX0JhY2tpbmdGaWVsZBc8VG9EYXRlPmtfX0JhY2tpbmdGaWVsZBk8TGlzdFR5cGU+a19fQmFja2luZ0ZpZWxkHTxNYWluUGFnZVR5cGU+a19fQmFja2luZ0ZpZWxkAAcAAAAAAAQECAgBAQENDR9BbGZhbmFyLkdsb2JhbHMuRW51bXMrTGlzdFR5cGVzAgAAACNBbGZhbmFyLkdsb2JhbHMuRW51bXMrTWFpblBhZ2VUeXBlcwIAAAACAAAACgAAAAkDAAAAAAABDusx340H0YgO6zHfjQfRiAX8////H0FsZmFuYXIuR2xvYmFscy5FbnVtcytMaXN0VHlwZXMBAAAAB3ZhbHVlX18ACAIAAAAAAAAABfv///8jQWxmYW5hci5HbG9iYWxzLkVudW1zK01haW5QYWdlVHlwZXMBAAAAB3ZhbHVlX18ACAIAAAABAAAADwMAAAABAAAACAcA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" />
+
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl00_RadScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d3.5.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a7263e9c6-5962-41bc-b839-88b704bfcf0d%3aea597d4b%3bTelerik.Web.UI%2c+Version%3d2013.1.220.35%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3a43979e1a-2fe0-4f32-ae90-cced0bd7b824%3a16e4e7cd%3af7645509%3a24ee1bba%3ae330518b%3a1e771326%3a8e6f0d33%3a6a6d718d%3addbfcb67" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWFwLrlKP2DQLj/7ScBwK0k57yDAKP6b7zBQLVo6ydAQK3s/6/CALD5uPmAgLX7fSQDwKArJBnAoCslEcCgKyYqwICgKy8KgKArKAGAo3j/BgC9c/N5g0C2Z3S+ggC9Zr66AgCgrzN6gICv5aLhgwCx7q6+AEC6+il5AQCx++N9gQCsMm69A5HZ+lUDfKRs9Aj1oA7mdcnzhYxGw==" />
+    <div style="display: none">
+        <script type="text/javascript">
+            function WaterMark(txt, evt) {
+                var defaultText = document.getElementById('ctl00_txt_SearchWord').title;
+                //alert(defaultText);
+                if (txt.value.length == 0 && evt.type == "blur") {
+                    txt.style.color = "gray";
+                    txt.value = defaultText;
+                }
+                if (txt.value == defaultText && evt.type == "focus") {
+                    txt.style.color = "black";
+                    txt.value = "";
+                }
+            }
+        </script>
+        
+    </div>
+    <div id="ctl00_ui_UpdateProgress1" style="display:none;">
+	
+            <div id="FullScreenBlur" class="FullScreenBlur">
+                &nbsp;</div>
+            <div id="FullScreenProgress" class="FullScreenProgress">
+                <img alt='' src='../images/loading.gif' style='vertical-align: middle;' />
+                Loading ....
+            </div>
+        
+</div>
+    
+    
+    <div id="maincontainer">
+        <div id="container-shadow">
+            <div id="container">
+                <div class="container-margin">
+                    <div class="header-container">
+                        <div class="row-0">
+                            <div class="shortcuts">
+                                <div class="login">
+                                    <div class="login-text">
+                                        <a href="Login.aspx?refurl=/Pages/Default.aspx" id="ctl00_lnk_login">????? ??????</a> 
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="shortcuts_sep">
+                                    &nbsp;</div>
+                                <div class="themes">
+                                    <table width="100%" cellpadding="0" cellspacing="2">
+                                        <tr>
+                                            <td align="center" valign="middle">
+                                                <input type="image" name="ctl00$btn_theme_green" id="ctl00_btn_theme_green" src="../images/green_theme.jpg" border="0" />
+                                            </td>
+                                            <td align="center" valign="middle">
+                                                <input type="image" name="ctl00$btn_theme_red" id="ctl00_btn_theme_red" src="../images/red_theme.jpg" border="0" />
+                                            </td>
+                                            <td align="center" valign="middle">
+                                                <input type="image" name="ctl00$btn_theme_blue" id="ctl00_btn_theme_blue" src="../images/blue_theme.jpg" border="0" />
+                                            </td>
+                                            <td align="center" valign="middle">
+                                                <input type="image" name="ctl00$btn_theme_black" id="ctl00_btn_theme_black" src="../images/grey_theme.jpg" border="0" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="shortcuts_sep">
+                                    &nbsp;</div>
+                                <div class="social">
+                                    <table width="100%" cellpadding="0" cellspacing="4">
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    <img src="../images/rss.jpg" /></a>
+                                            </td>
+                                            <td>
+                                                <a href="http://www.youtube.com/user/PrinceSalmanHosp" target="_blank">
+                                                    <img src="../images/youtube.jpg" /></a>
+                                            </td>
+                                            <td>
+                                                <a href="https://twitter.com/pshwebsite" target="_blank">
+                                                    <img src="../images/twitter.jpg" /></a>
+                                            </td>
+                                            <td>
+                                                <a href="https://www.facebook.com/pshwebsite" target="_blank">
+                                                    <img src="../images/facebook.jpg" /></a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="date">
+                                <div class="hijri">
+                                    <script type="text/javascript">                                        document.write(writeIslamicDate());</script>
+                                </div>
+                                <div class="georgian">
+                                    <div id="CurrServerTime">
+                                    </div>
+                                    <div id="NewsBarDiv">
+                                    </div>
+                                    <script type="text/javascript">                                        GetDateTime();</script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-1">
+                            <div class="logo">
+                                <a href="Default.aspx">
+                                    <img src="../images/psh_logo.jpg" /></a>
+                            </div>
+                            <div class="search">
+                                <table width="100%" cellpadding="0" cellspacing="2" dir='ltr'>
+                                    <tr>
+                                        <td align="right" valign="middle">
+                                            <input type="submit" name="ctl00$btn_Search" value="" id="ctl00_btn_Search" class="search-button" />
+                                        </td>
+                                        <td style="width: 150px;" align="right" valign="middle">
+                                            <input name="ctl00$txt_SearchWord" type="text" value="???? ?????" maxlength="100" id="ctl00_txt_SearchWord" title="???? ?????" class="search-box" onblur="WaterMark(this, event);" onfocus="WaterMark(this, event);" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="language">
+                            <input type="image" name="ctl00$btnLang" id="ctl00_btnLang" src="../Images/enLang.png" border="0" />
+                        </div>
+                        <div class="row-2">
+                            <div class="nav">
+                                <ul class="topnav">
+                                    <li><a href="default.aspx">?????? ????????</a></li>
+                                    <li><a href="AboutHospital.aspx">?? ????????</a>
+                                        <ul class="subnav">
+                                            <li><a href="Minister.aspx">???? ????? ??????</a></li>
+                                            <li><a href="GeneralManager.aspx">???? ?????? ?????</a></li>
+                                            <li><a href="HospitalBrief.aspx">???? ?? ????????</a></li>
+                                            <li><a href="Mission.aspx">??????? ???????</a></li>
+                                            <li><a href="Goals.aspx">??????? ??????</a></li>
+                                            <li><a href="OrgChart.aspx">?????? ????????</a></li>
+                                            <li><a href="Awards.aspx">?????????? ????????</a></li>
+                                            <li><a href="Address.aspx">????? ????????</a></li>
+                                            <li><a href="AboutHospitalVideo.aspx">????? ??????</a></li>
+                                            <li><a href="ContactUs.aspx">???? ???</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="Departments.aspx?lItemGID=12f1f756-50a5-408a-a661-3947bc5a39d4">??????? ??????</a>
+                                        <ul class="subnav">
+                                            <li><a href="ContentItem.aspx?itemGID=D50F68C1-0FA2-4D8E-ABA0-852B97236D78">??????? ?????? </a></li>
+                                            <li><a href="ContentItem.aspx?itemGID=8FF56E87-5C09-494F-96E6-113A23E44877">??????? ????????</a></li>
+                                            <li><a href="ContentItem.aspx?itemGID=4EC3491A-117A-437C-BDFA-2EE57A329F0F">????? ???? ????????</a></li>
+                                            <li><a href="ContentItem.aspx?itemGID=852E3A04-B4ED-46AD-BBC9-10DD0912BD1F">?????? ????????</a></li>
+                                            <li><a href="ContentItem.aspx?itemGID=092B5074-4B8D-4016-92BE-6D8B809D5367">??????? ?????</a></li>
+                                            <li><a href="ContentItem.aspx?itemGID=137AE25E-494B-4DE3-96CE-C59A28ED7442">????? ??????</a></li>
+                                            <li><a href="ContentItem.aspx?itemGID=B73BA3C3-9C0E-4D28-9E01-463571FCCD08">????? ????? ??????</a></li>
+                                            <li><a href="ContentItem.aspx?itemGID=D3A0D5B1-1F6C-49E4-8D0D-4F58225A1AE8">????? ?????? ??????</a></li>
+                                            <li><a href="ContentItem.aspx?itemGID=F22F05DA-D3AA-486D-AEE3-AD0034DB89E7">????? ??????? ???????</a></li>
+                                            <li><a href="Departments.aspx?lItemGID=12f1f756-50a5-408a-a661-3947bc5a39d4">?????? ...</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="Healthy.aspx?lItemGID=7708f63d-272d-4dfe-b88d-dc50698c9945">??????? ??????</a>
+                                        <ul class="subnav">
+                                            <li><a href="PatientRights.aspx">???? ??????</a></li>
+                                            <li><a href="FirstAids.aspx">????????? ???????</a></li>
+                                            <li><a href="HealthyCampaigns.aspx">????? ???????</a></li>
+                                            <li><a href="HealthyWorldDays.aspx">?????? ?????? ????????</a></li>
+                                            <li><a href="HealthyResident.aspx">??? ?????? ???????</a></li>
+                                            <li><a href="HealthyContent.aspx">??????? ????????</a></li>
+                                            <li><a href="MarriageCheckup.aspx">????? ??? ??????</a></li>
+                                            <li><a href="UsefulInfo.aspx">??????? ?????</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="Consultations.aspx">??????????</a>
+                                        <ul class="subnav">
+                                            <li><a href="Consultations.aspx">?????????? ??????</a></li>
+                                            <li><a href="ConsultationEdit.aspx">???????? ?????</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="News.aspx?lItemGID=bab07cde-5a9b-4b6e-99bc-c2bdcbad6c4a">???????</a></li>
+                                    <li><a href="Media.aspx">?????? ????????</a>
+                                        <ul class="subnav">
+                                            <li><a href="News.aspx?lItemGID=bab07cde-5a9b-4b6e-99bc-c2bdcbad6c4a">????? ????????</a></li>
+                                            <li><a href="Ads.aspx?lItemGID=BEF8ABEB-D549-4BC9-989D-42682DE0F97D">??????? ????????</a></li>
+                                            <li><a href="PhotoGallery.aspx">???? ?????</a></li>
+                                            <li><a href="Videos.aspx">???? ???????</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row-3">
+                        
+    <div class="right-pan">
+        <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    
+
+<div class='title1'>
+  ????? ????????
+</div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="content">
+                        <div style="text-align: justify;"><span style="font-size: 12px; font-family: Verdana;"><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; ??&nbsp;<strong>?????? ?????? ????? ?? ??? ??????</strong>&nbsp;?????? ????? ??????? ???? ????? ?????? ??? ??????? ????? ???? ??? ????? ??????? ?????? ????? ?????????? ?????? ????? ??????? ???????? ?? ???????? ???? ???????? ???????? ??????? ?????? ????? ????? ?????? ????????? ? ??????? ?????? ?? ??????? ??????? ?????? ???????? ????????? ??????? ????????? ????? .&nbsp;</span><span style="font-size: 12px; text-align: left;">??? ??????? ?????? ????????? ?? ????? ?????? ?????? ??????? ?????? ??????? ???????? ??????? ?? ???? ????? ????? ? ?????? ????? ? ??????? ???? ??? ????? ?????&nbsp;</span></span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+
+<div class='title1'>
+  ???? ??????????
+</div>
+
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <br />
+                    
+<link href="../themes/8/js-image-slider.css" rel="stylesheet" type="text/css" />
+     <link href="../themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="../themes/1/js-image-slider.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        imageSlider.thumbnailPreview(function (thumbIndex) { return "<img src='../images/thumb" + (thumbIndex + 1) + ".jpg' style='width:70px;height:44px;' />"; });
+    </script>
+
+    
+    <div id="sliderFrame">
+        <div id="slider">
+             <a href='ContentItem.aspx?itemGID=d4d7cea9-967f-4877-ab74-523e6de5045a'><img src='../Images/Main_Page/0_06032014190347.asp' alt='' /></a><a href='ContentItem.aspx?itemGID=0a477c2d-00c5-49ec-833e-4cb1be32b051'><img src='../Images/Main_Page/0_06032014190332.jpg' alt='teste1' /></a><a href='ContentItem.aspx?itemGID=a6cc8eb6-64fa-4eca-9406-9724e19b4588'><img src='../Images/Main_Page/0_06032014190336.php' alt='' /></a><a href='????? ?/ ??????? ???? ???? ???? ??????? ?????? ??????'><img src='../Images/Main_Page/48_06022014140231.png' alt='????? ?/ ??????? ???? ???? ???? ??????? ?????? ??????' /></a><a href='ContentItem.aspx?itemGID=61f60064-676f-4e7d-b316-ce1b00875839'><img src='../Images/Main_Page/48_06022014140223.png' alt='' /></a><a href='??? ????? ??????? ??????? ????????? ???????? ???? ???? ?????? ????? ?????????'><img src='../Images/Main_Page/48_06022014140253.png' alt='??? ????? ??????? ??????? ????????? ???????? ???? ???? ?????? ????? ?????????' /></a><a href='ContentItem.aspx?itemGID=dc879871-c900-4f4a-b611-3a1b2462715e'><img src='../Images/Main_Page/48_24122013131221.jpg' alt='?????? ?????? ????? ?? ????????? ????? ?????? ??????? ???????' /></a><a href='ContentItem.aspx?itemGID=23930de1-8f0c-4382-97ef-eb8c0ef3cea3'><img src='../Images/Main_Page/48_05122013131238.png' alt='???? ??? ????? ????? ???? ?? ???? ?? "???? ???"!' /></a><a href='ContentItem.aspx?itemGID=21617ba0-e36f-41a6-a8e9-60d48d7fab28'><img src='../Images/Main_Page/48_03122013111240.png' alt='?????????  ?????? ?????? ????? ???????? ??????? ?????? ????????' /></a><a href='ContentItem.aspx?itemGID=33f325aa-a504-4414-b6c8-1d3c6bc1090e'><img src='../Images/Main_Page/48_26112013121149.jpg' alt='???" ???? ??? "????? ???????" ??????? ?????? ????? ???????' /></a>
+        </div>
+    </div>
+
+                    <br />
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+
+<div class='title1'>
+  ???? ???????? 
+</div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="ctl00_ContentPlaceHolder1_ContentListTabs1_up09">
+	
+    
+<div id="ctl00_ContentPlaceHolder1_ContentListTabs1_tabs" class="RadTabStrip RadTabStrip_Silk RadTabStripTop_Silk RadTabStrip_rtl RadTabStrip_Silk_rtl RadTabStripTop_Silk_rtl" dir="rtl"><b><font color="White">
+		<!-- 2013.1.220.35 --><div class="rtsLevel rtsLevel1">
+			<ul class="rtsUL"><li class="rtsLI rtsFirst"><a class="rtsLink rtsSelected" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">??????????</span></span></span></a></li><li class="rtsLI"><a class="rtsLink rtsAfter" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">?????????</span></span></span></a></li><li class="rtsLI"><a class="rtsLink" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">?????????</span></span></span></a></li><li class="rtsLI"><a class="rtsLink" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">???????</span></span></span></a></li><li class="rtsLI rtsLast"><a class="rtsLink" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">?????????</span></span></span></a></li></ul>
+		</div><input id="ctl00_ContentPlaceHolder1_ContentListTabs1_tabs_ClientState" name="ctl00_ContentPlaceHolder1_ContentListTabs1_tabs_ClientState" type="hidden" />
+	</font></b></div>
+<div id="ctl00_ContentPlaceHolder1_ContentListTabs1_RadMultiPage1" class="innerMultiPage">
+		<div id="ctl00_ContentPlaceHolder1_ContentListTabs1_PageView1">
+			
+    
+<table width="100%">
+    <tr>
+        <td>
+        
+        <div class="div_border">
+            <table id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab1_dList_Items" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td bgcolor="White">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <div class="item-title">
+                                    &nbsp;&nbsp;<a id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab1_dList_Items_ctl00_lnk_item" href="ContentItem.aspx?itemGID=4f4ed024-915c-4bba-bbfe-86ed1ef1e7d7">????? ?? ??? ?????? ??? ?????? ??? ??????</a>
+                                </div>
+                            </td>
+                            <td style="width: 150px">
+                                <div class="item-date">
+                                    13 ????? 1434 10:34 ?
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+				</tr><tr>
+					<td bgcolor="#EEEEEE">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <div class="item-title">
+                                    &nbsp;&nbsp;<a id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab1_dList_Items_ctl01_lnk_item" href="ContentItem.aspx?itemGID=320404e8-863c-4487-93bc-91e0f330cfdc">?? ??? ???????? ?????? ??????? ???? ????? ?? ???????</a>
+                                </div>
+                            </td>
+                            <td style="width: 150px">
+                                <div class="item-date">
+                                    13 ????? 1434 6:58 ?
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+				</tr><tr>
+					<td bgcolor="White">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <div class="item-title">
+                                    &nbsp;&nbsp;<a id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab1_dList_Items_ctl02_lnk_item" href="ContentItem.aspx?itemGID=30c42939-c1d4-40dd-ad5f-03169b0cdab0">????? ??? ?????? ?? ?????? ?????? ?? ?????? ?? ??????</a>
+                                </div>
+                            </td>
+                            <td style="width: 150px">
+                                <div class="item-date">
+                                    13 ????? 1434 6:57 ?
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+				</tr><tr>
+					<td bgcolor="#EEEEEE">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <div class="item-title">
+                                    &nbsp;&nbsp;<a id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab1_dList_Items_ctl03_lnk_item" href="ContentItem.aspx?itemGID=1ab39eec-5579-4a98-81eb-0231e399a36b">????? ??? ?????? ?? ?????? ?????? ?? ?????? ?? ??????</a>
+                                </div>
+                            </td>
+                            <td style="width: 150px">
+                                <div class="item-date">
+                                    13 ????? 1434 6:56 ?
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+				</tr><tr>
+					<td bgcolor="White">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <div class="item-title">
+                                    &nbsp;&nbsp;<a id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab1_dList_Items_ctl04_lnk_item" href="ContentItem.aspx?itemGID=26d177da-2431-458e-a455-67e4ad724279">???? ?? ?? ?????? ???? ????? ????? ????? ?? ?????</a>
+                                </div>
+                            </td>
+                            <td style="width: 150px">
+                                <div class="item-date">
+                                    13 ????? 1434 6:55 ?
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+				</tr><tr>
+					<td bgcolor="#EEEEEE">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <div class="item-title">
+                                    &nbsp;&nbsp;<a id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab1_dList_Items_ctl05_lnk_item" href="ContentItem.aspx?itemGID=e7fde6ac-3237-4aeb-b46c-5ef2bfd2c01a">?? ???? ???? ???? ???? ?????????? ??? ???????????</a>
+                                </div>
+                            </td>
+                            <td style="width: 150px">
+                                <div class="item-date">
+                                    13 ????? 1434 6:54 ?
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+				</tr><tr>
+					<td bgcolor="White">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <div class="item-title">
+                                    &nbsp;&nbsp;<a id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab1_dList_Items_ctl06_lnk_item" href="ContentItem.aspx?itemGID=6657dea7-a8f0-4a21-96fa-ee114ca05b09">????? ?? ??? ?? ???? ?????? ?? ???????</a>
+                                </div>
+                            </td>
+                            <td style="width: 150px">
+                                <div class="item-date">
+                                    13 ????? 1434 6:51 ?
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+				</tr><tr>
+					<td bgcolor="#EEEEEE">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <div class="item-title">
+                                    &nbsp;&nbsp;<a id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab1_dList_Items_ctl07_lnk_item" href="ContentItem.aspx?itemGID=dd4f69ab-7d99-46a2-8c12-f91bab08cd02">???? ???? ????? ???? ?? ????? ??? 4 ?????.. ?? ????????</a>
+                                </div>
+                            </td>
+                            <td style="width: 150px">
+                                <div class="item-date">
+                                    13 ????? 1434 6:47 ?
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+				</tr>
+			</table></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="row1" align='Left'>
+            <div class="div_border">
+                <input type="submit" name="ctl00$ContentPlaceHolder1$ContentListTabs1$ContentListTab1$btn_More" value="?????? .." id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab1_btn_More" class="button" />
+            </div>
+        </td>
+    </tr>
+</table>
+
+    
+		</div><div id="ctl00_ContentPlaceHolder1_ContentListTabs1_PageView2" class="rmpHiddenView">
+			
+    
+<table width="100%">
+    <tr>
+        <td>
+        
+        <div class="div_border">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="row1" align='Left'>
+            <div class="div_border">
+                <input type="submit" name="ctl00$ContentPlaceHolder1$ContentListTabs1$ContentListTab2$btn_More" value="?????? .." id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab2_btn_More" class="button" />
+            </div>
+        </td>
+    </tr>
+</table>
+
+    
+		</div><div id="ctl00_ContentPlaceHolder1_ContentListTabs1_PageView3" class="rmpHiddenView">
+			
+    
+<table width="100%">
+    <tr>
+        <td>
+        
+        <div class="div_border">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="row1" align='Left'>
+            <div class="div_border">
+                <input type="submit" name="ctl00$ContentPlaceHolder1$ContentListTabs1$ContentListTab3$btn_More" value="?????? .." id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab3_btn_More" class="button" />
+            </div>
+        </td>
+    </tr>
+</table>
+
+    
+		</div><div id="ctl00_ContentPlaceHolder1_ContentListTabs1_PageView4" class="rmpHiddenView">
+			
+    
+<table width="100%">
+    <tr>
+        <td>
+        
+        <div class="div_border">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="row1" align='Left'>
+            <div class="div_border">
+                <input type="submit" name="ctl00$ContentPlaceHolder1$ContentListTabs1$ContentListTab4$btn_More" value="?????? .." id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab4_btn_More" class="button" />
+            </div>
+        </td>
+    </tr>
+</table>
+
+    
+		</div><div id="ctl00_ContentPlaceHolder1_ContentListTabs1_PageView5" class="rmpHiddenView">
+			
+    
+<table width="100%">
+    <tr>
+        <td>
+        
+        <div class="div_border">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="row1" align='Left'>
+            <div class="div_border">
+                <input type="submit" name="ctl00$ContentPlaceHolder1$ContentListTabs1$ContentListTab5$btn_More" value="?????? .." id="ctl00_ContentPlaceHolder1_ContentListTabs1_ContentListTab5_btn_More" class="button" />
+            </div>
+        </td>
+    </tr>
+</table>
+
+    
+		</div><input id="ctl00_ContentPlaceHolder1_ContentListTabs1_RadMultiPage1_ClientState" name="ctl00_ContentPlaceHolder1_ContentListTabs1_RadMultiPage1_ClientState" type="hidden" />
+	</div>
+
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+
+<div class='title1'>
+  ???? ?????? ??????? ??????
+</div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+<div class="content">
+    <div id="ca-container" class="ca-container">
+        <div class="ca-wrapper">
+           <div class='ca-item ca-item-0'><div class='ca-item-main'><div class='ca-icon'><a href='ContentItem.aspx?itemGID=7feba96b-3fda-42ec-aaeb-834dfb7cd0d0'><img width='140' height='130' src='../Images/Main_Page/0_31072013000713.jpg' /></a></div><a href='ContentItem.aspx?itemGID=7feba96b-3fda-42ec-aaeb-834dfb7cd0d0'><h3>????? ????????? ???????</h3><a><a class='ca-button' href='ContentItem.aspx?itemGID=7feba96b-3fda-42ec-aaeb-834dfb7cd0d0'>?????? ...</a></div></div><div class='ca-item ca-item-1'><div class='ca-item-main'><div class='ca-icon'><a href='ContentItem.aspx?itemGID=e351d755-9a94-47ff-8a6f-de7ac7d9299e'><img width='140' height='130' src='../Images/Main_Page/0_31072013000740.jpg' /></a></div><a href='ContentItem.aspx?itemGID=e351d755-9a94-47ff-8a6f-de7ac7d9299e'><h3>??????? ????????</h3><a><a class='ca-button' href='ContentItem.aspx?itemGID=e351d755-9a94-47ff-8a6f-de7ac7d9299e'>?????? ...</a></div></div><div class='ca-item ca-item-2'><div class='ca-item-main'><div class='ca-icon'><a href='ContentItem.aspx?itemGID=2c6bfe0d-cff9-4b52-aa2a-b7ee261e2f11'><img width='140' height='130' src='../Images/Main_Page/0_31072013010722.jpg' /></a></div><a href='ContentItem.aspx?itemGID=2c6bfe0d-cff9-4b52-aa2a-b7ee261e2f11'><h3>????? ????? ???????</h3><a><a class='ca-button' href='ContentItem.aspx?itemGID=2c6bfe0d-cff9-4b52-aa2a-b7ee261e2f11'>?????? ...</a></div></div><div class='ca-item ca-item-3'><div class='ca-item-main'><div class='ca-icon'><a href='ContentItem.aspx?itemGID=76f0766c-8391-4d60-b78b-52107722f08d'><img width='140' height='130' src='../Images/Main_Page/0_31072013000720.jpeg' /></a></div><a href='ContentItem.aspx?itemGID=76f0766c-8391-4d60-b78b-52107722f08d'><h3>????? ????? ??? ??????</h3><a><a class='ca-button' href='ContentItem.aspx?itemGID=76f0766c-8391-4d60-b78b-52107722f08d'>?????? ...</a></div></div>
+        </div>
+    </div>
+</div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="left-pan">
+        <div class="block1 cell-padding">
+            <div class="div_border">
+            <a href="ConfDefault.aspx">
+            
+                <img width="260px" height="150px" src='../images/confregister.png' /></a></div></div>
+      <div class="block1 cell-padding">
+        
+<div class="usefulinfo-container">
+    <table width="100%">
+        <tr align="center">
+            <td>
+               <a href="../Pages/UsefulInfo.aspx"> <img src='../images/info4you.png' /> </a>
+            </td>
+            
+        </tr>
+        <tr align="center">
+        <td>
+        <div class="item-title a">
+                <a href="ContentItem.aspx?itemGID=02055bd3-5dca-43ca-b405-15d57bf11dcb" id="ctl00_ContentPlaceHolder1_UsefulInformation1_lnk_info" title="???? ??????? ??????? ??????????? ???????? ??? ?????? ???? ??? ???? ?????? ?????? ???? ????? ??? ??? ???????, ????? ??????? ???????? ?? ??? ????? ?? ?? ?????? ???? ????? ??? ???? ????? ????? ????? ???? ??????? ???? ???? ????? ???? ???? 3 ????? ????? ??? ?????? ???????? ??? ????? ????? ??? ??????">???????? ??? ?????? ???? ????? ???? ??????</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+        </div>
+      
+        <div class="block1 cell-padding">
+            <a href="Documents.aspx">
+                <img src='../images/forms.jpg' /></a></div>
+                
+        <div class="block1 cell-padding">
+            <div id="ctl00_ContentPlaceHolder1_Weather1_up01">
+	
+<div class="weather-container">
+    <table width="100%">
+        <tr>
+            <td>
+                <select name="ctl00$ContentPlaceHolder1$Weather1$ddl_Cities" id="ctl00_ContentPlaceHolder1_Weather1_ddl_Cities" class="dropdown">
+		<option selected="selected" value="riyadh">Riyadh</option>
+		<option value="makkah">Mekkah</option>
+		<option value="jedda">Jedda</option>
+		<option value="madina">Madina</option>
+		<option value="dammam">Dammam</option>
+
+	</select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+                        
+                    <div class="weather-content">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center" valign="middle">
+                                <span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl0_dayLabel">?????</span></td>
+									</tr>
+                                
+                               
+                            <tr>
+										<td align="center" valign="middle" class="weather-icon">
+                            <img id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl0_forcastImage" src="http://l.yimg.com/a/i/us/we/52/34.gif" width="30" border="0" /></td></tr>
+                            <tr>
+										<td align="center" valign="middle">
+                            <span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl0_forcastLabel" class="wthrForcast">Mostly Sunny</span>
+                            </td></tr>
+                            <tr>
+										<td align="center" valign="middle">
+                            
+                                <span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl0_highLabel">34</span>° -
+                                <span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl0_lowLabel">21</span>°</td></tr>
+                                </table>
+                                </div>
+							<!--<div class="weather-sep">&nbsp;</div>-->
+                        </div>
+                    
+                    <div class="weather-content">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center" valign="middle">
+                                <span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl1_dayLabel">??????</span></td>
+									</tr>
+                                
+                               
+                            <tr>
+										<td align="center" valign="middle" class="weather-icon">
+                            <img id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl1_forcastImage" src="http://l.yimg.com/a/i/us/we/52/34.gif" width="30" border="0" /></td></tr>
+                            <tr>
+										<td align="center" valign="middle">
+                            <span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl1_forcastLabel" class="wthrForcast">Mostly Sunny</span>
+                            </td></tr>
+                            <tr>
+										<td align="center" valign="middle">
+                            
+                                <span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl1_highLabel">33</span>° -
+                                <span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl1_lowLabel">20</span>°</td></tr>
+                                </table>
+                                </div>
+							<!--<div class="weather-sep">&nbsp;</div>-->
+                        </div>
+                    
+                    <div class="weather-content">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center" valign="middle">
+                                <span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl2_dayLabel">?????</span></td>
+									</tr>
+                                
+                               
+                            <tr>
+										<td align="center" valign="middle" class="weather-icon">
+                            <img id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl2_forcastImage" src="http://l.yimg.com/a/i/us/we/52/31.gif" width="30" border="0" /></td></tr>
+                            <tr>
+										<td align="center" valign="middle">
+                            <span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl2_forcastLabel" class="wthrForcast">Clear</span>
+                            </td></tr>
+                            <tr>
+										<td align="center" valign="middle">
+                            
+                                <span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl2_highLabel">32</span>° -
+                                <span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ctrl2_lowLabel">20</span>°</td></tr>
+                                </table>
+                                </div>
+							<!--<div class="weather-sep">&nbsp;</div>-->
+                        </div>
+                    
+                    <input id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ClientState" name="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView_ClientState" type="hidden" /><span id="ctl00_ContentPlaceHolder1_Weather1_weatherRadListView" style="display:none;"></span>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+</div>
+
+        </div>
+        <div class="block1 cell-padding">
+            <a href="HealthyContent.aspx">
+                <img src="../images/articales.jpg" /></a></div>
+        <div class="block1 cell-padding">
+            <div id="ctl00_ContentPlaceHolder1_PrayerTimes1_up01">
+	
+<div class="div_prayer">
+    <table width="100%">
+        <tr>
+            <td colspan="2">
+                <select name="ctl00$ContentPlaceHolder1$PrayerTimes1$ddl_Cities" id="ctl00_ContentPlaceHolder1_PrayerTimes1_ddl_Cities" class="dropdown">
+		<option selected="selected" value="riyadh">Riyadh</option>
+		<option value="makkah">Mekkah</option>
+		<option value="jedda">Jedda</option>
+		<option value="madina">Madina</option>
+		<option value="dammam">Dammam</option>
+
+	</select>
+            </td>
+        </tr>
+       
+        <tr>
+            <td colspan="2">
+                <div>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="prayer_cell">
+                                <span id="ctl00_ContentPlaceHolder1_PrayerTimes1_label1">Fajr</span>
+                            </td>
+                            <td class="prayer_cell_time">
+                                <span id="ctl00_ContentPlaceHolder1_PrayerTimes1_lbl_Fajr">4:54 ? </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="prayer_cell">
+                                <span id="ctl00_ContentPlaceHolder1_PrayerTimes1_label2">Sunrise</span>
+                            </td>
+                            <td class="prayer_cell_time">
+                                <span id="ctl00_ContentPlaceHolder1_PrayerTimes1_lbl_Shouruq">
+6:11 ? </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="prayer_cell">
+                                <span id="ctl00_ContentPlaceHolder1_PrayerTimes1_label3">Zohr</span>
+                            </td>
+                            <td class="prayer_cell_time">
+                                <span id="ctl00_ContentPlaceHolder1_PrayerTimes1_lbl_Zohr">
+12:05 ? </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="prayer_cell">
+                                <span id="ctl00_ContentPlaceHolder1_PrayerTimes1_label4">Asr</span>
+                            </td>
+                            <td class="prayer_cell_time">
+                                <span id="ctl00_ContentPlaceHolder1_PrayerTimes1_lbl_Asr">
+3:27 ? </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="prayer_cell">
+                                <span id="ctl00_ContentPlaceHolder1_PrayerTimes1_label5">Maghreb</span>
+                            </td>
+                            <td class="prayer_cell_time">
+                                <span id="ctl00_ContentPlaceHolder1_PrayerTimes1_lbl_Maghreb">
+5:58 ? </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="prayer_cell">
+                                <span id="ctl00_ContentPlaceHolder1_PrayerTimes1_label6">Eishaa</span>
+                            </td>
+                            <td class="prayer_cell_time">
+                                <span id="ctl00_ContentPlaceHolder1_PrayerTimes1_lbl_Ishaa">
+7:28 ? </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</div>
+
+        </div>
+        <div class="block1 cell-padding">
+        <div class="div_border">
+            <a href="PhotoGallery.aspx">
+                <img height="130px" width="130px" src="../images/album.png" /></a></div></div>
+                
+        <div class="block1 cell-padding">
+        <div class="div_border">
+    <a href="Jobs.aspx">
+        <img src="../images/jobs.png" width="258px" height="130" /></a></div></div>
+        <div class="block cell-padding">
+        <div class="div_border">
+                <a href="http://www.tanseeq.med.sa">
+                    <img height="140px" width="120px" src="../images/Tanseeq.png" /></a>
+        </div></div>
+        <div class="block1 cell-padding">
+            <a href="#">
+                <img src="../images/complaints.jpg" /></a></div>
+        <div class="block cell-padding">
+            <div class="title-left">
+                ??????? ?????</div>
+            <div class="content">
+                <div class="poll_question">
+                    ?? ?? ?????? ?????? ???? ???????? ?</div>
+                <div class="poll_answers">
+                    <ul>
+                        <li>
+                            <input type="radio" value="Yes" name="answers" />?????</li>
+                        <li>
+                            <input type="radio" value="No" name="answers" />??? ???</li>
+                        <li>
+                            <input type="radio" value="No" name="answers" />???</li>
+                        <li>
+                            <input type="radio" value="I don't know" name="answers" />?????</li>
+                    </ul>
+                </div>
+                <div class="poll_buttons">
+                    <table width="100%" cellpadding="0" cellspacing="2">
+                        <tr>
+                            <td align='Left'>
+                                <input type="button" class="button" value='????' />
+                                    
+                            </td>
+                            <td align='Left' width="80px">
+                                <input type="button" class="button" value='????? ???????' />
+                                    
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    </div>
+                    <div class="row-4">
+                        <br />
+                        <table width="100%" cellpadding="0" cellspacing="2">
+                            <tr>
+                                <td align="right" valign="top" width="25%">
+                                    <div class="nFooterTitle">
+                                        ?? ????????</div>
+                                    <div class="footer-list">
+                                        <ul>
+                                            <li><a href="HospitalBrief.aspx">???? ?? ????????</a></li>
+                                            <li><a href="GeneralManager.aspx">???? ?????? ?????</a></li>
+                                            <li><a href="Mission.aspx">??????? ? ??????</a></li>
+                                            <li><a href="Awards.aspx">?????????? ? ???????</a></li>
+                                            <li><a href="Address.aspx">????? ????????</a></li>
+                                            <li><a href="ContactUs.aspx">???? ???</a></li>
+                                        </ul>
+                                    </div>
+                        

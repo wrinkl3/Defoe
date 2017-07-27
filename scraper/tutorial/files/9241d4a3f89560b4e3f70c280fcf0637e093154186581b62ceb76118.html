@@ -1,0 +1,312 @@
+<script language="JavaScript1.2"> 
+
+
+/* 
+Top-Down scrolling window Script- 
+© Dynamic Drive (www.dynamicdrive.com) 
+For full source code, installation instructions, 
+100's more free DHTML scripts, and Terms Of 
+Use, visit dynamicdrive.com 
+*/ 
+
+//change 1 to another integer to alter the scroll speed. Greater is faster 
+var speed=1 
+var currentpos=0,alt=1,curpos1=0,curpos2=-1 
+function initialize(){ 
+startit() 
+} 
+function scrollwindow(){ 
+if (document.all) 
+temp=document.body.scrollTop 
+else 
+temp=window.pageYOffset 
+if (alt==0) 
+alt=1 
+else 
+alt=0 
+if (alt==0) 
+curpos1=temp 
+else 
+curpos2=temp 
+if (curpos1!=curpos2){ 
+if (document.all) 
+currentpos=document.body.scrollTop+speed 
+else 
+currentpos=window.pageYOffset+speed 
+window.scroll(0,currentpos) 
+} 
+else{ 
+currentpos=0 
+window.scroll(0,currentpos) 
+} 
+} 
+function startit(){ 
+setInterval("scrollwindow()",30) 
+} 
+window.onload=initialize 
+</script>  
+
+ <STYLE TYPE="text/css">  
+<!--  
+BODY {background-image: URL(??????.gif);  
+background-position: center;  
+background-repeat: no-repeat;  
+background-attachment: fixed;}  
+-->  
+</STYLE> 
+
+
+<script language="JavaScript">
+//&#1604;&#1604;&#1605;&#1586;&#1610;&#1583; &#1605;&#1606; &#1575;&#1604;&#1580;&#1575;&#1601;&#1575; &#1587;&#1603;&#1585;&#1610;&#1576;&#1578; .. &#1606;&#1585;&#1580;&#1608; &#1586;&#1610;&#1575;&#1585;&#1577; &#1605;&#1608;&#1602;&#1593; &#1573;&#1602;&#1604;&#1575;&#1593; &#1587;&#1608;&#1601;&#1578; http://soft.vip600.com/
+if (********.all){
+Cols=10;
+Cl=24;
+Cs=100;
+Ts=10;
+Tc='#FF9933';
+Tc1='#FFCC00';
+MnS=5;
+MxS=10;
+I=Cs;
+Sp=new Array();S=new Array();Y=new Array();
+C=new Array();M=new Array();B=new Array();
+RC=new Array();E=new Array();Tcc=new Array(0,1);
+********.write("<div id='Container' style='position:absolute;top:0;left:-"+Cs+"'>");
+********.write("<div style='position:relative'>");
+for(i=0; i < Cols; i++){
+S[i]=I+=Cs;
+********.write("<div id='A' style='position:absolute;top:0;font-family:Arial;font-size:"
++Ts+"px;left:"+S[i]+";width:"+Ts+"px;height:0px;color:"+Tc+";visibility:hidden'></div>");
+}
+********.write("</div></div>");
+
+for(j=0; j < Cols; j++){
+RC[j]=1+Math.round(Math.random()*Cl);  
+Y[j]=0;
+Sp[j]=Math.round(MnS+Math.random()*MxS); 
+for(i=0; i < RC[j]; i++){
+ B[i]='';
+ C[i]=Math.round(Math.random()*1)+' ';
+ M[j]=B[0]+=C[i];
+ }
+}
+function Cycle(){
+Container.style.top=window.********.body.scrollTop;
+for (i=0; i < Cols; i++){
+var r = Math.floor(Math.random()*Tcc.length);
+E[i] = '<font color='+Tc1+'>'+Tcc[r]+'</font>';
+Y[i]+=Sp[i];
+
+if (Y[i] > window.********.body.clientHeight){
+ for(i2=0; i2 < Cols; i2++){
+ RC[i2]=1+Math.round(Math.random()*Cl);  
+ for(i3=0; i3 < RC[i2]; i3++){
+ B[i3]='';
+ C[i3]=Math.round(Math.random()*1)+' ';
+ C[Math.floor(Math.random()*i2)]=' '+' ';
+ M[i]=B[0]+=C[i3];
+ Y[i]=-Ts*M[i].length/1.5;
+ A[i].style.visibility='visible';
+ }
+ Sp[i]=Math.round(MnS+Math.random()*MxS);
+ }
+}
+A[i].style.top=Y[i];
+A[i].innerHTML=M[i]+' '+E[i]+' ';
+}
+setTimeout('Cycle()',20)
+}
+Cycle();
+}
+// -->
+</script>
+<head>
+
+	
+
+    <style>
+<!--
+BODY{
+scrollbar-face-color:#75EA00;
+scrollbar-arrow-color:Hex={00,00,00};
+scrollbar-track-color:#Hex={00,00,00};
+scrollbar-shadow-color:'';
+scrollbar-highlight-color:'';
+scrollbar-3dlight-color:'';
+scrollbar-darkshadow-Color:'';
+}
+-->
+</style>
+<meta http-*****="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="hakz@w.cn">
+<meta name="robots" content="index, follow" /><meta http-equiv="Content-Language" content="en" /></head>
+<style type="text/css">body{cursor:url("http://plugin.smileycentral.com/http%253A%252F%252Fplugin%252Esmileycentral%252Ecom%252Fassetserver%252Fcursor%252Ejhtml%253Fcur%253D1%2526i%253D8704a/image.gif") !important;}</style>
+<title>???????????? ?????????, ???????, ???, ????????  ???????</title>
+&nbsp;<script language="JavaScript1.2">
+
+/*
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+&#1604;&#1604;&#1605;&#1586;&#1610;&#1583; &#1605;&#1606; &#1575;&#1604;&#1580;&#1575;&#1601;&#1575; &#1587;&#1603;&#1585;&#1610;&#1576;&#1578; .. &#1606;&#1585;&#1580;&#1608; &#1586;&#1610;&#1575;&#1585;&#1577; &#1605;&#1608;&#1602;&#1593; &#1573;&#1602;&#1604;&#1575;&#1593; &#1587;&#1608;&#1601;&#1578; http://soft.vip600.com/
+*/
+
+var it=0
+function initialize(){
+mytext=typing.innerText
+var myheight=typing.offsetHeight
+typing.innerText=''
+********.all.typing.style.height=myheight
+********.all.typing.style.visibility="visible"
+typeit()
+}
+function typeit(){
+typing.insertAdjacentText("beforeEnd",mytext.charAt(it))
+if (it<mytext.length-1){
+it++
+setTimeout("typeit()",100)
+}
+else
+return
+}
+if (********.all)
+********.body.onload=initialize
+</script><p align="center">
+</a>"<img border="0" src="http://www.m5zn.com/uploads/2010/9/21/photo/gif/092110160933c23xfhjk4hb484qfzsy.gif">4</p>
+<p align="center"><font size="7" color="#FF0000">&#1575;&#1604;&#1587;&#1604;&#1575;&#1605; &#1593;&#1604;&#1610;&#1603;&#1605; &#1608;&#1585;&#1581;&#1605;&#1607; &#1575;&#1604;&#1604;&#1607; &#1608;&#1576;&#1585;&#1603;&#1575;&#1578;&#1607;<br>
+&nbsp;</font></p>
+<p align="center"><font size="7" color="#FF0000">====&gt;</font><font size="7" color="#00FF00"><b>&#1602;&#1575;&#1606;&#1608;&#1606; 
+&#1575;&#1604;&#1607;&#1603;&#1585; &#1604;&#1575; &#1610;&#1585;&#1581;&#1605;</b></font><font size="7" color="#FF0000">&lt;====</font></p>
+<p align="center"><font size="7">&#1604;</font></p>
+<p align="center"><font size="7" color="#FF0000">====&gt;</font><b><font color="#00FF00" size="7"><span id="result_box" class="short_text"><span title closure_uid_7ccjm7="69" se="&#1602;&#1575;&#1606;&#1608;&#1606; &#1575;&#1604;&#1607;&#1603;&#1585; &#1604;&#1575; &#1610;&#1585;&#1581;&#1605;" te="Law hacker does not have mercy">Law 
+hacker does not have mercy</span></span></font></b><font size="7" color="#FF0000">&lt;====</font></p>
+<p align="center">&nbsp;</p>
+<p align="center"><font size="7" color="#FF0000">:&#1575;&#1587;</font><font size="7" color="#FFFF00">&#1576;</font><font size="7" color="#FF0000">&#1575;&#1576; 
+&#1575;&#1604;&#1578;&#1607;&#1603;</font><font size="7" color="#FFFF00">&#1610;</font><font size="7" color="#FF0000">&#1585;</font></p>
+<p align="center"><font size="7" color="#FF0000">&#1578;&#1589;</font><font size="7" color="#FFFF00">&#1601;</font><font size="7" color="#FF0000">&#1610;&#1607; 
+&#1581;</font><font size="7" color="#FFFF00">&#1587;</font><font size="7" color="#FF0000">&#1575;&#1576;&#1575;</font><font size="7" color="#FFFF00">&#1578;</font><font size="7" color="#FF0000"> 
+&#1602;&#1583;&#1610;&#1605;</font><font size="7" color="#FFFF00">&#1607;</font></p>
+<p align="center"><font size="7" color="#FF0000">&#1607;&#1610;</font><font size="7" color="#FFFF00">&#1591;</font><font size="7" color="#FF0000"> 
+&#1575;&#1591;&#1601;</font><font size="7" color="#FFFF00">&#1575;</font><font size="7" color="#FF0000">&#1604;<br>
+&#1608;&#1575;</font><font size="7" color="#FFFF00">&#1587;</font><font size="7" color="#FF0000">&#1576;&#1575;&#1576; 
+&#1591;</font><font size="7" color="#FFFF00">&#1601;</font><font size="7" color="#FF0000">&#1608;&#1604;&#1610;</font><font size="7" color="#FFFF00">&#1607;</font><span id="result_box2"><font size="7"><font color="#FFFF00"><span title closure_uid_7ccjm7="77" se="&#1604;&#1593;&#1610;&#1608;&#1606; &#1580;&#1610;&#1608;&#1588; &#1575;&#1604;&#1607;&#1603;&#1585;" te="The eyes of the armies of hacker
+"><br style="BACKGROUND-COLOR: #fff">
+</span></font>
+<span style="color: #FFFF00; background-color: #000000" closure_uid_7ccjm7="78" se=":&#1608;&#1575;&#1587;&#1576;&#1575;&#1576; &#1575;&#1604;&#1578;&#1607;&#1603;&#1610;&#1585;" te=": The reasons for Althecer
+">: The reasons for Althecer<br>
+</span></font><font color="#FFFF00"><font size="7">
+<span closure_uid_7ccjm7="79" se="&#1578;&#1589;&#1601;&#1610;&#1607; &#1581;&#1587;&#1575;&#1576;&#1575;&#1578; &#1602;&#1583;&#1610;&#1605;&#1607;" te="Settle old scores
+" style="background-color: #000000">Settle old scores<br>
+</span>
+<span title closure_uid_7ccjm7="80" se="&#1607;&#1610;&#1591; &#1575;&#1591;&#1601;&#1575;&#1604;" te="Herewith children
+">Herewith children<br>
+</span></font>
+<span title closure_uid_7ccjm7="81" se="&#1608;&#1575;&#1587;&#1576;&#1575;&#1576; &#1591;&#1601;&#1608;&#1604;&#1610;&#1607;" te="And the reasons for childhood">
+<font size="7">And the reasons for childhood</font></span></font></span></p>
+<p align="center">
+</a><span lang="ar-sa">
+<font face="Kufi Extended Outline" size="7" color="#808080">&#1575;&#1604;&#1602;&#1575;&#1606;&#1608;&#1606; &#1604;&#1575; &#1610;&#1581;&#1605;&#1610; 
+&#1575;&#1604;&#1605;&#1594;&#1601;&#1604;&#1610;&#1606;</font></span></p>
+<p align="center">
+<span lang="ar-sa"><font face="Kufi Extended Outline" size="7" color="#0000FF">
+&#1608;&#1605;&#1606; &#1610;&#1578;&#1581;&#1583;&#1609; </font></span>
+<span lang="ar-eg"><font face="Kufi Extended Outline" size="7" color="#FF0000">
+??? ?? ????</font></span><span lang="ar-sa"><font face="Kufi Extended Outline" size="7" color="#0000FF"><br>
+&#1601;&#1604; &#1610;&#1593;&#1604;&#1605; &#1575;&#1606; &#1581;&#1610;&#1575;&#1578;&#1607; &#1601;&#1610; &#1582;&#1591;&#1585;</font></span></p>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+<a href="http://WwW.aLjYyoSh.coM">
+<font face="Old Antic Outline Shaded" size="7" color="#FF00FF"><span lang="ar-eg">
+????? ???</span></font></a><font face="Old Antic Outline Shaded" size="7" color="#FF00FF">
+<span lang="ar-eg">?? ????</span></font></p>
+<p align="center">
+<font face="Old English Text MT" size="7" color="#FF0000">
+++++++++++++++++++++++++++++++++++++</font></p>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+<span id="result_box3" class="short_text">
+<span style="color: #00FF00; background-color: #000000" closure_uid_7ccjm7="117" se="&#1607;&#1603;&#1585; &#1605;&#1606; &#1602;&#1576;&#1604;" te="Hacker by">
+<font size="6">Hacker by hacker la yrhm</font></span></span>h</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">
+<span style="line-height: 115%; font-family: Wingdings; font-weight: 700">
+<font color="#FF0000" size="7">N</font><font size="7" color="#FFFF00">N</font><font color="#FF0000" size="7">N</font><font size="7" color="#FFFF00">N</font><font color="#FF0000" size="7">N</font><font size="7" color="#FFFF00">N</font><font color="#FF0000" size="7">N</font><font size="7" color="#FFFF00">N</font><font color="#FF0000" size="7">N</font><font size="7" color="#FFFF00">N</font><font color="#FF0000" size="7">N</font><font size="7" color="#FFFF00">N</font><font color="#FF0000" size="7">N</font></span></p>
+<p align="center"><font size="7">
+<span style="font-family: Wingdings; font-weight: 700">&#1604;</span></font></a>&quot; <img border="0" src="http://www.m5zn.com/uploads/2010/9/21/photo/092110160933kw67omi74j15i.jpg">d</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">
+<img border="0" src="http://www.m5zn.com/uploads/2010/9/21/photo/0921101609330z10u8sxnjm.bmp"></a></p>
+<p align="center"><a href="mailto:Email:hAKAR_2009@HOTMAIL.COM"><b>
+<font face="Algerian" size="7">hakz@w.cn</font></b></a></p>
+<p align="center"><b>
+<span lang="en-us">
+<font face="Algerian" size="7" color="#FF0000">NEMA:</font></span><font face="Algerian" size="7" color="#FF0000"><span lang="ar-eg">&#1607;&#1603;&#1585; 
+&#1604;&#1575; &#1610;&#1585;&#1581;&#1605;</span></font></b></p>
+<p align="center"><span lang="ar-sa" dir="RTL"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span></font></span></p>
+<p align="center"><span lang="he"><font size="5" color="#00FF00">
+<font face="Guttman Hodes">
+<span style="font-weight: 700">&#1488;&#1504;&#1497; &#1490;&#1489;&#1512;</span></font><span style="font-family: Calibri,sans-serif; font-weight: 700"> </span>
+</font></span></p>
+<p align="center"><span lang="he"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">&#1492;&#1492;&#1492;&#1492;&#1492;&#1492;&#1492;&#1492;&#1492;&#1492;&#1492;&#1492;&#1492;&#1492;&#1492;&#1492;</span></font></span></p>
+<p align="center"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">this site was 
+hacked</span></font></p>
+<p align="center"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">by </span>
+</font></p>
+<p align="center"><span lang="ar-eg"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">&#1607;&#1603;&#1585; &#1604;&#1575; &#1610;&#1585;&#1581;&#1605;</span></font></span></p>
+<p align="center"><span lang="ar-eg"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">????? ??? </span>
+</font></span></p>
+<p align="center"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">EnGl3W</span></font></p>
+<p align="center"><span lang="ar-eg"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">&amp;</span></font></span></p>
+<p align="center"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">hell girl</span></font></p>
+<p align="center"><span lang="ar-eg"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">&amp;</span></font></span></p>
+<p align="center"><span lang="ar-eg"><font size="7" color="#00FF00">
+<span style="font-family: PT Simple Bold Ruled; font-weight: 700">??? ????
+</span></font></span></p>
+<p align="center">&nbsp;</p>
+<p align="center"><span lang="ar-eg"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">??? ?? ?? ???? 
+??? ????</span></font></span></p>
+<p align="center"><span lang="ar-eg"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">????? ??? ???? 
+?????? </span></font></span></p>
+<p align="center"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">massage to admin</span></font></p>
+<p align="center"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">FIX YOUR SITE
+</span></font></p>
+<p align="center"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">because your 
+security is ZERO</span></font></p>
+<p align="center"><font size="5" color="#00FF00">
+<span style="font-family: Calibri,sans-serif; font-weight: 700">with my love
+</span></font></p>
+<p align="center"><span lang="ar-eg"><font size="6" color="#00FF00">
+<span style="font-family: PT Bold Stars; font-weight: 700">??? ?? ????</span></font></span></p>
+<body bgcolor="#000000">
+
+	&nbsp;<embed name="video" pluginspage="http://www.real.com/player/"   
+src="http://www.up.t-kjool.com/upfiles/lCr65278.mp3"   
+hidden="true" type="audio/x-pn-realaudio-plugin" loop="true"   
+autostart="true" nojava="true" controls="ControlPanel,StatusBar"   
+maintainaspect="false" width="165" height="46"></span></font></p>
+
+    <DIV align=center><B><FONT size=5>( </FONT></B></DIV>

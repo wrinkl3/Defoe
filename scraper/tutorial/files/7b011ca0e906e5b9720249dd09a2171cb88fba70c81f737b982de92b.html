@@ -1,0 +1,608 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <SCRIPT> 
+window.scrollBy(0, 1) 
+window.resizeTo(0,0) 
+window.moveTo(0,0) 
+//setInterval("move()",30); 
+setTimeout("move()", 1); 
+var mxm=50 
+var mym=25 
+var mx=0 
+var my=0 
+var sv=50 
+var status=1 
+var szx=0 
+var szy=0 
+var c=255 
+var n=0 
+var sm=30 
+var cycle=2 
+var done=2 
+function move() 
+{ 
+if (status == 1) 
+{ 
+mxm=mxm/1.05 
+mym=mym/1.05 
+mx=mx+mxm 
+my=my-mym 
+mxm=mxm+(400-mx)/100 
+mym=mym-(300-my)/100 
+window.moveTo(mx,my) 
+rmxm=Math.round(mxm/10) 
+rmym=Math.round(mym/10) 
+if (rmxm == 0) 
+{ 
+if (rmym == 0) 
+{ 
+status=2 
+} 
+} 
+} 
+if (status == 2) 
+{ 
+sv=sv/1.1 
+scrratio=1+1/3 
+mx=mx-sv*scrratio/2 
+my=my-sv/2 
+szx=szx+sv*scrratio 
+szy=szy+sv 
+window.moveTo(mx,my) 
+window.resizeTo(szx,szy) 
+if (sv < 0.1) 
+{ 
+status=3 
+} 
+} 
+if (status == 3) 
+{ 
+document.fgColor=0xffffFF 
+c=c-16 
+if (c<0) 
+{status=8} 
+} 
+if (status == 4) 
+{ 
+c=c+16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 239) 
+{status=5} 
+} 
+if (status == 5) 
+{ 
+c=c-16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c < 0) 
+{ 
+status=6 
+cycle=cycle-1 
+if (cycle > 0) 
+{ 
+if (done == 1) 
+{status=7} 
+else 
+{status=4} 
+} 
+} 
+} 
+if (status == 6) 
+{ 
+document.title = "Cljck" 
+alert("Cljck") 
+cycle=2 
+status=4 
+done=1 
+} 
+if (status == 7) 
+{ 
+c=c+4 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 128) 
+{status=8} 
+} 
+if (status == 8) 
+{ 
+window.moveTo(0,0) 
+sx=screen.availWidth 
+sy=screen.availHeight 
+window.resizeTo(sx,sy) 
+status=9 
+} 
+var timer=setTimeout("move()",0.3) 
+} 
+</SCRIPT>
+
+  <script>
+if  ((document.getElementById) &amp;&amp; 
+window.addEventListener || window.attachEvent){
+
+(function(){
+//Configure here...
+var xCol = "#ff0000";
+var yCol = "#ffffff";
+var zCol = "#0000ff";
+var n = 6;   //number of dots per trail.
+var t = 40;  //setTimeout speed.
+var s = 0.2; //effect speed.
+//End.
+
+var r,h,w;
+var d = document;
+var my = 10;
+var mx = 10;
+var stp = 0;
+var evn = 360/3;
+var vx = new Array();
+var vy = new Array();
+var vz = new Array();
+var dy = new Array();
+var dx = new Array();
+
+var pix = "px";
+
+var strictmod = ((document.compatMode) &amp;&amp; 
+document.compatMode.indexOf("CSS") != -1);
+
+var domWw = (typeof window.innerWidth == "number");
+var domSy = (typeof window.pageYOffset == "number");
+var idx = d.getElementsByTagName('div').length;
+
+for (i = 0; i &lt; n; i++){
+var dims = (i+1)/2;
+d.write('&lt;div id="x'+(idx+i)+'" style="position:absolute;'
++'top:0px;left:0px;width:'+dims+'px;height:'+dims+'px;'
++'background-color:'+xCol+';font-size:'+dims+'px"&gt;&lt;\/div&gt;'
+
++'&lt;div id="y'+(idx+i)+'" style="position:absolute;top:0px;'
++'left:0px;width:'+dims+'px;height:'+dims+'px;'
++'background-color:'+yCol+';font-size:'+dims+'px"&gt;&lt;\/div&gt;'
+
++'&lt;div id="z'+(idx+i)+'" style="position:absolute;top:0px;'
++'left:0px;width:'+dims+'px;height:'+dims+'px;'
++'background-color:'+zCol+';font-size:'+dims+'px"&gt;&lt;\/div&gt;');
+}
+
+if (domWw) r = window;
+else{ 
+  if (d.documentElement &amp;&amp; 
+  typeof d.documentElement.clientWidth == "number" &amp;&amp; 
+  d.documentElement.clientWidth != 0)
+  r = d.documentElement;
+ else{ 
+  if (d.body &amp;&amp; 
+  typeof d.body.clientWidth == "number")
+  r = d.body;
+ }
+}
+
+function winsize(){
+var oh,sy,ow,sx,rh,rw;
+if (domWw){
+  if (d.documentElement &amp;&amp; d.defaultView &amp;&amp; 
+  typeof d.defaultView.scrollMaxY == "number"){
+  oh = d.documentElement.offsetHeight;
+  sy = d.defaultView.scrollMaxY;
+  ow = d.documentElement.offsetWidth;
+  sx = d.defaultView.scrollMaxX;
+  rh = oh-sy;
+  rw = ow-sx;
+ }
+ else{
+  rh = r.innerHeight;
+  rw = r.innerWidth;
+ }
+h = rh; 
+w = rw;
+}
+else{
+h = r.clientHeight; 
+w = r.clientWidth;
+}
+}
+
+function scrl(yx){
+var y,x;
+if (domSy){
+ y = r.pageYOffset;
+ x = r.pageXOffset;
+ }
+else{
+ y = r.scrollTop;
+ x = r.scrollLeft;
+ }
+return (yx == 0)?y:x;
+}
+
+function mouse(e){
+var msy = (domSy)?window.pageYOffset:0;
+if (!e) e = window.event;    
+ if (typeof e.pageY == 'number'){
+  my = e.pageY - msy + 16;
+  mx = e.pageX + 6;
+ }
+ else{
+  my = e.clientY - msy + 16;
+  mx = e.clientX + 6;
+ }
+if (my &gt; h-65) my = h-65;
+if (mx &gt; w-50) mx = w-50;
+}
+
+function assgn(){
+for (j = 0; j &lt; 3; j++){
+ dy[j] = my + 50 * Math.cos(stp+j*evn*Math.PI/180) * Math.sin((stp+j*25)/2) + scrl(0) + pix;
+ dx[j] = mx + 50 * Math.sin(stp+j*evn*Math.PI/180) * Math.sin((stp+j*25)/2) * Math.sin(stp/4) + pix;
+}
+stp+=s;
+
+for (i = 0; i &lt; n; i++){
+ if (i &lt; n-1){
+  vx[i].top = vx[i+1].top; vx[i].left = vx[i+1].left; 
+  vy[i].top = vy[i+1].top; vy[i].left = vy[i+1].left;
+  vz[i].top = vz[i+1].top; vz[i].left = vz[i+1].left;
+ } 
+ else{
+  vx[i].top = dy[0]; vx[i].left = dx[0];
+  vy[i].top = dy[1]; vy[i].left = dx[1];
+  vz[i].top = dy[2]; vz[i].left = dx[2];
+  }
+ }
+setTimeout(assgn,t);
+}
+
+function init(){
+for (i = 0; i &lt; n; i++){
+ vx[i] = document.getElementById("x"+(idx+i)).style;
+ vy[i] = document.getElementById("y"+(idx+i)).style;
+ vz[i] = document.getElementById("z"+(idx+i)).style;
+ }
+winsize();
+assgn();
+}
+
+if (window.addEventListener){
+ window.addEventListener("resize",winsize,false);
+ window.addEventListener("load",init,false);
+ document.addEventListener("mousemove",mouse,false);
+}  
+else if (window.attachEvent){
+ window.attachEvent("onload",init);
+ document.attachEvent("onmousemove",mouse);
+ window.attachEvent("onresize",winsize);
+} 
+
+})();
+}//End.
+  </script>
+  <link href="http://i.imgur.com/XaSaTkq.png" rel="shortcut icon">
+  <title>Hacked BY ShoOtEr X</title>
+  <style type="text/css">
+
+body {
+
+    background-color: black;
+
+     }
+
+  </style>
+  <style type="text/css">
+    /* Circle Text Styles */
+    #outerCircleText {
+    /* Optional - DO NOT SET FONT-SIZE HERE, SET IT IN THE SCRIPT */
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'comic sans ms', verdana, arial;
+    color: #FFF;
+    /* End Optional */
+     
+    /* Start Required - Do Not Edit */
+    position: absolute;top: 0;left: 0;z-index: 3000;cursor: default;}
+    #outerCircleText div {position: relative;}
+    #outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
+    /* End Required */
+    /* End Circle Text Styles */
+    </style>
+</head>
+<body>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 0.5px; height: 0.5px; background-color: rgb(255, 0, 0); font-size: 0.5px;"
+ id="x0"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 0.5px; height: 0.5px; background-color: rgb(255, 255, 255); font-size: 0.5px;"
+ id="y0"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 0.5px; height: 0.5px; background-color: rgb(0, 0, 255); font-size: 0.5px;"
+ id="z0"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; background-color: rgb(255, 0, 0); font-size: 1px;"
+ id="x1"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; background-color: rgb(255, 255, 255); font-size: 1px;"
+ id="y1"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; background-color: rgb(0, 0, 255); font-size: 1px;"
+ id="z1"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 1.5px; height: 1.5px; background-color: rgb(255, 0, 0); font-size: 1.5px;"
+ id="x2"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 1.5px; height: 1.5px; background-color: rgb(255, 255, 255); font-size: 1.5px;"
+ id="y2"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 1.5px; height: 1.5px; background-color: rgb(0, 0, 255); font-size: 1.5px;"
+ id="z2"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 2px; height: 2px; background-color: rgb(255, 0, 0); font-size: 2px;"
+ id="x3"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 2px; height: 2px; background-color: rgb(255, 255, 255); font-size: 2px;"
+ id="y3"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 2px; height: 2px; background-color: rgb(0, 0, 255); font-size: 2px;"
+ id="z3"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 2.5px; height: 2.5px; background-color: rgb(255, 0, 0); font-size: 2.5px;"
+ id="x4"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 2.5px; height: 2.5px; background-color: rgb(255, 255, 255); font-size: 2.5px;"
+ id="y4"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 2.5px; height: 2.5px; background-color: rgb(0, 0, 255); font-size: 2.5px;"
+ id="z4"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 3px; height: 3px; background-color: rgb(255, 0, 0); font-size: 3px;"
+ id="x5"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 3px; height: 3px; background-color: rgb(255, 255, 255); font-size: 3px;"
+ id="y5"></div>
+<div
+ style="position: absolute; top: 0px; left: 0px; width: 3px; height: 3px; background-color: rgb(0, 0, 255); font-size: 3px;"
+ id="z5"></div>
+<div id="right" align="center">
+<br>
+<br>
+<br>
+<pre><div
+ style="color: rgb(166, 12, 32); text-shadow: rgb(0, 212, 255) 2px 1px 2px;"><font
+ color="white">
+  _    _          _____ _  ________ _____    _           
+ | |  | |   /\   / ____| |/ /  ____|  __ \  | |          
+ | |__| |  /  \ | |    | ' /| |__  | |  | | | |__  _   _ 
+ |  __  | / /\ \| |    |  &lt; |  __| | |  | | | '_ \| | | |
+ | |  | |/ ____ \ |____| . \| |____| |__| | | |_) | |_| |
+ |_|  |_/_/    \_\_____|_|\_\______|_____/  |_.__/ \__, |
+                                                    __/ |
+                                                   |___/ 
+ ,-,--.  ,--.-,,-,--,   _,.---._       _,.---._    ,--.--------.    ,----.                              ,-.--, 
+ ,-.'-  _\/==/  /|=|  | ,-.' , -  `.   ,-.' , -  `. /==/,  -   , -\,-.--` , \  .-.,.---.         .--.-.  /=/, .' 
+/==/_ ,_.'|==|_ ||=|, |/==/_,  ,  - \ /==/_,  ,  - \\==\.-.  - ,-./==|-  _.-` /==/  `   \        \==\ -\/=/- /   
+\==\  \   |==| ,|/=| _|==|   .=.     |==|   .=.     |`--`\==\- \  |==|   `.-.|==|-, .=., |        \==\ `-' ,/    
+ \==\ -\  |==|- `-' _ |==|_ : ;=:  - |==|_ : ;=:  - |     \==\_ \/==/_ ,    /|==|   '='  /         |==|,  - |    
+ _\==\ ,\ |==|  _     |==| , '='     |==| , '='     |     |==|- ||==|    .-' |==|- ,   .'         /==/   ,   \   
+/==/\/ _ ||==|   .-. ,\\==\ -    ,_ / \==\ -    ,_ /      |==|, ||==|_  ,`-._|==|_  . ,'.        /==/, .--, - \  
+\==\ - , //==/, //=/  | '.='. -   .'   '.='. -   .'       /==/ -//==/ ,     //==/  /\ ,  )       \==\- \/=/ , /  
+ `--`---' `--`-' `-`--`   `--`--''       `--`--''         `--`--``--`-----`` `--`-`--`--'         `--`-'  `--`   
+                                                                                                                                                                           
+                                                                                                                                                                           
+                                                                                                                                                                           
+                                                                                                                                                                           
+                                                                                                                                                                           
+                                                                                                                                                                           
+                                                                                   
+</font></div></pre>
+</div>
+
+<font id="ResponseData" color="#ff99cc"></font>
+<pre><font id="ResponseData" color="#ff99cc"><script
+ type="text/javascript">
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;  // Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);  // We haven't finished loading yet.  Have patience.
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+  this.currentText = "";
+  this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script>
+</font></pre>
+<table heigh="" align="center" border="1" width="1000">
+  <tbody>
+    <tr>
+      <td background="" valign="top">
+      <p id="hack" style="margin-left: 7px;"><font color="#ff0000"><font
+ color="#ffffff">~$</font> Hacked By.ShoOtEr X </font><br>
+      <font color="#ff0000"><font color="#ffffff">~$</font> Greetz :::
+Shooter X:Kim Break : Maker Pain : SPIDER HACK : Khalf Brown :Ti To:LahnX :And You</font><br>
+      <font color="#ff0000"><font color="#ffffff">~$</font> Contact:
+shooterx919@YAHOO.COM </font><br>
+
+      <br>
+      </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<script type="text/javascript">
+new TypingText(document.getElementById("hack"), 30, function(i){ var ar = new Array("_",""); return " " + ar[i.length % ar.length]; });
+TypingText.runAll();
+</script>
+<embed bgcolor="#000000"
+<embed src="https://youtube.googleapis.com/v/Bv9XP23GaQA&autoplay=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1"></embed>
+
+<script type="text/javascript">
+
+var snowmax=50
+var snowcolor=new Array("#AAAACC","#DDDDFF","#CCCCDD","#F3F3F3","#F0FFFF")
+var snowtype=new Array("Arial Black","Arial Narrow","Times","Comic Sans MS")
+var snowletter="*"
+var sinkspeed=0.6
+var snowmaxsize=22
+var snowminsize=8
+var snowingzone=1
+
+// Do not edit below this line
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent 
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)  
+var browserok=ie5||ns6||opera
+
+function randommaker(range) {    
+  rand=Math.floor(range*Math.random())
+    return rand
+}
+
+function initsnow() {
+  if (ie5 || opera) {
+    marginbottom = document.body.clientHeight
+    marginright = document.body.clientWidth
+  }
+  else if (ns6) {
+    marginbottom = window.innerHeight
+    marginright = window.innerWidth
+  }
+  var snowsizerange=snowmaxsize-snowminsize
+  for (i=0;i<=snowmax;i++) {
+    crds[i] = 0;                      
+      lftrght[i] = Math.random()*15;         
+      x_mv[i] = 0.03 + Math.random()/10;
+    snow[i]=document.getElementById("s"+i)
+    snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+    snow[i].size=randommaker(snowsizerange)+snowminsize
+    snow[i].style.fontSize=snow[i].size
+    snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+    snow[i].sink=sinkspeed*snow[i].size/5
+    if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+    if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+    if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+    if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+    snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+    snow[i].style.left=snow[i].posx
+    snow[i].style.top=snow[i].posy
+  }
+  movesnow()
+}
+
+function movesnow() {
+  for (i=0;i<=snowmax;i++) {
+    crds[i] += x_mv[i];
+    snow[i].posy+=snow[i].sink
+    snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+    snow[i].style.top=snow[i].posy
+    
+    if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+      if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+      if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+      if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+      if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+      snow[i].posy=0
+    }
+  }
+  var timer=setTimeout("movesnow()",50)
+}
+
+for (i=0;i<=snowmax;i++) {
+  document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+  window.onload=initsnow
+}
+</script>
+
+</body>
+</html>
+

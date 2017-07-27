@@ -1,0 +1,202 @@
+<html>
+<head>
+<title>
+HaCKeD By Hack-Xss
+</title>
+<link href="http://fonts.googleapis.com/css?family=Ubuntu&amp;effect=fire-animation" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<link href='https://googledrive.com/host/0B-3cyo_HIYMIbGhrM09nZk5sVmc/GESSTwoMediumRegular.css' rel='stylesheet' type='text/css'/>
+
+<style type="text/css">
+body{
+    background: url(http://www.dickson-constant.com/medias/images/catalogue/api/6028-noir-zoom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: arial;
+}
+
+
+.hacked{
+color:white;
+font-family:comic sans ms;
+    -webkit-animation-duration: .9s;
+    -webkit-animation-name: font-effect-fire-animation-keyframes;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    color: #ffe;
+    font-size: 35px;
+}
+.death{
+    color: black;
+    font-size: 22px;
+    font-family: comic sans ms;
+}
+h5{
+font-family:GESSTwoMediumRegular;
+font-size:21px;
+color:wheat;
+}
+</style>
+</head>
+<body>
+<center>
+<br><br>
+<h2 class="font-effect-fire-animation" style=font-family:Ubuntu;font-size:25px;color:#1C1C1C;>HACKED By Hack-Xss</h2><br>
+<img src="http://i.imgur.com/HvqsOZt.gif" border="0" height="280" width="420"><br>
+<font face="courier" color="red" size="5"><b>???? ??? ???????? ??????????
+
+<PARAM name="movie" value="The song :)8&feature=related;hl=en_US&amp;fs=1&amp;"><PARAM name="allowFullScreen" value="true"><PARAM name="allowscriptaccess" value="always">
+</HTML></p>
+<p>
+
+<EMBED src="The song :)8&feature=related;hl=en_US&fs=1&&autoplay=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="0" height="0"></p>
+<center>
+ 
+ <!-- AdFender script begin --><script type='text/javascript' src='http://local.adfender.com/adfender/elemhide.js'></script><!-- AdFender script end -->
+<!-- AdFender script begin --><script type='text/javascript' src='http://local.adfender.com/adfender/elemhide.js'></script><!-- AdFender script end -->
+</head>
+<body>
+
+	
+</style>
+<script type="text/javascript">
+// [+]~HaCKeD By Hack-Xss  !~[+]
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof 
+
+element.innerHTML == "undefined")) {
+    this.running = true;
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { 
+
+return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + 
+
+TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + 
+
+"').typingText.run()", this.interval);
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !
+
+this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && 
+
+this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? 
+
+(typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : 
+
+"");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + 
+
+"').typingText.run()", this.interval);
+  } else {
+    this.currentText = "";
+    this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script>
+<script language="javascript" src="http://in.sitekodlari.com/sagtus.js"></script>
+
+	
+<!-- AdFender script begin --><script type='text/javascript' src='http://local.adfender.com/adfender/elemhide.js'></script><!-- AdFender script end -->
+<!-- AdFender script begin --><script type='text/javascript' src='http://local.adfender.com/adfender/elemhide.js'></script><!-- AdFender script end -->
+</head>
+<body>
+
+<div id="wrapper">
+	<div class="box">
+		<div id="console"><span class="prefix">
+<p id="message">
+<font color="red">[+] Message:</font><font color="#29FF00"> ./Sorry admin ! security was low :/<br>
+<font color="red">[+] Message:</font><font color="#29FF00"> ./Rida ALsaadi  Was Here<br>
+<font color="red">[+] 
+Message </font> <font color="#29FF00">dont forget this name never </font>
+<br>
+<font color="green"> =================================================
+<script type="text/javascript">
+new TypingText(document.getElementById("message"), 50, function(i){ var ar 
+
+= new Array("|", "|", "|", "|"); return " " + ar[i.length % ar.length]; });
+
+//Type out examples:
+TypingText.runAll();
+
+</script>
+		<input text="test" id="commander" onkeyup="execute(this,event);" disabled="disabled"  style="width:786px;"/>
+	</div>
+	<div class="spacer"></div>
+</body>
+ </EMBED><SCRIPT Language=VBScript><!--<SCRIPT Language=VBScr</script</body>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+
+<html dir="rtl">
+ 
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>&#1578;&#1605; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1605;&#1606; &#1602;&#1576;&#1604; &#1576;&#1575;&#1606;&#1608;&#1585;&#1575;&#1605;&#1575; &#1575;&#1604;&#1581;&#1575;&#1586;&#1605;&#1610; </title>
+<style> 
+<!--
+P {
+	FONT-SIZE: 11px; FONT-FAMILY: arial,sans-serif
+}
+DIV.Section1 {
+	page: Section1
+}
+-->
+</style>
+<meta name="keywords" content="&#1578;&#1605; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1605;&#1606; &#1602;&#1576;&#1604; &#1576;&#1606; &#1604;&#1575;&#1583;&#1606; &#1607;&#1603;&#1585;">
+<meta name="description" content="&#1578;&#1605; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1605;&#1606; &#1602;&#1576;&#1604; &#1576;&#1606; &#1604;&#1575;&#1583;&#1606; &#1607;&#1603;&#1585;">
+</head>
+ 
+<body bgcolor="#000000">
+ </STYLE>
+</head>
+<body bgcolor="#000000">
+<div align="Center" class="style"><div align="Center" class="style"><pre>&nbsp;</pre></div></div>
+<p align="center">
+      <font size="6">
+      <SCRIPT>
+farbbibliothek = new Array(); 
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00"); 
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00"); 
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"); 
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"); 
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF"); 
+farbbibliothek[6] = new Array("#0000FF","#FFFF00"); 
+farben = farbbibliothek[4];
+function farbschrift() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.all["a"+i].style.color=farben[i]; 
+} 
+farbverlauf(); 
+} 
+function string2array(text) 
+{ 
+Buchstabe = new Array(); 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+k=0; 
+while(k<=text.length) 
+{ 
+Buchstabe[k] = text.charAt(k); 
+k++; 
+} 
+} 
+function divserzeugen() 
+{ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+{ 
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>"); 
+} 
+farbschrift(); 
+} 
+var a=1; 
+function farbverlauf() 
+{ 
+for(var i=0 ; i<farben.length; i++) 
+{ 
+farben[i-1]=farben[i]; 
+} 
+farben[farben.length-1]=farben[-1]; 
+
+setTimeout("farbschrift()",30); 
+} 
+// Zu Demonstrationszwecken***************** 
+var farbsatz=1; 
+function farbtauscher() 
+{ 
+farben = farbbibliothek[farbsatz]; 
+while(farben.length<text.length) 
+{ 
+farben = farben.concat(farben); 
+} 
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+} 
+setInterval("farbtauscher()",5000); 
+text= "| HaCked By Dr.PaNoRaMa HaCker |"; //h 
+string2array(text); 
+divserzeugen(); 
+//document.write(text); 
+      </SCRIPT></font></p>
+<p class="style1" style="text-align: center" align="center">
+<font face="Book Antiqua"><span lang="en-us">
+<font color="#FF0000" size="6"><br>
+</font><font color="#FFFFFF" size="6"><b>
+<br>
+<img border="0" src="http://t2.gstatic.com/images?q=tbn:ANd9GcQg7ud_1GC6mcnFU4gevIaiIi1RFvzbv9ntx7_YH6D9JQ8k6U1I0g" width="232" height="310"><br>
+<br>
+</b></font></span></font><span lang="ar-sa"><b>
+<font face="Comic Sans MS" size="6" color="#FFFFFF">~</font><font face="Comic Sans MS" size="6" color="#FF0000">#</font><font face="Comic Sans MS" size="6" color="#FFFFFF"> 
+&#1578;&#1605; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1605;&#1606; &#1602;&#1576;&#1604; </font><font face="Comic Sans MS" size="6" color="#FF0000">#</font><font face="Comic Sans MS" size="6" color="#FFFFFF">~</font></b></span></p>
+<p class="style1" style="text-align: center" align="center">
+<span lang="ar-sa"><b><font face="Comic Sans MS" size="6" color="#FF0000">&quot;</font><font face="Comic Sans MS" size="6" color="#FFFFFF">
+</font><font size="6" color="#FFFFFF" face="DecoType Naskh Variants">&#1576;&#1575;&#1606;&#1608;&#1585;&#1575;&#1605;&#1575; 
+&#1575;&#1604;&#1581;&#1575;&#1586;&#1605;&#1610;</font><font face="Comic Sans MS" size="6" color="#FFFFFF"> </font>
+<font face="Comic Sans MS" size="6" color="#FF0000">&quot;</font><font face="Comic Sans MS" size="6" color="#FFFFFF">
+<br>
+</font></b></span><font size="4"><span class="style61"><span class="SpellE"><b>
+<font color="#800080" face="Book Antiqua">
+<br>
+</font><font color="#FF0000" face="Book Antiqua">#</font><font color="#800080" face="Book Antiqua"> </font> </b></span></span></font><font color="#FFFFFF"><b>
+<font face="Tahoma" size="3">
+&nbsp;</font></b><font face="Tahoma" size="3"><span lang="ar-sa"><b>&#1573;&#1584;&#1575; &#1603;&#1575;&#1606;&#1578; &#1581;&#1585;&#1610;&#1577; 
+&#1575;&#1602;&#1608;&#1575;&#1604;&#1603;&#1605; &#1604;&#1575;&#1590;&#1575;&#1576;&#1591; &#1604;&#1607;&#1575; </b></span></font><b><font face="Tahoma" size="3">
+<span lang="en-us">....</span></font></b><font face="Tahoma" size="3"><b><span lang="ar-sa"> 
+&#1601;&#1604;&#1578;&#1587;&#1578;&#1605;&#1593; &#1589;&#1583;&#1608;&#1585;&#1603;&#1605; &#1604;&#1581;&#1585;&#1610;&#1577; &#1575;&#1601;&#1593;&#1575;&#1604;&#1600;&#1610; </span>&nbsp;</b></font></font><font face="Tahoma" size="3"><b><font color="#FF0000">#</font></b></font></p>
+<p dir="ltr" align="center"><b><font face="Tahoma" size="4" color="#FFFFFF">
+Own3d&nbsp; By </font><font face="Tahoma" size="4" color="#FF0000">
+Pa</font><font face="Tahoma" size="4" color="#FFFFFF">NoRa</font><font face="Tahoma" size="4" color="#FF0000">Ma 
+aL-</font><font face="Tahoma" size="4" color="#FFFFFF">Haz</font><font face="Tahoma" size="4" color="#FF0000">mi</font><font face="Tahoma" size="4" color="#FFFFFF">
+=)</font></b></p>
+<p dir="ltr" align="center"><b><font face="Tahoma" color="#FFFFFF" size="4">----<span lang="ar-sa">------------------------</span></font><font face="Tahoma" size="3" color="#FFFFFF"><br>
+<br>
+</font><font face="Tahoma" size="4" color="#FF0000">Pa</font><font face="Tahoma" size="4" color="#FFFFFF">NoRa</font><font face="Tahoma" size="4" color="#FF0000">Ma 
+Ha</font><font face="Tahoma" size="4" color="#FFFFFF">Ck</font><font face="Tahoma" size="4" color="#FF0000">Er</font><font face="Tahoma" size="3" color="#FF0000"><br>
+</font><font face="Tahoma" size="4" color="#FF0000"><br>
+</font><font face="Tahoma" size="4" color="#FFFFFF">
+&nbsp;X.Gj</font><font face="Tahoma" size="4" color="#FF0000">@</font><font face="Tahoma" size="4" color="#FFFFFF">HoTMaiL</font><font face="Tahoma" size="4" color="#FF0000">.CoM</font><font face="Tahoma" size="3" color="#FFFFFF"><br>
+</font><font face="Tahoma" size="3" color="#FF0000"><br>
+</font><font face="Tahoma" size="4" color="#FF0000"></font><font face="Tahoma" size="4" color="#FFFFFF"> <br>
+</font></b><span <ul><b>
+<font face="Arial" size="4" color="#FFFFFF"><span lang="ar-sa"><br>
+&nbsp;</span></font></b></span></p>
+<p align="center"><span dir="ltr">
+<span class="st">
+<font color="#FF0000" size="5" face="Book Antiqua"><b>Gr33Ts:&nbsp; </b></font>&nbsp;</span></span><font face="Book Antiqua" size="4" color="#FFFFFF">zNn
+</font><b><font color="#FFFF00" face="Tahoma" size="4">-</font></b><font color="#FFFFFF" face="Book Antiqua" size="4"> 
+FaiSaL.511 </font><b><font color="#FFFF00" face="Tahoma" size="4">-</font></b><font color="#FFFFFF" face="Book Antiqua" size="4"><span lang="ar-sa"><b> </b>
+</span>Dr.SMaRT </font><b><font color="#FFFF00" face="Tahoma" size="4">-</font></b><font color="#FFFF00" face="Book Antiqua" size="4">&nbsp;</font><font color="#FFFFFF" face="Book Antiqua" size="4">FaiSaL 
+aL-Hazmi </font><b><font color="#FFFF00" face="Tahoma" size="4">-</font></b><font color="#FFFFFF" face="Book Antiqua" size="4">&nbsp; </font><font color="#FFFFFF"><b><font face="Book Antiqua" size="6">
+<br>
+</font></b><font face="Book Antiqua" size="4">&nbsp;</font><font color="#800080" face="Book Antiqua" size="4">
+</font><font face="Book Antiqua" size="4">CraaSH aL-Hazmi </font></font><b>
+<font color="#FFFF00" face="Tahoma" size="4">-</font></b><font color="#FFFFFF" face="Book Antiqua" size="4"> 
+Dr.HLaaK<b><span lang="ar-sa"> </span></b></font><b>
+<font color="#FFFF00" face="Tahoma" size="4">-</font></b><font color="#FFFFFF" face="Book Antiqua" size="4">&nbsp; 
+NonH</font><font color="#FFFFFF" face="Book Antiqua" size="6">&nbsp;</font><b><font color="#FFFF00" face="Tahoma" size="4">-
+</font></b><font face="Book Antiqua" size="4" color="#FFFFFF">HDo0oSH </font><font color="#FFFFFF" face="Book Antiqua" size="6"><br>
+</font><font color="#FFFFFF" face="Constantia" size="4">&nbsp;&nbsp; 
+<span lang="ar-sa">&#1603;&#1608;&#1603;&#1575;&#1610;&#1610;&#1606; &#1575;&#1604;&#1588;&#1605;&#1585;&#1610;</span></font><font color="#FFFFFF" face="Book Antiqua" size="6">&nbsp;</font><b><font color="#FFFF00" face="Tahoma" size="4">-
+</font></b><font color="#FFFFFF" face="Constantia" size="4">&nbsp;</font><b><font color="#FFFF00" face="Tahoma" size="4">-</font></b><font color="#FFFFFF" face="Constantia" size="4">&nbsp;Team 
+Hackerz Sa </font></p>
+<b>
+<p align="center"><font class="RxB" face="Consolas" size="3" color="#FFFFFF">./ExIT</font></p>
+</b>
+<p class="style1" style="text-align: center" align="center"><font face="Times New Roman" size="4"><br>
+&nbsp;</font></p>
+<p align="center">
+&nbsp;</p><embed width="20" height="15" src="&#1589;&#1608;&#1585;/13085101471.swf"></p>
+</b>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+
+<html dir="rtl">
+
+<head>
+<script>
+  message     = " .:: Sorry Admin ::. ^" +
+                "shalaw SaRhnG & ^" +
+                "For more information :-====>        ---------------- ^" +
+                "Special Thanx : ---------------------^" +
+                "See You Later^" +
+                "^"                  //
+  scrollSpeed = 25        
+  lineDelay   = 1500
+  txt         = ""
+  function scrollText(pos) {
+    if (message.charAt(pos) != '^') {
+      txt    = txt + message.charAt(pos)
+      status = txt
+      pauze  = scrollSpeed
+    }
+    else {
+      pauze = lineDelay
+      txt   = ""
+      if (pos == message.length-1) pos = -1
+    }
+    pos++
+    setTimeout("scrollText('"+pos+"')",pauze)
+  }
+scrollText(0)
+  </script>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>HackeD By sarok it</title>
+</head>
+<h1 align="center"><SCRIPT>
+farbbibliothek = new Array();
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00");
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00");
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF");
+farbbibliothek[6] = new Array("#0000FF","#FFFF00");
+farben = farbbibliothek[4];
+function farbschrift()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.all["a"+i].style.color=farben[i];
+}
+farbverlauf();
+}
+function string2array(text)
+{
+Buchstabe = new Array();
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+k=0;
+while(k<=text.length)
+{
+Buchstabe[k] = text.charAt(k);
+k++;
+}
+}
+function divserzeugen()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>");
+}
+farbschrift();
+}
+var a=1;
+function farbverlauf()
+{
+for(var i=0 ; i<farben.length; i++)
+{
+farben[i-1]=farben[i];
+}
+farben[farben.length-1]=farben[-1];
+
+setTimeout("farbschrift()",30);
+}
+
+var farbsatz=1;
+function farbtauscher()
+{
+farben = farbbibliothek[farbsatz];
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001));
+}
+setInterval("farbtauscher()",500);
+text= "yagrtue eslami kurdistan  "; //h
+string2array(text);
+divserzeugen();
+            </SCRIPT>
+<h1 align="center"></h1>
+
+<body bgcolor="#000000">
+<p align="center">
+
+</p>
+<span id="theText6" style="width: 100%;">
+<div align="center">
+    <pre><font size="1" color="#ad2828">0</font><font size="1"><font color="#da1212">1110101000011111011111110110101001000000111011001111101001110010001101111101100101001111110111111011100000001110100010</font><font color="#ad2828">0</font>
+<font color="#c61c1c">1</font><font color="red">1100011101101110000010000011001000101111000010000000110111001100110011010101100010001011001010111001011110001110111001</font><font color="#c61c1c">1</font>
+<font color="#c61c1c">1</font><font color="red">1110110100111011010101101110011100110111010100010011110101111011011111011000110001001111110010100101110011111111011001</font><font color="#c61c1c">1</font>
+<font color="#c61c1c">0</font><font color="red">1101000010000000000001110111111110101011111000010001111011100101100110010001010011111001010011010111101101101100000110</font><font color="#c61c1c">1</font>
+<font color="#c61c1c">0</font><font color="red">1111001001100100101000100000111110101001110011010011101110111010001000101111110010111111101000001101000000001000000101</font><font color="#c61c1c">1</font>
+<font color="#c61c1c">0</font><font color="red">0111011011011001101000110101111110010011011111101011100110110010100000001100000100110010011110100000110011001001001011</font><font color="#c61c1c">1</font>
+<font color="#c61c1c">1</font><font color="red">1001011001110100001110010111001010000111010110110100100000010010100001110011110000011110000111111100000101001101010101</font><font color="#c61c1c">0</font>
+<font color="#c61c1c">0</font><font color="red">1011000001110101110011110110100101100000110001000011001111010100001111011101010000000110011011001001101111111001101000</font><font color="#c61c1c">0</font>
+<font color="#c61c1c">0</font><font color="red">11101001110011000011011110011000010100100001100000111</font><font color="#ff1000">0</font><font color="red">1111</font><font color="#ff2000">1</font><font color="#ff1300">1</font><font color="red">1110</font><font color="#ff0d00">0</font><font color="red">00111000010011110110101100000000011110101110000100111</font><font color="#c61c1c">1</font>
+<font color="#c61c1c">0</font><font color="red">110001100101001100101001011011101110001111011110</font><font color="#ff0100">1</font><font color="red">1000</font><font color="#ff5b00">0</font><font color="#ff0800">1</font><font color="red">000</font><font color="#ff4b00">0</font><font color="#ff4500">0</font><font color="red">011</font><font color="#ff0400">0</font><font color="#ff5600">1</font><font color="red">0110</font><font color="#ff0100">1</font><font color="red">100000100000001010110000100001111111010000010011</font><font color="#c61c1c">1</font>
+<font color="#c61c1c">0</font><font color="red">01101111100101000110000011010101001011000111000</font><font color="#ff0200">1</font><font color="#ff2d00">1</font><font color="#ff0500">0</font><font color="red">101</font><font color="#ff5500">0</font><font color="#ff8200">1</font><font color="#ff0100">1</font><font color="red">11</font><font color="#ff8000">0</font><font color="#ff7e00">1</font><font color="red">001</font><font color="#ff7000">0</font><font color="#ff5700">1</font><font color="red">000</font><font color="#ff0800">0</font><font color="#ff2a00">1</font><font color="red">000101111101001001001110111010000100001110000001</font><font color="#c61c1c">0</font>
+<font color="#c62222">0</font><font color="#ff0909">011001000100101110011101000001111010100100110100</font><font color="#ff2f09">1</font><font color="#ff7b04">1</font><font color="#ff1000">1</font><font color="#ff0909">01</font><font color="#ff3209">1</font><font color="#ffd000">0</font><font color="#ff4500">1</font><font color="#ff0908">00</font><font color="#ffac00">0</font><font color="#ffb100">1</font><font color="#ff0908">0</font><font color="#ff0909">1</font><font color="#ff3500">0</font><font color="#ffcd00">1</font><font color="#ff2e09">0</font><font color="#ff0909">0</font><font color="#ff0908">0</font><font color="#ff1500">0</font><font color="#ff8405">1</font><font color="#ff2909">1</font><font color="#ff0909">111001100011111000010100100011101101101110110100</font><font color="#c62222">1</font>
+<font color="#c68888">1</font><font color="#ffa2a2">0110011110111010001001011001010010111100001</font><font color="#ffa19a">1</font><font color="#ffa198">1</font><font color="#ffa2a2">0001</font><font color="#ffd476">0</font><font color="#ffaf01">1</font><font color="#ff9962">1</font><font color="#ffa2a2">1</font><font color="#ffa4a1">1</font><font color="#ffda07">0</font><font color="#ffc400">0</font><font color="#ff9d78">1</font><font color="#ffa193">0</font><font color="#ffd500">0</font><font color="#ffd600">1</font><font color="#ff9f83">1</font><font color="#ff9e86">1</font><font color="#ffbe02">1</font><font color="#ffdb0d">1</font><font color="#ffa3a2">1</font><font color="#ffa2a2">1</font><font color="#ff9755">0</font><font color="#ffb400">1</font><font color="#ffd177">0</font><font color="#ffa2a2">0100</font><font color="#ffa19b">0</font><font color="#ffa196">1</font><font color="#ffa2a2">1110010110101011100111011110111110111010010</font><font color="#c68888">0</font>
+<font color="#c6c6c6">1</font><font color="white">1100011001110100110010001000101110110110101</font><font color="#fffffc">0</font><font color="#fff6aa">1</font><font color="#fff3a1">1</font><font color="#fffadf">1</font><font color="#fffef7">0</font><font color="white">1</font><font color="#fffef6">1</font><font color="#ffe54e">1</font><font color="#ffdb17">1</font><font color="#fff199">1</font><font color="#fffef3">1</font><font color="#ffe23b">1</font><font color="#ffd700">1</font><font color="#ffe33d">1</font><font color="#fff4a9">0</font><font color="#ffd700">10</font><font color="#fff29a">1</font><font color="#ffe655">1</font><font color="#ffd700">0</font><font color="#ffe54a">0</font><font color="#fffdf0">1</font><font color="#ffed81">1</font><font color="#ffda12">0</font><font color="#ffe54a">0</font><font color="#fffef6">0</font><font color="white">0</font><font color="#fffef9">1</font><font color="#fffae1">0</font><font color="#fff3a7">0</font><font color="#fff4a2">1</font><font color="#fffffa">0</font><font color="white">1010001110101110001000101001100011000011101</font><font color="#c6c6c6">0</font>
+<font color="#c6c6c6">1</font><font color="white">110000110110011100000111101100011010101110110</font><font color="#fff5ae">1</font><font color="#ffe440">1</font><font color="#ffe863">0</font><font color="#fff4ae">0</font><font color="#fffef2">0</font><font color="#fffbe3">0</font><font color="#ffde1f">1</font><font color="#ffd801">1</font><font color="#ffe85e">1</font><font color="#ffe755">1</font><font color="#ffd700">10</font><font color="#ffde23">1</font><font color="#ffd700">01</font><font color="#ffdf1f">1</font><font color="#ffd700">00</font><font color="#ffea5f">1</font><font color="#ffe54f">1</font><font color="#ffd700">1</font><font color="#ffdc18">1</font><font color="#fffbde">1</font><font color="#fffff7">0</font><font color="#fff4b7">0</font><font color="#ffe96a">1</font><font color="#ffe341">0</font><font color="#fff3a7">0</font><font color="#fffffe">0</font><font color="white">10101101111010101101010001011001100001110001</font><font color="#c6c6c6">0</font>
+<font color="#c6c6c6">1</font><font color="white">0101100000010010100100111000101001001110</font><font color="#fffffb">0</font><font color="#fffffc">0</font><font color="white">0011</font><font color="#fffbe3">0</font><font color="#ffe75f">1</font><font color="#ffdc18">0</font><font color="#ffde2a">1</font><font color="#ffed7f">0</font><font color="#ffef89">1</font><font color="#ffd801">1</font><font color="#ffd702">1</font><font color="#ffd90c">0</font><font color="#ffd700">11000101</font><font color="#ffd90c">0</font><font color="#ffd700">10</font><font color="#ffee7c">0</font><font color="#ffef8d">1</font><font color="#ffe033">1</font><font color="#ffdb18">1</font><font color="#ffe54f">0</font><font color="#fffadc">1</font><font color="#fffffe">1</font><font color="white">111</font><font color="#fffffd">0</font><font color="#fffffb">0</font><font color="white">1101111110001000110011010001111011100100</font><font color="#c6c6c6">0</font>
+<font color="#c6c6c6">0</font><font color="white">1011111110111100111000010110101011101110</font><font color="#fffff7">0</font><font color="#fffac8">0</font><font color="#fff29b">1</font><font color="#fff2a7">1</font><font color="#fff8c9">1</font><font color="#fffde7">0</font><font color="white">0</font><font color="#fffffa">0</font><font color="#fff096">1</font><font color="#ffdb13">0</font><font color="#ffd700">0</font><font color="#ffdb11">1</font><font color="#ffd803">1</font><font color="#ffd700">100110011100</font><font color="#ffd801">0</font><font color="#ffdc18">0</font><font color="#ffd700">1</font><font color="#ffdb0f">0</font><font color="#ffef8d">1</font><font color="#fffef5">1</font><font color="white">1</font><font color="#fffdea">1</font><font color="#fff8cb">1</font><font color="#fff3a8">0</font><font color="#fff29d">1</font><font color="#fff9c7">0</font><font color="#fffff6">1</font><font color="white">1100111011100011010001001100101010010111</font><font color="#c6c6c6">0</font>
+<font color="#c6c6c6">0</font><font color="white">00010111110110010111011010110011000101010</font><font color="#fffef6">0</font><font color="#fffdea">0</font><font color="#fff3a1">0</font><font color="#ffe554">1</font><font color="#ffdf31">1</font><font color="#ffdf21">1</font><font color="#ffe44a">1</font><font color="#ffea6a">1</font><font color="#ffea67">0</font><font color="#ffda08">1</font><font color="#ffd700">0111000001010101</font><font color="#ffda05">0</font><font color="#ffe962">0</font><font color="#ffea6c">1</font><font color="#ffe44c">0</font><font color="#ffdf23">1</font><font color="#ffe033">1</font><font color="#ffe655">0</font><font color="#fff3a1">1</font><font color="#fffdea">1</font><font color="#fffef6">0</font><font color="white">10011100101000111010111001000101010011011</font><font color="#c6c6c6">1</font>
+<font color="#c6c6c6">1</font><font color="white">110100001111111010111100011110001001000</font><font color="#fffffd">0</font><font color="#fffbdb">1</font><font color="#fff4a9">1</font><font color="#ffed79">0</font><font color="#ffe763">1</font><font color="#ffe867">1</font><font color="#ffeb70">1</font><font color="#ffed82">0</font><font color="#ffef92">0</font><font color="#ffe75e">0</font><font color="#ffdc10">1</font><font color="#ffd700">001011101101001000</font><font color="#ffde17">1</font><font color="#ffea6c">0</font><font color="#ffee90">0</font><font color="#ffed7e">1</font><font color="#ffeb6e">0</font><font color="#ffe866">0</font><font color="#ffe761">0</font><font color="#ffed77">0</font><font color="#fff4a6">0</font><font color="#fffbdb">1</font><font color="#fffffd">1</font><font color="white">110101000000000000000110000001110011001</font><font color="#c6c6c6">1</font>
+<font color="#c6c6c6">1</font><font color="white">011101011001100001100010001000101000110</font><font color="#fffffe">1</font><font color="#fffded">1</font><font color="#fffeef">1</font><font color="#fffff7">1</font><font color="#fffffd">1</font><font color="white">0</font><font color="#fffefa">1</font><font color="#fffada">0</font><font color="#ffe96b">0</font><font color="#ffdb1b">0</font><font color="#ffd702">1</font><font color="#ffd90a">0</font><font color="#ffd701">0</font><font color="#ffd700">011111100001010</font><font color="#ffd90a">0</font><font color="#ffd803">1</font><font color="#ffdd24">1</font><font color="#ffec78">0</font><font color="#fffbe4">0</font><font color="#fffffc">1</font><font color="white">0</font><font color="#fffffc">1</font><font color="#fffef5">1</font><font color="#fffdee">0</font><font color="#fffdec">1</font><font color="#fffffe">1</font><font color="white">010001000000010010110111110001010110000</font><font color="#c6c6c6">0</font>
+<font color="#c6c6c6">1</font><font color="white">10010010011101011111001101000001101011010010</font><font color="#fffad6">1</font><font color="#ffeb74">0</font><font color="#ffdb10">0</font><font color="#ffdd21">0</font><font color="#ffe54d">0</font><font color="#ffeb7a">1</font><font color="#ffea65">1</font><font color="#ffd904">1</font><font color="#ffd700">00110100001101</font><font color="#ffd800">0</font><font color="#ffe959">1</font><font color="#ffec80">0</font><font color="#ffe550">0</font><font color="#ffdd22">1</font><font color="#ffdd18">1</font><font color="#ffed83">1</font><font color="#fffbde">0</font><font color="white">10101010111101110000111001011011010010000000</font><font color="#c6c6c6">1</font>
+<font color="#c6c6c6">0</font><font color="white">10110100001011000011111000101010110001100</font><font color="#fffffe">0</font><font color="#fffeef">0</font><font color="#fff193">1</font><font color="#ffe960">1</font><font color="#ffed7e">1</font><font color="#fff6bb">0</font><font color="#fffadb">1</font><font color="#fffdea">0</font><font color="#fff3a6">0</font><font color="#ffdb14">0</font><font color="#ffda0e">1</font><font color="#ffe441">0</font><font color="#ffdb0a">1</font><font color="#ffd700">0</font><font color="#ffd702">1</font><font color="#ffd700">00100</font><font color="#ffd802">1</font><font color="#ffd700">00</font><font color="#ffdd19">0</font><font color="#ffe134">1</font><font color="#ffd90a">0</font><font color="#ffda10">1</font><font color="#fff29c">1</font><font color="#fffdeb">1</font><font color="#fffadb">0</font><font color="#fff6bb">1</font><font color="#ffed7e">0</font><font color="#ffe95f">1</font><font color="#fff3a4">0</font><font color="#fffef2">1</font><font color="#fffffe">1</font><font color="white">10101000101110010000111011100001100010110</font><font color="#c6c6c6">1</font>
+<font color="#c6c6c6">0</font><font color="white">11000010101111101101110100101010010101011</font><font color="#fffffb">1</font><font color="#fffbcf">1</font><font color="#fffce3">0</font><font color="white">1100</font><font color="#fff093">1</font><font color="#ffd90a">0</font><font color="#ffe44a">0</font><font color="#fff5ae">0</font><font color="#fff5b1">1</font><font color="#ffd700">11</font><font color="#ffe654">1</font><font color="#ffd801">0</font><font color="#ffd700">1</font><font color="#ffdd1c">0</font><font color="#ffda0b">0</font><font color="#ffd700">0</font><font color="#ffde17">1</font><font color="#ffe341">0</font><font color="#ffd700">0</font><font color="#ffd802">0</font><font color="#fff7c0">0</font><font color="#fff2a0">0</font><font color="#ffe235">1</font><font color="#ffd908">0</font><font color="#fff091">0</font><font color="white">110</font><font color="#fffffe">1</font><font color="#fffbdd">1</font><font color="#fffbd3">1</font><font color="#fffffd">0</font><font color="white">11001001110001001001101101101001101000011</font><font color="#c6c6c6">0</font>
+<font color="#c6c6c6">1</font><font color="white">1000111001001100100000000101011111011101011010</font><font color="#fffef5">1</font><font color="#ffef87">0</font><font color="#ffe343">0</font><font color="#fff4ac">0</font><font color="#fffdef">1</font><font color="#fffffb">0</font><font color="#ffe13d">0</font><font color="#ffd804">0</font><font color="#ffe95f">1</font><font color="#fffdf0">0</font><font color="#ffd700">00</font><font color="#fff08e">0</font><font color="#ffea69">0</font><font color="#ffd700">1</font><font color="#ffdf1b">1</font><font color="#fffceb">1</font><font color="#ffe652">1</font><font color="#ffd803">1</font><font color="#ffe54c">1</font><font color="#fffffd">1</font><font color="#fffce9">1</font><font color="#fff19c">0</font><font color="#ffe235">1</font><font color="#fff08c">0</font><font color="#fffef8">0</font><font color="white">1000011010111111110100110001110011010100000001</font><font color="#c6c6c6">1</font>
+<font color="#8cac88">1</font><font color="#a8d7a1">100011011101100100001110000001101000001100000</font><font color="#aed9a1">1</font><font color="#d6dd6d">0</font><font color="#a8c93b">1</font><font color="#a8d693">0</font><font color="#a8d7a1">11</font><font color="#cee18b">1</font><font color="#ffd700">0</font><font color="#bac91d">0</font><font color="#a8d696">0</font><font color="#aad9a0">1</font><font color="#ffd700">1</font><font color="#edd301">1</font><font color="#a8d691">0</font><font color="#a8d37f">1</font><font color="#fad500">1</font><font color="#fbda0b">0</font><font color="#a8d7a1">0</font><font color="#a8d694">0</font><font color="#bdc917">0</font><font color="#ffd802">1</font><font color="#cce08f">1</font><font color="#a8d7a1">11</font><font color="#a8d58a">1</font><font color="#a8c830">0</font><font color="#dadf74">0</font><font color="#a9d8a1">0</font><font color="#a8d7a1">100000010011100011011010001100111100001001010</font><font color="#8cac88">0</font>
+<font color="#2c8022">1</font><font color="#189708">001000001111100100010011110100011010111011010</font><font color="#2f9d08">1</font><font color="#219803">1</font><font color="#189607">0</font><font color="#189708">10</font><font color="#1b9708">0</font><font color="#c1c606">1</font><font color="#91b700">1</font><font color="#1b9704">0</font><font color="#189708">1</font><font color="#229b08">0</font><font color="#ffd700">0</font><font color="#88b500">1</font><font color="#189708">01</font><font color="#a4bd00">1</font><font color="#fad401">0</font><font color="#189708">00</font><font color="#1c9703">1</font><font color="#93b700">1</font><font color="#c1c606">1</font><font color="#1b9808">0</font><font color="#189708">00</font><font color="#189606">1</font><font color="#249903">1</font><font color="#2b9c08">0</font><font color="#189708">101001100011010101000000111110011010100101110</font><font color="#2c8022">0</font>
+<font color="#277e1c">0</font><font color="#109300">10100010110111110101001101100111100111101000001010</font><font color="#44a200">1</font><font color="#8bb500">1</font><font color="#169500">1</font><font color="#109300">01</font><font color="#209800">1</font><font color="#f3d300">0</font><font color="#279900">1</font><font color="#109300">10</font><font color="#3a9f00">1</font><font color="#fad400">0</font><font color="#109300">011</font><font color="#169500">0</font><font color="#88b400">1</font><font color="#4ba200">0</font><font color="#109300">11001100110001011011001110110111000100100101001011</font><font color="#277e1c">0</font>
+<font color="#277e1c">0</font><font color="#109300">01000101110100101010100101010000101011111000000111</font><font color="#339c00">0</font><font color="#139400">1</font><font color="#109300">100</font><font color="#2b9b00">1</font><font color="#8fb700">0</font><font color="#109300">101</font><font color="#119300">0</font><font color="#a8bf00">1</font><font color="#109300">0101</font><font color="#139400">0</font><font color="#349d00">0</font><font color="#109300">01100110111110111001111100110011000110010100010100</font><font color="#277e1c">1</font>
+<font color="#277e1c">0</font><font color="#109300">0100000000001100000100100101110001100011101100101000101</font><font color="#279900">0</font><font color="#2d9b00">1</font><font color="#109300">0111</font><font color="#3fa000">0</font><font color="#149500">1</font><font color="#109300">1001010100101000000011001101111100000001100101011011101</font><font color="#277e1c">1</font>
+<font color="#277e1c">1</font><font color="#109300">0010110100100011111111101110001001010101101010011010101111111010001000110000000011001100100010110011011011001111010100</font><font color="#277e1c">1</font>
+<font color="#277e1c">0</font><font color="#109300">1101010011110101011011011110000100110011011001110011000011101000000110111111111111101011010000100000111110011001010110</font><font color="#277e1c">1</font>
+<font color="#277e1c">1</font><font color="#109300">1011101100010010101000101010010100100110001110001101011001001100100100100110111011011101001100000101110100110000110110</font><font color="#277e1c">1</font>
+<font color="#277e1c">0</font><font color="#109300">0100000101110110100101101101011111100110011011111001100001101110101100100101100111101001110010011111000000001001101010</font><font color="#277e1c">1</font>
+<font color="#277e1c">1</font><font color="#109300">0000111011011010111011011011100010001100011011010010010000010111110001100011101101000001000111100101010010100010101100</font><font color="#277e1c">0</font>
+<font color="#277e1c">0</font><font color="#109300">1000101100010001011010001100010001101110101001000010110011110111100101100000100000010100100000101011010100010100001000</font><font color="#277e1c">0</font>
+<font color="#317528">1</font><font color="#1f8512">1010000001010111111000001010101000001100000011100000001111000100110100010111010000010000001000101000011010010111101110</font></font><font size="1" color="#317528">0</font></pre>
+<p align="center" dir="ltr">
+
+</body>
+</html>
+
+</body>
+</html>

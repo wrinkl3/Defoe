@@ -1,0 +1,286 @@
+??<script language="JavaScript1.2">               
+ 
+/*****************************************
+* Visit our site at http://www.star28.com/ for more code
+* This notice must stay intact for use
+***********************************************/            
+//change 1 to another integer to alter the scroll speed. Greater is faster               
+var speed=1               
+var currentpos=0,alt=1,curpos1=0,curpos2=-1               
+function initialize(){               
+startit()               
+}               
+function scrollwindow(){               
+if (document.all)               
+temp=document.body.scrollTop               
+else               
+temp=window.pageYOffset               
+if (alt==0)               
+alt=1               
+else               
+alt=0               
+if (alt==0)               
+curpos1=temp               
+else               
+curpos2=temp               
+if (curpos1!=curpos2){               
+if (document.all)               
+currentpos=document.body.scrollTop+speed               
+else               
+currentpos=window.pageYOffset+speed               
+window.scroll(0,currentpos)               
+}               
+else{               
+currentpos=30               
+window.scroll(0,currentpos)               
+}               
+}               
+function startit(){               
+setInterval("scrollwindow()",30)               
+}               
+window.onload=initialize               
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="SHORTCUT ICON" href="http://www.weirdlyodd.com/wp-content/uploads/2011/02/Algeria-Flag.jpg">
+<meta name="keywords" content=" Hacked By SOFIX-Dz7 , Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,Hacked By SOFIX-Dz7 ,">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hacked By SOFIX-Dz7</title><script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script language="JavaScript">function tb5_makeArray(n){ this.length = n; return this.length;
+}
+tb5_messages = new tb5_makeArray(2);
+tb5_messages[0] = "Hacked by";
+tb5_messages[1] = "SOFIX-Dz7";
+tb5_rptType = 'infinite';
+tb5_rptNbr = 100;
+tb5_speed = 150;
+tb5_delay = 1050;
+var tb5_counter=1;
+var tb5_currMsg=0;
+var tb5_stsmsg="";
+function tb5_shuffle(arr){
+var k;
+for (i=0; i<arr.length; i++){ k = Math.round(Math.random() * (arr.length - i - 2)) + i; temp = arr[i];arr[i]=arr[k];arr[k]=temp;
+}
+return arr;
+}
+tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = "/";
+}
+tb5_arr = tb5_shuffle(tb5_arr);
+function tb5_init(n){
+var k;
+if (n == tb5_arr.length){ if (tb5_currMsg == tb5_messages.length-1){ if ((tb5_rptType == 'finite') && (tb5_counter==tb5_rptNbr)){ clearTimeout(tb5_timerID); return; } tb5_counter++; tb5_currMsg=0; } else{ tb5_currMsg++; } n=0; tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length); tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length); for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = ""; } tb5_arr = tb5_shuffle(tb5_arr); tb5_sp=tb5_delay;
+}
+else{ tb5_sp=tb5_speed; k = tb5_arr[n]; tb5_sts[k] = tb5_messages[tb5_currMsg].charAt(k); tb5_stsmsg = ""; for (var i=0; i<tb5_sts.length; i++) tb5_stsmsg += tb5_sts[i]; document.title = tb5_stsmsg; n++; } tb5_timerID = setTimeout("tb5_init("+n+")", tb5_sp);
+}
+function tb5_randomizetitle(){ tb5_init(0);
+}
+tb5_randomizetitle();
+
+</script>
+<body bgcolor=#000000>
+<script type="text/javascript">
+
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;	// Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 90 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);	// We haven't finished loading yet.  Have patience.
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+	this.currentText = "";
+	this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script>
+
+</head>
+<body style='-moz-user-select: false; cursor: no-drop; onkeydown='return false;'  oncontextmenu="return false;" onmousedown='return false;' >
+<center>
+<table>
+<tr>
+<td>
+<center>
+<style type="text/css">body{background:#000000;}table{background:#000000;}.style2{font-family:"Cooper Black";font-size:x-large;text-shadow:red 0px 0px 4px;}.style3{color:#FFFF00;text-shadow:red 0px 0px 4px;font-size:14pt;font-family:"Old English Text MT";}.style5{color:#FF0000;text-shadow:red 0px 0px 4px;}.anjing{color:#FF0000;}.style6{color:#008000;font-size:11pt;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;text-shadow:red 0px 0px 4px;}.style7{font-size:13pt;text-shadow:red 0px 0px 4px;}.style8{color:#008000;text-shadow:red 0px 0px 4px;}.style9{font-family:"Comic Sans MS";text-shadow:red 0px 0px 4px;}.style10{font-size:11pt;text-shadow:red 0px 0px 4px;}.style11{font-family:"Modern No. 20";font-size:14pt;text-shadow:red 0px 0px 4px;}.style12{color:#000000;text-shadow:red 0px 0px 4px;}.style13{font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;text-shadow:red 0px 0px 4px;}.style14{font-size:13pt;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;text-shadow:red 0px 0px 4px;}.style15{color:#008000;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;text-shadow:red 0px 0px 4px;}.style16{font-size:11pt;font-family:"MV Boli";color:#FF33CC;text-shadow:red 0px 0px 4px;}.style17{text-decoration:none;text-shadow:red 0px 0px 4px;}.style18{color:#000000;}.style19{text-decoration:none;}.style20{color:#008000;font-size:13pt;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;}.style21{color:#FF0000;}.style22{color:#000000;font-size:xx-large;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;}.style24{color:#000000;background-color:#FFFFFF;}.style25{font-size:xx-large;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;}.style26{color:#FF7F00;font-size:xx-large;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;}</style></head><center><p 
+<p style="text-align: center;">
+	<span style="font-size: 36px;"><span class="style13"><strong><font class="style10"><font color="#ff0066"><span class="style5">[</span>~<span class="style5">]&nbsp; </span></font></font></strong></span></span><span style="font-size: 72px;"><strong><span style="font-family: georgia,serif;"><font class="hk" style="text-shadow: 2px 2px 3px rgb(0, 0, 0);"><span style="color: rgb(0, 128, 0);">S<span style="font-size: 48px;">O</span><span style="font-size: 36px;"</span></span>F<span style="color: rgb(255, 0, 0);">IX</span><span style="color: rgb(211, 211, 211);"><span style="font-size: 36px;">-</span><span style="font-size: 48px;">D</span>z7</span></font></span></strong></span><span style="font-size: 36px;"><font class="style10"><span class="style13"><strong><font color="#ff0066"><span class="style5">&nbsp; [</span>~<span class="style5">]</span></font></strong></span></font></span></p>
+
+<div class="style5"><font face="Fixedsys" color="red"><center> >> Was here << </center></div></br>
+<p style="text-align: center;">
+<embed <img src="http://a6.sphotos.ak.fbcdn.net/hphotos-ak-snc7/148757_388339091198406_107523629279955_1228526_512061134_n.jpg" width="800" height="300" alt="SOFIX-Dz7 Was Here " /></a>
+<br></br>
+<div class="style5"><font face="Fixedsys" color="red"><center> >> ??????? ?? ?????? ????? ?? ?????? <<
+<br></br>
+??? ??? ??? ??????? ?????. ???? ??? ????????. ???? ??? ??? ??????? ??????. ???? ???? ??????????. ??????? ????. ??????? ????
+<br></br>
+>> Algeria With Palestine unjust or wronged <<
+<br></br>
+!! From the river to the sea PALESTINE will be free the !!</center></div></br>
+
+<embed <img src="http://www14.0zz0.com/2011/05/17/18/519469340.jpg" width="800" height="300" alt="SOFIX-Dz7 Was Here " /></a>
+<br pluginspage="www.youtube.com/v/8KgnmFNrRoc&feature=related&autoplay=1&loop=1" width="800" height="400" bgcolor="#000000" >
+</embed></p><div id="kontol_ngaceng">
+<pre><p align="center" class="style5"><font face="Courier New" size="3"><font color="#bf9696"><b>
+No System Perfect , This Site Has Been Cracked By SOFIX-Dz7 From Algeria
+We are The Muslim hackers , we don't hack for fun ! Or to kill time or looking for fame,
+ We carry A message to Every Christian and Jew, The lions of Islam say :
+ That your war against Islam, ,Will end now, or later !
+But Our revenge will not end until the Day of Resurrection 
+What was taken by force it's wll Back by force 
+{no surrender Fight until grave } the day is coming
+  >_<
+<br></br>
+&#1578;&#1605; &#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1575;&#1604;&#1605;&#1608;&#1602;&#1593; &#1576;&#1608;&#1575;&#1587;&#1591;&#1577; &#1587;&#1608;&#1601;&#1610;&#1603;&#1587; &#1583;&#1610;&#1586;&#1575;&#1583; 7
+
+&#1606;&#1581;&#1606; &#1575;&#1604;&#1607;&#1603;&#1585; &#1575;&#1604;&#1580;&#1586;&#1575;&#1574;&#1585;&#1610;&#1608;&#1606; (&#1575;&#1604;&#1605;&#1587;&#1604;&#1605;&#1608;&#1606;)&#1604;&#1575; &#1606;&#1582;&#1578;&#1585;&#1602; &#1605;&#1606; &#1575;&#1580;&#1604; &#1575;&#1604;&#1605;&#1578;&#1593;&#1577; &#1575;&#1608; &#1602;&#1578;&#1604; &#1608;&#1602;&#1578; &#1575;&#1608; &#1604;&#1604;&#1588;&#1607;&#1585;&#1577;
+
+&#1576;&#1604; &#1606;&#1581;&#1605;&#1604; &#1585;&#1587;&#1575;&#1604;&#1577; &#1604;&#1603;&#1604; &#1603;&#1575;&#1601;&#1585; &#1589;&#1604;&#1610;&#1576;&#1610; &#1608;&#1603;&#1575;&#1601;&#1585; &#1610;&#1607;&#1608;&#1583;&#1610; &#1578;&#1602;&#1608;&#1604; :&#1575;&#1606; &#1575;&#1587;&#1575;&#1583; &#1575;&#1604;&#1575;&#1587;&#1604;&#1575;&#1605; &#1608;&#1601;&#1585;&#1587;&#1575;&#1606;&#1607; &#1575;&#1604;&#1575;&#1588;&#1575;&#1608;&#1587;
+
+&#1575;&#1604;&#1605;&#1580;&#1575;&#1607;&#1583;&#1610;&#1606; &#1602;&#1583; &#1602;&#1575;&#1604;&#1608;&#1575; &#1575;&#1606; &#1581;&#1585;&#1576;&#1603;&#1605; &#1593;&#1604;&#1609; &#1575;&#1604;&#1575;&#1587;&#1604;&#1575;&#1605; &#1587;&#1608;&#1601; &#1578;&#1606;&#1578;&#1607;&#1610; &#1575;&#1604;&#1575;&#1606; &#1575;&#1608; &#1604;&#1575;&#1581;&#1602;&#1575; &#1604;&#1603;&#1606; &#1579;&#1571;&#1585;&#1606;&#1575; &#1604;&#1606; &#1610;&#1606;&#1578;&#1607;&#1610;
+
+&#1581;&#1578;&#1609; &#1602;&#1610;&#1575;&#1605; &#1575;&#1604;&#1587;&#1575;&#1593;&#1577; !!! &#1608;&#1575;&#1606; &#1605;&#1575; &#1587;&#1604;&#1576; &#1576;&#1575;&#1604;&#1602;&#1608;&#1577; &#1604;&#1575; &#1610;&#1585;&#1583; &#1575;&#1604;&#1575; &#1576;&#1575;&#1604;&#1602;&#1608;&#1577; &#1608;&#1575;&#1604;&#1610;&#1608;&#1605; &#1575;&#1604;&#1605;&#1608;&#1593;&#1608;&#1583; &#1602;&#1575;&#1583;&#1605; &#1602;&#1585;&#1610;&#1576;&#1575;&#1611;</font> 
+<div class="anjing"><small><font color="red" face="Fixedsys"><b>System not Secure To Support Contact Me :)
+Sofix@hacker.ps</b></font></small></div></div>
+<script type="text/javascript">
+new TypingText(document.getElementById("kontol_ngaceng"), 25, function(i){ var ar = new Array("", ""); return " " + ar[i.length % ar.length]; });
+TypingText.runAll();
+</script>
+</center>
+<center>
+<object width= "1" height="1"><object data="http://www.youtube.com/watch?v=owVdEIqTCNw&feature=related=http://xover4.jkt.3d.x.indowebster.com/download-vip/10/p16deoj0pc1tacsjo3e119ukicd3.mp3/%5Bwww.indowebster.com%5D-Linkin_Park_-_Given_Up.mp3&amp;repeat=always&amp;autostart=true" width="0" height="0" type="application/x-shockwave-flash"></object></object></center>
+</tr>
+</td>
+</table>
+</center>
+<DIV style="POSITION: fixed; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: red; PADDING-LEFT: 0px; BOTTOM: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 20px; PADDING-TOP: 3px; LEFT: 0px" id=cot_tl_fixed><SPAN style="COLOR: rgb(255,255,255)">
+<MARQUEE><EM>Greetz : Evil-DZ | Xx HaMZa xX | Alg k!ller | Nani(*_^)King | Prince-DZ | Couchmar RDz | DoDi-DZ | Dr xp | AGHILAS | Anis Vamp! | Kha&miX | DZ_Med@Ka | Elite Trojan | King Of Pirat | SonTraL | Hmez Kcq |Black Spectre | Over-x | Malikpc | Indoushka Dz-Ghost | Microsoft-Dz | Vaga-Dz Hacker | Password | Team MosTa | Dz Mafia || Team DAHAYA-DZ || And All Muslim Hackers ||</EM></MARQUEE></SPAN></DIV></SPAN></FONT></H2></CENTER>
+</body>
+</html>
+<embed src="http://youtube.googleapis.com/v/8KgnmFNrRoc&feature=related&autoplay=1&loop=1" type="application/x-shockwave-flash" wmode="transparent" width="68" height="26"></embed>
+  //--></script>  
+
+ </head><body onload="type_text()" onclick='alert(">> ???? ????? ?? ??? ??? ????? ???? ???? ???? << ")' alink="#000000" bgcolor="#000000" link="#000000" text="#000000" vlink="#000000"><object height="385" width="480"><param name="movie" 
+
+</html>
+?
+?<script language="JavaScript1.2">               
+ 
+/*****************************************
+* Visit our site at http://www.star28.com/ for more code
+* This notice must stay intact for use
+***********************************************/            
+//change 1 to another integer to alter the scroll speed. Greater is faster               
+var speed=1               
+var currentpos=0,alt=1,curpos1=0,curpos2=-1               
+function initialize(){               
+startit()               
+}               
+function scrollwindow(){               
+if (document.all)               
+temp=document.body.scrollTop               
+else               
+temp=window.pageYOffset               
+if (alt==0)               
+alt=1               
+else               
+alt=0               
+if (alt==0)               
+curpos1=temp               
+else               
+curpos2=temp               
+if (curpos1!=curpos2){               
+if (document.all)               
+currentpos=document.body.scrollTop+speed               
+else               
+currentpos=window.pageYOffset+speed               
+window.scroll(0,currentpos)               
+}               
+else{               
+currentpos=30               
+window.scroll(0,currentpos)               
+}               
+}               
+function startit(){               
+setInterval("scrollwindow()",30)               
+}               
+window.onload=initialize               
+</script>
+

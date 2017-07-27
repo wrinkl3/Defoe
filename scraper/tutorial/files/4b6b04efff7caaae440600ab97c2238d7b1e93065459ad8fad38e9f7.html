@@ -1,0 +1,3018 @@
+
+
+
+<head>
+
+
+
+<title>HaCkEd By GrOuP AlHo AlKaFi</title>
+<link rel="shortcut icon" href="http://www11.0zz0.com/2013/05/04/20/851528880.jpg"/>
+
+<script>alert('fuk you admin');</script>
+<style type="text/css">
+
+
+
+<!--
+
+
+
+body {
+
+
+
+	background-color: #000000;
+
+
+
+	margin-left: 20px;
+
+
+
+	margin-top: 20px;
+
+
+
+	margin-right: 20px;
+
+
+
+	margin-bottom: 20px;
+
+
+
+}
+
+
+
+a:link {
+
+
+
+	color: #FF0000;
+
+
+
+	text-decoration: none;
+
+
+
+}
+
+
+
+a:visited {
+
+
+
+	text-decoration: none;
+
+
+
+	color: #FF0000;
+
+
+
+}
+
+
+
+a:hover {
+
+
+
+	text-decoration: none;
+
+
+
+	color: #FF0000;
+
+
+
+}
+
+
+
+a:active {
+
+
+
+	text-decoration: none;
+
+
+
+	color: #00FF00;
+
+
+
+}
+
+
+
+.style4 {
+
+
+
+	color: #FF0000;
+
+
+
+	font-family: "Lucida Console";
+
+
+
+}
+
+
+
+.style9 {
+
+
+
+	color: #FFFFFF;
+
+
+
+	font-family: Arial;
+
+
+
+}
+
+
+
+.style13 {color: #FF0000}
+
+
+
+.style15 {color: #FF0000; font-family: Arial; }
+
+
+
+.style11 {color: #FFFFFF}
+
+
+
+.style21 {color: #00FF00}
+
+
+
+.style23 {color: #00FFFF}
+
+
+
+.style25 {color: #00FF00; font-family: Arial; }
+
+
+
+-->
+
+
+
+</style>
+
+
+
+
+
+
+<script>
+
+
+
+// JavaScript Document<script type='text/javascript'>
+
+
+
+            // <![CDATA[
+
+
+
+            var colour="red";
+
+
+
+            var sparkles=65;
+
+
+
+     
+
+
+
+            var x=ox=400;
+
+
+
+            var y=oy=300;
+
+
+
+            var swide=800;
+
+
+
+            var shigh=600;
+
+
+
+            var sleft=sdown=0;
+
+
+
+            var tiny=new Array();
+
+
+
+            var star=new Array();
+
+
+
+            var starv=new Array();
+
+
+
+            var starx=new Array();
+
+
+
+            var stary=new Array();
+
+
+
+            var tinyx=new Array();
+
+
+
+            var tinyy=new Array();
+
+
+
+            var tinyv=new Array();
+
+
+
+            window.onload=function() { if (document.getElementById) {
+
+
+
+              var i, rats, rlef, rdow;
+
+
+
+              for (var i=0; i<sparkles; i++) {
+
+
+
+                var rats=createDiv(3, 3);
+
+
+
+                rats.style.visibility="hidden";
+
+
+
+                document.body.appendChild(tiny[i]=rats);
+
+
+
+                starv[i]=0;
+
+
+
+                tinyv[i]=0;
+
+
+
+                var rats=createDiv(5, 5);
+
+
+
+                rats.style.backgroundColor="transparent";
+
+
+
+                rats.style.visibility="hidden";
+
+
+
+                var rlef=createDiv(1, 5);
+
+
+
+                var rdow=createDiv(5, 1);
+
+
+
+                rats.appendChild(rlef);
+
+
+
+                rats.appendChild(rdow);
+
+
+
+                rlef.style.top="2px";
+
+
+
+                rlef.style.left="0px";
+
+
+
+                rdow.style.top="0px";
+
+
+
+                rdow.style.left="2px";
+
+
+
+                document.body.appendChild(star[i]=rats);
+
+
+
+              }
+
+
+
+              set_width();
+
+
+
+              sparkle();
+
+
+
+            }}
+
+
+
+            function sparkle() {
+
+
+
+              var c;
+
+
+
+              if (x!=ox || y!=oy) {
+
+
+
+                ox=x;
+
+
+
+                oy=y;
+
+
+
+                for (c=0; c<sparkles; c++) if (!starv[c]) {
+
+
+
+                  star[c].style.left=(starx[c]=x)+"px";
+
+
+
+                  star[c].style.top=(stary[c]=y)+"px";
+
+
+
+                  star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+
+
+
+                  star[c].style.visibility="visible";
+
+
+
+                  starv[c]=50;
+
+
+
+                  break;
+
+
+
+                }
+
+
+
+              }
+
+
+
+              for (c=0; c<sparkles; c++) {
+
+
+
+                if (starv[c]) update_star(c);
+
+
+
+                if (tinyv[c]) update_tiny(c);
+
+
+
+              }
+
+
+
+              setTimeout("sparkle()", 40);
+
+
+
+            }
+
+
+
+            function update_star(i) {
+
+
+
+              if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+
+
+
+              if (starv[i]) {
+
+
+
+                stary[i]+=1+Math.random()*3;
+
+
+
+                if (stary[i]<shigh+sdown) {
+
+
+
+                  star[i].style.top=stary[i]+"px";
+
+
+
+                  starx[i]+=(i%5-2)/5;
+
+
+
+                  star[i].style.left=starx[i]+"px";
+
+
+
+                }
+
+
+
+                else {
+
+
+
+                  star[i].style.visibility="hidden";
+
+
+
+                  starv[i]=0;
+
+
+
+                  return;
+
+
+
+                }
+
+
+
+              }
+
+
+
+              else {
+
+
+
+                tinyv[i]=50;
+
+
+
+                tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+
+
+
+                tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+
+
+
+                tiny[i].style.width="2px";
+
+
+
+                tiny[i].style.height="2px";
+
+
+
+                star[i].style.visibility="hidden";
+
+
+
+                tiny[i].style.visibility="visible"
+
+
+
+              }
+
+
+
+            }
+
+
+
+            function update_tiny(i) {
+
+
+
+              if (--tinyv[i]==25) {
+
+
+
+                tiny[i].style.width="1px";
+
+
+
+                tiny[i].style.height="1px";
+
+
+
+              }
+
+
+
+              if (tinyv[i]) {
+
+
+
+                tinyy[i]+=1+Math.random()*3;
+
+
+
+                if (tinyy[i]<shigh+sdown) {
+
+
+
+                  tiny[i].style.top=tinyy[i]+"px";
+
+
+
+                  tinyx[i]+=(i%5-2)/5;
+
+
+
+                  tiny[i].style.left=tinyx[i]+"px";
+
+
+
+                }
+
+
+
+                else {
+
+
+
+                  tiny[i].style.visibility="hidden";
+
+
+
+                  tinyv[i]=0;
+
+
+
+                  return;
+
+
+
+                }
+
+
+
+              }
+
+
+
+              else tiny[i].style.visibility="hidden";
+
+
+
+            }
+
+
+
+            document.onmousemove=mouse;
+
+
+
+            function mouse(e) {
+
+
+
+              set_scroll();
+
+
+
+              y=(e)?e.pageY:event.y+sdown;
+
+
+
+              x=(e)?e.pageX:event.x+sleft;
+
+
+
+            }
+
+
+
+            function set_scroll() {
+
+
+
+              if (typeof(self.pageYOffset)=="number") {
+
+
+
+                sdown=self.pageYOffset;
+
+
+
+                sleft=self.pageXOffset;
+
+
+
+              }
+
+
+
+              else if (document.body.scrollTop || document.body.scrollLeft) {
+
+
+
+                sdown=document.body.scrollTop;
+
+
+
+                sleft=document.body.scrollLeft;
+
+
+
+              }
+
+
+
+              else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+
+
+
+                sleft=document.documentElement.scrollLeft;
+
+
+
+             sdown=document.documentElement.scrollTop;
+
+
+
+              }
+
+
+
+              else {
+
+
+
+                sdown=0;
+
+
+
+                sleft=0;
+
+
+
+              }
+
+
+
+            }
+
+
+
+            window.onresize=set_width;
+
+
+
+            function set_width() {
+
+
+
+              if (typeof(self.innerWidth)=="number") {
+
+
+
+                swide=self.innerWidth;
+
+
+
+                shigh=self.innerHeight;
+
+
+
+              }
+
+
+
+              else if (document.documentElement && document.documentElement.clientWidth) {
+
+
+
+                swide=document.documentElement.clientWidth;
+
+
+
+                shigh=document.documentElement.clientHeight;
+
+
+
+              }
+
+
+
+              else if (document.body.clientWidth) {
+
+
+
+                swide=document.body.clientWidth;
+
+
+
+                shigh=document.body.clientHeight;
+
+
+
+              }
+
+
+
+            }
+
+
+
+            function createDiv(height, width) {
+
+
+
+              var div=document.createElement("div");
+
+
+
+              div.style.position="absolute";
+
+
+
+              div.style.height=height+"px";
+
+
+
+              div.style.width=width+"px";
+
+
+
+              div.style.overflow="hidden";
+
+
+
+              div.style.backgroundColor=colour;
+
+
+
+              return (div);
+
+
+
+            }
+
+
+
+            // ]]>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+//<![CDATA[
+
+
+
+
+
+
+
+var message = new Array() // leave this as is
+
+
+
+
+
+
+
+message[0] = "O";
+
+
+
+message[1] = "Ow";
+
+
+
+message[2] = "Own";
+
+
+
+message[3] = "Owne";
+
+
+
+message[4] = "Owned";
+
+
+
+message[5] = "by";
+
+
+
+message[6] = "Y";
+
+
+
+message[7] = "Ya";
+
+
+
+message[8] = "Yaa";
+
+
+
+message[9] = "Yaah";
+
+
+
+message[10] = "Yaahy";
+
+
+
+message[11] = "Yaahya";
+
+
+
+message[12] = "A";
+
+
+
+message[13] = "Al";
+
+
+
+message[14] = "Al";
+
+
+
+message[15] = "gr";
+
+
+
+message[16] = "gro";
+
+
+
+message[17] = "grou";
+
+
+
+message[18] = "group";
+
+
+
+message[19] = "al";
+
+
+
+message[20] = "alho";
+
+
+
+message[21] = "Alkafi";
+
+
+
+message[22] = "Albalooshi";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var reps = 1
+
+
+
+var speed = 105
+
+
+
+
+
+
+
+var p=message.length;
+
+
+
+var T="";
+
+
+
+var C=0;
+
+
+
+var mC=0;
+
+
+
+var s=0;
+
+
+
+var sT=null;
+
+
+
+if(reps<1)reps=1;
+
+
+
+function doTheThing(){
+
+
+
+T=message[mC];
+
+
+
+A();}
+
+
+
+function A(){
+
+
+
+s++
+
+
+
+if(s>9){s=1}
+
+
+
+
+
+
+
+if(s==1){document.title='HaCkEd By GroUp AlHo AlKaFi
+
+
+
+if(s==2){document.title='HaCkEd By GroUp AlHo AlKaFi
+
+
+
+if(s==3){document.title='HaCkEd By GroUp AlHo AlKaFi
+
+
+
+if(s==4){document.title='HaCkEd By GroUp AlHo AlKaFi
+
+
+if(s==5){document.title='HaCkEd By GroUp AlHo AlKaFi
+
+
+
+if(s==6){document.title='HaCkEd By GroUp AlHo AlKaFi
+
+
+
+
+
+
+if(s==10){document.title='[HaCkEd By GroUp AlHo AlKaFi+' [==<===]'}
+
+
+
+if(s==11){document.title='[HaCkEd By GroUp AlHo AlKaFi+' [===<==]'}
+
+
+
+if(s==12){document.title='[HaCkEd By GroUp AlHo AlKaFi+' [====<=]'}
+
+
+
+if(C<(11*reps)){
+
+
+
+sT=setTimeout("A()",speed);
+
+
+
+C++
+
+
+
+}else{
+
+
+
+C=0;
+
+
+
+s=0;
+
+
+
+mC++
+
+
+
+if(mC>p-1)mC=0;
+
+
+
+sT=null;
+
+
+
+doTheThing();}}
+
+
+
+doTheThing();
+
+
+
+//]]>
+
+
+
+</script>
+
+
+
+
+
+
+
+<meta content='[+]Hacked By GrOuP AlHo AlKaFi[+]' name='description'/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://www9.0zz0.com/2013/07/22/13/627249201.jpg"/>
+
+
+
+</head>
+
+
+<body    text="#008000" link="#00c000" vlink="#00c000" alink="#00ff00" oncontextmenu="return true;" onmousedown="return true;" onkeydown="return false;" onload="type_text()" alink="#000000" bgcolor="#000000" vlink="#000000" link="#c0c0c0" text="#000000">
+
+
+
+
+
+
+
+<script>
+
+
+
+//mouse
+
+
+
+//Circling text trail- Tim Tilton
+
+
+
+//Website: http://www.tempermedia.com/
+
+
+
+//Visit http://www.dynamicdrive.com for this script and more
+
+
+
+function cursor_text_circle(){
+
+
+
+// your message here
+
+
+
+var msg='GROUP ALHO ALKAFI.split('').reverse().join('');
+
+
+
+
+
+
+
+var font='Verdana,Arial';
+
+
+
+var size=3; // up to seven
+
+
+
+var color='#FFFFFF';
+
+
+
+
+
+
+
+// This is not the rotation speed, its the reaction speed, keep low!
+
+
+
+// Set this to 1 for just plain rotation w/out drag
+
+
+
+var speed=.3;
+
+
+
+
+
+
+
+// This is the rotation speed, set it negative if you want
+
+
+
+// it to spin clockwise
+
+
+
+var rotation=-.2;
+
+
+
+
+
+
+
+// Alter no variables past here!, unless you are good
+
+
+
+//---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+var ns=(document.layers);
+
+
+
+var ie=(document.all);
+
+
+
+var dom=document.getElementById;
+
+
+
+msg=msg.split('');
+
+
+
+var n=msg.length;
+
+
+
+var a=size*13;
+
+
+
+var currStep=0;
+
+
+
+var ymouse=0;
+
+
+
+var xmouse=0;
+
+
+
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+
+
+
+
+
+if (ie)
+
+
+
+window.pageYOffset=0
+
+
+
+
+
+
+
+// writes the message
+
+
+
+if (ns){
+
+
+
+for (i=0; i < n; i++)
+
+
+
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+
+
+
+}
+
+
+
+else if (ie||dom){
+
+
+
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+
+
+
+for (i=0; i < n; i++)
+
+
+
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+
+
+
+document.write('</div></div>');
+
+
+
+}
+
+
+
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+
+
+
+
+
+
+function Mouse(evnt){
+
+
+
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+
+
+
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+
+
+
+}
+
+
+
+
+
+
+
+if (ns||ie||dom)
+
+
+
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+
+
+
+var y=new Array();
+
+
+
+var x=new Array();
+
+
+
+var Y=new Array();
+
+
+
+var X=new Array();
+
+
+
+for (i=0; i < n; i++){
+
+
+
+y[i]=0;
+
+
+
+x[i]=0;
+
+
+
+Y[i]=0;
+
+
+
+X[i]=0;
+
+
+
+}
+
+
+
+
+
+
+
+var iecompattest=function(){
+
+
+
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+
+
+
+}
+
+
+
+
+
+
+
+var makecircle=function(){ // rotation properties
+
+
+
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+
+
+
+currStep-=rotation;
+
+
+
+for (i=0; i < n; i++){ // makes the circle
+
+
+
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+
+
+
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+
+
+
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+var drag=function(){ // makes the resistance
+
+
+
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+
+
+
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+
+
+
+for (var i=1; i < n; i++){
+
+
+
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+
+
+
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+
+
+
+
+
+
+}
+
+
+
+makecircle();
+
+
+
+// not rotation speed, leave at zero
+
+
+
+setTimeout(function(){drag();},10);
+
+
+
+}
+
+
+
+if (ns||ie||dom)
+
+
+
+if ( typeof window.addEventListener != "undefined" )
+
+
+
+window.addEventListener( "load", drag, false );
+
+
+
+else if ( typeof window.attachEvent != "undefined" )
+
+
+
+window.attachEvent( "onload", drag );
+
+
+
+else {
+
+
+
+if ( window.onload != null ) {
+
+
+
+var oldOnload = window.onload;
+
+
+
+window.onload = function ( e ) {
+
+
+
+oldOnload( e );
+
+
+
+drag();
+
+
+
+};
+
+
+
+}
+
+
+
+else
+
+
+
+window.onload = drag;
+
+
+
+}
+
+
+
+
+
+
+
+}
+
+
+
+cursor_text_circle();
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+<style type="text/css"> 
+
+
+
+/* Circle Text Styles */
+
+
+
+#outerCircleText {
+
+
+
+/* Optional - DO NOT SET FONT-SIZE HERE, SET IT IN THE SCRIPT */
+
+
+
+font-style: italic;
+
+
+
+font-weight: bold;
+
+
+
+font-family: 'comic sans ms', verdana, arial;
+
+
+
+color: #1400FF;
+
+
+
+</style> 
+
+
+
+
+
+
+
+<script type="text/javascript"> 
+
+
+
+<!-- Begin
+
+
+
+/*
+
+
+
+ * Notes on hue
+
+
+
+ *
+
+
+
+ * This script uses hue rotation in the following manner:
+
+
+
+ * hue=0   is red (#FF0000)
+
+
+
+ * hue=60  is yellow (#FFFF00)
+
+
+
+ * hue=120 is green (#00FF00)
+
+
+
+ * hue=180 is cyan (#00FFFF)
+
+
+
+ * hue=240 is blue (#0000FF)
+
+
+
+ * hue=300 is magenta (#FF00FF)
+
+
+
+ * hue=360 is hue=0 (#FF0000)
+
+
+
+ *
+
+
+
+ * Notes on the script
+
+
+
+ *
+
+
+
+ * This script should function in any browser that supports document.getElementById
+
+
+
+ * It has been tested in Netscape7, Mozilla Firefox 1.0, and Internet Explorer 6
+
+
+
+ *
+
+
+
+ * Accessibility
+
+
+
+ *
+
+
+
+ * The script does not write the string out, but rather takes it from an existing
+
+
+
+ * HTML element. Therefore, users with javascript disabled will not be adverely affected.
+
+
+
+ * They just won't get the pretty colors.
+
+
+
+ */
+
+
+
+ 
+
+
+
+/*
+
+
+
+ * splits par.firstChild.data into 1 span for each letter
+
+
+
+ * ARGUMENTS
+
+
+
+ *   span - HTML element containing a text node as the only element
+
+
+
+ */
+
+
+
+function toSpans(span) {
+
+
+
+  var str=span.firstChild.data;
+
+
+
+  var a=str.length;
+
+
+
+  span.removeChild(span.firstChild);
+
+
+
+  for(var i=0; i<a; i++) {
+
+
+
+    var theSpan=document.createElement("SPAN");
+
+
+
+    theSpan.appendChild(document.createTextNode(str.charAt(i)));
+
+
+
+    span.appendChild(theSpan);
+
+
+
+  }
+
+
+
+}
+
+
+
+function RainbowSpan(span, hue, deg, brt, spd, hspd) {
+
+
+
+    this.deg=(deg==null?360:Math.abs(deg));
+
+
+
+    this.hue=(hue==null?0:Math.abs(hue)%360);
+
+
+
+    this.hspd=(hspd==null?3:Math.abs(hspd)%360);
+
+
+
+    this.length=span.firstChild.data.length;
+
+
+
+    this.span=span;
+
+
+
+    this.speed=(spd==null?50:Math.abs(spd));
+
+
+
+    this.hInc=this.deg/this.length;
+
+
+
+    this.brt=(brt==null?255:Math.abs(brt)%256);
+
+
+
+    this.timer=null;
+
+
+
+    toSpans(span);
+
+
+
+    this.moveRainbow();
+
+
+
+}
+
+
+
+RainbowSpan.prototype.moveRainbow = function() {
+
+
+
+  if(this.hue>359) this.hue-=360;
+
+
+
+  var color;
+
+
+
+  var b=this.brt;
+
+
+
+  var a=this.length;
+
+
+
+  var h=this.hue;
+
+
+
+ 
+
+
+
+  for(var i=0; i<a; i++) {
+
+
+
+ 
+
+
+
+    if(h>359) h-=360;
+
+
+
+ 
+
+
+
+    if(h<60) { color=Math.floor(((h)/60)*b); red=b;grn=color;blu=0; }
+
+
+
+    else if(h<120) { color=Math.floor(((h-60)/60)*b); red=b-color;grn=b;blu=0; }
+
+
+
+    else if(h<180) { color=Math.floor(((h-120)/60)*b); red=0;grn=b;blu=color; }
+
+
+
+    else if(h<240) { color=Math.floor(((h-180)/60)*b); red=0;grn=b-color;blu=b; }
+
+
+
+    else if(h<300) { color=Math.floor(((h-240)/60)*b); red=color;grn=0;blu=b; }
+
+
+
+    else { color=Math.floor(((h-300)/60)*b); red=b;grn=0;blu=b-color; }
+
+
+
+ 
+
+
+
+    h+=this.hInc;
+
+
+
+ 
+
+
+
+    this.span.childNodes[i].style.color="rgb("+red+", "+grn+", "+blu+")";
+
+
+
+  }
+
+
+
+  this.hue+=this.hspd;
+
+
+
+}
+
+
+
+// End -->
+
+
+
+</script> 
+
+
+
+
+
+
+
+<script type="text/javascript"> 
+
+
+
+;(function(){
+
+
+
+// Your message here (QUOTED STRING)
+
+
+
+var msg = "";
+
+
+
+/* THE REST OF THE EDITABLE VALUES BELOW ARE ALL UNQUOTED NUMBERS */
+
+
+
+// Set font's style size for calculating dimensions
+
+
+
+// Set to number of desired pixels font size (decimal and negative numbers not allowed)
+
+
+
+var size = 24;
+
+
+
+// Set both to 1 for plain circle, set one of them to 2 for oval
+
+
+
+// Other numbers & decimals can have interesting effects, keep these low (0 to 3)
+
+
+
+var circleY = 0.75; var circleX = 2;
+
+
+
+// The larger this divisor, the smaller the spaces between letters
+
+
+
+// (decimals allowed, not negative numbers)
+
+
+
+var letter_spacing = 5;
+
+
+
+// The larger this multiplier, the bigger the circle/oval
+
+
+
+// (decimals allowed, not negative numbers, some rounding is applied)
+
+
+
+var diameter = 10;
+
+
+
+// Rotation speed, set it negative if you want it to spin clockwise (decimals allowed)
+
+
+
+var rotation = 0.4;
+
+
+
+// This is not the rotation speed, its the reaction speed, keep low!
+
+
+
+// Set this to 1 or a decimal less than one (decimals allowed, not negative numbers)
+
+
+
+var speed = 0.3;
+
+
+
+if (!window.addEventListener && !window.attachEvent || !document.createElement) return;
+
+
+
+msg = msg.split(');
+
+
+
+var n = msg.length - 1, a = Math.round(size * diameter * 0.208333), currStep = 20,
+
+
+
+ymouse = a * circleY + 20, xmouse = a * circleX + 20, y = [], x = [], Y = [], X = [],
+
+
+
+o = document.createElement('div'), oi = document.createElement('div'),
+
+
+
+b = document.compatMode && document.compatMode != "BackCompat"? document.documentElement : document.body,
+
+
+
+mouse = function(e){
+
+
+
+ e = e || window.event;
+
+
+
+ ymouse = !isNaN(e.pageY)? e.pageY : e.clientY; // y-position
+
+
+
+ xmouse = !isNaN(e.pageX)? e.pageX : e.clientX; // x-position
+
+
+
+},
+
+
+
+makecircle = function(){ // rotation/positioning
+
+
+
+ if(init.nopy){
+
+
+
+  o.style.top = (b || document.body).scrollTop + 'px';
+
+
+
+  o.style.left = (b || document.body).scrollLeft + 'px';
+
+
+
+ };
+
+
+
+ currStep -= rotation;
+
+
+
+ for (var d, i = n; i > -1; --i){ // makes the circle
+
+
+
+  d = document.getElementById('iemsg' + i).style;
+
+
+
+  d.top = Math.round(y[i] + a * Math.sin((currStep + i) / letter_spacing) * circleY - 15) + 'px';
+
+
+
+  d.left = Math.round(x[i] + a * Math.cos((currStep + i) / letter_spacing) * circleX) + 'px';
+
+
+
+ };
+
+
+
+},
+
+
+
+drag = function(){ // makes the resistance
+
+
+
+ y[0] = Y[0] += (ymouse - Y[0]) * speed;
+
+
+
+ x[0] = X[0] += (xmouse - 20 - X[0]) * speed;
+
+
+
+ for (var i = n; i > 0; --i){
+
+
+
+  y[i] = Y[i] += (y[i-1] - Y[i]) * speed;
+
+
+
+  x[i] = X[i] += (x[i-1] - X[i]) * speed;
+
+
+
+ };
+
+
+
+ makecircle();
+
+
+
+},
+
+
+
+init = function(){ // appends message divs, & sets initial values for positioning arrays
+
+
+
+ if(!isNaN(window.pageYOffset)){
+
+
+
+  ymouse += window.pageYOffset;
+
+
+
+  xmouse += window.pageXOffset;
+
+
+
+ } else init.nopy = true;
+
+
+
+ for (var d, i = n; i > -1; --i){
+
+
+
+  d = document.createElement('div'); d.id = 'iemsg' + i;
+
+
+
+  d.style.height = d.style.width = a + 'px';
+
+
+
+  d.appendChild(document.createTextNode(msg[i]));
+
+
+
+  oi.appendChild(d); y[i] = x[i] = Y[i] = X[i] = 0;
+
+
+
+ };
+
+
+
+ o.appendChild(oi); document.body.appendChild(o);
+
+
+
+ setInterval(drag, 25);
+
+
+
+},
+
+
+
+ascroll = function(){
+
+
+
+ ymouse += window.pageYOffset;
+
+
+
+ xmouse += window.pageXOffset;
+
+
+
+ window.removeEventListener('scroll', ascroll, false);
+
+
+
+};
+
+
+
+o.id = 'outerCircleText'; o.style.fontSize = size + 'px';
+
+
+
+if (window.addEventListener){
+
+
+
+ window.addEventListener('load', init, false);
+
+
+
+ document.addEventListener('mouseover', mouse, false);
+
+
+
+ document.addEventListener('mousemove', mouse, false);
+
+
+
+  if (/Apple/.test(navigator.vendor))
+
+
+
+   window.addEventListener('scroll', ascroll, false);
+
+
+
+}
+
+
+
+else if (window.attachEvent){
+
+
+
+ window.attachEvent('onload', init);
+
+
+
+ document.attachEvent('onmousemove', mouse);
+
+
+
+};
+
+
+
+})();
+
+
+
+
+
+
+
+</script> 
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<center> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<FONT face="Tahoma" size="2" color="#ff0000"<marquee behavior="scroll" direction="left" scrollamount="5" scrolldelay="10" width="50%"> 
+
+
+
+
+</div> 
+
+
+
+<script type="text/javascript"> 
+
+
+
+var r2=document.getElementById("r2"); //get span to apply rainbow
+
+
+
+var myRainbowSpan2=new RainbowSpan(r2, 0, 360, 255, 50, 348); //apply static rainbow effect
+
+
+
+myRainbowSpan2.timer=window.setInterval("myRainbowSpan2.moveRainbow()", myRainbowSpan2.speed);
+
+
+
+</script> 
+
+
+
+
+
+
+
+
+
+
+
+<SCRIPT>
+
+
+
+farbbibliothek = new Array(); 
+
+
+
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+
+
+
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00"); 
+
+
+
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00"); 
+
+
+
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"); 
+
+
+
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"); 
+
+
+
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF"); 
+
+
+
+farbbibliothek[6] = new Array("#0000FF","#FFFF00"); 
+
+
+
+farben = farbbibliothek[4];
+
+
+
+function farbschrift() 
+
+
+
+{ 
+
+
+
+for(var i=0 ; i<Buchstabe.length; i++) 
+
+
+
+{ 
+
+
+
+document.all["a"+i].style.color=farben[i]; 
+
+
+
+} 
+
+
+
+farbverlauf(); 
+
+
+
+} 
+
+
+
+function string2array(text) 
+
+
+
+{ 
+
+
+
+Buchstabe = new Array(); 
+
+
+
+while(farben.length<text.length) 
+
+
+
+{ 
+
+
+
+farben = farben.concat(farben); 
+
+
+
+} 
+
+
+
+k=0; 
+
+
+
+while(k<=text.length) 
+
+
+
+{ 
+
+
+
+Buchstabe[k] = text.charAt(k); 
+
+
+
+k++; 
+
+
+
+} 
+
+
+
+} 
+
+
+
+function divserzeugen() 
+
+
+
+{ 
+
+
+
+for(var i=0 ; i<Buchstabe.length; i++) 
+
+
+
+{ 
+
+
+
+document.write("<font face='Vivaldi' size=30><span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span></font>"); 
+
+
+
+} 
+
+
+
+farbschrift(); 
+
+
+
+} 
+
+
+
+var a=1; 
+
+
+
+function farbverlauf() 
+
+
+
+{ 
+
+
+
+for(var i=0 ; i<farben.length; i++) 
+
+
+
+{ 
+
+
+
+farben[i-1]=farben[i]; 
+
+
+
+} 
+
+
+
+farben[farben.length-1]=farben[-1]; 
+
+
+
+setTimeout("farbschrift()",30); 
+
+
+
+} 
+
+
+
+// Zu Demonstrationszwecken***************** 
+
+
+
+var farbsatz=1; 
+
+
+
+function farbtauscher() 
+
+
+
+{ 
+
+
+
+farben = farbbibliothek[farbsatz]; 
+
+
+
+while(farben.length<text.length) 
+
+
+
+{ 
+
+
+
+farben = farben.concat(farben); 
+
+
+
+} 
+
+
+
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+
+
+
+} 
+
+
+
+setInterval("farbtauscher()",5000); 
+
+
+
+text= "HaCkEd By GroUP AlHo AlKaFi"; //h 
+
+
+
+string2array(text); 
+
+
+
+divserzeugen();
+
+
+
+//document.write(text); 
+
+
+
+</SCRIPT>
+
+<p><p>
+
+<img src="http://www9.0zz0.com/2013/07/22/13/627249201.jpg" width="350" height="200">
+
+<u>
+
+
+
+
+
+
+
+<script language="Javascript"><!--
+
+
+
+var tl=new Array(
+
+
+
+
+
+
+
+"   | Please Wait . . . . . . . . . . . . . . . . . . . .!!!",
+"   | System Your Connecting . . . . . . . . . . . . . . . . .Ok!!!",
+"   | Hello Admin! I Think U Are Thinking What Happened With My Site.",
+"   | Your Security Result = 100% Down.",
+"   | you are loser .",
+"   | fuk you admin don play wit alho alkafi..",
+"   | bye admin you are loser we was here.",
+"",
+"   | libyan hacker"
+);
+
+
+
+var speed=50;
+
+
+
+var index=0; text_pos=0;
+
+
+
+var str_length=tl[0].length;
+
+
+
+var contents, row;
+
+
+
+function type_text()
+
+
+
+{
+
+
+
+  contents='';
+
+
+
+  row=Math.max(0,index-28);
+
+
+
+  while(row<index)
+
+
+
+  contents += tl[row++] + '\r\n';
+
+
+
+  document.forms[0].elements[0].value = contents + tl[index].substring(0,text_pos) + "|";
+
+
+
+  if(text_pos++==str_length)
+
+
+
+  {
+
+
+
+    text_pos=0;
+
+
+
+    index++;
+
+
+
+    if(index!=tl.length)
+
+
+
+    {
+
+
+
+      str_length=tl[index].length;
+
+
+
+      setTimeout("type_text()",500);
+
+
+
+    }
+
+
+
+  } else
+
+
+
+    setTimeout("type_text()",speed);
+
+
+
+}
+
+
+
+//--></script>
+
+
+
+
+
+
+
+
+
+
+
+</u>
+
+
+
+<style type="text/css">BODY {
+
+
+
+	SCROLLBAR-FACE-COLOR: #000000; SCROLLBAR-HIGHLIGHT-COLOR: #000000; SCROLLBAR-SHADOW-COLOR: #000000; SCROLLBAR-BASE-COLOR: #000000
+
+
+
+}
+
+
+
+</style>
+
+
+
+<style fprolloverstyle="">
+
+
+
+TEXTAREA {
+
+
+
+	BORDER-LEFT-COLOR: #000000; BACKGROUND: #000000; BORDER-BOTTOM-COLOR: #000000; FONT: 12px Verdana, Verdana, Verdana, Verdana; COLOR: #d3d3d3; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000
+
+
+
+}
+
+
+
+</style>
+
+
+
+</font><h2><center><font color="#FFFFFF">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="91%" id="table3">
+	<tr>
+		<td>
+		<p align="center">
+		<font color="#FFFFFF">
+
+
+
+
+
+
+<img src="http://libya-hurra.com/wp-content/uploads/2011/03/ssssssdff.jpg" align="left" border="0" width="1211" height="5"></td>
+	</tr>
+</table>
+
+
+
+<form>
+
+
+
+<p align="left">
+
+
+
+<textarea rows="15" cols="97" readonly="readonly" style="background-position: left top; font-variant: small-caps; font-size:18pt; letter-spacing:3pt; background-repeat:repeat; background-attachment:scroll" name="hacked"></textarea>
+
+
+
+</p>
+<table border="0" width="100%" id="table4">
+	<tr>
+		<td><font color="#FFFFFF">
+
+
+
+
+
+
+<img src="http://i1001.photobucket.com/albums/af135/cdos/numerosid0.gif" align="left" border="0" width="1211" height="5"></td>
+	</tr>
+</table>
+<p align="center">
+<big><big><big style="font-family: DejaVu Sans;"><big><span style="color: red;">
+<big style="font-weight: bold;"><big>
+		<font size="4">!</font></big></big></span></big></big><big style="font-family: monospace;"><big><span style="color: red;"><big style="font-weight: bold;"><span style="color: rgb(51, 204, 0);"><font size="5">HaCkEd BY -: ALaNsArY HaCkEr , HkAzI HaCkEr, 0o0op$, ahmed alhwasi hacker
+, All arabes & Muslim Hackers :- !</font></span></big></span></big></big><big><big style="font-family: DejaVu Sans;"><big><span style="color: red;"><big style="font-weight: bold;"><font size="5">!</font></big></span></big></big></big><big style="font-family: monospace;"><big><span style="color: red;"><font size="5"><br> 
+		
+                |www.facebook.com/niz.ar.775</font></span></big></big></big></big><p align="center">
+				<img src=" http://libya-hurra.com/wp-content/uploads/2011/03/ssssssdff.jpg width="150" height="150" >
+
+
+
+
+
+
+
+
+
+
+
+
+<center>
+
+
+
+
+
+
+
+<center> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" id="table1" height="31">
+
+
+
+
+
+
+<tr align="center" valign="middle">
+
+
+
+<td height="27" align="center" valign="top">
+
+
+
+<img src="http://i1230.photobucket.com/albums/ee488/ach3com/stormheartbeat.gif" width="313" height="21" /><font face="Tahoma" size="1" color="#FFFFFF">libya hackers</span></span> | 
+
+
+
+Owned By <b>Intruder</b> </font> 
+
+
+
+
+
+
+
+<img src="http://i1230.photobucket.com/albums/ee488/ach3com/stormheartbeat.gif" width="313" height="21" /></td>
+
+
+
+</tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Tahoma" size="1" color="#FFFFFF">
+
+
+<center>
+<img src="http://divine-music.info/images/dmmusicbar.gif" border="0" ><br>
+
+
+
+
+
+<embed src="http://m-h-a-c-k-e-r.persiangig.com/B.Sound/h4ck3d.swf" width="62" height="15" allowfullscreen="true" allowscriptaccess="always">
+
+</center></body><br />

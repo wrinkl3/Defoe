@@ -1,0 +1,628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="verify-v1" content="pXbNGSs3/eWDfbLBjoSaY/XUGdhDThn+0u5dgaMf6O0=" />
+    <meta name="verify-v1" content="kr2ZI5Q5UWO+WLRGo9FdpASr4j18UMctBIv+c1iqrL0=" />
+    
+    
+    
+    <title>Metin 2 ??????? ????? MMORPG</title>
+    <meta name="description" content="MMORPG Metin2" />
+    <link rel="alternate" type="application/rss+xml" title="??? ??????? ?? ?????? ???????? ???????? ?? ????? ?????? Metin2" href="http://ae.metin2.gameforge.com/main/rss/rss.xml"/>
+    <link rel="shortcut icon" href="http://gf1.geo.gfsrv.net/cdn98/191b803adbf82f4b8febe3a2c38c2c.ico" type="image/x-icon" />
+    <link href="http://gf1.geo.gfsrv.net/cdn67/fd8a4519bb8b9834a15b954d916b71.css" rel="stylesheet" type="text/css" />
+    <link href="http://gf2.geo.gfsrv.net/cdna1/f95bbba6c36b6f359cdaab35874232.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="http://gf3.geo.gfsrv.net/cdn53/94a1f7044c907cd3bda571485d5de8.css" rel="stylesheet" type="text/css" />
+    <link href="http://gf3.geo.gfsrv.net/cdnb9/1117b1bb4523069fdd1e9d4ae47bfe.css" rel="stylesheet" type="text/css" media="all"/>
+    <!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="http://gf3.geo.gfsrv.net/cdn5b/e4aaf57bbcd2da747e12423dd48b6e.css" media="screen"/><![endif]-->
+    <!--[if gte IE 6]><link rel="stylesheet" type="text/css" href="http://gf2.geo.gfsrv.net/cdn13/3b431865431b51e548704cce8f2969.css" media="screen"/><![endif]-->
+    <script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-44300018-1']);
+_gaq.push(['_setDomainName', 'gameforge.com']);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push (['_gat._anonymizeIp']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ?
+'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+    <script type="text/javascript" src="http://gf3.geo.gfsrv.net/cdn81/ab882bf327459aadf61f4ff4e6e6b3.js"></script>
+    <script type="text/javascript" src="http://gf3.geo.gfsrv.net/cdn2b/dce0cbc503cb5a283965c7f2fb45e7.js"></script>
+    <script type="text/javascript" src="http://gf3.geo.gfsrv.net/cdn84/6ba12b6a142013720df99362b4029e.js"></script>
+    <script type="text/javascript" src="http://ae.metin2.gameforge.com/js/jquery.validationEngine.rules.php"></script>
+    <script type="text/javascript" src="http://gf1.geo.gfsrv.net/cdnf6/eda7121084fb76232a6079a56ecf3b.js"></script>
+    <script type="text/javascript" src="http://gf2.geo.gfsrv.net/cdnd3/c6df02d71647441cce06ff575d0c98.js"></script>
+    <script type="text/javascript" src="http://gf2.geo.gfsrv.net/cdnd2/87fc5271982cfc5ae878af40ce5f22.js"></script>
+    <script type="text/javascript" src="http://gf2.geo.gfsrv.net/cdn16/86dee72e3db0f0c3f9d0483ef23ca5.js"></script>
+    <script type="text/javascript" src="http://gf1.geo.gfsrv.net/cdnc4/905332a56cde6d076373041e15e7b8.js"></script>
+    <script type="text/javascript" src="http://gf1.geo.gfsrv.net/cdn34/d001cc6fdcb552849dc1d989cc79d2.js"></script>
+    <script type="text/javascript" src="http://gf2.geo.gfsrv.net/cdn1d/aab59f14ef7e5128279e6592f3fab6.js"></script>
+    <script type="text/javascript" src="http://gf3.geo.gfsrv.net/cdnb4/ce624430073cc5ba8feb64b7356824.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://gf1.geo.gfsrv.net/cdnf1/2a7d02dafce0faec862502675af3dc.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="http://gf3.geo.gfsrv.net/cdn8f/fb3a601273112d131a51c684682043.js"></script>
+    <script type="text/javascript">
+        
+        $.fn.exists = function(){return jQuery(this).length>0;}
+
+        function storeHighscoreServer(idx) {
+            setCookie('highscoreserver', idx, 30);
+            $.getJSON('http://ae.metin2.gameforge.com/main/highscores/' + idx, function (data) {
+                $("#highscore-player").html(data["player"]);
+                $("#highscore-guild").html(data["guild"]);
+            });
+        }
+
+        $(document).ready(function(){
+            
+        $('.world').change(function(){
+            storeHighscoreServer(this.options[this.selectedIndex].value);
+        });
+            $('#namefield, #emailfield').each(function() {
+                var default_value = this.value;
+                $(this).focus(function() {
+                    if(this.value == default_value) {
+                        this.value = '';
+                    }
+                });
+                $(this).blur(function() {
+                    if(this.value == '') {
+                        this.value = default_value;
+                    }
+                });
+            });
+                                    $('#coda-slider-1').codaSlider({
+                autoSlide: true,
+                autoHeight: false,
+                autoSlideInterval: 4000,
+                autoSlideStopWhenClicked: true,
+                dynamicArrows: false
+            });
+            
+            $('div[role="navigation"] a[href="' + document.URL + '"]').last().addClass('selected');
+        })
+
+    </script>
+</head>
+<body>
+<div class="netbarslot">
+
+<!-- #MMO:NETBAR# -->
+<div id="pagefoldtarget"></div>
+<script type="text/javascript">
+    var mmoCSS = ' body {margin:0; padding:0;} div.openX_interstitial div.openX_int_closeButton a { text-indent:-4000px; float:right; height:23px; width:23px; display:block; background:transparent url(http://gameforge.com/cdn/img/netbar/close_x.png) repeat-x; } #mmonetbar { background:transparent url(http://gf1.geo.gfsrv.net/cdnfa/ac42d4c2f0669e88f3352cfe1b225b.png) repeat-x; font:normal 11px Tahoma, Arial, Helvetica, sans-serif; height:32px; left:0; padding:0; position:absolute; text-align:center; top:0; width:100%; z-index:3000; } #mmonetbar #mmoContent { height:32px; margin:0 auto; width:1024px; position: relative; } #mmonetbar .mmosmallbar {width:585px !important;} #mmonetbar .mmosmallbar div.mmoBoxMiddle { width: 290px; } #mmonetbar .mmonewsout {width:800px !important;} #mmonetbar .mmouseronlineout {width:768px !important;} #mmonetbar .mmolangout {width:380px !important;} #mmonetbar .mmolangout .mmoGame { width: 265px; } #mmonetbar #mmoContent.mmoingame { width: 533px; } #mmonetbar #mmoContent.mmoingame .mmoGame { width: auto; } #mmonetbar a { color:#666; font:normal 11px Tahoma, Arial, Helvetica, sans-serif; outline: none; text-decoration:none; white-space:nowrap; } #mmonetbar select { background-color:#611200 !important; border:1px solid #000 !important; color:#d0b88c !important; font:normal 11px Verdana, Arial, Helvetica, sans-serif; height:18px; margin-top:3px; width:100px; } #mmonetbar .mmoGames select {width:80px;} #mmonetbar option { background-color:#611200 !important; color:#d0b88c !important; } #mmonetbar option:hover { background-color:#7a1801 !important; } #mmonetbar select#mmoCountry {width:120px;} #mmonetbar .mmoSelectbox { background-color:#611200; float:left; margin:3px 0 0 3px; position:relative; } * html #mmonetbar .mmoSelectbox {position:static;} *+html #mmonetbar .mmoSelectbox {position:static;} #mmonetbar #mmoOneGame {cursor:default; height:14px; margin-top:3px; padding-left:5px; width:80px;} #mmonetbar .label {float:left; font-weight:bold; margin-right:4px; overflow:hidden !important;} #mmonetbar #mmoUsers .label {font-size:10px;} #mmonetbar .mmoBoxLeft, #mmonetbar .mmoBoxRight { background:transparent url(http://gf3.geo.gfsrv.net/cdnb8/67ac6699570bc204887dc1587a58d3.png) no-repeat -109px -4px; float:left; width:5px; height:24px; } #mmonetbar .mmoBoxRight {background-position:-126px -4px;} #mmonetbar .mmoBoxMiddle { background:transparent url(http://gf1.geo.gfsrv.net/cdnfa/ac42d4c2f0669e88f3352cfe1b225b.png) repeat-x 0 -36px; color:#d0b88c !important; float:left; height:24px; line-height:22px; text-align:left; white-space:nowrap; position: relative; z-index: 10000; } #mmonetbar #mmoGames, #mmonetbar #mmoLangs {margin:0px 4px 0 0;} #mmonetbar #mmoNews, #mmonetbar #mmoUsers, #mmonetbar #mmoGame, #mmonetbar .nojsGame {margin:4px 4px 0 0;} #mmonetbar #mmoLogo { background:transparent url(http://gf3.geo.gfsrv.net/cdnb8/67ac6699570bc204887dc1587a58d3.png) no-repeat top left; float:left; display:block; height:32px; width:108px; text-indent: -9999px; position: relative; z-index: 1 } #mmonetbar #mmoNews {float:left; width:252px;} #mmonetbar #mmoNews #mmoNewsContent {text-align:left; width:200px;} #mmonetbar #mmoNews #mmoNewsticker {overflow:hidden; width:240px;} #mmonetbar #mmoNews #mmoNewsticker ul { margin: 0; padding: 0; list-style: none; } #mmonetbar #mmoNews #mmoNewsticker ul li { font:normal 11px/22px Tahoma, Arial, Helvetica, sans-serif !important; color:#d0b88c !important; padding: 0; margin: 0; background: none; display: none; } #mmonetbar #mmoNews #mmoNewsticker ul li.mmoTickShow { display: block; } #mmonetbar #mmoNews #mmoNewsticker ul li a img {border:0;} #mmonetbar #mmoNews #mmoNewsticker ul li a {color:#d0b88c !important;display:block;height:24px;line-height:23px;} #mmonetbar #mmoNews #mmoNewsticker ul li a:hover {text-decoration:underline;} #mmonetbar #mmoUsers {float:left; width:178px;} #mmonetbar #mmoUsers .mmoBoxLeft {width:17px;} #mmonetbar #mmoUsers .mmoBoxMiddle {padding-left:3px; width:150px;} #mmonetbar .mmoGame {display:none; float:left; width:432px;} #mmonetbar .mmoGame #mmoGames {float:left; width:206px;} #mmonetbar .mmoGame #mmoLangs {float:left; margin:0; width:252px;} #mmonetbar .mmoGame label { color:#d0b88c !important; float:left; font-weight:400 !important; line-height:22px; margin:0px; text-align:right !important; width:110px; font-size: 11px !important; } #mmonetbar .nojsGame {display:block; width:470px;} #mmonetbar .nojsGame .mmoBoxMiddle {width:450px;} #mmonetbar .nojsGame .mmoSelectbox {margin:0px 0 0 3px;} *+html #mmonetbar .nojsGame .mmoSelectbox {margin:2px 0 0 3px;} * html #mmonetbar .nojsGame .mmoSelectbox {margin:2px 0 0 3px;} #mmonetbar .nojsGame .mmoGameBtn { background:transparent url(http://gf3.geo.gfsrv.net/cdnb8/67ac6699570bc204887dc1587a58d3.png) no-repeat -162px -7px; border:none; cursor:pointer; float:left; height:18px; margin:3px 0 0 7px; padding:0; width:18px; } #mmonetbar .mmoSelectArea { -moz-box-sizing: content-box; border:1px solid #000; color:#d0b88c !important; display:block !important; float:none; font-weight:400 !important; font-size:11px; height:16px; line-height:13px; overflow:hidden !important; width:90px; } #mmonetbar #mmoLangSelect .mmoSelectArea {width:129px;} #mmonetbar #mmoLangSelect .mmoOptionsDivVisible {min-width:129px;} #mmonetbar .mmoSelectArea .mmoSelectButton { background: url(http://gf3.geo.gfsrv.net/cdnb8/67ac6699570bc204887dc1587a58d3.png) no-repeat -141px -8px; float:right; width:17px; height:16px; } #mmonetbar .mmoSelectText {cursor:pointer; float:left; overflow:hidden; padding:1px 2px; width:68px;} #mmonetbar #mmoLangSelect .mmoSelectText {width:107px;} #mmonetbar #mmoOneLang {cursor:default; height:14px;} #mmonetbar div.mmoOneLang { background: none; } #mmonetbar div.mmoOneLang #mmoOneLang { border: none; padding: 2px 3px; } #mmonetbar .mmoOptionsDivInvisible, #mmonetbar .mmoOptionsDivVisible { background-color: #611200 !important; border: 1px solid #000; position: absolute; min-width:90px; z-index: 3100; } * html #mmonetbar .mmoOptionsDivVisible .highlight {background-color:#7a1801 !important} #mmonetbar .mmoOptionsDivInvisible {display: none;} #mmonetbar .mmoOptionsDivVisible ul { border:0; font:normal 11px Tahoma, Arial, Helvetica, sans-serif; list-style: none; margin:0; padding:2px; overflow:auto; overflow-x:hidden; } #mmonetbar #mmoLangs .mmoOptionsDivVisible ul {min-width:125px;} #mmonetbar .mmoOptionsDivVisible ul li { background-color: #611200; height:14px; padding:2px 0; } #mmonetbar .mmoOptionsDivVisible a { color: #d0b88c !important; display: block; font-weight:400 !important; height:16px !important; min-width:80px; text-decoration: none; white-space:nowrap; width:100%; } #mmonetbar #mmoContent .mmoLangList a {min-width:102px;} #mmonetbar .mmoOptionsDivVisible li:hover {background-color: #7a1801;} #mmonetbar .mmoOptionsDivVisible li a:hover {color: #d0b88c !important;} #mmonetbar .mmoOptionsDivVisible li.mmoActive {background-color: #7a1801 !important;} #mmonetbar .mmoOptionsDivVisible li.mmoActive a {color: #d0b88c !important;} #mmonetbar .mmoOptionsDivVisible ul.mmoListHeight {height:240px} #mmonetbar .mmoOptionsDivVisible ul.mmoLangList.mmoListHeight li {padding-right:15px !important; width:100%;} #mmonetbar #mmoGameSelect ul.mmoListHeight a {min-width:85px;} #mmonetbar #mmoLangSelect ul.mmoListHeight a {min-width:105px;} #mmonetbar #mmoFocus {position:absolute;left:-2000px;top:-2000px;} #mmonetbar #mmoLangs .mmoSelectText span, #mmonetbar #mmoLangs .mmoflag { background: transparent url(http://gf3.geo.gfsrv.net/cdn28/0fa15cfe12b31b8e79f9598f106bfd.png) no-repeat; height:14px !important; padding-left:23px; } .mmo_AE {background-position:right 0px !important} .mmo_AR {background-position:right -14px !important} .mmo_BE {background-position:right -28px !important} .mmo_BG {background-position:right -42px !important} .mmo_BR {background-position:right -56px !important} .mmo_BY {background-position:right -70px !important} .mmo_CA {background-position:right -84px !important} .mmo_CH {background-position:right -98px !important} .mmo_CL {background-position:right -112px !important} .mmo_CN {background-position:right -126px !important} .mmo_CO {background-position:right -140px !important} .mmo_CZ {background-position:right -154px !important} .mmo_DE {background-position:right -168px !important} .mmo_DK {background-position:right -182px !important} .mmo_EE {background-position:right -196px !important} .mmo_EG {background-position:right -210px !important} .mmo_EN {background-position:right -224px !important} .mmo_ES {background-position:right -238px !important} .mmo_EU {background-position:right -252px !important} .mmo_FI {background-position:right -266px !important} .mmo_FR {background-position:right -280px !important} .mmo_GR {background-position:right -294px !important} .mmo_HK {background-position:right -308px !important} .mmo_HR {background-position:right -322px !important} .mmo_HU {background-position:right -336px !important} .mmo_ID {background-position:right -350px !important} .mmo_IL {background-position:right -364px !important} .mmo_IN {background-position:right -378px !important} .mmo_INTL {background-position:right -392px !important} .mmo_IR {background-position:right -406px !important} .mmo_IT {background-position:right -420px !important} .mmo_JP {background-position:right -434px !important} .mmo_KE {background-position:right -448px !important} .mmo_KR {background-position:right -462px !important} .mmo_LT {background-position:right -476px !important} .mmo_LV {background-position:right -490px !important} .mmo_ME {background-position:right -504px !important} .mmo_MK {background-position:right -518px !important} .mmo_MX {background-position:right -532px !important} .mmo_NL {background-position:right -546px !important} .mmo_NO {background-position:right -560px !important} .mmo_PE {background-position:right -574px !important} .mmo_PH {background-position:right -588px !important} .mmo_PK {background-position:right -602px !important} .mmo_PL {background-position:right -616px !important} .mmo_PT {background-position:right -630px !important} .mmo_RO {background-position:right -644px !important} .mmo_RS {background-position:right -658px !important} .mmo_RU {background-position:right -672px !important} .mmo_SE {background-position:right -686px !important} .mmo_SI {background-position:right -700px !important} .mmo_SK {background-position:right -714px !important} .mmo_TH {background-position:right -728px !important} .mmo_TR {background-position:right -742px !important} .mmo_TW {background-position:right -756px !important} .mmo_UA {background-position:right -770px !important} .mmo_UK {background-position:right -784px !important} .mmo_US {background-position:right -798px !important} .mmo_VE {background-position:right -812px !important} .mmo_VN {background-position:right -826px !important} .mmo_YU {background-position:right -840px !important} .mmo_ZA {background-position:right -854px !important} .mmo_WW {background-position:right -392px !important} .mmo_AU {background-position:right -868px !important} div#mmonetbar a:active { top: 0; } div#mmoGamesOverviewPanel { width: 582px; position: absolute; top: 0; right: 0; font: 12px Arial, sans-serif; } div#mmoGamesOverviewPanel h4, div#mmoGamesOverviewPanel h5 { margin: 0; font-size: 12px; font-weight: bold; text-align: left; } div#mmoGamesOverviewPanel a { text-decoration: none; } div#mmoGamesOverviewPanel a img { border: none; } div#mmoGamesOverviewToggle { width: 168px; padding: 4px 0 4px 414px; } div#mmoGamesOverviewToggle h4 { -moz-box-sizing: content-box; height: 18px; position: relative; background: url(http://gf1.geo.gfsrv.net/cdnfa/ac42d4c2f0669e88f3352cfe1b225b.png) repeat-x 0 -36px; top: 0px; padding: 3px 20px; } div#mmoGamesOverviewToggle h4 a { -moz-box-sizing: content-box; display: block; width: 116px; height: 16px; line-height: 14px; text-align: left; font-weight: normal; outline: none; color: #d0b88c !important; font-size: 11px !important; position: relative; border: 1px solid #000; padding: 0 0 0 10px; background: #611200; } div#mmoGamesOverviewToggle h4 a.gameCountZero { cursor: default; text-align: center; padding: 0; width: 126px; } div#mmoGamesOverviewToggle h4 a span.mmoNbPseudoSelect_icon { display: block; position: absolute; top: 0; right: 0; width: 17px; height: 16px; background: url(http://gf3.geo.gfsrv.net/cdnb8/67ac6699570bc204887dc1587a58d3.png) no-repeat -141px -8px; } span.iconTriangle { display: block; position: absolute; top: 5px; right: 10px; width: 0px; border: 5px solid transparent; border-bottom-color: #d0b88c; } div#mmoGamesOverviewToggle h4 a.toggleHidden { } div#mmoGamesOverviewToggle h4 a.toggleHidden span.iconTriangle { top: 10px; border: 5px solid transparent; border-top-color: #d0b88c; } div#mmoGamesOverviewToggle h4 span.mmoNbBoxEdge { display: block; width: 5px; height: 24px; background: url(http://gf3.geo.gfsrv.net/cdnb8/67ac6699570bc204887dc1587a58d3.png) no-repeat -109px -4px; position: absolute; top: 0; } div#mmoGamesOverviewToggle h4 span.mmoNbBoxEdge_left { left: 0; } div#mmoGamesOverviewToggle h4 span.mmoNbBoxEdge_right { right: 0; background-position: -126px -4px; } div#mmoGamesOverviewLists { -moz-box-sizing: content-box; clear: both; background: #611200; width: 580px; border: 1px solid #000; float: left; position: relative; top: 0px; } div#mmoGamesOverviewLists h5 { -moz-box-sizing: content-box; clear: both; width: 544px; margin: 0; padding: 0 18px; height: 27px; line-height: 27px; color: #d0b88c; border-bottom: 1px solid #000; background: url(http://gf1.geo.gfsrv.net/cdnfa/ac42d4c2f0669e88f3352cfe1b225b.png) repeat-x 0 -3px; font-family: inherit; } #mmoGamesOverviewLists #mmoGamesOverview_featured li { width: auto; } #mmoGamesOverviewLists #mmoGamesOverview_featured span { display: block; width: 560px; height: 180px; margin: 0; } #mmoGamesOverviewLists #mmoGamesOverview_featured span.gameName { display: none; } #mmoGamesOverview_featured img { display: block; } div#mmoGamesOverviewLists ul { -moz-box-sizing: content-box; margin: 0; padding: 5px 5px; list-style: none; width: 570px; float: left; text-align: left; } div#mmoGamesOverviewLists ul li { margin: 0; padding: 0; list-style: none; width: 190px; float: left; background: none; } div#mmoGamesOverviewLists ul li a { display: block; padding: 5px; font-weight: bold; line-height: 1; color: #d0b88c !important; font-size: 11px !important; } div#mmoGamesOverviewLists ul li a:focus, div#mmoGamesOverviewLists ul li a:hover { background-color: #7a1801; } div#mmoGamesOverviewLists ul li a span.gameImgTarget { display: block; width: 180px; height: 90px; background: none; margin: 0 0 4px 0; } div#mmoGamesOverviewLists ul li a span img { display: block; } div#mmoGamesOverviewLists div#mmoGamesOverviewCountry { width: 20px; height: 14px; position: absolute; top: 6px; right: 12px; background-image: url(http://gf3.geo.gfsrv.net/cdn28/0fa15cfe12b31b8e79f9598f106bfd.png); background-repeat: no-repeat; } #mmonetbar div.nojsGame { width: 432px !important; } #mmonetbar div.nojsGame div.mmoBoxMiddle { width: 422px; } #mmonetbar div.nojsGame label { width: 105px; } #pagefoldtarget .nbPF { position: absolute; top: 0; z-index: 999999; text-indent: -9999px; width: 125px; height: 120px; } #pagefoldtarget .nbPFLeft { left: 0px; } #pagefoldtarget .nbPF.nbPFRight { right: 0px; background-position: right 0px } #pagefoldtarget .nbPFDark.nbPFRight { background-image: url(http://gf1.geo.gfsrv.net/cdn37/45cd40084fbd85deb0bbd141a182d4.png); _background-image: url(http://gf3.geo.gfsrv.net/cdn21/2ac8c866dd437d374bddae90352182.gif); } #pagefoldtarget .nbPFDark.nbPFLeft { background-image: url(http://gf2.geo.gfsrv.net/cdn7a/ac8b49aea9f6640b9c2aa05826cf7e.png); _background-image: url(http://gf3.geo.gfsrv.net/cdnb1/0d6041fc3b795c456c06798d691c0a.gif); } #pagefoldtarget .nbPFLight.nbPFRight { background-image: url(http://gf3.geo.gfsrv.net/cdn27/6af7f589ac3e8285f4dbe8d6016068.png); _background-image: url(http://gf2.geo.gfsrv.net/cdn14/c6c431101736ce8fe2fc7066deda22.gif); } #pagefoldtarget .nbPFLight.nbPFLeft { background: url(http://gf2.geo.gfsrv.net/cdn74/8b1d6e7fe60aa56ad56a9ef6ca670d.png) no-repeat; _background-image: url(http://gf2.geo.gfsrv.net/cdn73/0f237da9ad7d278f76da13604d9626.gif); } #pagefoldtarget .nbPF a{ text-indent: -9999px; display: block; width: 110px; height: 95px; } #pagefoldtarget .nbPF.nbPFRight a{ float:right; } #pagefoldtarget .nbPF.nbPFHover a{ width:358px; height: 320px; } #pagefoldtarget .nbPF.nbPFHover { background-position: left -129px !important; width:400px; height: 400px; } #pagefoldtarget .nbPF.nbPFRight.nbPFHover { background-position: right -129px !important; } #mmonetbar.mmortl {direction:rtl; left:auto; right:0;} #mmonetbar.mmortl #mmoLogo { float: right; overflow: hidden; } #mmonetbar.mmortl .mmoBoxMiddle { width: 250px; } #mmonetbar.mmortl .mmoGame label {float:right; text-align:left !important; font-weight:bold; margin-left:0px;} #mmonetbar.mmortl ul {text-align:right;} #mmonetbar.mmortl .mmoSelectbox {float:right; margin:3px 3px 0 0; text-align:right;} *+html #mmonetbar.mmortl .mmoSelectbox {direction:ltr;} * html #mmonetbar.mmortl .mmoSelectbox {direction:ltr;} *+html #mmonetbar.mmortl .mmoSelectArea {direction:rtl;} * html #mmonetbar.mmortl .mmoSelectArea {direction:rtl;} #mmonetbar.mmortl .mmoOptionsDivVisible ul.mmoLangList.mmoListHeight li {padding:2px 0 2px 15px !important;} *+html #mmonetbar.mmortl .mmoOptionsDivVisible ul.mmoLangList.mmoListHeight li {padding:2px 15px 2px 5px !important;} #mmonetbar.mmortl .mmoSelectText {float:right;} #mmonetbar.mmortl .mmoSelectArea .mmoSelectButton {background-position:-142px -8px; float:left;} #mmonetbar.mmortl #mmoLangs .mmoflag {padding:0 23px 0 0 !important;} #mmonetbar.mmortl #mmoNews .mmoBoxMiddle {width:auto;} #mmonetbar.mmortl #mmoNews {float:right;} #mmonetbar.mmortl #mmoNews #mmoNewsContent {text-align:right;} #mmonetbar.mmortl #mmoUsers {float:right;} #mmonetbar.mmortl #mmoUsers .mmoBoxMiddle {text-align:right;} #mmonetbar.mmortl #mmoUsers .mmoBoxMiddle .label {float:right;} #mmonetbar.mmortl #mmoUsers .mmoBoxLeft {width:5px;} #mmonetbar.mmortl #mmoUsers .mmoBoxRight {width:20px; background-position:-114px -4px;} #mmonetbar.mmortl #mmoFocus {left:0;} #mmonetbar.mmortl .nojsGame .mmoSelectbox {float:right; margin:0px 3px 0 0;} #mmonetbar.mmortl .nojsGame #mmoCountrySelect, #mmonetbar.mmortl .nojsGame #mmoGameSelect {text-align:right;} #mmonetbar.mmortl .nojsGame .mmoGameBtn {float:right; margin:3px 7px 0 0;} #mmonetbar.mmortl .mmoOptionsDivVisible {left:auto;ight:0;} * html #mmonetbar.mmortl .nojsGame .mmoSelectbox {margin:2px 3px 0 0;} #mmonetbar.mmortl .mmoGame { float: right; width: 300px; } #mmonetbar.mmortl .mmonewsout .mmoGame { width: 260px; } #mmonetbar.mmortl #mmoLangs { float: right; } #mmonetbar.mmortl div#mmoGamesOverviewPanel { left: 0; right: auto; } #mmonetbar.mmortl div#mmoGamesOverviewToggle { padding: 4px 414px 4px 0; } #mmonetbar.mmortl div#mmoGamesOverviewToggle h4 a { padding: 0 10px 0 0; text-align: right; } #mmonetbar.mmortl div#mmoGamesOverviewToggle h4 a span.mmoNbPseudoSelect_icon { left: 0; right: auto; background-position: -142px -8px; } #mmonetbar.mmortl div#mmoGamesOverviewLists h5 { text-align: right; } #mmonetbar.mmortl div#mmoGamesOverviewLists div#mmoGamesOverviewCountry { left: 14px; right: auto; } #mmonetbar.mmortl div#mmoGamesOverviewLists ul li a { text-align: right; } #mmonetbar.mmortl div#mmoGamesOverviewLists ul li a img, #mmonetbar.mmortl div#mmoGamesOverviewLists ul li.mmoGameIcon a span { right: 18px; left: auto; } #mmonetbar .mmolangout {width:420px !important;} ';
+    var mmostyle = document.createElement('style');
+    if (navigator.appName == "Microsoft Internet Explorer") {
+        mmostyle.setAttribute("type", "text/css");
+        mmostyle.styleSheet.cssText = mmoCSS;
+    } else {
+        var mmostyleTxt = document.createTextNode(mmoCSS);
+        mmostyle.type = 'text/css';
+        mmostyle.appendChild(mmostyleTxt);
+    }
+    document.getElementsByTagName('head')[0].appendChild(mmostyle);
+</script>
+
+<noscript>
+<style type="text/css">
+
+ body {margin:0; padding:0;} #mmonetbar { background:transparent url(http://gf1.geo.gfsrv.net/cdnfa/ac42d4c2f0669e88f3352cfe1b225b.png) repeat-x; font:normal 11px Tahoma, Arial, Helvetica, sans-serif; height:32px; left:0; padding:0; position:absolute; text-align:center; top:0; width:100%; z-index:3000; } #mmonetbar #mmoContent { height:32px; margin:0 auto; width:1024px; position: relative; } #mmonetbar #mmoLogo { background:transparent url(http://gf3.geo.gfsrv.net/cdnb8/67ac6699570bc204887dc1587a58d3.png) no-repeat top left; float:left; display:block; height:32px; width:108px; text-indent: -9999px; } #mmonetbar #mmoNews, #mmonetbar #mmoGame, #mmonetbar #mmoFocus, #pagefoldtarget { display:none !important; } 
+</style>
+</noscript>
+
+<div id="mmonetbar" class="mmometin2 mmortl">
+    <script type="text/javascript">
+function mmoEl(name){if(document.getElementById){return document.getElementById(name);}
+else if(document.all){return document.all[name];}
+else if(document.layers){return document.layers[name];}
+return false;}
+function mmoJump(el){window.location.href=el.options[el.selectedIndex].value;}
+var mmo_tickDly=3000;var mmo_tickFadeDly=50;var mmo_tickFadeTicks=10;var mmoTickEl=null;var mmoTickItems=null;var mmoTickIdx=0;var mmoTickState=0;var mmoTickFade=1;var mmoTickHalt=false;function mmoTicker(){var f=0;try{mmoTickEl=mmoEl('mmoNewsticker');if(mmoTickEl){mmoTickItems=mmoTickEl.getElementsByTagName("li");if(mmoTickItems){f=1;}}}catch(e){f=0;}
+if(!f){setTimeout(mmoTicker,10);return;}
+setTimeout(mmoTicknext,0);}
+function mmoTicknext(){if(mmoTickHalt){mmoTickAlphaFor(mmoTickEl,100);setTimeout(mmoTicknext,500);return;}
+if(mmoTickState==0){mmoTickFade=mmoTickFade-1;mmoTickAlpha();if(mmoTickFade<=0){mmoTickState=1;setTimeout(mmoTicknext,0);return;}
+setTimeout(mmoTicknext,mmo_tickFadeDly);return;}
+if(mmoTickState==1){mmoTickItems[mmoTickIdx].className="";mmoTickIdx++;if(mmoTickIdx>=mmoTickItems.length)mmoTickIdx=0;mmoTickItems[mmoTickIdx].className="mmoTickShow";setTimeout(mmoTicknext,mmo_tickFadeDly);mmoTickState=2;return;}
+if(mmoTickState==2){mmoTickFade=mmoTickFade+1;mmoTickAlpha();if(mmoTickFade>=mmo_tickFadeTicks){if(mmoTickItems.length<2)return;mmoTickState=0;setTimeout(mmoTicknext,mmo_tickDly);return;}
+setTimeout(mmoTicknext,mmo_tickFadeDly);return;}}
+function mmoTickAlpha(){var a=(100/mmo_tickFadeTicks)*mmoTickFade;mmoTickAlphaFor(mmoTickEl,a);}
+function mmoTickAlphaFor(el,a){el.style.filter='Alpha(opacity='+a+')';el.style.opacity=a/100;el.style.MozOpacity=a/100;el.style.KhtmlOpacity=a/100;}
+var mmoActive_select=null;function mmoInitSelect(){if(!document.getElementById)return false;document.getElementById('mmonetbar').style.display='block';document.getElementById('mmoGame').style.display='block';document.getElementById('mmoFocus').onkeyup=function(e){mmo_selid=mmoActive_select.id.replace('mmoOptionsDiv','');var e=e||window.event;if(e.keyCode)var thecode=e.keyCode;else if(e.which)var thecode=e.which;mmoSelectMe(mmo_selid,thecode);}}
+function mmoSelectMe(selid,thecode){var mmolist=document.getElementById('mmoList'+selid);var mmoitems=mmolist.getElementsByTagName('li');switch(thecode){case 13:mmoShowOptions(selid);window.location=mmoActive_select.url;break;case 38:mmoActive_select.activeit.className='';var minus=((mmoActive_select.activeid-1)<=0)?'0':(mmoActive_select.activeid-1);mmoActive_select=mmoSetActive(selid,minus);break;case 40:mmoActive_select.activeit.className='';var plus=((mmoActive_select.activeid+1)>=mmoitems.length)?(mmoitems.length-1):(mmoActive_select.activeid+1);mmoActive_select=mmoSetActive(selid,plus);break;default:thecode=String.fromCharCode(thecode);var found=false;for(var i=0;i<mmoitems.length;i++){var _a=mmoitems[i].getElementsByTagName('a');if(navigator.appName.indexOf("Explorer")>-1){}
+else{txtContent=_a[0].textContent;}
+if(!found&&(thecode.toLowerCase()==txtContent.charAt(0).toLowerCase())){mmoActive_select.activeit.className='';mmoActive_select=mmoSetActive(selid,i);found=true;}}
+break;}}
+function mmoSetActive(selid,itemid){mmoActive_select=null;var mmolist=document.getElementById('mmoList'+selid);var mmoitems=mmolist.getElementsByTagName('li');mmoActive_select=document.getElementById('mmoOptionsDiv'+selid);;mmoActive_select.selid=selid;if(itemid!=undefined){var _a=mmoitems[itemid].getElementsByTagName('a');var textVar=document.getElementById("mmoMySelectText"+selid);textVar.innerHTML=_a[0].innerHTML;if(selid==1)textVar.className=_a[0].className;mmoitems[itemid].className='mmoActive';}
+for(var i=0;i<mmoitems.length;i++){if(mmoitems[i].className=='mmoActive'){mmoActive_select.activeit=mmoitems[i];mmoActive_select.activeid=i;mmoActive_select.url=(mmoitems[i].getElementsByTagName('a'))?mmoitems[i].getElementsByTagName('a')[0].href:null;}}
+return mmoActive_select;}
+function mmoShowOptions(g){var _elem=document.getElementById("mmoOptionsDiv"+g);if((mmoActive_select)&&(mmoActive_select!=_elem)){mmoActive_select.className="mmoOptionsDivInvisible";document.getElementById('mmonetbar').focus();}
+if(_elem.className=="mmoOptionsDivInvisible"){document.getElementById('mmoFocus').focus();mmoActive_select=mmoSetActive(g);if(document.documentElement){document.documentElement.onclick=mmoHideOptions;}else{window.onclick=mmoHideOptions;}
+_elem.className="mmoOptionsDivVisible";}else if(_elem.className=="mmoOptionsDivVisible"){_elem.className="mmoOptionsDivInvisible";document.getElementById('mmonetbar').focus();}}
+function mmoHideOptions(e){if(mmoActive_select){if(!e)e=window.event;var _target=(e.target||e.srcElement);if((_target.id.indexOf('mmoOptionsDiv')!=-1))return false;if(mmoisElementBefore(_target,'mmoSelectArea')==0&&(mmoisElementBefore(_target,'mmoOptionsDiv')==0)){mmoActive_select.className="mmoOptionsDivInvisible";mmoActive_select=null;}}else{if(document.documentElement)document.documentElement.onclick=function(){};else window.onclick=null;}}
+function mmoisElementBefore(_el,_class){var _parent=_el;do _parent=_parent.parentNode;while(_parent&&(_parent.className!=null)&&(_parent.className.indexOf(_class)==-1))
+return(_parent.className&&(_parent.className.indexOf(_class)!=-1))?1:0;}
+var ua=navigator.userAgent.toLowerCase();var ie6browser=((ua.indexOf("msie 6")>-1)&&(ua.indexOf("opera")<0))?true:false;function highlight(el,mod){if(ie6browser){if(mod==1&&!el.className.match(/highlight/))el.className=el.className+' highlight';else if(mod==0)el.className=el.className.replace(/highlight/g,'');}}
+var mmoToggleDisplay={init:function(wrapper){var wrapper=document.getElementById(wrapper);if(!wrapper)return;var headline=wrapper.getElementsByTagName("h4")[0],link=headline.getElementsByTagName("a")[0];if(link.className.indexOf("gameCountZero")!=-1)return false;var panel=document.getElementById(link.hash.substr(1));mmoToggleDisplay.hidePanel(panel,link);link.onclick=function(e){mmoToggleDisplay.loadImages();mmoToggleDisplay.toggle(this,panel);return false;};mmoToggleDisplay.outerClick(wrapper,link,panel);var timeoutID=null,delay=8000;wrapper.onmouseout=function(e){if(!e){var e=window.event;}
+var reltg=(e.relatedTarget)?e.relatedTarget:e.toElement;if(reltg==wrapper||mmoToggleDisplay.isChildOf(reltg,wrapper)){return;}
+timeoutID=setTimeout(function(){mmoToggleDisplay.hidePanel(panel,link);},delay);};wrapper.onmouseover=function(e){if(timeoutID){clearTimeout(timeoutID);}};},isChildOf:function(child,parent){while(child&&child!=parent){child=child.parentNode;}
+if(child==parent){return true;}else{return false;}},hidePanel:function(panel,link){panel.style.display="none";link.className="toggleHidden";},toggle:function(link,panel){panel.style.display=panel.style.display=="none"?"block":"none";link.className=link.className=="toggleHidden"?"":"toggleHidden";},outerClick:function(wrapper,link,panel){document.body.onclick=function(e){if(!e){e=window.event};if(!(mmoToggleDisplay.isChildOf((e.target||e.srcElement),wrapper))&&panel.style.display!="none"){mmoToggleDisplay.toggle(link,panel);}}},loadImages:function(){var script=document.createElement("script");script.type="text/javascript";var jsonGameData_browser='[]',jsonGameData_client='[]',jsonGameData_featured='{"4story":"http:\/\/gf2.geo.gfsrv.net\/cdn79\/24c8897b5c4484993b07b8040b5140.png"}';script.text='';script.text+=' mmoToggleDisplay.callback('+jsonGameData_featured+', "featured");';script.text+=' mmoToggleDisplay.callback('+jsonGameData_client+', "client");';script.text+='mmoToggleDisplay.callback('+jsonGameData_browser+', "browser");';document.getElementsByTagName("head")[0].appendChild(script);mmoToggleDisplay.loadImages=function(){};},callback:function(data,gamesCat){for(var gameName in data){var gameSpan=document.getElementById("gameImgTarget_"+gameName);if(!gameSpan){return false;}
+var gameImg=document.createElement("img");gameImg.src=""+data[gameName];gameImg.alt="";gameSpan.appendChild(gameImg);}}}    </script>
+    <div id="mmoContent" class="mmonewsout">
+
+        <a id="mmoLogo" target="_top" href="http://ae.gameforge.com/games/metin2?kid=5-29849-02049-1105-10112139" title="Gameforge.com &ndash; Feel free to play">Gameforge.com &ndash; Feel free to play</a>
+
+            <!-- news -->
+            <div id="mmoNews">
+                <div class="mmoBoxLeft"></div>
+                <div class="mmoBoxMiddle" onmouseover="mmoTickHalt=true;" onmouseout="mmoTickHalt=false;">
+                    <div class="mmoNewsContent">
+                        <div id="mmoNewsticker">
+                            <ul>
+                                        <li class="mmoTickShow"><a target="_top" href="http://ae.ogame.org?kid=5-00149-02049-1105-1202719f"><b>OGame</b> - Play for free now!</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mmoBoxRight"></div>
+            </div>
+
+
+        <div id="mmoGame" class="mmoGame">
+            <div class="mmoBoxLeft"></div>
+            <div class="mmoBoxMiddle">
+
+                <!--<div id="mmoGames"></div>-->
+
+                <div id="mmoLangs">
+                        <label>???? ?????:</label>
+                        <div id="mmoLangSelect" class="mmoSelectbox">
+                            <div id="mmoSarea1" onclick="mmoShowOptions(1)" class="mmoSelectArea">
+                                <div class="mmoSelectText" id="mmoMySelectContent1">
+    <div id="mmoMySelectText1" class="mmoflag mmo_AE">???????? ??????? ???????</div>                                </div>
+                                <div class="mmoSelectButton"></div>
+                            </div>
+                            <div class="mmoOptionsDivInvisible" id="mmoOptionsDiv1">
+                                <ul class="mmoLangList mmoListHeight" id="mmoList1">
+    <li><a href="http://metin2.es/?kid=5-02009-02049-1105-120121db" target="_top" rel="nofollow" class="mmoflag mmo_ES">???????</a></li>
+<li class="mmoActive"><a href="http://metin2.ae/?kid=5-02049-02049-1105-1201212e" target="_top" rel="nofollow" class="mmoflag mmo_AE">???????? ??????? ???????</a></li>
+<li><a href="http://metin2.com.pt/?kid=5-02017-02049-1105-12012177" target="_top" rel="nofollow" class="mmoflag mmo_PT">????????</a></li>
+<li><a href="http://metin2.cz/?kid=5-02031-02049-1105-12012188" target="_top" rel="nofollow" class="mmoflag mmo_CZ">????????? ????????</a></li>
+<li><a href="http://metin2.dk/?kid=5-02020-02049-1105-12012126" target="_top" rel="nofollow" class="mmoflag mmo_DK">????????</a></li>
+<li><a href="http://metin2.de/?kid=5-02006-02049-1105-1201215b" target="_top" rel="nofollow" class="mmoflag mmo_DE">???????</a></li>
+<li><a href="http://metin2.hu/?kid=5-02032-02049-1105-120121db" target="_top" rel="nofollow" class="mmoflag mmo_HU">?????</a></li>
+<li><a href="http://metin2.com.mx/?kid=5-02039-02049-1105-1201211b" target="_top" rel="nofollow" class="mmoflag mmo_MX">???????</a></li>
+<li><a href="http://metin2.com/?kid=5-02045-02049-1105-12012182" target="_top" rel="nofollow" class="mmoflag mmo_US">???????? ??????? ?????????</a></li>
+<li><a href="http://metin2.gr/?kid=5-02027-02049-1105-1201218c" target="_top" rel="nofollow" class="mmoflag mmo_GR">???????</a></li>
+<li><a href="http://metin2.it/?kid=5-02010-02049-1105-12012134" target="_top" rel="nofollow" class="mmoflag mmo_IT">???????</a></li>
+<li><a href="http://metin2.co.uk/?kid=5-02007-02049-1105-12012157" target="_top" rel="nofollow" class="mmoflag mmo_EN">????????</a></li>
+<li><a href="http://metin2.pl/?kid=5-02011-02049-1105-120121c5" target="_top" rel="nofollow" class="mmoflag mmo_PL">??????</a></li>
+<li><a href="http://metin2.org/?kid=5-02014-02049-1105-120121d5" target="_top" rel="nofollow" class="mmoflag mmo_TR">?????</a></li>
+<li><a href="http://metin-2.ru/?kid=5-02015-02049-1105-120121e7" target="_top" rel="nofollow" class="mmoflag mmo_RU">?????</a></li>
+<li><a href="http://metin2.ro/?kid=5-02033-02049-1105-120121c9" target="_top" rel="nofollow" class="mmoflag mmo_RO">???????</a></li>
+<li><a href="http://metin2.fr/?kid=5-02008-02049-1105-12012185" target="_top" rel="nofollow" class="mmoflag mmo_FR">?????</a></li>
+<li><a href="http://metin2.nl/?kid=5-02013-02049-1105-120121c6" target="_top" rel="nofollow" class="mmoflag mmo_NL">??????</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="mmoBoxRight"></div>
+
+                <div id="mmoGamesOverviewPanel">
+                    <div id="mmoGamesOverviewToggle">
+                        <h4>
+                            <a href="#mmoGamesOverviewLists">?????? ?? ???????<span class="mmoNbPseudoSelect_icon"></span></a>
+                            <span class="mmoNbBoxEdge mmoNbBoxEdge_left"></span>
+                            <span class="mmoNbBoxEdge mmoNbBoxEdge_right"></span>
+                        </h4>
+                    </div>
+                            <div id="mmoGamesOverviewLists">
+                            <div id="mmoGamesOverviewCountry" class="mmo_AE"></div>
+
+                                        <!-- Section: Featured Game -->
+                                <h5>???? ??? ??????</h5>
+                                <ul id="mmoGamesOverview_featured">
+                                                    <li>
+                                            <a href="http://4story.ae/?kid=5-23349-02049-1105-12028164" title="???? ??????" target="_blank">
+                                                <span id="gameImgTarget_4story" class="gameImgTarget"></span>
+                                                <span class="gameName">4Story</span>
+                                            </a>
+                                        </li>
+                                                                </ul>
+                            
+                                                            <!-- Section: Client Games -->
+                                <h5>????? ????</h5>
+                                <ul id="mmoGamesOverview_client">
+                                                                    </ul>
+                                
+                                </div><!-- /mmoGamesOverviewLists -->
+                    </div><!-- /mmoGamesOverviewPanel -->
+                    </div><!-- /mmoGame -->
+        <input id="mmoFocus" type="text" size="5" />
+    </div><!-- /mmoContent -->
+</div><!-- /mmonetbar -->
+
+<!-- metin2/ae game 12.01.2014 01:21 -->
+<script type="text/javascript">
+    mmoInitSelect();
+mmoTicker();    mmoToggleDisplay.init("mmoGamesOverviewPanel");
+</script>
+
+
+<!-- #/MMO:NETBAR# -->
+</div>
+    <header role="banner">
+        <!-- header -->
+        <section id="slideshow_slides" data-viewport=".carousel.container>.carousel" data-ui=".ui.container>.carousel">
+                    </section>
+        
+        <div class="carousel container">
+                        <div class="carousel">
+                <!-- script insert background slides here! -->
+            </div>
+        </div>
+        <h1 class="logo">Metin 2 - the Dark Dragons</h1>
+        <div class="ui container">
+                        <a class="playfree" role="button" href="http://ae.metin2.gameforge.com/user/register">???? ??????</a>
+                                </div>
+    </header>
+    
+    <div class="container">
+
+        <div role="navigation">
+            <nav>
+                <ul>
+                    <li><a href="http://ae.metin2.gameforge.com/">????????</a></li>
+                    <li><a href="http://ae.metin2.gameforge.com/main/news">??????</a>
+                        <ul>
+                            <li><a href="http://ae.metin2.gameforge.com/main/news">??? ???????</a></li>
+                            <li><a href="http://ae.metin2.gameforge.com/main/newsarchive">?????</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://ae.metin2.gameforge.com/main/thegame">??????</a>
+                        <ul>
+                            <li><a href="http://ae.metin2.gameforge.com/main/thegame">?????????</a></li>
+                            <li><a href="http://ae.metin2.gameforge.com/main/characterclasses">????? ???????</a></li>
+                            <li><a href="http://ae.metin2.gameforge.com/main/empires">???????????</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://ae.metin2.gameforge.com/main/media">????? ????</a>
+                        <ul>
+                            <li><a href="http://ae.metin2.gameforge.com/main/media#screenshots">??? ??????</a></li>
+                                                        <li><a href="http://ae.metin2.gameforge.com/main/media#wallpaper">????? ??????</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://ae.metin2.gameforge.com/main/download">?????</a></li>
+                    <li><a href="http://ae.metin2.gameforge.com/main/howto">??????? ??????</a>
+                        <ul>
+                            <li><a href="http://ae.metin2.gameforge.com/main/howto">??????? ??????</a></li>
+                            <li><a href="http://ae.metin2.gameforge.com/main/tutorials">???? ??????</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://ae.metin2.gameforge.com/main/community">????? ??????</a>
+                        <ul>
+                            <li><a href="http://ae.metin2.gameforge.com/main/codeOfConduct">????? ??????</a></li>
+                            <li><a href="http://ae.metin2.gameforge.com/main/board" target="_blank">???????</a></li>
+                            <li><a href="http://ae.metin2.gameforge.com/main/support" target="_blank">???? ???????</a></li>
+                            <li><a href="http://ae.metin2.gameforge.com/main/wiki" target="_blank">????</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://ae.metin2.gameforge.com/main/account">??????</a>
+                        <ul>
+                            <li><a href="http://ae.metin2.gameforge.com/main/account">???? ??????</a></li>
+                            <li><a href="http://ae.metin2.gameforge.com/main/pc">???? ???????</a></li>
+                            <li><a href="http://ae.metin2.gameforge.com/main/cheat">????</a></li>
+                            <li><a href="http://ae.metin2.gameforge.com/main/help">??????!</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div role="main">
+    <!-- content area -->
+        <article class="trailer">
+        <iframe width="472" height="266" src="https://www.youtube.com/embed/7F_jj8Vm_Y8?wmode=transparent&rel=0" frameborder="0" allowfullscreen></iframe>
+    </article>
+    
+    <article>
+        <h2>Metin 2 ??????? ????? MMORPG</h2>
+        <p>??? ??? ???? ???? ??? ?????? ???????? ??????????? ???????? ?????? ???????. ??? ?? <strong>???? ????? ??????</strong> ??? ???? ???? ????: ????? ???? ?? <strong>????? ???????</strong> ????? ????? ????? ?? ??????? ??? ??? ???? ?? ????? ??????? ???? ?? ???? ????? ????? ????. ??? ?? ???? ???? ???? ??? ?????????????? ????? ????????? ??? ???? ?????? ???????? ??????? ?? ??? ??????? ????? ??????. ?? <strong>????? ?????? ????????</strong> ?? <strong>?????? ??????? ?????? ???????</strong>.
+<strong>???? ????? ??????? ????</strong> ??? ????? ?? ??????????? ?? ?????? ???? ??????? ?????? ???????!</p>
+    </article>
+
+    <article class="mini-gallery">
+        <a rel="screenshots" href="http://gf3.geo.gfsrv.net/cdn26/b9175166c80e99254e158f4d236fad.jpg">
+            <img src="http://gf1.geo.gfsrv.net/cdnc8/9b9d9ba47d323374f55abaa709a215.jpg" />
+        </a>
+
+        <a rel="screenshots" href="http://gf2.geo.gfsrv.net/cdnd4/ad6f41888f183360c13ad83d99ffce.jpg">
+            <img src="http://gf1.geo.gfsrv.net/cdncc/9ffdbbcadf9bc7c8c4732baaf58b79.jpg" />
+        </a>
+
+        <a rel="screenshots" href="http://gf1.geo.gfsrv.net/cdn61/b81358cc33d028fb907d913323ca41.jpg">
+            <img src="http://gf1.geo.gfsrv.net/cdnc3/7bb73148bc216c5fd2275c25548a61.jpg" />
+        </a>
+
+        <a rel="screenshots" href="http://gf3.geo.gfsrv.net/cdnb2/634586bfaffc033d9cf380c0a720ee.jpg">
+            <img src="http://gf3.geo.gfsrv.net/cdn25/ace48af69025cc1bd24f35118d7dbf.jpg" />
+        </a>
+
+    </article>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".mini-gallery a").fancybox({
+            overlayOpacity: 0.9,
+            overlayColor: '#000',
+            transitionIn: 'elastic',
+            transitionOut: 'elastic'
+        });
+    });
+</script>
+        <div class="secondary">
+            <!-- side boxes -->
+                    <aside class="login" role="complementary">
+                    <h2>????? ??????</h2>
+                    <form action="http://ae.metin2.gameforge.com/user/login" method="post" name="loginFormElement">
+                                            <div class="form-login">
+                            <label>??? ????????</label>
+                            <div class="input">
+                                <input type="text" value="" id="name" name="username" maxlength="30" />
+                            </div>
+                            <label>???? ????</label>
+                            <div class="input">
+                                <input type="password" value="" name="password" maxlength="32"/>
+                            </div>
+                            <div>
+                                <input type="submit" class="button btn-login" onclick="document.forms['loginFormElement'].submit();return false;" value="????? ??????" />
+                                <p class="agbok">
+                                    ????? ??? ?????? ?????? ??? <a href="http://agbserver.gameforge.com/arAE-Terms-Metin2.html" target="_blank"><strong>??????? ???????</strong></a>                                    <a href="http://ae.metin2.gameforge.com/user/passwordlostrequest" rel="nofollow" class="password">?? ???? ???? ???????</a>
+                                    <a href="http://ae.metin2.gameforge.com/user/resendack" rel="nofollow" class="password">????? ????? ???? ???????</a>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+            </aside>
+            
+            <aside class="download" role="complementary">
+                <h2>?????</h2>
+                <a href="http://ae.metin2.gameforge.com/main/download" title="Hier klicken um Metin2 herunter zu laden!">Hier klicken um Metin2 herunter zu laden!</a>
+            </aside>
+                
+        
+            <aside class="highscore" role="complementary">
+                <h2>???? ?????</h2>
+
+                            <form action="#">
+                    <select class="world" onchange="storeHighscoreServer(this.options[this.selectedIndex].value);">
+                                                    <option value="1" selected="selected">
+                            ??????                            </option>
+                                                    <option value="2">
+                            ????                            </option>
+                                                    <option value="3">
+                            ????                            </option>
+                                                    <option value="4">
+                            ????                            </option>
+                                            </select>
+                </form>
+            
+                <ul class="tabcontrols">
+                    <li class="selected"><a href="#players"><img src="http://gf2.geo.gfsrv.net/cdna3/232b3d471340f1d6bed8d4deccc169.png" alt="Spieler" title="Spieler" /></a></li>
+                    <li><a href="#guilds"><img src="http://gf3.geo.gfsrv.net/cdn21/f46f0d2068aca9e35f0359d1f1b020.png" alt="Gilden" title="Gilden" /></a></li>
+                </ul>
+
+                <div class="tab players selected">
+                    <div id="highscore-player">
+                                                    <table>
+        <tr>
+        <td class="position">1</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/highscore">IxRmshxI</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire3.png" title="?????????? ????" alt="?????????? ????" />
+        </td>
+    </tr>
+    <tr class="alt">
+        <td class="position">2</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/highscore">Lv105</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire2.png" title="?????????? ?????" alt="?????????? ?????" />
+        </td>
+    </tr>
+    <tr>
+        <td class="position">3</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/highscore">IIxRmshxII</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire3.png" title="?????????? ????" alt="?????????? ????" />
+        </td>
+    </tr>
+    <tr class="alt">
+        <td class="position">4</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/highscore">saaarr</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire2.png" title="?????????? ?????" alt="?????????? ?????" />
+        </td>
+    </tr>
+    <tr>
+        <td class="position">5</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/highscore">xxRmshxx</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire3.png" title="?????????? ????" alt="?????????? ????" />
+        </td>
+    </tr>
+    <tr class="alt">
+        <td class="position">6</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/highscore">RedGiant</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire3.png" title="?????????? ????" alt="?????????? ????" />
+        </td>
+    </tr>
+    <tr>
+        <td class="position">7</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/highscore">OoSHAHEENoO</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire3.png" title="?????????? ????" alt="?????????? ????" />
+        </td>
+    </tr>
+    <tr class="alt">
+        <td class="position">8</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/highscore">AlCount</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire2.png" title="?????????? ?????" alt="?????????? ?????" />
+        </td>
+    </tr>
+    <tr>
+        <td class="position">9</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/highscore">hope2010</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire2.png" title="?????????? ?????" alt="?????????? ?????" />
+        </td>
+    </tr>
+    <tr class="alt">
+        <td class="position">10</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/highscore">IRmshI</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire3.png" title="?????????? ????" alt="?????????? ????" />
+        </td>
+    </tr>
+</table>
+                                            </div>
+                    <a href="http://ae.metin2.gameforge.com/main/highscore" rel="nofollow">????? ???100</a>
+                </div>
+
+                <div class="tab guilds">
+                    <div id="highscore-guild">
+                                                    <table>
+        <tr>
+        <td class="position">1</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/guildhighscore">DuelMaSTeRs</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire2.png" title="?????????? ?????" alt="?????????? ?????" />
+        </td>
+    </tr>
+    <tr class="alt">
+        <td class="position">2</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/guildhighscore">cairo</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire1.png" title="?????????? ?????" alt="?????????? ?????" />
+        </td>
+    </tr>
+    <tr>
+        <td class="position">3</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/guildhighscore">QaLaQ</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire3.png" title="?????????? ????" alt="?????????? ????" />
+        </td>
+    </tr>
+    <tr class="alt">
+        <td class="position">4</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/guildhighscore">SCOLFID</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire1.png" title="?????????? ?????" alt="?????????? ?????" />
+        </td>
+    </tr>
+    <tr>
+        <td class="position">5</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/guildhighscore">KSaHeroS</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire3.png" title="?????????? ????" alt="?????????? ????" />
+        </td>
+    </tr>
+    <tr class="alt">
+        <td class="position">6</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/guildhighscore">EGRAM</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire2.png" title="?????????? ?????" alt="?????????? ?????" />
+        </td>
+    </tr>
+    <tr>
+        <td class="position">7</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/guildhighscore">LeGenDs</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire2.png" title="?????????? ?????" alt="?????????? ?????" />
+        </td>
+    </tr>
+    <tr class="alt">
+        <td class="position">8</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/guildhighscore">RenZoKen</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire3.png" title="?????????? ????" alt="?????????? ????" />
+        </td>
+    </tr>
+    <tr>
+        <td class="position">9</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/guildhighscore">Dream</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire3.png" title="?????????? ????" alt="?????????? ????" />
+        </td>
+    </tr>
+    <tr class="alt">
+        <td class="position">10</td>
+        <td class="name"><a href="http://ae.metin2.gameforge.com/main/guildhighscore">LandOfArabs</a></td>
+        <td class="faction">
+            <img src="/cdn/img/empire3.png" title="?????????? ????" alt="?????????? ????" />
+        </td>
+    </tr>
+</table>
+                                            </div>
+
+                    <a href="http://ae.metin2.gameforge.com/main/guildhighscore" rel="nofollow">????? ???100</a>
+                </div>
+
+            </aside>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <!-- age -->
+            <a class="pegi" href="http://www.pegi.info">
+                <img src="http://gf1.geo.gfsrv.net/cdn95/e338bdbd2fe912366fbf0d507d85a3.png" alt="PEGI 12" title="Altersfreigabe ab 12" />
+                <img src="http://gf2.geo.gfsrv.net/cdnae/259a306a748760a35edd45b9290a2a.png" alt="Online" title="Online" />
+                <img src="http://gf3.geo.gfsrv.net/cdnee/38712bcd24152058ca1e41da984f26.png" alt="Gewalt" title="Gewalt" />
+            </a>
+            <a class="usk" href="http://www.usk.de">
+                <img src="http://gf1.geo.gfsrv.net/cdn07/a3b20580853004c9d483a205857635.png" alt="USK 12" title="Altersfreigabe ab 12" />
+            </a>
+            <a class="safeplay" href="http://corporate.gameforge.com/produkte/safe-play/">
+                <img src="http://gf1.geo.gfsrv.net/cdn38/6d622f73816910cab615070ef575b8.png" alt="safeplay" title="safeplay" />
+            </a>
+
+            <!-- links -->
+            <a class="gameforge4d" href="http://de.gameforge.com" target="_blank" rel="nofollow">gameforge</a>
+
+            <!-- copyrights -->
+            <p>©2012 WEBZEN YMIR GAMES Co. Ltd. ???? ?????? ??????. 
+???? METIN2 ????? WEBZEN YMIR GAMES ???? ???? ??? ??? ????? ?????? ?? ????? ?????? ??????? ??????? ???? WEBZEN YMIR GAMES. ???? ???????? ???????? ??? ???????? ????????. ??????: Gameforge 4D GmbH</p>
+
+            <a class="sitenotice" href="http://agbserver.gameforge.com/arAE-Imprint-Metin2.html">??????</a>
+            <a class="termsconditions" href="http://agbserver.gameforge.com/arAE-Terms-Metin2.html">???? ?????????</a>
+            <a class="privacy" href="http://agbserver.gameforge.com/arAE-Privacy-Metin2.html">???? ????????</a>
+
+       </div>
+    </footer>
+        <div style="display: none;">
+        <!-- GFTracking -->
+<script type="text/javascript" src="http://pixelzirkus.gameforge.com/functions.js"></script>
+<script type="text/javascript">
+setPixel ({
+'location':'VISIT',
+'product':'metin2',
+'language':'ae',
+'server-id':'1'
+});
+</script><!-- /GFTracking -->    </div>
+    </body>
+</html>

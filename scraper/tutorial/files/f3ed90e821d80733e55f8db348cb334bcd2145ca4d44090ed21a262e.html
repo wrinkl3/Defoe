@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<!--
+#######################################################################################################################
+#   _     _      _     _      _     _      _     _      _     _      _     _      _     _      _     _      _     _   #
+#  (c).-.(c)    (c).-.(c)    (c).-.(c)    (c).-.(c)    (c).-.(c)    (c).-.(c)    (c).-.(c)    (c).-.(c)    (c).-.(c)  #
+#   / ._.       / ._.       / ._.       / ._.       / ._.       / ._.       / ._.       / ._.       / ._.    #
+# __( Y )/__  __( Y )/__  __( Y )/__  __( Y )/__  __( Y )/__  __( Y )/__  __( Y )/__  __( Y )/__  __( Y )/__ #
+#(_.-/'-'-._)(_.-/'-'-._)(_.-/'-'-._)(_.-/'-'-._)(_.-/'-'-._)(_.-/'-'-._)(_.-/'-'-._)(_.-/'-'-._)(_.-/'-'-._)#
+#   || R ||      || O ||      || O ||      || T ||      || E ||      || R ||      || R ||      || O ||      || R ||   #
+# _.' `-' '._  _.' `-' '._  _.' `-' '._  _.' `-' '._  _.' `-' '._  _.' `-' '._  _.' `-' '._  _.' `-' '._  _.' `-' '._ #
+#(.-./`-`.-.)(.-./`-'.-.)(.-./`-'.-.)(.-./`-'.-.)(.-./`-'.-.)(.-./`-`.-.)(.-./`-`.-.)(.-./`-'.-.)(.-./`-`.-.)#
+# `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-'  `-'     `-' #
+#                                                                                                                     #
+#######################################################################################################################
+-->
+
+<head>
+
+<link href="" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+</head>
+
+<body bgcolor="black" oncontextmenu="return false" onkeydown="return false">
+
+<div id="container">
+	<div id="flag" class="shadowed" title="&#1605;&#1585;&#1603;&#1586; &#1578;&#1608;&#1579;&#1610;&#1602; &#1575;&#1604;&#1575;&#1606;&#1578;&#1607;&#1575;&#1603;&#1575;&#1578; &#1601;&#1610; &#1587;&#1608;&#1585;&#1610;&#1577;">
+
+<title>[ HaCked bY Syrian Anonymous ]</title>
+<link href='http://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
+&nbsp;<!-- no txt inicio --><script language="Javascript">
+<!-- Begin
+function disableselect(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+// End -->
+</script><!-- no txt fin --><META http-equiv=Content-Type content="text/html; charset=windows-1254"><STYLE type=text/css>BODY {
+  SCROLLBAR-FACE-COLOR: #000000; SCROLLBAR-HIGHLIGHT-COLOR: #000000; SCROLLBAR-SHADOW-COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #000000; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #ffffff; FONT-FAMILY: Verdana; SCROLLBAR-DARKSHADOW-COLOR: #000000
+}
+.Estilo10 {
+  COLOR: #ffffff; FONT-FAMILY: Haettenschweiler
+}
+.Estilo8 {
+  FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Haettenschweiler
+}
+</STYLE><SCRIPT LANGUAGE="JavaScript">
+/*
+An object-oriented Typing Text script, to allow for multiple instances.
+A script that causes any text inside any text element to be "typed out", one letter at a time. Note that any HTML tags will not be included in the typed output, to prevent them from causing problems. Tested in Firefox v1.5.0.1, Opera v8.52, Konqueror v3.5.1, and IE v6.
+Browsers that do not support this script will simply see the text fully displayed from the start, including any HTML tags.
+
+Functions defined:
+  TypingText(element, [interval = 100,] [cursor = "",] [finishedCallback = function(){return}]):
+    Create a new TypingText object around the given element.  Optionally
+    specify a delay between characters of interval milliseconds.
+    cursor allows users to specify some HTML to be appended to the end of
+    the string whilst typing.  Optionally, can also be a function which
+    accepts the current text as an argument.  This allows the user to
+    create a "dynamic cursor" which changes depending on the latest character
+    or the current length of the string.
+    finishedCallback allows advanced scripters to supply a function
+    to be executed on finishing.  The function must accept no arguments.
+
+  TypingText.run():
+    Run the effect.
+
+  static TypingText.runAll():
+    Run all TypingText-enabled objects on the page.
+*/
+
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;  // Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 20 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);  // We haven't finished loading yet.  Have patience.
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+  this.currentText = "";
+  this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script><style>
+td{align: center; font-family: Bradley Hand ITC; font-size: 18pt; color: black}
+a{align: center; font-family: Bradley Hand ITC; font-size: 12pt; color: red}
+  
+</style><font size="4" face="Orbitron" color='#585858'><embed src="https://youtube.googleapis.com/v/-vBx-fowBlM%26autoplay=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1"></font><p align="center">
+image
+<center>
+<img border="1"  style="border:1px solid #FFFFFF;" src="http://n4hr.com/up/uploads/f0ab456ec8.jpg" width="1086" height="397"></p></center>
+<center>
+<div id="example1">
+<p id="example2">
+
+<b>
+
+<font size="7" face="Orbitron" color='#424242'>[</font><font size="7" face="Orbitron" color='#FFFFFF'> 
+HaCked bY</font><font size="7" face="Orbitron" color='#808080'> </font>
+
+<font size="7" face="Orbitron" color='#FF0000'> 
+Silent inj3ct0r</font><font size="7" face="Orbitron" color='#04B404'> 
+</font>
+
+<font size="7" face="Orbitron" color='#424242'>]</font><font color="#424242">
+</font>
+</b>
+<br>
+<b>
+<font size="5" face="Orbitron" color='#585858'> 
+<br>
+</font>
+</b>
+<font size="4" face="Orbitron" color='#585858'><b>&nbsp;</b><hr size=3 width= 25% color="#424242" align=center>
+<font size='3' face="Tahoma" color='white'>
+<div id="container0">
+	<div id="flag0" class="shadowed" title="&#1605;&#1585;&#1603;&#1586; &#1578;&#1608;&#1579;&#1610;&#1602; &#1575;&#1604;&#1575;&#1606;&#1578;&#1607;&#1575;&#1603;&#1575;&#1578; &#1601;&#1610; &#1587;&#1608;&#1585;&#1610;&#1577;">
+		<center>
+		<div id="example3">
+			<b><font color="#ff0000" face="Tahoma">&#1575;&#1604;&#1587;&#1604;&#1575;&#1605; &#1593;&#1604;&#1610;&#1603;&#1605; 
+			&#1608;&#1585;&#1581;&#1605;&#1577; &#1575;&#1604;&#1604;&#1607; &#1608;&#1576;&#1585;&#1603;&#1575;&#1578;&#1607;&nbsp; <br>
+			<br>
+			&#1602;&#1576;&#1604; &#1575;&#1606; &#1575;&#1602;&#1608;&#1605; &#1576;&#1573;&#1610;&#1589;&#1575;&#1604; &#1585;&#1587;&#1575;&#1604;&#1578;&#1610; &#1593;&#1604;&#1609; &#1605;&#1608;&#1602;&#1593;&#1603;&#1605; &#1575;&#1604;&#1573;&#1604;&#1603;&#1578;&#1585;&#1608;&#1606;&#1610; .. <br>
+			<br>
+			&#1575;&#1581;&#1576;&#1576;&#1578; &#1575;&#1606; &#1575;&#1606;&#1576;&#1607; &#1604;&#1588;&#1610;&#1569; &#1605;&#1575; &#1593;&#1604;&#1609; &#1580;&#1605;&#1610;&#1593; &#1575;&#1604;&#1605;&#1608;&#1575;&#1602;&#1593; &#1575;&#1604;&#1578;&#1610; &#1571;&#1602;&#1608;&#1605; &#1576;&#1573;&#1582;&#1578;&#1585;&#1575;&#1602;&#1607;&#1575; <br>
+			<br>
+			&#1608;&#1607;&#1610; &#1575;&#1606;&#1606;&#1610; &#1604;&#1587;&#1578; &#1605;&#1606; &#1605;&#1606; &#1610;&#1582;&#1585;&#1576;&#1608;&#1606; &#1575;&#1608; &#1610;&#1602;&#1608;&#1605;&#1608;&#1606; &#1576;&#1606;&#1588;&#1585; &#1605;&#1581;&#1578;&#1608;&#1610;&#1575;&#1578; &#1605;&#1608;&#1575;&#1602;&#1593;&#1603;&#1605; <br>
+			<br>
+			&#1575;&#1606;&#1575; &#1601;&#1602;&#1591; &#1575;&#1583;&#1575;&#1601;&#1593; &#1593;&#1606; &#1575;&#1604;&#1583;&#1610;&#1606; &#1575;&#1604;&#1573;&#1587;&#1604;&#1575;&#1605;&#1610; &#1608;&#1575;&#1608;&#1589;&#1604; &#1585;&#1587;&#1575;&#1604;&#1577; &#1588;&#1593;&#1576;&#1610; <br>
+			<br>
+			&#1575;&#1608;&#1589;&#1604; &#1585;&#1587;&#1575;&#1604;&#1577; &#1591;&#1601;&#1604; &#1580;&#1575;&#1574;&#1593; &#1608;&#1585;&#1587;&#1575;&#1604;&#1577; &#1575;&#1605;&#1585;&#1571;&#1577; &#1605;&#1594;&#1578;&#1589;&#1576;&#1577; &#1608;&#1585;&#1587;&#1575;&#1604;&#1577; &#1588;&#1610;&#1582; &#1602;&#1583; &#1593;&#1584;&#1576; &#1605;&#1606; <br>
+			<br>
+			&#1607;&#1584;&#1607; &#1575;&#1604;&#1581;&#1610;&#1575;&#1577; &#1608;&#1575;&#1605;&#1585;&#1571;&#1577; &#1582;&#1606;&#1587;&#1575;&#1569; &#1590;&#1581;&#1578; &#1576;&#1571;&#1576;&#1606;&#1575;&#1574;&#1607;&#1575; <br>
+			<br>
+			&#1575;&#1606;&#1575; &#1575;&#1608;&#1589;&#1604; &#1585;&#1587;&#1575;&#1604;&#1577; &#1580;&#1606;&#1583;&#1610; &#1575;&#1588;&#1578;&#1575;&#1602; &#1604;&#1571;&#1605;&#1607; &#1575;&#1588;&#1578;&#1575;&#1602; &#1604;&#1585;&#1575;&#1581;&#1578;&#1607;<br>
+			<br>
+			&#1575;&#1606;&#1575; &#1575;&#1608;&#1589;&#1604; &#1585;&#1587;&#1575;&#1604;&#1577; &#1610;&#1578;&#1610;&#1605; &#1601;&#1602;&#1583; &#1575;&#1605;&#1607; &#1608;&#1575;&#1576;&#1575;&#1607; <br>
+			<br>
+			&#1575;&#1606;&#1575; &#1575;&#1608;&#1589;&#1604; &#1585;&#1587;&#1575;&#1604;&#1577; &#1605;&#1594;&#1578;&#1585;&#1576; &#1602;&#1583; &#1583;&#1575;&#1585;&#1578; &#1576;&#1607; &#1575;&#1604;&#1583;&#1606;&#1610;&#1575; &#1583;&#1608;&#1606; &#1594;&#1584;&#1575;&#1569; &#1608;&#1583;&#1608;&#1575;&#1569; &#1608;&#1604;&#1575; &#1581;&#1578;&#1609; &#1593;&#1605;&#1604;
+			<br>
+			<br>
+			&#1575;&#1606;&#1575; &#1588;&#1575;&#1576; &#1604;&#1605; &#1575;&#1578;&#1593;&#1583;&#1609; &#1575;&#1604; 20 &#1605;&#1606; &#1593;&#1605;&#1585;&#1610; :) <br>
+			<br>
+			&#1575;&#1585;&#1609; &#1601;&#1610; &#1575;&#1582;&#1578;&#1585;&#1575;&#1602;&#1610; &#1604;&#1605;&#1608;&#1602;&#1593;&#1603;&nbsp; &#1575;&#1606;&#1606;&#1610; &#1602;&#1583; &#1575;&#1581;&#1585;&#1603; &#1601;&#1610;&#1603; &#1576;&#1593;&#1590; &#1575;&#1604;&#1605;&#1588;&#1575;&#1593;&#1585; &#1604;&#1578;&#1603;&#1608;&#1606; &#1605;&#1606; &#1605;&#1606; &#1607;&#1605;
+			<br>
+			<br>
+			&#1610;&#1581;&#1587;&#1608;&#1606; &#1576;&#1581;&#1606;&#1575;&#1606; &#1575;&#1604;&#1571;&#1605; &#1608;&#1581;&#1606;&#1575;&#1606; &#1575;&#1604;&#1608;&#1591;&#1606; &#1608;&#1581;&#1606;&#1575;&#1606; &#1575;&#1604;&#1581;&#1585;&#1610;&#1577; &#1608;&#1575;&#1604;&#1593;&#1583;&#1575;&#1604;&#1577;&nbsp; <br>
+			<br>
+			&#1608;&#1575;&#1606; &#1603;&#1606;&#1578; &#1605;&#1572;&#1610;&#1583; &#1604;&#1576;&#1588;&#1575;&#1585; &#1575;&#1604;&#1571;&#1587;&#1583;&nbsp; &#1601;&#1593;&#1604;&#1605; &#1580;&#1610;&#1583;&#1575;&#1611; <br>
+			<br>
+			&#1575;&#1606; &#1607;&#1606;&#1575;&#1604;&#1603; &#1610;&#1608;&#1605;&#1610;&#1575;&#1611; &#1575;&#1583;&#1593;&#1610;&#1577; &#1578;&#1571;&#1578;&#1610; &#1593;&#1604;&#1609; &#1605;&#1606; &#1610;&#1608;&#1575;&#1604;&#1610; &#1607;&#1584;&#1575; &#1575;&#1604;&#1591;&#1575;&#1594;&#1610; &#1607;&#1584;&#1575; &#1575;&#1604;&#1587;&#1601;&#1575;&#1581; &#1575;&#1604;&#1605;&#1580;&#1585;&#1605;
+			<br>
+			<br>
+			&#1601;&#1603;&#1605; &#1605;&#1606; &#1583;&#1593;&#1608;&#1577; &#1605;&#1587;&#1578;&#1580;&#1575;&#1576;&#1577; &#1608;&#1582;&#1575;&#1589;&#1577; &#1575;&#1606; &#1603;&#1575;&#1606;&#1578; &#1605;&#1606; &#1605;&#1592;&#1604;&#1608;&#1605; !! &#1567;&#1567; <font size="5"> <br>
+			<br>
+			&#1607;&#1584;&#1607; &#1585;&#1587;&#1575;&#1604;&#1578;&#1610;</font></font><font color="#ffff00" face="Tahoma" size="5">&nbsp; 
+			&#1575;&#1604;&#1588;&#1593;&#1576; &#1575;&#1604;&#1587;&#1608;&#1585;&#1610; &#1575;&#1604;&#1605;&#1592;&#1604;&#1608;&#1605;&nbsp; <br>
+			<br>
+			&#1575;&#1578;&#1605;&#1606;&#1609; &#1575;&#1606; &#1578;&#1589;&#1581;&#1608; &#1575;&#1605;&#1577; &#1575;&#1604;&#1573;&#1587;&#1604;&#1575;&#1605; &#1610;&#1608;&#1605;&#1575;&#1611; &#1605;&#1575;&nbsp; &#1585;&#1576;&#1605;&#1575; &#1581;&#1610;&#1606;&#1607;&#1575; &#1587;&#1578;&#1603;&#1608;&#1606; &#1606;&#1607;&#1575;&#1610;&#1577; &#1573;&#1587;&#1585;&#1575;&#1574;&#1610;&#1604;
+			<br>
+			&nbsp;</font><p><span lang="en-us">
+			<font color="#ffff00" size="5" face="Tahoma">Silent Inj3ct0r <br>
+			<br>
+			</font><font color="#00ffff" size="5" face="Tahoma">Greet To : All 
+			Muslims Hacker <br>
+			<br>
+			And To All Free Syrian Hacker</font></span></b></div>
+		</center></div>
+</div>
+<p>
+&nbsp;
+<br><font size="4" face="Orbitron" color='#585858'><hr size=3 width= 25% color="#424242" align=center>
+</font>
+<p dir="rtl"><span lang="ar-sa">&#1585;&#1587;&#1575;&#1604;&#1577; &#1573;&#1604;&#1609; &#1575;&#1604;&#1593;&#1575;&#1604;&#1605; </span>[<span lang="ar-sa"> 
+&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</span> ]<span lang="ar-sa"> :</span><br>
+&#1571;&#1610;&#1607;&#1575; &#1575;&#1604;&#1593;&#1575;&#1604;&#1605; ...<br></span>&#1575;&#1606;&#1605;&#1575; &#1610;&#1581;&#1589;&#1604; &#1601;&#1610; &#1587;&#1608;&#1585;&#1610;&#1575; &#1605;&#1606; &#1605;&#1580;&#1575;&#1586;&#1585; &#1608;&#1602;&#1578;&#1604; &#1608;&#1575;&#1594;&#1578;&#1589;&#1575;&#1576; &#1604;&#1604;&#1606;&#1587;&#1575;&#1569; &#1608;&#1578;&#1588;&#1585;&#1610;&#1583; 
+&#1604;&#1604;&#1588;&#1610;&#1608;&#1582; &#1608;&#1575;&#1604;&#1606;&#1587;&#1575;&#1569; &#1608;&#1575;&#1604;&#1575;&#1591;&#1601;&#1575;&#1604; &#1604;&#1575; &#1610;&#1605;&#1603;&#1606; &#1575;&#1604;&#1587;&#1603;&#1608;&#1578; &#1593;&#1606;&#1607; &#1605;&#1591;&#1604;&#1602;&#1575; ...<br>
+	&#1608;&#1607;&#1584;&#1575; &#1575;&#1604;&#1575;&#1582;&#1578;&#1585;&#1575;&#1602; &#1604;&#1578;&#1608;&#1589;&#1610;&#1604; &#1585;&#1587;&#1575;&#1604;&#1577; &#1576;&#1587;&#1610;&#1591;&#1577; &#1604;&#1604;&#1593;&#1575;&#1604;&#1605; &#1593;&#1606; &#1605;&#1575; &#1610;&#1581;&#1589;&#1604; &#1601;&#1610; &#1587;&#1608;&#1585;&#1610;&#1575; &#1605;&#1606; &#1605;&#1580;&#1575;&#1586;&#1585; &#1608;&#1594;&#1610;&#1585;&#1607;&#1575; 
+...<br>&#1606;&#1585;&#1610;&#1583; &#1575;&#1610;&#1589;&#1575;&#1604; &#1585;&#1587;&#1575;&#1604;&#1578;&#1606;&#1575; &#1604;&#1575;&#1603;&#1576;&#1585; &#1593;&#1583;&#1583; &#1605;&#1606; &#1575;&#1604;&#1605;&#1608;&#1575;&#1602;&#1593; &#1593;&#1604;&#1609; &#1575;&#1604;&#1588;&#1576;&#1603;&#1577; &#1575;&#1604;&#1593;&#1606;&#1603;&#1576;&#1608;&#1578;&#1610;&#1577; &#1575;&#1604;&#1575;&#1601;&#1578;&#1585;&#1575;&#1590;&#1610;&#1577; 
+... &#1573;&#1604;&#1609; &#1575;&#1604;&#1604;&#1602;&#1575;&#1569; ...<br>&#1587;&#1608;&#1585;&#1610;&#1575; &#1575;&#1604;&#1581;&#1585;&#1577; ...<br><font size="4" face="Orbitron" color='#585858'><hr size=3 width= 25% color="#424242" align=center>
+</font></font></font><font size="4" face="Arial Black" color='#FF0000'>
+<p dir="rtl">GREET TO </p>
+</font><p dir="rtl">
+<b><font face="Tahoma" size="4" color="#FF0000">[ </font>
+<font face="Tahoma" size="4" color="#FFFFFF">Ammar Hacker </font>
+<font face="Tahoma" size="4" color="#FF0000">&amp;</font><font face="Tahoma" size="4" color="#FFFFFF"> Syrian HeXoR </font>
+<font face="Tahoma" size="4" color="#FF0000">&amp;</font><font face="Tahoma" size="4" color="#FFFFFF"> 
+SaM</font><font face="Tahoma" size="4" color="#FF0000">-</font><font face="Tahoma" size="4" color="#FFFFFF">HaCkEr</font><font face="Tahoma" size="4" color="#FF0000"> 
+&amp; </font><font face="Tahoma" size="4" color="#FFFFFF"> 
+RBG Homs</font><font face="Tahoma" size="4" color="#FF0000"> 
+&amp; </font><font face="Tahoma" size="4" color="#FFFFFF">Viagra Homs</font><font face="Tahoma" size="4" color="#FF0000"> 
+&amp; </font><font face="Tahoma" size="4" color="#FFFFFF">SeNan Skull HaCkeR</font><font face="Tahoma" size="4" color="#FF0000"> 
+&amp; </font><font face="Tahoma" size="4" color="#FFFFFF">Syrian Danger</font><font face="Tahoma" size="4" color="#FF0000"> 
+]<br>
+[&nbsp;</font><font face="Tahoma" size="4" color="#FFFFFF">xSe7en E</font><font face="Tahoma" size="4" color="#FF0000">&nbsp; 
+&amp; </font><font face="Tahoma" size="4" color="#FFFFFF"> 
+Syrian Eagle </font><font face="Tahoma" size="4" color="#FF0000"> 
+&amp; </font><font face="Tahoma" size="4" color="#FFFFFF">Hearts Hacker</font><font face="Tahoma" size="4" color="#FF0000"> 
+&amp; </font><font face="Tahoma" size="4" color="#FFFFFF">XR.SyRiano </font>
+<font face="Tahoma" size="4" color="#FF0000">&amp;</font><font face="Tahoma" size="4" color="#FFFFFF"> 
+Sn!per Homs</font><font face="Tahoma" size="4" color="#FF0000"> 
+&amp; </font><font face="Tahoma" size="4" color="#FFFFFF">haz?m K?ng</font><font face="Tahoma" size="4" color="#FF0000"> 
+&amp; </font><font face="Tahoma" size="4" color="#FFFFFF"> 
+F1r3.Lo4d </font><font face="Tahoma" size="4" color="#FF0000"> 
+&amp;</font><font face="Tahoma" size="4" color="#FFFFFF"> 
+Syrian Spy</font><font face="Tahoma" size="4" color="#FF0000"> 
+&amp; </font><font face="Tahoma" size="4" color="#FFFFFF"> 
+QoRsaN AlShaM</font><font face="Tahoma" size="4" color="#FF0000"> 
+&amp; </font><font face="Tahoma" size="4" color="#FFFFFF"> 
+Evil Spirit</font><font face="Tahoma" size="4" color="#FF0000">&nbsp;]</font><font face="Tahoma" color='#585858'><span lang="ar-sa"><font size="4"><br>
+</font>
+</span></font></b>
+<font face="Orbitron" color='#585858'><b><font face="Tahoma" color="#FF0000"><span lang="ar-sa">
+
+
+
+<!-- cursor inicio -->
+<style>
+div
+{
+cursor:url(http://programas.publispain.com/imagenes/copy.gif),url(myBall.cur),auto;
+}
+</style>
+<!-- cursor fin -->
+<script type="text/javascript">
+//Define first typing example:
+new TypingText(document.getElementById("example1"));
+//Define second typing example (use "slashing" cursor at the end):
+new TypingText(document.getElementById("example2"), 50, function(i){
+var ar = new Array("_"," ","_","_"); return " " + ar[i.length %
+ar.length]; });
+//Type out examples:
+TypingText.runAll();
+</script>
+
+<SCRIPT language=JavaScript type=text/javascript>
+<!--
+var rows=1; // must be an odd number
+var speed=10; // lower is faster
+var reveal=10; // between 0 and 2 only. The higher, the faster the word appears
+var effectalign="default" //enter "center" to center it.
+</script>
+<font size="4" face="Orbitron" color='#585858'><hr size=3 width= 25% color="#424242" align=center>
+</font>
+<p>&nbsp;

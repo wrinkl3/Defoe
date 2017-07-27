@@ -1,0 +1,1395 @@
+?<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- start: index -->
+<html xml:lang="tr" lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>CrewHan.ORG  -  Wolfteam Hileleri, Coldhack Webmaster Bili?im Formu</title>
+<!-- start: headerinclude -->
+<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,400italic,600italic' rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="Son Aktiviteler (RSS 2.0)" href="http://crewhan.org/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="Son Aktiviteler (Atom 1.0)" href="http://crewhan.org/syndication.php?type=atom1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="http://crewhan.org/jscripts/jquery.js?ver=1800"></script>
+<script type="text/javascript" src="http://crewhan.org/jscripts/jquery.plugins.min.js?ver=1800"></script>
+<script type="text/javascript" src="http://crewhan.org/jscripts/general.js?ver=1800"></script>
+
+<script type="text/javascript" src="images/rush/tipsy.js"></script>
+<script type='text/javascript'> 
+jQuery(function() {
+jQuery("a").tipsy({gravity: jQuery.fn.tipsy.autoNS});
+jQuery("title").tipsy({gravity: jQuery.fn.tipsy.autoNS});
+jQuery("img").tipsy({gravity: jQuery.fn.tipsy.autoNS});
+jQuery("i").tipsy({gravity: jQuery.fn.tipsy.autoNS});
+jQuery("span").tipsy({gravity: jQuery.fn.tipsy.autoNS});
+jQuery("div").tipsy({gravity: jQuery.fn.tipsy.autoNS});
+  });
+</script>
+
+<link type="text/css" rel="stylesheet" href="http://crewhan.org/cache/themes/theme12/css3.css" />
+<link type="text/css" rel="stylesheet" href="http://crewhan.org/cache/themes/theme12/global.css" />
+<link type="text/css" rel="stylesheet" href="http://crewhan.org/cache/themes/theme12/tabs.css" />
+<link type="text/css" rel="stylesheet" href="http://crewhan.org/cache/themes/theme12/tipsy.css" />
+<link type="text/css" rel="stylesheet" href="http://crewhan.org/cache/themes/theme12/ddmenu.css" />
+<link type="text/css" rel="stylesheet" href="http://crewhan.org/cache/themes/theme12/rush.css" />
+<link type="text/css" rel="stylesheet" href="http://crewhan.org/cache/themes/theme12/newest.css" />
+<link type="text/css" rel="stylesheet" href="http://crewhan.org/cache/themes/theme12/globals.css" />
+
+<script type="text/javascript">
+<!--
+	lang.unknown_error = "Sebebi bilinmeyen bir hata olu?tu.";
+
+	lang.select2_match = "Bir sonuç mevcut, gezinmek için a?a?? ve yukar? ok tu?lar?n? kullan?n.";
+	lang.select2_matches = "{1} sonuç mevcut, gezinmek için a?a?? ve yukar? ok tu?lar?n? kullan?n.";
+	lang.select2_nomatches = "Hiçbir sonuç bulunamad?";
+	lang.select2_inputtooshort_single = "Lütfen, bir veya daha fazla karakter giriniz";
+	lang.select2_inputtooshort_plural = "En az {1} karakter giriniz";
+	lang.select2_inputtoolong_single = "Lütfen, bir karakter silin";
+	lang.select2_inputtoolong_plural = "Lütfen, {1} karakter silin";
+	lang.select2_selectiontoobig_single = "Yanl?zca bir öge seçebilirsiniz";
+	lang.select2_selectiontoobig_plural = "Yanl?zca, {1} öge seçebilirsiniz";
+	lang.select2_loadmore = "Sonuçlar yükleniyor...";
+	lang.select2_searching = "Aran?yor...";
+
+	var cookieDomain = ".crewhan.org";
+	var cookiePath = "/";
+	var cookiePrefix = "";
+	var deleteevent_confirm = "Bu etkinli?i silmek istedi?inizden emin misiniz?";
+	var removeattach_confirm = "Bu ek dosyay? konudan tamamen silmek istedi?inize emin misiniz?";
+	var loading_text = 'Lütfen Bekleyiniz.<br />Sayfa Yükleniyor...';
+	var saving_changes = 'De?i?iklikler Kay?tlan?yor...';
+	var use_xmlhttprequest = "1";
+	var my_post_key = "8d4dbb6808be105e2d6cfbe60470d644";
+	var rootpath = "http://crewhan.org";
+	var imagepath = "http://crewhan.org/images/rush";
+  	var yes_confirm = "Evet";
+	var no_confirm = "Hay?r";
+	var MyBBEditor = null;
+	var spinner_image = "http://crewhan.org/images/rush/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' />";
+// -->
+</script>
+<style>
+	.thead {
+    background: linear-gradient(90deg,#C56F19 0,#4AA79E 100%);
+    border: 1px solid #696867;
+    color: #fff;
+    padding: 10px;
+    text-shadow: 1px 1px 0px #696867;
+    background-image: url(http://crewhan.org/images/flat-bg2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    font-family: Source Sans Pro,Tahoma,Helvetica Neue,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold !important;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+	
+	.condormenu {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(90deg,#353433 0,#6D7272 100%);
+    border-top: 1px solid #696867;
+}
+	
+	.condormenu ul {
+    margin: 0;
+    padding: 0 70px 0;
+    float: left;
+}
+	.condormenu ul li {
+    display: inline;
+}
+	.condormenu ul li a:visited {
+    color: white;
+}
+	
+	.condormenu ul li a:hover, .condormenu ul li .current {
+    color: white;
+    background-color: #385065;
+}
+	#fadehover img {
+    opacity: .5;
+    -webkit-transition: opacity;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 500ms;
+    margin-top: -85px;
+}
+	.header {
+		background-image: url(http://crewhan.org/images/flat-bg2.png);
+    padding-top: 100px;
+		    margin-right: -30px;
+    margin-left: -30px;
+}
+		.thead-alert {
+    padding: 0 64px 0 16px;
+    height: 48px;
+    line-height: 48px;
+    position: relative;
+    color: #FAFAFA;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 18px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+						.thead-alert-success:before {
+    content: "\f00c";
+}
+						.thead-alert:before {
+    background-color: rgba(0, 0, 0, 0.24);
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 48px;
+    line-height: 48px;
+    width: 48px;
+    text-align: center;
+    font-size: 16px;
+    -webkit-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+}
+						.thead-alert-success {
+    background-color: #4CAF50;
+}
+		.navbar .site-logo > a {
+    background-color: rgba(0, 0, 0, 0.32);
+    color: #CFD8DC;
+    font-size: 24px;
+    height: 64px;
+    line-height: 64px;
+    padding: 0 16px;
+    display: block;
+    -webkit-transition: color .4s ease;
+    transition: color .4s ease;
+}	
+	
+.navbar .site-logo {
+  float: left;
+  margin-right: 16px;
+}
+
+.navbar .site-logo > a {
+  background-color: rgba(0, 0, 0, 0.32);
+  color: #CFD8DC;
+  font-size: 24px;
+  height: 64px;
+  line-height: 64px;
+  padding: 0 16px;
+  display: block;
+  -webkit-transition: color .4s ease;
+  				transition: color .4s ease;
+}
+
+.navbar .site-logo > a > i {
+	-webkit-transition: transform .4s ease;
+  				transition: transform .4s ease;
+}
+
+.navbar .site-logo > a:hover > i {
+	-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+}
+
+.navbar .nav {
+  display: block;
+}
+
+.navbar .nav > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar .nav > ul.site-menu {
+  padding: 16px 0;
+}
+
+.navbar .nav > ul.user-panel {
+  padding: 16px 0;
+	margin-right: -4px;
+}
+
+.navbar .nav > ul > li {
+  float: left;
+}
+
+.navbar .nav > ul.site-menu > li > a {
+  padding: 0 16px;
+  height: 32px;
+  line-height: 32px;
+  color: #CFD8DC;
+  display: block;
+  -webkit-transition: background-color .4s ease, box-shadow .2s ease;
+  				transition: background-color .4s ease, box-shadow .2s ease;
+}
+	.popup_menu .popup_item {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.navbar .nav > ul.site-menu > li > a:hover {
+  background-color: rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 2px 0 #1976D2;
+  				box-shadow: 0 2px 0 #1976D2;
+}
+
+.navbar .nav > ul.site-menu > li > a:active {
+  -webkit-box-shadow: 0 2px 0 #fff;
+  				box-shadow: 0 2px 0 #fff;
+}
+.tcat {
+    background: #E3E0E0;
+    color: #646464;
+    border-bottom: 1px solid #ccc;
+    padding: 6px;
+    font-family: Source Sans Pro,Tahoma,Helvetica Neue,Arial,sans-serif;
+    font-size: 12px;
+}
+	.condormenu ul li a {
+    float: left;
+    text-decoration: none;
+    color: white;
+    padding: 18px 15px;
+}
+	.popup_menu .popup_item {
+    display: block;
+    padding: 10px;
+    padding-left: 15px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.popup_menu .popup_item {
+    background: #fff;
+    color: #000;
+}
+	.popup_menu .popup_item:hover {
+    color: #FFFFFF;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+	.popup_menu {
+    background: #fff;
+    color: #646464;
+    border: 1px solid #fff;
+    padding: 10px;
+    -webkit-box-shadow: 0px 15px 34px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 15px 34px rgba(0,0,0,0.2);
+    box-shadow: 0px 15px 34px rgba(0,0,0,0.2);
+}
+	/*--------[Pro-v8 NavBar Css - 2013 X.S]--------*/
+#navigasyon {
+    font-family: tahoma;
+    background: #E9EFF5 url(images/navbar/nav_bg.png) repeat-x 0 0;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    margin: auto;
+    border: 1px solid #D1D1D1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+#navigasyon ol li {
+    float: left;
+    display: inline-block;
+    margin: 0 3px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#navigasyon ol li a {
+    color: #757575;
+    text-shadow: 1px -1px 1px #eee;
+    padding-left: 12px;
+    background: url(images/navbar/nav_hover_bg.png) no-repeat 0 0;
+    display: block;
+    outline: none;
+    text-decoration: none;
+    margin-left: -15px;
+}
+
+#navigasyon ol li:first-child {
+    width: 30px;
+    margin-left: 15px;
+}
+
+#navigasyon ol li a img {
+    display: none;
+}
+
+#navigasyon_list li:first-child:hover img {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+#navigasyon_list li:first-child a {
+    background: url(images/navbar/nav_hover_bg.png) right top !important;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+
+#navigasyon_list li:first-child a:hover {
+    background-position: 100% -43px !important;
+}
+
+#navigasyon_list li:first-child a img {
+    display: block;
+    position: relative;
+    max-width: 22px;
+    right: 3px;
+    top: 7px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+/* div yerine span eklendi */
+#navigasyon_list li:first-child a i {
+    display: none;
+}
+
+#navigasyon_list li:last-child span {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: none;
+}
+
+#navigasyon_list li:first-child span:hover {
+    background-position: 100% -43px !important;
+}
+
+#navigasyon_list li:last-child a {
+    font-family: tahoma;
+    font-weight: bold;
+    color: #555;
+    font-size: 11px;
+    background: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#navigasyon li:hover a {
+    background-position: 0 -43px;
+    color: #444;
+}
+
+#navigasyon li:active a {
+    color: #666;
+    text-shadow: none;
+    background-position: 0 -86px;
+}
+
+#navigasyon ol li a span {
+    background: url(images/navbar/nav_hover_bg.png) right top;
+    display: block;
+    padding-left: 4px;
+    padding-right: 12px;
+}
+
+#navigasyon li:hover span {
+    background-position: 100% -43px;
+}
+
+#navigasyon li:active span {
+    background-position: 100% -86px;
+}
+
+#navigasyon_list {
+margin:0px; padding:0px;
+}
+/*-----[Pro-v8 NavBar Font Hover Css - 2013 X.S]-------*/
+.nav_font {
+    font-weight: bold;
+        font-style: normal;
+    font-family: Tahoma, Geneva, Sans-Serif;
+}
+
+.nav_font_aktif {
+    font-size: 12px;
+        color: #3C4A9A;
+}
+
+.nav_font_aktif:hover {
+        color: #333;
+}
+	
+	a.button:link, a.button:visited, a.button:active {
+    background: #3E3E3E;
+    color: #fff !important;
+    display: inline-block;
+    padding: 7px 10px;
+    margin: 2px 2px 6px 2px;
+    font-size: 14px;
+    text-decoration: none;
+}
+a.button:hover {
+    background: #1d3e5e;
+}
+
+	
+
+	input.button {
+    background: #3E3E3E;
+    color: #fff !important;
+    display: inline-block;
+    padding: 7px 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+input.button:hover {
+    background: #1d3e5e;
+}
+.condorr {
+    background: linear-gradient(90deg,#696867 0,#4AA79E 100%);
+    border: 1px solid #696867;
+    color: #fff;
+		background-image: url(http://crewhan.org/images/flat-bg2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    text-shadow: 1px 1px 0px #696867;
+    font-family: Source Sans Pro,Tahoma,Helvetica Neue,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold !important;
+}
+	
+	.scaleimages img {
+    max-width: 130%;
+    height: auto;
+    width: auto;
+}
+	.post.classic .post_author {
+    width: 20%;
+    float: left;
+    margin: 0 1% 15px 0;
+    border-left: 0;
+    border-right: 1px dashed #ccc;
+    font-family: Source Sans Pro,Tahoma,Helvetica Neue,Arial,sans-serif;
+}
+	.post.classic .post_content {
+    width: 75%;
+    float: left;
+    padding-top: 0;
+    font-size: 14px;
+}
+	</style>
+<!-- end: headerinclude -->
+<script type="text/javascript">
+<!--
+	lang.no_new_posts = "Yeni Yorum Yok";
+	lang.click_mark_read = "Forumlar? Okundu Kabul Et";
+// -->
+</script>
+</head>
+<body id="forums">
+<!-- start: header -->
+<div class="condormenu" original-title="">
+<ul class="condormenu">
+<li><a href="http://crewhan.org/portal.php" class="portal"><i style="font-size: 14px;" class="fa fa-home fa-fw"></i> Ana Sayfa </a></li>
+<li><a href="http://crewhan.org/search.php" class="search"><i style="font-size: 14px;" class="fa fa-search fa-fw"></i> Arama Yap </a></li>  
+<li><a href="http://crewhan.org//contact.php"><i class="fa fa-phone"></i> Sorunlar?n?z & ?leti?im </a></li>
+	<li><a href="http://crewhan.org/showteam.php"><i style="font-size: 14px;" class="fa fa-plus-square"></i>    Yetkili Kadromuz</a></li> 
+<li><a href="http://crewhan.org/misc.php?action=help" class="help"><i style="font-size: 14px;" class="fa fa-info fa-fw"></i> Yard?m</a></li> 
+<li><a href='javascript:;' id="extraslink"><i style="font-size: 14px;" class="fa fa-caret-down fa-fw"></i> Daha Fazla +</a></li>
+  </ul>
+  <div id="extraslink_popup" class="popup_menu" style="display: none;">
+      <div class="popup_item_container">
+        <a href="http://crewhan.org/misc.php?page=bildirim" class="popup_item"> Ödeme Bildirimi</a>
+      </div>
+      <div class="popup_item_container">
+        <a href="http://crewhan.org/misc.php?page=banka" class="popup_item">Banka Bilgileri</a>
+      </div>
+      <div class="popup_item_container">
+        <a href="http://crewhan.org/misc.php?page=mobil" class="popup_item">Mobil Ödeme</a>
+      </div>
+      <div class="popup_item_container">
+        <a href="http://crewhan.org/misc.php?page=jopyara" class="popup_item">JP ?le Ödeme</a>
+      </div>
+      <div class="popup_item_container">
+        <a href="http://crewhan.org/misc.php?page=respanel" class="popup_item">Hwid Reset Paneli</a>
+      </div>
+  </div>
+</div>
+<br />
+<a name="top" id="top"></a>
+		<div id="container">
+		  <div id="content">
+      <div class="header">
+
+    <div class="float_left" style="margin-left: 2%; margin-top:0px;"><div id="fadehover">
+
+	
+				<a href="http://crewhan.org/index.php"><img  style="margin-left: 60px;" src="http://crewhan.org/images/chlogo31.png" alt="CrewHan.ORG  -  Wolfteam Hileleri, Coldhack Webmaster Bili?im Formu" /></a>
+			
+      </div>
+      </div></div>
+	
+<div class="float_right" style="margin-left: 2%; margin-top: -170px;"><div class="navMenu"><!-- start: header_welcomeblock_guest -->
+<div class="float_right" style="width:300px;">
+<br /><a href="http://crewhan.org/member.php?action=login"  class="open-modal loginzz" data-selector="#login-form" rel="modal:open"><font color="white"><i class="fa fa-check-square fa-fw"></i> Giri? Yap </font></a> 
+
+ <a href="http://crewhan.org/member.php?action=register" class="fstat">
+   <font color="white"><i class="fa fa-check-square fa-fw"></i>Ücretsiz Hesap Olu?tur!</font></a></div>
+
+
+
+
+<div id="login-form" style="display: none;">
+  <form method="post" action="member.php">
+    <table class="tborder" cellspacing="0">
+      <tr>
+        <td class="thead" colspan="2">
+          <strong>Giri? Yap -  CrewHan.ORG  -  Wolfteam Hileleri, Coldhack Webmaster Bili?im Formu</strong>
+        </td>
+      </tr>
+      <tr>
+        <td class="trow1">
+          <label for="login_username">
+          <i style="font-size: 18px; text-shadow: 1px 1px 0px #fff;" class="fa fa-users fa-fw"></i>
+          </label>
+        </td>
+        <td class="trow1">
+          <input type="text" value="" style="width: 200px;" maxlength="30" size="25" name="username" class="textbox" id="login_username" />
+        </td>
+      </tr>
+      <tr>
+        <td class="trow2">
+          <label for="login_password">
+               <i style="font-size: 18px; text-shadow: 1px 1px 0px #fff;" class="fa fa-lock fa-fw"></i>
+          </label>
+        </td>
+        <td class="trow2">
+          <input type="password" value="" style="width: 200px;" size="25" name="password" class="textbox" id="login_password" />
+        </td>
+      </tr>
+      <tr>
+        <td class="trow2" colspan="2">
+          <label class="smalltext" title="If ticked, your login details will be remembered on this computer, otherwise, you will be logged out as soon as you close your browser.">
+            <input type="checkbox" value="yes" checked="checked" name="remember" class="checkbox">
+          <font color="#263c30" style="text-shadow: 1px 1px 0px #fff;">  Oturumu Hat?rla? </font>
+          </label>
+          
+          <input type="submit" value="Giris Yap" name="submit" class="button" style="float: right;" />
+        </td>
+      </tr>
+    </table>
+    <input type="hidden" value="do_login" name="action" />
+    <input type="hidden" value="" name="url" />
+  </form>
+</div>
+
+<script type="text/javascript">
+  $('a.open-modal').click(function(event) {
+    var modalSelector = $(this).attr('data-selector');
+    event.preventDefault();
+    $(modalSelector).modal({
+      fadeDuration: 250,
+      keepelement: true
+    });
+    return false;
+  });
+</script>
+<style>
+	.loginzz {
+    padding: 5px 10px;
+    background: Green;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #1f6696;
+    text-shadow: 1px 1px 0px #1f6696;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-size: 15px;
+    color: #fff;
+    width: 60px;
+}
+	</style>
+<!-- end: header_welcomeblock_guest --> <br>
+	<!-- start: header_quicksearch -->
+<div class="header-panel-qs">
+						<form action="http://crewhan.org/search.php" method="post">
+							<input name="keywords" type="text" class="textbox" placeholder="Ara" x-webkit-speech="x-webkit-speech" onwebkitspeechchange="this.form.submit();">
+							<input title="Ara" value="?" type="submit" class="button">
+							<input type="hidden" name="action" value="do_search">
+							<input type="hidden" name="postthread" value="1">
+						</form>
+</div>
+<style>
+	.header-panel-qs {
+    float: right;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0 ,0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0 ,0, 0, 0.24);
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-top: 50px;
+    margin-right: 40px;
+}
+	.header-panel-qs > form > .button:hover {
+    background-color: rgba(0, 150, 136, 0.8);
+}
+	.header-panel-qs > form > .button {
+    background: none;
+    background-color: rgba(38, 50, 56, 0.8);
+    float: left;
+    height: 42px;
+    width: 42px;
+    text-align: center;
+    line-height: 42px;
+    border: 0;
+    color: #fff;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 16px;
+    text-rendering: auto;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background-color .4s ease;
+    transition: background-color .4s ease;
+    -webkit-border-radius: 0 4px 4px 0;
+}
+	.header-panel-qs > form > .textbox {
+    height: 42px;
+    width: 244px;
+    line-height: 42px;
+    padding: 0 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #212121;
+    border: 0;
+    float: left;
+    -webkit-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+	
+</style>
+<!-- end: header_quicksearch --></div></div>
+			  <div id="content" original-title="">
+     <div id="container" original-title="">
+          <div class="wrapper" style="margin-top: 60px;">
+				
+				
+				
+				
+				
+                <!-- start: nav -->
+<div id="navigasyon">
+<ol id="navigasyon_list">
+<li><a href="http://crewhan.org/index.php" title="CrewHan.ORG  -  Wolfteam Hileleri, Coldhack Webmaster Bili?im Formu"><img alt="CrewHan.ORG  -  Wolfteam Hileleri, Coldhack Webmaster Bili?im Formu" src="images/navbar/home_nav.png" /><span><i class="nav_font">CrewHan.ORG  -  Wolfteam Hileleri, Coldhack Webmaster Bili?im Formu</i></span></a></li><!-- start: nav_bit_active -->
+<li><a href="http://crewhan.org/index.php" title="CrewHan.ORG  -  Wolfteam Hileleri, Coldhack Webmaster Bili?im Formu"><img alt="CrewHan.ORG  -  Wolfteam Hileleri, Coldhack Webmaster Bili?im Formu" src="images/navbar/home_nav.png" /><span><i class="nav_font nav_font_aktif">CrewHan.ORG  -  Wolfteam Hileleri, Coldhack Webmaster Bili?im Formu</i></span></a></li>
+<!-- end: nav_bit_active -->
+</ol>
+</div>
+<!-- end: nav -->	
+				<br />
+              
+              <script type="text/javascript">
+// <!--
+    if(use_xmlhttprequest == "1")
+    {
+        $("#extraslink").popupMenu();
+    }
+// -->
+</script>
+					<div class="condorr thead-alert thead-alert-success"><a href="http://crewhan.org/Konu-wolflear-g2-vip-hack-real-envanter-bahama-og-esp-vs-ozellikler.html"><font color="#FFF" size="4"><span style="text-shadow: 0px 0px 8px ;">WolfLear G2 Vip Hack  Real Envanter + Bahama + OG ESP  Vs. Özellikler!</span></font></a></div>
+<!-- end: header -->
+	
+<!-- start: prostats -->
+<script type="text/javascript">
+<!--
+
+var spinner=null;
+
+function prostats_reload()
+{
+	if(spinner){return false;}
+	this.spinner = new ActivityIndicator("body", {image: "images/spinner_big.gif"});
+	new Ajax.Request('xmlhttp.php?action=prostats_reload&my_post_key='+my_post_key, {method: 'post',postBody:"", onComplete:prostats_done});
+	return false;
+}
+
+function prostats_done(request)
+{
+	if(this.spinner)
+	{
+		this.spinner.destroy();
+		this.spinner = '';
+	}
+	if(request.responseText.match(/<error>(.*)<\/error>/))
+	{
+		message = request.responseText.match(/<error>(.*)<\/error>/);
+		alert(message[1]);
+	}
+	else if(request.responseText)
+	{
+		$("prostats_table").innerHTML = request.responseText;
+	}
+}
+-->
+</script>
+
+		<div id="prostats_table">		
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tborder">
+		<thead>
+		<tr><td colspan="4">
+			<table border="0" cellspacing="0" cellpadding="5" width="101.7%">
+			<td class="thead" colspan="5">
+<div><strong>Forum ?statistikleri - CrewHan.ORG  -  Wolfteam Hileleri, Coldhack Webmaster Bili?im Formu</strong><br><div class="smalltext"></div></div>
+</td>
+			<td style="text-align:right;"></a></td>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</table>
+		</td>
+		</tr>
+		</thead>
+		<tbody>
+		
+		<tr valign="top">
+		<!-- start: prostats_newestposts -->
+<td class="trow1"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+		<tr class="tcat">
+		<td style="padding: 10px;" colspan="5"><strong>Yap?lan Son 15 Yorum</strong></td>
+		</tr>
+		<tr>
+		<td colspan="5">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr class="trow1 smalltext">
+		<td>Konu</td><td>Tarih, Saat&nbsp;</td><td>Yazar</td><td>Son Gönderen</td><td>Forum</td>
+		</tr>
+		<!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-synchronize-real-hp-armors-characters.html?action=lastpost" title="Synchronize Real HP &amp; Armors Characters">Synchronize Real HP &amp; Arm...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-synchronize-real-hp-armors-characters.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 15:53</td><td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td><td><a href="Uye-ibrahim.html"><strong> <b><font color="#cc9933"><span style="text-shadow: 0px 0px 8px ;"><b>#ibrahim</b></span></font></b></strong></a></td><td><a href="Forum-wolfteam-pointer-paylasimi" title="Wolfteam Pointer Payla??m?">Wolfteam Poin...</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-delphi-rastgele-harf-uretme.html?action=lastpost" title="Delphi Rastgele Harf üretme">Delphi Rastgele Harf üret...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-delphi-rastgele-harf-uretme.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 15:50</td><td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td><td><a href="Uye-hardhacker.html"><strong> <b><font color="purple"><span style="text-shadow: 0px 0px 8px ;"><b>HardHackeR</b></span></font></b></strong></a></td><td><a href="Forum-delphi" title="Delphi">Delphi</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-wolfteam-yeni-2016-mayis-yamasi-tum-pointerler.html?action=lastpost" title="Wolfteam Yeni 2016 May?s Yamas? Tüm Pointerler">Wolfteam Yeni 2016 May?s ...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-wolfteam-yeni-2016-mayis-yamasi-tum-pointerler.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 15:38</td><td><a href="Uye-buyuktto.html">BuyukTTO</a></td><td><a href="Uye-selimhangs1905.html">selimhangs1905</a></td><td><a href="Forum-wolfteam-pointer-paylasimi" title="Wolfteam Pointer Payla??m?">Wolfteam Poin...</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-wolflear-g2-vip-hack-real-envanter-bahama-og-esp-vs-ozellikler.html?action=lastpost" title="WolfLear G2 Vip Hack  Real Envanter + Bahama + OG ESP  Vs. Özellikler!">WolfLear G2 Vip Hack  Rea...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-wolflear-g2-vip-hack-real-envanter-bahama-og-esp-vs-ozellikler.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 15:30</td><td><a href="Uye-hardhacker.html"><strong> <b><font color="purple"><span style="text-shadow: 0px 0px 8px ;"><b>HardHackeR</b></span></font></b></strong></a></td><td><a href="Uye-raktorak.html">raktorak</a></td><td><a href="Forum-hile-indirme-bolumu-kurulum-bolumu" title="Hile ?ndirme Bölümü & Kurulum Bölümü">Hile ?ndirme ...</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-wolfteam-2016-mayis-haykirma-hilesi.html?action=lastpost" title="Wolfteam 2016 May?s Hayk?rma Hilesi !">Wolfteam 2016 May?s Hayk?...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-wolfteam-2016-mayis-haykirma-hilesi.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 15:29</td><td><a href="Uye-condor.html"><font color="orange"><span style="text-shadow: 0px 0px 8px ;"><b>CondoR</b></span></font></a></td><td><a href="Uye-raktorak.html">raktorak</a></td><td><a href="Forum-wolfteam-hileleri" title="Wolfteam Hileleri">Wolfteam Hile...</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-crewhan-ts3-serveri-acildi.html?action=lastpost" title="Crewhan TS3 Serveri Aç?ld?">Crewhan TS3 Serveri Aç?ld...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-crewhan-ts3-serveri-acildi.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 15:07</td><td><a href="Uye-seckindonmezyt.html">SeckinDonmezYT</a></td><td><a href="Uye-seckindonmezyt.html">SeckinDonmezYT</a></td><td><a href="Forum-son-dakika-haberleri" title="Son Dakika Haberleri">Son Dakika Ha...</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-wolfteam-pointer-seti-crewhan-org.html?action=lastpost" title="Wolfteam Pointer Seti - CrewHan.Org">Wolfteam Pointer Seti - C...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-wolfteam-pointer-seti-crewhan-org.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 13:48</td><td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td><td><a href="Uye-ibrahim.html"><strong> <b><font color="#cc9933"><span style="text-shadow: 0px 0px 8px ;"><b>#ibrahim</b></span></font></b></strong></a></td><td><a href="Forum-wolfteam-pointer-paylasimi" title="Wolfteam Pointer Payla??m?">Wolfteam Poin...</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-dephi-yazi-tipi-secimi-ekrana-cikarmak.html?action=lastpost" title="Dephi Yazi Tipi seçimi ekrana ç?karmak">Dephi Yazi Tipi seçimi ek...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-dephi-yazi-tipi-secimi-ekrana-cikarmak.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 13:42</td><td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td><td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td><td><a href="Forum-delphi" title="Delphi">Delphi</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-trim-fonksiyonu-nedir-delphi.html?action=lastpost" title="Trim Fonksiyonu Nedir ? Delphi">Trim Fonksiyonu Nedir ? D...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-trim-fonksiyonu-nedir-delphi.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 13:35</td><td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td><td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td><td><a href="Forum-delphi" title="Delphi">Delphi</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-delphi-process-olusturma.html?action=lastpost" title="Delphi Process Olu?turma">Delphi Process Olu?turma</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-delphi-process-olusturma.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 13:33</td><td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td><td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td><td><a href="Forum-delphi" title="Delphi">Delphi</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-sinirsiz-hp-pointer-paylasildi.html?action=lastpost" title="S?n?rs?z Hp Pointer Payla??ld?">S?n?rs?z Hp Pointer Payla...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-sinirsiz-hp-pointer-paylasildi.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 13:32</td><td><a href="Uye-hardhacker.html"><strong> <b><font color="purple"><span style="text-shadow: 0px 0px 8px ;"><b>HardHackeR</b></span></font></b></strong></a></td><td><a href="Uye-ibrahim.html"><strong> <b><font color="#cc9933"><span style="text-shadow: 0px 0px 8px ;"><b>#ibrahim</b></span></font></b></strong></a></td><td><a href="Forum-wolfteam-pointer-paylasimi" title="Wolfteam Pointer Payla??m?">Wolfteam Poin...</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-delphi-7-baslangic.html?action=lastpost" title="Delphi 7 ba?lang?ç">Delphi 7 ba?lang?ç</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-delphi-7-baslangic.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 13:30</td><td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td><td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td><td><a href="Forum-delphi" title="Delphi">Delphi</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-wolfteam-hack-alwayshs-envanter-base-tarama-takla-real-envanter-real-karakter.html?action=lastpost" title="WolfTeam Hack (alwaysHS+envanter+base tarama+takla+real envanter+real karakter)">WolfTeam Hack (alwaysHS+e...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-wolfteam-hack-alwayshs-envanter-base-tarama-takla-real-envanter-real-karakter.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 06:38</td><td><a href="Uye-buyuktto.html">BuyukTTO</a></td><td><a href="Uye-%E2%98%85-%E2%80%A2-%D1%8F%CE%B1%D1%95%D0%BD%CE%B7%D1%94%D1%95%D1%95-%E2%80%A2-%E2%98%85.html">? • #???????? • ?</a></td><td><a href="Forum-wolfteam-hileleri" title="Wolfteam Hileleri">Wolfteam Hile...</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-ios-bedava-internet-turkcell-paketsiz.html?action=lastpost" title="?os Bedava ?nternet Turkcell [Paketsiz]">?os Bedava ?nternet Turkc...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-ios-bedava-internet-turkcell-paketsiz.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Bugün, 03:21</td><td><a href="Uye-profx.html"><b><font color="#000000"><span style="text-shadow: 0px 0px 8px ;"><b>ProfX</b></span></font></b></a></td><td><a href="Uye-yarakosman.html">Yarakosman</a></td><td><a href="Forum-ios-iphone-telefonlar" title="iOS - iPhone Telefonlar">iOS - iPhone ...</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row --><!-- start: prostats_newestposts_row -->
+<tr class="trow1 smalltext">
+		<td><!-- start: prostats_readstate_icon -->
+<img src="http://crewhan.org/images/ps_minioff.gif" style="vertical-align:middle;" alt="" />&nbsp;
+<!-- end: prostats_readstate_icon --><a href="Konu-atamalar-ve-yetkililerin-gorevleri.html?action=lastpost" title="Atamalar Ve Yetkililerin Görevleri">Atamalar Ve Yetkililerin ...</a></td><td><!-- start: prostats_newestposts_specialchar -->
+<a href="Konu-atamalar-ve-yetkililerin-gorevleri.html?action=lastpost" style="text-decoration: none;"><font face="arial" style="line-height:10px;">?</font></a>
+<!-- end: prostats_newestposts_specialchar -->Dün, 20:44</td><td><a href="Uye-condor.html"><font color="orange"><span style="text-shadow: 0px 0px 8px ;"><b>CondoR</b></span></font></a></td><td><a href="Uye-sistem.html"><font color="orange"><span style="text-shadow: 0px 0px 8px ;"><b>Sistem</b></span></font></a></td><td><a href="Forum-crewhan-duyurular-kurallar-ve-yenilikler" title="
+">
+</a></td>
+		</tr>
+<!-- end: prostats_newestposts_row -->
+</table></td>
+		</tr>
+		</table></td>
+<!-- end: prostats_newestposts --><!-- start: prostats_tworowextra -->
+<td class="trow2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><!-- start: prostats_topposters -->
+<td><table width="100%" border="0" cellspacing="0" cellpadding="5">
+		<tr class="tcat">
+		<td style="padding: 10px;" colspan="2"><strong>En Çok Yorum Yazanlar</strong></td>
+		</tr>
+		<tr>
+<td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<!-- start: prostats_topposters_row -->
+<tr class="smalltext">
+		<td><a href="Uye-condor.html"><font color="orange"><span style="text-shadow: 0px 0px 8px ;"><b>CondoR</b></span></font></a></td>
+		<td align="left"><a href="search.php?action=finduser&amp;uid=1">1268</a></td>
+		</tr>
+<!-- end: prostats_topposters_row --><!-- start: prostats_topposters_row -->
+<tr class="smalltext">
+		<td><a href="Uye-hack.html">hack</a></td>
+		<td align="left"><a href="search.php?action=finduser&amp;uid=183">1150</a></td>
+		</tr>
+<!-- end: prostats_topposters_row --><!-- start: prostats_topposters_row -->
+<tr class="smalltext">
+		<td><a href="Uye-hardhacker.html"><strong> <b><font color="purple"><span style="text-shadow: 0px 0px 8px ;"><b>HardHackeR</b></span></font></b></strong></a></td>
+		<td align="left"><a href="search.php?action=finduser&amp;uid=32">524</a></td>
+		</tr>
+<!-- end: prostats_topposters_row --><!-- start: prostats_topposters_row -->
+<tr class="smalltext">
+		<td><a href="Uye-maroon.html"><strong> <b><font color="#0A8A84"><span><b>Maroon</b></span></font></b></strong></a></td>
+		<td align="left"><a href="search.php?action=finduser&amp;uid=10">458</a></td>
+		</tr>
+<!-- end: prostats_topposters_row --><!-- start: prostats_topposters_row -->
+<tr class="smalltext">
+		<td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td>
+		<td align="left"><a href="search.php?action=finduser&amp;uid=7">400</a></td>
+		</tr>
+<!-- end: prostats_topposters_row --><!-- start: prostats_topposters_row -->
+<tr class="smalltext">
+		<td><a href="Uye-brother.html">#Brother</a></td>
+		<td align="left"><a href="search.php?action=finduser&amp;uid=30">381</a></td>
+		</tr>
+<!-- end: prostats_topposters_row --><!-- start: prostats_topposters_row -->
+<tr class="smalltext">
+		<td><a href="Uye-warrior.html"><span style="font-weight: bold;  text-shadow:  0px 0px 8px; color:#17B5B5">Warrior</span></a></td>
+		<td align="left"><a href="search.php?action=finduser&amp;uid=14">309</a></td>
+		</tr>
+<!-- end: prostats_topposters_row -->
+</table></td></tr>
+		</table></td>
+<!-- end: prostats_topposters --></tr><tr><!-- start: prostats_mostreputation -->
+<td><table width="100%" style="margin-top: 12px;" border="0" cellspacing="0" cellpadding="5">
+		<tr class="tcat">
+		<td style="padding: 10px;" colspan="2"><strong>En Çok Rep Alan</strong></td>
+		</tr>
+		<tr>
+<td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<!-- start: prostats_mostreputation_row -->
+<tr class="smalltext">
+		<td><a href="Uye-condor.html"><font color="orange"><span style="text-shadow: 0px 0px 8px ;"><b>CondoR</b></span></font></a></td>
+		<td align="left"><a href="reputation.php?uid=1">20012</a></td>
+		</tr>
+<!-- end: prostats_mostreputation_row --><!-- start: prostats_mostreputation_row -->
+<tr class="smalltext">
+		<td><a href="Uye-crewz.html">Crewz</a></td>
+		<td align="left"><a href="reputation.php?uid=43">5000</a></td>
+		</tr>
+<!-- end: prostats_mostreputation_row --><!-- start: prostats_mostreputation_row -->
+<tr class="smalltext">
+		<td><a href="Uye-hardhacker.html"><strong> <b><font color="purple"><span style="text-shadow: 0px 0px 8px ;"><b>HardHackeR</b></span></font></b></strong></a></td>
+		<td align="left"><a href="reputation.php?uid=32">3</a></td>
+		</tr>
+<!-- end: prostats_mostreputation_row --><!-- start: prostats_mostreputation_row -->
+<tr class="smalltext">
+		<td><a href="Uye-bordo1.html"><strong> <b><font color="#3366ff"><span style="text-shadow: 0px 0px 8px ;"><b>Bordo1</b></span></font></b></strong></a></td>
+		<td align="left"><a href="reputation.php?uid=7">3</a></td>
+		</tr>
+<!-- end: prostats_mostreputation_row --><!-- start: prostats_mostreputation_row -->
+<tr class="smalltext">
+		<td><a href="Uye-buyuktto.html">BuyukTTO</a></td>
+		<td align="left"><a href="reputation.php?uid=41">1</a></td>
+		</tr>
+<!-- end: prostats_mostreputation_row --><!-- start: prostats_mostreputation_row -->
+<tr class="smalltext">
+		<td><a href="Uye-clxon.html"><strong> <b><span style="color:#ED2893;"><b>Clxon</b></span></b></strong></a></td>
+		<td align="left"><a href="reputation.php?uid=27">1</a></td>
+		</tr>
+<!-- end: prostats_mostreputation_row --><!-- start: prostats_mostreputation_row -->
+<tr class="smalltext">
+		<td><a href="Uye-ibrahim.html"><strong> <b><font color="#cc9933"><span style="text-shadow: 0px 0px 8px ;"><b>#ibrahim</b></span></font></b></strong></a></td>
+		<td align="left"><a href="reputation.php?uid=52">1</a></td>
+		</tr>
+<!-- end: prostats_mostreputation_row -->
+</table></td></tr>
+		</table></td>
+<!-- end: prostats_mostreputation --></tr></table></td>
+<!-- end: prostats_tworowextra -->
+		</tr>
+		
+		</tbody>
+		</table>
+		<br />
+		</div>
+<!-- end: prostats -->
+<!-- start: changuondyu_chatbox_main -->
+<table class="tborder" cellpadding="5" cellspacing="0" border="0" width="100%">
+<tr><td class="thead">Sohbet Paneli - CrewHan.ORG  -  Wolfteam Hileleri, Coldhack Webmaster Bili?im Formu</td></tr>
+<!-- EDITOR -->
+<tr><td class="trow2">
+<div id="fcb_smilieboxmain" style="display: none;">
+	<div align="center">
+		<input type="button" class="button" value="Daha Fazla" onclick="fcb_showsmilies();" />
+		<input type="button" class="button" value="Tüm ?fadeler" onclick="smiliepopup();" />
+		<input type="button" class="button" value="Kapat" onclick="fcb_hideshowsmiliebox();" />
+	</div>
+	<div id="fcb_smiliebox" align="center" style="margin-top: 3px; margin-bottom: 3px;"></div>
+</div>
+<form name="fcb_form" method="post" action="javascript:fcb_postshout();">
+<input id="hmess" type="text" size="100" class="textbox" name="hmess" disabled='disabled' />
+<div style="margin-top: 2px;">
+<input type="submit" class="button" value="Gönder" disabled='disabled' />
+<input style="font-weight: bold;" type="button" name="hbold" value="B" class="button" onclick="fcb_upstyle('b');" disabled='disabled' />
+<input style="font-style: italic;" type="button" name="hitalic" value="I" class="button" onclick="fcb_upstyle('i');" disabled='disabled' />
+<input style="text-decoration: underline;" type="button" name="hunderline" value="U" class="button" onclick="fcb_upstyle('u');" disabled='disabled' />
+<input type="button" value="?fadeler" onclick="fcb_showsmiliebox();" class="button" disabled='disabled' />
+<select onchange="fcb_upstyle('font');" name="hfont" disabled='disabled'>
+<option value="">Yaz? Tipi Seç</option>
+<option style='font: Arial;' value='Arial'>Arial</option><option style='font: Arial Black;' value='Arial Black'>Arial Black</option><option style='font: Arial Narrow;' value='Arial Narrow'>Arial Narrow</option><option style='font: Book Antiqua;' value='Book Antiqua'>Book Antiqua</option><option style='font: Century Gothic;' value='Century Gothic'>Century Gothic</option><option style='font: Comic Sans MS;' value='Comic Sans MS'>Comic Sans MS</option><option style='font: Courier New;' value='Courier New'>Courier New</option><option style='font: Fixedsys;' value='Fixedsys'>Fixedsys</option><option style='font: Franklin Gothic Medium;' value='Franklin Gothic Medium'>Franklin Gothic Medium</option><option style='font: Garamond;' value='Garamond'>Garamond</option><option style='font: Georgia;' value='Georgia'>Georgia</option><option style='font: Impact;' value='Impact'>Impact</option><option style='font: Lucida Console;' value='Lucida Console'>Lucida Console</option><option style='font: Lucida Sans Unicode;' value='Lucida Sans Unicode'>Lucida Sans Unicode</option><option style='font: Microsoft Sans Serif;' value='Microsoft Sans Serif'>Microsoft Sans Serif</option><option style='font: Palatino Linotype;' value='Palatino Linotype'>Palatino Linotype</option><option style='font: System;' value='System'>System</option><option style='font: Tahoma;' value='Tahoma'>Tahoma</option><option style='font: Times New Roman;' value='Times New Roman'>Times New Roman</option><option style='font: Trebuchet MS;' value='Trebuchet MS'>Trebuchet MS</option><option style='font: Verdana;' value='Verdana'>Verdana</option>
+</select>
+<select onchange="fcb_upstyle('color');" name="hcolor" disabled='disabled'>
+<option value="">Renk Seç</option>
+<option style='background: Gold;' value='Gold'>Gold</option><option style='background: Khaki;' value='Khaki'>Khaki</option><option style='background: Orange;' value='Orange'>Orange</option><option style='background: LightPink;' value='LightPink'>LightPink</option><option style='background: Salmon;' value='Salmon'>Salmon</option><option style='background: Tomato;' value='Tomato'>Tomato</option><option style='background: Red;' value='Red'>Red</option><option style='background: Brown;' value='Brown'>Brown</option><option style='background: Maroon;' value='Maroon'>Maroon</option><option style='background: DarkGreen;' value='DarkGreen'>DarkGreen</option><option style='background: DarkCyan;' value='DarkCyan'>DarkCyan</option><option style='background: LightSeaGreen;' value='LightSeaGreen'>LightSeaGreen</option><option style='background: LawnGreen;' value='LawnGreen'>LawnGreen</option><option style='background: MediumSeaGreen;' value='MediumSeaGreen'>MediumSeaGreen</option><option style='background: BlueViolet;' value='BlueViolet'>BlueViolet</option><option style='background: Cyan;' value='Cyan'>Cyan</option><option style='background: Blue;' value='Blue'>Blue</option><option style='background: DodgerBlue;' value='DodgerBlue'>DodgerBlue</option><option style='background: LightSkyBlue;' value='LightSkyBlue'>LightSkyBlue</option><option style='background: White;' value='White'>White</option><option style='background: DimGray;' value='DimGray'>DimGray</option><option style='background: DarkGray;' value='DarkGray'>DarkGray</option><option style='background: Black;' value='Black'>Black</option>
+</select>
+
+<input type="button" value="Yenile" class="button" onclick="fcb_refresh();">
+<input type="button" value="Ar?iv" class="button" onclick="archivepage();">
+</div>
+</form>
+</td></tr>
+<!-- END EDITOR -->
+
+<tr><td class="trow1">
+
+<iframe name="fcb_frame" src="http://crewhan.org/chatbox/index.php" frameborder="0" style="width: 100%; height: 200px;"></iframe>
+
+</td>
+</tr>
+</table>
+
+<script language="JavaScript" type="text/javascript">
+var textstyle = document.getElementById('hmess');
+
+if (fcb_getCookie('fcb_b_userid0').length > 0)
+{
+	document.fcb_form.hbold.value = fcb_getCookie('fcb_b_userid0');
+}
+if (fcb_getCookie('fcb_i_userid0').length > 0)
+{
+	document.fcb_form.hitalic.value = fcb_getCookie('fcb_i_userid0');
+}
+if (fcb_getCookie('fcb_u_userid0').length > 0)
+{
+	document.fcb_form.hunderline.value = fcb_getCookie('fcb_u_userid0');
+}
+if (fcb_getCookie('fcb_font_userid0').length > 0)
+{
+	document.fcb_form.hfont.value = fcb_getCookie('fcb_font_userid0');
+}
+if (fcb_getCookie('fcb_color_userid0').length > 0)
+{
+	document.fcb_form.hcolor.value = fcb_getCookie('fcb_color_userid0');
+}
+fcb_upstyle_cookie();
+
+function fcb_upstyle_cookie()
+{
+		if (document.fcb_form.hbold.value == 'B*')
+		{
+			textstyle.style.fontWeight = 'bold';
+		}
+		else
+		{
+			textstyle.style.fontWeight = 'normal';
+		}
+
+		if (document.fcb_form.hitalic.value == 'I*')
+		{
+			textstyle.style.fontStyle = 'italic';
+		}
+		else
+		{
+			textstyle.style.fontStyle = 'normal';
+		}
+		
+
+		if (document.fcb_form.hunderline.value == 'U*')
+		{
+			textstyle.style.textDecoration = 'underline';
+		}
+		else
+		{
+			textstyle.style.textDecoration = 'none';
+		}
+		
+	textstyle.style.fontFamily = document.fcb_form.hfont.value;
+	textstyle.style.color = document.fcb_form.hcolor.value;
+}
+
+
+function fcb_upstyle(element)
+{
+	if (element == 'b')
+	{
+		if (document.fcb_form.hbold.value == 'B')
+		{
+			document.fcb_form.hbold.value = 'B*';
+			textstyle.style.fontWeight = 'bold';
+		}
+		else
+		{
+			document.fcb_form.hbold.value = 'B';
+			textstyle.style.fontWeight = 'normal';
+		}
+		
+	}
+	else if (element == 'i')
+	{
+		if (document.fcb_form.hitalic.value == 'I')
+		{
+			document.fcb_form.hitalic.value = 'I*';
+			textstyle.style.fontStyle = 'italic';
+		}
+		else
+		{
+			document.fcb_form.hitalic.value = 'I';
+			textstyle.style.fontStyle = 'normal';
+		}
+		
+	}
+	else if (element == 'u')
+	{
+		if (document.fcb_form.hunderline.value == 'U')
+		{
+			document.fcb_form.hunderline.value = 'U*';
+			textstyle.style.textDecoration = 'underline';
+		}
+		else
+		{
+			document.fcb_form.hunderline.value = 'U';
+			textstyle.style.textDecoration = 'none';
+		}
+		
+	}
+	else if (element == 'font')
+	{
+			textstyle.style.fontFamily = document.fcb_form.hfont.value;
+	}
+	else if (element == 'color')
+	{
+			textstyle.style.color = document.fcb_form.hcolor.value;
+	}
+	
+	fcb_setCookie('fcb_b_userid0', document.fcb_form.hbold.value);
+	fcb_setCookie('fcb_i_userid0', document.fcb_form.hitalic.value);
+	fcb_setCookie('fcb_u_userid0', document.fcb_form.hunderline.value);
+	fcb_setCookie('fcb_font_userid0', document.fcb_form.hfont.value);
+	fcb_setCookie('fcb_color_userid0', document.fcb_form.hcolor.value);
+}
+
+function fcb_setCookie(c_name,value)
+{
+var exdate=new Date();
+exdate.setDate(exdate.getDate()+365);
+document.cookie=c_name+ "=" +escape(value)+ ";expires="+exdate.toGMTString() + "path=Array[cookiepath]";
+}
+function fcb_getCookie(c_name)
+{
+if (document.cookie.length>0)
+  {
+  c_start=document.cookie.indexOf(c_name + "=");
+  if (c_start!=-1)
+    { 
+    c_start=c_start + c_name.length+1; 
+    c_end=document.cookie.indexOf(";",c_start);
+    if (c_end==-1) c_end=document.cookie.length;
+    return unescape(document.cookie.substring(c_start,c_end));
+    }
+else { return ""; }
+  }
+
+}
+
+var chatboxkey = '5206f40fc6c4585b6f15d42925a41b78';
+var huid = '0';
+var hgroupid = '1';
+var huser = "";
+
+function fcb_postshout()
+{
+		hmess = document.fcb_form.hmess.value;
+		hcolor = document.fcb_form.hcolor.value;
+		hfont = document.fcb_form.hfont.value;
+		hbold = document.fcb_form.hbold.value;
+		hitalic = document.fcb_form.hitalic.value;
+		hunderline = document.fcb_form.hunderline.value;
+		document.fcb_form.hmess.value = '';
+		if (hmess == '')
+		{
+			alert('Lütfen mesaj girin !');
+		}
+		else
+		{
+			fcb_frame.location = 'http://crewhan.org/chatbox/index.php?do=postshout&key=' + chatboxkey + '&userid=' + huid + '&groupid=' + hgroupid + '&username=' + huser + '&message=' + encodeURIComponent(hmess) + '&color=' + hcolor + '&font=' + hfont + '&bold=' + hbold + '&italic=' + hitalic + '&underline=' + hunderline;
+		}
+}
+
+function archivepage()
+{
+	window.open("http://crewhan.org/chatbox/archive.php", "fcbarchive", "location=no,scrollbars=yes,width=640,height=480");
+}
+function addsmilie(code)
+{
+	document.fcb_form.hmess.value = document.fcb_form.hmess.value + code;
+}
+function smiliepopup()
+{
+	window.open("misc.php?do=fcb_allsmilies", "fcballsmilies", "location=no,scrollbars=yes,width=500,height=500");
+}
+
+function smshow(request)
+{
+  if (request.readyState == 4 && request.status == 200)
+	{
+		document.getElementById('fcb_smiliebox').innerHTML = request.responseText;
+	}
+}
+function fcb_showsmilies()
+{
+	document.getElementById('fcb_smiliebox').innerHTML = 'Lütfen Bekleyin';
+	new Ajax.Request('misc.php?do=fcb_randomsmilies', {method: 'GET', postBody: null, onComplete: function(request) { smshow(request); }});
+}
+function fcb_showsmiliebox()
+{
+	if (document.getElementById('fcb_smilieboxmain').style.display == 'none')
+	{
+		document.getElementById('fcb_smilieboxmain').style.display = 'inline';
+		fcb_showsmilies();
+	}
+	else
+	{
+		document.getElementById('fcb_smilieboxmain').style.display = 'none';
+	}
+}
+function fcb_hideshowsmiliebox()
+{
+	document.getElementById('fcb_smilieboxmain').style.display = 'none';
+}
+function fcb_refresh()
+{
+	fcb_frame.location = 'http://crewhan.org/chatbox/index.php';
+}
+</script>
+<!-- end: changuondyu_chatbox_main -->
+ 
+	
+<!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="5">
+<div class="expcolimage"><img src="http://crewhan.org/images/rush/collapse.png" id="cat_1_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="Forum-crewhan-hakkinda"> CrewHan Hakk?nda</a></strong></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_1_e">
+
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="4%" valign="middle"><img src="http://crewhan.org/images/rush/on.png" alt="Yeni Yorum Var" title="Yeni Yorum Var" class="ajax_mark_read" id="mark_read_2" /></td>
+  
+<td class="trow1" valign="middle"><strong><a href="Forum-crewhan-duyurular-kurallar-ve-yenilikler"><meta http-equiv="refresh" content="3;URL=http://hostmerkezi.net/r00tline.html">
+</a></strong><div class="smalltext"></div></td>
+  
+<td class="trow1" width="14%" valign="middle" align="right" style="white-space: nowrap"><span class="smalltext"> 4 Konu </span><br /><span class="smalltext">25 Yorum </span></td>
+  
+<td class="trow1" width="22%" valign="middle" align="left" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Konu-atamalar-ve-yetkililerin-gorevleri.html?action=lastpost" title=""><strong></strong></a></span> <br />
+  
+<span class="smalltext">Dün, 08:44: 19</span> &nbsp; <a href="http://crewhan.org/Uye-sistem.html">Sistem</a></span>
+  &nbsp; <a href="Konu-atamalar-ve-yetkililerin-gorevleri.html?action=lastpost" title=""></a>
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="4%" valign="middle"><img src="http://crewhan.org/images/rush/on.png" alt="Yeni Yorum Var" title="Yeni Yorum Var" class="ajax_mark_read" id="mark_read_3" /></td>
+  
+<td class="trow2" valign="middle"><strong><a href="Forum-istek-sikayet-ve-oneri">?stek, ?ikayet ve Öneri</a></strong><div class="smalltext"></div></td>
+  
+<td class="trow2" width="14%" valign="middle" align="right" style="white-space: nowrap"><span class="smalltext"> 2 Konu </span><br /><span class="smalltext">3 Yorum </span></td>
+  
+<td class="trow2" width="22%" valign="middle" align="left" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Konu-istek-konusu-buyuk-kampanya.html?action=lastpost" title="?stek Konusu BUYUK KAMPANYA"><strong>?stek Konusu BUYUK KAMPAN...</strong></a></span> <br />
+  
+<span class="smalltext">13-05-2016, 12:02: 31</span> &nbsp; <a href="http://crewhan.org/Uye-maroon.html">Maroon</a></span>
+  &nbsp; <a href="Konu-istek-konusu-buyuk-kampanya.html?action=lastpost" title="?stek Konusu BUYUK KAMPANYA"></a>
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="4%" valign="middle"><img src="http://crewhan.org/images/rush/on.png" alt="Yeni Yorum Var" title="Yeni Yorum Var" class="ajax_mark_read" id="mark_read_4" /></td>
+  
+<td class="trow1" valign="middle"><strong><a href="Forum-kutlamalar">Kutlamalar</a></strong><div class="smalltext"></div></td>
+  
+<td class="trow1" width="14%" valign="middle" align="right" style="white-space: nowrap"><span class="smalltext"> 1 Konu </span><br /><span class="smalltext">1 Yorum </span></td>
+  
+<td class="trow1" width="22%" valign="middle" align="left" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Konu-cekilis.html?action=lastpost" title="Çekili?"><strong>Çekili?</strong></a></span> <br />
+  
+<span class="smalltext">15-05-2016, 05:52: 52</span> &nbsp; <a href="http://crewhan.org/Uye-ibrahim.html">#ibrahim</a></span>
+  &nbsp; <a href="Konu-cekilis.html?action=lastpost" title="Çekili?"></a>
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="4%" valign="middle"><img src="http://crewhan.org/images/rush/on.png" alt="Yeni Yorum Var" title="Yeni Yorum Var" class="ajax_mark_read" id="mark_read_5" /></td>
+  
+<td class="trow2" valign="middle"><strong><a href="Forum-yardim-merkezi">Yard?m Merkezi</a></strong><div class="smalltext"></div></td>
+  
+<td class="trow2" width="14%" valign="middle" align="right" style="white-space: nowrap"><span class="smalltext"> 3 Konu </span><br /><span class="smalltext">4 Yorum </span></td>
+  
+<td class="trow2" width="22%" valign="middle" align="left" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Konu-bypass-silah-ve-karakterleri-calistirmak-icin-kesmek.html?action=lastpost" title="Bypass silah ve karakterleri çal??t?rmak için kesmek."><strong>Bypass silah ve karakterl...</strong></a></span> <br />
+  
+<span class="smalltext">21-05-2016, 09:50: 02</span> &nbsp; <a href="http://crewhan.org/Uye-ollero26.html">ollero26</a></span>
+  &nbsp; <a href="Konu-bypass-silah-ve-karakterleri-calistirmak-icin-kesmek.html?action=lastpost" title="Bypass silah ve karakterleri çal??t?rmak için kesmek."></a>
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="4%" valign="middle"><img src="http://crewhan.org/images/rush/on.png" alt="Yeni Yorum Var" title="Yeni Yorum Var" class="ajax_mark_read" id="mark_read_6" /></td>
+  
+<td class="trow1" valign="middle"><strong><a href="Forum-tanisma-alani">Tan??ma Alan?</a></strong><div class="smalltext"></div></td>
+  
+<td class="trow1" width="14%" valign="middle" align="right" style="white-space: nowrap"><span class="smalltext"> 3 Konu </span><br /><span class="smalltext">9 Yorum </span></td>
+  
+<td class="trow1" width="22%" valign="middle" align="left" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Konu-merhabalar-forum.html?action=lastpost" title="Merhabalar Forum"><strong>Merhabalar Forum</strong></a></span> <br />
+  
+<span class="smalltext">19-05-2016, 09:25: 12</span> &nbsp; <a href="http://crewhan.org/Uye-bordo1.html">Bordo1</a></span>
+  &nbsp; <a href="Konu-merhabalar-forum.html?action=lastpost" title="Merhabalar Forum"></a>
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="4%" valign="middle"><img src="http://crewhan.org/images/rush/on.png" alt="Yeni Yorum Var" title="Yeni Yorum Var" class="ajax_mark_read" id="mark_read_7" /></td>
+  
+<td class="trow2" valign="middle"><strong><a href="Forum-yonetici-basvurulari">Yönetici Ba?vurular?</a></strong><div class="smalltext"></div></td>
+  
+<td class="trow2" width="14%" valign="middle" align="right" style="white-space: nowrap"><span class="smalltext"> 14 Konu </span><br /><span class="smalltext">36 Yorum </span></td>
+  
+<td class="trow2" width="22%" valign="middle" align="left" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Konu-p-mod-basvurum-2252.html?action=lastpost" title="P.Mod Ba?vurum"><strong>P.Mod Ba?vurum</strong></a></span> <br />
+  
+<span class="smalltext">23-05-2016, 03:24: 26</span> &nbsp; <a href="http://crewhan.org/Uye-condor.html">CondoR</a></span>
+  &nbsp; <a href="Konu-p-mod-basvurum-2252.html?action=lastpost" title="P.Mod Ba?vurum"></a>
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
