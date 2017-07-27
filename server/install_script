@@ -1,0 +1,1 @@
+pip2 install numpy scipy pillow scikit-learn selenium flask django
